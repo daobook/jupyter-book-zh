@@ -1,0 +1,8 @@
+format: jb-book
+root: index
+parts:
+  - caption: 手册
+    chapters:
+      - file: basic/index
+        sections:
+          - glob: basic/**
