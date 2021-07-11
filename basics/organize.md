@@ -1,7 +1,7 @@
 (structure:index)=
-# Structure and organize your content
+# 组织你的书
 
-These sections describe how to organize the structure of your book or article.
+这些部分描述了如何组织你的书的结构。
 
 ```{tableofcontents}
 ```

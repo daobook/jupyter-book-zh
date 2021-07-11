@@ -1,39 +1,36 @@
 (tutorials:references)=
-# Get started with references
+# 开始使用引用
 
-References allow you to refer to other content in your book or to external content.
-They allow you to automatically generate links to that content, or to add extra information like *numbers* to the reference.
+引用（references）使您可以引用书中的其他内容或外部内容。它们使您可以自动生成指向该内容的链接，或向引用添加诸如*数字*之类的额外信息。
 
-Citations and bibliographies allow you to cite scholarly work and provide bibliographies that allow readers to follow the references.
+引文（Citations）和参考书目（bibliographies）允许您引用学术著作，并提供参考书目，以使读者可以阅读参考文献。
 
-This tutorial covers the basics of setting up **references** as well as **citations and bibliographies** for your book.
+本教程介绍了为您的书设置 **references** 以及 **citations and bibliographies** 的基础。
 
 :::{seealso}
-For more information about citation and reference syntax, see the [`sphinxcontrib-bibtex` documentation](https://sphinxcontrib-bibtex.readthedocs.io/en/latest/usage.html#roles-and-directives).
-Note that this documentation is written with rST syntax in mind and you'll need to adapt the directive/role syntax for your Markdown content.
+有关引用和参考语法的更多信息，请参见 [`sphinxcontrib-bibtex` 文档](https://sphinxcontrib-bibtex.readthedocs.io/en/latest/usage.html#roles-and-directives)。
+请注意，本文档在编写时就考虑了 rST 语法，您需要针对 Markdown 内容调整 指令/角色 语法。
 :::
 
-## Prerequisites
+## 先决条件
 
-This tutorial assumes that you've either created a demo Jupyter Book from [](../start/your-first-book.md), or that you've got your own Jupyter Book to work from.
+本教程假定您已经从 [](../start/your-first-book.md) 创建了一个演示 Jupyter Book，或者您可以使用自己的 Jupyter Book。
 
-## Basic structure of a reference
+## references 的基本结构
 
-Cross-references in Jupyter Book usually involve two things:
+Jupyter Book 中的交叉引用通常涉及两件事：
 
-1. Create a **label** for something.
-   This is the thing you'll refer to later in your reference.
-2. Create a reference with a **target**.
-   This target is usually the label you created in `#1`.
+1. 为某事创建一个 **label**。这是您将在后面的 reference 中引用的东西。
+2. 使用 **target** 创建 reference。这个 target 通常是您在 `#1` 中创建的 label。
 
-## Create a label
+## 创建 label
 
-First, we'll create a label.
-Labels must come just before headers.
-You can then refer to them elsewhere in your text.
+首先，我们将创建一个 label。
+label 必须位于标题之前。
+然后，您可以在文本中的其他地方引用它们。
 
-To start with, create a new markdown file in your book (or edit a pre-existing one).
-Add a markdown header with a label like so:
+首先，在您的书中创建一个新的 markdown 文件（或编辑一个预先存在的文件）。
+添加带有标签的 markdown 标头，如下所示：
 
 ```md
 (my-label)=
@@ -42,47 +39,47 @@ Add a markdown header with a label like so:
 Some text
 ```
 
-This is how you specify a label called `my-label` that points to the header just below (`## My header`).
+这就是您指定label `my-label` 的方式，该 label 指向下面的标头（`## My header`）。
 
 :::{margin}
-You can also reference labels in this way with the following syntax:
+您还可以使用以下语法以这种方式引用 label：
 
 ```
 Some text and {ref}`my-label`
 ```
 :::
 
-## Refer to your label
+## 引用你的 label
 
-Now that you've created a label, you can refer to it from elsewhere.
-Try adding the following markdown on the same page (or some other page).
+现在，您已经创建了 label，您可以从其他地方引用它。
+尝试在同一页面（或其他页面）上添加以下 markdown。
 
 ```md
 Here's some text and [here's my label](my-label).
 ```
 
-Now re-build your book's HTML:
+现在，重新构建书籍的 HTML：
 
 ```bash
 jb build pathto/mybook
 ```
 
-You should see that your reference has been replaced with a link to the right spot on the page.
+您应该看到您的参考文献已替换为指向页面上正确位置的链接。
 
-## Create a citation
+## 创建 citation
 
-Next, we'll add a *citation*.
+接下来，我们将添加一个 *citation*.
 
-### Create a bibtex file
+### 创建一个 bibtex 文件
 
-You'll need a [bibtex](http://www.bibtex.org/) file to store the information for your citations.
-In this case, we'll create an empty bibtex file and populate it with one reference.
+您需要一个 [bibtex](http://www.bibtex.org/) 文件来存储 citation 的信息。
+在这种情况下，我们将创建一个空的 bibtex 文件，并使用一个引用填充该文件。
 
 ```bash
 touch references.bib
 ```
 
-Next, configure your book to include this bibtex file, like so:
+接下来，将您的书配置为包含此 bibtex 文件，如下所示：
 
 ```yaml
 # In _config.yml
@@ -90,10 +87,9 @@ bibtex_bibfiles:
     - references.bib
 ```
 
-This will activate the [`sphinxcontrib.bibtex` extension](https://sphinxcontrib-bibtex.readthedocs.io/en/latest/)
+这将激活 [`sphinxcontrib.bibtex` 扩展](https://sphinxcontrib-bibtex.readthedocs.io/en/latest/)
 
-Finally, note that the default reference style is `label` which shows up as an in-line link in the rendered HTML as [ABC21]; it is [described in detail here](https://sphinxcontrib-bibtex.readthedocs.io/en/latest/usage.html#referencing-style) along with other styles.
-You can adjust the reference style in your book's `_config.yml` file like so:
+最后，注意默认的引用样式是 `label`，它在呈现的 HTML 中显示为 [ABC21] 的内联链接；[这里将详细描述](https://sphinxcontrib-bibtex.readthedocs.io/en/latest/usage.html#referencing-style)它和其他样式。您可以在书的 `_config.yml` 中调整引用样式：
 
 ```yaml
 # In _config.yml
@@ -102,9 +98,9 @@ sphinx:
     bibtex_reference_style: author_year
 ```
 
-### Add your references
+### 添加你的 references
 
-Add some references to your BibTex file. Here's an example citation:
+向您的 BibTex 文件添加一些引用。这是一个示例引用：
 
 ```latex
 @article{perez2011python
@@ -120,61 +116,58 @@ Add some references to your BibTex file. Here's an example citation:
 ```
 
 :::{seealso}
-See
-[the BibTex documentation](http://www.bibtex.org/Using/) for information on
-the BibTex reference style.
+有关 BibTex 参考样式的信息，请参见 [BibTex 文档](http://www.bibtex.org/Using/)。
 :::
 
+### 添加一个 citation
 
-### Add a citation
-
-In your content, add the following syntax to include a citation:
+在您的内容中，添加以下语法以包括引用：
 
 ```md
 Here is my nifty citation {cite}`perez2011python`.
 ```
 
-Re-build your book, and it should look like this:
+重新构建您的书，它应该看起来像这样：
 
 Here is my nifty citation {cite}`perez2011python`.
 
-### Add multiple citations at once
+### 一次添加多个引用
 
-Now try adding multiple citations at once by separating each one with a comma.
+现在尝试通过用逗号分隔每个引文来一次添加多个引文。
 
-Add the following text to your page:
+将以下文本添加到您的页面：
 
 ```md
 Here are multiple citations {cite}`perez2011python,holdgraf_rapid_2016,RePEc:the:publsh:1367,caporaso2010qiime`!
 ```
 
-when you build your book, it should look like this:
+重新构建您的书，它应该看起来像这样：
 
 Here are multiple citations {cite}`perez2011python,holdgraf_rapid_2016,RePEc:the:publsh:1367,caporaso2010qiime`!
 
-## Add a bibliography
+## 添加一个 bibliography
 
-Finally, we'll generate a bibliography for our citations.
-Links to this bibliography will automatically be created when you cite something.
+最后，我们将为引文生成一个 bibliography。
+当您引用某些内容时，将自动创建此参考书目的链接。
 
-We'll use the `{bibliography}` directive to add one to our book.
-Add the following to your page:
+我们将使用 `{bibliography}` 指令将一本书添加到我们的书中。
+将以下内容添加到您的页面：
 
 ````md
 ```{bibliography}
 ```
 ````
 
-This will generate the bibliography of all citations in your book.
-See the bibliography below for an example.
+这将生成书中所有引用的 bibliography。
+有关示例，请参见下面的 bibliography。
 
 :::{seealso}
-For more information about configuring and using citations and bibliographies, see [](content:references).
+有关配置和使用引文和参考书目的更多信息，请参见 [](content:references).
 :::
 
 ## Bibliography
 
-An example bibliography, for reference:
+bibliography 示例，供参考：
 
 ```{footbibliography}
 ```
