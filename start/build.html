@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Build your book</title>
+    <title>建立你的书</title>
     
   <link href="../_static/css/theme.css" rel="stylesheet" />
   <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
@@ -99,8 +99,8 @@ commentsRunWhenDOMLoaded(addUtterances);
     <link rel="shortcut icon" href="../_static/page-logo.jfif"/>
     <link rel="index" title="索引" href="../genindex.html" />
     <link rel="search" title="搜索" href="../search.html" />
-    <link rel="next" title="Publish your book online" href="publish.html" />
-    <link rel="prev" title="Create your book’s source files" href="create.html" />
+    <link rel="next" title="在线发布您的书" href="publish.html" />
+    <link rel="prev" title="创建书籍的源文件" href="create.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
     
@@ -146,22 +146,22 @@ commentsRunWhenDOMLoaded(addUtterances);
   <ul class="current">
    <li class="toctree-l2">
     <a class="reference internal" href="overview.html">
-     Overview
+     概述
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="create.html">
-     Create your book’s source files
+     创建书籍的源文件
     </a>
    </li>
    <li class="toctree-l2 current active">
     <a class="current reference internal" href="#">
-     Build your book
+     建立你的书
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="publish.html">
-     Publish your book online
+     在线发布您的书
     </a>
    </li>
    <li class="toctree-l2">
@@ -173,7 +173,7 @@ commentsRunWhenDOMLoaded(addUtterances);
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../tutorials/references.html">
-   Get started with references
+   开始使用引用
   </a>
  </li>
 </ul>
@@ -185,7 +185,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 <ul class="nav bd-sidenav">
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="../basics/organize.html">
-   Structure and organize your content
+   组织你的书
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
   <label for="toctree-checkbox-2">
@@ -490,12 +490,12 @@ commentsRunWhenDOMLoaded(addUtterances);
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../reference/cli.html">
-   The command-line interface
+   命令行界面
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../reference/glossary.html">
-   Glossary
+   术语表
   </a>
  </li>
 </ul>
@@ -636,28 +636,28 @@ commentsRunWhenDOMLoaded(addUtterances);
             <nav id="bd-toc-nav">
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#prerequisites">
-   Prerequisites
+  <a class="reference internal nav-link" href="#id2">
+   先决条件
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#build-your-books-html">
-   Build your book’s HTML
+  <a class="reference internal nav-link" href="#html">
+   建立书籍的 HTML
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#source-vs-build-files">
-   Source vs build files
+  <a class="reference internal nav-link" href="#id3">
+   源文件与构建文件
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#preview-your-built-html">
-   Preview your built HTML
+  <a class="reference internal nav-link" href="#id4">
+   预览您构建的 HTML
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#next-step-publish-your-book">
-   Next step: publish your book
+  <a class="reference internal nav-link" href="#id5">
+   下一步：出版您的书
   </a>
  </li>
 </ul>
@@ -671,76 +671,64 @@ commentsRunWhenDOMLoaded(addUtterances);
         
               <div>
                 
-  <section id="build-your-book">
-<h1>Build your book<a class="headerlink" href="#build-your-book" title="永久链接至标题">¶</a></h1>
-<p>Once you’ve added content and configured your book, it’s time to
-build outputs for your book.
-We’ll use the <code class="docutils literal notranslate"><span class="pre">jupyter-book</span> <span class="pre">build</span></code> command line tool for this.</p>
-<p>Currently, there are two kinds of supported outputs: an HTML website for your
-book, and a PDF that contains all of the pages of your book that is built
-from the book HTML.
-In this tutorial, we’ll focus on building HTML outputs.</p>
-<section id="prerequisites">
-<h2>Prerequisites<a class="headerlink" href="#prerequisites" title="永久链接至标题">¶</a></h2>
-<p>In order to build the HTML for each page, you should have followed the steps
-in <a class="reference internal" href="overview.html"><span class="doc std std-doc">Overview</span></a> and <a class="reference internal" href="create.html"><span class="doc std std-doc">Create your book’s source files</span></a>.
-You should have a collection of notebook/Markdown files in your <code class="docutils literal notranslate"><span class="pre">mybookname/</span></code> folder, a <code class="docutils literal notranslate"><span class="pre">_toc.yml</span></code> file that defines the structure of your book, and any configuration you’d like in the <code class="docutils literal notranslate"><span class="pre">_config.yml</span></code> file.</p>
+  <section id="id1">
+<h1>建立你的书<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h1>
+<p>添加内容并配置图书后，就该为您的书建立输出。</p>
+<p>为此，我们将使用 <code class="docutils literal notranslate"><span class="pre">jupyter-book</span> <span class="pre">build</span></code> 命令行工具。</p>
+<p>当前，有两种受支持的输出：书籍的 HTML网站，以及包含从书籍 HTML 构建的书籍所有页面的 PDF。</p>
+<p>在本教程中，我们将专注于构建 HTML 输出。</p>
+<section id="id2">
+<h2>先决条件<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
+<p>为了构建每个页面的 HTML，您应该遵循 <a class="reference internal" href="overview.html"><span class="doc std std-doc">概述</span></a> 和 <a class="reference internal" href="create.html"><span class="doc std std-doc">创建书籍的源文件</span></a> 中的步骤。</p>
+<p>您应该在 <code class="docutils literal notranslate"><span class="pre">mybookname/</span></code> 文件夹中包含一个 Notebook/Markdown 文件集合，<code class="docutils literal notranslate"><span class="pre">_toc.yml</span></code> 文件定义书的结构，以及在 <code class="docutils literal notranslate"><span class="pre">_config.yml</span></code> 文件中进行想要的任何配置。</p>
 </section>
-<section id="build-your-books-html">
-<h2>Build your book’s HTML<a class="headerlink" href="#build-your-books-html" title="永久链接至标题">¶</a></h2>
-<p>Now that your book’s content is in your book folder and you’ve defined your book’s structure in <code class="docutils literal notranslate"><span class="pre">_toc.yml</span></code>, you can build the HTML for your book.</p>
-<p>Do so by running the following command:</p>
+<section id="html">
+<h2>建立书籍的 HTML<a class="headerlink" href="#html" title="永久链接至标题">¶</a></h2>
+<p>既然您的书的内容位于书的文件夹中，并且已经在 <code class="docutils literal notranslate"><span class="pre">_toc.yml</span></code> 中定义了书的结构，则可以为书构建 HTML。</p>
+<p>通过运行以下命令来这样做：</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>jupyter-book build mybookname/
 </pre></div>
 </div>
-<p>This will generate a fully-functioning HTML site using a <strong>static site generator</strong>.
-The site will be placed in the <code class="docutils literal notranslate"><span class="pre">_build/html</span></code> folder. You can then open the pages
-in the site by navigating to that folder and opening the <code class="docutils literal notranslate"><span class="pre">html</span></code> files with your
-web browser.</p>
+<p>这将使用“静态网站生成器”生成一个功能全面的 HTML 网站。
+该站点将放置在 <code class="docutils literal notranslate"><span class="pre">_build/html</span></code> 文件夹中。然后，您可以通过导航到该文件夹并使用 Web 浏览器打开 <code class="docutils literal notranslate"><span class="pre">html</span></code> 文件来打开站点中的页面。</p>
 <div class="admonition note">
 <p class="admonition-title">注解</p>
-<p>You can also use the short-hand <code class="docutils literal notranslate"><span class="pre">jb</span></code> for <code class="docutils literal notranslate"><span class="pre">jupyter-book</span></code>. E.g.,:
+<p>您也可以将 <code class="docutils literal notranslate"><span class="pre">jupyter-book</span></code> 简写为 <code class="docutils literal notranslate"><span class="pre">jb</span></code>， 例如：
 <code class="docutils literal notranslate"><span class="pre">jb</span> <span class="pre">build</span> <span class="pre">mybookname/</span></code>.</p>
 </div>
 </section>
-<section id="source-vs-build-files">
-<h2>Source vs build files<a class="headerlink" href="#source-vs-build-files" title="永久链接至标题">¶</a></h2>
-<p>At this point, you have created a combination of Jupyter notebooks, markdown files, and configuration files, including <code class="docutils literal notranslate"><span class="pre">_toc.yml</span></code> and <code class="docutils literal notranslate"><span class="pre">_config.yml</span></code>.
-These files are your <strong>source</strong> files.
-The <strong>source</strong> files comprise all of the content and configuration that Jupyter Book needs to build your book.</p>
-<p>In addition, you have created a collection of <em>outputs</em> in the <code class="docutils literal notranslate"><span class="pre">_build</span></code> folder.
-The <code class="docutils literal notranslate"><span class="pre">_build</span></code> folder contains all of your static website <strong>build</strong> files.
-The <strong>build</strong> files contain all of the output from Jupyter Book’s <code class="docutils literal notranslate"><span class="pre">build</span></code> command.
-These files are only used to view your content in a browser or to share with others.</p>
-<p>The best practice for publishing your book is to use separate branches for your <strong>source</strong> and your <strong>build</strong> files.
-For example, you may tell git to ignore your <code class="docutils literal notranslate"><span class="pre">_build</span></code> folder on your <code class="docutils literal notranslate"><span class="pre">main</span></code> branch, and push the outputs in your <code class="docutils literal notranslate"><span class="pre">_build</span></code> folder to a branch called <code class="docutils literal notranslate"><span class="pre">gh-pages</span></code>.
-We’ll cover some of this later on.</p>
+<section id="id3">
+<h2>源文件与构建文件<a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h2>
+<p>至此，您已经创建了 Jupyter 笔记本，markdown 文件和配置文件（包括 <code class="docutils literal notranslate"><span class="pre">_toc.yml</span></code> 和 <code class="docutils literal notranslate"><span class="pre">_config.yml</span></code>）的组合。</p>
+<p>这些文件是您的 <strong>source</strong> 文件。<strong>source</strong> 文件包含 Jupyter Book 用来构建您的书所需的所有内容和配置。</p>
+<p>另外，您已经在 <code class="docutils literal notranslate"><span class="pre">_build</span></code> 文件夹中创建了 <em>outputs</em> 的集合。<code class="docutils literal notranslate"><span class="pre">_build</span></code> 文件夹包含您所有的静态网站 <strong>build</strong> 文件。
+<strong>build</strong> 文件包含 Jupyter Book 的 <code class="docutils literal notranslate"><span class="pre">build</span></code> 命令的所有输出。
+这些文件仅用于在浏览器中查看您的内容或与他人共享。</p>
+<p>出版书籍的最佳做法是为 <strong>source</strong> 和 <strong>build</strong> 文件使用单独的分支。
+例如，您可以告诉 git 忽略 <code class="docutils literal notranslate"><span class="pre">main</span></code> 分支上的 <code class="docutils literal notranslate"><span class="pre">_build</span></code> 文件夹，并将 <code class="docutils literal notranslate"><span class="pre">_build</span></code> 文件夹中的输出推送到名为 <code class="docutils literal notranslate"><span class="pre">gh-pages</span></code> 的分支。</p>
+<p>稍后我们将介绍其中的一些内容。</p>
 <div class="tip admonition">
-<p class="admonition-title">A note on page cacheing</p>
-<p>By default, Jupyter Book will only build the HTML for pages that have
-been updated since the last time you built the book.</p>
-<p>If you’d like to force Jupyter Book to re-build a particular page, you can either edit the
-corresponding file in your book’s folder, or delete that page’s HTML in the <code class="docutils literal notranslate"><span class="pre">_build/html</span></code> folder.</p>
-<p>You can also signal a full re-build using the <code class="docutils literal notranslate"><span class="pre">--all</span></code> option:</p>
+<p class="admonition-title">关于页面缓存的注意事项</p>
+<p>默认情况下，Jupyter Book 只会为自上次构建该书以来已更新的页面构建 HTML。</p>
+<p>如果您想强制 Jupyter Book 重新构建特定页面，则可以在书的文件夹中编辑相应的文件，也可以删除该页面的 HTML <code class="docutils literal notranslate"><span class="pre">_build/html</span></code> 文件夹中。</p>
+<p>您也可以使用 <code class="docutils literal notranslate"><span class="pre">--all</span></code> 选项发出完全重建的信号：</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>jupyter-book build --all mybookname/
 </pre></div>
 </div>
 </div>
 </section>
-<section id="preview-your-built-html">
-<h2>Preview your built HTML<a class="headerlink" href="#preview-your-built-html" title="永久链接至标题">¶</a></h2>
-<p>To preview your book, you can open the generated HTML files in your browser.
-Either double-click the html file in your local folder, or enter the absolute
-path to the file in your browser navigation bar adding <code class="docutils literal notranslate"><span class="pre">file://</span></code> at the beginning
-(e.g. <code class="docutils literal notranslate"><span class="pre">file://Users/my_path_to_book/_build/index.html</span></code>).</p>
-<p>Take a look at the web page that was generated from the markdown page that you created.
-Note how the links you inserted were automatically <strong>resolved</strong> to point to the right place.
-This is how you can keep consistent pointers from one section of your book to another.</p>
+<section id="id4">
+<h2>预览您构建的 HTML<a class="headerlink" href="#id4" title="永久链接至标题">¶</a></h2>
+<p>要预览您的书，您可以在浏览器中打开生成的 HTML 文件。
+双击本地文件夹中的 html 文件，或在浏览器导航栏中输入文件的绝对路径，并在开头添加 <code class="docutils literal notranslate"><span class="pre">file://</span></code>。（例如<code class="docutils literal notranslate"><span class="pre">file://Users/my_path_to_book/_build/index.html</span></code>）。</p>
+<p>查看从您创建的 markdown 页面生成的网页。
+请注意，您插入的链接是如何自动“解析”为指向正确位置的。
+这样，您就可以保持从书的一个部分到另一部分的一致的指针。</p>
 </section>
-<section id="next-step-publish-your-book">
-<h2>Next step: publish your book<a class="headerlink" href="#next-step-publish-your-book" title="永久链接至标题">¶</a></h2>
-<p>Now that you’ve created the HTML for your book, it’s time to publish it online.
-That’s covered in the <a class="reference internal" href="publish.html"><span class="doc std std-doc">next section</span></a>.</p>
+<section id="id5">
+<h2>下一步：出版您的书<a class="headerlink" href="#id5" title="永久链接至标题">¶</a></h2>
+<p>现在，您已经为书创建了 HTML，现在该在线上发布它了。
+在 <a class="reference internal" href="publish.html"><span class="doc std std-doc">下一节</span></a> 中进行了介绍。</p>
 </section>
 </section>
 
@@ -769,8 +757,8 @@ That’s covered in the <a class="reference internal" href="publish.html"><span 
         
         <div class='prev-next-bottom'>
             
-    <a class='left-prev' id="prev-link" href="create.html" title="previous page">Create your book’s source files</a>
-    <a class='right-next' id="next-link" href="publish.html" title="next page">Publish your book online</a>
+    <a class='left-prev' id="prev-link" href="create.html" title="previous page">创建书籍的源文件</a>
+    <a class='right-next' id="next-link" href="publish.html" title="next page">在线发布您的书</a>
 
         </div>
         

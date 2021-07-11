@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Publish your book online</title>
+    <title>在线发布您的书</title>
     
   <link href="../_static/css/theme.css" rel="stylesheet" />
   <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
@@ -100,7 +100,7 @@ commentsRunWhenDOMLoaded(addUtterances);
     <link rel="index" title="索引" href="../genindex.html" />
     <link rel="search" title="搜索" href="../search.html" />
     <link rel="next" title="Build a small example project" href="example-book.html" />
-    <link rel="prev" title="Build your book" href="build.html" />
+    <link rel="prev" title="建立你的书" href="build.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
     
@@ -146,22 +146,22 @@ commentsRunWhenDOMLoaded(addUtterances);
   <ul class="current">
    <li class="toctree-l2">
     <a class="reference internal" href="overview.html">
-     Overview
+     概述
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="create.html">
-     Create your book’s source files
+     创建书籍的源文件
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="build.html">
-     Build your book
+     建立你的书
     </a>
    </li>
    <li class="toctree-l2 current active">
     <a class="current reference internal" href="#">
-     Publish your book online
+     在线发布您的书
     </a>
    </li>
    <li class="toctree-l2">
@@ -173,7 +173,7 @@ commentsRunWhenDOMLoaded(addUtterances);
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../tutorials/references.html">
-   Get started with references
+   开始使用引用
   </a>
  </li>
 </ul>
@@ -185,7 +185,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 <ul class="nav bd-sidenav">
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="../basics/organize.html">
-   Structure and organize your content
+   组织你的书
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
   <label for="toctree-checkbox-2">
@@ -490,12 +490,12 @@ commentsRunWhenDOMLoaded(addUtterances);
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../reference/cli.html">
-   The command-line interface
+   命令行界面
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../reference/glossary.html">
-   Glossary
+   术语表
   </a>
  </li>
 </ul>
@@ -636,13 +636,13 @@ commentsRunWhenDOMLoaded(addUtterances);
             <nav id="bd-toc-nav">
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#create-an-online-repository-for-your-book">
-   Create an online repository for your book
+  <a class="reference internal nav-link" href="#publish-online-repo">
+   为您的书创建在线存储库
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#publish-your-book-online-with-github-pages">
-   Publish your book online with GitHub Pages
+  <a class="reference internal nav-link" href="#github-pages">
+   通过 GitHub Pages 在线发布您的书
   </a>
  </li>
 </ul>
@@ -656,29 +656,29 @@ commentsRunWhenDOMLoaded(addUtterances);
         
               <div>
                 
-  <section id="publish-your-book-online">
-<h1>Publish your book online<a class="headerlink" href="#publish-your-book-online" title="永久链接至标题">¶</a></h1>
-<p>Once you’ve built the HTML for your book, you can host it online.
-The best way to do this is with a service that hosts <strong>static websites</strong>
-(because that’s what you have just created with Jupyter Book).
-In this tutorial, we’ll cover how to publish your book online with GitHub Pages, a popular and free online hosting platform.</p>
-<section id="create-an-online-repository-for-your-book">
-<span id="publish-online-repo"></span><h2>Create an online repository for your book<a class="headerlink" href="#create-an-online-repository-for-your-book" title="永久链接至标题">¶</a></h2>
-<p>In order to connect your hosted book with your book’s source content, you should put your book’s source content in a public repository. This section describes one approach to create your own GitHub repository and add your book’s content to it.</p>
+  <section id="id1">
+<h1>在线发布您的书<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h1>
+<p>为您的图书构建 HTML 之后，您就可以在线托管它了。
+最好的方法是使用托管“静态网站”的服务
+（因为这就是您刚用 Jupyter Book 创建的内容）。
+在本教程中，我们将介绍如何使用 GitHub Pages（一种流行且免费的在线托管平台）在线发布您的书。</p>
+<section id="publish-online-repo">
+<span id="id2"></span><h2>为您的书创建在线存储库<a class="headerlink" href="#publish-online-repo" title="永久链接至标题">¶</a></h2>
+<p>为了将托管的书与书的源内容连接起来，您应该将书的源内容放在公共存储库中。本节介绍一种创建自己的 GitHub 存储库并将书的内容添加到其中的方法。</p>
 <ol>
-<li><p>First, log in to GitHub, then go to the “create a new repository” page: <a class="reference external" href="https://github.com/new">https://github.com/new</a></p></li>
-<li><p>Next, give your online repository a name and a description. Make your repository public and do not initialize it with a README file, then click “Create repository”.</p></li>
-<li><p>Now, clone the (currently empty) online repository to a location on your local computer. You can do this via the command line with:</p>
+<li><p>首先，登录 GitHub，然后转到“创建新存储库”页面：<a class="reference external" href="https://github.com/new">https://github.com/new</a></p></li>
+<li><p>接下来，给您的在线存储库起一个名称和描述。将您的存储库公开，不要使用 README 文件对其进行初始化，然后单击“创建存储库”。</p></li>
+<li><p>现在，将（当前为空）在线存储库克隆到本地计算机上的某个位置。您可以使用以下命令通过命令行执行此操作：</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git clone https://github.com/&lt;my-org&gt;/&lt;my-repository-name&gt;
 </pre></div>
 </div>
 </li>
-<li><p>Copy all of your book files and folders into this newly cloned repository. For example, if you created your book locally with <code class="docutils literal notranslate"><span class="pre">jupyter-book</span> <span class="pre">create</span> <span class="pre">mylocalbook</span></code> and your new repository is called <code class="docutils literal notranslate"><span class="pre">myonlinebook</span></code>, you could do this via the command line with:</p>
+<li><p>将所有书籍文件和文件夹复制到此新克隆的存储库中。例如，如果您是使用 <code class="docutils literal notranslate"><span class="pre">jupyter-book</span> <span class="pre">create</span> <span class="pre">mylocalbook</span></code> 在本地创建的书，而您的新存储库名为 <code class="docutils literal notranslate"><span class="pre">myonlinebook</span></code>，则可以通过命令行使用以下命令进行操作：</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>cp -r mylocalbook/* myonlinebook/
 </pre></div>
 </div>
 </li>
-<li><p>Now you need to sync your local and remote (i.e., online) repositories. You can do this with the following commands:</p>
+<li><p>现在，您需要同步本地和远程（即在线）存储库。您可以使用以下命令执行此操作：</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span> myonlinebook
 git add ./*
 git commit -m <span class="s2">&quot;adding my first book!&quot;</span>
@@ -688,31 +688,27 @@ git push
 </li>
 </ol>
 </section>
-<section id="publish-your-book-online-with-github-pages">
-<h2>Publish your book online with GitHub Pages<a class="headerlink" href="#publish-your-book-online-with-github-pages" title="永久链接至标题">¶</a></h2>
-<p>We have just pushed the <em>source files</em> for our book into our GitHub repository.
-This makes it publicly accessible for you or others to see.</p>
-<p>Next, we’ll publish the <em>build artifact</em> of our book online, so that it is rendered as a website.</p>
-<p>The easiest way to use GitHub Pages with your built HTML is to use the <a class="reference external" href="https://github.com/davisp/ghp-import"><code class="docutils literal notranslate"><span class="pre">ghp-import</span></code></a> package. <code class="docutils literal notranslate"><span class="pre">ghp-import</span></code> is a lightweight Python package that makes it easy to push HTML content to a GitHub repository.</p>
-<p><code class="docutils literal notranslate"><span class="pre">ghp-import</span></code> works by copying <em>all</em> of the contents of your built book (i.e., the <code class="docutils literal notranslate"><span class="pre">_build/html</span></code> folder) to a branch of your repository called <code class="docutils literal notranslate"><span class="pre">gh-pages</span></code>, and pushes it to GitHub. The <code class="docutils literal notranslate"><span class="pre">gh-pages</span></code> branch will be created and populated automatically for you by <code class="docutils literal notranslate"><span class="pre">ghp-import</span></code>. To use <code class="docutils literal notranslate"><span class="pre">ghp-import</span></code> to host your book online with GitHub Pages follow the steps below:</p>
+<section id="github-pages">
+<h2>通过 GitHub Pages 在线发布您的书<a class="headerlink" href="#github-pages" title="永久链接至标题">¶</a></h2>
+<p>我们刚刚将本书的“源文件”推送到了 GitHub 存储库中。这使得您或其他人可以公开访问。</p>
+<p>接下来，我们将在线发布本书的“构建工件”，以便将其呈现为网站。</p>
+<p>在构建的 HTML 中使用 GitHub Pages 的最简单方法是使用 <a class="reference external" href="https://github.com/davisp/ghp-import"><code class="docutils literal notranslate"><span class="pre">ghp-import</span></code></a> 包。<code class="docutils literal notranslate"><span class="pre">ghp-import</span></code> 是一个轻量级的 Python 软件包，可轻松将 HTML 内容推送到 GitHub 存储库。</p>
+<p><code class="docutils literal notranslate"><span class="pre">ghp-import</span></code> 的工作原理是将已构建的书的所有内容（即 <code class="docutils literal notranslate"><span class="pre">_build/html</span></code> 文件夹）复制到仓库的一个分支 <code class="docutils literal notranslate"><span class="pre">gh-pages</span></code> 中，并将其推送到 GitHub。<code class="docutils literal notranslate"><span class="pre">gh-pages</span></code> 分支将由 <code class="docutils literal notranslate"><span class="pre">ghp-import</span></code> 自动创建并填充。要使用 <code class="docutils literal notranslate"><span class="pre">ghp-import</span></code> 通过 GitHub Pages 在线托管您的图书，请执行以下步骤：</p>
 <div class="admonition note">
 <p class="admonition-title">注解</p>
-<p>Before performing the below steps, ensure that HTML has been built for each page of your book
-(see <a class="reference internal" href="build.html"><span class="doc">the previous section</span></a>). There should be a collection of HTML
-files in your book’s <code class="docutils literal notranslate"><span class="pre">_build/html</span></code> folder.</p>
+<p>在执行以下步骤之前，请确保已为书籍的每一页构建了 HTML（请参见 <a class="reference internal" href="build.html"><span class="doc">上一节</span></a>）。您的书的 <code class="docutils literal notranslate"><span class="pre">_build/html</span></code> 文件夹中应该有 HTML 文件的集合。</p>
 </div>
 <ol>
-<li><p>Install <code class="docutils literal notranslate"><span class="pre">ghp-import</span></code></p>
+<li><p>安装 <code class="docutils literal notranslate"><span class="pre">ghp-import</span></code></p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip install ghp-import
 </pre></div>
 </div>
 </li>
-<li><p>Update the settings for your GitHub pages site:</p>
-<p>a. Use the <code class="docutils literal notranslate"><span class="pre">gh-pages</span></code> branch to host your website.</p>
-<p>b. Choose root directory <code class="docutils literal notranslate"><span class="pre">/</span></code> if you’re building the book in it’s own repository.
-Choose <code class="docutils literal notranslate"><span class="pre">/docs</span></code> directory if you’re building documentation with jupyter-book.</p>
+<li><p>更新您的 GitHub 页面网站的设置：</p>
+<p>a. 使用 <code class="docutils literal notranslate"><span class="pre">gh-pages</span></code> 分支来托管您的网站。</p>
+<p>b. 如果要在自己的存储库中构建书籍，请选择根目录 <code class="docutils literal notranslate"><span class="pre">/</span></code>。如果要使用 jupyter-book 构建文档，请选择 <code class="docutils literal notranslate"><span class="pre">/docs</span></code> 目录。</p>
 </li>
-<li><p>From the <code class="docutils literal notranslate"><span class="pre">main</span></code> branch of your book’s root directory (which should contain the <code class="docutils literal notranslate"><span class="pre">_build/html</span></code> folder) call <code class="docutils literal notranslate"><span class="pre">ghp-import</span></code> and point it to your HTML files, like so:</p>
+<li><p>从书籍根目录的 <code class="docutils literal notranslate"><span class="pre">main</span></code> 分支（应包含 <code class="docutils literal notranslate"><span class="pre">_build/html</span></code> 文件夹）中，调用 <code class="docutils literal notranslate"><span class="pre">ghp-import</span></code> 并将其指向您的 HTML 文件，如下所示：</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ghp-import -n -p -f _build/html
 </pre></div>
 </div>
@@ -720,14 +716,13 @@ Choose <code class="docutils literal notranslate"><span class="pre">/docs</span>
 </ol>
 <div class="admonition warning">
 <p class="admonition-title">警告</p>
-<p>Make sure that you included the <code class="docutils literal notranslate"><span class="pre">-n</span></code> - this tells GitHub <em>not</em> to build your book with
-<a class="reference external" href="https://jekyllrb.com/">Jekyll</a>, which we don’t want because our HTML is already built!</p>
+<p>确保您包含 <code class="docutils literal notranslate"><span class="pre">-n</span></code>：这告诉 GitHub <em>不要</em>用 <a class="reference external" href="https://jekyllrb.com/">Jekyll</a> 来构建您的书，我们不希望这样做，因为我们的 HTML 已经建立了！</p>
 </div>
-<p>Typically after a few minutes your site should be viewable online at a url such as: <code class="docutils literal notranslate"><span class="pre">https://&lt;user&gt;.github.io/&lt;myonlinebook&gt;/</span></code>. If not, check your repository settings under <strong>Options</strong> -&gt; <strong>GitHub Pages</strong> to ensure that the <code class="docutils literal notranslate"><span class="pre">gh-pages</span></code> branch is configured as the build source for GitHub Pages and/or to find the url address GitHub is building for you.</p>
-<p>To update your online book, make changes to your book’s content on the <code class="docutils literal notranslate"><span class="pre">main</span></code> branch of your repository, re-build your book with <code class="docutils literal notranslate"><span class="pre">jupyter-book</span> <span class="pre">build</span> <span class="pre">mybookname/</span></code> and then use <code class="docutils literal notranslate"><span class="pre">ghp-import</span> <span class="pre">-n</span> <span class="pre">-p</span> <span class="pre">-f</span> <span class="pre">mylocalbook/_build/html</span></code> as before to push the newly built HTML to the <code class="docutils literal notranslate"><span class="pre">gh-pages</span></code> branch.</p>
+<p>通常，几分钟后，您的网站应该可以通过以下网址在线查看：<code class="docutils literal notranslate"><span class="pre">https://&lt;user&gt;.github.io/&lt;myonlinebook&gt;/</span></code>。 如果不行，请在<strong>Options</strong> -&gt; <strong>GitHub Pages</strong> 下检查您的存储库设置，以确保将 <code class="docutils literal notranslate"><span class="pre">gh-pages</span></code> 分支配置为 GitHub Pages 的构建源和/或查找 GitHub 的 URL 地址。</p>
+<p>要更新您的在线图书，请在存储库的 <code class="docutils literal notranslate"><span class="pre">main</span></code> 分支上更改图书的内容，使用 <code class="docutils literal notranslate"><span class="pre">jupyter-book</span> <span class="pre">build</span> <span class="pre">mybookname/</span></code> 重新构建图书，然后使用 <code class="docutils literal notranslate"><span class="pre">ghp-import</span> <span class="pre">-n</span> <span class="pre">-p</span> <span class="pre">-f</span> <span class="pre">mylocalbook/_build/html</span></code> 将新建的 HTML 推送到 gh-pages 分支。</p>
 <div class="admonition warning">
 <p class="admonition-title">警告</p>
-<p>Note this warning from the <a class="reference external" href="https://github.com/davisp/ghp-import"><code class="docutils literal notranslate"><span class="pre">ghp-import</span></code> GitHub repository</a>:</p>
+<p>请从 <a class="reference external" href="https://github.com/davisp/ghp-import"><code class="docutils literal notranslate"><span class="pre">ghp-import</span></code> GitHub 存储库</a> 注意此警告：</p>
 <p>“…<em><code class="docutils literal notranslate"><span class="pre">ghp-import</span></code> will DESTROY your gh-pages branch… and assumes that the <code class="docutils literal notranslate"><span class="pre">gh-pages</span></code> branch is 100% derivative. You should never edit files in your <code class="docutils literal notranslate"><span class="pre">gh-pages</span></code> branch by hand if you’re using this script…</em>”</p>
 </div>
 </section>
@@ -758,7 +753,7 @@ Choose <code class="docutils literal notranslate"><span class="pre">/docs</span>
         
         <div class='prev-next-bottom'>
             
-    <a class='left-prev' id="prev-link" href="build.html" title="previous page">Build your book</a>
+    <a class='left-prev' id="prev-link" href="build.html" title="previous page">建立你的书</a>
     <a class='right-next' id="next-link" href="example-book.html" title="next page">Build a small example project</a>
 
         </div>

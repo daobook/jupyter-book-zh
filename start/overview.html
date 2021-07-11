@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Overview</title>
+    <title>概述</title>
     
   <link href="../_static/css/theme.css" rel="stylesheet" />
   <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
@@ -99,7 +99,7 @@ commentsRunWhenDOMLoaded(addUtterances);
     <link rel="shortcut icon" href="../_static/page-logo.jfif"/>
     <link rel="index" title="索引" href="../genindex.html" />
     <link rel="search" title="搜索" href="../search.html" />
-    <link rel="next" title="Create your book’s source files" href="create.html" />
+    <link rel="next" title="创建书籍的源文件" href="create.html" />
     <link rel="prev" title="创建你的第一本书" href="your-first-book.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
@@ -146,22 +146,22 @@ commentsRunWhenDOMLoaded(addUtterances);
   <ul class="current">
    <li class="toctree-l2 current active">
     <a class="current reference internal" href="#">
-     Overview
+     概述
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="create.html">
-     Create your book’s source files
+     创建书籍的源文件
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="build.html">
-     Build your book
+     建立你的书
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="publish.html">
-     Publish your book online
+     在线发布您的书
     </a>
    </li>
    <li class="toctree-l2">
@@ -173,7 +173,7 @@ commentsRunWhenDOMLoaded(addUtterances);
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../tutorials/references.html">
-   Get started with references
+   开始使用引用
   </a>
  </li>
 </ul>
@@ -185,7 +185,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 <ul class="nav bd-sidenav">
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="../basics/organize.html">
-   Structure and organize your content
+   组织你的书
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
   <label for="toctree-checkbox-2">
@@ -490,12 +490,12 @@ commentsRunWhenDOMLoaded(addUtterances);
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../reference/cli.html">
-   The command-line interface
+   命令行界面
   </a>
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../reference/glossary.html">
-   Glossary
+   术语表
   </a>
  </li>
 </ul>
@@ -659,50 +659,52 @@ commentsRunWhenDOMLoaded(addUtterances);
             <nav id="bd-toc-nav">
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#install-jupyter-book">
-   Install Jupyter Book
+  <a class="reference internal nav-link" href="#jupyter-book">
+   安装 Jupyter Book
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#the-jupyter-book-command-line-interface">
-   The Jupyter Book command-line interface
+  <a class="reference internal nav-link" href="#id2">
+   Jupyter Book 的命令行界面
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#the-book-building-process">
-   The book building process
+  <a class="reference internal nav-link" href="#id3">
+   书籍构建过程
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#anatomy-of-a-jupyter-book">
-   Anatomy of a Jupyter Book
+  <a class="reference internal nav-link" href="#anatomy-of-a-book">
+   Jupyter Book 的解剖
   </a>
   <ul class="nav section-nav flex-column">
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#book-configuration-config-yml">
-     Book configuration (
+    <a class="reference internal nav-link" href="#book-config-yml">
+     Book 的配置（
      <code class="docutils literal notranslate">
       <span class="pre">
        _config.yml
       </span>
      </code>
-     )
+     ）
     </a>
+    <ul class="nav section-nav flex-column">
+     <li class="toc-h4 nav-item toc-entry">
+      <a class="reference internal nav-link" href="#book-toc-yml">
+       Book 的目录（
+       <code class="docutils literal notranslate">
+        <span class="pre">
+         _toc.yml
+        </span>
+       </code>
+       ）
+      </a>
+     </li>
+    </ul>
    </li>
    <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#table-of-contents-toc-yml">
-     Table of Contents (
-     <code class="docutils literal notranslate">
-      <span class="pre">
-       _toc.yml
-      </span>
-     </code>
-     )
-    </a>
-   </li>
-   <li class="toc-h3 nav-item toc-entry">
-    <a class="reference internal nav-link" href="#book-content">
-     Book content
+    <a class="reference internal nav-link" href="#id5">
+     书籍内容
     </a>
    </li>
   </ul>
@@ -718,24 +720,24 @@ commentsRunWhenDOMLoaded(addUtterances);
         
               <div>
                 
-  <section id="overview">
-<h1>Overview<a class="headerlink" href="#overview" title="永久链接至标题">¶</a></h1>
-<p>This is a short overview of the major components and steps in building a Jupyter Book. See the other pages in this guide for more in-depth information.</p>
-<section id="install-jupyter-book">
-<span id="start-install"></span><h2>Install Jupyter Book<a class="headerlink" href="#install-jupyter-book" title="永久链接至标题">¶</a></h2>
-<p>You can install Jupyter Book <a class="reference external" href="https://pip.pypa.io/en/stable/">via <code class="docutils literal notranslate"><span class="pre">pip</span></code></a>:</p>
+  <section id="id1">
+<h1>概述<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h1>
+<p>本节简要概述了构建 Jupyter Book 的主要组件和步骤。有关更深入的信息，请参阅本指南的其他页面。</p>
+<section id="jupyter-book">
+<span id="start-install"></span><h2>安装 Jupyter Book<a class="headerlink" href="#jupyter-book" title="永久链接至标题">¶</a></h2>
+<p>可以使用 <a class="reference external" href="https://pip.pypa.io/en/stable/"><code class="docutils literal notranslate"><span class="pre">pip</span></code></a> 安装 Jupyter Book：</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip install -U jupyter-book
 </pre></div>
 </div>
-<p>This will install everything you need to build a Jupyter Book locally.</p>
+<p>这将安装在本地构建 Jupyter Book 所需的一切。</p>
 </section>
-<section id="the-jupyter-book-command-line-interface">
-<h2>The Jupyter Book command-line interface<a class="headerlink" href="#the-jupyter-book-command-line-interface" title="永久链接至标题">¶</a></h2>
-<p>Jupyter Book uses a command-line interface to perform a variety of actions. For example, building and cleaning books. You can run the following command to see what options are at your control:</p>
+<section id="id2">
+<h2>Jupyter Book 的命令行界面<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
+<p>Jupyter Book 使用命令行界面来执行各种操作。例如，建造和清洁书籍。您可以运行以下命令查看哪些选项在您的控制下：</p>
 <aside class="margin sidebar">
 <p class="sidebar-title"></p>
-<p>You can also use the short-hand <code class="docutils literal notranslate"><span class="pre">jb</span></code> for <code class="docutils literal notranslate"><span class="pre">jupyter-book</span></code>. E.g.,:
-<code class="docutils literal notranslate"><span class="pre">jb</span> <span class="pre">create</span> <span class="pre">mybookname</span></code>. We’ll use <code class="docutils literal notranslate"><span class="pre">jupyter-book</span></code> for the rest of this guide.</p>
+<p>你可以简写 <code class="docutils literal notranslate"><span class="pre">jupyter-book</span></code> 为 <code class="docutils literal notranslate"><span class="pre">jb</span></code>。例如：
+<code class="docutils literal notranslate"><span class="pre">jb</span> <span class="pre">create</span> <span class="pre">mybookname</span></code>。剩下的教程我们均使用 <code class="docutils literal notranslate"><span class="pre">jupyter-book</span></code>。</p>
 </aside>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>jupyter-book --help
 </pre></div>
@@ -761,32 +763,31 @@ Commands:
 </div>
 </div>
 </div>
-<p>For more complete information about the CLI, see <a class="reference internal" href="../reference/cli.html"><span class="doc std std-doc">The command-line interface</span></a>.</p>
+<p>有关 CLI 的更完整信息，请参见 <a class="reference internal" href="../reference/cli.html"><span class="doc std std-doc">命令行界面</span></a>。</p>
 </section>
-<section id="the-book-building-process">
-<h2>The book building process<a class="headerlink" href="#the-book-building-process" title="永久链接至标题">¶</a></h2>
-<p>Building a Jupyter Book broadly consists of these steps:</p>
+<section id="id3">
+<h2>书籍构建过程<a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h2>
+<p>构建一本Jupyter Book大致包括以下步骤：</p>
 <ol class="simple">
-<li><p><strong>Create your book’s content</strong>. You structure your book with a collection of folders, files, and configuration. See <a class="reference internal" href="#anatomy-of-a-book"><span class="std std-ref">Anatomy of a Jupyter Book</span></a>.</p></li>
-<li><p><strong>Build your book</strong>. Using Jupyter Book’s command-line interface you can
-convert your pages into either an HTML or a PDF book. See <a class="reference internal" href="build.html"><span class="doc std std-doc">Build your book</span></a>.</p></li>
-<li><p><strong>Publish your book online</strong>. Once your book is built, you can share it with others. Most common is to build HTML, and host it as a public website. See <a class="reference internal" href="publish.html"><span class="doc std std-doc">Publish your book online</span></a>.</p></li>
+<li><p><strong>创建你的书的内容</strong>。您可以用文件夹、文件和配置的集合来构造您的书。 参见 <a class="reference internal" href="#anatomy-of-a-book"><span class="std std-ref">Jupyter Book 的解剖</span></a>。</p></li>
+<li><p><strong>构建你的书</strong>。使用 Jupyter Book 的命令行界面，您可以将页面转换为 HTML 或 PDF 图书。参见 <a class="reference internal" href="build.html"><span class="doc std std-doc">建立你的书</span></a>。</p></li>
+<li><p><strong>在网上发布你的书</strong>。一旦你的书建好了，你就可以和别人分享了。最常见的是构建 HTML，并将其作为公共网站托管。参见 <a class="reference internal" href="publish.html"><span class="doc std std-doc">在线发布您的书</span></a>。</p></li>
 </ol>
 <div class="admonition note">
 <p class="admonition-title">注解</p>
-<p>We will use the word “book” to describe the outputs generated by this tutorial, but you can also use Jupyter Book to build <strong>articles</strong>.
-See <a class="reference internal" href="../customize/toc.html#structure-article"><span class="std std-ref">Structure of an Article</span></a> for more information.</p>
+<p>我们将使用“book”这个词来描述本教程生成的输出，但是您也可以使用 Jupyter Book 来构建<strong>文章</strong>。
+阅读 <a class="reference internal" href="../customize/toc.html#structure-article"><span class="std std-ref">Structure of an Article</span></a> 了解更多信息。</p>
 </div>
 </section>
-<section id="anatomy-of-a-jupyter-book">
-<span id="anatomy-of-a-book"></span><h2>Anatomy of a Jupyter Book<a class="headerlink" href="#anatomy-of-a-jupyter-book" title="永久链接至标题">¶</a></h2>
-<p>There are three things that you need in order to build a Jupyter Book:</p>
+<section id="anatomy-of-a-book">
+<span id="id4"></span><h2>Jupyter Book 的解剖<a class="headerlink" href="#anatomy-of-a-book" title="永久链接至标题">¶</a></h2>
+<p>你需要做三件事来制作一本 Jupyter Book：</p>
 <ul class="simple">
-<li><p>A configuration file (<code class="docutils literal notranslate"><span class="pre">_config.yml</span></code>)</p></li>
-<li><p>A table of contents file (<code class="docutils literal notranslate"><span class="pre">_toc.yml</span></code>)</p></li>
-<li><p>Your book’s content</p></li>
+<li><p>配置文件：<code class="docutils literal notranslate"><span class="pre">_config.yml</span></code></p></li>
+<li><p>目录文件：<code class="docutils literal notranslate"><span class="pre">_toc.yml</span></code></p></li>
+<li><p>你的书的内容</p></li>
 </ul>
-<p>For example, consider the following folder structure, which makes up a simple Jupyter Book.</p>
+<p>例如，考虑下面的文件夹结构，它组成了一个简单的 Jupyter Book。</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>mybookname/
 ├── _config.yml
 ├── _toc.yml
@@ -794,83 +795,69 @@ See <a class="reference internal" href="../customize/toc.html#structure-article"
 └── page1.ipynb
 </pre></div>
 </div>
-<p>We’ll cover each briefly below, and you can find more information about them
-elsewhere in this documentation.</p>
-<section id="book-configuration-config-yml">
-<h3>Book configuration (<code class="docutils literal notranslate"><span class="pre">_config.yml</span></code>)<a class="headerlink" href="#book-configuration-config-yml" title="永久链接至标题">¶</a></h3>
-<p>All of the configuration for your book is in a YAML file called <code class="docutils literal notranslate"><span class="pre">_config.yml</span></code>.</p>
-<p>You can define metadata for your book (such as its title), add
-a book logo, turn on different “interactive” buttons (such as a
-<a class="reference internal" href="../reference/glossary.html#term-Binder"><span class="xref std std-term">Binder</span></a> button for pages built from a Jupyter Notebook), and more.</p>
+<p>我们将在下面简要介绍它们，您可以在本文档的其他地方找到关于它们的更多信息。</p>
+<section id="book-config-yml">
+<h3>Book 的配置（<code class="docutils literal notranslate"><span class="pre">_config.yml</span></code>）<a class="headerlink" href="#book-config-yml" title="永久链接至标题">¶</a></h3>
+<p>您的书的所有配置都在一个名为 <code class="docutils literal notranslate"><span class="pre">_config.yml</span></code> 的 YAML 文件中。</p>
+<p>您可以为您的图书定义元数据(比如它的标题)，添加图书标识，打开不同的“交互式”按钮(比如一个 <a class="reference internal" href="../reference/glossary.html#term-Binder"><span class="xref std std-term">Binder</span></a> 按钮，用于从 Jupyter Book 构建的页面)，等等。</p>
 <aside class="margin sidebar">
 <p class="sidebar-title"></p>
-<p>For more information about your book’s configuration file, see
-<a class="reference internal" href="../customize/config.html"><span class="doc std std-doc">Configuration reference</span></a>.</p>
+<p>有关本书配置文件的更多信息，请参见 <a class="reference internal" href="../customize/config.html"><span class="doc std std-doc">Configuration reference</span></a>。</p>
 </aside>
-<p>Here’s an example of a simple <code class="docutils literal notranslate"><span class="pre">_config.yml</span></code> file:</p>
+<p>下面是一个简单的 <code class="docutils literal notranslate"><span class="pre">_config.yml</span></code> 示例文件：</p>
 <div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="c1"># in _config.yml</span>
 <span class="nt">title</span><span class="p">:</span> <span class="s">&quot;My</span><span class="nv"> </span><span class="s">book</span><span class="nv"> </span><span class="s">title&quot;</span>
-<span class="nt">logo</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">images/logo-wide.svg</span>
+<span class="nt">logo</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">images/logo.png</span>
 <span class="nt">execute</span><span class="p">:</span>
   <span class="nt">execute_notebooks</span><span class="p">:</span> <span class="s">&quot;off&quot;</span>
 </pre></div>
 </div>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">title:</span></code> defines a title for the book. It will show up in the left sidebar.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">logo:</span></code> defines a path to an image file for your book’s logo (it will also show up in the sidebar).</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">execute:</span></code> contains a collection of configuration options to control <a class="reference internal" href="../content/execute.html"><span class="doc std std-doc">execution and cacheing</span></a>.</p>
+<li><p><code class="docutils literal notranslate"><span class="pre">title</span></code>：定义书的标题。它将会被展示在左侧的侧边栏。</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">logo</span></code>：定义图书标识的图像文件的路径(它也会显示在侧边栏中)。</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">execute</span></code>：包含控制 <a class="reference external" href="https://jupyterbook.org/content/execute.html">执行和缓存</a> 的配置选项集合。</p>
 <ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">execute_notebooks:</span> <span class="pre">&quot;off&quot;</span></code> tells Jupyter Book <strong>not to execute</strong> any computational content that it finds when building the book. By default, Jupyter Book executes and caches all book content.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">execute_notebooks:</span> <span class="pre">&quot;off&quot;</span></code>  告诉 Jupyter Book 不要执行任何它在构建书时发现的计算内容。默认情况下，Jupyter Book 会执行并缓存所有的图书内容。</p></li>
 </ul>
 </li>
 </ul>
 <div class="tip admonition">
-<p class="admonition-title">More about <code class="docutils literal notranslate"><span class="pre">_config.yml</span></code></p>
-<p>There is much more that you can do with the <code class="docutils literal notranslate"><span class="pre">_config.yml</span></code> file. For example, you can <a class="reference internal" href="../basics/repository.html#source-repository-button"><span class="std std-ref">Add source repository buttons</span></a> or add <a class="reference internal" href="../interactive/interactive.html"><span class="doc std std-doc">Interactive data visualizations</span></a>. For a complete list of fields for <code class="docutils literal notranslate"><span class="pre">_config.yml</span></code>, see <a class="reference internal" href="../customize/config.html"><span class="doc std std-doc">Configuration reference</span></a>.</p>
+<p class="admonition-title">更多关于 <code class="docutils literal notranslate"><span class="pre">_config.yml</span></code></p>
+<p>你可以用 <code class="docutils literal notranslate"><span class="pre">_config.yml</span></code> 文件做更多的事情。例如，您可以 <a class="reference internal" href="../basics/repository.html#source-repository-button"><span class="std std-ref">Add source repository buttons</span></a> 或添加 <a class="reference internal" href="../interactive/interactive.html"><span class="doc std std-doc">Interactive data visualizations</span></a>。获取 <code class="docutils literal notranslate"><span class="pre">_config.yml</span></code> 的完整字段列表，请参见 <a class="reference internal" href="../customize/config.html"><span class="doc std std-doc">Configuration reference</span></a>。</p>
 </div>
-</section>
-<section id="table-of-contents-toc-yml">
-<h3>Table of Contents (<code class="docutils literal notranslate"><span class="pre">_toc.yml</span></code>)<a class="headerlink" href="#table-of-contents-toc-yml" title="永久链接至标题">¶</a></h3>
-<p>Jupyter Book uses your Table of Contents to define the structure of your book.
-For example, your chapters, sub-chapters, etc.</p>
-<p>This is a YAML file with a collection of pages, each one linking to a
-file in your book. Here’s an example of the two content files shown above.</p>
+<section id="book-toc-yml">
+<h4>Book 的目录（<code class="docutils literal notranslate"><span class="pre">_toc.yml</span></code>）<a class="headerlink" href="#book-toc-yml" title="永久链接至标题">¶</a></h4>
+<p>Jupyter Book 使用你的目录来定义你的书的结构。例如，你的章节，分章节等等。</p>
+<p>这是一个包含一组页面的 YAML 文件，每个页面都链接到书中的一个文件。下面是上面显示的两个内容文件的示例。</p>
 <aside class="margin sidebar">
 <p class="sidebar-title"></p>
-<p>If you would like to quickly <strong>generate a basic Table of Contents</strong> YAML file,
-run the following command:</p>
+<p>如果您想快速<strong>生成一个基本的目录</strong> YAML 文件，执行如下命令:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>jupyter-book toc mybookname/
 </pre></div>
 </div>
-<p>And it will generate a TOC for you. Note that there must be at least one content
-file in each folder in order for any sub-folders to be parsed.</p>
+<p>它会为你生成一个 TOC。注意，为了解析任何子文件夹，每个文件夹中必须至少有一个内容文件。</p>
 </aside>
 <div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="c1"># In _toc.yml</span>
 <span class="p p-Indicator">-</span> <span class="nt">file</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">landing-page</span>
 <span class="p p-Indicator">-</span> <span class="nt">file</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">page1</span>
 </pre></div>
 </div>
-<p>Each item in the <code class="docutils literal notranslate"><span class="pre">_toc.yml</span></code> file points to a single file. The links
-should be <strong>relative to your book’s folder and with no extension.</strong>
-Think of the top-most level of your TOC file as <strong>book chapters</strong> (excluding the landing page). The title of each chapter will be inferred from the title in your files.</p>
-<p>The first file specifies the <strong>landing page</strong> of your book (in this case, it is a <strong>markdown file</strong>).
-The landing page is the highest page in your book’s content hierarchy.
-The second file specifies a <strong>content page</strong> of your book (in this case, it is a <strong>Jupyter Notebook</strong>).</p>
+<p><code class="docutils literal notranslate"><span class="pre">_toc.yml</span></code> 中的每一项都指向单个文件。链接应该是相对于你的书的文件夹，没有扩展名。你可以将 TOC 文件的最顶层想象成书籍的章节(不包括登录页)。每一章的标题将从你文件的标题中推断出来。</p>
+<p>第一个文件指定图书的登录页(在本例中，它是一个 markdown 文件)。登录页（landing page）是书籍内容层次结构中最高的页面。第二个文件指定图书的内容页(在本例中，它是一个 Jupyter Notebook)。</p>
 <aside class="margin sidebar">
 <p class="sidebar-title"></p>
-<p>For more information about how section structure maps onto book structure,
-see <a class="reference internal" href="../structure/sections-headers.html#toc-structure"><span class="std std-ref">How headers and sections map onto to book structure</span></a>.</p>
+<p>有关书的目录文件的更多信息，请参见 <a class="reference internal" href="../structure/sections-headers.html#toc-structure"><span class="std std-ref">How headers and sections map onto to book structure</span></a>.</p>
 </aside>
 <div class="tip admonition">
-<p class="admonition-title">More about <code class="docutils literal notranslate"><span class="pre">_toc.yml</span></code></p>
-<p>You can specify more complex book configurations with your <code class="docutils literal notranslate"><span class="pre">_toc.yml</span></code> file. For example, you can specify <strong>parts</strong>, <strong>sections</strong>, and control <strong>custom titles</strong>. For more information about your book’s table of contents file, see <a class="reference internal" href="../customize/toc.html"><span class="doc std std-doc">Structure the Table of Contents</span></a>.</p>
+<p class="admonition-title">更多关于 <code class="docutils literal notranslate"><span class="pre">_toc.yml</span></code></p>
+<p>您可以使用 <code class="docutils literal notranslate"><span class="pre">_toc.yml</span></code> 指定更复杂的图书配置。例如，您可以指定 <strong>parts</strong>、<strong>sections</strong> 和控制 <strong>custom titles</strong>。关于书的目录文件的更多信息，请参见 <a class="reference internal" href="../customize/toc.html"><span class="doc std std-doc">Structure the Table of Contents</span></a>。</p>
 </div>
 </section>
-<section id="book-content">
-<h3>Book content<a class="headerlink" href="#book-content" title="永久链接至标题">¶</a></h3>
-<p>A collection of text files make up your book’s content. These can be one of several types of files, such as markdown (<code class="docutils literal notranslate"><span class="pre">.md</span></code>), Jupyter Notebooks (<code class="docutils literal notranslate"><span class="pre">.ipynb</span></code>) or reStructuredText (<code class="docutils literal notranslate"><span class="pre">.rst</span></code>) files (see <a class="reference internal" href="../file-types/index.html"><span class="doc std std-doc">Types of content source files</span></a> for a full list).</p>
-<p>In the above example, there were two files listed: a <strong>markdown</strong> file and a <strong>Jupyter Notebook</strong>.
-We’ll cover each in the next section.</p>
+</section>
+<section id="id5">
+<h3>书籍内容<a class="headerlink" href="#id5" title="永久链接至标题">¶</a></h3>
+<p>一组文本文件构成了你的书的内容。这些文件可以是几种类型中的一种，例如 markdown (<code class="docutils literal notranslate"><span class="pre">.md</span></code>)、Jupyter notebook (<code class="docutils literal notranslate"><span class="pre">.ipynb</span></code>)或 reStructuredText (<code class="docutils literal notranslate"><span class="pre">.rst</span></code>)文件(请参阅 <a class="reference internal" href="../file-types/index.html"><span class="doc std std-doc">Types of content source files</span></a> 以获得完整列表)。</p>
+<p>在上面的例子中，列出了两个文件：一个 markdown 文件和一个 Jupyter Notebook。我们将在下一节中介绍它们。</p>
 </section>
 </section>
 </section>
@@ -901,7 +888,7 @@ We’ll cover each in the next section.</p>
         <div class='prev-next-bottom'>
             
     <a class='left-prev' id="prev-link" href="your-first-book.html" title="previous page">创建你的第一本书</a>
-    <a class='right-next' id="next-link" href="create.html" title="next page">Create your book’s source files</a>
+    <a class='right-next' id="next-link" href="create.html" title="next page">创建书籍的源文件</a>
 
         </div>
         
