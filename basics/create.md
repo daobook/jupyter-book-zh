@@ -13,9 +13,9 @@ kernelspec:
 ---
 
 (create-a-template-book)=
-# Create books automatically
+# 自动创建书
 
-This section covers how you can create books automatically in order to get started more quickly.
+本节介绍如何自动创建书籍，以便更快地入门。
 
 ## Create a book from a simple template
 

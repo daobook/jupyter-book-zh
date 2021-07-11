@@ -1,3 +1,3 @@
-# Build your book outputs
+# 构建你的书输出
 
-These sections cover aspects of **building your book** - that is, generating output artifacts using your book pages.
+这些部分介绍了**构建图书**的各个方面—即使用图书页面生成输出工件。
