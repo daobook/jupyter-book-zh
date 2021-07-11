@@ -6,4 +6,4 @@ dependencies:
   - python=3.9
   - pip
   - pip:
-    - -r requirements.txt
+    - -r requirements.txt -i https://pypi.tuna.tsinghua.edu.cn/simple

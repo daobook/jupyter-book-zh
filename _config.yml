@@ -1,10 +1,17 @@
-title: "SanstyleLab"
+#######################################################################################
+# Book settings
+title: ""
 logo: logo.jpg
 author: ""
+email: xinzone@outlook.com
 copyright: ""
 
 exclude_patterns:
-  [_build/, Thumbs.db, .DS_Store, "**.ipynb_checkpoints", .github/]
+  [_build/, Thumbs.db, .DS_Store, "**.ipynb_checkpoints", .github/, file-types/include-rst.rst]
+
+# Bibliography settings
+bibtex_bibfiles:
+  - references.bib
 
 execute:
   execute_notebooks: cache # 是否在构建时执行笔记本。必须是 ("auto", "force", "cache", "off") 之一
@@ -15,27 +22,17 @@ execute:
   run_in_temp: false
   allow_errors: true # 如果为 `False`，则当代码单元引发错误时，执行将停止，否则所有单元将始终运行。
   stderr_output: show # 'show', 'remove', 'remove-warn', 'warn', 'error', 'severe' 之一
-only_build_toc_files: true
 
-parse:
-  myst_enable_extensions: # 在 myst 解析器中启用的默认扩展。参考 https://myst-parser.readthedocs.io/en/latest/using/syntax-optional.html
-    - amsmath # 启用解析 LaTeX 样式的数学块
-    - colon_fence # 启用 ::: 防护栅栏，以便使其更易于在不支持 MyST 的界面中呈现
-    - deflist # 启用定义清单
-    - dollarmath # 为数学块支持 $$ 和 $ 语法
-    - html_admonition  # 启用纯定义的 HTML 的提示
-    - html_image # 启用解析原始 HTML 图像
-    - linkify # 自动检测 Markdown 中类似 HTML 的链接并将其转换为超链接
-    - replacements
-    - smartquotes
-    - substitution # 为了允许您定义 Markdown “变量”并在使用它们时置换文本
-  myst_url_schemes: [mailto, http, https] # 在 Markdown 链接中将被识别为外部 URL 的 URI 方案
+only_build_toc_files: true
 
 html:
   favicon: "page-logo.jfif"
+  home_page_in_navbar: false # Whether to include your home page in the left Navigation Bar
   use_edit_page_button: false # Whether to add an "edit this page" button to pages. If `true`, repository information in repository: must be filled in
   use_repository_button: true # Whether to add a link to your repository button
   use_issues_button: true # Whether to add an "open an issue" button
+  baseurl: https://xinetzone.github.io/jupyter-book/ # The base URL where your book will be hosted. Used for creating image previews and social links. e.g.: https://mypage.com/mybook/
+  
   extra_navbar: |
     <div class="w3-padding w3-card-4 w3-pale-green">
       <a href="https://github.com/xinetzone" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub"
@@ -66,12 +63,37 @@ html:
       <a href="https://github.com/xinetzone">xinetzone</a> | 
       Powered by <a href="https://github.com/executablebooks/jupyter-book">Jupyter Book</a>.
     </p>
-  home_page_in_navbar: false # Whether to include your home page in the left Navigation Bar
-  baseurl: "" # The base URL where your book will be hosted. Used for creating image previews and social links. e.g.: https://mypage.com/mybook/
   comments:
     hypothesis: true
     utterances:
-      repo: "xinetzone/sanstyle-starter"
+      repo: "xinetzone/jupyter-book"
+
+repository:
+  url: https://github.com/xinetzone/jupyter-book # The URL to your book's repository
+  path_to_book: "./" # A path to your book's folder, relative to the repository root., ie docs
+  branch: main # Which branch of the repository should be used when creating links
+
+launch_buttons:
+  notebook_interface: "classic" # The interface interactive links will activate ["classic", "jupyterlab"]
+  binderhub_url: "https://mybinder.org"
+  colab_url: "https://colab.research.google.com"
+  thebe: true
+
+parse:
+  myst_substitutions:
+    sub3: My _global_ value!
+  myst_enable_extensions: # 在 myst 解析器中启用的默认扩展。参考 https://myst-parser.readthedocs.io/en/latest/using/syntax-optional.html
+    - amsmath # 启用解析 LaTeX 样式的数学块
+    - colon_fence # 启用 ::: 防护栅栏，以便使其更易于在不支持 MyST 的界面中呈现
+    - deflist # 启用定义清单
+    - dollarmath # 为数学块支持 $$ 和 $ 语法
+    - html_admonition  # 启用纯定义的 HTML 的提示
+    - html_image # 启用解析原始 HTML 图像
+    - linkify # 自动检测 Markdown 中类似 HTML 的链接并将其转换为超链接
+    - replacements
+    - smartquotes
+    - substitution # 为了允许您定义 Markdown “变量”并在使用它们时置换文本
+  myst_url_schemes: [mailto, http, https] # 在 Markdown 链接中将被识别为外部 URL 的 URI 方案
 
 #######################################################################################
 # LaTeX-specific settings
@@ -80,32 +102,21 @@ latex:
   use_jupyterbook_latex: true # use jupyterbook-latex for pdf builds as default
   latex_documents:
     targetname: book.tex
-
-#######################################################################################
-# Launch button settings
-launch_buttons:
-  notebook_interface: classic # The interface interactive links will activate ["classic", "jupyterlab"]
-  binderhub_url: https://mybinder.org # The URL of the BinderHub (e.g., https://mybinder.org)
-  jupyterhub_url: "" # The URL of the JupyterHub (e.g., https://datahub.berkeley.edu)
-  thebe: false # Add a thebe button to pages (requires the repository to run on Binder)
-  colab_url: "" # The URL of Google Colab (https://colab.research.google.com)
-
-repository:
-  url: https://github.com/xinetzone/sanstyle-starter # The URL to your book's repository
-  path_to_book: "docs" # A path to your book's folder, relative to the repository root.
-  branch: main # Which branch of the repository should be used when creating links
-
-# Add a bibtex file so that we can create citations
-bibtex_bibfiles:
-  - references.bib
   
 #######################################################################################
 # Advanced and power-user settings
 sphinx:
   local_extensions: # A list of local extensions to load by sphinx specified by "name: path" items
   config: 
-    language: zh # https://www.w3schools.com/tags/ref_language_codes.asp
     html_show_copyright: false
+    nb_custom_formats:
+      .Rmd:
+        - jupytext.reads
+        - fmt: Rmd
+    bibtex_reference_style: author_year  # or label, super, \supercite
+    # TODO: #917 this path will be the default in sphinx v4
+    # mathjax_path: https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+    # However, it is incompatible with the mathjax config below for macros
     mathjax_config:
       TeX:
         Macros:
@@ -122,6 +133,24 @@ sphinx:
     intersphinx_mapping:
       wiki:
         - "https://xinetzone.github.io/wiki/"
+        - null
+      ebp:
+        - "https://executablebooks.org/en/latest/"
+        - null
+      myst-parser:
+        - "https://myst-parser.readthedocs.io/en/latest/"
+        - null
+      myst-nb:
+        - "https://myst-nb.readthedocs.io/en/latest/"
+        - null
+      sphinx:
+        - "https://www.sphinx-doc.org/en/master"
+        - null
+      nbformat:
+        - "https://nbformat.readthedocs.io/en/latest"
+        - null
+      sphinx-panels:
+        - https://sphinx-panels.readthedocs.io/en/sphinx-book-theme/
         - null
       # plotly-book:
       #   - "https://xinetzone.github.io/plotly-book/"
@@ -153,8 +182,18 @@ sphinx:
       # matrix-theory:
       #   - "https://xinetzone.github.io/matrix-theory/"
       #   - null
+    rediraffe_branch: 'main'
+    rediraffe_redirects:
+      content-types/index.md: file-types/index.md
+      content-types/markdown.md: file-types/markdown.md
+      content-types/notebooks.ipynb: file-types/notebooks.ipynb
+      content-types/myst-notebooks.md: file-types/myst-notebooks.md
+      content-types/jupytext.md: file-types/jupytext.Rmd
+      content-types/restructuredtext.md: file-types/restructuredtext.md
+    language: zh
+
   extra_extensions:
     - sphinx_click.ext
     - sphinx_inline_tabs
     - sphinx.ext.intersphinx
-
+    - sphinxext.rediraffe

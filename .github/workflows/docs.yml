@@ -32,7 +32,6 @@ jobs:
       # Build the book
       - name: Build the book
         run: |
-          conda install -c conda-forge ipywidgets
           jupyter-book build .
 
       # Deploy the book's HTML to gh-pages branch

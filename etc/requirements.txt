@@ -1,13 +1,16 @@
+altair
+bokeh
+folium
+ipywidgets
+matplotlib
+nbclient
 numpy
 pandas
-matplotlib
+plotly
+sphinx-click
+sphinx_inline_tabs
+sphinxext-rediraffe~=0.2.3
+sympy
 jupyter-book
 ghp-import
-sphinx_inline_tabs
-sphinx-click
-ipywidgets
-nbclient
-# sphinxext-rediraffe
-sympy
 jupyter-dash
-plotly
