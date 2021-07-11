@@ -95,16 +95,16 @@ because it will usually just be passed through the build process as raw text, an
 So, for instance, below we add:
 
 ```md
-<a href="../intro.md">Go Home HTML!</a>
+<a href="../README.md">Go Home HTML!</a>
 
-[Go Home Markdown!](../intro.md)
+[Go Home Markdown!](../README.md)
 ```
 
 and you will find that the HTML link is broken:
 
-<a href="../intro.md">Go Home HTML!</a>
+<a href="../README.md">Go Home HTML!</a>
 
-[Go Home Markdown!](../intro.md)
+[Go Home Markdown!](../README.md)
 
 :::{tip}
 Note that MyST Markdown now has some extended syntax features,

@@ -4,7 +4,7 @@ import nbformat as nbf
 from nbconvert.exporters import NotebookExporter
 from traitlets.config import Config
 
-notebooks = glob("docs/content/**/*.ipynb", recursive=True)
+notebooks = glob("./content/**/*.ipynb", recursive=True)
 
 c = Config()
 c.NotebookExporter.preprocessors = ["nbconvert.preprocessors.ClearOutputPreprocessor"]

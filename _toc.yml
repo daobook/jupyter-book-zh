@@ -1,7 +1,7 @@
 format: jb-book
 root: README
 parts:
-- caption: Tutorials
+- caption: 教程
   chapters:
   - file: start/your-first-book
     sections:
@@ -12,7 +12,7 @@ parts:
     - file: start/example-book
   - file: tutorials/references
 
-- caption: Topic Guides
+- caption: 主题指南
   chapters:
   - file: basics/organize
     sections:
@@ -74,14 +74,14 @@ parts:
     - file: explain/sphinx
   - file: contribute/intro
 
-- caption: Reference
+- caption: 参考
   chapters:
   - file: customize/config
   - file: reference/cheatsheet
   - file: reference/cli
   - file: reference/glossary
 
-- caption: About Jupyter Book
+- caption: 关于 Jupyter Book
   chapters:
   - url: https://executablebooks.org/en/latest/gallery.html
     title: Gallery of Jupyter Books

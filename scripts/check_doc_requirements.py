@@ -4,7 +4,7 @@ from configparser import ConfigParser
 from pathlib import Path
 
 
-def check_reqs(setup_path="setup.cfg", req_path="docs/requirements.txt"):
+def check_reqs(setup_path="setup.cfg", req_path="./etc/requirements.txt"):
     parser = ConfigParser()
     parser.read(setup_path)
     setup_content = parser["options.extras_require"]["sphinx"]

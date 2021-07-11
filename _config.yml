@@ -7,7 +7,7 @@ email: xinzone@outlook.com
 copyright: ""
 
 exclude_patterns:
-  [_build/, Thumbs.db, .DS_Store, "**.ipynb_checkpoints", .github/, file-types/include-rst.rst]
+  [_build, Thumbs.db, .DS_Store, "**.ipynb_checkpoints", .github, file-types/include-rst.rst]
 
 # Bibliography settings
 bibtex_bibfiles:
@@ -115,7 +115,7 @@ sphinx:
         - fmt: Rmd
     bibtex_reference_style: author_year  # or label, super, \supercite
     # TODO: #917 this path will be the default in sphinx v4
-    # mathjax_path: https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+    mathjax_path: https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
     # However, it is incompatible with the mathjax config below for macros
     mathjax_config:
       TeX:
@@ -131,9 +131,9 @@ sphinx:
           \newcommand{\bmat}{\left[\begin{array}}
           \newcommand{\emat}{\end{array}\right]}
     intersphinx_mapping:
-      wiki:
-        - "https://xinetzone.github.io/wiki/"
-        - null
+      # wiki:
+      #   - "https://xinetzone.github.io/wiki/"
+      #   - null
       ebp:
         - "https://executablebooks.org/en/latest/"
         - null
