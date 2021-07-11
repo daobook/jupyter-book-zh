@@ -1,0 +1,1161 @@
+
+<!DOCTYPE html>
+
+<html lang="zh">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Execute and cache your pages</title>
+    
+  <link href="../_static/css/theme.css" rel="stylesheet" />
+  <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-book-theme.acff12b8f9c144ce68a297486a2fa670.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/tabs.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/page.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/xin-css/main.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/w3css/4/w3pro.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/w3css/4/w3mobile.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/w3css/4/w3.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/tabs.js"></script>
+    <script async="async" kind="hypothesis" src="https://hypothes.is/embed.js"></script>
+    <script kind="utterances">
+
+    var commentsRunWhenDOMLoaded = cb => {
+    if (document.readyState != 'loading') {
+        cb()
+    } else if (document.addEventListener) {
+        document.addEventListener('DOMContentLoaded', cb)
+    } else {
+        document.attachEvent('onreadystatechange', function() {
+        if (document.readyState == 'complete') cb()
+        })
+    }
+}
+
+var addUtterances = () => {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src = "https://utteranc.es/client.js";
+    script.async = "async";
+
+    script.setAttribute("repo", "xinetzone/jupyter-book");
+    script.setAttribute("issue-term", "pathname");
+    script.setAttribute("theme", "github-light");
+    script.setAttribute("label", "💬 comment");
+    script.setAttribute("crossorigin", "anonymous");
+
+    sections = document.querySelectorAll("div.section");
+    if (sections !== null) {
+        section = sections[sections.length-1];
+        section.appendChild(script);
+    }
+}
+commentsRunWhenDOMLoaded(addUtterances);
+</script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.0/dist/embed-amd.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script>
+        const thebe_selector = ".thebe,.cell"
+        const thebe_selector_input = "pre,.cell_input div.highlight"
+        const thebe_selector_output = ".output,.cell_output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="canonical" href="https://xinetzone.github.io/jupyter-book/content/execute.html" />
+    <link rel="shortcut icon" href="../_static/page-logo.jfif"/>
+    <link rel="index" title="索引" href="../genindex.html" />
+    <link rel="search" title="搜索" href="../search.html" />
+    <link rel="next" title="Formatting code outputs" href="code-outputs.html" />
+    <link rel="prev" title="Write executable content" href="executable/index.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+      <img src="../_static/logo.jpg" class="logo" alt="logo">
+      
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <div class="bd-toc-item active">
+        <p class="caption">
+ <span class="caption-text">
+  Tutorials
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../start/your-first-book.html">
+   Create your first book
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../start/overview.html">
+     Overview
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../start/create.html">
+     Create your book’s source files
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../start/build.html">
+     Build your book
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../start/publish.html">
+     Publish your book online
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../start/example-book.html">
+     Build a small example project
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../tutorials/references.html">
+   Get started with references
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Topic Guides
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../basics/organize.html">
+   Structure and organize your content
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../customize/toc.html">
+     Structure the Table of Contents
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../structure/configure.html">
+     Configure the Table of Contents
+    </a>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../file-types/index.html">
+     Types of content source files
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+    <label for="toctree-checkbox-3">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../file-types/markdown.html">
+       Markdown files
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../file-types/notebooks.html">
+       Jupyter Notebook files
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../file-types/myst-notebooks.html">
+       Notebooks written entirely in Markdown
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../file-types/jupytext.html">
+       Custom notebook formats and Jupytext
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../file-types/restructuredtext.html">
+       reStructuredText files
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../basics/create.html">
+     Create books automatically
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../structure/sections-headers.html">
+     How headers and sections map onto to book structure
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="index.html">
+   Write narrative content
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="myst.html">
+     MyST Markdown overview
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="content-blocks.html">
+     Special content blocks
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="references.html">
+     References and cross-references
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="layout.html">
+     Control the page layout
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="citations.html">
+     Citations and bibliographies
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="math.html">
+     Math and equations
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="figures.html">
+     Images and figures
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="metadata.html">
+     Add metadata to your book pages
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="executable/index.html">
+   Write executable content
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+  <label for="toctree-checkbox-5">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     Execute and cache your pages
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="code-outputs.html">
+     Formatting code outputs
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="executable/output-insert.html">
+     Store code outputs and insert into content
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../interactive/interactive.html">
+     Interactive data visualizations
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../basics/building/index.html">
+   Build your book outputs
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+  <label for="toctree-checkbox-6">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../basics/build.html">
+     Use the Build command line interface
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../advanced/pdf.html">
+     Build a PDF
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../web/index.html">
+   Web and internet features
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
+  <label for="toctree-checkbox-7">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../basics/repository.html">
+     Connect your book to a code repository
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../interactive/hiding.html">
+     Hide or remove content
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../interactive/launchbuttons.html">
+     Launch into interactive computing interfaces
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../interactive/thebe.html">
+     Make your code cells executable
+    </a>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../interactive/comments.html">
+     Commenting and annotating
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
+    <label for="toctree-checkbox-8">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../interactive/comments/hypothesis.html">
+       Hypothesis
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../interactive/comments/utterances.html">
+       Utterances
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../publish/web.html">
+     Host your book on the internet
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/>
+    <label for="toctree-checkbox-9">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../publish/gh-pages.html">
+       GitHub Pages and Actions
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../publish/netlify.html">
+       Publish with Netlify
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../advanced/html.html">
+     Advanced HTML outputs
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../advanced/index.html">
+   Advanced Jupyter Book Usage
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/>
+  <label for="toctree-checkbox-10">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../advanced/sphinx.html">
+     Advanced Sphinx usage
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../advanced/windows.html">
+     Working on Windows
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../explain/sphinx.html">
+     How Jupyter Book and Sphinx relate to one another
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../contribute/intro.html">
+   为 Jupyter Book 贡献
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Reference
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../customize/config.html">
+   Configuration reference
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../reference/cheatsheet.html">
+   MyST syntax cheat sheet
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../reference/cli.html">
+   The command-line interface
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../reference/glossary.html">
+   Glossary
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  About Jupyter Book
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference external" href="https://executablebooks.org/en/latest/gallery.html">
+   Gallery of Jupyter Books
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../explain/components.html">
+   The Jupyter Book toolchain and components
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../cite.html">
+   Cite Jupyter Book
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../reference/_changelog.html">
+   Change log
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  <div class="w3-padding w3-card-4 w3-pale-green">
+  <a href="https://github.com/xinetzone" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub"
+      data-position="top" data-delay="50">
+      <i class="fab fa-github"></i>
+  </a>
+  <a href="mailto:q735613050@163.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top"
+      data-delay="50">
+      <i class="fas fa-envelope-open"></i>
+  </a>
+  <a href="tencent://AddContact/?fromId=50&amp;fromSubId=1&amp;subcmd=all&amp;uin=735613050" class="tooltipped"
+      target="_blank" data-tooltip="QQ联系我: 735613050" data-position="top" data-delay="50">
+      <i class="fab fa-qq"></i>
+  </a>
+  <a href="https://www.zhihu.com/people/liu-xin-wei-55" class="tooltipped" target="_blank"
+      data-tooltip="关注我的知乎: liu-xin-wei-55" data-position="top" data-delay="50">
+      <i class="fab fa-zhihu1">知</i>
+  </a>
+  <a target="_blank" rel="noopener" href="https://www.linkedin.com/in/xinet" class="tooltipped"
+      data-tooltip="领英联系我: xinet" data-position="top" data-delay="50">
+      <i class="fab fa-linkedin"></i>
+  </a>
+  <div><a href="https://github.com/xinetzone/sanstyle">上善若水</a> 版权所有</div>
+</div>
+
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        <a class="dropdown-buttons"
+            href="../_sources/content/execute.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download notebook file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/content/execute.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/xinetzone/jupyter-book"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/xinetzone/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fcontent/execute.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/xinetzone/jupyter-book/main?urlpath=tree/./content/execute.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        <button type="button" class="btn btn-secondary topbarbtn"
+            onclick="initThebeSBT()" title="Launch Thebe" data-toggle="tooltip" data-placement="left"><i
+                class="fas fa-play"></i><span style="margin-left: .4em;">Live Code</span></button>
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#trigger-notebook-execution">
+   Trigger notebook execution
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#exclude-files-from-execution">
+   Exclude files from execution
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#caching-the-notebook-execution">
+   Caching the notebook execution
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#execution-configuration">
+   Execution configuration
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#the-execution-working-directory">
+     The execution working directory
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#setting-execution-timeout">
+     Setting execution timeout
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#dealing-with-code-that-raises-errors">
+     Dealing with code that raises errors
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#dealing-with-code-that-produces-stderr">
+     Dealing with code that produces stderr
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#dealing-with-code-that-produces-stdout">
+     Dealing with code that produces stdout
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#execution-statistics">
+   Execution statistics
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <section id="execute-and-cache-your-pages">
+<h1>Execute and cache your pages<a class="headerlink" href="#execute-and-cache-your-pages" title="永久链接至标题">¶</a></h1>
+<p>Jupyter Book can automatically run and cache any notebook pages.
+Notebooks can either be run each time the documentation is built,
+or cached locally so that notebooks will only be re-run when the code cells in a notebook have changed.</p>
+<p>Caching behaviour is controlled with the <code class="docutils literal notranslate"><span class="pre">execute:</span></code> section <a class="reference internal" href="../customize/config.html"><span class="doc std std-doc">in your <code class="docutils literal notranslate"><span class="pre">_config.yml</span></code> file</span></a>. See
+the sections below for each configuration option and its effect.</p>
+<div class="admonition tip">
+<p class="admonition-title">小技巧</p>
+<p>If you’d like to execute code that is in your Markdown files,
+you can use the <code class="docutils literal notranslate"><span class="pre">{code-cell}</span></code> directive in MyST Markdown.
+See <a class="reference internal" href="../file-types/myst-notebooks.html"><span class="doc std std-doc">Notebooks written entirely in Markdown</span></a> for more information.</p>
+</div>
+<section id="trigger-notebook-execution">
+<h2>Trigger notebook execution<a class="headerlink" href="#trigger-notebook-execution" title="永久链接至标题">¶</a></h2>
+<p>By default, Jupyter Book will execute any content files that have a notebook structure
+and that are missing at least one output. This is equivalent to the following configuration in _config.yml`:</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">execute</span><span class="p">:</span>
+  <span class="nt">execute_notebooks</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">auto</span>
+</pre></div>
+</div>
+<p>This will only execute notebooks that are missing at least one output.
+If the notebook has <em>all</em> of its outputs populated, then it will not be executed.</p>
+<p><strong>To force the execution of all notebooks, regardless of their outputs</strong>, change the
+above configuration value to:</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">execute_notebooks</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">force</span>
+</pre></div>
+</div>
+<p><strong>To cache execution outputs with <a class="reference external" href="https://github.com/executablebooks/jupyter-cache">jupyter-cache</a></strong>, change the above configuration
+value to:</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">execute</span><span class="p">:</span>
+  <span class="nt">execute_notebooks</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">cache</span>
+</pre></div>
+</div>
+<p>See <a class="reference internal" href="#execute-cache"><span class="std std-ref">Caching the notebook execution</span></a> for more information.</p>
+<p><strong>To turn off notebook execution</strong>, change the above configuration value to:</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">execute</span><span class="p">:</span>
+  <span class="nt">execute_notebooks</span><span class="p">:</span> <span class="s">&#39;off&#39;</span>
+</pre></div>
+</div>
+</section>
+<section id="exclude-files-from-execution">
+<span id="execute-exclude"></span><h2>Exclude files from execution<a class="headerlink" href="#exclude-files-from-execution" title="永久链接至标题">¶</a></h2>
+<p><strong>To exclude certain file patterns from execution</strong>, use the following
+configuration:</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">execute</span><span class="p">:</span>
+  <span class="nt">exclude_patterns</span><span class="p">:</span>
+    <span class="p p-Indicator">-</span> <span class="s">&#39;pattern1&#39;</span>
+    <span class="p p-Indicator">-</span> <span class="s">&#39;pattern2&#39;</span>
+    <span class="p p-Indicator">-</span> <span class="s">&#39;*pattern3withwildcard&#39;</span>
+</pre></div>
+</div>
+<p>Any file that matches one of the items in <code class="docutils literal notranslate"><span class="pre">exclude_patterns</span></code> will not be executed.</p>
+<div class="admonition tip">
+<p class="admonition-title">小技巧</p>
+<p>To auto-exclude all files outside of your table of contents, see <a class="reference internal" href="../basics/build.html#config-exclude-non-toc-files"><span class="std std-ref">Disable building files that aren’t specified in the TOC</span></a></p>
+</div>
+</section>
+<section id="caching-the-notebook-execution">
+<span id="execute-cache"></span><h2>Caching the notebook execution<a class="headerlink" href="#caching-the-notebook-execution" title="永久链接至标题">¶</a></h2>
+<p>You may also <strong>cache the results of executing a notebook page</strong> using <a class="reference external" href="https://github.com/executablebooks/jupyter-cache">jupyter-cache</a>.
+In this case, when a page is executed, its outputs will be stored in a local database.
+This allows you to be sure that the outputs in your documentation are up-to-date,
+while saving time avoiding unnecessary re-execution.
+It also allows you to store your <code class="docutils literal notranslate"><span class="pre">.ipynb</span></code> files in your <code class="docutils literal notranslate"><span class="pre">git</span></code> repository <em>without their outputs</em>,
+but still leverage a cache to save time when building your site.</p>
+<p>When you re-build your site, the following will happen:</p>
+<ul class="simple">
+<li><p>Notebooks that have not seen changes to their <strong>code cells</strong> since the last build will not be re-executed.
+Instead, their outputs will be pulled from the cache and inserted into your site.</p></li>
+<li><p>Notebooks that <strong>have had any change to their code cells</strong> will be re-executed
+and the cache will be updated with the new outputs.</p></li>
+</ul>
+<p>To enable caching of notebook outputs, use the following configuration:</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">execute</span><span class="p">:</span>
+  <span class="nt">execute_notebooks</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">cache</span>
+</pre></div>
+</div>
+<p>By default, the cache will be placed in the parent of your build folder.
+Generally, this is in <code class="docutils literal notranslate"><span class="pre">_build/.jupyter_cache</span></code>.</p>
+<p>You may also specify a path to the location of a jupyter cache you’d like to use:</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">execute</span><span class="p">:</span>
+  <span class="nt">cache</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">path/to/mycache</span>
+</pre></div>
+</div>
+<p>The path should point to an <strong>empty folder</strong>, or a folder where a <strong>jupyter cache already exists</strong>.</p>
+</section>
+<section id="execution-configuration">
+<h2>Execution configuration<a class="headerlink" href="#execution-configuration" title="永久链接至标题">¶</a></h2>
+<p>You can control notebook execution and how output content is handled at a project level using your <code class="docutils literal notranslate"><span class="pre">_config.yml</span></code> but, in some cases, also at a notebook and code cell level.
+Below we explore a number of ways to achieve this.</p>
+<div class="admonition seealso">
+<p class="admonition-title">参见</p>
+<p><a class="reference internal" href="metadata.html#jupyter-cell-tags"><span class="std std-ref">Add metadata to notebooks</span></a> and <a class="reference internal" href="code-outputs.html"><span class="doc std std-doc">Formatting code outputs</span></a>.</p>
+</div>
+<section id="the-execution-working-directory">
+<h3>The execution working directory<a class="headerlink" href="#the-execution-working-directory" title="永久链接至标题">¶</a></h3>
+<div class="admonition important">
+<p class="admonition-title">重要</p>
+<p>The default behaviour of <code class="docutils literal notranslate"><span class="pre">cache</span></code> is now to run in the local directory.
+This is a change from <code class="docutils literal notranslate"><span class="pre">v0.7</span></code>.</p>
+</div>
+<p>By default, the command working directory (cwd) in which a notebook runs will be the directory in which it is located (for both <code class="docutils literal notranslate"><span class="pre">auto</span></code> and <code class="docutils literal notranslate"><span class="pre">cache</span></code>). This means that notebooks requiring access to assets in relative paths will work.</p>
+<p>Alternatively, if you wish for your notebooks to isolate your notebook execution in a temporary folder,
+you can use the following <code class="docutils literal notranslate"><span class="pre">_config.yml</span></code> setting:</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">execute</span><span class="p">:</span>
+  <span class="nt">run_in_temp</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">true</span>
+</pre></div>
+</div>
+</section>
+<section id="setting-execution-timeout">
+<h3>Setting execution timeout<a class="headerlink" href="#setting-execution-timeout" title="永久链接至标题">¶</a></h3>
+<p>Execution timeout defines the maximum time (in seconds) each notebook cell is allowed to run for.
+If the execution takes longer an exception will be raised.
+The default is 30 seconds, so in cases of long-running cells you may want to specify a higher value.
+The timeout option can also be set to -1, to remove any restriction on execution time.</p>
+<p>You can set the timeout for all notebook executions in your <code class="docutils literal notranslate"><span class="pre">_config.yml</span></code>:</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">execute</span><span class="p">:</span>
+  <span class="nt">timeout</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">100</span>
+</pre></div>
+</div>
+<p>This global value can also be overridden per notebook by adding this to your notebook metadata:</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+ <span class="nt">&quot;metadata&quot;</span><span class="p">:</span> <span class="p">{</span>
+  <span class="nt">&quot;execution&quot;</span><span class="p">:</span> <span class="p">{</span>
+      <span class="nt">&quot;timeout&quot;</span><span class="p">:</span> <span class="mi">30</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</section>
+<section id="dealing-with-code-that-raises-errors">
+<h3>Dealing with code that raises errors<a class="headerlink" href="#dealing-with-code-that-raises-errors" title="永久链接至标题">¶</a></h3>
+<p>In some cases, you may want to intentionally show code that doesn’t work
+(e.g., to show the error message).</p>
+<p>You can allow errors for all notebooks in your <code class="docutils literal notranslate"><span class="pre">_config.yml</span></code>:</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">execute</span><span class="p">:</span>
+  <span class="nt">allow_errors</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">true</span>
+</pre></div>
+</div>
+<p>This global value can also be overridden per notebook by adding this to your notebook metadata:</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+ <span class="nt">&quot;metadata&quot;</span><span class="p">:</span> <span class="p">{</span>
+  <span class="nt">&quot;execution&quot;</span><span class="p">:</span> <span class="p">{</span>
+      <span class="nt">&quot;allow_errors&quot;</span><span class="p">:</span> <span class="kc">false</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>Lastly, you can allow errors at a cell level, by adding a <code class="docutils literal notranslate"><span class="pre">raises-exception</span></code> tag to your code cell.
+This can be done via a Jupyter interface, or via the <code class="docutils literal notranslate"><span class="pre">{code-cell}</span></code> directive like so:</p>
+<div class="highlight-md notranslate"><div class="highlight"><pre><span></span>```{code-cell}
+---
+tags: [raises-exception]
+---
+print(thisvariabledoesntexist)
+```
+</pre></div>
+</div>
+<p>Which produces:</p>
+<div class="cell tag_raises-exception docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">thisvariabledoesntexist</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
+<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_2712</span><span class="o">/</span><span class="mf">1091175326.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="k">print</span><span class="p">(</span><span class="n">thisvariabledoesntexist</span><span class="p">)</span>
+
+<span class="ne">NameError</span>: name &#39;thisvariabledoesntexist&#39; is not defined
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="dealing-with-code-that-produces-stderr">
+<h3>Dealing with code that produces stderr<a class="headerlink" href="#dealing-with-code-that-produces-stderr" title="永久链接至标题">¶</a></h3>
+<p>You may also wish to control how stderr outputs are dealt with.</p>
+<p>Alternatively, you can configure how stdout is dealt with at a global configuration level, using the <code class="docutils literal notranslate"><span class="pre">nb_output_stderr</span></code> configuration value.</p>
+<p>You can configure the default behaviour for all notebooks in your <code class="docutils literal notranslate"><span class="pre">_config.yml</span></code>:</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">execute</span><span class="p">:</span>
+  <span class="nt">stderr_output</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">show</span>
+</pre></div>
+</div>
+<p>Where the value is one of:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">&quot;show&quot;</span></code> (default): show all stderr (unless a <code class="docutils literal notranslate"><span class="pre">remove-stderr</span></code> tag is present)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&quot;remove&quot;</span></code>: remove all stderr</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&quot;remove-warn&quot;</span></code>: remove all stderr, but log a warning if any found</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&quot;warn&quot;</span></code>, <code class="docutils literal notranslate"><span class="pre">&quot;error&quot;</span></code> or <code class="docutils literal notranslate"><span class="pre">&quot;severe&quot;</span></code>: log the stderr at a certain level, if any found.</p></li>
+</ul>
+<p>You can also remove stderr at a cell level, using the <code class="docutils literal notranslate"><span class="pre">remove-stderr</span></code> <a class="reference external" href="https://jupyter-notebook.readthedocs.io/en/stable/changelog.html#cell-tags">cell tag</a>, like so:</p>
+<div class="highlight-md notranslate"><div class="highlight"><pre><span></span>```{code-cell} ipython3
+:tags: [remove-stderr]
+
+import sys
+print(&quot;this is some stdout&quot;)
+print(&quot;this is some stderr&quot;, file=sys.stderr)
+```
+</pre></div>
+</div>
+<p>which produces</p>
+<div class="cell tag_remove-stderr docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sys</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;this is some stdout&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;this is some stderr&quot;</span><span class="p">,</span> <span class="n">file</span><span class="o">=</span><span class="n">sys</span><span class="o">.</span><span class="n">stderr</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>this is some stdout
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="dealing-with-code-that-produces-stdout">
+<h3>Dealing with code that produces stdout<a class="headerlink" href="#dealing-with-code-that-produces-stdout" title="永久链接至标题">¶</a></h3>
+<p>Similar to stderr, you can remove stdout at a cell level with the <code class="docutils literal notranslate"><span class="pre">remove-stdout</span></code> tag, by which</p>
+<div class="highlight-md notranslate"><div class="highlight"><pre><span></span>```{code-cell} ipython3
+:tags: [remove-stdout]
+
+import sys
+print(&quot;this is some stdout&quot;)
+print(&quot;this is some stderr&quot;, file=sys.stderr)
+```
+</pre></div>
+</div>
+<p>produces the following:</p>
+<div class="cell tag_remove-stdout docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sys</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;this is some stdout&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;this is some stderr&quot;</span><span class="p">,</span> <span class="n">file</span><span class="o">=</span><span class="n">sys</span><span class="o">.</span><span class="n">stderr</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>this is some stderr
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="execution-statistics">
+<h2>Execution statistics<a class="headerlink" href="#execution-statistics" title="永久链接至标题">¶</a></h2>
+<p>As notebooks are executed, certain statistics are stored on the build environment by MyST-NB.
+The simplest way to access and visualise this data is using the <code class="docutils literal notranslate"><span class="pre">{nb-exec-table}</span></code> directive.</p>
+<div class="admonition seealso">
+<p class="admonition-title">参见</p>
+<p>The <a class="reference external" href="https://myst-nb.readthedocs.io/en/latest/use/execute.html#execute-statistics" title="(在 MyST-NB)"><span class="xref myst">MyST-NB documentation</span></a>, for creating your own directives to manipulate this data.</p>
+</div>
+<p>The simple directive</p>
+<div class="highlight-md notranslate"><div class="highlight"><pre><span></span>```{nb-exec-table}
+```
+</pre></div>
+</div>
+<p>produces:</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Document</p></th>
+<th class="head"><p>Modified</p></th>
+<th class="head"><p>Method</p></th>
+<th class="head"><p>Run Time (s)</p></th>
+<th class="head"><p>Status</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>basics/create</p></td>
+<td><p>2021-07-11 09:11</p></td>
+<td><p>cache</p></td>
+<td><p>1.75</p></td>
+<td><p>✅</p></td>
+</tr>
+<tr class="row-odd"><td><p>content/code-outputs</p></td>
+<td><p>2021-07-11 09:11</p></td>
+<td><p>cache</p></td>
+<td><p>1.58</p></td>
+<td><p>✅</p></td>
+</tr>
+<tr class="row-even"><td><p>content/executable/output-insert</p></td>
+<td><p>2021-07-11 09:11</p></td>
+<td><p>cache</p></td>
+<td><p>3.83</p></td>
+<td><p>✅</p></td>
+</tr>
+<tr class="row-odd"><td><p>content/execute</p></td>
+<td><p>2021-07-11 09:11</p></td>
+<td><p>cache</p></td>
+<td><p>0.9</p></td>
+<td><p>✅</p></td>
+</tr>
+<tr class="row-even"><td><p>content/layout</p></td>
+<td><p>2021-07-11 09:11</p></td>
+<td><p>cache</p></td>
+<td><p>1.72</p></td>
+<td><p>✅</p></td>
+</tr>
+<tr class="row-odd"><td><p>content/math</p></td>
+<td><p>2021-07-11 09:11</p></td>
+<td><p>cache</p></td>
+<td><p>0.74</p></td>
+<td><p>✅</p></td>
+</tr>
+<tr class="row-even"><td><p>content/references</p></td>
+<td><p>2021-07-11 09:11</p></td>
+<td><p>cache</p></td>
+<td><p>0.74</p></td>
+<td><p>✅</p></td>
+</tr>
+<tr class="row-odd"><td><p>customize/toc</p></td>
+<td><p>2021-07-11 09:11</p></td>
+<td><p>cache</p></td>
+<td><p>1.41</p></td>
+<td><p>✅</p></td>
+</tr>
+<tr class="row-even"><td><p>file-types/jupytext</p></td>
+<td><p>2021-07-11 09:11</p></td>
+<td><p>cache</p></td>
+<td><p>0.97</p></td>
+<td><p>✅</p></td>
+</tr>
+<tr class="row-odd"><td><p>file-types/myst-notebooks</p></td>
+<td><p>2021-07-11 09:11</p></td>
+<td><p>cache</p></td>
+<td><p>0.74</p></td>
+<td><p>✅</p></td>
+</tr>
+<tr class="row-even"><td><p>file-types/notebooks</p></td>
+<td><p>2021-07-11 09:11</p></td>
+<td><p>cache</p></td>
+<td><p>3.01</p></td>
+<td><p>✅</p></td>
+</tr>
+<tr class="row-odd"><td><p>interactive/hiding</p></td>
+<td><p>2021-07-11 09:11</p></td>
+<td><p>cache</p></td>
+<td><p>1.94</p></td>
+<td><p>✅</p></td>
+</tr>
+<tr class="row-even"><td><p>interactive/interactive</p></td>
+<td><p>2021-07-11 09:11</p></td>
+<td><p>cache</p></td>
+<td><p>2.56</p></td>
+<td><p>✅</p></td>
+</tr>
+<tr class="row-odd"><td><p>interactive/launchbuttons</p></td>
+<td><p>2021-07-11 09:11</p></td>
+<td><p>cache</p></td>
+<td><p>0.74</p></td>
+<td><p>✅</p></td>
+</tr>
+<tr class="row-even"><td><p>interactive/thebe</p></td>
+<td><p>2021-07-11 09:11</p></td>
+<td><p>cache</p></td>
+<td><p>1.74</p></td>
+<td><p>✅</p></td>
+</tr>
+<tr class="row-odd"><td><p>reference/cheatsheet</p></td>
+<td><p>2021-07-11 09:11</p></td>
+<td><p>cache</p></td>
+<td><p>2.96</p></td>
+<td><p>✅</p></td>
+</tr>
+<tr class="row-even"><td><p>start/overview</p></td>
+<td><p>2021-07-11 09:11</p></td>
+<td><p>cache</p></td>
+<td><p>1.24</p></td>
+<td><p>✅</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "xinetzone/jupyter-book",
+            ref: "main",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./content"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+        <div class='prev-next-bottom'>
+            
+    <a class='left-prev' id="prev-link" href="executable/index.html" title="previous page">Write executable content</a>
+    <a class='right-next' id="next-link" href="code-outputs.html" title="next page">Formatting code outputs</a>
+
+        </div>
+        
+        </div>
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          <div class="extra_footer">
+            <p class="w3-card w3-pale-blue w3-padding">
+  Copyright © 2021
+  <a href="https://github.com/xinetzone">xinetzone</a> | 
+  Powered by <a href="https://github.com/executablebooks/jupyter-book">Jupyter Book</a>.
+</p>
+
+          </div>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  
+  </body>
+</html>

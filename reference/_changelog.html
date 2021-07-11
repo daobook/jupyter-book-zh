@@ -1,0 +1,1992 @@
+
+<!DOCTYPE html>
+
+<html lang="zh">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Change Log</title>
+    
+  <link href="../_static/css/theme.css" rel="stylesheet" />
+  <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-book-theme.acff12b8f9c144ce68a297486a2fa670.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/tabs.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/page.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/xin-css/main.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/w3css/4/w3pro.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/w3css/4/w3mobile.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/w3css/4/w3.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/tabs.js"></script>
+    <script async="async" kind="hypothesis" src="https://hypothes.is/embed.js"></script>
+    <script kind="utterances">
+
+    var commentsRunWhenDOMLoaded = cb => {
+    if (document.readyState != 'loading') {
+        cb()
+    } else if (document.addEventListener) {
+        document.addEventListener('DOMContentLoaded', cb)
+    } else {
+        document.attachEvent('onreadystatechange', function() {
+        if (document.readyState == 'complete') cb()
+        })
+    }
+}
+
+var addUtterances = () => {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src = "https://utteranc.es/client.js";
+    script.async = "async";
+
+    script.setAttribute("repo", "xinetzone/jupyter-book");
+    script.setAttribute("issue-term", "pathname");
+    script.setAttribute("theme", "github-light");
+    script.setAttribute("label", "💬 comment");
+    script.setAttribute("crossorigin", "anonymous");
+
+    sections = document.querySelectorAll("div.section");
+    if (sections !== null) {
+        section = sections[sections.length-1];
+        section.appendChild(script);
+    }
+}
+commentsRunWhenDOMLoaded(addUtterances);
+</script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.0/dist/embed-amd.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script>
+        const thebe_selector = ".thebe,.cell"
+        const thebe_selector_input = "pre,.cell_input div.highlight"
+        const thebe_selector_output = ".output,.cell_output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="canonical" href="https://xinetzone.github.io/jupyter-book/reference/_changelog.html" />
+    <link rel="shortcut icon" href="../_static/page-logo.jfif"/>
+    <link rel="index" title="索引" href="../genindex.html" />
+    <link rel="search" title="搜索" href="../search.html" />
+    <link rel="prev" title="Cite Jupyter Book" href="../cite.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+      <img src="../_static/logo.jpg" class="logo" alt="logo">
+      
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <div class="bd-toc-item active">
+        <p class="caption">
+ <span class="caption-text">
+  Tutorials
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../start/your-first-book.html">
+   Create your first book
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../start/overview.html">
+     Overview
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../start/create.html">
+     Create your book’s source files
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../start/build.html">
+     Build your book
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../start/publish.html">
+     Publish your book online
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../start/example-book.html">
+     Build a small example project
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../tutorials/references.html">
+   Get started with references
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Topic Guides
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../basics/organize.html">
+   Structure and organize your content
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../customize/toc.html">
+     Structure the Table of Contents
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../structure/configure.html">
+     Configure the Table of Contents
+    </a>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../file-types/index.html">
+     Types of content source files
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+    <label for="toctree-checkbox-3">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../file-types/markdown.html">
+       Markdown files
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../file-types/notebooks.html">
+       Jupyter Notebook files
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../file-types/myst-notebooks.html">
+       Notebooks written entirely in Markdown
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../file-types/jupytext.html">
+       Custom notebook formats and Jupytext
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../file-types/restructuredtext.html">
+       reStructuredText files
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../basics/create.html">
+     Create books automatically
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../structure/sections-headers.html">
+     How headers and sections map onto to book structure
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../content/index.html">
+   Write narrative content
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../content/myst.html">
+     MyST Markdown overview
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../content/content-blocks.html">
+     Special content blocks
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../content/references.html">
+     References and cross-references
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../content/layout.html">
+     Control the page layout
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../content/citations.html">
+     Citations and bibliographies
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../content/math.html">
+     Math and equations
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../content/figures.html">
+     Images and figures
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../content/metadata.html">
+     Add metadata to your book pages
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../content/executable/index.html">
+   Write executable content
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+  <label for="toctree-checkbox-5">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../content/execute.html">
+     Execute and cache your pages
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../content/code-outputs.html">
+     Formatting code outputs
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../content/executable/output-insert.html">
+     Store code outputs and insert into content
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../interactive/interactive.html">
+     Interactive data visualizations
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../basics/building/index.html">
+   Build your book outputs
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+  <label for="toctree-checkbox-6">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../basics/build.html">
+     Use the Build command line interface
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../advanced/pdf.html">
+     Build a PDF
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../web/index.html">
+   Web and internet features
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
+  <label for="toctree-checkbox-7">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../basics/repository.html">
+     Connect your book to a code repository
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../interactive/hiding.html">
+     Hide or remove content
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../interactive/launchbuttons.html">
+     Launch into interactive computing interfaces
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../interactive/thebe.html">
+     Make your code cells executable
+    </a>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../interactive/comments.html">
+     Commenting and annotating
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
+    <label for="toctree-checkbox-8">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../interactive/comments/hypothesis.html">
+       Hypothesis
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../interactive/comments/utterances.html">
+       Utterances
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../publish/web.html">
+     Host your book on the internet
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/>
+    <label for="toctree-checkbox-9">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../publish/gh-pages.html">
+       GitHub Pages and Actions
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../publish/netlify.html">
+       Publish with Netlify
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../advanced/html.html">
+     Advanced HTML outputs
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../advanced/index.html">
+   Advanced Jupyter Book Usage
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/>
+  <label for="toctree-checkbox-10">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../advanced/sphinx.html">
+     Advanced Sphinx usage
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../advanced/windows.html">
+     Working on Windows
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../explain/sphinx.html">
+     How Jupyter Book and Sphinx relate to one another
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../contribute/intro.html">
+   为 Jupyter Book 贡献
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Reference
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../customize/config.html">
+   Configuration reference
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="cheatsheet.html">
+   MyST syntax cheat sheet
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="cli.html">
+   The command-line interface
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="glossary.html">
+   Glossary
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  About Jupyter Book
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference external" href="https://executablebooks.org/en/latest/gallery.html">
+   Gallery of Jupyter Books
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../explain/components.html">
+   The Jupyter Book toolchain and components
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../cite.html">
+   Cite Jupyter Book
+  </a>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   Change log
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  <div class="w3-padding w3-card-4 w3-pale-green">
+  <a href="https://github.com/xinetzone" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub"
+      data-position="top" data-delay="50">
+      <i class="fab fa-github"></i>
+  </a>
+  <a href="mailto:q735613050@163.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top"
+      data-delay="50">
+      <i class="fas fa-envelope-open"></i>
+  </a>
+  <a href="tencent://AddContact/?fromId=50&amp;fromSubId=1&amp;subcmd=all&amp;uin=735613050" class="tooltipped"
+      target="_blank" data-tooltip="QQ联系我: 735613050" data-position="top" data-delay="50">
+      <i class="fab fa-qq"></i>
+  </a>
+  <a href="https://www.zhihu.com/people/liu-xin-wei-55" class="tooltipped" target="_blank"
+      data-tooltip="关注我的知乎: liu-xin-wei-55" data-position="top" data-delay="50">
+      <i class="fab fa-zhihu1">知</i>
+  </a>
+  <a target="_blank" rel="noopener" href="https://www.linkedin.com/in/xinet" class="tooltipped"
+      data-tooltip="领英联系我: xinet" data-position="top" data-delay="50">
+      <i class="fab fa-linkedin"></i>
+  </a>
+  <div><a href="https://github.com/xinetzone/sanstyle">上善若水</a> 版权所有</div>
+</div>
+
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/reference/_changelog.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/xinetzone/jupyter-book"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/xinetzone/jupyter-book/issues/new?title=Issue%20on%20page%20%2Freference/_changelog.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#v0-11-1">
+   v0.11.1
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#v0-11-0">
+   v0.11.0
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#breaking">
+     Breaking ‼
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#new">
+     New
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#v0-10-1-2021-03-02">
+   v0.10.1 2021-03-02
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id1">
+     New
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#upgrades">
+     Upgrades
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#maintain">
+     Maintain
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#v0-10-0-2021-02-01">
+   v0.10.0 2021-02-01
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id2">
+     New
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#new-myst-syntax">
+     New MyST syntax
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#deprecations">
+     Deprecations
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#v0-9-1-2020-12-22">
+   v0.9.1 2020-12-22
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#v0-9-0-2020-12-09">
+   v0.9.0 2020-12-09
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id3">
+     New
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id4">
+     Maintain
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id5">
+     Upgrades
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#bugs-fixed">
+     Bugs fixed
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#deprecated">
+     Deprecated
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#v0-8-3-2020-10-12">
+   v0.8.3 2020-10-12
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id6">
+     Bugs fixed
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#upgrade-ebt-dependencies">
+     Upgrade EBT dependencies
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#v0-8-2-2020-09-19">
+   v0.8.2 2020-09-19
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#improved">
+     Improved
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#v0-8-1-2020-09-09">
+   v0.8.1 2020-09-09
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id7">
+     New ✨
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#fixes">
+     Fixes 🐛
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#v0-8-0-2020-09-01">
+   v0.8.0 2020-09-01
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id8">
+     Breaking ‼️
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#new-and-improved">
+     New and Improved ✨👌
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id9">
+     Fixes 🐛
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#more-to-come">
+     More to come 👀
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#v0-7-5-2020-08-26">
+   v0.7.5 2020-08-26
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#v0-7-0-v0-7-4">
+   v0.7.0…v0.7.4
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#enhancements-made">
+     Enhancements made
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id10">
+     Bugs fixed 🐛
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#documentation-improvements">
+     Documentation improvements 📚
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#api-changes">
+     API Changes
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#other-merged-prs">
+     Other merged PRs
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#contributors-to-this-release">
+     Contributors to this release
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#v0-6-4-v0-7-0">
+   v0.6.4…v0.7.0
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#merged-prs">
+     Merged PRs
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id11">
+     Contributors to this release
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#v0-6-3-v0-6-4">
+   v0.6.3…v0.6.4
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id12">
+     Enhancements made
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id13">
+     Bugs fixed
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id14">
+     Other merged PRs
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id15">
+     Contributors to this release
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#v0-6-0-v0-6-3">
+   v0.6.0…v0.6.3
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id16">
+     Enhancements made
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id17">
+     Bugs fixed
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#maintenance-and-upkeep-improvements">
+     Maintenance and upkeep improvements
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id18">
+     Documentation improvements
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id19">
+     Other merged PRs
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#v0-6-0-2019-09-17">
+   v0.6.0 (2019-09-17)
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#v0-5-2-2019-07-26">
+   v0.5.2 (2019-07-26)
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#v0-5-2019-05-13">
+   v0.5 (2019-05-13)
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#v0-4-1-2019-02-09">
+   v0.4.1 (2019-02-09)
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#v0-2-2018-10-23">
+   v0.2 (2018-10-23)
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#v0-1-2018-10-20">
+   v0.1 (2018-10-20)
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <section id="change-log">
+<h1>Change Log<a class="headerlink" href="#change-log" title="永久链接至标题">¶</a></h1>
+<section id="v0-11-1">
+<h2>v0.11.1<a class="headerlink" href="#v0-11-1" title="永久链接至标题">¶</a></h2>
+<p>This release included two minor patches brought in via updates to <code class="docutils literal notranslate"><span class="pre">sphinx-external-toc</span></code> and <code class="docutils literal notranslate"><span class="pre">jupyterbook-latex</span></code>.</p>
+</section>
+<section id="v0-11-0">
+<h2>v0.11.0<a class="headerlink" href="#v0-11-0" title="永久链接至标题">¶</a></h2>
+<p>(<a class="reference external" href="https://github.com/executablebooks/jupyter-book/compare/v0.10.2...d43216c57a2710eaeb2363f21d2b3aadf914feca">full changelog</a>) | <a class="reference external" href="https://github.com/executablebooks/jupyter-book/graphs/contributors?from=2021-04-04&amp;to=2021-05-11&amp;type=c">GitHub contributors page for this release</a></p>
+<p>This is primarily a documentation and under-the-hood update, but it comes with an important change to the way that <strong>Table of Contents</strong> are structured. See below for more information.</p>
+<section id="breaking">
+<h3>Breaking ‼<a class="headerlink" href="#breaking" title="永久链接至标题">¶</a></h3>
+<ul>
+<li><p><strong>Table of Contents</strong>. The Table of Contents infrastructure is now handled by the Sphinx extension <a class="reference external" href="https://github.com/executablebooks/sphinx-external-toc"><code class="docutils literal notranslate"><span class="pre">sphinx-external-toc</span></code></a>. This comes with a more structured format for <code class="docutils literal notranslate"><span class="pre">_toc.yaml</span></code> through the introduction of <code class="docutils literal notranslate"><span class="pre">jb-article</span></code> and <code class="docutils literal notranslate"><span class="pre">jb-book</span></code> formats. In order to convert your book’s TOC to the new format, you may run the following command:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">jupyter</span><span class="o">-</span><span class="n">book</span> <span class="n">toc</span> <span class="n">migrate</span> <span class="n">_toc</span><span class="o">.</span><span class="n">yml</span> <span class="o">-</span><span class="n">o</span> <span class="n">_toc</span><span class="o">.</span><span class="n">yml</span>
+</pre></div>
+</div>
+<p>This command includes <code class="docutils literal notranslate"><span class="pre">-o</span></code> which will update your current <code class="docutils literal notranslate"><span class="pre">_toc.yml</span></code> file to work with the latest <code class="docutils literal notranslate"><span class="pre">jupyter-book</span></code> release.</p>
+<p>See the <a class="reference external" href="https://jupyterbook.org/customize/toc.html">Table of Contents documentation</a> for more information.</p>
+</li>
+</ul>
+</section>
+<section id="new">
+<h3>New<a class="headerlink" href="#new" title="永久链接至标题">¶</a></h3>
+<ul>
+<li><p>The <code class="docutils literal notranslate"><span class="pre">_toc.yml</span></code> file now has support to use <code class="docutils literal notranslate"><span class="pre">glob</span></code> to add files based on a pattern to the table of contents. This
+is added using the <code class="docutils literal notranslate"><span class="pre">glob</span></code> key where you would usually specify a <code class="docutils literal notranslate"><span class="pre">file</span></code> or <code class="docutils literal notranslate"><span class="pre">url</span></code>.</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">root</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">intro</span>
+<span class="nt">subtrees</span><span class="p">:</span>
+<span class="p p-Indicator">-</span> <span class="nt">entries</span><span class="p">:</span>
+  <span class="p p-Indicator">-</span> <span class="nt">file</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">doc1</span>
+  <span class="p p-Indicator">-</span> <span class="nt">url</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">https://example.com</span>
+  <span class="p p-Indicator">-</span> <span class="nt">glob</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">subfolder/other*</span>
+</pre></div>
+</div>
+<p>this matches any documents that start with <code class="docutils literal notranslate"><span class="pre">other</span></code> that are contained in <code class="docutils literal notranslate"><span class="pre">subfolder</span></code>. [Fixes <a class="reference external" href="https://github.com/executablebooks/jupyter-book/issues/1038">Issue #1038</a>]</p>
+</li>
+<li><p>Input files to the <code class="docutils literal notranslate"><span class="pre">_toc.yml</span></code> no longer need to be just <code class="docutils literal notranslate"><span class="pre">ipynb</span></code>, <code class="docutils literal notranslate"><span class="pre">md</span></code>, <code class="docutils literal notranslate"><span class="pre">rst</span></code>. You can now use <a class="reference external" href="https://jupyterbook.org/file-types/jupytext.html#file-types-custom">custom file types</a> as an input such as <code class="docutils literal notranslate"><span class="pre">py</span></code> files. (Fixes <a class="reference external" href="https://github.com/executablebooks/jupyter-book/issues/1064">Issue #1064</a>, <a class="reference external" href="https://github.com/executablebooks/jupyter-book/issues/1175">Issue #1175</a>)</p></li>
+<li><p>The <code class="docutils literal notranslate"><span class="pre">jupyterbook</span> <span class="pre">toc</span></code> command has now been converted to a collection of tools. It was originally setup to read a collection of files and then build a <code class="docutils literal notranslate"><span class="pre">_toc.yml</span></code>. The equivalent of this command is now:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>jupyter-book toc from-project
+</pre></div>
+</div>
+<p>There is also an additional helper tool that builds a collection of files from a user written <code class="docutils literal notranslate"><span class="pre">_toc.yml</span></code> file using</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>jupyter-book toc to-project
+</pre></div>
+</div>
+</li>
+</ul>
+</section>
+</section>
+<section id="v0-10-1-2021-03-02">
+<h2>v0.10.1 2021-03-02<a class="headerlink" href="#v0-10-1-2021-03-02" title="永久链接至标题">¶</a></h2>
+<p><a class="reference external" href="https://github.com/executablebooks/jupyter-book/compare/v0.10.0...a73538c22d6c8c7b7b198db79ada0f801d685856">full changelog</a> | <a class="reference external" href="https://github.com/executablebooks/jupyter-book/graphs/contributors?from=2021-01-30&amp;to=2021-03-02&amp;type=c">GitHub contributors page for this release</a></p>
+<p>This is a minor update to include recent improvements made to <a class="reference external" href="https://github.com/executablebooks/myst-nb">MyST-NB</a></p>
+<section id="id1">
+<h3>New<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h3>
+<ol class="simple">
+<li><p>An <strong>experimental</strong> MyST-NB feature that enables loading of code from a file for <code class="docutils literal notranslate"><span class="pre">code-cell</span></code> directives using a <code class="docutils literal notranslate"><span class="pre">:load:</span> <span class="pre">&lt;file&gt;</span></code> option. Additional information is available in the <a class="reference external" href="https://myst-nb.readthedocs.io/en/latest/use/markdown.html#syntax-for-code-cells">myst-nb documentation</a></p></li>
+</ol>
+</section>
+<section id="upgrades">
+<h3>Upgrades<a class="headerlink" href="#upgrades" title="永久链接至标题">¶</a></h3>
+<ul class="simple">
+<li><p>⬆ UPGRADE: myst-nb v0.12.0 (<a class="reference external" href="https://github.com/executablebooks/jupyter-book/pull/1238">#1238</a>, <a class="reference external" href="https://github.com/mmcky">&#64;mmcky</a>)</p></li>
+</ul>
+</section>
+<section id="maintain">
+<h3>Maintain<a class="headerlink" href="#maintain" title="永久链接至标题">¶</a></h3>
+<ul class="simple">
+<li><p>🔧 MAINTAIN: Expand <code class="docutils literal notranslate"><span class="pre">jupytext</span></code> version pinning (<a class="reference external" href="https://github.com/executablebooks/jupyter-book/pull/1221">#1221</a>, <a class="reference external" href="https://github.com/bollwyvl">&#64;bollwyvl</a>)</p></li>
+</ul>
+</section>
+</section>
+<section id="v0-10-0-2021-02-01">
+<h2>v0.10.0 2021-02-01<a class="headerlink" href="#v0-10-0-2021-02-01" title="永久链接至标题">¶</a></h2>
+<p><a class="reference external" href="https://github.com/executablebooks/jupyter-book/compare/v0.9.1...d3c78097edda4fefb672e32344c3806c9cdc7a72">full changelog</a> | <a class="reference external" href="https://github.com/executablebooks/jupyter-book/graphs/contributors?from=2020-12-22&amp;to=2021-01-30&amp;type=c">GitHub contributors page for this release</a></p>
+<p>This update focuses on new syntax features for MyST markdown, as well as a new configuration to enable MyST extensions. See below for more details.</p>
+<section id="id2">
+<h3>New<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h3>
+<dl class="simple myst">
+<dt>MyST Parser version 0.13.x</dt><dd><p>The MyST-NB and MyST-parser have both been upgraded.
+This comes with support for new syntax and a new configuration mechanism (see below for some examples).</p>
+<p>(see also <a class="reference external" href="https://myst-parser.readthedocs.io/en/v0.13.3/develop/_changelog.html#id4">the myst-parser changelog</a> for more information about the syntax additions)</p>
+</dd>
+<dt>New <code class="docutils literal notranslate"><span class="pre">myst</span></code> extension configuration</dt><dd><p>The <code class="docutils literal notranslate"><span class="pre">myst_extended_syntax</span></code> configuration is <strong>now deprecated</strong>, in lieu of a more flexible extension mechanism.
+You may now enable individual <code class="docutils literal notranslate"><span class="pre">myst</span></code> extensions by adding them to the following section of your <code class="docutils literal notranslate"><span class="pre">_config.yml</span></code> file:</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">parse</span><span class="p">:</span>
+  <span class="nt">myst_enable_extensions</span><span class="p">:</span>
+    <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">&lt;list-of-extensions&gt;</span>
+</pre></div>
+</div>
+<p>See the <a class="reference internal" href="../content/content-blocks.html"><span class="doc std std-doc">MyST syntax extension section here</span></a> for more information.</p>
+</dd>
+<dt>Citations and references configuration</dt><dd><p>This version comes with a version bump to <code class="docutils literal notranslate"><span class="pre">sphinxcontrib.bibtex</span> <span class="pre">v2.1.*</span></code>. This introduces new configuration for connecting your bibfiles (no longer using the bibliography directive), and makes the citation resolution process much more stable and dependable.</p>
+</dd>
+<dd><p>See <a class="reference internal" href="../content/citations.html#content-citations"><span class="std std-ref">Citations and bibliographies</span></a> for more information, and the <a class="reference external" href="https://sphinxcontrib-bibtex.readthedocs.io/en/latest/"><code class="docutils literal notranslate"><span class="pre">sphinxcontrib.bibtex</span></code> documentation</a> for more information about updates in the latest version.</p>
+</dd>
+<dt>TOC depth numbering</dt><dd><p>You can now set the depth of numbering (e.g., 3.2 vs. 3.2.1) via the the <code class="docutils literal notranslate"><span class="pre">numbered</span></code> flag in your Table of Contents.
+See <a class="reference internal" href="../customize/toc.html"><span class="doc std std-doc">the table of contents documentation</span></a> for more information.</p>
+</dd>
+</dl>
+</section>
+<section id="new-myst-syntax">
+<h3>New MyST syntax<a class="headerlink" href="#new-myst-syntax" title="永久链接至标题">¶</a></h3>
+<dl class="simple myst">
+<dt>MyST Markdown substitutions**</dt><dd><p>Substitutions allow you to define <strong>variables</strong> in markdown, and insert them elsewhere in your document.
+This lets you change the variable value and have it automatically update throughout your book.
+This is <strong>on by default</strong>.
+See <a class="reference internal" href="../content/content-blocks.html#content-substitutions"><span class="std std-ref">Substitutions and variables in markdown</span></a> for more information.</p>
+</dd>
+<dt>Automatic HTML links</dt><dd><p>The <code class="docutils literal notranslate"><span class="pre">linkify</span></code> extension will automatically identify “bare” web URLs, like <code class="docutils literal notranslate"><span class="pre">www.example.com</span></code>,  and add hyperlinks; <a class="reference external" href="http://www.example.com">www.example.com</a>.
+This extension is <strong>on by default</strong>.</p>
+</dd>
+<dt>Smart Quotes</dt><dd><p>The <code class="docutils literal notranslate"><span class="pre">smartquotes</span></code> extension will automatically convert standard quotations to their opening/closing variants:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">'single</span> <span class="pre">quotes'</span></code>: ‘single quotes’</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&quot;double</span> <span class="pre">quotes&quot;</span></code>:  “double quotes”</p></li>
+</ul>
+<p>This extension is <strong>off by default</strong>.
+See <a class="reference external" href="https://myst-parser.readthedocs.io/en/v0.13.3/using/syntax-optional.html#typography">this documentation</a> for more details.</p>
+</dd>
+<dt>Typography replacements for common characters</dt><dd><p>The <code class="docutils literal notranslate"><span class="pre">replacements</span></code> extension will automatically convert some common typographic texts, such as <code class="docutils literal notranslate"><span class="pre">+-</span></code> -&gt; <code class="docutils literal notranslate"><span class="pre">±</span></code>.
+This extension is <strong>off by default</strong>.
+See <a class="reference external" href="https://myst-parser.readthedocs.io/en/v0.13.3/using/syntax-optional.html#typography">this documentation</a> for more details.</p>
+</dd>
+<dt>HTML admonitions</dt><dd><p>By adding <code class="docutils literal notranslate"><span class="pre">&quot;html_admonition&quot;</span></code> to <code class="docutils literal notranslate"><span class="pre">myst_enable_extensions</span></code>, you can enable parsing of <code class="docutils literal notranslate"><span class="pre">&lt;div</span> <span class="pre">class=&quot;admonition&quot;&gt;</span></code> HTML blocks to sphinx admonitions.
+This is helpful when you care about viewing the “source” Markdown, such as in Jupyter Notebooks.
+For example:</p>
+<div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;admonition note&quot;</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;html-admonition&quot;</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">p</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;title&quot;</span><span class="p">&gt;</span>This is the **title**<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+This is the *content*
+<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</pre></div>
+</div>
+<p>See <a class="reference internal" href="../content/content-blocks.html#content-blocks-html-admonitions"><span class="std std-ref">HTML admonitions</span></a> for further information.
+This extension is <strong>off by default</strong>.</p>
+</dd>
+</dl>
+</section>
+<section id="deprecations">
+<h3>Deprecations<a class="headerlink" href="#deprecations" title="永久链接至标题">¶</a></h3>
+<dl class="simple myst">
+<dt><code class="docutils literal notranslate"><span class="pre">myst_extended_syntax</span></code> is deprecated</dt><dd><p>See above for new configuration details.</p>
+</dd>
+<dt>Colon fences now behave like directives</dt><dd><p>The <code class="docutils literal notranslate"><span class="pre">colon_fence</span></code> extension (replacing <code class="docutils literal notranslate"><span class="pre">admonition_enable</span></code>) now works exactly the same as normal <code class="docutils literal notranslate"><span class="pre">```</span></code> code fences, but using <code class="docutils literal notranslate"><span class="pre">:::</span></code> delimiters.
+This is helpful for directives that contain Markdown text, for example:</p>
+<div class="highlight-md notranslate"><div class="highlight"><pre><span></span>:::{admonition} The title
+:class: note
+
+This note contains <span class="ge">*Markdown*</span>
+:::
+</pre></div>
+</div>
+</dd>
+<dt>Bibliographies no longer use a path to a bibtex file</dt><dd><p>See above for new configuration details.</p>
+</dd>
+</dl>
+</section>
+</section>
+<section id="v0-9-1-2020-12-22">
+<h2>v0.9.1 2020-12-22<a class="headerlink" href="#v0-9-1-2020-12-22" title="永久链接至标题">¶</a></h2>
+<p>This is a minor release to issue <code class="docutils literal notranslate"><span class="pre">v0.9</span></code> to PyPI and updates a broken link that prohibited the <code class="docutils literal notranslate"><span class="pre">v0.9.0</span></code> PyPI release action.</p>
+</section>
+<section id="v0-9-0-2020-12-09">
+<h2>v0.9.0 2020-12-09<a class="headerlink" href="#v0-9-0-2020-12-09" title="永久链接至标题">¶</a></h2>
+<p>(<a class="reference external" href="https://github.com/executablebooks/jupyter-book/compare/v0.8.3...6c30f554d86fe7d1a0e4ad05012a5de4133117d0">full changelog</a>)</p>
+<p>This release includes a number of new features, improvements and bug fixes. There is also a new <a class="reference external" href="https://executablebooks.org/en/latest/gallery.html">gallery of jupyter-book projects</a> available.</p>
+<section id="id3">
+<h3>New<a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h3>
+<ul class="simple">
+<li><p>👌 IMPROVE: Option to exclude every file not in the toc. (<a class="reference internal" href="../customize/config.html"><span class="doc std std-doc">docs</span></a>, <a class="reference external" href="https://github.com/executablebooks/jupyter-book/pull/1123">#1123</a>, <a class="reference external" href="https://github.com/alex-treebeard">&#64;alex-treebeard</a>)</p></li>
+<li><p>✨ NEW: Enable the use of local Sphinx extension via _config.yml. (<a class="reference internal" href="../customize/config.html"><span class="doc std std-doc">docs</span></a>, <a class="reference external" href="https://github.com/executablebooks/jupyter-book/pull/1102">#1102</a>, <a class="reference external" href="https://github.com/mmcky">&#64;mmcky</a>)</p></li>
+<li><p>✨ NEW: Enable custom builder passthrough. This is an <strong>advanced feature</strong>
+that enables the use of additional sphinx builders via jupyter-book that may be provided by an extension. (<a class="reference internal" href="../advanced/sphinx.html"><span class="doc std std-doc">docs</span></a>, <a class="reference external" href="%5B#1094%5D(https://github.com/executablebooks/jupyter-book/pull/1094)">#1094</a>, <a class="reference external" href="https://github.com/mmcky">&#64;mmcky</a>)</p></li>
+</ul>
+<p><strong>HTML:</strong></p>
+<ul class="simple">
+<li><p>👌 NEW: Add <code class="docutils literal notranslate"><span class="pre">dirhtml</span></code> builder. This enables the use
+of the <code class="docutils literal notranslate"><span class="pre">dirhtml</span></code> sphinx builder when using jupyter book. (<a class="reference internal" href="../start/build.html"><span class="doc std std-doc">docs</span></a>, <a class="reference external" href="https://github.com/executablebooks/jupyter-book/pull/1092">#1092</a>, <a class="reference external" href="https://github.com/choldgraf">&#64;choldgraf</a>)</p></li>
+</ul>
+<p><strong>LaTeX:</strong></p>
+<ul class="simple">
+<li><p>✨ NEW: Add <code class="docutils literal notranslate"><span class="pre">--individualpages</span></code> option for pdflatex builder.
+This option enables building individual (pdflatex) files for each page of the project. <strong>Note:</strong> Further work is ongoing to improve the styling and formatting of pdflatex output.
+(<a class="reference internal" href="../advanced/pdf.html"><span class="doc std std-doc">docs</span></a>, <a class="reference external" href="https://github.com/executablebooks/jupyter-book/pull/944">#944</a>, <a class="reference external" href="https://github.com/mmcky">&#64;mmcky</a>)</p></li>
+</ul>
+</section>
+<section id="id4">
+<h3>Maintain<a class="headerlink" href="#id4" title="永久链接至标题">¶</a></h3>
+<ul class="simple">
+<li><p>🔧 MAINTAIN: Pin sphinxcontrib-bibtex to ~=1.0 until compatible with recently released v2 (<a class="reference external" href="https://github.com/executablebooks/jupyter-book/pull/1138">#1138</a>, <a class="reference external" href="https://github.com/choldgraf">&#64;choldgraf</a>)</p></li>
+</ul>
+</section>
+<section id="id5">
+<h3>Upgrades<a class="headerlink" href="#id5" title="永久链接至标题">¶</a></h3>
+<ul class="simple">
+<li><p>⬆ UPGRADE: sphinx-book-theme v0.0.39 (<a class="reference external" href="https://github.com/executablebooks/jupyter-book/pull/1086">#1086</a>, <a class="reference external" href="https://github.com/choldgraf">&#64;choldgraf</a>)</p></li>
+</ul>
+</section>
+<section id="bugs-fixed">
+<h3>Bugs fixed<a class="headerlink" href="#bugs-fixed" title="永久链接至标题">¶</a></h3>
+<ul class="simple">
+<li><p>🐛 FIX: Check for file extensions when generating toc. (<a class="reference external" href="https://github.com/executablebooks/jupyter-book/pull/1108">#1108</a>, <a class="reference external" href="https://github.com/AakashGfude">&#64;AakashGfude</a>)</p></li>
+<li><p>🐛 FIX: Export Notebook as HTML with no page-breaks. (<a class="reference external" href="https://github.com/executablebooks/jupyter-book/pull/903">#903</a>, <a class="reference external" href="https://github.com/AakashGfude">&#64;AakashGfude</a>)</p></li>
+<li><p>🐛 FIX: Restore linkcheck to builder opts (<a class="reference external" href="https://github.com/executablebooks/jupyter-book/pull/1051">#1051</a>, <a class="reference external" href="https://github.com/fmaussion">&#64;fmaussion</a>)</p></li>
+</ul>
+</section>
+<section id="deprecated">
+<h3>Deprecated<a class="headerlink" href="#deprecated" title="永久链接至标题">¶</a></h3>
+<ul class="simple">
+<li><p>🗑 DEPRECATE: removing expand_sections for toc as it is deprecated in <code class="docutils literal notranslate"><span class="pre">sphinx-book-theme</span></code>. (<a class="reference external" href="https://github.com/executablebooks/jupyter-book/pull/1073">#1073</a>, <a class="reference external" href="https://github.com/choldgraf">&#64;choldgraf</a>)</p></li>
+</ul>
+</section>
+</section>
+<section id="v0-8-3-2020-10-12">
+<h2>v0.8.3 2020-10-12<a class="headerlink" href="#v0-8-3-2020-10-12" title="永久链接至标题">¶</a></h2>
+<p>This is a relatively minor release with bugfixes and under-the-hood improvements.</p>
+<section id="id6">
+<h3>Bugs fixed<a class="headerlink" href="#id6" title="永久链接至标题">¶</a></h3>
+<ul class="simple">
+<li><p>🐛 FIX: colab default is now empty <a class="reference external" href="https://github.com/executablebooks/jupyter-book/pull/1026">#1026</a> (<a class="reference external" href="https://github.com/choldgraf">&#64;choldgraf</a>)</p></li>
+</ul>
+</section>
+<section id="upgrade-ebt-dependencies">
+<h3>Upgrade EBT dependencies<a class="headerlink" href="#upgrade-ebt-dependencies" title="永久链接至标题">¶</a></h3>
+<ul class="simple">
+<li><p>⬆️ Update sphinx-book-theme v0.0.38 <a class="reference external" href="https://github.com/executablebooks/jupyter-book/pull/1047">#1047</a> (<a class="reference external" href="https://github.com/choldgraf">&#64;choldgraf</a>)</p></li>
+<li><p>⬆️ Update sphinx-panels pinning v0.5.2 <a class="reference external" href="https://github.com/executablebooks/jupyter-book/pull/1044">#1044</a> (<a class="reference external" href="https://github.com/chrisjsewell">&#64;chrisjsewell</a>)</p></li>
+</ul>
+</section>
+</section>
+<section id="v0-8-2-2020-09-19">
+<h2>v0.8.2 2020-09-19<a class="headerlink" href="#v0-8-2-2020-09-19" title="永久链接至标题">¶</a></h2>
+<p>(<a class="reference external" href="https://github.com/executablebooks/jupyter-book/compare/v0.8.1...879a2d4133db58a636655e08323cd98609cefcb4">full changelog</a>)</p>
+<section id="improved">
+<h3>Improved<a class="headerlink" href="#improved" title="永久链接至标题">¶</a></h3>
+<p><code class="docutils literal notranslate"><span class="pre">sphinx-panels</span></code> version bump to v0.5, which adds several new content blocks
+including <code class="docutils literal notranslate"><span class="pre">{tabbed}</span></code> content. <a class="reference external" href="https://github.com/executablebooks/jupyter-book/pull/972">#972</a></p>
+</section>
+</section>
+<section id="v0-8-1-2020-09-09">
+<h2>v0.8.1 2020-09-09<a class="headerlink" href="#v0-8-1-2020-09-09" title="永久链接至标题">¶</a></h2>
+<section id="id7">
+<h3>New ✨<a class="headerlink" href="#id7" title="永久链接至标题">¶</a></h3>
+<dl class="simple myst">
+<dt>Add <code class="docutils literal notranslate"><span class="pre">jupyter-book</span> <span class="pre">create</span> <span class="pre">--cookiecutter</span></code> (thanks to <a class="reference external" href="https://github.com/TomasBeuzen">&#64;TomasBeuzen</a>)</dt><dd><p>This adds a <code class="docutils literal notranslate"><span class="pre">--cookiecutter</span></code> option to <code class="docutils literal notranslate"><span class="pre">jb</span> <span class="pre">create</span></code>, to allow users to use the <a class="reference external" href="https://github.com/executablebooks/cookiecutter-jupyter-book">Jupyter Book cookiecutter</a> to create a book template.</p>
+<p>The cookiecutter is suitable for more advanced users that want to create a ready-to-go repository to host their book that includes pre-populated metafiles such as README, LICENSE, CONDUCT, CONTRIBUTING, etc., as well as GitHub Actions workflow files.</p>
+</dd>
+</dl>
+</section>
+<section id="fixes">
+<h3>Fixes 🐛<a class="headerlink" href="#fixes" title="永久链接至标题">¶</a></h3>
+<p>This release contains numerous improvements, to the documentation and code, to address issues noted by you guys:</p>
+<ul class="simple">
+<li><p>Fix issues with single document builds (e.g. pdflatex) and relative path resolutions</p></li>
+<li><p>Ensure <code class="docutils literal notranslate"><span class="pre">sphinx-book-theme</span></code> is loaded on PDF builds (to allow the use of the <code class="docutils literal notranslate"><span class="pre">margin</span></code> directive)</p></li>
+<li><p>Allow execution <code class="docutils literal notranslate"><span class="pre">timeout:</span> <span class="pre">-1</span></code> and <code class="docutils literal notranslate"><span class="pre">execute_notebooks:</span> <span class="pre">off</span></code> to be valid in the <code class="docutils literal notranslate"><span class="pre">_config.yml</span></code></p></li>
+</ul>
+</section>
+</section>
+<section id="v0-8-0-2020-09-01">
+<h2>v0.8.0 2020-09-01<a class="headerlink" href="#v0-8-0-2020-09-01" title="永久链接至标题">¶</a></h2>
+<p>(<a class="reference external" href="https://github.com/executablebooks/jupyter-book/compare/v0.7.5...v0.8.0">full changelog</a>)</p>
+<blockquote>
+<div><p><strong>You spoke, we listened!</strong></p>
+</div></blockquote>
+<p>Version 0.8.0 of Jupyter Book, incorporates a bottom-up refresh of the entire Executable Books Project (EBP) stack,
+with tonnes of bugs fixes, improvements and new features 🎉</p>
+<p>The documentation describes all this new functionality in full detail, but below we shall try to outline the major changes and additions.</p>
+<section id="id8">
+<h3>Breaking ‼️<a class="headerlink" href="#id8" title="永久链接至标题">¶</a></h3>
+<p>The <code class="docutils literal notranslate"><span class="pre">jupyter-book</span></code>/<code class="docutils literal notranslate"><span class="pre">jb</span></code> executable should work almost identically to in v0.7.5, and all existing books will generally build as before (open an issue if not!).</p>
+<p>The key change is that <code class="docutils literal notranslate"><span class="pre">jupyter-book</span> <span class="pre">page</span></code> is no longer available.
+Instead you can now pass a single file path to <code class="docutils literal notranslate"><span class="pre">jupyter-book</span> <span class="pre">build</span></code>, as opposed to a directory, and it will build your single page (thanks to <a class="reference external" href="https://github.com/AakashGfude">&#64;AakashGfude</a>).
+See <a class="reference internal" href="../start/build.html"><span class="doc std std-doc">Build a standalone page</span></a>.</p>
+<p>Another thing to note, is that if you are using “bare” LaTeX math in your documentation,
+then this will only render if you activate in your <code class="docutils literal notranslate"><span class="pre">_config.yml</span></code>:</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">parse</span><span class="p">:</span>
+  <span class="nt">myst_extended_syntax</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">true</span>
+</pre></div>
+</div>
+<p>See <a class="reference internal" href="../content/math.html"><span class="doc std std-doc">the math documentation</span></a> for details.</p>
+</section>
+<section id="new-and-improved">
+<h3>New and Improved ✨👌<a class="headerlink" href="#new-and-improved" title="永久链接至标题">¶</a></h3>
+<p>Jupyter Book v0.8 incorporates all the great new features available by moving from:</p>
+<ul class="simple">
+<li><p>MyST-Parser v0.9 to v0.12 (see its <a class="reference external" href="https://github.com/executablebooks/MyST-Parser/blob/master/CHANGELOG.md">CHANGELOG.md</a>)</p></li>
+<li><p>MyST-NB v0.8 to v0.10 (see its <a class="reference external" href="https://github.com/executablebooks/MyST-NB/blob/master/CHANGELOG.md">CHANGELOG.md</a>)</p></li>
+<li><p>This also enabled, Sphinx v2 to v3</p></li>
+</ul>
+<p>Here’s the headlines:</p>
+<dl class="simple myst">
+<dt>Windows support</dt><dd><p>Continuous Integration (CI) testing is now run against Windows OS throughout the EBP stack.
+The fixes this entailed, mean that Jupyter Book can now be run on Windows with minimal issue (see <a class="reference internal" href="../advanced/windows.html"><span class="doc std std-doc">Working on Windows</span></a>)</p>
+</dd>
+<dt>Extended “Markdown friendly” syntaxes</dt><dd><p>MyST Markdown directives offer a high degree of extensibility, to add all the features we might need to create a scientific document.
+However, they are not (yet) very well integrated with external editors, like the Jupyter Notebook interface.
+Extended syntax parsing to the rescue!</p>
+<p>By enabling in your <code class="docutils literal notranslate"><span class="pre">_config.yaml</span></code>:</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">parse</span><span class="p">:</span>
+  <span class="nt">myst_extended_syntax</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">true</span>
+</pre></div>
+</div>
+<p>You can access to a number of <em>Markdown friendly</em> syntaxes, which extend the <a class="reference external" href="https://commonmark.org/">CommonMark specification</a>:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">:::</span></code> fenced admonitions render Markdown as standard (see <a class="reference internal" href="../content/content-blocks.html"><span class="doc std std-doc">new style admonitions</span></a>).</p></li>
+<li><p>HTML images are correctly handled, allowing for control of size and style attributes,
+and Markdown style figures extend this for captions and referencing (see <a class="reference internal" href="../content/figures.html"><span class="doc std std-doc">images and figures</span></a>).</p></li>
+<li><p>Definition lists are what you see here and provide a simple format for writing term/definition blocks (see <a class="reference internal" href="../content/content-blocks.html"><span class="doc std std-doc">definition lists</span></a>).</p></li>
+<li><p>LaTeX math is now intrinsically supported,
+meaning that it will rendered correctly in both HTML and LaTeX/PDF outputs (see <a class="reference internal" href="../content/math.html"><span class="doc std std-doc">math and equations</span></a>).</p></li>
+</ul>
+</dd>
+<dt>Custom Notebook Formats</dt><dd><p>Want to write your notebooks as RMarkdown, Python files, …?
+Jupyter Book now supports linking any file extension to a custom conversion function,
+run before notebook execution and parsing.
+See the <a class="reference internal" href="../file-types/jupytext.html"><span class="doc std std-doc">custom notebook formats and Jupytext</span></a> documentation, which itself is written in RMarkdown!</p>
+</dd>
+<dt>Execution Configuration</dt><dd><p>Execution and caching of notebook outputs has been improved, to make it more consistent across <code class="docutils literal notranslate"><span class="pre">auto</span></code> and <code class="docutils literal notranslate"><span class="pre">cache</span></code> methods (<code class="docutils literal notranslate"><span class="pre">cache</span></code> execution is now also run in the notebook directory) and provide numerous configuration options, including:</p>
+<ul class="simple">
+<li><p>Running the execution in the local directory or in a temporary directory.</p></li>
+<li><p>Setting the execution timeout limit, at a global or notebook level.</p></li>
+<li><p>Allowing errors across all notebooks, or at a notebook or cell level.</p></li>
+<li><p>Removing stderr/stdout outputs or logging warnings when they are encountered</p></li>
+<li><p>A directive for displaying execution statistics for all notebooks in the book (status, run time, etc)</p></li>
+</ul>
+<p>See the <a class="reference internal" href="../content/execute.html"><span class="doc std std-doc">execution documentation</span></a> for more details.</p>
+</dd>
+<dt>Code Output Formatting</dt><dd><p>More cell outputs are handled, including Markdown and ANSI outputs,
+and you can use cell metadata to set image size, style, captions and references.
+See <a class="reference internal" href="../content/code-outputs.html"><span class="doc std std-doc">formatting code outputs</span></a>.</p>
+</dd>
+<dt>Build options and error reporting</dt><dd><p>The <code class="docutils literal notranslate"><span class="pre">jupyter-book</span> <span class="pre">build</span></code> command includes additional options/flags for controlling the build behaviour,
+such as verbose (<code class="docutils literal notranslate"><span class="pre">-v</span></code>), quiet (<code class="docutils literal notranslate"><span class="pre">-q</span></code>) and nitpick mode for checking references (<code class="docutils literal notranslate"><span class="pre">-n</span></code>).
+See the <a class="reference internal" href="cli.html"><span class="doc std std-doc">command-line interface documentation</span></a> for more details.</p>
+</dd>
+<dt>sphinx-panels integration</dt><dd><p>The <a class="reference external" href="https://sphinx-panels.readthedocs.io">sphinx-panels</a> package is now provided directly in the Jupyter Book distribution.
+This adds additional functionality for creating web based elements, such as gridded panels and dropdown boxes.
+See the <a class="reference internal" href="../content/content-blocks.html"><span class="doc std std-doc">Panels and Dropdowns</span></a> section for details.</p>
+</dd>
+</dl>
+</section>
+<section id="id9">
+<h3>Fixes 🐛<a class="headerlink" href="#id9" title="永久链接至标题">¶</a></h3>
+<p>Among the numerous fixes:</p>
+<ul class="simple">
+<li><p>Code cell syntax highlighting now works for all Jupyter kernels.</p></li>
+<li><p>User configuration is now recursively merged with the default configuration, and no longer overwrites an entire nested section.
+You can also use <code class="docutils literal notranslate"><span class="pre">jb</span> <span class="pre">config</span> <span class="pre">sphinx</span> <span class="pre">mybookname/</span></code> to inspect the sphinx <code class="docutils literal notranslate"><span class="pre">conf.py</span></code> which will be parsed to the builder.</p></li>
+</ul>
+</section>
+<section id="more-to-come">
+<h3>More to come 👀<a class="headerlink" href="#more-to-come" title="永久链接至标题">¶</a></h3>
+<p>We have many more improvements planned, check back in this change log for future improvements.</p>
+<p>Also please continue to provide us feedback on what you would like to see next.
+See our <a class="reference external" href="https://executablebooks.org/en/latest/feature-vote.html">voting for new features</a> page.</p>
+</section>
+</section>
+<section id="v0-7-5-2020-08-26">
+<h2>v0.7.5 2020-08-26<a class="headerlink" href="#v0-7-5-2020-08-26" title="永久链接至标题">¶</a></h2>
+<p>✨ NEW: This release introduces the new “Comments and Annotations” feature, powered by <a class="reference external" href="https://github.com/executablebooks/sphinx-comments">sphinx-comments</a>. See <a class="reference external" href="https://jupyterbook.org/interactive/comments.html">this documentation section</a> for further details.</p>
+<p><strong>Important:</strong> this version also pins the <code class="docutils literal notranslate"><span class="pre">myst-nb</span></code> dependency to v0.8.
+Previous versions erroneously allow for the new v0.9, which is not yet strictly compatible with jupyter-book (coming very soon!)</p>
+</section>
+<section id="v0-7-0-v0-7-4">
+<h2>v0.7.0…v0.7.4<a class="headerlink" href="#v0-7-0-v0-7-4" title="永久链接至标题">¶</a></h2>
+<p>(<a class="reference external" href="https://github.com/executablebooks/jupyter-book/compare/v0.7.5...v0.8.0">full changelog</a>)</p>
+<section id="enhancements-made">
+<h3>Enhancements made<a class="headerlink" href="#enhancements-made" title="永久链接至标题">¶</a></h3>
+<ul class="simple">
+<li><p>✨ NEW: Adding - chapter entries to _toc.yml <a class="reference external" href="https://github.com/executablebooks/jupyter-book/pull/817">#817</a> (<a class="reference external" href="https://github.com/choldgraf">&#64;choldgraf</a>)</p></li>
+<li><p>checking for toc modification time <a class="reference external" href="https://github.com/executablebooks/jupyter-book/pull/772">#772</a> (<a class="reference external" href="https://github.com/choldgraf">&#64;choldgraf</a>)</p></li>
+<li><p>first pass toc directive <a class="reference external" href="https://github.com/executablebooks/jupyter-book/pull/757">#757</a> (<a class="reference external" href="https://github.com/choldgraf">&#64;choldgraf</a>)</p></li>
+</ul>
+</section>
+<section id="id10">
+<h3>Bugs fixed 🐛<a class="headerlink" href="#id10" title="永久链接至标题">¶</a></h3>
+<ul class="simple">
+<li><p>Fix typo in <a class="reference external" href="http://content-blocks.md">content-blocks.md</a> documentation <a class="reference external" href="https://github.com/executablebooks/jupyter-book/pull/811">#811</a> (<a class="reference external" href="https://github.com/MaxGhenis">&#64;MaxGhenis</a>)</p></li>
+<li><p>Using relative instead of absolute links <a class="reference external" href="https://github.com/executablebooks/jupyter-book/pull/747">#747</a> (<a class="reference external" href="https://github.com/AakashGfude">&#64;AakashGfude</a>)</p></li>
+<li><p>Fixing jupytext install/UI links <a class="reference external" href="https://github.com/executablebooks/jupyter-book/pull/737">#737</a> (<a class="reference external" href="https://github.com/chrisjsewell">&#64;chrisjsewell</a>)</p></li>
+</ul>
+</section>
+<section id="documentation-improvements">
+<h3>Documentation improvements 📚<a class="headerlink" href="#documentation-improvements" title="永久链接至标题">¶</a></h3>
+<ul class="simple">
+<li><p>Note about licenses <a class="reference external" href="https://github.com/executablebooks/jupyter-book/pull/806">#806</a> (<a class="reference external" href="https://github.com/choldgraf">&#64;choldgraf</a>)</p></li>
+<li><p>Fix google analytics instructions <a class="reference external" href="https://github.com/executablebooks/jupyter-book/pull/799">#799</a> (<a class="reference external" href="https://github.com/tobydriscoll">&#64;tobydriscoll</a>)</p></li>
+<li><p>Change book_path to path_to_book <a class="reference external" href="https://github.com/executablebooks/jupyter-book/pull/773">#773</a> (<a class="reference external" href="https://github.com/MaxGhenis">&#64;MaxGhenis</a>)</p></li>
+<li><p>GitHub actions example: note about selective build <a class="reference external" href="https://github.com/executablebooks/jupyter-book/pull/771">#771</a> (<a class="reference external" href="https://github.com/consideRatio">&#64;consideRatio</a>)</p></li>
+<li><p>getting sphinx thebelab to work <a class="reference external" href="https://github.com/executablebooks/jupyter-book/pull/749">#749</a> (<a class="reference external" href="https://github.com/choldgraf">&#64;choldgraf</a>)</p></li>
+<li><p>Link documentation for adding cell tags in Jupyter from “Hide or remove content” documentation section <a class="reference external" href="https://github.com/executablebooks/jupyter-book/pull/734">#734</a> (<a class="reference external" href="https://github.com/MaxGhenis">&#64;MaxGhenis</a>)</p></li>
+<li><p>Typo fix <a class="reference external" href="https://github.com/executablebooks/jupyter-book/pull/731">#731</a> (<a class="reference external" href="https://github.com/MaxGhenis">&#64;MaxGhenis</a>)</p></li>
+<li><p>reworking interactive docs <a class="reference external" href="https://github.com/executablebooks/jupyter-book/pull/725">#725</a> (<a class="reference external" href="https://github.com/choldgraf">&#64;choldgraf</a>)</p></li>
+<li><p>Add documentation for Google Colab launch buttons <a class="reference external" href="https://github.com/executablebooks/jupyter-book/pull/721">#721</a> (<a class="reference external" href="https://github.com/lewtun">&#64;lewtun</a>)</p></li>
+<li><p>Add note about int eq labels in math directive <a class="reference external" href="https://github.com/executablebooks/jupyter-book/pull/720">#720</a> (<a class="reference external" href="https://github.com/najuzilu">&#64;najuzilu</a>)</p></li>
+</ul>
+</section>
+<section id="api-changes">
+<h3>API Changes<a class="headerlink" href="#api-changes" title="永久链接至标题">¶</a></h3>
+<ul class="simple">
+<li><p>✨ NEW: Adding - chapter entries to _toc.yml <a class="reference external" href="https://github.com/executablebooks/jupyter-book/pull/817">#817</a> (<a class="reference external" href="https://github.com/choldgraf">&#64;choldgraf</a>)</p></li>
+<li><p>removing config file numbered sections to use toc file instead <a class="reference external" href="https://github.com/executablebooks/jupyter-book/pull/768">#768</a> (<a class="reference external" href="https://github.com/choldgraf">&#64;choldgraf</a>)</p></li>
+</ul>
+</section>
+<section id="other-merged-prs">
+<h3>Other merged PRs<a class="headerlink" href="#other-merged-prs" title="永久链接至标题">¶</a></h3>
+<ul class="simple">
+<li><p>📚 DOCS: Remove Issue Templates <a class="reference external" href="https://github.com/executablebooks/jupyter-book/pull/849">#849</a> (<a class="reference external" href="https://github.com/chrisjsewell">&#64;chrisjsewell</a>)</p></li>
+<li><p>📚 DOC: document available bib styles <a class="reference external" href="https://github.com/executablebooks/jupyter-book/pull/845">#845</a> (<a class="reference external" href="https://github.com/emdupre">&#64;emdupre</a>)</p></li>
+<li><p>🐛 FIX: fixing toctree spacing bug <a class="reference external" href="https://github.com/executablebooks/jupyter-book/pull/836">#836</a> (<a class="reference external" href="https://github.com/choldgraf">&#64;choldgraf</a>)</p></li>
+<li><p>👌 IMPROVE: chapters -&gt; parts in toc <a class="reference external" href="https://github.com/executablebooks/jupyter-book/pull/834">#834</a> (<a class="reference external" href="https://github.com/choldgraf">&#64;choldgraf</a>)</p></li>
+<li><p>📚 DOCS: adding information about page structure <a class="reference external" href="https://github.com/executablebooks/jupyter-book/pull/830">#830</a> (<a class="reference external" href="https://github.com/choldgraf">&#64;choldgraf</a>)</p></li>
+<li><p>🐛 FIX: fixing chapters numbering <a class="reference external" href="https://github.com/executablebooks/jupyter-book/pull/829">#829</a> (<a class="reference external" href="https://github.com/choldgraf">&#64;choldgraf</a>)</p></li>
+<li><p>👌 IMPROVE: improving numbered sections <a class="reference external" href="https://github.com/executablebooks/jupyter-book/pull/826">#826</a> (<a class="reference external" href="https://github.com/choldgraf">&#64;choldgraf</a>)</p></li>
+<li><p>📚 DOC: update gh-pages + ghp-import docs <a class="reference external" href="https://github.com/executablebooks/jupyter-book/pull/814">#814</a> (<a class="reference external" href="https://github.com/TomasBeuzen">&#64;TomasBeuzen</a>)</p></li>
+<li><p>page index <a class="reference external" href="https://github.com/executablebooks/jupyter-book/pull/728">#728</a> (<a class="reference external" href="https://github.com/choldgraf">&#64;choldgraf</a>)</p></li>
+<li><p>fix windows utf8 encoding  1/3 <a class="reference external" href="https://github.com/executablebooks/jupyter-book/pull/719">#719</a> (<a class="reference external" href="https://github.com/phaustin">&#64;phaustin</a>)</p></li>
+</ul>
+</section>
+<section id="contributors-to-this-release">
+<h3>Contributors to this release<a class="headerlink" href="#contributors-to-this-release" title="永久链接至标题">¶</a></h3>
+<p>(<a class="reference external" href="https://github.com/executablebooks/jupyter-book/graphs/contributors?from=2020-06-11&amp;to=2020-08-05&amp;type=c">GitHub contributors page for this release</a>)</p>
+<p><a class="reference external" href="https://github.com/search?q=repo%3Aexecutablebooks%2Fjupyter-book+involves%3AAakashGfude+updated%3A2020-06-11..2020-08-05&amp;type=Issues">&#64;AakashGfude</a> | <a class="reference external" href="https://github.com/search?q=repo%3Aexecutablebooks%2Fjupyter-book+involves%3Aamueller+updated%3A2020-06-11..2020-08-05&amp;type=Issues">&#64;amueller</a> | <a class="reference external" href="https://github.com/search?q=repo%3Aexecutablebooks%2Fjupyter-book+involves%3Abmcfee+updated%3A2020-06-11..2020-08-05&amp;type=Issues">&#64;bmcfee</a> | <a class="reference external" href="https://github.com/search?q=repo%3Aexecutablebooks%2Fjupyter-book+involves%3Abrian-rose+updated%3A2020-06-11..2020-08-05&amp;type=Issues">&#64;brian-rose</a> | <a class="reference external" href="https://github.com/search?q=repo%3Aexecutablebooks%2Fjupyter-book+involves%3Acedeerwe+updated%3A2020-06-11..2020-08-05&amp;type=Issues">&#64;cedeerwe</a> | <a class="reference external" href="https://github.com/search?q=repo%3Aexecutablebooks%2Fjupyter-book+involves%3Acholdgraf+updated%3A2020-06-11..2020-08-05&amp;type=Issues">&#64;choldgraf</a> | <a class="reference external" href="https://github.com/search?q=repo%3Aexecutablebooks%2Fjupyter-book+involves%3Achrisjsewell+updated%3A2020-06-11..2020-08-05&amp;type=Issues">&#64;chrisjsewell</a> | <a class="reference external" href="https://github.com/search?q=repo%3Aexecutablebooks%2Fjupyter-book+involves%3Acodecov+updated%3A2020-06-11..2020-08-05&amp;type=Issues">&#64;codecov</a> | <a class="reference external" href="https://github.com/search?q=repo%3Aexecutablebooks%2Fjupyter-book+involves%3AconsideRatio+updated%3A2020-06-11..2020-08-05&amp;type=Issues">&#64;consideRatio</a> | <a class="reference external" href="https://github.com/search?q=repo%3Aexecutablebooks%2Fjupyter-book+involves%3Acpjobling+updated%3A2020-06-11..2020-08-05&amp;type=Issues">&#64;cpjobling</a> | <a class="reference external" href="https://github.com/search?q=repo%3Aexecutablebooks%2Fjupyter-book+involves%3Adrscotthawley+updated%3A2020-06-11..2020-08-05&amp;type=Issues">&#64;drscotthawley</a> | <a class="reference external" href="https://github.com/search?q=repo%3Aexecutablebooks%2Fjupyter-book+involves%3Aemdupre+updated%3A2020-06-11..2020-08-05&amp;type=Issues">&#64;emdupre</a> | <a class="reference external" href="https://github.com/search?q=repo%3Aexecutablebooks%2Fjupyter-book+involves%3Afirasm+updated%3A2020-06-11..2020-08-05&amp;type=Issues">&#64;firasm</a> | <a class="reference external" href="https://github.com/search?q=repo%3Aexecutablebooks%2Fjupyter-book+involves%3Ajni+updated%3A2020-06-11..2020-08-05&amp;type=Issues">&#64;jni</a> | <a class="reference external" href="https://github.com/search?q=repo%3Aexecutablebooks%2Fjupyter-book+involves%3Ajstac+updated%3A2020-06-11..2020-08-05&amp;type=Issues">&#64;jstac</a> | <a class="reference external" href="https://github.com/search?q=repo%3Aexecutablebooks%2Fjupyter-book+involves%3Alewtun+updated%3A2020-06-11..2020-08-05&amp;type=Issues">&#64;lewtun</a> | <a class="reference external" href="https://github.com/search?q=repo%3Aexecutablebooks%2Fjupyter-book+involves%3AMaxGhenis+updated%3A2020-06-11..2020-08-05&amp;type=Issues">&#64;MaxGhenis</a> | <a class="reference external" href="https://github.com/search?q=repo%3Aexecutablebooks%2Fjupyter-book+involves%3Ammcky+updated%3A2020-06-11..2020-08-05&amp;type=Issues">&#64;mmcky</a> | <a class="reference external" href="https://github.com/search?q=repo%3Aexecutablebooks%2Fjupyter-book+involves%3Anajuzilu+updated%3A2020-06-11..2020-08-05&amp;type=Issues">&#64;najuzilu</a> | <a class="reference external" href="https://github.com/search?q=repo%3Aexecutablebooks%2Fjupyter-book+involves%3Anathancarter+updated%3A2020-06-11..2020-08-05&amp;type=Issues">&#64;nathancarter</a> | <a class="reference external" href="https://github.com/search?q=repo%3Aexecutablebooks%2Fjupyter-book+involves%3Aphaustin+updated%3A2020-06-11..2020-08-05&amp;type=Issues">&#64;phaustin</a> | <a class="reference external" href="https://github.com/search?q=repo%3Aexecutablebooks%2Fjupyter-book+involves%3Aptcane+updated%3A2020-06-11..2020-08-05&amp;type=Issues">&#64;ptcane</a> | <a class="reference external" href="https://github.com/search?q=repo%3Aexecutablebooks%2Fjupyter-book+involves%3Asamteplitzky+updated%3A2020-06-11..2020-08-05&amp;type=Issues">&#64;samteplitzky</a> | <a class="reference external" href="https://github.com/search?q=repo%3Aexecutablebooks%2Fjupyter-book+involves%3Atobydriscoll+updated%3A2020-06-11..2020-08-05&amp;type=Issues">&#64;tobydriscoll</a> | <a class="reference external" href="https://github.com/search?q=repo%3Aexecutablebooks%2Fjupyter-book+involves%3ATomasBeuzen+updated%3A2020-06-11..2020-08-05&amp;type=Issues">&#64;TomasBeuzen</a> | <a class="reference external" href="https://github.com/search?q=repo%3Aexecutablebooks%2Fjupyter-book+involves%3Awelcome+updated%3A2020-06-11..2020-08-05&amp;type=Issues">&#64;welcome</a></p>
+</section>
+</section>
+<section id="v0-6-4-v0-7-0">
+<h2>v0.6.4…v0.7.0<a class="headerlink" href="#v0-6-4-v0-7-0" title="永久链接至标题">¶</a></h2>
+<p>(<a class="reference external" href="https://github.com/executablebooks/jupyter-book/compare/v0.6.4...v0.7.0">full changelog</a>)</p>
+<section id="merged-prs">
+<h3>Merged PRs<a class="headerlink" href="#merged-prs" title="永久链接至标题">¶</a></h3>
+<ul class="simple">
+<li><p>Release prep <a class="reference external" href="https://github.com/executablebooks/jupyter-book/pull/711">#711</a> (<a class="reference external" href="https://github.com/choldgraf">&#64;choldgraf</a>)</p></li>
+<li><p>fixing topbar repo buttons <a class="reference external" href="https://github.com/executablebooks/jupyter-book/pull/710">#710</a> (<a class="reference external" href="https://github.com/choldgraf">&#64;choldgraf</a>)</p></li>
+<li><p>[DOC] Add info about ‘remove_cell’ tag <a class="reference external" href="https://github.com/executablebooks/jupyter-book/pull/708">#708</a> (<a class="reference external" href="https://github.com/najuzilu">&#64;najuzilu</a>)</p></li>
+<li><p>[DOC] Fix broken Jupytext link <a class="reference external" href="https://github.com/executablebooks/jupyter-book/pull/703">#703</a> (<a class="reference external" href="https://github.com/najuzilu">&#64;najuzilu</a>)</p></li>
+<li><p>misc doc improvements <a class="reference external" href="https://github.com/executablebooks/jupyter-book/pull/702">#702</a> (<a class="reference external" href="https://github.com/choldgraf">&#64;choldgraf</a>)</p></li>
+<li><p>fixing toc bug <a class="reference external" href="https://github.com/executablebooks/jupyter-book/pull/696">#696</a> (<a class="reference external" href="https://github.com/choldgraf">&#64;choldgraf</a>)</p></li>
+<li><p>[DOC, ENH] Shorten descriptions of clean and toc functions <a class="reference external" href="https://github.com/executablebooks/jupyter-book/pull/693">#693</a> (<a class="reference external" href="https://github.com/pgadige">&#64;pgadige</a>)</p></li>
+<li><p>execution error doc <a class="reference external" href="https://github.com/executablebooks/jupyter-book/pull/691">#691</a> (<a class="reference external" href="https://github.com/choldgraf">&#64;choldgraf</a>)</p></li>
+<li><p>[DOC] Fix rendering of subitems in ordered list <a class="reference external" href="https://github.com/executablebooks/jupyter-book/pull/686">#686</a> (<a class="reference external" href="https://github.com/najuzilu">&#64;najuzilu</a>)</p></li>
+<li><p>adding configuration for source buttons <a class="reference external" href="https://github.com/executablebooks/jupyter-book/pull/684">#684</a> (<a class="reference external" href="https://github.com/choldgraf">&#64;choldgraf</a>)</p></li>
+<li><p>adding versions <a class="reference external" href="https://github.com/executablebooks/jupyter-book/pull/679">#679</a> (<a class="reference external" href="https://github.com/choldgraf">&#64;choldgraf</a>)</p></li>
+<li><p>ENH: Modify execute option for jb page command (#594 followup) <a class="reference external" href="https://github.com/executablebooks/jupyter-book/pull/678">#678</a> (<a class="reference external" href="https://github.com/rossbar">&#64;rossbar</a>)</p></li>
+<li><p>fixing suffix in download files <a class="reference external" href="https://github.com/executablebooks/jupyter-book/pull/656">#656</a> (<a class="reference external" href="https://github.com/choldgraf">&#64;choldgraf</a>)</p></li>
+<li><p>config defaults <a class="reference external" href="https://github.com/executablebooks/jupyter-book/pull/654">#654</a> (<a class="reference external" href="https://github.com/choldgraf">&#64;choldgraf</a>)</p></li>
+<li><p>Additional latex newcommand example <a class="reference external" href="https://github.com/executablebooks/jupyter-book/pull/652">#652</a> (<a class="reference external" href="https://github.com/najuzilu">&#64;najuzilu</a>)</p></li>
+<li><p>How to reference docs and section labels <a class="reference external" href="https://github.com/executablebooks/jupyter-book/pull/651">#651</a> (<a class="reference external" href="https://github.com/najuzilu">&#64;najuzilu</a>)</p></li>
+<li><p>TST: minor update to reference book.pdf rather than python.pdf <a class="reference external" href="https://github.com/executablebooks/jupyter-book/pull/650">#650</a> (<a class="reference external" href="https://github.com/mmcky">&#64;mmcky</a>)</p></li>
+<li><p>improving configuration under the hood <a class="reference external" href="https://github.com/executablebooks/jupyter-book/pull/647">#647</a> (<a class="reference external" href="https://github.com/choldgraf">&#64;choldgraf</a>)</p></li>
+<li><p>draft windows instructions <a class="reference external" href="https://github.com/executablebooks/jupyter-book/pull/642">#642</a> (<a class="reference external" href="https://github.com/phaustin">&#64;phaustin</a>)</p></li>
+<li><p>[DOC] MyST cheat sheet documentation <a class="reference external" href="https://github.com/executablebooks/jupyter-book/pull/637">#637</a> (<a class="reference external" href="https://github.com/najuzilu">&#64;najuzilu</a>)</p></li>
+<li><p>TST: [pdflatex] Add build of quantecon-mini-example as a project style test case  <a class="reference external" href="https://github.com/executablebooks/jupyter-book/pull/636">#636</a> (<a class="reference external" href="https://github.com/mmcky">&#64;mmcky</a>)</p></li>
+<li><p>TST: Fix test_pdf failure. <a class="reference external" href="https://github.com/executablebooks/jupyter-book/pull/633">#633</a> (<a class="reference external" href="https://github.com/rossbar">&#64;rossbar</a>)</p></li>
+<li><p>Minor update for the extra-navbar section in <a class="reference external" href="http://advanced.md">advanced.md</a> <a class="reference external" href="https://github.com/executablebooks/jupyter-book/pull/631">#631</a> (<a class="reference external" href="https://github.com/malvikasharan">&#64;malvikasharan</a>)</p></li>
+<li><p>TST: update testing requirements and adjust ignore <a class="reference external" href="https://github.com/executablebooks/jupyter-book/pull/626">#626</a> (<a class="reference external" href="https://github.com/mmcky">&#64;mmcky</a>)</p></li>
+<li><p>bump peaceiris/actions-gh-pages to v3.6.1 <a class="reference external" href="https://github.com/executablebooks/jupyter-book/pull/625">#625</a> (<a class="reference external" href="https://github.com/peaceiris">&#64;peaceiris</a>)</p></li>
+<li><p>documenting directive keywords better <a class="reference external" href="https://github.com/executablebooks/jupyter-book/pull/623">#623</a> (<a class="reference external" href="https://github.com/choldgraf">&#64;choldgraf</a>)</p></li>
+<li><p>clarifying config values <a class="reference external" href="https://github.com/executablebooks/jupyter-book/pull/622">#622</a> (<a class="reference external" href="https://github.com/choldgraf">&#64;choldgraf</a>)</p></li>
+<li><p>add tex macro documentation <a class="reference external" href="https://github.com/executablebooks/jupyter-book/pull/618">#618</a> (<a class="reference external" href="https://github.com/najuzilu">&#64;najuzilu</a>)</p></li>
+<li><p>fixing docs bug in template <a class="reference external" href="https://github.com/executablebooks/jupyter-book/pull/617">#617</a> (<a class="reference external" href="https://github.com/choldgraf">&#64;choldgraf</a>)</p></li>
+<li><p>FIX: fix bug when latex config not specified in project for “latex_documents” <a class="reference external" href="https://github.com/executablebooks/jupyter-book/pull/614">#614</a> (<a class="reference external" href="https://github.com/mmcky">&#64;mmcky</a>)</p></li>
+<li><p>adding extra footer docs <a class="reference external" href="https://github.com/executablebooks/jupyter-book/pull/611">#611</a> (<a class="reference external" href="https://github.com/choldgraf">&#64;choldgraf</a>)</p></li>
+<li><p>nesting notes <a class="reference external" href="https://github.com/executablebooks/jupyter-book/pull/599">#599</a> (<a class="reference external" href="https://github.com/choldgraf">&#64;choldgraf</a>)</p></li>
+<li><p>docs update <a class="reference external" href="https://github.com/executablebooks/jupyter-book/pull/597">#597</a> (<a class="reference external" href="https://github.com/choldgraf">&#64;choldgraf</a>)</p></li>
+<li><p>updating docs and fixing single page bug <a class="reference external" href="https://github.com/executablebooks/jupyter-book/pull/592">#592</a> (<a class="reference external" href="https://github.com/choldgraf">&#64;choldgraf</a>)</p></li>
+<li><p>add html section to tip about navbar_number_sections <a class="reference external" href="https://github.com/executablebooks/jupyter-book/pull/590">#590</a> (<a class="reference external" href="https://github.com/amueller">&#64;amueller</a>)</p></li>
+<li><p>adding custom css and js and updating docs <a class="reference external" href="https://github.com/executablebooks/jupyter-book/pull/583">#583</a> (<a class="reference external" href="https://github.com/choldgraf">&#64;choldgraf</a>)</p></li>
+<li><p>Devdocs <a class="reference external" href="https://github.com/executablebooks/jupyter-book/pull/581">#581</a> (<a class="reference external" href="https://github.com/choldgraf">&#64;choldgraf</a>)</p></li>
+<li><p>[DOC] fix contrib link in readme <a class="reference external" href="https://github.com/executablebooks/jupyter-book/pull/577">#577</a> (<a class="reference external" href="https://github.com/amueller">&#64;amueller</a>)</p></li>
+<li><p>Document use of pure html <a class="reference external" href="https://github.com/executablebooks/jupyter-book/pull/576">#576</a> (<a class="reference external" href="https://github.com/joergbrech">&#64;joergbrech</a>)</p></li>
+<li><p>add no_title argument to toc <a class="reference external" href="https://github.com/executablebooks/jupyter-book/pull/571">#571</a> (<a class="reference external" href="https://github.com/amueller">&#64;amueller</a>)</p></li>
+<li><p>instructions for toggle and toc docs <a class="reference external" href="https://github.com/executablebooks/jupyter-book/pull/570">#570</a> (<a class="reference external" href="https://github.com/choldgraf">&#64;choldgraf</a>)</p></li>
+<li><p>DOC: A few documentation fix-ups <a class="reference external" href="https://github.com/executablebooks/jupyter-book/pull/569">#569</a> (<a class="reference external" href="https://github.com/rossbar">&#64;rossbar</a>)</p></li>
+<li><p>add ticks to execute_notebooks: off in docs <a class="reference external" href="https://github.com/executablebooks/jupyter-book/pull/568">#568</a> (<a class="reference external" href="https://github.com/amueller">&#64;amueller</a>)</p></li>
+<li><p>fixing flake <a class="reference external" href="https://github.com/executablebooks/jupyter-book/pull/567">#567</a> (<a class="reference external" href="https://github.com/choldgraf">&#64;choldgraf</a>)</p></li>
+<li><p>fix typo <a class="reference external" href="https://github.com/executablebooks/jupyter-book/pull/565">#565</a> (<a class="reference external" href="https://github.com/amueller">&#64;amueller</a>)</p></li>
+<li><p>add build to test_clean method prior to build  --builder pdflatex <a class="reference external" href="https://github.com/executablebooks/jupyter-book/pull/561">#561</a> (<a class="reference external" href="https://github.com/najuzilu">&#64;najuzilu</a>)</p></li>
+<li><p>update vscode myst markdown extension url <a class="reference external" href="https://github.com/executablebooks/jupyter-book/pull/559">#559</a> (<a class="reference external" href="https://github.com/najuzilu">&#64;najuzilu</a>)</p></li>
+<li><p>[BUG] Added a returncode for make all-pdf <a class="reference external" href="https://github.com/executablebooks/jupyter-book/pull/556">#556</a> (<a class="reference external" href="https://github.com/AakashGfude">&#64;AakashGfude</a>)</p></li>
+<li><p>[ENH] A simple {tableofcontents} directive <a class="reference external" href="https://github.com/executablebooks/jupyter-book/pull/553">#553</a> (<a class="reference external" href="https://github.com/AakashGfude">&#64;AakashGfude</a>)</p></li>
+<li><p>clarifying qe mini example <a class="reference external" href="https://github.com/executablebooks/jupyter-book/pull/550">#550</a> (<a class="reference external" href="https://github.com/choldgraf">&#64;choldgraf</a>)</p></li>
+<li><p>Small edits to intro page on docs. <a class="reference external" href="https://github.com/executablebooks/jupyter-book/pull/548">#548</a> (<a class="reference external" href="https://github.com/jstac">&#64;jstac</a>)</p></li>
+<li><p>updating intro page and other docs <a class="reference external" href="https://github.com/executablebooks/jupyter-book/pull/545">#545</a> (<a class="reference external" href="https://github.com/choldgraf">&#64;choldgraf</a>)</p></li>
+<li><p>Update default_config.yml <a class="reference external" href="https://github.com/executablebooks/jupyter-book/pull/544">#544</a> (<a class="reference external" href="https://github.com/Cyb3rWard0g">&#64;Cyb3rWard0g</a>)</p></li>
+<li><p>Fix broken references in docs <a class="reference external" href="https://github.com/executablebooks/jupyter-book/pull/541">#541</a> (<a class="reference external" href="https://github.com/consideRatio">&#64;consideRatio</a>)</p></li>
+<li><p>Corrects info on bibliography in separate file <a class="reference external" href="https://github.com/executablebooks/jupyter-book/pull/537">#537</a> (<a class="reference external" href="https://github.com/kyleniemeyer">&#64;kyleniemeyer</a>)</p></li>
+<li><p>explicitly giving jupyter book install version <a class="reference external" href="https://github.com/executablebooks/jupyter-book/pull/535">#535</a> (<a class="reference external" href="https://github.com/choldgraf">&#64;choldgraf</a>)</p></li>
+<li><p>Add modules needed to build the example book to the instructions. <a class="reference external" href="https://github.com/executablebooks/jupyter-book/pull/533">#533</a> (<a class="reference external" href="https://github.com/jpivarski">&#64;jpivarski</a>)</p></li>
+<li><p>citations clean up <a class="reference external" href="https://github.com/executablebooks/jupyter-book/pull/529">#529</a> (<a class="reference external" href="https://github.com/choldgraf">&#64;choldgraf</a>)</p></li>
+<li><p>updating documentation <a class="reference external" href="https://github.com/executablebooks/jupyter-book/pull/527">#527</a> (<a class="reference external" href="https://github.com/choldgraf">&#64;choldgraf</a>)</p></li>
+<li><p>adding tests for TOC cases <a class="reference external" href="https://github.com/executablebooks/jupyter-book/pull/525">#525</a> (<a class="reference external" href="https://github.com/choldgraf">&#64;choldgraf</a>)</p></li>
+<li><p>adding linkcheck docs and support <a class="reference external" href="https://github.com/executablebooks/jupyter-book/pull/524">#524</a> (<a class="reference external" href="https://github.com/choldgraf">&#64;choldgraf</a>)</p></li>
+<li><p>update latexpdf to pdflatex in the documentation <a class="reference external" href="https://github.com/executablebooks/jupyter-book/pull/523">#523</a> (<a class="reference external" href="https://github.com/najuzilu">&#64;najuzilu</a>)</p></li>
+<li><p>update jb contributor link <a class="reference external" href="https://github.com/executablebooks/jupyter-book/pull/522">#522</a> (<a class="reference external" href="https://github.com/najuzilu">&#64;najuzilu</a>)</p></li>
+<li><p>Additional clean options <a class="reference external" href="https://github.com/executablebooks/jupyter-book/pull/521">#521</a> (<a class="reference external" href="https://github.com/najuzilu">&#64;najuzilu</a>)</p></li>
+<li><p>updating deploy docs <a class="reference external" href="https://github.com/executablebooks/jupyter-book/pull/520">#520</a> (<a class="reference external" href="https://github.com/choldgraf">&#64;choldgraf</a>)</p></li>
+<li><p>BETA: v0.7.0b1 <a class="reference external" href="https://github.com/executablebooks/jupyter-book/pull/516">#516</a> (<a class="reference external" href="https://github.com/choldgraf">&#64;choldgraf</a>)</p></li>
+<li><p>fixing tests and prep for new release <a class="reference external" href="https://github.com/executablebooks/jupyter-book/pull/515">#515</a> (<a class="reference external" href="https://github.com/choldgraf">&#64;choldgraf</a>)</p></li>
+<li><p>Rebase <a class="reference external" href="https://github.com/executablebooks/jupyter-book/pull/496">#496</a> (<a class="reference external" href="https://github.com/choldgraf">&#64;choldgraf</a>)</p></li>
+<li><p>migrating to new github org <a class="reference external" href="https://github.com/executablebooks/jupyter-book/pull/493">#493</a> (<a class="reference external" href="https://github.com/choldgraf">&#64;choldgraf</a>)</p></li>
+<li><p>adding a gallery <a class="reference external" href="https://github.com/executablebooks/jupyter-book/pull/472">#472</a> (<a class="reference external" href="https://github.com/choldgraf">&#64;choldgraf</a>)</p></li>
+<li><p>[ENH] Raise error if page URL does not start with os.sep <a class="reference external" href="https://github.com/executablebooks/jupyter-book/pull/471">#471</a> (<a class="reference external" href="https://github.com/brian-rose">&#64;brian-rose</a>)</p></li>
+<li><p>Display the Jupyter Book icon on pypi <a class="reference external" href="https://github.com/executablebooks/jupyter-book/pull/470">#470</a> (<a class="reference external" href="https://github.com/mwouts">&#64;mwouts</a>)</p></li>
+<li><p>[DOC] changed circleci docs to reflect consistent job name <a class="reference external" href="https://github.com/executablebooks/jupyter-book/pull/463">#463</a> (<a class="reference external" href="https://github.com/alexnakagawa">&#64;alexnakagawa</a>)</p></li>
+<li><p>Fix links to book-html and github-pages <a class="reference external" href="https://github.com/executablebooks/jupyter-book/pull/457">#457</a> (<a class="reference external" href="https://github.com/mwouts">&#64;mwouts</a>)</p></li>
+<li><p>Intronetlify <a class="reference external" href="https://github.com/executablebooks/jupyter-book/pull/454">#454</a> (<a class="reference external" href="https://github.com/choldgraf">&#64;choldgraf</a>)</p></li>
+<li><p>[DOC] Minor changes to documentation <a class="reference external" href="https://github.com/executablebooks/jupyter-book/pull/452">#452</a> (<a class="reference external" href="https://github.com/rossbar">&#64;rossbar</a>)</p></li>
+</ul>
+</section>
+<section id="id11">
+<h3>Contributors to this release<a class="headerlink" href="#id11" title="永久链接至标题">¶</a></h3>
+<p>(<a class="reference external" href="https://github.com/executablebooks/jupyter-book/graphs/contributors?from=2019-12-06&amp;to=2020-06-11&amp;type=c">GitHub contributors page for this release</a>)</p>
+<p><a class="reference external" href="https://github.com/search?q=repo%3Aexecutablebooks%2Fjupyter-book+involves%3AAakashGfude+updated%3A2019-12-06..2020-06-11&amp;type=Issues">&#64;AakashGfude</a> | <a class="reference external" href="https://github.com/search?q=repo%3Aexecutablebooks%2Fjupyter-book+involves%3Aakhmerov+updated%3A2019-12-06..2020-06-11&amp;type=Issues">&#64;akhmerov</a> | <a class="reference external" href="https://github.com/search?q=repo%3Aexecutablebooks%2Fjupyter-book+involves%3Aalejandroschuler+updated%3A2019-12-06..2020-06-11&amp;type=Issues">&#64;alejandroschuler</a> | <a class="reference external" href="https://github.com/search?q=repo%3Aexecutablebooks%2Fjupyter-book+involves%3Aalexnakagawa+updated%3A2019-12-06..2020-06-11&amp;type=Issues">&#64;alexnakagawa</a> | <a class="reference external" href="https://github.com/search?q=repo%3Aexecutablebooks%2Fjupyter-book+involves%3Aamueller+updated%3A2019-12-06..2020-06-11&amp;type=Issues">&#64;amueller</a> | <a class="reference external" href="https://github.com/search?q=repo%3Aexecutablebooks%2Fjupyter-book+involves%3Aandrewsanchez+updated%3A2019-12-06..2020-06-11&amp;type=Issues">&#64;andrewsanchez</a> | <a class="reference external" href="https://github.com/search?q=repo%3Aexecutablebooks%2Fjupyter-book+involves%3Aasteppke+updated%3A2019-12-06..2020-06-11&amp;type=Issues">&#64;asteppke</a> | <a class="reference external" href="https://github.com/search?q=repo%3Aexecutablebooks%2Fjupyter-book+involves%3Abetatim+updated%3A2019-12-06..2020-06-11&amp;type=Issues">&#64;betatim</a> | <a class="reference external" href="https://github.com/search?q=repo%3Aexecutablebooks%2Fjupyter-book+involves%3Aboazbk+updated%3A2019-12-06..2020-06-11&amp;type=Issues">&#64;boazbk</a> | <a class="reference external" href="https://github.com/search?q=repo%3Aexecutablebooks%2Fjupyter-book+involves%3Abrian-rose+updated%3A2019-12-06..2020-06-11&amp;type=Issues">&#64;brian-rose</a> | <a class="reference external" href="https://github.com/search?q=repo%3Aexecutablebooks%2Fjupyter-book+involves%3Acedeerwe+updated%3A2019-12-06..2020-06-11&amp;type=Issues">&#64;cedeerwe</a> | <a class="reference external" href="https://github.com/search?q=repo%3Aexecutablebooks%2Fjupyter-book+involves%3Acholdgraf+updated%3A2019-12-06..2020-06-11&amp;type=Issues">&#64;choldgraf</a> | <a class="reference external" href="https://github.com/search?q=repo%3Aexecutablebooks%2Fjupyter-book+involves%3Achrisjsewell+updated%3A2019-12-06..2020-06-11&amp;type=Issues">&#64;chrisjsewell</a> | <a class="reference external" href="https://github.com/search?q=repo%3Aexecutablebooks%2Fjupyter-book+involves%3AconsideRatio+updated%3A2019-12-06..2020-06-11&amp;type=Issues">&#64;consideRatio</a> | <a class="reference external" href="https://github.com/search?q=repo%3Aexecutablebooks%2Fjupyter-book+involves%3Acpjobling+updated%3A2019-12-06..2020-06-11&amp;type=Issues">&#64;cpjobling</a> | <a class="reference external" href="https://github.com/search?q=repo%3Aexecutablebooks%2Fjupyter-book+involves%3ACyb3rWard0g+updated%3A2019-12-06..2020-06-11&amp;type=Issues">&#64;Cyb3rWard0g</a> | <a class="reference external" href="https://github.com/search?q=repo%3Aexecutablebooks%2Fjupyter-book+involves%3Adafriedman97+updated%3A2019-12-06..2020-06-11&amp;type=Issues">&#64;dafriedman97</a> | <a class="reference external" href="https://github.com/search?q=repo%3Aexecutablebooks%2Fjupyter-book+involves%3ADavidPowell+updated%3A2019-12-06..2020-06-11&amp;type=Issues">&#64;DavidPowell</a> | <a class="reference external" href="https://github.com/search?q=repo%3Aexecutablebooks%2Fjupyter-book+involves%3Adhruvbalwada+updated%3A2019-12-06..2020-06-11&amp;type=Issues">&#64;dhruvbalwada</a> | <a class="reference external" href="https://github.com/search?q=repo%3Aexecutablebooks%2Fjupyter-book+involves%3Aemdupre+updated%3A2019-12-06..2020-06-11&amp;type=Issues">&#64;emdupre</a> | <a class="reference external" href="https://github.com/search?q=repo%3Aexecutablebooks%2Fjupyter-book+involves%3Aepacuit+updated%3A2019-12-06..2020-06-11&amp;type=Issues">&#64;epacuit</a> | <a class="reference external" href="https://github.com/search?q=repo%3Aexecutablebooks%2Fjupyter-book+involves%3Afirasm+updated%3A2019-12-06..2020-06-11&amp;type=Issues">&#64;firasm</a> | <a class="reference external" href="https://github.com/search?q=repo%3Aexecutablebooks%2Fjupyter-book+involves%3Aflying-sheep+updated%3A2019-12-06..2020-06-11&amp;type=Issues">&#64;flying-sheep</a> | <a class="reference external" href="https://github.com/search?q=repo%3Aexecutablebooks%2Fjupyter-book+involves%3Afoster999+updated%3A2019-12-06..2020-06-11&amp;type=Issues">&#64;foster999</a> | <a class="reference external" href="https://github.com/search?q=repo%3Aexecutablebooks%2Fjupyter-book+involves%3Agharp+updated%3A2019-12-06..2020-06-11&amp;type=Issues">&#64;gharp</a> | <a class="reference external" href="https://github.com/search?q=repo%3Aexecutablebooks%2Fjupyter-book+involves%3Agoanpeca+updated%3A2019-12-06..2020-06-11&amp;type=Issues">&#64;goanpeca</a> | <a class="reference external" href="https://github.com/search?q=repo%3Aexecutablebooks%2Fjupyter-book+involves%3Agrst+updated%3A2019-12-06..2020-06-11&amp;type=Issues">&#64;grst</a> | <a class="reference external" href="https://github.com/search?q=repo%3Aexecutablebooks%2Fjupyter-book+involves%3Ahamelsmu+updated%3A2019-12-06..2020-06-11&amp;type=Issues">&#64;hamelsmu</a> | <a class="reference external" href="https://github.com/search?q=repo%3Aexecutablebooks%2Fjupyter-book+involves%3Ajasmainak+updated%3A2019-12-06..2020-06-11&amp;type=Issues">&#64;jasmainak</a> | <a class="reference external" href="https://github.com/search?q=repo%3Aexecutablebooks%2Fjupyter-book+involves%3Ajgm+updated%3A2019-12-06..2020-06-11&amp;type=Issues">&#64;jgm</a> | <a class="reference external" href="https://github.com/search?q=repo%3Aexecutablebooks%2Fjupyter-book+involves%3Ajmason86+updated%3A2019-12-06..2020-06-11&amp;type=Issues">&#64;jmason86</a> | <a class="reference external" href="https://github.com/search?q=repo%3Aexecutablebooks%2Fjupyter-book+involves%3Ajni+updated%3A2019-12-06..2020-06-11&amp;type=Issues">&#64;jni</a> | <a class="reference external" href="https://github.com/search?q=repo%3Aexecutablebooks%2Fjupyter-book+involves%3Ajoergbrech+updated%3A2019-12-06..2020-06-11&amp;type=Issues">&#64;joergbrech</a> | <a class="reference external" href="https://github.com/search?q=repo%3Aexecutablebooks%2Fjupyter-book+involves%3Ajohngage+updated%3A2019-12-06..2020-06-11&amp;type=Issues">&#64;johngage</a> | <a class="reference external" href="https://github.com/search?q=repo%3Aexecutablebooks%2Fjupyter-book+involves%3Ajpivarski+updated%3A2019-12-06..2020-06-11&amp;type=Issues">&#64;jpivarski</a> | <a class="reference external" href="https://github.com/search?q=repo%3Aexecutablebooks%2Fjupyter-book+involves%3Ajstac+updated%3A2019-12-06..2020-06-11&amp;type=Issues">&#64;jstac</a> | <a class="reference external" href="https://github.com/search?q=repo%3Aexecutablebooks%2Fjupyter-book+involves%3Akyleniemeyer+updated%3A2019-12-06..2020-06-11&amp;type=Issues">&#64;kyleniemeyer</a> | <a class="reference external" href="https://github.com/search?q=repo%3Aexecutablebooks%2Fjupyter-book+involves%3Amalvikasharan+updated%3A2019-12-06..2020-06-11&amp;type=Issues">&#64;malvikasharan</a> | <a class="reference external" href="https://github.com/search?q=repo%3Aexecutablebooks%2Fjupyter-book+involves%3Amartinagvilas+updated%3A2019-12-06..2020-06-11&amp;type=Issues">&#64;martinagvilas</a> | <a class="reference external" href="https://github.com/search?q=repo%3Aexecutablebooks%2Fjupyter-book+involves%3AMasterScrat+updated%3A2019-12-06..2020-06-11&amp;type=Issues">&#64;MasterScrat</a> | <a class="reference external" href="https://github.com/search?q=repo%3Aexecutablebooks%2Fjupyter-book+involves%3Amathieuboudreau+updated%3A2019-12-06..2020-06-11&amp;type=Issues">&#64;mathieuboudreau</a> | <a class="reference external" href="https://github.com/search?q=repo%3Aexecutablebooks%2Fjupyter-book+involves%3Amatteoacrossi+updated%3A2019-12-06..2020-06-11&amp;type=Issues">&#64;matteoacrossi</a> | <a class="reference external" href="https://github.com/search?q=repo%3Aexecutablebooks%2Fjupyter-book+involves%3Amgeier+updated%3A2019-12-06..2020-06-11&amp;type=Issues">&#64;mgeier</a> | <a class="reference external" href="https://github.com/search?q=repo%3Aexecutablebooks%2Fjupyter-book+involves%3Amikdale+updated%3A2019-12-06..2020-06-11&amp;type=Issues">&#64;mikdale</a> | <a class="reference external" href="https://github.com/search?q=repo%3Aexecutablebooks%2Fjupyter-book+involves%3Ammcky+updated%3A2019-12-06..2020-06-11&amp;type=Issues">&#64;mmcky</a> | <a class="reference external" href="https://github.com/search?q=repo%3Aexecutablebooks%2Fjupyter-book+involves%3Amwcraig+updated%3A2019-12-06..2020-06-11&amp;type=Issues">&#64;mwcraig</a> | <a class="reference external" href="https://github.com/search?q=repo%3Aexecutablebooks%2Fjupyter-book+involves%3Amwouts+updated%3A2019-12-06..2020-06-11&amp;type=Issues">&#64;mwouts</a> | <a class="reference external" href="https://github.com/search?q=repo%3Aexecutablebooks%2Fjupyter-book+involves%3Anajuzilu+updated%3A2019-12-06..2020-06-11&amp;type=Issues">&#64;najuzilu</a> | <a class="reference external" href="https://github.com/search?q=repo%3Aexecutablebooks%2Fjupyter-book+involves%3ANatalieThurlby+updated%3A2019-12-06..2020-06-11&amp;type=Issues">&#64;NatalieThurlby</a> | <a class="reference external" href="https://github.com/search?q=repo%3Aexecutablebooks%2Fjupyter-book+involves%3Aofajardo+updated%3A2019-12-06..2020-06-11&amp;type=Issues">&#64;ofajardo</a> | <a class="reference external" href="https://github.com/search?q=repo%3Aexecutablebooks%2Fjupyter-book+involves%3Aoscarys+updated%3A2019-12-06..2020-06-11&amp;type=Issues">&#64;oscarys</a> | <a class="reference external" href="https://github.com/search?q=repo%3Aexecutablebooks%2Fjupyter-book+involves%3Aparmentelat+updated%3A2019-12-06..2020-06-11&amp;type=Issues">&#64;parmentelat</a> | <a class="reference external" href="https://github.com/search?q=repo%3Aexecutablebooks%2Fjupyter-book+involves%3Apeaceiris+updated%3A2019-12-06..2020-06-11&amp;type=Issues">&#64;peaceiris</a> | <a class="reference external" href="https://github.com/search?q=repo%3Aexecutablebooks%2Fjupyter-book+involves%3Apgadige+updated%3A2019-12-06..2020-06-11&amp;type=Issues">&#64;pgadige</a> | <a class="reference external" href="https://github.com/search?q=repo%3Aexecutablebooks%2Fjupyter-book+involves%3Aphaustin+updated%3A2019-12-06..2020-06-11&amp;type=Issues">&#64;phaustin</a> | <a class="reference external" href="https://github.com/search?q=repo%3Aexecutablebooks%2Fjupyter-book+involves%3Aprabhasyadav+updated%3A2019-12-06..2020-06-11&amp;type=Issues">&#64;prabhasyadav</a> | <a class="reference external" href="https://github.com/search?q=repo%3Aexecutablebooks%2Fjupyter-book+involves%3Apsychemedia+updated%3A2019-12-06..2020-06-11&amp;type=Issues">&#64;psychemedia</a> | <a class="reference external" href="https://github.com/search?q=repo%3Aexecutablebooks%2Fjupyter-book+involves%3ARacooneer+updated%3A2019-12-06..2020-06-11&amp;type=Issues">&#64;Racooneer</a> | <a class="reference external" href="https://github.com/search?q=repo%3Aexecutablebooks%2Fjupyter-book+involves%3Arahuldave+updated%3A2019-12-06..2020-06-11&amp;type=Issues">&#64;rahuldave</a> | <a class="reference external" href="https://github.com/search?q=repo%3Aexecutablebooks%2Fjupyter-book+involves%3Arossbar+updated%3A2019-12-06..2020-06-11&amp;type=Issues">&#64;rossbar</a> | <a class="reference external" href="https://github.com/search?q=repo%3Aexecutablebooks%2Fjupyter-book+involves%3Aroualdes+updated%3A2019-12-06..2020-06-11&amp;type=Issues">&#64;roualdes</a> | <a class="reference external" href="https://github.com/search?q=repo%3Aexecutablebooks%2Fjupyter-book+involves%3Asaulomaia+updated%3A2019-12-06..2020-06-11&amp;type=Issues">&#64;saulomaia</a> | <a class="reference external" href="https://github.com/search?q=repo%3Aexecutablebooks%2Fjupyter-book+involves%3ATomasBeuzen+updated%3A2019-12-06..2020-06-11&amp;type=Issues">&#64;TomasBeuzen</a> | <a class="reference external" href="https://github.com/search?q=repo%3Aexecutablebooks%2Fjupyter-book+involves%3Atrallard+updated%3A2019-12-06..2020-06-11&amp;type=Issues">&#64;trallard</a> | <a class="reference external" href="https://github.com/search?q=repo%3Aexecutablebooks%2Fjupyter-book+involves%3Axldrkp+updated%3A2019-12-06..2020-06-11&amp;type=Issues">&#64;xldrkp</a> | <a class="reference external" href="https://github.com/search?q=repo%3Aexecutablebooks%2Fjupyter-book+involves%3Ayuvipanda+updated%3A2019-12-06..2020-06-11&amp;type=Issues">&#64;yuvipanda</a></p>
+</section>
+</section>
+<section id="v0-6-3-v0-6-4">
+<h2>v0.6.3…v0.6.4<a class="headerlink" href="#v0-6-3-v0-6-4" title="永久链接至标题">¶</a></h2>
+<p>(<a class="reference external" href="https://github.com/executablebooks/jupyter-book/compare/v0.6.3...v0.6.4">full changelog</a>)</p>
+<section id="id12">
+<h3>Enhancements made<a class="headerlink" href="#id12" title="永久链接至标题">¶</a></h3>
+<ul class="simple">
+<li><p>improving the upgrade functionality <a class="reference external" href="https://github.com/executablebooks/jupyter-book/pull/449">#449</a> (<a class="reference external" href="https://github.com/choldgraf">&#64;choldgraf</a>)</p></li>
+<li><p>scrolling outputs <a class="reference external" href="https://github.com/executablebooks/jupyter-book/pull/444">#444</a> (<a class="reference external" href="https://github.com/choldgraf">&#64;choldgraf</a>)</p></li>
+<li><p>adding a page for math instructions <a class="reference external" href="https://github.com/executablebooks/jupyter-book/pull/432">#432</a> (<a class="reference external" href="https://github.com/choldgraf">&#64;choldgraf</a>)</p></li>
+<li><p>updating thebelab and improving code highlighting <a class="reference external" href="https://github.com/executablebooks/jupyter-book/pull/422">#422</a> (<a class="reference external" href="https://github.com/choldgraf">&#64;choldgraf</a>)</p></li>
+<li><p>Hide outputs and markdown cells <a class="reference external" href="https://github.com/executablebooks/jupyter-book/pull/420">#420</a> (<a class="reference external" href="https://github.com/choldgraf">&#64;choldgraf</a>)</p></li>
+<li><p>Adding a “test” section for pages that are hard to test w/ python <a class="reference external" href="https://github.com/executablebooks/jupyter-book/pull/416">#416</a> (<a class="reference external" href="https://github.com/choldgraf">&#64;choldgraf</a>)</p></li>
+<li><p>refactoring sidebar highlighting and allowing collapsed subsections <a class="reference external" href="https://github.com/executablebooks/jupyter-book/pull/412">#412</a> (<a class="reference external" href="https://github.com/choldgraf">&#64;choldgraf</a>)</p></li>
+<li><p>adding ability to add authors and titles <a class="reference external" href="https://github.com/executablebooks/jupyter-book/pull/390">#390</a> (<a class="reference external" href="https://github.com/choldgraf">&#64;choldgraf</a>)</p></li>
+<li><p>improving search functionality <a class="reference external" href="https://github.com/executablebooks/jupyter-book/pull/374">#374</a> (<a class="reference external" href="https://github.com/choldgraf">&#64;choldgraf</a>)</p></li>
+<li><p>Add kernel path for thebelab <a class="reference external" href="https://github.com/executablebooks/jupyter-book/pull/189">#189</a> (<a class="reference external" href="https://github.com/joergbrech">&#64;joergbrech</a>)</p></li>
+</ul>
+</section>
+<section id="id13">
+<h3>Bugs fixed<a class="headerlink" href="#id13" title="永久链接至标题">¶</a></h3>
+<ul class="simple">
+<li><p>Add installation module and fix circle <a class="reference external" href="https://github.com/executablebooks/jupyter-book/pull/450">#450</a> (<a class="reference external" href="https://github.com/choldgraf">&#64;choldgraf</a>)</p></li>
+<li><p>fixing thebelab highlighting <a class="reference external" href="https://github.com/executablebooks/jupyter-book/pull/446">#446</a> (<a class="reference external" href="https://github.com/choldgraf">&#64;choldgraf</a>)</p></li>
+<li><p>fixing full width content and some formatting bugs <a class="reference external" href="https://github.com/executablebooks/jupyter-book/pull/417">#417</a> (<a class="reference external" href="https://github.com/choldgraf">&#64;choldgraf</a>)</p></li>
+<li><p>[FIX] Fix for on-page anchor-based TOC issues <a class="reference external" href="https://github.com/executablebooks/jupyter-book/pull/414">#414</a> (<a class="reference external" href="https://github.com/GasperPaul">&#64;GasperPaul</a>)</p></li>
+<li><p>tocfix <a class="reference external" href="https://github.com/executablebooks/jupyter-book/pull/406">#406</a> (<a class="reference external" href="https://github.com/choldgraf">&#64;choldgraf</a>)</p></li>
+<li><p>fixing toc <a class="reference external" href="https://github.com/executablebooks/jupyter-book/pull/405">#405</a> (<a class="reference external" href="https://github.com/choldgraf">&#64;choldgraf</a>)</p></li>
+<li><p>[FIX] Fixed issue with Unicode characters in TOC <a class="reference external" href="https://github.com/executablebooks/jupyter-book/pull/400">#400</a> (<a class="reference external" href="https://github.com/GasperPaul">&#64;GasperPaul</a>)</p></li>
+<li><p>[FIX] Fix for path separator issue on Windows <a class="reference external" href="https://github.com/executablebooks/jupyter-book/pull/398">#398</a> (<a class="reference external" href="https://github.com/GasperPaul">&#64;GasperPaul</a>)</p></li>
+<li><p>fixing issue template <a class="reference external" href="https://github.com/executablebooks/jupyter-book/pull/393">#393</a> (<a class="reference external" href="https://github.com/choldgraf">&#64;choldgraf</a>)</p></li>
+</ul>
+</section>
+<section id="id14">
+<h3>Other merged PRs<a class="headerlink" href="#id14" title="永久链接至标题">¶</a></h3>
+<ul class="simple">
+<li><p>moving thebelab config to within the page instead of head <a class="reference external" href="https://github.com/executablebooks/jupyter-book/pull/448">#448</a> (<a class="reference external" href="https://github.com/choldgraf">&#64;choldgraf</a>)</p></li>
+<li><p>only show TOC if there are headers for it <a class="reference external" href="https://github.com/executablebooks/jupyter-book/pull/441">#441</a> (<a class="reference external" href="https://github.com/choldgraf">&#64;choldgraf</a>)</p></li>
+<li><p>Update <a class="reference external" href="http://README.md">README.md</a> <a class="reference external" href="https://github.com/executablebooks/jupyter-book/pull/425">#425</a> (<a class="reference external" href="https://github.com/choldgraf">&#64;choldgraf</a>)</p></li>
+<li><p>using thebelab latest <a class="reference external" href="https://github.com/executablebooks/jupyter-book/pull/423">#423</a> (<a class="reference external" href="https://github.com/choldgraf">&#64;choldgraf</a>)</p></li>
+<li><p>Update <a class="reference external" href="http://limits.md">limits.md</a> <a class="reference external" href="https://github.com/executablebooks/jupyter-book/pull/415">#415</a> (<a class="reference external" href="https://github.com/choldgraf">&#64;choldgraf</a>)</p></li>
+<li><p>moving some modules to pathlib <a class="reference external" href="https://github.com/executablebooks/jupyter-book/pull/403">#403</a> (<a class="reference external" href="https://github.com/choldgraf">&#64;choldgraf</a>)</p></li>
+<li><p>adding code structure and moving contributing guide <a class="reference external" href="https://github.com/executablebooks/jupyter-book/pull/394">#394</a> (<a class="reference external" href="https://github.com/choldgraf">&#64;choldgraf</a>)</p></li>
+<li><p>updating getting started guide <a class="reference external" href="https://github.com/executablebooks/jupyter-book/pull/392">#392</a> (<a class="reference external" href="https://github.com/choldgraf">&#64;choldgraf</a>)</p></li>
+<li><p>version bump <a class="reference external" href="https://github.com/executablebooks/jupyter-book/pull/389">#389</a> (<a class="reference external" href="https://github.com/choldgraf">&#64;choldgraf</a>)</p></li>
+<li><p>new release and updating instructions <a class="reference external" href="https://github.com/executablebooks/jupyter-book/pull/387">#387</a> (<a class="reference external" href="https://github.com/choldgraf">&#64;choldgraf</a>)</p></li>
+</ul>
+</section>
+<section id="id15">
+<h3>Contributors to this release<a class="headerlink" href="#id15" title="永久链接至标题">¶</a></h3>
+<p>(<a class="reference external" href="https://github.com/executablebooks/jupyter-book/graphs/contributors?from=2019-10-07&amp;to=2019-12-06&amp;type=c">GitHub contributors page for this release</a>)</p>
+<p><a class="reference external" href="https://github.com/search?q=repo%3Ajupyter%2Fjupyter-book+involves%3Acholdgraf+updated%3A2019-10-07..2019-12-06&amp;type=Issues">&#64;choldgraf</a> | <a class="reference external" href="https://github.com/search?q=repo%3Ajupyter%2Fjupyter-book+involves%3Aemdupre+updated%3A2019-10-07..2019-12-06&amp;type=Issues">&#64;emdupre</a> | <a class="reference external" href="https://github.com/search?q=repo%3Ajupyter%2Fjupyter-book+involves%3AGasperPaul+updated%3A2019-10-07..2019-12-06&amp;type=Issues">&#64;GasperPaul</a> | <a class="reference external" href="https://github.com/search?q=repo%3Ajupyter%2Fjupyter-book+involves%3Ajavag97+updated%3A2019-10-07..2019-12-06&amp;type=Issues">&#64;javag97</a> | <a class="reference external" href="https://github.com/search?q=repo%3Ajupyter%2Fjupyter-book+involves%3Ajoergbrech+updated%3A2019-10-07..2019-12-06&amp;type=Issues">&#64;joergbrech</a> | <a class="reference external" href="https://github.com/search?q=repo%3Ajupyter%2Fjupyter-book+involves%3Amelaniewalsh+updated%3A2019-10-07..2019-12-06&amp;type=Issues">&#64;melaniewalsh</a> | <a class="reference external" href="https://github.com/search?q=repo%3Ajupyter%2Fjupyter-book+involves%3Apsychemedia+updated%3A2019-10-07..2019-12-06&amp;type=Issues">&#64;psychemedia</a></p>
+</section>
+</section>
+<section id="v0-6-0-v0-6-3">
+<h2>v0.6.0…v0.6.3<a class="headerlink" href="#v0-6-0-v0-6-3" title="永久链接至标题">¶</a></h2>
+<p>(<a class="reference external" href="https://github.com/executablebooks/jupyter-book/compare/v0.6.0...v0.6.3">full changelog</a>)</p>
+<section id="id16">
+<h3>Enhancements made<a class="headerlink" href="#id16" title="永久链接至标题">¶</a></h3>
+<ul class="simple">
+<li><p>adding anchors above headers <a class="reference external" href="https://github.com/executablebooks/jupyter-book/pull/366">#366</a> (<a class="reference external" href="https://github.com/choldgraf">&#64;choldgraf</a>)</p></li>
+<li><p>adding CSS rules for epigraphs <a class="reference external" href="https://github.com/executablebooks/jupyter-book/pull/365">#365</a> (<a class="reference external" href="https://github.com/choldgraf">&#64;choldgraf</a>)</p></li>
+<li><p>netlify config <a class="reference external" href="https://github.com/executablebooks/jupyter-book/pull/359">#359</a> (<a class="reference external" href="https://github.com/choldgraf">&#64;choldgraf</a>)</p></li>
+<li><p>Thebelab init <a class="reference external" href="https://github.com/executablebooks/jupyter-book/pull/352">#352</a> (<a class="reference external" href="https://github.com/choldgraf">&#64;choldgraf</a>)</p></li>
+<li><p>[WIP] Add option to clear outputs in build command <a class="reference external" href="https://github.com/executablebooks/jupyter-book/pull/349">#349</a> (<a class="reference external" href="https://github.com/akhilputhiry">&#64;akhilputhiry</a>)</p></li>
+<li><p>[ENH] Netlify Continuous Deployment <a class="reference external" href="https://github.com/executablebooks/jupyter-book/pull/342">#342</a> (<a class="reference external" href="https://github.com/emdupre">&#64;emdupre</a>)</p></li>
+</ul>
+</section>
+<section id="id17">
+<h3>Bugs fixed<a class="headerlink" href="#id17" title="永久链接至标题">¶</a></h3>
+<ul class="simple">
+<li><p>css for thebelab z-order <a class="reference external" href="https://github.com/executablebooks/jupyter-book/pull/386">#386</a> (<a class="reference external" href="https://github.com/choldgraf">&#64;choldgraf</a>)</p></li>
+<li><p>fixing TOC auto gen bug <a class="reference external" href="https://github.com/executablebooks/jupyter-book/pull/375">#375</a> (<a class="reference external" href="https://github.com/choldgraf">&#64;choldgraf</a>)</p></li>
+<li><p>fixing page path link <a class="reference external" href="https://github.com/executablebooks/jupyter-book/pull/368">#368</a> (<a class="reference external" href="https://github.com/choldgraf">&#64;choldgraf</a>)</p></li>
+<li><p>fixing interact link bug <a class="reference external" href="https://github.com/executablebooks/jupyter-book/pull/367">#367</a> (<a class="reference external" href="https://github.com/choldgraf">&#64;choldgraf</a>)</p></li>
+<li><p>Update required python version <a class="reference external" href="https://github.com/executablebooks/jupyter-book/pull/363">#363</a> (<a class="reference external" href="https://github.com/emdupre">&#64;emdupre</a>)</p></li>
+<li><p>fix: fuzzy matching of jupyter book versions <a class="reference external" href="https://github.com/executablebooks/jupyter-book/pull/346">#346</a> (<a class="reference external" href="https://github.com/emdupre">&#64;emdupre</a>)</p></li>
+<li><p>fixing scrolling <a class="reference external" href="https://github.com/executablebooks/jupyter-book/pull/336">#336</a> (<a class="reference external" href="https://github.com/choldgraf">&#64;choldgraf</a>)</p></li>
+</ul>
+</section>
+<section id="maintenance-and-upkeep-improvements">
+<h3>Maintenance and upkeep improvements<a class="headerlink" href="#maintenance-and-upkeep-improvements" title="永久链接至标题">¶</a></h3>
+<ul class="simple">
+<li><p>fixing load ntbk function <a class="reference external" href="https://github.com/executablebooks/jupyter-book/pull/385">#385</a> (<a class="reference external" href="https://github.com/choldgraf">&#64;choldgraf</a>)</p></li>
+<li><p>load ntbk function <a class="reference external" href="https://github.com/executablebooks/jupyter-book/pull/384">#384</a> (<a class="reference external" href="https://github.com/choldgraf">&#64;choldgraf</a>)</p></li>
+<li><p>moving CSS and JS generation to their own function <a class="reference external" href="https://github.com/executablebooks/jupyter-book/pull/381">#381</a> (<a class="reference external" href="https://github.com/choldgraf">&#64;choldgraf</a>)</p></li>
+<li><p>making sure gemfile.lock is removed <a class="reference external" href="https://github.com/executablebooks/jupyter-book/pull/379">#379</a> (<a class="reference external" href="https://github.com/choldgraf">&#64;choldgraf</a>)</p></li>
+<li><p>removing unnecessary requirements <a class="reference external" href="https://github.com/executablebooks/jupyter-book/pull/378">#378</a> (<a class="reference external" href="https://github.com/choldgraf">&#64;choldgraf</a>)</p></li>
+<li><p>making toc gen sorted <a class="reference external" href="https://github.com/executablebooks/jupyter-book/pull/377">#377</a> (<a class="reference external" href="https://github.com/choldgraf">&#64;choldgraf</a>)</p></li>
+<li><p>fixing up download functionality <a class="reference external" href="https://github.com/executablebooks/jupyter-book/pull/373">#373</a> (<a class="reference external" href="https://github.com/choldgraf">&#64;choldgraf</a>)</p></li>
+<li><p>small refactoring of names and layout <a class="reference external" href="https://github.com/executablebooks/jupyter-book/pull/372">#372</a> (<a class="reference external" href="https://github.com/choldgraf">&#64;choldgraf</a>)</p></li>
+<li><p>Bump rubyzip from 1.2.4 to 2.0.0 in /jupyter_book/book_template <a class="reference external" href="https://github.com/executablebooks/jupyter-book/pull/371">#371</a> (<a class="reference external" href="https://github.com/dependabot">&#64;dependabot</a>)</p></li>
+<li><p>moving to <a class="reference external" href="http://jupyterbook.org">jupyterbook.org</a> <a class="reference external" href="https://github.com/executablebooks/jupyter-book/pull/370">#370</a> (<a class="reference external" href="https://github.com/choldgraf">&#64;choldgraf</a>)</p></li>
+<li><p>inlining svgs and small tweaks <a class="reference external" href="https://github.com/executablebooks/jupyter-book/pull/369">#369</a> (<a class="reference external" href="https://github.com/choldgraf">&#64;choldgraf</a>)</p></li>
+<li><p>[fix] update docker image and documentation <a class="reference external" href="https://github.com/executablebooks/jupyter-book/pull/364">#364</a> (<a class="reference external" href="https://github.com/emdupre">&#64;emdupre</a>)</p></li>
+<li><p>moving js outside of _includes if not needed <a class="reference external" href="https://github.com/executablebooks/jupyter-book/pull/347">#347</a> (<a class="reference external" href="https://github.com/choldgraf">&#64;choldgraf</a>)</p></li>
+<li><p>removing unnecessary clean_lines function <a class="reference external" href="https://github.com/executablebooks/jupyter-book/pull/345">#345</a> (<a class="reference external" href="https://github.com/choldgraf">&#64;choldgraf</a>)</p></li>
+<li><p>modularizing the bage building and beefing up single page building <a class="reference external" href="https://github.com/executablebooks/jupyter-book/pull/344">#344</a> (<a class="reference external" href="https://github.com/choldgraf">&#64;choldgraf</a>)</p></li>
+</ul>
+</section>
+<section id="id18">
+<h3>Documentation improvements<a class="headerlink" href="#id18" title="永久链接至标题">¶</a></h3>
+<ul class="simple">
+<li><p>DOC: <a class="reference external" href="http://intro.md">intro.md</a>: Jupyter Books -&gt; Jupyter Book <a class="reference external" href="https://github.com/executablebooks/jupyter-book/pull/383">#383</a> (<a class="reference external" href="https://github.com/westurner">&#64;westurner</a>)</p></li>
+</ul>
+</section>
+<section id="id19">
+<h3>Other merged PRs<a class="headerlink" href="#id19" title="永久链接至标题">¶</a></h3>
+<ul class="simple">
+<li><p>Update executing.ipynb <a class="reference external" href="https://github.com/executablebooks/jupyter-book/pull/350">#350</a> (<a class="reference external" href="https://github.com/psychemedia">&#64;psychemedia</a>)</p></li>
+<li><p>adding better circle instructions <a class="reference external" href="https://github.com/executablebooks/jupyter-book/pull/341">#341</a> (<a class="reference external" href="https://github.com/choldgraf">&#64;choldgraf</a>)</p></li>
+<li><p>cleaning up circle <a class="reference external" href="https://github.com/executablebooks/jupyter-book/pull/340">#340</a> (<a class="reference external" href="https://github.com/choldgraf">&#64;choldgraf</a>)</p></li>
+<li><p>ghp-import in circle <a class="reference external" href="https://github.com/executablebooks/jupyter-book/pull/339">#339</a> (<a class="reference external" href="https://github.com/choldgraf">&#64;choldgraf</a>)</p></li>
+<li><p>removing _build artifacts <a class="reference external" href="https://github.com/executablebooks/jupyter-book/pull/338">#338</a> (<a class="reference external" href="https://github.com/choldgraf">&#64;choldgraf</a>)</p></li>
+<li><p>making some files optional in upgrade <a class="reference external" href="https://github.com/executablebooks/jupyter-book/pull/337">#337</a> (<a class="reference external" href="https://github.com/choldgraf">&#64;choldgraf</a>)</p></li>
+<li><p>adding google analytics info <a class="reference external" href="https://github.com/executablebooks/jupyter-book/pull/335">#335</a> (<a class="reference external" href="https://github.com/choldgraf">&#64;choldgraf</a>)</p></li>
+<li><p>updating changelog <a class="reference external" href="https://github.com/executablebooks/jupyter-book/pull/334">#334</a> (<a class="reference external" href="https://github.com/choldgraf">&#64;choldgraf</a>)</p></li>
+<li><p>fixing releases info <a class="reference external" href="https://github.com/executablebooks/jupyter-book/pull/333">#333</a> (<a class="reference external" href="https://github.com/choldgraf">&#64;choldgraf</a>)</p></li>
+</ul>
+</section>
+</section>
+<section id="v0-6-0-2019-09-17">
+<h2><a class="reference external" href="https://github.com/executablebooks/jupyter-book/tree/v0.6.0">v0.6.0</a> (2019-09-17)<a class="headerlink" href="#v0-6-0-2019-09-17" title="永久链接至标题">¶</a></h2>
+<p><a class="reference external" href="https://github.com/executablebooks/jupyter-book/compare/v0.5.2...v0.6.0">Full Changelog</a></p>
+<p><strong>Implemented enhancements:</strong></p>
+<ul class="simple">
+<li><p>Improve the auto-TOC function <a class="reference external" href="https://github.com/executablebooks/jupyter-book/issues/271">#271</a></p></li>
+<li><p>Export pages to PDF <a class="reference external" href="https://github.com/executablebooks/jupyter-book/issues/267">#267</a></p></li>
+<li><p>Adding popouts to the right <a class="reference external" href="https://github.com/executablebooks/jupyter-book/issues/266">#266</a></p></li>
+<li><p>Add option to execute notebooks when building the book <a class="reference external" href="https://github.com/executablebooks/jupyter-book/issues/234">#234</a></p></li>
+<li><p>Add a footer for each page <a class="reference external" href="https://github.com/executablebooks/jupyter-book/issues/233">#233</a></p></li>
+<li><p>adding error message context to the build CLI command <a class="reference external" href="https://github.com/executablebooks/jupyter-book/pull/320">#320</a> (<a class="reference external" href="https://github.com/choldgraf">choldgraf</a>)</p></li>
+<li><p>Wrap <code class="docutils literal notranslate"><span class="pre">jekyll-raw</span></code> cells with {% raw %} <a class="reference external" href="https://github.com/executablebooks/jupyter-book/pull/308">#308</a> (<a class="reference external" href="https://github.com/SamLau95">SamLau95</a>)</p></li>
+<li><p>adding popout cell <a class="reference external" href="https://github.com/executablebooks/jupyter-book/pull/302">#302</a> (<a class="reference external" href="https://github.com/choldgraf">choldgraf</a>)</p></li>
+<li><p>adding right toc showing when there’s no sidebar content <a class="reference external" href="https://github.com/executablebooks/jupyter-book/pull/300">#300</a> (<a class="reference external" href="https://github.com/choldgraf">choldgraf</a>)</p></li>
+<li><p>adding jupytext support <a class="reference external" href="https://github.com/executablebooks/jupyter-book/pull/280">#280</a> (<a class="reference external" href="https://github.com/choldgraf">choldgraf</a>)</p></li>
+<li><p>adding print button <a class="reference external" href="https://github.com/executablebooks/jupyter-book/pull/279">#279</a> (<a class="reference external" href="https://github.com/choldgraf">choldgraf</a>)</p></li>
+<li><p>Updating page layout and hoverable table of contents <a class="reference external" href="https://github.com/executablebooks/jupyter-book/pull/278">#278</a> (<a class="reference external" href="https://github.com/choldgraf">choldgraf</a>)</p></li>
+<li><p>Add a hiding topbar w/ scroll <a class="reference external" href="https://github.com/executablebooks/jupyter-book/pull/276">#276</a> (<a class="reference external" href="https://github.com/choldgraf">choldgraf</a>)</p></li>
+<li><p>Improving TOC functionality <a class="reference external" href="https://github.com/executablebooks/jupyter-book/pull/273">#273</a> (<a class="reference external" href="https://github.com/choldgraf">choldgraf</a>)</p></li>
+<li><p>use celltagpreprocessor to remove parts of cells and updating running code module <a class="reference external" href="https://github.com/executablebooks/jupyter-book/pull/264">#264</a> (<a class="reference external" href="https://github.com/choldgraf">choldgraf</a>)</p></li>
+<li><p>Create footer <a class="reference external" href="https://github.com/executablebooks/jupyter-book/pull/254">#254</a> (<a class="reference external" href="https://github.com/martinagvilas">martinagvilas</a>)</p></li>
+<li><p>removing jekyll markdown templates <a class="reference external" href="https://github.com/executablebooks/jupyter-book/pull/249">#249</a> (<a class="reference external" href="https://github.com/choldgraf">choldgraf</a>)</p></li>
+<li><p>adding simple page building <a class="reference external" href="https://github.com/executablebooks/jupyter-book/pull/248">#248</a> (<a class="reference external" href="https://github.com/choldgraf">choldgraf</a>)</p></li>
+<li><p>HTML build step <a class="reference external" href="https://github.com/executablebooks/jupyter-book/pull/239">#239</a> (<a class="reference external" href="https://github.com/choldgraf">choldgraf</a>)</p></li>
+<li><p>[WIP] Refactoring page layout + adding popouts and a topbar <a class="reference external" href="https://github.com/executablebooks/jupyter-book/pull/169">#169</a> (<a class="reference external" href="https://github.com/choldgraf">choldgraf</a>)</p></li>
+</ul>
+<p><strong>Fixed bugs:</strong></p>
+<ul class="simple">
+<li><p>Some small formatting issues following upgrade to master <a class="reference external" href="https://github.com/executablebooks/jupyter-book/issues/296">#296</a></p></li>
+<li><p>Make the PDF print work for MathJax math <a class="reference external" href="https://github.com/executablebooks/jupyter-book/issues/285">#285</a></p></li>
+<li><p>Code cells in plain Markdown files are rendered as raw text <a class="reference external" href="https://github.com/executablebooks/jupyter-book/issues/283">#283</a></p></li>
+<li><p>‘jupyter-book upgrade’ deletes new references <a class="reference external" href="https://github.com/executablebooks/jupyter-book/issues/261">#261</a></p></li>
+<li><p>default book doesn’t build properly on github - symlink error  <a class="reference external" href="https://github.com/executablebooks/jupyter-book/issues/237">#237</a></p></li>
+<li><p>Double check installation dependencies <a class="reference external" href="https://github.com/executablebooks/jupyter-book/issues/211">#211</a></p></li>
+<li><p>Don’t use quotes for user-entered YAML entries <a class="reference external" href="https://github.com/executablebooks/jupyter-book/pull/305">#305</a> (<a class="reference external" href="https://github.com/SamLau95">SamLau95</a>)</p></li>
+<li><p>Set a blank excerpt for all pages <a class="reference external" href="https://github.com/executablebooks/jupyter-book/pull/303">#303</a> (<a class="reference external" href="https://github.com/SamLau95">SamLau95</a>)</p></li>
+<li><p>fixing footer width <a class="reference external" href="https://github.com/executablebooks/jupyter-book/pull/301">#301</a> (<a class="reference external" href="https://github.com/choldgraf">choldgraf</a>)</p></li>
+<li><p>Use CDNs for JS libraries <a class="reference external" href="https://github.com/executablebooks/jupyter-book/pull/292">#292</a> (<a class="reference external" href="https://github.com/SamLau95">SamLau95</a>)</p></li>
+<li><p>Load thebelab asynchronously <a class="reference external" href="https://github.com/executablebooks/jupyter-book/pull/291">#291</a> (<a class="reference external" href="https://github.com/SamLau95">SamLau95</a>)</p></li>
+<li><p>Fix missing &lt;/div&gt; if page.interact_link is false <a class="reference external" href="https://github.com/executablebooks/jupyter-book/pull/290">#290</a> (<a class="reference external" href="https://github.com/SamLau95">SamLau95</a>)</p></li>
+<li><p>fixing jupytext markdown inconsistencies <a class="reference external" href="https://github.com/executablebooks/jupyter-book/pull/288">#288</a> (<a class="reference external" href="https://github.com/choldgraf">choldgraf</a>)</p></li>
+<li><p>fixing double math printing <a class="reference external" href="https://github.com/executablebooks/jupyter-book/pull/286">#286</a> (<a class="reference external" href="https://github.com/choldgraf">choldgraf</a>)</p></li>
+<li><p>fixing up print functionality <a class="reference external" href="https://github.com/executablebooks/jupyter-book/pull/284">#284</a> (<a class="reference external" href="https://github.com/choldgraf">choldgraf</a>)</p></li>
+<li><p>making a download PDF button appear on all pages <a class="reference external" href="https://github.com/executablebooks/jupyter-book/pull/282">#282</a> (<a class="reference external" href="https://github.com/choldgraf">choldgraf</a>)</p></li>
+<li><p>fixing the TOC function <a class="reference external" href="https://github.com/executablebooks/jupyter-book/pull/270">#270</a> (<a class="reference external" href="https://github.com/choldgraf">choldgraf</a>)</p></li>
+<li><p>[FIX] Fix references being deleted with jupyter-upgrade <a class="reference external" href="https://github.com/executablebooks/jupyter-book/pull/263">#263</a> (<a class="reference external" href="https://github.com/martinagvilas">martinagvilas</a>)</p></li>
+<li><p>fixing links <a class="reference external" href="https://github.com/executablebooks/jupyter-book/pull/260">#260</a> (<a class="reference external" href="https://github.com/choldgraf">choldgraf</a>)</p></li>
+<li><p>adding instructions for build <a class="reference external" href="https://github.com/executablebooks/jupyter-book/pull/257">#257</a> (<a class="reference external" href="https://github.com/choldgraf">choldgraf</a>)</p></li>
+<li><p>fixing pypi description <a class="reference external" href="https://github.com/executablebooks/jupyter-book/pull/256">#256</a> (<a class="reference external" href="https://github.com/choldgraf">choldgraf</a>)</p></li>
+<li><p>version fix <a class="reference external" href="https://github.com/executablebooks/jupyter-book/pull/250">#250</a> (<a class="reference external" href="https://github.com/choldgraf">choldgraf</a>)</p></li>
+</ul>
+<p><strong>Closed issues:</strong></p>
+<ul class="simple">
+<li><p>Jupyter Notebook can’t close a running notebook <a class="reference external" href="https://github.com/executablebooks/jupyter-book/issues/317">#317</a></p></li>
+<li><p>Building book fails with a jinja2.exceptions.TemplateNotFound error <a class="reference external" href="https://github.com/executablebooks/jupyter-book/issues/310">#310</a></p></li>
+<li><p>serving non- md/ipynb content <a class="reference external" href="https://github.com/executablebooks/jupyter-book/issues/295">#295</a></p></li>
+<li><p>Broken links <a class="reference external" href="https://github.com/executablebooks/jupyter-book/issues/259">#259</a></p></li>
+<li><p>Missing file error <a class="reference external" href="https://github.com/executablebooks/jupyter-book/issues/253">#253</a></p></li>
+<li><p>Multicursor sometimes only deletes one line when there’s spaces <a class="reference external" href="https://github.com/executablebooks/jupyter-book/issues/251">#251</a></p></li>
+<li><p>Release summary for v0.6 <a class="reference external" href="https://github.com/executablebooks/jupyter-book/issues/331">#331</a></p></li>
+</ul>
+<p><strong>Merged pull requests:</strong></p>
+<ul class="simple">
+<li><p>fixing releases info <a class="reference external" href="https://github.com/executablebooks/jupyter-book/pull/333">#333</a> (<a class="reference external" href="https://github.com/choldgraf">choldgraf</a>)</p></li>
+<li><p>dev0 bump <a class="reference external" href="https://github.com/executablebooks/jupyter-book/pull/332">#332</a> (<a class="reference external" href="https://github.com/choldgraf">choldgraf</a>)</p></li>
+<li><p>bumping version for release <a class="reference external" href="https://github.com/executablebooks/jupyter-book/pull/330">#330</a> (<a class="reference external" href="https://github.com/choldgraf">choldgraf</a>)</p></li>
+<li><p>fixing up execute docs <a class="reference external" href="https://github.com/executablebooks/jupyter-book/pull/328">#328</a> (<a class="reference external" href="https://github.com/choldgraf">choldgraf</a>)</p></li>
+<li><p>updating documentation for build <a class="reference external" href="https://github.com/executablebooks/jupyter-book/pull/326">#326</a> (<a class="reference external" href="https://github.com/choldgraf">choldgraf</a>)</p></li>
+<li><p>adding miniconda-based test <a class="reference external" href="https://github.com/executablebooks/jupyter-book/pull/324">#324</a> (<a class="reference external" href="https://github.com/choldgraf">choldgraf</a>)</p></li>
+<li><p>removing outdated FAQ entry <a class="reference external" href="https://github.com/executablebooks/jupyter-book/pull/319">#319</a> (<a class="reference external" href="https://github.com/choldgraf">choldgraf</a>)</p></li>
+<li><p>Changes to make work with <code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">skeleton</span> <span class="pre">pypi</span> <span class="pre">jupyter-book</span></code> <a class="reference external" href="https://github.com/executablebooks/jupyter-book/pull/315">#315</a> (<a class="reference external" href="https://github.com/krinsman">krinsman</a>)</p></li>
+<li><p>Update Docs to include alternative method for building Jekyll locally. <a class="reference external" href="https://github.com/executablebooks/jupyter-book/pull/313">#313</a> (<a class="reference external" href="https://github.com/krinsman">krinsman</a>)</p></li>
+<li><p>Omit entries w/o URLs and external links from TOC <a class="reference external" href="https://github.com/executablebooks/jupyter-book/pull/309">#309</a> (<a class="reference external" href="https://github.com/SamLau95">SamLau95</a>)</p></li>
+<li><p>documenting execution functionality <a class="reference external" href="https://github.com/executablebooks/jupyter-book/pull/299">#299</a> (<a class="reference external" href="https://github.com/choldgraf">choldgraf</a>)</p></li>
+<li><p>adding beta label to features <a class="reference external" href="https://github.com/executablebooks/jupyter-book/pull/294">#294</a> (<a class="reference external" href="https://github.com/choldgraf">choldgraf</a>)</p></li>
+<li><p>adding a sample CircleCI build config <a class="reference external" href="https://github.com/executablebooks/jupyter-book/pull/293">#293</a> (<a class="reference external" href="https://github.com/choldgraf">choldgraf</a>)</p></li>
+<li><p>footer width <a class="reference external" href="https://github.com/executablebooks/jupyter-book/pull/287">#287</a> (<a class="reference external" href="https://github.com/choldgraf">choldgraf</a>)</p></li>
+<li><p>adding help entries <a class="reference external" href="https://github.com/executablebooks/jupyter-book/pull/277">#277</a> (<a class="reference external" href="https://github.com/choldgraf">choldgraf</a>)</p></li>
+<li><p>Circlecibot <a class="reference external" href="https://github.com/executablebooks/jupyter-book/pull/269">#269</a> (<a class="reference external" href="https://github.com/choldgraf">choldgraf</a>)</p></li>
+<li><p>factoring out page module <a class="reference external" href="https://github.com/executablebooks/jupyter-book/pull/265">#265</a> (<a class="reference external" href="https://github.com/choldgraf">choldgraf</a>)</p></li>
+<li><p>summary not large image for twitter <a class="reference external" href="https://github.com/executablebooks/jupyter-book/pull/247">#247</a> (<a class="reference external" href="https://github.com/choldgraf">choldgraf</a>)</p></li>
+<li><p>twitter share <a class="reference external" href="https://github.com/executablebooks/jupyter-book/pull/246">#246</a> (<a class="reference external" href="https://github.com/choldgraf">choldgraf</a>)</p></li>
+<li><p>updating changelog <a class="reference external" href="https://github.com/executablebooks/jupyter-book/pull/245">#245</a> (<a class="reference external" href="https://github.com/choldgraf">choldgraf</a>)</p></li>
+<li><p>version bump to dev <a class="reference external" href="https://github.com/executablebooks/jupyter-book/pull/243">#243</a> (<a class="reference external" href="https://github.com/choldgraf">choldgraf</a>)</p></li>
+</ul>
+</section>
+<section id="v0-5-2-2019-07-26">
+<h2><a class="reference external" href="https://github.com/executablebooks/jupyter-book/tree/v0.5.2">v0.5.2</a> (2019-07-26)<a class="headerlink" href="#v0-5-2-2019-07-26" title="永久链接至标题">¶</a></h2>
+<p><a class="reference external" href="https://github.com/executablebooks/jupyter-book/compare/v0.5...v0.5.2">Full Changelog</a></p>
+<p><strong>Implemented enhancements:</strong></p>
+<ul class="simple">
+<li><p>implement removecell for markdown cells <a class="reference external" href="https://github.com/executablebooks/jupyter-book/issues/192">#192</a></p></li>
+</ul>
+<p><strong>Fixed bugs:</strong></p>
+<ul class="simple">
+<li><p>yaml.load() is unsafe <a class="reference external" href="https://github.com/executablebooks/jupyter-book/issues/230">#230</a></p></li>
+<li><p>Update documentation links that are broken <a class="reference external" href="https://github.com/executablebooks/jupyter-book/issues/224">#224</a></p></li>
+<li><p>pip installation: jupyter-book or jupyter_book? <a class="reference external" href="https://github.com/executablebooks/jupyter-book/issues/184">#184</a></p></li>
+<li><p>Figure out why Gemfile and Gemfile.lock are causing issues <a class="reference external" href="https://github.com/executablebooks/jupyter-book/issues/154">#154</a></p></li>
+<li><p>Page turn link URLs missing .html <a class="reference external" href="https://github.com/executablebooks/jupyter-book/issues/140">#140</a></p></li>
+<li><p>Errors when running on Windows <a class="reference external" href="https://github.com/executablebooks/jupyter-book/issues/137">#137</a></p></li>
+<li><p>Docs aren’t being updated from master <a class="reference external" href="https://github.com/executablebooks/jupyter-book/issues/136">#136</a></p></li>
+<li><p>toc help is incorrect <a class="reference external" href="https://github.com/executablebooks/jupyter-book/issues/132">#132</a></p></li>
+</ul>
+<p><strong>Closed issues:</strong></p>
+<ul class="simple">
+<li><p>Update docs about how to hide code cells <a class="reference external" href="https://github.com/executablebooks/jupyter-book/issues/240">#240</a></p></li>
+<li><p>Is it possible to export Word, PDF and other formats? <a class="reference external" href="https://github.com/executablebooks/jupyter-book/issues/228">#228</a></p></li>
+<li><p>Make it clear in the documentation that the full docker path needs to be specified, not the relative path <a class="reference external" href="https://github.com/executablebooks/jupyter-book/issues/220">#220</a></p></li>
+<li><p>Why do we have “content” directory inside the “_site”? <a class="reference external" href="https://github.com/executablebooks/jupyter-book/issues/219">#219</a></p></li>
+<li><p>mismatch in docs and functionality <a class="reference external" href="https://github.com/executablebooks/jupyter-book/issues/214">#214</a></p></li>
+<li><p>Double check that <code class="docutils literal notranslate"><span class="pre">generate\_toc.py</span></code> is getting copied properly <a class="reference external" href="https://github.com/executablebooks/jupyter-book/issues/210">#210</a></p></li>
+<li><p>jupyter-book cli does not work as stated in the getting started guide <a class="reference external" href="https://github.com/executablebooks/jupyter-book/issues/208">#208</a></p></li>
+<li><p>Unable to install jupyter-book in conda environment <a class="reference external" href="https://github.com/executablebooks/jupyter-book/issues/206">#206</a></p></li>
+<li><p>Error if kernelspec missing <a class="reference external" href="https://github.com/executablebooks/jupyter-book/issues/195">#195</a></p></li>
+<li><p>Clarify the CLI help statements <a class="reference external" href="https://github.com/executablebooks/jupyter-book/issues/146">#146</a></p></li>
+<li><p>jupyter-book upgrade also modifies requirements.txt <a class="reference external" href="https://github.com/executablebooks/jupyter-book/issues/130">#130</a></p></li>
+</ul>
+<p><strong>Merged pull requests:</strong></p>
+<ul class="simple">
+<li><p>bumping version and adding CLI for version <a class="reference external" href="https://github.com/executablebooks/jupyter-book/pull/242">#242</a> (<a class="reference external" href="https://github.com/choldgraf">choldgraf</a>)</p></li>
+<li><p>Release fixes <a class="reference external" href="https://github.com/executablebooks/jupyter-book/pull/241">#241</a> (<a class="reference external" href="https://github.com/choldgraf">choldgraf</a>)</p></li>
+<li><p>Markdown exporter in Python instead of the CLI <a class="reference external" href="https://github.com/executablebooks/jupyter-book/pull/235">#235</a> (<a class="reference external" href="https://github.com/choldgraf">choldgraf</a>)</p></li>
+<li><p>Change text in Markdown cell to correct URL. <a class="reference external" href="https://github.com/executablebooks/jupyter-book/pull/227">#227</a> (<a class="reference external" href="https://github.com/habi">habi</a>)</p></li>
+<li><p>[DOC] Clarify full vs relative path in container build instructions <a class="reference external" href="https://github.com/executablebooks/jupyter-book/pull/226">#226</a> (<a class="reference external" href="https://github.com/emdupre">emdupre</a>)</p></li>
+<li><p>Ensure UTF-8 Encoding When Building Book <a class="reference external" href="https://github.com/executablebooks/jupyter-book/pull/225">#225</a> (<a class="reference external" href="https://github.com/cczhu">cczhu</a>)</p></li>
+<li><p>version bump to dev <a class="reference external" href="https://github.com/executablebooks/jupyter-book/pull/218">#218</a> (<a class="reference external" href="https://github.com/choldgraf">choldgraf</a>)</p></li>
+<li><p>version bump for bugfix <a class="reference external" href="https://github.com/executablebooks/jupyter-book/pull/217">#217</a> (<a class="reference external" href="https://github.com/choldgraf">choldgraf</a>)</p></li>
+<li><p>fix doc mismatch for “make build” <a class="reference external" href="https://github.com/executablebooks/jupyter-book/pull/216">#216</a> (<a class="reference external" href="https://github.com/thammegowda">thammegowda</a>)</p></li>
+<li><p>make scripts dir as a module, to be included by <code class="docutils literal notranslate"><span class="pre">find\_packages\(\)</span></code> of setuptools <a class="reference external" href="https://github.com/executablebooks/jupyter-book/pull/215">#215</a> (<a class="reference external" href="https://github.com/thammegowda">thammegowda</a>)</p></li>
+<li><p>add jupyter book to template requirements <a class="reference external" href="https://github.com/executablebooks/jupyter-book/pull/209">#209</a> (<a class="reference external" href="https://github.com/choldgraf">choldgraf</a>)</p></li>
+<li><p>updating hidecode tag word and allowing total HTML removal <a class="reference external" href="https://github.com/executablebooks/jupyter-book/pull/207">#207</a> (<a class="reference external" href="https://github.com/choldgraf">choldgraf</a>)</p></li>
+<li><p>Ask if kernelspec exists in metadata <a class="reference external" href="https://github.com/executablebooks/jupyter-book/pull/197">#197</a> (<a class="reference external" href="https://github.com/joergbrech">joergbrech</a>)</p></li>
+<li><p>changelog and version bump <a class="reference external" href="https://github.com/executablebooks/jupyter-book/pull/194">#194</a> (<a class="reference external" href="https://github.com/choldgraf">choldgraf</a>)</p></li>
+</ul>
+</section>
+<section id="v0-5-2019-05-13">
+<h2><a class="reference external" href="https://github.com/executablebooks/jupyter-book/tree/v0.5">v0.5</a> (2019-05-13)<a class="headerlink" href="#v0-5-2019-05-13" title="永久链接至标题">¶</a></h2>
+<p><a class="reference external" href="https://github.com/executablebooks/jupyter-book/compare/v0.4.1...v0.5">Full Changelog</a></p>
+<p><strong>Implemented enhancements:</strong></p>
+<ul class="simple">
+<li><p>Markdown guide refers to Highlightjs but Rouge is used <a class="reference external" href="https://github.com/executablebooks/jupyter-book/issues/183">#183</a></p></li>
+<li><p>Get codecov working <a class="reference external" href="https://github.com/executablebooks/jupyter-book/issues/153">#153</a></p></li>
+<li><p>Add thebelab button to every code cell <a class="reference external" href="https://github.com/executablebooks/jupyter-book/issues/117">#117</a></p></li>
+<li><p>Add an option / config for analytics tracking? <a class="reference external" href="https://github.com/executablebooks/jupyter-book/issues/115">#115</a></p></li>
+<li><p>Add support for nbinteract <a class="reference external" href="https://github.com/executablebooks/jupyter-book/issues/82">#82</a></p></li>
+<li><p>Scrolling in subtitle column <a class="reference external" href="https://github.com/executablebooks/jupyter-book/issues/173">#173</a></p></li>
+</ul>
+<p><strong>Fixed bugs:</strong></p>
+<ul class="simple">
+<li><p>Page turn links to external sites are broken <a class="reference external" href="https://github.com/executablebooks/jupyter-book/issues/186">#186</a></p></li>
+<li><p>Code cell pre-wrap causes split lines <a class="reference external" href="https://github.com/executablebooks/jupyter-book/issues/182">#182</a></p></li>
+<li><p>problems building with images <a class="reference external" href="https://github.com/executablebooks/jupyter-book/issues/124">#124</a></p></li>
+<li><p>Problems with local build instructions on Mac (and perhaps other 'nix platforms) <a class="reference external" href="https://github.com/executablebooks/jupyter-book/issues/123">#123</a></p></li>
+</ul>
+<p><strong>Closed issues:</strong></p>
+<ul class="simple">
+<li><p>Plots not showing in ipynb files <a class="reference external" href="https://github.com/executablebooks/jupyter-book/issues/179">#179</a></p></li>
+<li><p>jupyter-book is missing from the binder requirements <a class="reference external" href="https://github.com/executablebooks/jupyter-book/issues/166">#166</a></p></li>
+<li><p>Binder and Thebelab not working for demo book <a class="reference external" href="https://github.com/executablebooks/jupyter-book/issues/155">#155</a></p></li>
+<li><p>Errors building HTML <a class="reference external" href="https://github.com/executablebooks/jupyter-book/issues/152">#152</a></p></li>
+<li><p>Non <code class="docutils literal notranslate"><span class="pre">--demo</span></code> option seems to fail <a class="reference external" href="https://github.com/executablebooks/jupyter-book/issues/120">#120</a></p></li>
+<li><p>Error on <a class="reference external" href="http://notebook.py">notebook.py</a> with inconsistent  and DEFAULT_STATIC_FILES_PATH. <a class="reference external" href="https://github.com/executablebooks/jupyter-book/issues/108">#108</a></p></li>
+<li><p>add requirements to <a class="reference external" href="http://setup.py">setup.py</a> <a class="reference external" href="https://github.com/executablebooks/jupyter-book/issues/105">#105</a></p></li>
+<li><p>Add a <a class="reference external" href="http://CONTRIBUTING.md">CONTRIBUTING.md</a>  <a class="reference external" href="https://github.com/executablebooks/jupyter-book/issues/99">#99</a></p></li>
+<li><p>Explore using a cookiecutter for the site <a class="reference external" href="https://github.com/executablebooks/jupyter-book/issues/87">#87</a></p></li>
+<li><p>Use a Python CLI instead of Make <a class="reference external" href="https://github.com/executablebooks/jupyter-book/issues/42">#42</a></p></li>
+<li><p>Autogenerate toc <a class="reference external" href="https://github.com/executablebooks/jupyter-book/issues/40">#40</a></p></li>
+<li><p>Force permalinks to be lowercase and replace space and ‘_’ with ‘-’ <a class="reference external" href="https://github.com/executablebooks/jupyter-book/issues/35">#35</a></p></li>
+<li><p>Extra buttons to support <a class="reference external" href="https://github.com/executablebooks/jupyter-book/issues/32">#32</a></p></li>
+<li><p>Use a submodule for notebooks folder <a class="reference external" href="https://github.com/executablebooks/jupyter-book/issues/14">#14</a></p></li>
+<li><p>Jupyter Book version v0.5 <a class="reference external" href="https://github.com/executablebooks/jupyter-book/issues/175">#175</a></p></li>
+</ul>
+<p><strong>Merged pull requests:</strong></p>
+<ul class="simple">
+<li><p>Release <a class="reference external" href="https://github.com/executablebooks/jupyter-book/pull/193">#193</a> (<a class="reference external" href="https://github.com/choldgraf">choldgraf</a>)</p></li>
+<li><p>Update local install instructions <a class="reference external" href="https://github.com/executablebooks/jupyter-book/pull/190">#190</a> (<a class="reference external" href="https://github.com/mwcraig">mwcraig</a>)</p></li>
+<li><p>fixing some css bugs <a class="reference external" href="https://github.com/executablebooks/jupyter-book/pull/188">#188</a> (<a class="reference external" href="https://github.com/choldgraf">choldgraf</a>)</p></li>
+<li><p>[FIX] Issue #137 Errors when running on Windows <a class="reference external" href="https://github.com/executablebooks/jupyter-book/pull/187">#187</a> (<a class="reference external" href="https://github.com/stafforddavidj">stafforddavidj</a>)</p></li>
+<li><p>fixing content root notebook problem <a class="reference external" href="https://github.com/executablebooks/jupyter-book/pull/181">#181</a> (<a class="reference external" href="https://github.com/choldgraf">choldgraf</a>)</p></li>
+<li><p>wrap code even if it has no language <a class="reference external" href="https://github.com/executablebooks/jupyter-book/pull/180">#180</a> (<a class="reference external" href="https://github.com/alexmorley">alexmorley</a>)</p></li>
+<li><p>removing custom TOC code <a class="reference external" href="https://github.com/executablebooks/jupyter-book/pull/178">#178</a> (<a class="reference external" href="https://github.com/choldgraf">choldgraf</a>)</p></li>
+<li><p>Make right hand toc scrollable. <a class="reference external" href="https://github.com/executablebooks/jupyter-book/pull/176">#176</a> (<a class="reference external" href="https://github.com/alexmorley">alexmorley</a>)</p></li>
+<li><p>adding cell tags metadata <a class="reference external" href="https://github.com/executablebooks/jupyter-book/pull/171">#171</a> (<a class="reference external" href="https://github.com/choldgraf">choldgraf</a>)</p></li>
+<li><p>make sure jupyter-book is included in the binder build <a class="reference external" href="https://github.com/executablebooks/jupyter-book/pull/167">#167</a> (<a class="reference external" href="https://github.com/joergbrech">joergbrech</a>)</p></li>
+<li><p>fixing thebelab css and splitting off the interactive notebooks <a class="reference external" href="https://github.com/executablebooks/jupyter-book/pull/165">#165</a> (<a class="reference external" href="https://github.com/choldgraf">choldgraf</a>)</p></li>
+<li><p>[ENH] Add thebelab button to every code cell <a class="reference external" href="https://github.com/executablebooks/jupyter-book/pull/163">#163</a> (<a class="reference external" href="https://github.com/joergbrech">joergbrech</a>)</p></li>
+<li><p>making tags for removing cells not text <a class="reference external" href="https://github.com/executablebooks/jupyter-book/pull/162">#162</a> (<a class="reference external" href="https://github.com/choldgraf">choldgraf</a>)</p></li>
+<li><p>hide cells updates <a class="reference external" href="https://github.com/executablebooks/jupyter-book/pull/161">#161</a> (<a class="reference external" href="https://github.com/choldgraf">choldgraf</a>)</p></li>
+<li><p>updating css to match input and output <a class="reference external" href="https://github.com/executablebooks/jupyter-book/pull/160">#160</a> (<a class="reference external" href="https://github.com/choldgraf">choldgraf</a>)</p></li>
+<li><p>Update config.yml for code coverage <a class="reference external" href="https://github.com/executablebooks/jupyter-book/pull/159">#159</a> (<a class="reference external" href="https://github.com/choldgraf">choldgraf</a>)</p></li>
+<li><p>codecov activation <a class="reference external" href="https://github.com/executablebooks/jupyter-book/pull/158">#158</a> (<a class="reference external" href="https://github.com/choldgraf">choldgraf</a>)</p></li>
+<li><p>Update requirements.txt <a class="reference external" href="https://github.com/executablebooks/jupyter-book/pull/157">#157</a> (<a class="reference external" href="https://github.com/choldgraf">choldgraf</a>)</p></li>
+<li><p>binder links to gh-pages now <a class="reference external" href="https://github.com/executablebooks/jupyter-book/pull/156">#156</a> (<a class="reference external" href="https://github.com/choldgraf">choldgraf</a>)</p></li>
+<li><p>Fix broken notebook links <a class="reference external" href="https://github.com/executablebooks/jupyter-book/pull/150">#150</a> (<a class="reference external" href="https://github.com/mwcraig">mwcraig</a>)</p></li>
+<li><p>fixing thebelab and circle build <a class="reference external" href="https://github.com/executablebooks/jupyter-book/pull/149">#149</a> (<a class="reference external" href="https://github.com/choldgraf">choldgraf</a>)</p></li>
+<li><p>removing build folder <a class="reference external" href="https://github.com/executablebooks/jupyter-book/pull/144">#144</a> (<a class="reference external" href="https://github.com/choldgraf">choldgraf</a>)</p></li>
+<li><p>maintaining docs for site structure <a class="reference external" href="https://github.com/executablebooks/jupyter-book/pull/142">#142</a> (<a class="reference external" href="https://github.com/choldgraf">choldgraf</a>)</p></li>
+<li><p>Build update <a class="reference external" href="https://github.com/executablebooks/jupyter-book/pull/135">#135</a> (<a class="reference external" href="https://github.com/choldgraf">choldgraf</a>)</p></li>
+<li><p>Release guide <a class="reference external" href="https://github.com/executablebooks/jupyter-book/pull/131">#131</a> (<a class="reference external" href="https://github.com/choldgraf">choldgraf</a>)</p></li>
+<li><p>[MRG] Refactor argparse <a class="reference external" href="https://github.com/executablebooks/jupyter-book/pull/129">#129</a> (<a class="reference external" href="https://github.com/jasmainak">jasmainak</a>)</p></li>
+<li><p>Add badge for coverage <a class="reference external" href="https://github.com/executablebooks/jupyter-book/pull/128">#128</a> (<a class="reference external" href="https://github.com/jasmainak">jasmainak</a>)</p></li>
+<li><p>[ENH] Initial commit of dockerfile, updated docs <a class="reference external" href="https://github.com/executablebooks/jupyter-book/pull/127">#127</a> (<a class="reference external" href="https://github.com/emdupre">emdupre</a>)</p></li>
+<li><p>MAINT: make jupyter-book conform to pep8 <a class="reference external" href="https://github.com/executablebooks/jupyter-book/pull/126">#126</a> (<a class="reference external" href="https://github.com/jasmainak">jasmainak</a>)</p></li>
+<li><p>linking minimal folder <a class="reference external" href="https://github.com/executablebooks/jupyter-book/pull/122">#122</a> (<a class="reference external" href="https://github.com/choldgraf">choldgraf</a>)</p></li>
+<li><p>adding nbinteract support <a class="reference external" href="https://github.com/executablebooks/jupyter-book/pull/119">#119</a> (<a class="reference external" href="https://github.com/choldgraf">choldgraf</a>)</p></li>
+<li><p>update link of the markdown version of guide <a class="reference external" href="https://github.com/executablebooks/jupyter-book/pull/118">#118</a> (<a class="reference external" href="https://github.com/cnydw">cnydw</a>)</p></li>
+<li><p>[ENH] add google analytics option <a class="reference external" href="https://github.com/executablebooks/jupyter-book/pull/116">#116</a> (<a class="reference external" href="https://github.com/joergbrech">joergbrech</a>)</p></li>
+<li><p>improving the non-sidebar layout and toc script <a class="reference external" href="https://github.com/executablebooks/jupyter-book/pull/112">#112</a> (<a class="reference external" href="https://github.com/choldgraf">choldgraf</a>)</p></li>
+<li><p>[doc] contributing guidelines <a class="reference external" href="https://github.com/executablebooks/jupyter-book/pull/111">#111</a> (<a class="reference external" href="https://github.com/emdupre">emdupre</a>)</p></li>
+<li><p>Cssfix <a class="reference external" href="https://github.com/executablebooks/jupyter-book/pull/109">#109</a> (<a class="reference external" href="https://github.com/choldgraf">choldgraf</a>)</p></li>
+<li><p>source dependencies from requirements.txt <a class="reference external" href="https://github.com/executablebooks/jupyter-book/pull/106">#106</a> (<a class="reference external" href="https://github.com/Zsailer">Zsailer</a>)</p></li>
+<li><p>Adding download links for the notebook files <a class="reference external" href="https://github.com/executablebooks/jupyter-book/pull/104">#104</a> (<a class="reference external" href="https://github.com/choldgraf">choldgraf</a>)</p></li>
+<li><p>fixing thebelab keyboard shortcuts behavior <a class="reference external" href="https://github.com/executablebooks/jupyter-book/pull/103">#103</a> (<a class="reference external" href="https://github.com/choldgraf">choldgraf</a>)</p></li>
+</ul>
+</section>
+<section id="v0-4-1-2019-02-09">
+<h2><a class="reference external" href="https://github.com/executablebooks/jupyter-book/tree/v0.4.1">v0.4.1</a> (2019-02-09)<a class="headerlink" href="#v0-4-1-2019-02-09" title="永久链接至标题">¶</a></h2>
+<p><a class="reference external" href="https://github.com/executablebooks/jupyter-book/compare/v0.2...v0.4.1">Full Changelog</a></p>
+<p><strong>Closed issues:</strong></p>
+<ul class="simple">
+<li><p>Disappearing None <a class="reference external" href="https://github.com/executablebooks/jupyter-book/issues/98">#98</a></p></li>
+<li><p>Inquiry: Plotly interactive plots in a Jupyter Books? <a class="reference external" href="https://github.com/executablebooks/jupyter-book/issues/93">#93</a></p></li>
+<li><p>iframe not rendering <a class="reference external" href="https://github.com/executablebooks/jupyter-book/issues/91">#91</a></p></li>
+<li><p>thebelab uses the wrong kernel <a class="reference external" href="https://github.com/executablebooks/jupyter-book/issues/90">#90</a></p></li>
+<li><p>An option to embed a link on sidebar logo <a class="reference external" href="https://github.com/executablebooks/jupyter-book/issues/77">#77</a></p></li>
+<li><p>Scrollbar overlaps with TOC table (on Linux) <a class="reference external" href="https://github.com/executablebooks/jupyter-book/issues/75">#75</a></p></li>
+<li><p>Unwanted leading white space at the beginning of code block <a class="reference external" href="https://github.com/executablebooks/jupyter-book/issues/73">#73</a></p></li>
+<li><p>Standard badges rendering too big <a class="reference external" href="https://github.com/executablebooks/jupyter-book/issues/65">#65</a></p></li>
+<li><p>Give a shout-out to bookdown <a class="reference external" href="https://github.com/executablebooks/jupyter-book/issues/63">#63</a></p></li>
+<li><p>Make it clearer how to customize the look and feel of the site <a class="reference external" href="https://github.com/executablebooks/jupyter-book/issues/61">#61</a></p></li>
+<li><p>Recommend a way to make citations <a class="reference external" href="https://github.com/executablebooks/jupyter-book/issues/60">#60</a></p></li>
+<li><p>Highlight active section in right sidebar <a class="reference external" href="https://github.com/executablebooks/jupyter-book/issues/55">#55</a></p></li>
+<li><p>Allow people to put YAML in their content files <a class="reference external" href="https://github.com/executablebooks/jupyter-book/issues/51">#51</a></p></li>
+<li><p>Site Search <a class="reference external" href="https://github.com/executablebooks/jupyter-book/issues/39">#39</a></p></li>
+<li><p>Conversion from old system to new <a class="reference external" href="https://github.com/executablebooks/jupyter-book/issues/37">#37</a></p></li>
+<li><p>Support “versions” of a book <a class="reference external" href="https://github.com/executablebooks/jupyter-book/issues/31">#31</a></p></li>
+<li><p>Book is not rebuilding <a class="reference external" href="https://github.com/executablebooks/jupyter-book/issues/29">#29</a></p></li>
+<li><p>Feature request: right-side navbar auto-scroll <a class="reference external" href="https://github.com/executablebooks/jupyter-book/issues/24">#24</a></p></li>
+<li><p>generate_summary_from_folders doesn’t output prefixed numerals <a class="reference external" href="https://github.com/executablebooks/jupyter-book/issues/23">#23</a></p></li>
+</ul>
+<p><strong>Merged pull requests:</strong></p>
+<ul class="simple">
+<li><p>fixing thebelab keyboard movement <a class="reference external" href="https://github.com/executablebooks/jupyter-book/pull/102">#102</a> (<a class="reference external" href="https://github.com/choldgraf">choldgraf</a>)</p></li>
+<li><p>Styles <a class="reference external" href="https://github.com/executablebooks/jupyter-book/pull/101">#101</a> (<a class="reference external" href="https://github.com/choldgraf">choldgraf</a>)</p></li>
+<li><p>Update FAQ with guidelines for Plotly <a class="reference external" href="https://github.com/executablebooks/jupyter-book/pull/97">#97</a> (<a class="reference external" href="https://github.com/mathieuboudreau">mathieuboudreau</a>)</p></li>
+<li><p>set kernelOptions for thebelab based on notebook’s metadata <a class="reference external" href="https://github.com/executablebooks/jupyter-book/pull/92">#92</a> (<a class="reference external" href="https://github.com/joergbrech">joergbrech</a>)</p></li>
+<li><p>[WIP] adding a CLI to generate books <a class="reference external" href="https://github.com/executablebooks/jupyter-book/pull/89">#89</a> (<a class="reference external" href="https://github.com/choldgraf">choldgraf</a>)</p></li>
+<li><p>Fix very small typo <a class="reference external" href="https://github.com/executablebooks/jupyter-book/pull/88">#88</a> (<a class="reference external" href="https://github.com/mwcraig">mwcraig</a>)</p></li>
+<li><p>adding update instructions <a class="reference external" href="https://github.com/executablebooks/jupyter-book/pull/86">#86</a> (<a class="reference external" href="https://github.com/choldgraf">choldgraf</a>)</p></li>
+<li><p>adding search functionality and external links in sidebar <a class="reference external" href="https://github.com/executablebooks/jupyter-book/pull/85">#85</a> (<a class="reference external" href="https://github.com/choldgraf">choldgraf</a>)</p></li>
+<li><p>adding codemirror theme config <a class="reference external" href="https://github.com/executablebooks/jupyter-book/pull/84">#84</a> (<a class="reference external" href="https://github.com/choldgraf">choldgraf</a>)</p></li>
+<li><p>ignoring gh-pages for circle <a class="reference external" href="https://github.com/executablebooks/jupyter-book/pull/81">#81</a> (<a class="reference external" href="https://github.com/choldgraf">choldgraf</a>)</p></li>
+<li><p>transferring over book to new owner <a class="reference external" href="https://github.com/executablebooks/jupyter-book/pull/80">#80</a> (<a class="reference external" href="https://github.com/choldgraf">choldgraf</a>)</p></li>
+<li><p>sidebar logo link <a class="reference external" href="https://github.com/executablebooks/jupyter-book/pull/79">#79</a> (<a class="reference external" href="https://github.com/choldgraf">choldgraf</a>)</p></li>
+<li><p>improve codemirror syntax highlighting <a class="reference external" href="https://github.com/executablebooks/jupyter-book/pull/78">#78</a> (<a class="reference external" href="https://github.com/choldgraf">choldgraf</a>)</p></li>
+<li><p>updating sidebar css to be more minimal <a class="reference external" href="https://github.com/executablebooks/jupyter-book/pull/76">#76</a> (<a class="reference external" href="https://github.com/choldgraf">choldgraf</a>)</p></li>
+<li><p>Rebuild file if source file has a newer time stamp <a class="reference external" href="https://github.com/executablebooks/jupyter-book/pull/74">#74</a> (<a class="reference external" href="https://github.com/gaow">gaow</a>)</p></li>
+<li><p>Deploy to <a class="reference external" href="http://github.io">github.io</a> using circle and update docs to reflect this <a class="reference external" href="https://github.com/executablebooks/jupyter-book/pull/69">#69</a> (<a class="reference external" href="https://github.com/choldgraf">choldgraf</a>)</p></li>
+<li><p>updating requirements for binder <a class="reference external" href="https://github.com/executablebooks/jupyter-book/pull/67">#67</a> (<a class="reference external" href="https://github.com/choldgraf">choldgraf</a>)</p></li>
+<li><p>adding thebelab buttons and some other updates <a class="reference external" href="https://github.com/executablebooks/jupyter-book/pull/66">#66</a> (<a class="reference external" href="https://github.com/choldgraf">choldgraf</a>)</p></li>
+<li><p>adding citations support <a class="reference external" href="https://github.com/executablebooks/jupyter-book/pull/64">#64</a> (<a class="reference external" href="https://github.com/choldgraf">choldgraf</a>)</p></li>
+<li><p>adding collapsible code blocks <a class="reference external" href="https://github.com/executablebooks/jupyter-book/pull/59">#59</a> (<a class="reference external" href="https://github.com/choldgraf">choldgraf</a>)</p></li>
+<li><p>highlighting to right menu bar <a class="reference external" href="https://github.com/executablebooks/jupyter-book/pull/58">#58</a> (<a class="reference external" href="https://github.com/choldgraf">choldgraf</a>)</p></li>
+<li><p>updating install instructions to use conda <a class="reference external" href="https://github.com/executablebooks/jupyter-book/pull/57">#57</a> (<a class="reference external" href="https://github.com/choldgraf">choldgraf</a>)</p></li>
+<li><p>adding ruby to circle <a class="reference external" href="https://github.com/executablebooks/jupyter-book/pull/56">#56</a> (<a class="reference external" href="https://github.com/choldgraf">choldgraf</a>)</p></li>
+<li><p>Make the sidebar stay on the page during scroll <a class="reference external" href="https://github.com/executablebooks/jupyter-book/pull/54">#54</a> (<a class="reference external" href="https://github.com/ReventonC">ReventonC</a>)</p></li>
+<li><p>adding mini module and yaml splitter <a class="reference external" href="https://github.com/executablebooks/jupyter-book/pull/53">#53</a> (<a class="reference external" href="https://github.com/choldgraf">choldgraf</a>)</p></li>
+<li><p>adding a default license to the book <a class="reference external" href="https://github.com/executablebooks/jupyter-book/pull/48">#48</a> (<a class="reference external" href="https://github.com/choldgraf">choldgraf</a>)</p></li>
+<li><p>fixing the internet js to not use jquery <a class="reference external" href="https://github.com/executablebooks/jupyter-book/pull/47">#47</a> (<a class="reference external" href="https://github.com/choldgraf">choldgraf</a>)</p></li>
+<li><p>Delete duplicated link in readme <a class="reference external" href="https://github.com/executablebooks/jupyter-book/pull/46">#46</a> (<a class="reference external" href="https://github.com/consideRatio">consideRatio</a>)</p></li>
+<li><p>Typo - does it matter? <a class="reference external" href="https://github.com/executablebooks/jupyter-book/pull/45">#45</a> (<a class="reference external" href="https://github.com/consideRatio">consideRatio</a>)</p></li>
+<li><p>Fix broken links <a class="reference external" href="https://github.com/executablebooks/jupyter-book/pull/44">#44</a> (<a class="reference external" href="https://github.com/consideRatio">consideRatio</a>)</p></li>
+<li><p>updating guide to latest version <a class="reference external" href="https://github.com/executablebooks/jupyter-book/pull/43">#43</a> (<a class="reference external" href="https://github.com/choldgraf">choldgraf</a>)</p></li>
+<li><p>adding tests and some more command-line options <a class="reference external" href="https://github.com/executablebooks/jupyter-book/pull/41">#41</a> (<a class="reference external" href="https://github.com/choldgraf">choldgraf</a>)</p></li>
+<li><p>Split requirements into build and run <a class="reference external" href="https://github.com/executablebooks/jupyter-book/pull/36">#36</a> (<a class="reference external" href="https://github.com/matthew-brett">matthew-brett</a>)</p></li>
+<li><p>moving notebook images folder to build <a class="reference external" href="https://github.com/executablebooks/jupyter-book/pull/34">#34</a> (<a class="reference external" href="https://github.com/choldgraf">choldgraf</a>)</p></li>
+<li><p>fixing interact link paths <a class="reference external" href="https://github.com/executablebooks/jupyter-book/pull/33">#33</a> (<a class="reference external" href="https://github.com/choldgraf">choldgraf</a>)</p></li>
+<li><p>Refactor textbook generator to check redirects <a class="reference external" href="https://github.com/executablebooks/jupyter-book/pull/27">#27</a> (<a class="reference external" href="https://github.com/matthew-brett">matthew-brett</a>)</p></li>
+<li><p>A blank target URL here would be nice. <a class="reference external" href="https://github.com/executablebooks/jupyter-book/pull/15">#15</a> (<a class="reference external" href="https://github.com/arokem">arokem</a>)</p></li>
+</ul>
+</section>
+<section id="v0-2-2018-10-23">
+<h2><a class="reference external" href="https://github.com/executablebooks/jupyter-book/tree/v0.2">v0.2</a> (2018-10-23)<a class="headerlink" href="#v0-2-2018-10-23" title="永久链接至标题">¶</a></h2>
+<p><a class="reference external" href="https://github.com/executablebooks/jupyter-book/compare/v0.1...v0.2">Full Changelog</a></p>
+<p><strong>Closed issues:</strong></p>
+<ul class="simple">
+<li><p>Feature request: Search Bar <a class="reference external" href="https://github.com/executablebooks/jupyter-book/issues/25">#25</a></p></li>
+</ul>
+<p><strong>Merged pull requests:</strong></p>
+<ul class="simple">
+<li><p>Update to new build system <a class="reference external" href="https://github.com/executablebooks/jupyter-book/pull/30">#30</a> (<a class="reference external" href="https://github.com/choldgraf">choldgraf</a>)</p></li>
+</ul>
+</section>
+<section id="v0-1-2018-10-20">
+<h2><a class="reference external" href="https://github.com/executablebooks/jupyter-book/tree/v0.1">v0.1</a> (2018-10-20)<a class="headerlink" href="#v0-1-2018-10-20" title="永久链接至标题">¶</a></h2>
+<p><strong>Closed issues:</strong></p>
+<ul class="simple">
+<li><p>Calling newer version of nbclean than is available on pypi <a class="reference external" href="https://github.com/executablebooks/jupyter-book/issues/21">#21</a></p></li>
+<li><p>Changing MathJax Size of only Blocks <a class="reference external" href="https://github.com/executablebooks/jupyter-book/issues/19">#19</a></p></li>
+<li><p>Change Color of Links <a class="reference external" href="https://github.com/executablebooks/jupyter-book/issues/18">#18</a></p></li>
+<li><p>Enhancements to pull from the DS100 textbook <a class="reference external" href="https://github.com/executablebooks/jupyter-book/issues/17">#17</a></p></li>
+<li><p>Hidden Code Blocks <a class="reference external" href="https://github.com/executablebooks/jupyter-book/issues/13">#13</a></p></li>
+<li><p>MathJax Rendering Issues <a class="reference external" href="https://github.com/executablebooks/jupyter-book/issues/12">#12</a></p></li>
+<li><p>Generate textbook not finding <a class="reference external" href="http://README.md">README.md</a> <a class="reference external" href="https://github.com/executablebooks/jupyter-book/issues/11">#11</a></p></li>
+<li><p>Fork and clone may not be the best workflow <a class="reference external" href="https://github.com/executablebooks/jupyter-book/issues/10">#10</a></p></li>
+</ul>
+<p><strong>Merged pull requests:</strong></p>
+<ul class="simple">
+<li><p>Fix dollar escapes at beginning of line <a class="reference external" href="https://github.com/executablebooks/jupyter-book/pull/28">#28</a> (<a class="reference external" href="https://github.com/matthew-brett">matthew-brett</a>)</p></li>
+<li><p>Add pip requirements file <a class="reference external" href="https://github.com/executablebooks/jupyter-book/pull/26">#26</a> (<a class="reference external" href="https://github.com/matthew-brett">matthew-brett</a>)</p></li>
+<li><p>Made textbook_folder an optional input <a class="reference external" href="https://github.com/executablebooks/jupyter-book/pull/22">#22</a> (<a class="reference external" href="https://github.com/jmason86">jmason86</a>)</p></li>
+<li><p>adding advanced section <a class="reference external" href="https://github.com/executablebooks/jupyter-book/pull/16">#16</a> (<a class="reference external" href="https://github.com/choldgraf">choldgraf</a>)</p></li>
+<li><p>adding copy buttons <a class="reference external" href="https://github.com/executablebooks/jupyter-book/pull/9">#9</a> (<a class="reference external" href="https://github.com/choldgraf">choldgraf</a>)</p></li>
+<li><p>fixing c3po <a class="reference external" href="https://github.com/executablebooks/jupyter-book/pull/8">#8</a> (<a class="reference external" href="https://github.com/choldgraf">choldgraf</a>)</p></li>
+<li><p>adding intro material <a class="reference external" href="https://github.com/executablebooks/jupyter-book/pull/7">#7</a> (<a class="reference external" href="https://github.com/choldgraf">choldgraf</a>)</p></li>
+<li><p>adding sidebar and header inferring <a class="reference external" href="https://github.com/executablebooks/jupyter-book/pull/6">#6</a> (<a class="reference external" href="https://github.com/choldgraf">choldgraf</a>)</p></li>
+<li><p>image center and max width <a class="reference external" href="https://github.com/executablebooks/jupyter-book/pull/5">#5</a> (<a class="reference external" href="https://github.com/choldgraf">choldgraf</a>)</p></li>
+<li><p>updating content width <a class="reference external" href="https://github.com/executablebooks/jupyter-book/pull/4">#4</a> (<a class="reference external" href="https://github.com/choldgraf">choldgraf</a>)</p></li>
+<li><p>stylistic improvements to textbook setting <a class="reference external" href="https://github.com/executablebooks/jupyter-book/pull/3">#3</a> (<a class="reference external" href="https://github.com/choldgraf">choldgraf</a>)</p></li>
+<li><p>updating chapter links <a class="reference external" href="https://github.com/executablebooks/jupyter-book/pull/2">#2</a> (<a class="reference external" href="https://github.com/choldgraf">choldgraf</a>)</p></li>
+<li><p>Build missing files <a class="reference external" href="https://github.com/executablebooks/jupyter-book/pull/1">#1</a> (<a class="reference external" href="https://github.com/choldgraf">choldgraf</a>)</p></li>
+</ul>
+<p>* <em>This Change Log was automatically generated by <a class="reference external" href="https://github.com/skywinder/Github-Changelog-Generator">github_changelog_generator</a></em></p>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "xinetzone/jupyter-book",
+            ref: "main",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./reference"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+        <div class='prev-next-bottom'>
+            
+    <a class='left-prev' id="prev-link" href="../cite.html" title="previous page">Cite Jupyter Book</a>
+
+        </div>
+        
+        </div>
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          <div class="extra_footer">
+            <p class="w3-card w3-pale-blue w3-padding">
+  Copyright © 2021
+  <a href="https://github.com/xinetzone">xinetzone</a> | 
+  Powered by <a href="https://github.com/executablebooks/jupyter-book">Jupyter Book</a>.
+</p>
+
+          </div>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  
+  </body>
+</html>

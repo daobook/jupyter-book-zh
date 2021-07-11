@@ -1,0 +1,1176 @@
+
+<!DOCTYPE html>
+
+<html lang="zh">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Formatting code outputs</title>
+    
+  <link href="../_static/css/theme.css" rel="stylesheet" />
+  <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-book-theme.acff12b8f9c144ce68a297486a2fa670.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/tabs.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/page.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/xin-css/main.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/w3css/4/w3pro.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/w3css/4/w3mobile.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/w3css/4/w3.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/tabs.js"></script>
+    <script async="async" kind="hypothesis" src="https://hypothes.is/embed.js"></script>
+    <script kind="utterances">
+
+    var commentsRunWhenDOMLoaded = cb => {
+    if (document.readyState != 'loading') {
+        cb()
+    } else if (document.addEventListener) {
+        document.addEventListener('DOMContentLoaded', cb)
+    } else {
+        document.attachEvent('onreadystatechange', function() {
+        if (document.readyState == 'complete') cb()
+        })
+    }
+}
+
+var addUtterances = () => {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src = "https://utteranc.es/client.js";
+    script.async = "async";
+
+    script.setAttribute("repo", "xinetzone/jupyter-book");
+    script.setAttribute("issue-term", "pathname");
+    script.setAttribute("theme", "github-light");
+    script.setAttribute("label", "💬 comment");
+    script.setAttribute("crossorigin", "anonymous");
+
+    sections = document.querySelectorAll("div.section");
+    if (sections !== null) {
+        section = sections[sections.length-1];
+        section.appendChild(script);
+    }
+}
+commentsRunWhenDOMLoaded(addUtterances);
+</script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.0/dist/embed-amd.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script>
+        const thebe_selector = ".thebe,.cell"
+        const thebe_selector_input = "pre,.cell_input div.highlight"
+        const thebe_selector_output = ".output,.cell_output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="canonical" href="https://xinetzone.github.io/jupyter-book/content/code-outputs.html" />
+    <link rel="shortcut icon" href="../_static/page-logo.jfif"/>
+    <link rel="index" title="索引" href="../genindex.html" />
+    <link rel="search" title="搜索" href="../search.html" />
+    <link rel="next" title="Store code outputs and insert into content" href="executable/output-insert.html" />
+    <link rel="prev" title="Execute and cache your pages" href="execute.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+      <img src="../_static/logo.jpg" class="logo" alt="logo">
+      
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <div class="bd-toc-item active">
+        <p class="caption">
+ <span class="caption-text">
+  Tutorials
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../start/your-first-book.html">
+   Create your first book
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../start/overview.html">
+     Overview
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../start/create.html">
+     Create your book’s source files
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../start/build.html">
+     Build your book
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../start/publish.html">
+     Publish your book online
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../start/example-book.html">
+     Build a small example project
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../tutorials/references.html">
+   Get started with references
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Topic Guides
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../basics/organize.html">
+   Structure and organize your content
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../customize/toc.html">
+     Structure the Table of Contents
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../structure/configure.html">
+     Configure the Table of Contents
+    </a>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../file-types/index.html">
+     Types of content source files
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+    <label for="toctree-checkbox-3">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../file-types/markdown.html">
+       Markdown files
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../file-types/notebooks.html">
+       Jupyter Notebook files
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../file-types/myst-notebooks.html">
+       Notebooks written entirely in Markdown
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../file-types/jupytext.html">
+       Custom notebook formats and Jupytext
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../file-types/restructuredtext.html">
+       reStructuredText files
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../basics/create.html">
+     Create books automatically
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../structure/sections-headers.html">
+     How headers and sections map onto to book structure
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="index.html">
+   Write narrative content
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="myst.html">
+     MyST Markdown overview
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="content-blocks.html">
+     Special content blocks
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="references.html">
+     References and cross-references
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="layout.html">
+     Control the page layout
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="citations.html">
+     Citations and bibliographies
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="math.html">
+     Math and equations
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="figures.html">
+     Images and figures
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="metadata.html">
+     Add metadata to your book pages
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="executable/index.html">
+   Write executable content
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+  <label for="toctree-checkbox-5">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2">
+    <a class="reference internal" href="execute.html">
+     Execute and cache your pages
+    </a>
+   </li>
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     Formatting code outputs
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="executable/output-insert.html">
+     Store code outputs and insert into content
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../interactive/interactive.html">
+     Interactive data visualizations
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../basics/building/index.html">
+   Build your book outputs
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+  <label for="toctree-checkbox-6">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../basics/build.html">
+     Use the Build command line interface
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../advanced/pdf.html">
+     Build a PDF
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../web/index.html">
+   Web and internet features
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
+  <label for="toctree-checkbox-7">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../basics/repository.html">
+     Connect your book to a code repository
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../interactive/hiding.html">
+     Hide or remove content
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../interactive/launchbuttons.html">
+     Launch into interactive computing interfaces
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../interactive/thebe.html">
+     Make your code cells executable
+    </a>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../interactive/comments.html">
+     Commenting and annotating
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
+    <label for="toctree-checkbox-8">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../interactive/comments/hypothesis.html">
+       Hypothesis
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../interactive/comments/utterances.html">
+       Utterances
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../publish/web.html">
+     Host your book on the internet
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/>
+    <label for="toctree-checkbox-9">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../publish/gh-pages.html">
+       GitHub Pages and Actions
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../publish/netlify.html">
+       Publish with Netlify
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../advanced/html.html">
+     Advanced HTML outputs
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../advanced/index.html">
+   Advanced Jupyter Book Usage
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/>
+  <label for="toctree-checkbox-10">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../advanced/sphinx.html">
+     Advanced Sphinx usage
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../advanced/windows.html">
+     Working on Windows
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../explain/sphinx.html">
+     How Jupyter Book and Sphinx relate to one another
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../contribute/intro.html">
+   为 Jupyter Book 贡献
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Reference
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../customize/config.html">
+   Configuration reference
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../reference/cheatsheet.html">
+   MyST syntax cheat sheet
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../reference/cli.html">
+   The command-line interface
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../reference/glossary.html">
+   Glossary
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  About Jupyter Book
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference external" href="https://executablebooks.org/en/latest/gallery.html">
+   Gallery of Jupyter Books
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../explain/components.html">
+   The Jupyter Book toolchain and components
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../cite.html">
+   Cite Jupyter Book
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../reference/_changelog.html">
+   Change log
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  <div class="w3-padding w3-card-4 w3-pale-green">
+  <a href="https://github.com/xinetzone" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub"
+      data-position="top" data-delay="50">
+      <i class="fab fa-github"></i>
+  </a>
+  <a href="mailto:q735613050@163.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top"
+      data-delay="50">
+      <i class="fas fa-envelope-open"></i>
+  </a>
+  <a href="tencent://AddContact/?fromId=50&amp;fromSubId=1&amp;subcmd=all&amp;uin=735613050" class="tooltipped"
+      target="_blank" data-tooltip="QQ联系我: 735613050" data-position="top" data-delay="50">
+      <i class="fab fa-qq"></i>
+  </a>
+  <a href="https://www.zhihu.com/people/liu-xin-wei-55" class="tooltipped" target="_blank"
+      data-tooltip="关注我的知乎: liu-xin-wei-55" data-position="top" data-delay="50">
+      <i class="fab fa-zhihu1">知</i>
+  </a>
+  <a target="_blank" rel="noopener" href="https://www.linkedin.com/in/xinet" class="tooltipped"
+      data-tooltip="领英联系我: xinet" data-position="top" data-delay="50">
+      <i class="fab fa-linkedin"></i>
+  </a>
+  <div><a href="https://github.com/xinetzone/sanstyle">上善若水</a> 版权所有</div>
+</div>
+
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        <a class="dropdown-buttons"
+            href="../_sources/content/code-outputs.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download notebook file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/content/code-outputs.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/xinetzone/jupyter-book"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/xinetzone/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fcontent/code-outputs.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/xinetzone/jupyter-book/main?urlpath=tree/./content/code-outputs.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        <button type="button" class="btn btn-secondary topbarbtn"
+            onclick="initThebeSBT()" title="Launch Thebe" data-toggle="tooltip" data-placement="left"><i
+                class="fas fa-play"></i><span style="margin-left: .4em;">Live Code</span></button>
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#library-output-formatting">
+   Library output formatting
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#scrolling-cell-outputs">
+   Scrolling cell outputs
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#images">
+   Images
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#markdown">
+   Markdown
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#ansi-outputs">
+   ANSI outputs
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#render-priority">
+   Render priority
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <section id="formatting-code-outputs">
+<span id="content-code-outputs"></span><h1>Formatting code outputs<a class="headerlink" href="#formatting-code-outputs" title="永久链接至标题">¶</a></h1>
+<p>The formatting of code outputs is highly configurable.
+Below we give examples of how to format particular outputs and even insert outputs into other locations of the document.</p>
+<p>The <a class="reference internal" href="../reference/cheatsheet.html#myst-cheatsheet"><span class="std std-ref">MyST cheat sheet</span></a> provides a <a class="reference internal" href="../reference/cheatsheet.html#myst-cheatsheet-code-cell-tags"><span class="std std-ref">list of <code class="docutils literal notranslate"><span class="pre">code-cell</span></code> tags available</span></a></p>
+<div class="admonition seealso">
+<p class="admonition-title">参见</p>
+<p>The <a class="reference external" href="https://myst-nb.readthedocs.io/en/latest/use/formatting_outputs.html#use-format-cutomise" title="(在 MyST-NB)"><span class="xref myst">MyST-NB documentation</span></a>, for how to fully customize the output renderer.</p>
+</div>
+<section id="library-output-formatting">
+<span id="content-code-outputs-library-outputs"></span><h2>Library output formatting<a class="headerlink" href="#library-output-formatting" title="永久链接至标题">¶</a></h2>
+<p>Many libraries support their own HTML output formatting, and this generally carries over to Jupyter Book outputs as well.</p>
+<p>For example, the following cell uses Pandas to format cells based on their values:</p>
+<div class="cell tag_hide-input docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+
+<span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">seed</span><span class="p">(</span><span class="mi">24</span><span class="p">)</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span><span class="s1">&#39;A&#39;</span><span class="p">:</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">10</span><span class="p">)})</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">df</span><span class="p">,</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randn</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">4</span><span class="p">),</span> <span class="n">columns</span><span class="o">=</span><span class="nb">list</span><span class="p">(</span><span class="s1">&#39;BCDE&#39;</span><span class="p">))],</span>
+               <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">df</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">3</span><span class="p">,</span> <span class="mi">3</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">nan</span>
+<span class="n">df</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">nan</span>
+
+<span class="k">def</span> <span class="nf">color_negative_red</span><span class="p">(</span><span class="n">val</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Takes a scalar and returns a string with</span>
+<span class="sd">    the css property `&#39;color: red&#39;` for negative</span>
+<span class="sd">    strings, black otherwise.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;red&#39;</span> <span class="k">if</span> <span class="n">val</span> <span class="o">&lt;</span> <span class="mi">0</span> <span class="k">else</span> <span class="s1">&#39;black&#39;</span>
+    <span class="k">return</span> <span class="s1">&#39;color: </span><span class="si">%s</span><span class="s1">&#39;</span> <span class="o">%</span> <span class="n">color</span>
+
+<span class="k">def</span> <span class="nf">highlight_max</span><span class="p">(</span><span class="n">s</span><span class="p">):</span>
+    <span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">    highlight the maximum in a Series yellow.</span>
+<span class="sd">    &#39;&#39;&#39;</span>
+    <span class="n">is_max</span> <span class="o">=</span> <span class="n">s</span> <span class="o">==</span> <span class="n">s</span><span class="o">.</span><span class="n">max</span><span class="p">()</span>
+    <span class="k">return</span> <span class="p">[</span><span class="s1">&#39;background-color: yellow&#39;</span> <span class="k">if</span> <span class="n">v</span> <span class="k">else</span> <span class="s1">&#39;&#39;</span> <span class="k">for</span> <span class="n">v</span> <span class="ow">in</span> <span class="n">is_max</span><span class="p">]</span>
+
+<span class="n">df</span><span class="o">.</span><span class="n">style</span><span class="o">.</span>\
+    <span class="n">applymap</span><span class="p">(</span><span class="n">color_negative_red</span><span class="p">)</span><span class="o">.</span>\
+    <span class="n">apply</span><span class="p">(</span><span class="n">highlight_max</span><span class="p">)</span><span class="o">.</span>\
+    <span class="n">set_table_attributes</span><span class="p">(</span><span class="s1">&#39;style=&quot;font-size: 10px&quot;&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><style type="text/css">
+#T_83637_row0_col0, #T_83637_row0_col1, #T_83637_row0_col2, #T_83637_row1_col0, #T_83637_row1_col3, #T_83637_row1_col4, #T_83637_row2_col0, #T_83637_row2_col2, #T_83637_row2_col3, #T_83637_row3_col0, #T_83637_row3_col1, #T_83637_row3_col2, #T_83637_row3_col3, #T_83637_row3_col4, #T_83637_row4_col0, #T_83637_row4_col1, #T_83637_row4_col2, #T_83637_row4_col3, #T_83637_row4_col4, #T_83637_row5_col0, #T_83637_row5_col2, #T_83637_row5_col3, #T_83637_row6_col0, #T_83637_row6_col1, #T_83637_row6_col4, #T_83637_row7_col0, #T_83637_row7_col1, #T_83637_row7_col2, #T_83637_row7_col4, #T_83637_row8_col0, #T_83637_row9_col2, #T_83637_row9_col4 {
+  color: black;
+}
+#T_83637_row0_col3, #T_83637_row0_col4, #T_83637_row1_col1, #T_83637_row1_col2, #T_83637_row2_col1, #T_83637_row5_col1, #T_83637_row5_col4, #T_83637_row6_col3, #T_83637_row7_col3, #T_83637_row8_col2, #T_83637_row8_col4, #T_83637_row9_col1, #T_83637_row9_col3 {
+  color: red;
+}
+#T_83637_row2_col4, #T_83637_row6_col2, #T_83637_row8_col1, #T_83637_row8_col3, #T_83637_row9_col0 {
+  color: black;
+  background-color: yellow;
+}
+</style>
+<table id="T_83637_" style="font-size: 10px">
+  <thead>
+    <tr>
+      <th class="blank level0" >&nbsp;</th>
+      <th class="col_heading level0 col0" >A</th>
+      <th class="col_heading level0 col1" >B</th>
+      <th class="col_heading level0 col2" >C</th>
+      <th class="col_heading level0 col3" >D</th>
+      <th class="col_heading level0 col4" >E</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th id="T_83637_level0_row0" class="row_heading level0 row0" >0</th>
+      <td id="T_83637_row0_col0" class="data row0 col0" >1.000000</td>
+      <td id="T_83637_row0_col1" class="data row0 col1" >1.329212</td>
+      <td id="T_83637_row0_col2" class="data row0 col2" >nan</td>
+      <td id="T_83637_row0_col3" class="data row0 col3" >-0.316280</td>
+      <td id="T_83637_row0_col4" class="data row0 col4" >-0.990810</td>
+    </tr>
+    <tr>
+      <th id="T_83637_level0_row1" class="row_heading level0 row1" >1</th>
+      <td id="T_83637_row1_col0" class="data row1 col0" >2.000000</td>
+      <td id="T_83637_row1_col1" class="data row1 col1" >-1.070816</td>
+      <td id="T_83637_row1_col2" class="data row1 col2" >-1.438713</td>
+      <td id="T_83637_row1_col3" class="data row1 col3" >0.564417</td>
+      <td id="T_83637_row1_col4" class="data row1 col4" >0.295722</td>
+    </tr>
+    <tr>
+      <th id="T_83637_level0_row2" class="row_heading level0 row2" >2</th>
+      <td id="T_83637_row2_col0" class="data row2 col0" >3.000000</td>
+      <td id="T_83637_row2_col1" class="data row2 col1" >-1.626404</td>
+      <td id="T_83637_row2_col2" class="data row2 col2" >0.219565</td>
+      <td id="T_83637_row2_col3" class="data row2 col3" >0.678805</td>
+      <td id="T_83637_row2_col4" class="data row2 col4" >1.889273</td>
+    </tr>
+    <tr>
+      <th id="T_83637_level0_row3" class="row_heading level0 row3" >3</th>
+      <td id="T_83637_row3_col0" class="data row3 col0" >4.000000</td>
+      <td id="T_83637_row3_col1" class="data row3 col1" >0.961538</td>
+      <td id="T_83637_row3_col2" class="data row3 col2" >0.104011</td>
+      <td id="T_83637_row3_col3" class="data row3 col3" >nan</td>
+      <td id="T_83637_row3_col4" class="data row3 col4" >0.850229</td>
+    </tr>
+    <tr>
+      <th id="T_83637_level0_row4" class="row_heading level0 row4" >4</th>
+      <td id="T_83637_row4_col0" class="data row4 col0" >5.000000</td>
+      <td id="T_83637_row4_col1" class="data row4 col1" >1.453425</td>
+      <td id="T_83637_row4_col2" class="data row4 col2" >1.057737</td>
+      <td id="T_83637_row4_col3" class="data row4 col3" >0.165562</td>
+      <td id="T_83637_row4_col4" class="data row4 col4" >0.515018</td>
+    </tr>
+    <tr>
+      <th id="T_83637_level0_row5" class="row_heading level0 row5" >5</th>
+      <td id="T_83637_row5_col0" class="data row5 col0" >6.000000</td>
+      <td id="T_83637_row5_col1" class="data row5 col1" >-1.336936</td>
+      <td id="T_83637_row5_col2" class="data row5 col2" >0.562861</td>
+      <td id="T_83637_row5_col3" class="data row5 col3" >1.392855</td>
+      <td id="T_83637_row5_col4" class="data row5 col4" >-0.063328</td>
+    </tr>
+    <tr>
+      <th id="T_83637_level0_row6" class="row_heading level0 row6" >6</th>
+      <td id="T_83637_row6_col0" class="data row6 col0" >7.000000</td>
+      <td id="T_83637_row6_col1" class="data row6 col1" >0.121668</td>
+      <td id="T_83637_row6_col2" class="data row6 col2" >1.207603</td>
+      <td id="T_83637_row6_col3" class="data row6 col3" >-0.002040</td>
+      <td id="T_83637_row6_col4" class="data row6 col4" >1.627796</td>
+    </tr>
+    <tr>
+      <th id="T_83637_level0_row7" class="row_heading level0 row7" >7</th>
+      <td id="T_83637_row7_col0" class="data row7 col0" >8.000000</td>
+      <td id="T_83637_row7_col1" class="data row7 col1" >0.354493</td>
+      <td id="T_83637_row7_col2" class="data row7 col2" >1.037528</td>
+      <td id="T_83637_row7_col3" class="data row7 col3" >-0.385684</td>
+      <td id="T_83637_row7_col4" class="data row7 col4" >0.519818</td>
+    </tr>
+    <tr>
+      <th id="T_83637_level0_row8" class="row_heading level0 row8" >8</th>
+      <td id="T_83637_row8_col0" class="data row8 col0" >9.000000</td>
+      <td id="T_83637_row8_col1" class="data row8 col1" >1.686583</td>
+      <td id="T_83637_row8_col2" class="data row8 col2" >-1.325963</td>
+      <td id="T_83637_row8_col3" class="data row8 col3" >1.428984</td>
+      <td id="T_83637_row8_col4" class="data row8 col4" >-2.089354</td>
+    </tr>
+    <tr>
+      <th id="T_83637_level0_row9" class="row_heading level0 row9" >9</th>
+      <td id="T_83637_row9_col0" class="data row9 col0" >10.000000</td>
+      <td id="T_83637_row9_col1" class="data row9 col1" >-0.129820</td>
+      <td id="T_83637_row9_col2" class="data row9 col2" >0.631523</td>
+      <td id="T_83637_row9_col3" class="data row9 col3" >-0.586538</td>
+      <td id="T_83637_row9_col4" class="data row9 col4" >0.290720</td>
+    </tr>
+  </tbody>
+</table>
+</div></div>
+</div>
+<p>See the <a class="reference external" href="https://pandas.pydata.org/pandas-docs/stable/user_guide/style.html">Pandas Styling docs</a> for more information about styling DataFrames, and check out the documentation of your library of choice to see if they support similar features.</p>
+</section>
+<section id="scrolling-cell-outputs">
+<span id="content-code-outputs-scrolling"></span><h2>Scrolling cell outputs<a class="headerlink" href="#scrolling-cell-outputs" title="永久链接至标题">¶</a></h2>
+<p>The traditional Jupyter Notebook interface allows you to toggle <strong>output scrolling</strong>
+for your cells. This allows you to visualize part of a long output without it taking up
+the entire page.</p>
+<p>You can trigger this behavior in Jupyter Book by adding the following
+tag to a cell’s metadata:</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+    <span class="nt">&quot;tags&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="s2">&quot;output_scroll&quot;</span><span class="p">,</span>
+    <span class="p">]</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>For example, the following cell has a long output, but will be scrollable in the book:</p>
+<div class="cell tag_output_scroll docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">for</span> <span class="n">ii</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">40</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="s2">&quot;this is output line </span><span class="si">{ii}</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>this is output line 0
+this is output line 1
+this is output line 2
+this is output line 3
+this is output line 4
+this is output line 5
+this is output line 6
+this is output line 7
+this is output line 8
+this is output line 9
+this is output line 10
+this is output line 11
+this is output line 12
+this is output line 13
+this is output line 14
+this is output line 15
+this is output line 16
+this is output line 17
+this is output line 18
+this is output line 19
+this is output line 20
+this is output line 21
+this is output line 22
+this is output line 23
+this is output line 24
+this is output line 25
+this is output line 26
+this is output line 27
+this is output line 28
+this is output line 29
+this is output line 30
+this is output line 31
+this is output line 32
+this is output line 33
+this is output line 34
+this is output line 35
+this is output line 36
+this is output line 37
+this is output line 38
+this is output line 39
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="images">
+<span id="content-code-outputs-images"></span><h2>Images<a class="headerlink" href="#images" title="永久链接至标题">¶</a></h2>
+<p>For any image types output by the code, we can apply formatting <em>via</em> cell metadata.
+Then for the image we can apply all the variables of the standard <a class="reference external" href="https://docutils.sourceforge.io/docs/ref/rst/directives.html#image">image directive</a>:</p>
+<aside class="margin sidebar">
+<p class="sidebar-title"></p>
+<p>Units of length are: ‘em’, ‘ex’, ‘px’, ‘in’, ‘cm’, ‘mm’, ‘pt’, ‘pc’</p>
+</aside>
+<ul class="simple">
+<li><p><strong>width</strong>: length or percentage (%) of the current line width</p></li>
+<li><p><strong>height</strong>: length</p></li>
+<li><p><strong>scale</strong>: integer percentage (the “%” symbol is optional)</p></li>
+<li><p><strong>align</strong>: “top”, “middle”, “bottom”, “left”, “center”, or “right”</p></li>
+<li><p><strong>classes</strong>: space separated strings</p></li>
+<li><p><strong>alt</strong>: string</p></li>
+</ul>
+<p>We can also set a caption (which is rendered as <a class="reference external" href="https://commonmark.org/">CommonMark</a>) and name by which to reference the figure. The code</p>
+<div class="highlight-md notranslate"><div class="highlight"><pre><span></span>```{code-cell} ipython3
+---
+render:
+  image:
+    width: 200px
+    alt: fun-fish
+    classes: shadow bg-primary
+  figure:
+    caption: |
+      Hey everyone its <span class="gs">**party**</span> time!
+    name: fun-fish
+---
+from IPython.display import Image
+Image(&quot;../images/fun-fish.png&quot;)
+```
+</pre></div>
+</div>
+<p>produces the following code cell and figure:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">IPython.display</span> <span class="k">import</span> <span class="n">Image</span>
+<span class="n">Image</span><span class="p">(</span><span class="s2">&quot;../images/fun-fish.png&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<figure class="align-default" id="fun-fish">
+<a class="shadow bg-primary reference internal image-reference" href="../_images/code-outputs_5_0.png"><img alt="fun-fish" class="shadow bg-primary" src="../_images/code-outputs_5_0.png" style="width: 300px;" /></a>
+<figcaption>
+<p><span class="caption-text"><p>Hey everyone its <strong>party</strong> time!</p>
+</span><a class="headerlink" href="#fun-fish" title="永久链接至图片">¶</a></p>
+</figcaption>
+</figure>
+</div>
+</div>
+<p>Now we can link to the image from anywhere in our documentation: <a class="reference internal" href="#fun-fish"><span class="std std-ref">swim to the fish</span></a></p>
+<div class="admonition seealso">
+<p class="admonition-title">参见</p>
+<p><a class="reference internal" href="metadata.html#jupyter-cell-tags"><span class="std std-ref">Add metadata to notebooks</span></a></p>
+</div>
+</section>
+<section id="markdown">
+<span id="content-code-outputs-markdown"></span><h2>Markdown<a class="headerlink" href="#markdown" title="永久链接至标题">¶</a></h2>
+<p>Markdown output is parsed by MyST-Parser, currently with the parsing set to strictly <a class="reference external" href="https://commonmark.org/">CommonMark</a>.</p>
+<p>The parsed Markdown is then integrated into the wider context of the document. This means it is possible, for example, to include internal references:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">IPython.display</span> <span class="k">import</span> <span class="n">display</span><span class="p">,</span> <span class="n">Markdown</span>
+<span class="n">display</span><span class="p">(</span><span class="n">Markdown</span><span class="p">(</span><span class="s1">&#39;**_some_ markdown** and an [internal reference](use/format/markdown)!&#39;</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<p><strong><em>some</em> markdown</strong> and an <a class="reference external" href="https://myst-nb.readthedocs.io/en/latest/use/formatting_outputs.html#use-format-markdown" title="(在 MyST-NB)"><span class="xref myst">internal reference</span></a>!</p>
+</div>
+</div>
+<p>and even internal images can be rendered, as the code below exemplifies:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">display</span><span class="p">(</span><span class="n">Markdown</span><span class="p">(</span><span class="s1">&#39;![figure](../images/logo-wide.svg)&#39;</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<p><img alt="figure" src="../_images/logo-wide.svg" /></p>
+</div>
+</div>
+</section>
+<section id="ansi-outputs">
+<span id="content-code-outputs-ansi"></span><h2>ANSI outputs<a class="headerlink" href="#ansi-outputs" title="永久链接至标题">¶</a></h2>
+<p>By default, the standard output/error streams and text/plain MIME outputs may contain ANSI escape sequences to change the text and background colors.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sys</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;BEWARE: </span><span class="se">\x1b</span><span class="s2">[1;33;41mugly colors</span><span class="se">\x1b</span><span class="s2">[m!&quot;</span><span class="p">,</span> <span class="n">file</span><span class="o">=</span><span class="n">sys</span><span class="o">.</span><span class="n">stderr</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;AB</span><span class="se">\x1b</span><span class="s2">[43mCD</span><span class="se">\x1b</span><span class="s2">[35mEF</span><span class="se">\x1b</span><span class="s2">[1mGH</span><span class="se">\x1b</span><span class="s2">[4mIJ</span><span class="se">\x1b</span><span class="s2">[7m&quot;</span>
+      <span class="s2">&quot;KL</span><span class="se">\x1b</span><span class="s2">[49mMN</span><span class="se">\x1b</span><span class="s2">[39mOP</span><span class="se">\x1b</span><span class="s2">[22mQR</span><span class="se">\x1b</span><span class="s2">[24mST</span><span class="se">\x1b</span><span class="s2">[27mUV&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>AB<span class=" -Color -Color-BGYellow">CD</span><span class=" -Color -Color-Magenta -Color-Magenta-BGYellow">EF</span><span class=" -Color -Color-Bold -Color-Bold-Magenta -Color-Bold-Magenta-BGYellow">GHIJKL</span><span class=" -Color -Color-Bold -Color-Bold-Magenta">MN</span><span class=" -Color -Color-Bold">OP</span>QRSTUV
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>BEWARE: <span class=" -Color -Color-Bold -Color-Bold-Yellow -Color-Bold-Yellow-BGRed">ugly colors</span>!
+</pre></div>
+</div>
+</div>
+</div>
+<p>This uses the built-in <a class="reference external" href="https://myst-nb.readthedocs.io/en/latest/api/index.html#myst_nb.ansi_lexer.AnsiColorLexer" title="(在 MyST-NB)"><code class="xref py py-class docutils literal notranslate"><span class="pre">AnsiColorLexer</span></code></a> <a class="reference external" href="https://pygments.org/">pygments lexer</a>.
+You can change the lexer used in the <code class="docutils literal notranslate"><span class="pre">_config.yml</span></code>, for example to turn off lexing:</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">sphinx</span><span class="p">:</span>
+  <span class="nt">config</span><span class="p">:</span>
+    <span class="nt">nb_render_text_lexer</span><span class="p">:</span> <span class="s">&quot;none&quot;</span>
+</pre></div>
+</div>
+<p>The following code shows the 8 basic ANSI colors it is based on.
+Each of the 8 colors has an “intense” variation, which is used for bold text.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">text</span> <span class="o">=</span> <span class="s2">&quot; XYZ &quot;</span>
+<span class="n">formatstring</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="se">\x1b</span><span class="s2">[</span><span class="si">{}</span><span class="s2">m&quot;</span> <span class="o">+</span> <span class="n">text</span> <span class="o">+</span> <span class="s2">&quot;</span><span class="se">\x1b</span><span class="s2">[m&quot;</span>
+
+<span class="nb">print</span><span class="p">(</span>
+    <span class="s2">&quot; &quot;</span> <span class="o">*</span> <span class="mi">6</span>
+    <span class="o">+</span> <span class="s2">&quot; &quot;</span> <span class="o">*</span> <span class="nb">len</span><span class="p">(</span><span class="n">text</span><span class="p">)</span>
+    <span class="o">+</span> <span class="s2">&quot;&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="s2">&quot;{:^</span><span class="si">{}</span><span class="s2">}&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">bg</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">text</span><span class="p">))</span> <span class="k">for</span> <span class="n">bg</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">40</span><span class="p">,</span> <span class="mi">48</span><span class="p">))</span>
+<span class="p">)</span>
+<span class="k">for</span> <span class="n">fg</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">30</span><span class="p">,</span> <span class="mi">38</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">bold</span> <span class="ow">in</span> <span class="kc">False</span><span class="p">,</span> <span class="kc">True</span><span class="p">:</span>
+        <span class="n">fg_code</span> <span class="o">=</span> <span class="p">(</span><span class="s2">&quot;1;&quot;</span> <span class="k">if</span> <span class="n">bold</span> <span class="k">else</span> <span class="s2">&quot;&quot;</span><span class="p">)</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">fg</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span>
+            <span class="s2">&quot; </span><span class="si">{:&gt;4}</span><span class="s2"> &quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">fg_code</span><span class="p">)</span>
+            <span class="o">+</span> <span class="n">formatstring</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">fg_code</span><span class="p">)</span>
+            <span class="o">+</span> <span class="s2">&quot;&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span>
+                <span class="n">formatstring</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">fg_code</span> <span class="o">+</span> <span class="s2">&quot;;&quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">bg</span><span class="p">))</span> <span class="k">for</span> <span class="n">bg</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">40</span><span class="p">,</span> <span class="mi">48</span><span class="p">)</span>
+            <span class="p">)</span>
+        <span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>            40   41   42   43   44   45   46   47  
+   30 <span class=" -Color -Color-Black"> XYZ </span><span class=" -Color -Color-Black -Color-Black-BGBlack"> XYZ </span><span class=" -Color -Color-Black -Color-Black-BGRed"> XYZ </span><span class=" -Color -Color-Black -Color-Black-BGGreen"> XYZ </span><span class=" -Color -Color-Black -Color-Black-BGYellow"> XYZ </span><span class=" -Color -Color-Black -Color-Black-BGBlue"> XYZ </span><span class=" -Color -Color-Black -Color-Black-BGMagenta"> XYZ </span><span class=" -Color -Color-Black -Color-Black-BGCyan"> XYZ </span><span class=" -Color -Color-Black -Color-Black-BGWhite"> XYZ </span>
+ 1;30 <span class=" -Color -Color-Bold -Color-Bold-Black"> XYZ </span><span class=" -Color -Color-Bold -Color-Bold-Black -Color-Bold-Black-BGBlack"> XYZ </span><span class=" -Color -Color-Bold -Color-Bold-Black -Color-Bold-Black-BGRed"> XYZ </span><span class=" -Color -Color-Bold -Color-Bold-Black -Color-Bold-Black-BGGreen"> XYZ </span><span class=" -Color -Color-Bold -Color-Bold-Black -Color-Bold-Black-BGYellow"> XYZ </span><span class=" -Color -Color-Bold -Color-Bold-Black -Color-Bold-Black-BGBlue"> XYZ </span><span class=" -Color -Color-Bold -Color-Bold-Black -Color-Bold-Black-BGMagenta"> XYZ </span><span class=" -Color -Color-Bold -Color-Bold-Black -Color-Bold-Black-BGCyan"> XYZ </span><span class=" -Color -Color-Bold -Color-Bold-Black -Color-Bold-Black-BGWhite"> XYZ </span>
+   31 <span class=" -Color -Color-Red"> XYZ </span><span class=" -Color -Color-Red -Color-Red-BGBlack"> XYZ </span><span class=" -Color -Color-Red -Color-Red-BGRed"> XYZ </span><span class=" -Color -Color-Red -Color-Red-BGGreen"> XYZ </span><span class=" -Color -Color-Red -Color-Red-BGYellow"> XYZ </span><span class=" -Color -Color-Red -Color-Red-BGBlue"> XYZ </span><span class=" -Color -Color-Red -Color-Red-BGMagenta"> XYZ </span><span class=" -Color -Color-Red -Color-Red-BGCyan"> XYZ </span><span class=" -Color -Color-Red -Color-Red-BGWhite"> XYZ </span>
+ 1;31 <span class=" -Color -Color-Bold -Color-Bold-Red"> XYZ </span><span class=" -Color -Color-Bold -Color-Bold-Red -Color-Bold-Red-BGBlack"> XYZ </span><span class=" -Color -Color-Bold -Color-Bold-Red -Color-Bold-Red-BGRed"> XYZ </span><span class=" -Color -Color-Bold -Color-Bold-Red -Color-Bold-Red-BGGreen"> XYZ </span><span class=" -Color -Color-Bold -Color-Bold-Red -Color-Bold-Red-BGYellow"> XYZ </span><span class=" -Color -Color-Bold -Color-Bold-Red -Color-Bold-Red-BGBlue"> XYZ </span><span class=" -Color -Color-Bold -Color-Bold-Red -Color-Bold-Red-BGMagenta"> XYZ </span><span class=" -Color -Color-Bold -Color-Bold-Red -Color-Bold-Red-BGCyan"> XYZ </span><span class=" -Color -Color-Bold -Color-Bold-Red -Color-Bold-Red-BGWhite"> XYZ </span>
+   32 <span class=" -Color -Color-Green"> XYZ </span><span class=" -Color -Color-Green -Color-Green-BGBlack"> XYZ </span><span class=" -Color -Color-Green -Color-Green-BGRed"> XYZ </span><span class=" -Color -Color-Green -Color-Green-BGGreen"> XYZ </span><span class=" -Color -Color-Green -Color-Green-BGYellow"> XYZ </span><span class=" -Color -Color-Green -Color-Green-BGBlue"> XYZ </span><span class=" -Color -Color-Green -Color-Green-BGMagenta"> XYZ </span><span class=" -Color -Color-Green -Color-Green-BGCyan"> XYZ </span><span class=" -Color -Color-Green -Color-Green-BGWhite"> XYZ </span>
+ 1;32 <span class=" -Color -Color-Bold -Color-Bold-Green"> XYZ </span><span class=" -Color -Color-Bold -Color-Bold-Green -Color-Bold-Green-BGBlack"> XYZ </span><span class=" -Color -Color-Bold -Color-Bold-Green -Color-Bold-Green-BGRed"> XYZ </span><span class=" -Color -Color-Bold -Color-Bold-Green -Color-Bold-Green-BGGreen"> XYZ </span><span class=" -Color -Color-Bold -Color-Bold-Green -Color-Bold-Green-BGYellow"> XYZ </span><span class=" -Color -Color-Bold -Color-Bold-Green -Color-Bold-Green-BGBlue"> XYZ </span><span class=" -Color -Color-Bold -Color-Bold-Green -Color-Bold-Green-BGMagenta"> XYZ </span><span class=" -Color -Color-Bold -Color-Bold-Green -Color-Bold-Green-BGCyan"> XYZ </span><span class=" -Color -Color-Bold -Color-Bold-Green -Color-Bold-Green-BGWhite"> XYZ </span>
+   33 <span class=" -Color -Color-Yellow"> XYZ </span><span class=" -Color -Color-Yellow -Color-Yellow-BGBlack"> XYZ </span><span class=" -Color -Color-Yellow -Color-Yellow-BGRed"> XYZ </span><span class=" -Color -Color-Yellow -Color-Yellow-BGGreen"> XYZ </span><span class=" -Color -Color-Yellow -Color-Yellow-BGYellow"> XYZ </span><span class=" -Color -Color-Yellow -Color-Yellow-BGBlue"> XYZ </span><span class=" -Color -Color-Yellow -Color-Yellow-BGMagenta"> XYZ </span><span class=" -Color -Color-Yellow -Color-Yellow-BGCyan"> XYZ </span><span class=" -Color -Color-Yellow -Color-Yellow-BGWhite"> XYZ </span>
+ 1;33 <span class=" -Color -Color-Bold -Color-Bold-Yellow"> XYZ </span><span class=" -Color -Color-Bold -Color-Bold-Yellow -Color-Bold-Yellow-BGBlack"> XYZ </span><span class=" -Color -Color-Bold -Color-Bold-Yellow -Color-Bold-Yellow-BGRed"> XYZ </span><span class=" -Color -Color-Bold -Color-Bold-Yellow -Color-Bold-Yellow-BGGreen"> XYZ </span><span class=" -Color -Color-Bold -Color-Bold-Yellow -Color-Bold-Yellow-BGYellow"> XYZ </span><span class=" -Color -Color-Bold -Color-Bold-Yellow -Color-Bold-Yellow-BGBlue"> XYZ </span><span class=" -Color -Color-Bold -Color-Bold-Yellow -Color-Bold-Yellow-BGMagenta"> XYZ </span><span class=" -Color -Color-Bold -Color-Bold-Yellow -Color-Bold-Yellow-BGCyan"> XYZ </span><span class=" -Color -Color-Bold -Color-Bold-Yellow -Color-Bold-Yellow-BGWhite"> XYZ </span>
+   34 <span class=" -Color -Color-Blue"> XYZ </span><span class=" -Color -Color-Blue -Color-Blue-BGBlack"> XYZ </span><span class=" -Color -Color-Blue -Color-Blue-BGRed"> XYZ </span><span class=" -Color -Color-Blue -Color-Blue-BGGreen"> XYZ </span><span class=" -Color -Color-Blue -Color-Blue-BGYellow"> XYZ </span><span class=" -Color -Color-Blue -Color-Blue-BGBlue"> XYZ </span><span class=" -Color -Color-Blue -Color-Blue-BGMagenta"> XYZ </span><span class=" -Color -Color-Blue -Color-Blue-BGCyan"> XYZ </span><span class=" -Color -Color-Blue -Color-Blue-BGWhite"> XYZ </span>
+ 1;34 <span class=" -Color -Color-Bold -Color-Bold-Blue"> XYZ </span><span class=" -Color -Color-Bold -Color-Bold-Blue -Color-Bold-Blue-BGBlack"> XYZ </span><span class=" -Color -Color-Bold -Color-Bold-Blue -Color-Bold-Blue-BGRed"> XYZ </span><span class=" -Color -Color-Bold -Color-Bold-Blue -Color-Bold-Blue-BGGreen"> XYZ </span><span class=" -Color -Color-Bold -Color-Bold-Blue -Color-Bold-Blue-BGYellow"> XYZ </span><span class=" -Color -Color-Bold -Color-Bold-Blue -Color-Bold-Blue-BGBlue"> XYZ </span><span class=" -Color -Color-Bold -Color-Bold-Blue -Color-Bold-Blue-BGMagenta"> XYZ </span><span class=" -Color -Color-Bold -Color-Bold-Blue -Color-Bold-Blue-BGCyan"> XYZ </span><span class=" -Color -Color-Bold -Color-Bold-Blue -Color-Bold-Blue-BGWhite"> XYZ </span>
+   35 <span class=" -Color -Color-Magenta"> XYZ </span><span class=" -Color -Color-Magenta -Color-Magenta-BGBlack"> XYZ </span><span class=" -Color -Color-Magenta -Color-Magenta-BGRed"> XYZ </span><span class=" -Color -Color-Magenta -Color-Magenta-BGGreen"> XYZ </span><span class=" -Color -Color-Magenta -Color-Magenta-BGYellow"> XYZ </span><span class=" -Color -Color-Magenta -Color-Magenta-BGBlue"> XYZ </span><span class=" -Color -Color-Magenta -Color-Magenta-BGMagenta"> XYZ </span><span class=" -Color -Color-Magenta -Color-Magenta-BGCyan"> XYZ </span><span class=" -Color -Color-Magenta -Color-Magenta-BGWhite"> XYZ </span>
+ 1;35 <span class=" -Color -Color-Bold -Color-Bold-Magenta"> XYZ </span><span class=" -Color -Color-Bold -Color-Bold-Magenta -Color-Bold-Magenta-BGBlack"> XYZ </span><span class=" -Color -Color-Bold -Color-Bold-Magenta -Color-Bold-Magenta-BGRed"> XYZ </span><span class=" -Color -Color-Bold -Color-Bold-Magenta -Color-Bold-Magenta-BGGreen"> XYZ </span><span class=" -Color -Color-Bold -Color-Bold-Magenta -Color-Bold-Magenta-BGYellow"> XYZ </span><span class=" -Color -Color-Bold -Color-Bold-Magenta -Color-Bold-Magenta-BGBlue"> XYZ </span><span class=" -Color -Color-Bold -Color-Bold-Magenta -Color-Bold-Magenta-BGMagenta"> XYZ </span><span class=" -Color -Color-Bold -Color-Bold-Magenta -Color-Bold-Magenta-BGCyan"> XYZ </span><span class=" -Color -Color-Bold -Color-Bold-Magenta -Color-Bold-Magenta-BGWhite"> XYZ </span>
+   36 <span class=" -Color -Color-Cyan"> XYZ </span><span class=" -Color -Color-Cyan -Color-Cyan-BGBlack"> XYZ </span><span class=" -Color -Color-Cyan -Color-Cyan-BGRed"> XYZ </span><span class=" -Color -Color-Cyan -Color-Cyan-BGGreen"> XYZ </span><span class=" -Color -Color-Cyan -Color-Cyan-BGYellow"> XYZ </span><span class=" -Color -Color-Cyan -Color-Cyan-BGBlue"> XYZ </span><span class=" -Color -Color-Cyan -Color-Cyan-BGMagenta"> XYZ </span><span class=" -Color -Color-Cyan -Color-Cyan-BGCyan"> XYZ </span><span class=" -Color -Color-Cyan -Color-Cyan-BGWhite"> XYZ </span>
+ 1;36 <span class=" -Color -Color-Bold -Color-Bold-Cyan"> XYZ </span><span class=" -Color -Color-Bold -Color-Bold-Cyan -Color-Bold-Cyan-BGBlack"> XYZ </span><span class=" -Color -Color-Bold -Color-Bold-Cyan -Color-Bold-Cyan-BGRed"> XYZ </span><span class=" -Color -Color-Bold -Color-Bold-Cyan -Color-Bold-Cyan-BGGreen"> XYZ </span><span class=" -Color -Color-Bold -Color-Bold-Cyan -Color-Bold-Cyan-BGYellow"> XYZ </span><span class=" -Color -Color-Bold -Color-Bold-Cyan -Color-Bold-Cyan-BGBlue"> XYZ </span><span class=" -Color -Color-Bold -Color-Bold-Cyan -Color-Bold-Cyan-BGMagenta"> XYZ </span><span class=" -Color -Color-Bold -Color-Bold-Cyan -Color-Bold-Cyan-BGCyan"> XYZ </span><span class=" -Color -Color-Bold -Color-Bold-Cyan -Color-Bold-Cyan-BGWhite"> XYZ </span>
+   37 <span class=" -Color -Color-White"> XYZ </span><span class=" -Color -Color-White -Color-White-BGBlack"> XYZ </span><span class=" -Color -Color-White -Color-White-BGRed"> XYZ </span><span class=" -Color -Color-White -Color-White-BGGreen"> XYZ </span><span class=" -Color -Color-White -Color-White-BGYellow"> XYZ </span><span class=" -Color -Color-White -Color-White-BGBlue"> XYZ </span><span class=" -Color -Color-White -Color-White-BGMagenta"> XYZ </span><span class=" -Color -Color-White -Color-White-BGCyan"> XYZ </span><span class=" -Color -Color-White -Color-White-BGWhite"> XYZ </span>
+ 1;37 <span class=" -Color -Color-Bold -Color-Bold-White"> XYZ </span><span class=" -Color -Color-Bold -Color-Bold-White -Color-Bold-White-BGBlack"> XYZ </span><span class=" -Color -Color-Bold -Color-Bold-White -Color-Bold-White-BGRed"> XYZ </span><span class=" -Color -Color-Bold -Color-Bold-White -Color-Bold-White-BGGreen"> XYZ </span><span class=" -Color -Color-Bold -Color-Bold-White -Color-Bold-White-BGYellow"> XYZ </span><span class=" -Color -Color-Bold -Color-Bold-White -Color-Bold-White-BGBlue"> XYZ </span><span class=" -Color -Color-Bold -Color-Bold-White -Color-Bold-White-BGMagenta"> XYZ </span><span class=" -Color -Color-Bold -Color-Bold-White -Color-Bold-White-BGCyan"> XYZ </span><span class=" -Color -Color-Bold -Color-Bold-White -Color-Bold-White-BGWhite"> XYZ </span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">注解</p>
+<p>ANSI also supports a set of 256 indexed colors.
+This is currently not supported, but we hope to introduce it at a later date
+(raise an issue on the repository if you require it!).</p>
+</div>
+</section>
+<section id="render-priority">
+<span id="content-code-outputs-priority"></span><h2>Render priority<a class="headerlink" href="#render-priority" title="永久链接至标题">¶</a></h2>
+<p>When Jupyter executes a code cell it can produce multiple outputs, and each of these outputs can contain multiple <a class="reference external" href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types">MIME media types</a> to use with different output formats (like HTML or LaTeX).</p>
+<p>MyST-NB stores a default priority dictionary for most of the common <a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/builders/index.html">output builders</a>, which you can also update in your <code class="docutils literal notranslate"><span class="pre">_config.yml</span></code>.
+For example, this is the default priority list for HTML:</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">sphinx</span><span class="p">:</span>
+  <span class="nt">config</span><span class="p">:</span>
+    <span class="nt">nb_render_priority</span><span class="p">:</span>
+      <span class="nt">html</span><span class="p">:</span>
+      <span class="p p-Indicator">-</span> <span class="s">&quot;application/vnd.jupyter.widget-view+json&quot;</span>
+      <span class="p p-Indicator">-</span> <span class="s">&quot;application/javascript&quot;</span>
+      <span class="p p-Indicator">-</span> <span class="s">&quot;text/html&quot;</span>
+      <span class="p p-Indicator">-</span> <span class="s">&quot;image/svg+xml&quot;</span>
+      <span class="p p-Indicator">-</span> <span class="s">&quot;image/png&quot;</span>
+      <span class="p p-Indicator">-</span> <span class="s">&quot;image/jpeg&quot;</span>
+      <span class="p p-Indicator">-</span> <span class="s">&quot;text/markdown&quot;</span>
+      <span class="p p-Indicator">-</span> <span class="s">&quot;text/latex&quot;</span>
+      <span class="p p-Indicator">-</span> <span class="s">&quot;text/plain&quot;</span>
+</pre></div>
+</div>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "xinetzone/jupyter-book",
+            ref: "main",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./content"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+        <div class='prev-next-bottom'>
+            
+    <a class='left-prev' id="prev-link" href="execute.html" title="previous page">Execute and cache your pages</a>
+    <a class='right-next' id="next-link" href="executable/output-insert.html" title="next page">Store code outputs and insert into content</a>
+
+        </div>
+        
+        </div>
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          <div class="extra_footer">
+            <p class="w3-card w3-pale-blue w3-padding">
+  Copyright © 2021
+  <a href="https://github.com/xinetzone">xinetzone</a> | 
+  Powered by <a href="https://github.com/executablebooks/jupyter-book">Jupyter Book</a>.
+</p>
+
+          </div>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  
+  </body>
+</html>

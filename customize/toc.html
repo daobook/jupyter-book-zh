@@ -1,0 +1,968 @@
+
+<!DOCTYPE html>
+
+<html lang="zh">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Structure the Table of Contents</title>
+    
+  <link href="../_static/css/theme.css" rel="stylesheet" />
+  <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-book-theme.acff12b8f9c144ce68a297486a2fa670.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/tabs.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/page.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/xin-css/main.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/w3css/4/w3pro.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/w3css/4/w3mobile.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/w3css/4/w3.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/tabs.js"></script>
+    <script async="async" kind="hypothesis" src="https://hypothes.is/embed.js"></script>
+    <script kind="utterances">
+
+    var commentsRunWhenDOMLoaded = cb => {
+    if (document.readyState != 'loading') {
+        cb()
+    } else if (document.addEventListener) {
+        document.addEventListener('DOMContentLoaded', cb)
+    } else {
+        document.attachEvent('onreadystatechange', function() {
+        if (document.readyState == 'complete') cb()
+        })
+    }
+}
+
+var addUtterances = () => {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src = "https://utteranc.es/client.js";
+    script.async = "async";
+
+    script.setAttribute("repo", "xinetzone/jupyter-book");
+    script.setAttribute("issue-term", "pathname");
+    script.setAttribute("theme", "github-light");
+    script.setAttribute("label", "💬 comment");
+    script.setAttribute("crossorigin", "anonymous");
+
+    sections = document.querySelectorAll("div.section");
+    if (sections !== null) {
+        section = sections[sections.length-1];
+        section.appendChild(script);
+    }
+}
+commentsRunWhenDOMLoaded(addUtterances);
+</script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.0/dist/embed-amd.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script>
+        const thebe_selector = ".thebe,.cell"
+        const thebe_selector_input = "pre,.cell_input div.highlight"
+        const thebe_selector_output = ".output,.cell_output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="canonical" href="https://xinetzone.github.io/jupyter-book/customize/toc.html" />
+    <link rel="shortcut icon" href="../_static/page-logo.jfif"/>
+    <link rel="index" title="索引" href="../genindex.html" />
+    <link rel="search" title="搜索" href="../search.html" />
+    <link rel="next" title="Configure the Table of Contents" href="../structure/configure.html" />
+    <link rel="prev" title="Structure and organize your content" href="../basics/organize.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+      <img src="../_static/logo.jpg" class="logo" alt="logo">
+      
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <div class="bd-toc-item active">
+        <p class="caption">
+ <span class="caption-text">
+  Tutorials
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../start/your-first-book.html">
+   Create your first book
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../start/overview.html">
+     Overview
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../start/create.html">
+     Create your book’s source files
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../start/build.html">
+     Build your book
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../start/publish.html">
+     Publish your book online
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../start/example-book.html">
+     Build a small example project
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../tutorials/references.html">
+   Get started with references
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Topic Guides
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="../basics/organize.html">
+   Structure and organize your content
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     Structure the Table of Contents
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../structure/configure.html">
+     Configure the Table of Contents
+    </a>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../file-types/index.html">
+     Types of content source files
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+    <label for="toctree-checkbox-3">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../file-types/markdown.html">
+       Markdown files
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../file-types/notebooks.html">
+       Jupyter Notebook files
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../file-types/myst-notebooks.html">
+       Notebooks written entirely in Markdown
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../file-types/jupytext.html">
+       Custom notebook formats and Jupytext
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../file-types/restructuredtext.html">
+       reStructuredText files
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../basics/create.html">
+     Create books automatically
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../structure/sections-headers.html">
+     How headers and sections map onto to book structure
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../content/index.html">
+   Write narrative content
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../content/myst.html">
+     MyST Markdown overview
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../content/content-blocks.html">
+     Special content blocks
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../content/references.html">
+     References and cross-references
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../content/layout.html">
+     Control the page layout
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../content/citations.html">
+     Citations and bibliographies
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../content/math.html">
+     Math and equations
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../content/figures.html">
+     Images and figures
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../content/metadata.html">
+     Add metadata to your book pages
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../content/executable/index.html">
+   Write executable content
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+  <label for="toctree-checkbox-5">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../content/execute.html">
+     Execute and cache your pages
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../content/code-outputs.html">
+     Formatting code outputs
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../content/executable/output-insert.html">
+     Store code outputs and insert into content
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../interactive/interactive.html">
+     Interactive data visualizations
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../basics/building/index.html">
+   Build your book outputs
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+  <label for="toctree-checkbox-6">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../basics/build.html">
+     Use the Build command line interface
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../advanced/pdf.html">
+     Build a PDF
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../web/index.html">
+   Web and internet features
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
+  <label for="toctree-checkbox-7">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../basics/repository.html">
+     Connect your book to a code repository
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../interactive/hiding.html">
+     Hide or remove content
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../interactive/launchbuttons.html">
+     Launch into interactive computing interfaces
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../interactive/thebe.html">
+     Make your code cells executable
+    </a>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../interactive/comments.html">
+     Commenting and annotating
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
+    <label for="toctree-checkbox-8">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../interactive/comments/hypothesis.html">
+       Hypothesis
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../interactive/comments/utterances.html">
+       Utterances
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../publish/web.html">
+     Host your book on the internet
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/>
+    <label for="toctree-checkbox-9">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../publish/gh-pages.html">
+       GitHub Pages and Actions
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../publish/netlify.html">
+       Publish with Netlify
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../advanced/html.html">
+     Advanced HTML outputs
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../advanced/index.html">
+   Advanced Jupyter Book Usage
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/>
+  <label for="toctree-checkbox-10">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../advanced/sphinx.html">
+     Advanced Sphinx usage
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../advanced/windows.html">
+     Working on Windows
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../explain/sphinx.html">
+     How Jupyter Book and Sphinx relate to one another
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../contribute/intro.html">
+   为 Jupyter Book 贡献
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Reference
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="config.html">
+   Configuration reference
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../reference/cheatsheet.html">
+   MyST syntax cheat sheet
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../reference/cli.html">
+   The command-line interface
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../reference/glossary.html">
+   Glossary
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  About Jupyter Book
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference external" href="https://executablebooks.org/en/latest/gallery.html">
+   Gallery of Jupyter Books
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../explain/components.html">
+   The Jupyter Book toolchain and components
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../cite.html">
+   Cite Jupyter Book
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../reference/_changelog.html">
+   Change log
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  <div class="w3-padding w3-card-4 w3-pale-green">
+  <a href="https://github.com/xinetzone" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub"
+      data-position="top" data-delay="50">
+      <i class="fab fa-github"></i>
+  </a>
+  <a href="mailto:q735613050@163.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top"
+      data-delay="50">
+      <i class="fas fa-envelope-open"></i>
+  </a>
+  <a href="tencent://AddContact/?fromId=50&amp;fromSubId=1&amp;subcmd=all&amp;uin=735613050" class="tooltipped"
+      target="_blank" data-tooltip="QQ联系我: 735613050" data-position="top" data-delay="50">
+      <i class="fab fa-qq"></i>
+  </a>
+  <a href="https://www.zhihu.com/people/liu-xin-wei-55" class="tooltipped" target="_blank"
+      data-tooltip="关注我的知乎: liu-xin-wei-55" data-position="top" data-delay="50">
+      <i class="fab fa-zhihu1">知</i>
+  </a>
+  <a target="_blank" rel="noopener" href="https://www.linkedin.com/in/xinet" class="tooltipped"
+      data-tooltip="领英联系我: xinet" data-position="top" data-delay="50">
+      <i class="fab fa-linkedin"></i>
+  </a>
+  <div><a href="https://github.com/xinetzone/sanstyle">上善若水</a> 版权所有</div>
+</div>
+
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        <a class="dropdown-buttons"
+            href="../_sources/customize/toc.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download notebook file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/customize/toc.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/xinetzone/jupyter-book"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/xinetzone/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fcustomize/toc.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/xinetzone/jupyter-book/main?urlpath=tree/./customize/toc.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        <button type="button" class="btn btn-secondary topbarbtn"
+            onclick="initThebeSBT()" title="Launch Thebe" data-toggle="tooltip" data-placement="left"><i
+                class="fas fa-play"></i><span style="margin-left: .4em;">Live Code</span></button>
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#structure-of-a-book">
+   Structure of a Book
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#use-chapter-sub-sections">
+     Use chapter sub-sections
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#use-parts-to-organize-chapters">
+     Use parts to organize chapters
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#structure-of-an-article">
+   Structure of an Article
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#build-an-article-from-a-single-file">
+     Build an article from a single file
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#build-an-article-from-multiple-files">
+     Build an article from multiple files
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#types-of-content-entries">
+   Types of content entries
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#generate-a-table-of-contents-from-content-files">
+   Generate a Table of Contents from content files
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <section id="structure-the-table-of-contents">
+<h1>Structure the Table of Contents<a class="headerlink" href="#structure-the-table-of-contents" title="永久链接至标题">¶</a></h1>
+<p>Your book’s structure is determined by a <strong>Table of Contents</strong>.
+This is a YAML file (called <code class="docutils literal notranslate"><span class="pre">_toc.yml</span></code>) that defines a structure that Jupyter Book uses to create the order and nesting of pages.</p>
+<div class="warning admonition">
+<p class="admonition-title">Migrate to the new Table of Contents structure</p>
+<p>A new Table of Contents structure was introduced in <code class="docutils literal notranslate"><span class="pre">v0.11</span></code>.
+To migrate your old TOC structure to the new structure, you have a few options:</p>
+<ul>
+<li><p><strong>Manually migrate your TOC</strong>. See <a class="reference external" href="https://executablebooks.org/en/latest/updates/2021-06-18-update-toc.html">this blog post</a> for one example migration from an old TOC structure.</p></li>
+<li><p><strong>Use the migration tool</strong>. This automatically generates a new TOC from your old one, though may alter the formatting slightly.
+To do so, use the following command:</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>jupyter-book toc migrate path/to/_toc.yml -o path/to/_toc.yml
+</pre></div>
+</div>
+</li>
+</ul>
+</div>
+<section id="structure-of-a-book">
+<span id="structure-book"></span><h2>Structure of a Book<a class="headerlink" href="#structure-of-a-book" title="永久链接至标题">¶</a></h2>
+<p>The table of contents is broadly organized like so:</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">format</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">jb-book</span>
+<span class="nt">root</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">index</span>
+<span class="nt">chapters</span><span class="p">:</span>
+<span class="p p-Indicator">-</span> <span class="nt">file</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">path/to/chapter1</span>
+<span class="p p-Indicator">-</span> <span class="nt">file</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">path/to/chapter2</span>
+</pre></div>
+</div>
+<p>Here is a brief explanation of each key:</p>
+<dl class="simple myst">
+<dt><code class="docutils literal notranslate"><span class="pre">format:</span></code></dt><dd><p>Defines the structure of this Table of Contents (e.g., how to interpret the key names). <code class="docutils literal notranslate"><span class="pre">jb-book</span></code> tells Jupyter Book to expect <code class="docutils literal notranslate"><span class="pre">chapters</span></code> and <code class="docutils literal notranslate"><span class="pre">parts</span></code> terminology (see below for details).</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">root:</span></code></dt><dd><p>The first page of your book (aka, the “root page”).
+It is the landing page for the HTML of your book.</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">chapters:</span></code></dt><dd><p>A list of entries, each of which maps onto <strong>chapters</strong> of your book.</p>
+</dd>
+</dl>
+<section id="use-chapter-sub-sections">
+<h3>Use chapter sub-sections<a class="headerlink" href="#use-chapter-sub-sections" title="永久链接至标题">¶</a></h3>
+<p>You may optionally split a chapter across multiple files (each making up a <strong>section</strong> of the chapter).
+To do so, use the <code class="docutils literal notranslate"><span class="pre">sections:</span></code> configuration, like so:</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">format</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">jb-book</span>
+<span class="nt">root</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">index</span>
+<span class="nt">chapters</span><span class="p">:</span>
+<span class="p p-Indicator">-</span> <span class="nt">file</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">path/to/chapter1</span>
+<span class="p p-Indicator">-</span> <span class="nt">file</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">path/to/chapter2</span>
+  <span class="nt">sections</span><span class="p">:</span>
+  <span class="p p-Indicator">-</span> <span class="nt">file</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">path/to/chapter2/section1</span>
+</pre></div>
+</div>
+<p>Here’s a brief explanation of <code class="docutils literal notranslate"><span class="pre">sections:</span></code></p>
+<dl class="simple myst">
+<dt><code class="docutils literal notranslate"><span class="pre">sections:</span></code></dt><dd><p>A list of entries that define <strong>sub-sections</strong> of a chapter.
+This is useful if you’d like to split a chapter across multiple pages.
+See <a class="reference internal" href="../structure/sections-headers.html#toc-structure"><span class="std std-ref">How headers and sections map onto to book structure</span></a> for more information.</p>
+</dd>
+</dl>
+</section>
+<section id="use-parts-to-organize-chapters">
+<h3>Use parts to organize chapters<a class="headerlink" href="#use-parts-to-organize-chapters" title="永久链接至标题">¶</a></h3>
+<p>You may optionally organize your chapters into <strong>parts</strong>, by using the <code class="docutils literal notranslate"><span class="pre">parts:</span></code> key like so:</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">format</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">jb-book</span>
+<span class="nt">root</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">index</span>
+<span class="nt">parts</span><span class="p">:</span>
+  <span class="p p-Indicator">-</span> <span class="nt">caption</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Name of Part 1</span>
+    <span class="nt">chapters</span><span class="p">:</span>
+    <span class="p p-Indicator">-</span> <span class="nt">file</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">path/to/part1/chapter1</span>
+    <span class="p p-Indicator">-</span> <span class="nt">file</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">path/to/part1/chapter2</span>
+      <span class="nt">sections</span><span class="p">:</span>
+      <span class="p p-Indicator">-</span> <span class="nt">file</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">path/to/part1/chapter2/section1</span>
+  <span class="p p-Indicator">-</span> <span class="nt">caption</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Name of Part 2</span>
+    <span class="nt">chapters</span><span class="p">:</span>
+    <span class="p p-Indicator">-</span> <span class="nt">file</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">path/to/part2/chapter1</span>
+    <span class="p p-Indicator">-</span> <span class="nt">file</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">path/to/part2/chapter2</span>
+      <span class="nt">sections</span><span class="p">:</span>
+      <span class="p p-Indicator">-</span> <span class="nt">file</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">path/to/part2/chapter2/section1</span>
+</pre></div>
+</div>
+<p>Here’s a brief explanation of <code class="docutils literal notranslate"><span class="pre">parts:</span></code></p>
+<dl class="simple myst">
+<dt><code class="docutils literal notranslate"><span class="pre">parts:</span></code></dt><dd><p>A list of entries, each of which defines a chapter.
+This is useful if you’d like to use different groups of chapters.</p>
+</dd>
+</dl>
+</section>
+</section>
+<section id="structure-of-an-article">
+<span id="structure-article"></span><h2>Structure of an Article<a class="headerlink" href="#structure-of-an-article" title="永久链接至标题">¶</a></h2>
+<p>You can build an <strong>article</strong> (e.g., a single page) rather than an entire book.
+You can build outputs for an article from a single source file, or split it up across multiple files (similar to how you’d structure a book).</p>
+<p>This section contains more information about how to do this.</p>
+<div class="admonition-work-in-progress admonition">
+<p class="admonition-title">Work in progress</p>
+<p>Article building functionality for Jupyter Book is still under design and development.
+This functionality may change over time!
+If you have ideas, suggestions, or would like to help out, please <a class="reference internal" href="../contribute/intro.html"><span class="doc std std-doc">see the contributing guide</span></a>.</p>
+</div>
+<section id="build-an-article-from-a-single-file">
+<h3>Build an article from a single file<a class="headerlink" href="#build-an-article-from-a-single-file" title="永久链接至标题">¶</a></h3>
+<p>You can generate a standalone HTML file for a single page of the Jupyter Book using the <code class="docutils literal notranslate"><span class="pre">jupyter-book</span></code> command, and pointing it to a <strong>single file</strong> instead of a book’s directory:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>jupyter-book build path/to/mypage.ipynb
+</pre></div>
+</div>
+<p>This will build the file as usual, and place it in an output folder called <code class="docutils literal notranslate"><span class="pre">_build/_page/html/&lt;mypage&gt;</span></code>.</p>
+<p>If the file is in a subdirectory relative to the <code class="docutils literal notranslate"><span class="pre">_build</span></code> folder, the HTML will be in a <code class="docutils literal notranslate"><span class="pre">_build/_page/html/&lt;subdirectory-mypage&gt;</span></code> folder.</p>
+<p>Your page will be called <code class="docutils literal notranslate"><span class="pre">mypage.html</span></code>.
+This will work for any <a class="reference internal" href="../file-types/index.html"><span class="doc std std-doc">content source file</span></a> that is supported by Jupyter Book.</p>
+</section>
+<section id="build-an-article-from-multiple-files">
+<h3>Build an article from multiple files<a class="headerlink" href="#build-an-article-from-multiple-files" title="永久链接至标题">¶</a></h3>
+<p>You may also split an article across multiple input files (e.g., if you’d like to store sections separately).
+To do so, use the <code class="docutils literal notranslate"><span class="pre">format:</span> <span class="pre">jb-article</span></code> option in your <code class="docutils literal notranslate"><span class="pre">_toc.yml</span></code> file.</p>
+<p>For example:</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">format</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">jb-article</span>
+<span class="nt">root</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">index</span>
+<span class="nt">sections</span><span class="p">:</span>
+<span class="p p-Indicator">-</span> <span class="nt">file</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">path/to/chapter1</span>
+<span class="p p-Indicator">-</span> <span class="nt">file</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">path/to/chapter2</span>
+</pre></div>
+</div>
+<p>The primary difference is that the <code class="docutils literal notranslate"><span class="pre">jb-book</span></code> format uses <code class="docutils literal notranslate"><span class="pre">parts:</span></code> and <code class="docutils literal notranslate"><span class="pre">chapters:</span></code> syntax, while the <code class="docutils literal notranslate"><span class="pre">jb-article</span></code> format uses <code class="docutils literal notranslate"><span class="pre">sections:</span></code> syntax alone.</p>
+</section>
+</section>
+<section id="types-of-content-entries">
+<h2>Types of content entries<a class="headerlink" href="#types-of-content-entries" title="永久链接至标题">¶</a></h2>
+<p>There are several types of entries that you may provide in order to point to specific types of content.
+Here is a quick overview:</p>
+<dl class="simple myst">
+<dt><code class="docutils literal notranslate"><span class="pre">file:</span></code></dt><dd><p>A path that points to a local text file, which defines the content of this entry (the chapter, section, or sub-section).
+These paths should be relative to your <code class="docutils literal notranslate"><span class="pre">_toc.yml</span></code> file.</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">glob:</span></code></dt><dd><p>A <a class="reference external" href="https://docs.python.org/3/library/glob.html">glob-like pattern</a> that can be used to match against <strong>multiple local files</strong>.
+Each of these files will be collected and inserted into your content, in the order that <code class="docutils literal notranslate"><span class="pre">glob</span></code> discovers them.</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">url:</span></code></dt><dd><p>An external link to a website (starting with <code class="docutils literal notranslate"><span class="pre">http</span></code> or <code class="docutils literal notranslate"><span class="pre">https</span></code>).
+This will be inserted into your book’s Table of Contents, though it will not affect your book’s structure (like numbering).</p>
+<p>When a <code class="docutils literal notranslate"><span class="pre">title:</span></code> entry is provided its text is used instead of the full URL.</p>
+</dd>
+</dl>
+<p>Here is an example to show all three types:</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">format</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">jb-book</span>
+<span class="nt">root</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">index</span>
+<span class="nt">chapters</span><span class="p">:</span>
+<span class="p p-Indicator">-</span> <span class="nt">file</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">path/to/chapter1</span>
+<span class="p p-Indicator">-</span> <span class="nt">url</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">https://example.com</span>
+  <span class="nt">title</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">Example website</span>
+<span class="p p-Indicator">-</span> <span class="nt">glob</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">subfolder/other*</span>
+</pre></div>
+</div>
+</section>
+<section id="generate-a-table-of-contents-from-content-files">
+<h2>Generate a Table of Contents from content files<a class="headerlink" href="#generate-a-table-of-contents-from-content-files" title="永久链接至标题">¶</a></h2>
+<p>You can use <code class="docutils literal notranslate"><span class="pre">jupyter-book</span></code> to <em>generate</em> a table of contents file from your book
+using the filenames of your book’s content. To do so, run the following command</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>jupyter-book toc from-project path/to/book -f <span class="o">[</span>jb-book/jb-article<span class="o">]</span>
+</pre></div>
+</div>
+<p>Jupyter Book will search <code class="docutils literal notranslate"><span class="pre">mybookpath/</span></code> for any <a class="reference internal" href="../file-types/index.html"><span class="doc std std-doc">content files</span></a>
+and create a <code class="docutils literal notranslate"><span class="pre">_toc.yml</span></code> file out of them. There are a few considerations to keep in mind:</p>
+<ul class="simple">
+<li><p>Each sub-folder must have at least one content file inside it</p></li>
+<li><p>The ordering of files in <code class="docutils literal notranslate"><span class="pre">_toc.yml</span></code> will depend on the alphanumeric order of
+the filenames (e.g., <code class="docutils literal notranslate"><span class="pre">folder_01</span></code> comes before <code class="docutils literal notranslate"><span class="pre">folder_02</span></code>, and <code class="docutils literal notranslate"><span class="pre">apage</span></code> comes
+before <code class="docutils literal notranslate"><span class="pre">b_page</span></code>)</p></li>
+<li><p>If there is a file called <code class="docutils literal notranslate"><span class="pre">index.md</span></code> in any folder, it will be listed first.</p></li>
+</ul>
+<p>You may also <strong>generate navigation bar <em>titles</em> from each file of your book</strong>.
+If you do so, note that if the file name begins with <code class="docutils literal notranslate"><span class="pre">&lt;integer&gt;_filename.md</span></code>, then
+the <code class="docutils literal notranslate"><span class="pre">&lt;integer&gt;</span></code> part will be removed before it is inserted into <code class="docutils literal notranslate"><span class="pre">_toc.yml</span></code>.</p>
+<p>In addition, you have a few extra options for controlling how the <code class="docutils literal notranslate"><span class="pre">_toc.yml</span></code> file is generated.</p>
+<div class="cell tag_remove-input docutils container">
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Usage: jupyter-book toc from-project [OPTIONS] SITE_DIR
+
+  Create a ToC file from a project directory.
+
+Options:
+  -e, --extension TEXT            File extensions to consider as documents
+                                  (use multiple times)  [default: .rst, .md]
+  -i, --index TEXT                File name (without suffix) considered as the
+                                  index file in a folder  [default: index]
+  -s, --skip-match TEXT           File/Folder names which match will be
+                                  ignored (use multiple times)  [default: .*]
+  -t, --guess-titles              Guess titles of documents from path names
+  -f, --file-format [default|jb-book|jb-article]
+                                  The key-mappings to use.  [default: default]
+  -h, --help                      Show this message and exit.
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "xinetzone/jupyter-book",
+            ref: "main",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./customize"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+        <div class='prev-next-bottom'>
+            
+    <a class='left-prev' id="prev-link" href="../basics/organize.html" title="previous page">Structure and organize your content</a>
+    <a class='right-next' id="next-link" href="../structure/configure.html" title="next page">Configure the Table of Contents</a>
+
+        </div>
+        
+        </div>
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          <div class="extra_footer">
+            <p class="w3-card w3-pale-blue w3-padding">
+  Copyright © 2021
+  <a href="https://github.com/xinetzone">xinetzone</a> | 
+  Powered by <a href="https://github.com/executablebooks/jupyter-book">Jupyter Book</a>.
+</p>
+
+          </div>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  
+  </body>
+</html>

@@ -1,0 +1,1284 @@
+
+<!DOCTYPE html>
+
+<html lang="zh">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Store code outputs and insert into content</title>
+    
+  <link href="../../_static/css/theme.css" rel="stylesheet" />
+  <link href="../../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-book-theme.acff12b8f9c144ce68a297486a2fa670.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/tabs.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/page.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/xin-css/main.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/w3css/4/w3pro.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/w3css/4/w3mobile.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/w3css/4/w3.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../../_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script src="../../_static/tabs.js"></script>
+    <script async="async" kind="hypothesis" src="https://hypothes.is/embed.js"></script>
+    <script kind="utterances">
+
+    var commentsRunWhenDOMLoaded = cb => {
+    if (document.readyState != 'loading') {
+        cb()
+    } else if (document.addEventListener) {
+        document.addEventListener('DOMContentLoaded', cb)
+    } else {
+        document.attachEvent('onreadystatechange', function() {
+        if (document.readyState == 'complete') cb()
+        })
+    }
+}
+
+var addUtterances = () => {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src = "https://utteranc.es/client.js";
+    script.async = "async";
+
+    script.setAttribute("repo", "xinetzone/jupyter-book");
+    script.setAttribute("issue-term", "pathname");
+    script.setAttribute("theme", "github-light");
+    script.setAttribute("label", "💬 comment");
+    script.setAttribute("crossorigin", "anonymous");
+
+    sections = document.querySelectorAll("div.section");
+    if (sections !== null) {
+        section = sections[sections.length-1];
+        section.appendChild(script);
+    }
+}
+commentsRunWhenDOMLoaded(addUtterances);
+</script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.0/dist/embed-amd.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script>
+        const thebe_selector = ".thebe,.cell"
+        const thebe_selector_input = "pre,.cell_input div.highlight"
+        const thebe_selector_output = ".output,.cell_output"
+    </script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"TeX": {"Macros": {"N": "\\mathbb{N}", "floor": ["\\lfloor#1\\rfloor", 1], "bmat": ["\\left[\\begin{array}"], "emat": ["\\end{array}\\right]"]}}, "tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <link rel="canonical" href="https://xinetzone.github.io/jupyter-book/content/executable/output-insert.html" />
+    <link rel="shortcut icon" href="../../_static/page-logo.jfif"/>
+    <link rel="index" title="索引" href="../../genindex.html" />
+    <link rel="search" title="搜索" href="../../search.html" />
+    <link rel="next" title="Interactive data visualizations" href="../../interactive/interactive.html" />
+    <link rel="prev" title="Formatting code outputs" href="../code-outputs.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../../index.html">
+      
+      <img src="../../_static/logo.jpg" class="logo" alt="logo">
+      
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <div class="bd-toc-item active">
+        <p class="caption">
+ <span class="caption-text">
+  Tutorials
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../start/your-first-book.html">
+   Create your first book
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../start/overview.html">
+     Overview
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../start/create.html">
+     Create your book’s source files
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../start/build.html">
+     Build your book
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../start/publish.html">
+     Publish your book online
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../start/example-book.html">
+     Build a small example project
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../tutorials/references.html">
+   Get started with references
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Topic Guides
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../basics/organize.html">
+   Structure and organize your content
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../customize/toc.html">
+     Structure the Table of Contents
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../structure/configure.html">
+     Configure the Table of Contents
+    </a>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../../file-types/index.html">
+     Types of content source files
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+    <label for="toctree-checkbox-3">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../file-types/markdown.html">
+       Markdown files
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../file-types/notebooks.html">
+       Jupyter Notebook files
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../file-types/myst-notebooks.html">
+       Notebooks written entirely in Markdown
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../file-types/jupytext.html">
+       Custom notebook formats and Jupytext
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../file-types/restructuredtext.html">
+       reStructuredText files
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../basics/create.html">
+     Create books automatically
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../structure/sections-headers.html">
+     How headers and sections map onto to book structure
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../index.html">
+   Write narrative content
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../myst.html">
+     MyST Markdown overview
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../content-blocks.html">
+     Special content blocks
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../references.html">
+     References and cross-references
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../layout.html">
+     Control the page layout
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../citations.html">
+     Citations and bibliographies
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../math.html">
+     Math and equations
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../figures.html">
+     Images and figures
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../metadata.html">
+     Add metadata to your book pages
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="index.html">
+   Write executable content
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+  <label for="toctree-checkbox-5">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../execute.html">
+     Execute and cache your pages
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../code-outputs.html">
+     Formatting code outputs
+    </a>
+   </li>
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     Store code outputs and insert into content
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../interactive/interactive.html">
+     Interactive data visualizations
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../basics/building/index.html">
+   Build your book outputs
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+  <label for="toctree-checkbox-6">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../basics/build.html">
+     Use the Build command line interface
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../advanced/pdf.html">
+     Build a PDF
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../web/index.html">
+   Web and internet features
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
+  <label for="toctree-checkbox-7">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../basics/repository.html">
+     Connect your book to a code repository
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../interactive/hiding.html">
+     Hide or remove content
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../interactive/launchbuttons.html">
+     Launch into interactive computing interfaces
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../interactive/thebe.html">
+     Make your code cells executable
+    </a>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../../interactive/comments.html">
+     Commenting and annotating
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
+    <label for="toctree-checkbox-8">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../interactive/comments/hypothesis.html">
+       Hypothesis
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../interactive/comments/utterances.html">
+       Utterances
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../../publish/web.html">
+     Host your book on the internet
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/>
+    <label for="toctree-checkbox-9">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../publish/gh-pages.html">
+       GitHub Pages and Actions
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../../publish/netlify.html">
+       Publish with Netlify
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../advanced/html.html">
+     Advanced HTML outputs
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../../advanced/index.html">
+   Advanced Jupyter Book Usage
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/>
+  <label for="toctree-checkbox-10">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../advanced/sphinx.html">
+     Advanced Sphinx usage
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../advanced/windows.html">
+     Working on Windows
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../../explain/sphinx.html">
+     How Jupyter Book and Sphinx relate to one another
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../contribute/intro.html">
+   为 Jupyter Book 贡献
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Reference
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../customize/config.html">
+   Configuration reference
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../reference/cheatsheet.html">
+   MyST syntax cheat sheet
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../reference/cli.html">
+   The command-line interface
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../reference/glossary.html">
+   Glossary
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  About Jupyter Book
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference external" href="https://executablebooks.org/en/latest/gallery.html">
+   Gallery of Jupyter Books
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../explain/components.html">
+   The Jupyter Book toolchain and components
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../cite.html">
+   Cite Jupyter Book
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../../reference/_changelog.html">
+   Change log
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  <div class="w3-padding w3-card-4 w3-pale-green">
+  <a href="https://github.com/xinetzone" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub"
+      data-position="top" data-delay="50">
+      <i class="fab fa-github"></i>
+  </a>
+  <a href="mailto:q735613050@163.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top"
+      data-delay="50">
+      <i class="fas fa-envelope-open"></i>
+  </a>
+  <a href="tencent://AddContact/?fromId=50&amp;fromSubId=1&amp;subcmd=all&amp;uin=735613050" class="tooltipped"
+      target="_blank" data-tooltip="QQ联系我: 735613050" data-position="top" data-delay="50">
+      <i class="fab fa-qq"></i>
+  </a>
+  <a href="https://www.zhihu.com/people/liu-xin-wei-55" class="tooltipped" target="_blank"
+      data-tooltip="关注我的知乎: liu-xin-wei-55" data-position="top" data-delay="50">
+      <i class="fab fa-zhihu1">知</i>
+  </a>
+  <a target="_blank" rel="noopener" href="https://www.linkedin.com/in/xinet" class="tooltipped"
+      data-tooltip="领英联系我: xinet" data-position="top" data-delay="50">
+      <i class="fab fa-linkedin"></i>
+  </a>
+  <div><a href="https://github.com/xinetzone/sanstyle">上善若水</a> 版权所有</div>
+</div>
+
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        <a class="dropdown-buttons"
+            href="../../_sources/content/executable/output-insert.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download notebook file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../../_sources/content/executable/output-insert.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/xinetzone/jupyter-book"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/xinetzone/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fcontent/executable/output-insert.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/xinetzone/jupyter-book/main?urlpath=tree/./content/executable/output-insert.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        <button type="button" class="btn btn-secondary topbarbtn"
+            onclick="initThebeSBT()" title="Launch Thebe" data-toggle="tooltip" data-placement="left"><i
+                class="fas fa-play"></i><span style="margin-left: .4em;">Live Code</span></button>
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#gluing-variables-in-your-notebook">
+   Gluing variables in your notebook
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#gluing-numbers-plots-and-tables">
+     Gluing numbers, plots, and tables
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#pasting-glued-variables-into-your-page">
+   Pasting glued variables into your page
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#the-glue-role-directive">
+     The
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       glue
+      </span>
+     </code>
+     role/directive
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#controlling-the-pasted-outputs">
+   Controlling the pasted outputs
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#the-glue-text-role">
+     The
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       glue:text
+      </span>
+     </code>
+     role
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#the-glue-figure-directive">
+     The
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       glue:figure
+      </span>
+     </code>
+     directive
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#the-glue-math-directive">
+     The
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       glue:math
+      </span>
+     </code>
+     directive
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#advanced-glue-use-cases">
+   Advanced
+   <code class="docutils literal notranslate">
+    <span class="pre">
+     glue
+    </span>
+   </code>
+   use-cases
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#pasting-into-tables">
+     Pasting into tables
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <section id="store-code-outputs-and-insert-into-content">
+<span id="content-code-outputs-glue"></span><h1>Store code outputs and insert into content<a class="headerlink" href="#store-code-outputs-and-insert-into-content" title="永久链接至标题">¶</a></h1>
+<p>You often wish to run analyses in one notebook and insert them in your
+documents elsewhere. For example, if you’d like to include a figure,
+or if you want to cite an analysis that you have run.</p>
+<aside class="margin sidebar">
+<p class="sidebar-title"></p>
+<p>Currently, <code class="docutils literal notranslate"><span class="pre">glue</span></code> only works with Python.</p>
+</aside>
+<p>The <code class="docutils literal notranslate"><span class="pre">glue</span></code> tool from <a class="reference external" href="https://myst-nb.readthedocs.io/">MyST-NB</a>
+allows you to add a key to variables in a notebook,
+then display those variables in your book by referencing the key. It
+follows a two-step process:</p>
+<ul class="simple">
+<li><p><strong>Glue a variable to a name</strong>. Do this by using
+the <code class="docutils literal notranslate"><span class="pre">myst_nb.glue</span></code> function on a variable
+that you’d like to re-use elsewhere in the book. You’ll give the variable
+a name that can be referenced later.</p></li>
+<li><p><strong>Reference that variable from your page’s content</strong>. Then, when you are
+writing your content, insert the variable into your text by using a
+<code class="docutils literal notranslate"><span class="pre">{glue:}</span></code> role.</p></li>
+</ul>
+<p>We’ll cover each step in more detail below.</p>
+<aside class="margin sidebar">
+<p class="sidebar-title"></p>
+<p>For more information about roles, see <a class="reference internal" href="../myst.html"><span class="doc std std-doc">MyST Markdown overview</span></a>.</p>
+</aside>
+<section id="gluing-variables-in-your-notebook">
+<span id="glue-gluing"></span><h2>Gluing variables in your notebook<a class="headerlink" href="#gluing-variables-in-your-notebook" title="永久链接至标题">¶</a></h2>
+<p>You can use <code class="docutils literal notranslate"><span class="pre">myst_nb.glue()</span></code> to assign the value of a variable to
+a key of your choice. <code class="docutils literal notranslate"><span class="pre">glue</span></code> will store all of the information that is normally used to <strong>display</strong>
+that variable (i.e., whatever happens when you display the variable by putting it at the end of a
+code cell). Choose a key that you will remember, as you will use it later.</p>
+<p>The following code glues a variable inside the notebook to the key <code class="docutils literal notranslate"><span class="pre">&quot;cool_text&quot;</span></code>:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">myst_nb</span> <span class="k">import</span> <span class="n">glue</span>
+<span class="n">my_variable</span> <span class="o">=</span> <span class="s2">&quot;here is some text!&quot;</span>
+<span class="n">glue</span><span class="p">(</span><span class="s2">&quot;cool_text&quot;</span><span class="p">,</span> <span class="n">my_variable</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;here is some text!&#39;
+</pre></div>
+</div>
+</div>
+</div>
+<p>You can then insert it into your text. Adding
+<code class="docutils literal notranslate"><span class="pre">{glue:}`cool_text`</span></code> to your content results in the
+following: <span class="pasted-inline"><code class="output text_plain docutils literal notranslate"><span class="pre">'here</span> <span class="pre">is</span> <span class="pre">some</span> <span class="pre">text!'</span></code></span>.</p>
+<section id="gluing-numbers-plots-and-tables">
+<h3>Gluing numbers, plots, and tables<a class="headerlink" href="#gluing-numbers-plots-and-tables" title="永久链接至标题">¶</a></h3>
+<p>You can glue anything in your notebook and display it later with <code class="docutils literal notranslate"><span class="pre">{glue:}</span></code>. Here
+we’ll show how to glue and paste <strong>numbers and images</strong>. We’ll simulate some
+data and run a simple bootstrap on it. We’ll hide most of this process below,
+to focus on the glueing part.</p>
+<div class="cell tag_hide-cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Simulate some data and bootstrap the mean of the data</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+
+<span class="n">n_points</span> <span class="o">=</span> <span class="mi">10000</span>
+<span class="n">n_boots</span> <span class="o">=</span> <span class="mi">1000</span>
+<span class="n">mean</span><span class="p">,</span> <span class="n">sd</span> <span class="o">=</span> <span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="o">.</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">data</span> <span class="o">=</span> <span class="n">sd</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randn</span><span class="p">(</span><span class="n">n_points</span><span class="p">)</span> <span class="o">+</span> <span class="n">mean</span>
+<span class="n">bootstrap_indices</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">n_points</span><span class="p">,</span> <span class="n">n_points</span><span class="o">*</span><span class="n">n_boots</span><span class="p">)</span><span class="o">.</span><span class="n">reshape</span><span class="p">((</span><span class="n">n_boots</span><span class="p">,</span> <span class="n">n_points</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>In the cell below, <code class="docutils literal notranslate"><span class="pre">data</span></code> contains our data, and <code class="docutils literal notranslate"><span class="pre">bootstrap_indices</span></code> is a collection of sample indices in each bootstrap. Below we’ll calculate a few statistics of interest, and
+<strong><code class="docutils literal notranslate"><span class="pre">glue()</span></code></strong> them into the notebook.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Calculate the mean of a bunch of random samples</span>
+<span class="n">means</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="n">bootstrap_indices</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+<span class="c1"># Calculate the 95% confidence interval for the mean</span>
+<span class="n">clo</span><span class="p">,</span> <span class="n">chi</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">percentile</span><span class="p">(</span><span class="n">means</span><span class="p">,</span> <span class="p">[</span><span class="mf">2.5</span><span class="p">,</span> <span class="mf">97.5</span><span class="p">])</span>
+
+<span class="c1"># Store the values in our notebook</span>
+<span class="n">glue</span><span class="p">(</span><span class="s2">&quot;boot_mean&quot;</span><span class="p">,</span> <span class="n">means</span><span class="o">.</span><span class="n">mean</span><span class="p">())</span>
+<span class="n">glue</span><span class="p">(</span><span class="s2">&quot;boot_clo&quot;</span><span class="p">,</span> <span class="n">clo</span><span class="p">)</span>
+<span class="n">glue</span><span class="p">(</span><span class="s2">&quot;boot_chi&quot;</span><span class="p">,</span> <span class="n">chi</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>3.000817935215019
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2.988249155236873
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>3.0133911323084193
+</pre></div>
+</div>
+</div>
+</div>
+<p>By default, <code class="docutils literal notranslate"><span class="pre">glue</span></code> will display the value of the variable you are gluing. This
+is useful for sanity-checking its value at glue-time. If you’d like to <strong>prevent display</strong>,
+use the <code class="docutils literal notranslate"><span class="pre">display=False</span></code> option. Note that below, we also <em>overwrite</em> the value of
+<code class="docutils literal notranslate"><span class="pre">boot_chi</span></code> (but using the same value):</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">glue</span><span class="p">(</span><span class="s2">&quot;boot_chi_notdisplayed&quot;</span><span class="p">,</span> <span class="n">chi</span><span class="p">,</span> <span class="n">display</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+</div>
+</div>
+<p>You can also glue visualizations, such as Matplotlib figures (here we use <code class="docutils literal notranslate"><span class="pre">display=False</span></code> to ensure that the figure isn’t plotted twice):</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Visualize the historgram with the intervals</span>
+<span class="n">fig</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">means</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">ln</span> <span class="ow">in</span> <span class="p">[</span><span class="n">clo</span><span class="p">,</span> <span class="n">chi</span><span class="p">]:</span>
+    <span class="n">ax</span><span class="o">.</span><span class="n">axvline</span><span class="p">(</span><span class="n">ln</span><span class="p">,</span> <span class="n">ls</span><span class="o">=</span><span class="s1">&#39;--&#39;</span><span class="p">,</span> <span class="n">c</span><span class="o">=</span><span class="s1">&#39;r&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_title</span><span class="p">(</span><span class="s2">&quot;Bootstrap distribution and 95% CI&quot;</span><span class="p">)</span>
+
+<span class="c1"># And a wider figure to show a timeseries</span>
+<span class="n">fig2</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">6</span><span class="p">,</span> <span class="mi">2</span><span class="p">))</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">sort</span><span class="p">(</span><span class="n">means</span><span class="p">),</span> <span class="n">lw</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span> <span class="n">c</span><span class="o">=</span><span class="s1">&#39;r&#39;</span><span class="p">)</span>
+<span class="n">ax</span><span class="o">.</span><span class="n">set_axis_off</span><span class="p">()</span>
+
+<span class="n">glue</span><span class="p">(</span><span class="s2">&quot;boot_fig&quot;</span><span class="p">,</span> <span class="n">fig</span><span class="p">,</span> <span class="n">display</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="n">glue</span><span class="p">(</span><span class="s2">&quot;sorted_means_fig&quot;</span><span class="p">,</span> <span class="n">fig2</span><span class="p">,</span> <span class="n">display</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../../_images/output-insert_10_2.png" src="../../_images/output-insert_10_2.png" />
+<img alt="../../_images/output-insert_10_3.png" src="../../_images/output-insert_10_3.png" />
+</div>
+</div>
+<p>The same can be done for <code class="docutils literal notranslate"><span class="pre">DataFrame</span></code>s (or other table-like objects) as well.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">bootstrap_subsets</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="n">bootstrap_indices</span><span class="p">][:</span><span class="mi">3</span><span class="p">,</span> <span class="p">:</span><span class="mi">5</span><span class="p">]</span><span class="o">.</span><span class="n">T</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">bootstrap_subsets</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;first&quot;</span><span class="p">,</span> <span class="s2">&quot;second&quot;</span><span class="p">,</span> <span class="s2">&quot;third&quot;</span><span class="p">])</span>
+<span class="n">glue</span><span class="p">(</span><span class="s2">&quot;df_tbl&quot;</span><span class="p">,</span> <span class="n">df</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>first</th>
+      <th>second</th>
+      <th>third</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>2.550719</td>
+      <td>2.959951</td>
+      <td>3.169411</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>3.353248</td>
+      <td>2.958612</td>
+      <td>2.879025</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>3.317518</td>
+      <td>2.964892</td>
+      <td>2.988907</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>2.920765</td>
+      <td>3.220203</td>
+      <td>2.757515</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>2.917758</td>
+      <td>2.915230</td>
+      <td>3.320699</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">小技巧</p>
+<p>Since we are going to paste this figure into our document at a later point,
+you may wish to remove the output here, using the <code class="docutils literal notranslate"><span class="pre">remove-output</span></code> tag
+(see <a class="reference internal" href="../../interactive/hiding.html#hiding-remove-content"><span class="std std-ref">Removing code cell content</span></a>).</p>
+</div>
+</section>
+</section>
+<section id="pasting-glued-variables-into-your-page">
+<span id="glue-pasting"></span><h2>Pasting glued variables into your page<a class="headerlink" href="#pasting-glued-variables-into-your-page" title="永久链接至标题">¶</a></h2>
+<p>Once you have glued variables to their names, you can then <strong>paste</strong>
+those variables into your text in your book anywhere you like (even on other pages).
+These variables can be pasted using one of the roles or directives in the <code class="docutils literal notranslate"><span class="pre">glue</span></code> <em>family</em>.</p>
+<section id="the-glue-role-directive">
+<h3>The <code class="docutils literal notranslate"><span class="pre">glue</span></code> role/directive<a class="headerlink" href="#the-glue-role-directive" title="永久链接至标题">¶</a></h3>
+<p>The simplest role and directive is <code class="docutils literal notranslate"><span class="pre">glue:any</span></code>,
+which pastes the glued output in-line or as a block respectively,
+with no additional formatting.
+Simply add this:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>```{glue:} your-key
+```
+</pre></div>
+</div>
+<p>For example, we’ll paste the plot we generated above with the following text:</p>
+<div class="highlight-md notranslate"><div class="highlight"><pre><span></span>```{glue:} boot_fig
+```
+</pre></div>
+</div>
+<p>Here’s how it looks:</p>
+<div class="cell_output docutils container">
+<img alt="../../_images/output-insert_10_0.png" src="../../_images/output-insert_10_0.png" />
+</div>
+<p>Or we can paste in-line objects like so:</p>
+<div class="highlight-md notranslate"><div class="highlight"><pre><span></span>In-line text; {glue:}`boot_mean`, and a figure: {glue:}`boot_fig`.
+</pre></div>
+</div>
+<p>In-line text; <span class="pasted-inline"><code class="output text_plain docutils literal notranslate"><span class="pre">3.000817935215019</span></code></span>, and a figure: <span class="pasted-inline"><img alt="../../_images/output-insert_10_0.png" src="../../_images/output-insert_10_0.png" /></span>.</p>
+<div class="admonition tip">
+<p class="admonition-title">小技巧</p>
+<p>We recommend using wider, shorter figures when plotting in-line, with a ratio
+around 6x2. For example, here’s an in-line figure of sorted means
+from our bootstrap: <span class="pasted-inline"><img alt="../../_images/output-insert_10_1.png" src="../../_images/output-insert_10_1.png" /></span>.
+It can be used to make a visual point that isn’t too complex! For more
+ideas, check out <a class="reference external" href="https://en.wikipedia.org/wiki/Sparkline">how sparklines are used</a>.</p>
+</div>
+<p>Next we’ll cover some more specific pasting functionality, which gives you more
+control over how the pasted outputs look in your pages.</p>
+</section>
+</section>
+<section id="controlling-the-pasted-outputs">
+<h2>Controlling the pasted outputs<a class="headerlink" href="#controlling-the-pasted-outputs" title="永久链接至标题">¶</a></h2>
+<p>You can control the pasted outputs by using a sub-command of <code class="docutils literal notranslate"><span class="pre">{glue:}</span></code>. These are used like so:
+<code class="docutils literal notranslate"><span class="pre">{glue:subcommand}`key`</span></code>. These subcommands allow you to control more of the look, feel, and
+content of the pasted output.</p>
+<div class="admonition tip">
+<p class="admonition-title">小技巧</p>
+<p>When you use <code class="docutils literal notranslate"><span class="pre">{glue:}</span></code> you are actually using shorthand for <code class="docutils literal notranslate"><span class="pre">{glue:any}</span></code>. This is a
+generic command that doesn’t make many assumptions about what you are gluing.</p>
+</div>
+<section id="the-glue-text-role">
+<h3>The <code class="docutils literal notranslate"><span class="pre">glue:text</span></code> role<a class="headerlink" href="#the-glue-text-role" title="永久链接至标题">¶</a></h3>
+<p>The <code class="docutils literal notranslate"><span class="pre">glue:text</span></code> role is specific to text outputs.
+For example, the following text:</p>
+<div class="highlight-md notranslate"><div class="highlight"><pre><span></span>The mean of the bootstrapped distribution was {glue:text}`boot_mean` (95% confidence interval {glue:text}`boot_clo`/{glue:text}`boot_chi`).
+</pre></div>
+</div>
+<p>Is rendered as:
+The mean of the bootstrapped distribution was <span class="pasted-text">3.000817935215019</span> (95% confidence interval <span class="pasted-text">2.988249155236873</span>/<span class="pasted-text">3.0133911323084193</span>)</p>
+<div class="admonition note">
+<p class="admonition-title">注解</p>
+<p><code class="docutils literal notranslate"><span class="pre">glue:text</span></code> only works with glued variables that contain a <code class="docutils literal notranslate"><span class="pre">text/plain</span></code> output.</p>
+</div>
+<p>With <code class="docutils literal notranslate"><span class="pre">glue:text</span></code> we can <strong>add formatting to the output</strong>.
+This is particularly useful if you are displaying numbers and
+want to round the results. To add formatting, use this syntax:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">{glue:text}`mykey:formatstring`</span></code></p></li>
+</ul>
+<p>For example, <code class="docutils literal notranslate"><span class="pre">My</span> <span class="pre">rounded</span> <span class="pre">mean:</span> <span class="pre">{glue:text}`boot_mean:.2f`</span> </code> will be rendered like this: My rounded mean: <span class="pasted-text">3.00</span> (95% CI: <span class="pasted-text">2.99</span>/<span class="pasted-text">3.01</span>).</p>
+</section>
+<section id="the-glue-figure-directive">
+<h3>The <code class="docutils literal notranslate"><span class="pre">glue:figure</span></code> directive<a class="headerlink" href="#the-glue-figure-directive" title="永久链接至标题">¶</a></h3>
+<p>With <code class="docutils literal notranslate"><span class="pre">glue:figure</span></code> you can apply more formatting to figure-like objects,
+such as giving them a caption and referenceable label. For example,</p>
+<div class="highlight-md notranslate"><div class="highlight"><pre><span></span>```{glue:figure} boot_fig
+:figwidth: 300px
+:name: &quot;fig-boot&quot;
+
+This is a <span class="gs">**caption**</span>, with an embedded <span class="sb">`{glue:text}`</span> element: {glue:text}`boot_mean:.2f`!
+```
+</pre></div>
+</div>
+<p>produces the following figure:</p>
+<figure class="align-default" id="fig-boot" style="width: 300px">
+<div class="cell_output docutils container">
+<img alt="../../_images/output-insert_10_0.png" src="../../_images/output-insert_10_0.png" />
+</div>
+<figcaption>
+<p><span class="caption-number">图 10 </span><span class="caption-text">This is a <strong>caption</strong>, with an embedded <code class="docutils literal notranslate"><span class="pre">{glue:text}</span></code> element: <span class="pasted-text">3.00</span>!</span><a class="headerlink" href="#fig-boot" title="永久链接至图片">¶</a></p>
+</figcaption>
+</figure>
+<p>Later, the code</p>
+<div class="highlight-md notranslate"><div class="highlight"><pre><span></span>Here is a {ref}`reference to the figure &lt;fig-boot&gt;`
+</pre></div>
+</div>
+<p>can be used to reference the figure.</p>
+<p>Here is a <a class="reference internal" href="#fig-boot"><span class="std std-ref">reference to the figure</span></a></p>
+<p>Here’s a table:</p>
+<div class="highlight-md notranslate"><div class="highlight"><pre><span></span>```{glue:figure} df_tbl
+:figwidth: 300px
+:name: &quot;tbl:df&quot;
+
+A caption for a pandas table.
+```
+</pre></div>
+</div>
+<p>which gets rendered as</p>
+<figure class="align-default" id="tbl-df" style="width: 300px">
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>first</th>
+      <th>second</th>
+      <th>third</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>2.550719</td>
+      <td>2.959951</td>
+      <td>3.169411</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>3.353248</td>
+      <td>2.958612</td>
+      <td>2.879025</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>3.317518</td>
+      <td>2.964892</td>
+      <td>2.988907</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>2.920765</td>
+      <td>3.220203</td>
+      <td>2.757515</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>2.917758</td>
+      <td>2.915230</td>
+      <td>3.320699</td>
+    </tr>
+  </tbody>
+</table>
+</div></div></div>
+<figcaption>
+<p><span class="caption-number">图 11 </span><span class="caption-text">A caption for a pandas table.</span><a class="headerlink" href="#tbl-df" title="永久链接至图片">¶</a></p>
+</figcaption>
+</figure>
+</section>
+<section id="the-glue-math-directive">
+<h3>The <code class="docutils literal notranslate"><span class="pre">glue:math</span></code> directive<a class="headerlink" href="#the-glue-math-directive" title="永久链接至标题">¶</a></h3>
+<p>The <code class="docutils literal notranslate"><span class="pre">glue:math</span></code> directive is specific to LaTeX math outputs
+(glued variables that contain a <code class="docutils literal notranslate"><span class="pre">text/latex</span></code> MIME type),
+and works similarly to the <a class="reference external" href="https://www.sphinx-doc.org/en/1.8/usage/restructuredtext/directives.html#math">Sphinx math directive</a>.
+For example, with this code we glue an equation:</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">sympy</span> <span class="k">as</span> <span class="nn">sym</span>
+<span class="n">f</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">Function</span><span class="p">(</span><span class="s1">&#39;f&#39;</span><span class="p">)</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">Function</span><span class="p">(</span><span class="s1">&#39;y&#39;</span><span class="p">)</span>
+<span class="n">n</span> <span class="o">=</span> <span class="n">sym</span><span class="o">.</span><span class="n">symbols</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;\alpha&#39;</span><span class="p">)</span>
+<span class="n">f</span> <span class="o">=</span> <span class="n">y</span><span class="p">(</span><span class="n">n</span><span class="p">)</span><span class="o">-</span><span class="mi">2</span><span class="o">*</span><span class="n">y</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="mi">1</span><span class="o">/</span><span class="n">sym</span><span class="o">.</span><span class="n">pi</span><span class="p">)</span><span class="o">-</span><span class="mi">5</span><span class="o">*</span><span class="n">y</span><span class="p">(</span><span class="n">n</span><span class="o">-</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">glue</span><span class="p">(</span><span class="s2">&quot;sym_eq&quot;</span><span class="p">,</span> <span class="n">sym</span><span class="o">.</span><span class="n">rsolve</span><span class="p">(</span><span class="n">f</span><span class="p">,</span><span class="n">y</span><span class="p">(</span><span class="n">n</span><span class="p">),[</span><span class="mi">1</span><span class="p">,</span><span class="mi">4</span><span class="p">]))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_latex math notranslate nohighlight">
+\[\displaystyle \left(\sqrt{5} i\right)^{\alpha} \left(\frac{1}{2} - \frac{2 \sqrt{5} i}{5}\right) + \left(- \sqrt{5} i\right)^{\alpha} \left(\frac{1}{2} + \frac{2 \sqrt{5} i}{5}\right)\]</div>
+</div>
+</div>
+<p>and now we can use the following code:</p>
+<div class="highlight-md notranslate"><div class="highlight"><pre><span></span>```{glue:math} sym_eq
+:label: eq-sym
+```
+</pre></div>
+</div>
+<p>to insert the equation here:</p>
+<div class="pasted-math math notranslate nohighlight" id="equation-eq-sym">
+<span class="eqno">()<a class="headerlink" href="#equation-eq-sym" title="公式的永久链接">¶</a></span>\[\displaystyle \left(\sqrt{5} i\right)^{\alpha} \left(\frac{1}{2} - \frac{2 \sqrt{5} i}{5}\right) + \left(- \sqrt{5} i\right)^{\alpha} \left(\frac{1}{2} + \frac{2 \sqrt{5} i}{5}\right)\]</div>
+<div class="admonition note">
+<p class="admonition-title">注解</p>
+<p><code class="docutils literal notranslate"><span class="pre">glue:math</span></code> only works with glued variables that contain a <code class="docutils literal notranslate"><span class="pre">text/latex</span></code> output.</p>
+</div>
+</section>
+</section>
+<section id="advanced-glue-use-cases">
+<h2>Advanced <code class="docutils literal notranslate"><span class="pre">glue</span></code> use-cases<a class="headerlink" href="#advanced-glue-use-cases" title="永久链接至标题">¶</a></h2>
+<p>Here are a few more specific and advanced uses of the <code class="docutils literal notranslate"><span class="pre">glue</span></code> submodule.</p>
+<section id="pasting-into-tables">
+<h3>Pasting into tables<a class="headerlink" href="#pasting-into-tables" title="永久链接至标题">¶</a></h3>
+<p>In addition to pasting blocks of outputs, or in-line with text, you can also paste directly
+into tables. This allows you to compose complex collections of structured data using outputs
+that were generated in other cells or other notebooks. For example, the following Markdown table:</p>
+<div class="highlight-md notranslate"><div class="highlight"><pre><span></span>| name                            |       plot                    | mean                      | ci                                                |
+|:-------------------------------:|:-----------------------------:|---------------------------|---------------------------------------------------|
+| histogram and raw text          | {glue:}`boot_fig`             | {glue:}`boot_mean`          | {glue:}`boot_clo`-{glue:}`boot_chi`                   |
+| sorted means and formatted text | {glue:}`sorted_means_fig`     | {glue:text}`boot_mean:.3f` | {glue:text}`boot_clo:.3f`-{glue:text}`boot_chi:.3f` |
+</pre></div>
+</div>
+<p>Results in:</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="text-align:center head"><p>name</p></th>
+<th class="text-align:center head"><p>plot</p></th>
+<th class="head"><p>mean</p></th>
+<th class="head"><p>ci</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td class="text-align:center"><p>histogram and raw text</p></td>
+<td class="text-align:center"><p><span class="pasted-inline"><img alt="../../_images/output-insert_10_0.png" src="../../_images/output-insert_10_0.png" /></span></p></td>
+<td><p><span class="pasted-inline"><code class="output text_plain docutils literal notranslate"><span class="pre">3.000817935215019</span></code></span></p></td>
+<td><p><span class="pasted-inline"><code class="output text_plain docutils literal notranslate"><span class="pre">2.988249155236873</span></code></span>-<span class="pasted-inline"><code class="output text_plain docutils literal notranslate"><span class="pre">3.0133911323084193</span></code></span></p></td>
+</tr>
+<tr class="row-odd"><td class="text-align:center"><p>sorted means and formatted text</p></td>
+<td class="text-align:center"><p><span class="pasted-inline"><img alt="../../_images/output-insert_10_1.png" src="../../_images/output-insert_10_1.png" /></span></p></td>
+<td><p><span class="pasted-text">3.001</span></p></td>
+<td><p><span class="pasted-text">2.988</span>-<span class="pasted-text">3.013</span></p></td>
+</tr>
+</tbody>
+</table>
+</section>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "xinetzone/jupyter-book",
+            ref: "main",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./content/executable"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+        <div class='prev-next-bottom'>
+            
+    <a class='left-prev' id="prev-link" href="../code-outputs.html" title="previous page">Formatting code outputs</a>
+    <a class='right-next' id="next-link" href="../../interactive/interactive.html" title="next page">Interactive data visualizations</a>
+
+        </div>
+        
+        </div>
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          <div class="extra_footer">
+            <p class="w3-card w3-pale-blue w3-padding">
+  Copyright © 2021
+  <a href="https://github.com/xinetzone">xinetzone</a> | 
+  Powered by <a href="https://github.com/executablebooks/jupyter-book">Jupyter Book</a>.
+</p>
+
+          </div>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  
+  </body>
+</html>

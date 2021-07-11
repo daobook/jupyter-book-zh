@@ -1,0 +1,5 @@
+# Jupyter Book 中文
+
+[![GitHub issues](https://img.shields.io/github/issues/xinetzone/jupyter-book)](https://github.com/xinetzone/jupyter-book/issues) [![GitHub forks](https://img.shields.io/github/forks/xinetzone/jupyter-book)](https://github.com/xinetzone/jupyter-book/network) [![GitHub stars](https://img.shields.io/github/stars/xinetzone/jupyter-book)](https://github.com/xinetzone/jupyter-book/stargazers) [![GitHub license](https://img.shields.io/github/license/xinetzone/jupyter-book)](https://github.com/xinetzone/jupyter-book/blob/main/LICENSE)  ![repo size](https://img.shields.io/github/repo-size/xinetzone/jupyter-book.svg) [![contributors](https://img.shields.io/github/contributors/xinetzone/jupyter-book.svg)](https://github.com/xinetzone/jupyter-book/graphs/contributors) [![watcher](https://img.shields.io/github/watchers/xinetzone/jupyter-book.svg)](https://github.com/xinetzone/jupyter-book/watchers) ![](https://github.com/xinetzone/jupyter-book/actions/workflows/docs.yml/badge.svg)
+
+本项目是 [executablebooks/jupyter-book](https://github.com/executablebooks/jupyter-book) 的中文版本。

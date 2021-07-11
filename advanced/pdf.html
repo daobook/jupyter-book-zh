@@ -1,0 +1,986 @@
+
+<!DOCTYPE html>
+
+<html lang="zh">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Build a PDF</title>
+    
+  <link href="../_static/css/theme.css" rel="stylesheet" />
+  <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-book-theme.acff12b8f9c144ce68a297486a2fa670.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/tabs.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/page.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/xin-css/main.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/w3css/4/w3pro.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/w3css/4/w3mobile.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/w3css/4/w3.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/tabs.js"></script>
+    <script async="async" kind="hypothesis" src="https://hypothes.is/embed.js"></script>
+    <script kind="utterances">
+
+    var commentsRunWhenDOMLoaded = cb => {
+    if (document.readyState != 'loading') {
+        cb()
+    } else if (document.addEventListener) {
+        document.addEventListener('DOMContentLoaded', cb)
+    } else {
+        document.attachEvent('onreadystatechange', function() {
+        if (document.readyState == 'complete') cb()
+        })
+    }
+}
+
+var addUtterances = () => {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src = "https://utteranc.es/client.js";
+    script.async = "async";
+
+    script.setAttribute("repo", "xinetzone/jupyter-book");
+    script.setAttribute("issue-term", "pathname");
+    script.setAttribute("theme", "github-light");
+    script.setAttribute("label", "💬 comment");
+    script.setAttribute("crossorigin", "anonymous");
+
+    sections = document.querySelectorAll("div.section");
+    if (sections !== null) {
+        section = sections[sections.length-1];
+        section.appendChild(script);
+    }
+}
+commentsRunWhenDOMLoaded(addUtterances);
+</script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.0/dist/embed-amd.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script>
+        const thebe_selector = ".thebe,.cell"
+        const thebe_selector_input = "pre,.cell_input div.highlight"
+        const thebe_selector_output = ".output,.cell_output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="canonical" href="https://xinetzone.github.io/jupyter-book/advanced/pdf.html" />
+    <link rel="shortcut icon" href="../_static/page-logo.jfif"/>
+    <link rel="index" title="索引" href="../genindex.html" />
+    <link rel="search" title="搜索" href="../search.html" />
+    <link rel="next" title="Web and internet features" href="../web/index.html" />
+    <link rel="prev" title="Use the Build command line interface" href="../basics/build.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+      <img src="../_static/logo.jpg" class="logo" alt="logo">
+      
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <div class="bd-toc-item active">
+        <p class="caption">
+ <span class="caption-text">
+  Tutorials
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../start/your-first-book.html">
+   Create your first book
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../start/overview.html">
+     Overview
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../start/create.html">
+     Create your book’s source files
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../start/build.html">
+     Build your book
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../start/publish.html">
+     Publish your book online
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../start/example-book.html">
+     Build a small example project
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../tutorials/references.html">
+   Get started with references
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Topic Guides
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../basics/organize.html">
+   Structure and organize your content
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../customize/toc.html">
+     Structure the Table of Contents
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../structure/configure.html">
+     Configure the Table of Contents
+    </a>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../file-types/index.html">
+     Types of content source files
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+    <label for="toctree-checkbox-3">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../file-types/markdown.html">
+       Markdown files
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../file-types/notebooks.html">
+       Jupyter Notebook files
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../file-types/myst-notebooks.html">
+       Notebooks written entirely in Markdown
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../file-types/jupytext.html">
+       Custom notebook formats and Jupytext
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../file-types/restructuredtext.html">
+       reStructuredText files
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../basics/create.html">
+     Create books automatically
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../structure/sections-headers.html">
+     How headers and sections map onto to book structure
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../content/index.html">
+   Write narrative content
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../content/myst.html">
+     MyST Markdown overview
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../content/content-blocks.html">
+     Special content blocks
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../content/references.html">
+     References and cross-references
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../content/layout.html">
+     Control the page layout
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../content/citations.html">
+     Citations and bibliographies
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../content/math.html">
+     Math and equations
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../content/figures.html">
+     Images and figures
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../content/metadata.html">
+     Add metadata to your book pages
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../content/executable/index.html">
+   Write executable content
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+  <label for="toctree-checkbox-5">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../content/execute.html">
+     Execute and cache your pages
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../content/code-outputs.html">
+     Formatting code outputs
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../content/executable/output-insert.html">
+     Store code outputs and insert into content
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../interactive/interactive.html">
+     Interactive data visualizations
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="../basics/building/index.html">
+   Build your book outputs
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+  <label for="toctree-checkbox-6">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2">
+    <a class="reference internal" href="../basics/build.html">
+     Use the Build command line interface
+    </a>
+   </li>
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     Build a PDF
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../web/index.html">
+   Web and internet features
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
+  <label for="toctree-checkbox-7">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../basics/repository.html">
+     Connect your book to a code repository
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../interactive/hiding.html">
+     Hide or remove content
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../interactive/launchbuttons.html">
+     Launch into interactive computing interfaces
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../interactive/thebe.html">
+     Make your code cells executable
+    </a>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../interactive/comments.html">
+     Commenting and annotating
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
+    <label for="toctree-checkbox-8">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../interactive/comments/hypothesis.html">
+       Hypothesis
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../interactive/comments/utterances.html">
+       Utterances
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../publish/web.html">
+     Host your book on the internet
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/>
+    <label for="toctree-checkbox-9">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../publish/gh-pages.html">
+       GitHub Pages and Actions
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../publish/netlify.html">
+       Publish with Netlify
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="html.html">
+     Advanced HTML outputs
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="index.html">
+   Advanced Jupyter Book Usage
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/>
+  <label for="toctree-checkbox-10">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="sphinx.html">
+     Advanced Sphinx usage
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="windows.html">
+     Working on Windows
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../explain/sphinx.html">
+     How Jupyter Book and Sphinx relate to one another
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../contribute/intro.html">
+   为 Jupyter Book 贡献
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Reference
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../customize/config.html">
+   Configuration reference
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../reference/cheatsheet.html">
+   MyST syntax cheat sheet
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../reference/cli.html">
+   The command-line interface
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../reference/glossary.html">
+   Glossary
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  About Jupyter Book
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference external" href="https://executablebooks.org/en/latest/gallery.html">
+   Gallery of Jupyter Books
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../explain/components.html">
+   The Jupyter Book toolchain and components
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../cite.html">
+   Cite Jupyter Book
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../reference/_changelog.html">
+   Change log
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  <div class="w3-padding w3-card-4 w3-pale-green">
+  <a href="https://github.com/xinetzone" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub"
+      data-position="top" data-delay="50">
+      <i class="fab fa-github"></i>
+  </a>
+  <a href="mailto:q735613050@163.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top"
+      data-delay="50">
+      <i class="fas fa-envelope-open"></i>
+  </a>
+  <a href="tencent://AddContact/?fromId=50&amp;fromSubId=1&amp;subcmd=all&amp;uin=735613050" class="tooltipped"
+      target="_blank" data-tooltip="QQ联系我: 735613050" data-position="top" data-delay="50">
+      <i class="fab fa-qq"></i>
+  </a>
+  <a href="https://www.zhihu.com/people/liu-xin-wei-55" class="tooltipped" target="_blank"
+      data-tooltip="关注我的知乎: liu-xin-wei-55" data-position="top" data-delay="50">
+      <i class="fab fa-zhihu1">知</i>
+  </a>
+  <a target="_blank" rel="noopener" href="https://www.linkedin.com/in/xinet" class="tooltipped"
+      data-tooltip="领英联系我: xinet" data-position="top" data-delay="50">
+      <i class="fab fa-linkedin"></i>
+  </a>
+  <div><a href="https://github.com/xinetzone/sanstyle">上善若水</a> 版权所有</div>
+</div>
+
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/advanced/pdf.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/xinetzone/jupyter-book"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/xinetzone/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fadvanced/pdf.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#build-a-pdf-from-your-book-html">
+   Build a PDF from your book HTML
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#installation">
+     Installation
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#build">
+     Build
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#control-the-look-of-pdf-via-html">
+     Control the look of PDF via HTML
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#build-a-pdf-using-latex">
+   Build a PDF using LaTeX
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id1">
+     Installation
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id2">
+     Build
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#updating-the-name-of-the-global-pdf-file">
+     Updating the name of the Global PDF file
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#using-a-different-latex-engine">
+     Using a different LaTeX engine
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#other-sphinx-latex-settings">
+     Other Sphinx LaTeX settings
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <section id="build-a-pdf">
+<h1>Build a PDF<a class="headerlink" href="#build-a-pdf" title="永久链接至标题">¶</a></h1>
+<p>It is possible to build a single PDF that contains all of your book’s content. This
+page describes a couple ways to do so.</p>
+<div class="admonition warning">
+<p class="admonition-title">警告</p>
+<p>PDF building is experimental, and may change or have bugs.</p>
+</div>
+<p>There are two approaches to building PDF files.</p>
+<section id="build-a-pdf-from-your-book-html">
+<span id="pdf-html"></span><h2>Build a PDF from your book HTML<a class="headerlink" href="#build-a-pdf-from-your-book-html" title="永久链接至标题">¶</a></h2>
+<p>It is possible to build a single PDF from your book’s HTML. This starts by
+converting all of your book’s content into a single HTML file, and then renders
+it as a PDF by emulating a browser from the command-line.</p>
+<section id="installation">
+<h3>Installation<a class="headerlink" href="#installation" title="永久链接至标题">¶</a></h3>
+<p>Your system will need to use <code class="docutils literal notranslate"><span class="pre">pyppeteer</span></code> to parse the generated HTML for
+conversion to PDF.</p>
+<p>You can install it like so:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip install pyppeteer
+</pre></div>
+</div>
+<p>You may also need to install this bundle of packages below (on *nix systems):</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">gconf</span><span class="o">-</span><span class="n">service</span>
+<span class="n">libasound2</span>
+<span class="n">libatk1</span><span class="o">.</span><span class="mi">0</span><span class="o">-</span><span class="mi">0</span>
+<span class="n">libatk</span><span class="o">-</span><span class="n">bridge2</span><span class="o">.</span><span class="mi">0</span><span class="o">-</span><span class="mi">0</span>
+<span class="n">libc6</span>
+<span class="n">libcairo2</span>
+<span class="n">libcups2</span>
+<span class="n">libdbus</span><span class="o">-</span><span class="mi">1</span><span class="o">-</span><span class="mi">3</span>
+<span class="n">libexpat1</span>
+<span class="n">libfontconfig1</span>
+<span class="n">libgcc1</span>
+<span class="n">libgconf</span><span class="o">-</span><span class="mi">2</span><span class="o">-</span><span class="mi">4</span>
+<span class="n">libgdk</span><span class="o">-</span><span class="n">pixbuf2</span><span class="o">.</span><span class="mi">0</span><span class="o">-</span><span class="mi">0</span>
+<span class="n">libglib2</span><span class="o">.</span><span class="mi">0</span><span class="o">-</span><span class="mi">0</span>
+<span class="n">libgtk</span><span class="o">-</span><span class="mi">3</span><span class="o">-</span><span class="mi">0</span>
+<span class="n">libnspr4</span>
+<span class="n">libpango</span><span class="o">-</span><span class="mf">1.0</span><span class="o">-</span><span class="mi">0</span>
+<span class="n">libpangocairo</span><span class="o">-</span><span class="mf">1.0</span><span class="o">-</span><span class="mi">0</span>
+<span class="n">libstdc</span><span class="o">++</span><span class="mi">6</span>
+<span class="n">libx11</span><span class="o">-</span><span class="mi">6</span>
+<span class="n">libx11</span><span class="o">-</span><span class="n">xcb1</span>
+<span class="n">libxcb1</span>
+<span class="n">libxcomposite1</span>
+<span class="n">libxcursor1</span>
+<span class="n">libxdamage1</span>
+<span class="n">libxext6</span>
+<span class="n">libxfixes3</span>
+<span class="n">libxi6</span>
+<span class="n">libxrandr2</span>
+<span class="n">libxrender1</span>
+<span class="n">libxss1</span>
+<span class="n">libxtst6</span>
+<span class="n">ca</span><span class="o">-</span><span class="n">certificates</span>
+<span class="n">fonts</span><span class="o">-</span><span class="n">liberation</span>
+<span class="n">libappindicator1</span>
+<span class="n">libnss3</span>
+<span class="n">lsb</span><span class="o">-</span><span class="n">release</span>
+<span class="n">xdg</span><span class="o">-</span><span class="n">utils</span>
+<span class="n">wget</span>
+</pre></div>
+</div>
+<aside class="margin sidebar">
+<p class="sidebar-title"></p>
+<p>In addition, if you get errors about libraries that don’t exist, check out
+<a class="reference external" href="https://circleci.com/orbs/registry/orb/threetreeslight/puppeteer">these install commands</a>
+to see if that fixes it. We warned you it was an experimental feature :-)</p>
+</aside>
+</section>
+<section id="build">
+<h3>Build<a class="headerlink" href="#build" title="永久链接至标题">¶</a></h3>
+<p>To build a single PDF from your book’s HTML, use the following command:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>jupyter-book build mybookname/ --builder pdfhtml
+</pre></div>
+</div>
+<p>or</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>jb build mybookname/ --builder pdfhtml
+</pre></div>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">警告</p>
+<p>If you get a “MaxRetryError” and see mentions of SSL in the error message when building the PDF,
+this could be due to a bug in <code class="docutils literal notranslate"><span class="pre">pyppeteer</span></code> as it downloads Chromium for the first time.
+See <a class="reference external" href="https://github.com/miyakogi/pyppeteer/issues/258#issuecomment-563075764">this GitHub comment</a>
+for a potential fix, and <a class="reference external" href="https://github.com/executablebooks/jupyter-book/issues/593">this Jupyter Book issue</a>
+where we’re tracking the issue.</p>
+</div>
+</section>
+<section id="control-the-look-of-pdf-via-html">
+<h3>Control the look of PDF via HTML<a class="headerlink" href="#control-the-look-of-pdf-via-html" title="永久链接至标题">¶</a></h3>
+<p>Because you are using HTML as an intermediary for your book’s PDF, you can control the look and feel of the HTML via your own CSS rules. Most CSS changes that you make to your HTML website will also persist in the PDF version of that website. For information about how to define your own CSS rules, see <a class="reference internal" href="html.html#custom-assets"><span class="std std-ref">Custom CSS or JavaScript</span></a>.</p>
+<p>To add CSS rules that <strong>only apply to the printed PDF</strong>, use the <code class="docutils literal notranslate"><span class="pre">&#64;media</span> <span class="pre">print</span></code> CSS pattern to define print-specific rules. These will <em>only</em> be applied when the HTML is being printed, and will not show up in your non-PDF website.</p>
+<p>For example, to <strong>hide the right table of contents</strong> at print time, you could add this rule:</p>
+<div class="highlight-scss notranslate"><div class="highlight"><pre><span></span><span class="k">@media</span> <span class="n">print</span> <span class="p">{</span>
+    <span class="nc">.bd-toc</span> <span class="p">{</span>
+        <span class="nt">visibility</span><span class="nd">:</span> <span class="nt">hidden</span><span class="o">;</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>The right Table of Contents would be present in your live website, but hidden when someone printed a PDF of your website.</p>
+</section>
+</section>
+<section id="build-a-pdf-using-latex">
+<span id="pdf-latex"></span><h2>Build a PDF using LaTeX<a class="headerlink" href="#build-a-pdf-using-latex" title="永久链接至标题">¶</a></h2>
+<p>You can also use LaTeX to build a PDF of your book.
+This can behave differently depending on your operating system and <code class="docutils literal notranslate"><span class="pre">tex</span></code> setup.
+This section tries to recommend a few best-practices.</p>
+<div class="admonition note">
+<p class="admonition-title">注解</p>
+<p>We recommend using the <a class="reference external" href="https://www.tug.org/texlive/">texlive</a> distribution</p>
+</div>
+<p>The default is to build your project as a single PDF file, however it is possible to build
+individual PDF files for each page of the project by enabling the <code class="docutils literal notranslate"><span class="pre">--individualpages</span></code> option
+when using the <code class="docutils literal notranslate"><span class="pre">pdflatex</span></code> builder.</p>
+<section id="id1">
+<h3>Installation<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h3>
+<p>For <code class="docutils literal notranslate"><span class="pre">Debian</span></code>-based <code class="docutils literal notranslate"><span class="pre">Linux</span></code> platforms it is recommended to install the following packages:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo apt-get install texlive-latex-recommended texlive-latex-extra <span class="se">\</span>
+                     texlive-fonts-recommended texlive-fonts-extra <span class="se">\</span>
+                     texlive-xetex latexmk
+</pre></div>
+</div>
+<p>Alternatively you can install the full <a class="reference external" href="https://www.tug.org/texlive/quickinstall.html">TeX Live</a> distribution.</p>
+<p>For <code class="docutils literal notranslate"><span class="pre">OSX</span></code> you may want to use <a class="reference external" href="http://www.tug.org/mactex/">MacTeX</a> which is a more
+user friendly approach. Alternatively you may also use <a class="reference external" href="https://www.tug.org/texlive/quickinstall.html">TeX Live</a>.</p>
+<p>For <code class="docutils literal notranslate"><span class="pre">Windows</span></code> users, please install <a class="reference external" href="https://www.tug.org/texlive/windows.html">TeX Live</a>.</p>
+</section>
+<section id="id2">
+<h3>Build<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h3>
+<p><code class="docutils literal notranslate"><span class="pre">jupyter-book</span></code> uses the <a class="reference external" href="https://github.com/executablebooks/sphinx-jupyterbook-latex">sphinx-jupyterbook-latex</a> package
+which handles much of the customised LaTeX infrastructure. A feature list of this package can be found
+<a class="reference external" href="https://github.com/executablebooks/sphinx-jupyterbook-latex/blob/master/docs/intro.md#feature-list">here</a>.</p>
+<p>This package enables building <code class="docutils literal notranslate"><span class="pre">pdf</span></code> files with full support for the <code class="docutils literal notranslate"><span class="pre">file</span></code> and <code class="docutils literal notranslate"><span class="pre">part/chapter</span></code>
+<a class="reference external" href="https://jupyterbook.org/customize/toc.html">structures that are defined in the _toc.yml</a>. This builds
+<code class="docutils literal notranslate"><span class="pre">pdf</span></code> files that are similar in structure to the <code class="docutils literal notranslate"><span class="pre">html</span></code> output.</p>
+<p>If you need to <strong>turn off</strong> this package, the following config is required:</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">latex</span><span class="p">:</span>
+  <span class="nt">use_jupyterbook_latex</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">false</span>
+</pre></div>
+</div>
+<p>To build a PDF of your project using LaTeX, use the following command:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>jupyter-book build mybookname/ --builder pdflatex
+</pre></div>
+</div>
+<p>or</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>jb build mybookname/ --builder pdflatex
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">注解</p>
+<p>If you would just like to generate the <strong>latex</strong> file you may use:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>jb build mybookname/ --builder latex
+</pre></div>
+</div>
+</div>
+<p><strong>Individual PDF Files:</strong></p>
+<div class="admonition warning">
+<p class="admonition-title">警告</p>
+<p>The current implementation of <code class="docutils literal notranslate"><span class="pre">--individualpages</span></code> does <strong>not</strong> make use of the improvements
+introduced by <a class="reference external" href="https://github.com/executablebooks/sphinx-jupyterbook-latex">sphinx-jupyterbook-latex</a> and
+uses the default <code class="docutils literal notranslate"><span class="pre">latex</span></code> writer included with Sphinx.
+We are currently working on making improvements to how <code class="docutils literal notranslate"><span class="pre">--individualpages</span></code> are constructed.
+You can track progress <a class="reference external" href="https://github.com/executablebooks/sphinx-jupyterbook-latex/issues/41">here</a></p>
+</div>
+<p>To build PDF files for each page of the project,
+you can specify the option <code class="docutils literal notranslate"><span class="pre">--individualpages</span></code> for <code class="docutils literal notranslate"><span class="pre">--builder=pdflatex</span></code>.</p>
+<p>The individual PDF files will be available in the <code class="docutils literal notranslate"><span class="pre">_build/latex</span></code> build folder.
+These files will have the same name as the source file or, if nested in folders, will be named <code class="docutils literal notranslate"><span class="pre">{folder}-{filename}.pdf</span></code>.</p>
+<div class="admonition note">
+<p class="admonition-title">注解</p>
+<p>When specifying a page using the <code class="docutils literal notranslate"><span class="pre">build</span></code> command,
+the <code class="docutils literal notranslate"><span class="pre">--individualpages</span></code> will automatically be set to <code class="docutils literal notranslate"><span class="pre">True</span></code>.</p>
+<p>In the future we intend for this to produce latex documents more suitable to single pages
+(see <a class="reference external" href="https://github.com/executablebooks/jupyter-book/issues/904">issue #904</a>).</p>
+</div>
+</section>
+<section id="updating-the-name-of-the-global-pdf-file">
+<h3>Updating the name of the Global PDF file<a class="headerlink" href="#updating-the-name-of-the-global-pdf-file" title="永久链接至标题">¶</a></h3>
+<p>To update the name of your <code class="docutils literal notranslate"><span class="pre">PDF</span></code> file you can set the following in <code class="docutils literal notranslate"><span class="pre">_config.yml</span></code></p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">latex</span><span class="p">:</span>
+  <span class="nt">latex_documents</span><span class="p">:</span>
+     <span class="nt">targetname</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">book.tex</span>
+</pre></div>
+</div>
+<p>This will act as an automatic <code class="docutils literal notranslate"><span class="pre">override</span></code> when Sphinx builds the
+<a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/configuration.html#confval-latex_documents">latex_documents</a>. It is typically inferred by <code class="docutils literal notranslate"><span class="pre">Sphinx</span></code> but when
+using <code class="docutils literal notranslate"><span class="pre">jupyter-book</span></code> naming the file in the <code class="docutils literal notranslate"><span class="pre">_config.yml</span></code> generally makes it
+easier to find.</p>
+</section>
+<section id="using-a-different-latex-engine">
+<h3>Using a different LaTeX engine<a class="headerlink" href="#using-a-different-latex-engine" title="永久链接至标题">¶</a></h3>
+<p>The current default is to use <code class="docutils literal notranslate"><span class="pre">xelatex</span></code> to build <code class="docutils literal notranslate"><span class="pre">pdf</span></code> files.</p>
+<div class="admonition warning">
+<p class="admonition-title">警告</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">--individualpages</span></code> option currently uses <code class="docutils literal notranslate"><span class="pre">pdflatex</span></code> by default.</p>
+</div>
+<p>Some users may want to switch to using a different LaTeX engine such as <code class="docutils literal notranslate"><span class="pre">pdflatex</span></code>.
+To revert the <code class="docutils literal notranslate"><span class="pre">LaTeX</span></code> engine to <code class="docutils literal notranslate"><span class="pre">pdflatex</span></code> you can add the following to your <code class="docutils literal notranslate"><span class="pre">_config.yml</span></code></p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">latex</span><span class="p">:</span>
+  <span class="nt">latex_engine</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">pdflatex</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">注解</p>
+<p>The Sphinx documentation <a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/configuration.html#confval-latex_engine">for available builders</a>
+contains a full list of supported <code class="docutils literal notranslate"><span class="pre">latex</span></code> builders.</p>
+</div>
+</section>
+<section id="other-sphinx-latex-settings">
+<h3>Other Sphinx LaTeX settings<a class="headerlink" href="#other-sphinx-latex-settings" title="永久链接至标题">¶</a></h3>
+<p>Other <a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/configuration.html#confval-latex_engine">LaTeX settings</a> available
+to Sphinx can be passed through using the config section
+of <code class="docutils literal notranslate"><span class="pre">Sphinx</span></code> in the <code class="docutils literal notranslate"><span class="pre">_config.yml</span></code> file for your project.</p>
+<p>For example, if you would like to set the <a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/configuration.html#confval-latex_toplevel_sectioning">latex_toplevel_sectioning</a> option to use <code class="docutils literal notranslate"><span class="pre">part</span></code> instead of <code class="docutils literal notranslate"><span class="pre">chapter</span></code> you would use:</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">sphinx</span><span class="p">:</span>
+  <span class="nt">config</span><span class="p">:</span>
+    <span class="nt">latex_toplevel_sectioning</span><span class="p">:</span> <span class="s">&#39;part&#39;</span>
+</pre></div>
+</div>
+</section>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "xinetzone/jupyter-book",
+            ref: "main",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./advanced"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+        <div class='prev-next-bottom'>
+            
+    <a class='left-prev' id="prev-link" href="../basics/build.html" title="previous page">Use the Build command line interface</a>
+    <a class='right-next' id="next-link" href="../web/index.html" title="next page">Web and internet features</a>
+
+        </div>
+        
+        </div>
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          <div class="extra_footer">
+            <p class="w3-card w3-pale-blue w3-padding">
+  Copyright © 2021
+  <a href="https://github.com/xinetzone">xinetzone</a> | 
+  Powered by <a href="https://github.com/executablebooks/jupyter-book">Jupyter Book</a>.
+</p>
+
+          </div>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  
+  </body>
+</html>

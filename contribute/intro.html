@@ -1,0 +1,906 @@
+
+<!DOCTYPE html>
+
+<html lang="zh">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>为 Jupyter Book 贡献</title>
+    
+  <link href="../_static/css/theme.css" rel="stylesheet" />
+  <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-book-theme.acff12b8f9c144ce68a297486a2fa670.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/tabs.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/page.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/xin-css/main.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/w3css/4/w3pro.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/w3css/4/w3mobile.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/w3css/4/w3.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/tabs.js"></script>
+    <script async="async" kind="hypothesis" src="https://hypothes.is/embed.js"></script>
+    <script kind="utterances">
+
+    var commentsRunWhenDOMLoaded = cb => {
+    if (document.readyState != 'loading') {
+        cb()
+    } else if (document.addEventListener) {
+        document.addEventListener('DOMContentLoaded', cb)
+    } else {
+        document.attachEvent('onreadystatechange', function() {
+        if (document.readyState == 'complete') cb()
+        })
+    }
+}
+
+var addUtterances = () => {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src = "https://utteranc.es/client.js";
+    script.async = "async";
+
+    script.setAttribute("repo", "xinetzone/jupyter-book");
+    script.setAttribute("issue-term", "pathname");
+    script.setAttribute("theme", "github-light");
+    script.setAttribute("label", "💬 comment");
+    script.setAttribute("crossorigin", "anonymous");
+
+    sections = document.querySelectorAll("div.section");
+    if (sections !== null) {
+        section = sections[sections.length-1];
+        section.appendChild(script);
+    }
+}
+commentsRunWhenDOMLoaded(addUtterances);
+</script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.0/dist/embed-amd.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script>
+        const thebe_selector = ".thebe,.cell"
+        const thebe_selector_input = "pre,.cell_input div.highlight"
+        const thebe_selector_output = ".output,.cell_output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <link rel="canonical" href="https://xinetzone.github.io/jupyter-book/contribute/intro.html" />
+    <link rel="shortcut icon" href="../_static/page-logo.jfif"/>
+    <link rel="index" title="索引" href="../genindex.html" />
+    <link rel="search" title="搜索" href="../search.html" />
+    <link rel="next" title="Configuration reference" href="../customize/config.html" />
+    <link rel="prev" title="How Jupyter Book and Sphinx relate to one another" href="../explain/sphinx.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+      <img src="../_static/logo.jpg" class="logo" alt="logo">
+      
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <div class="bd-toc-item active">
+        <p class="caption">
+ <span class="caption-text">
+  Tutorials
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../start/your-first-book.html">
+   Create your first book
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../start/overview.html">
+     Overview
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../start/create.html">
+     Create your book’s source files
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../start/build.html">
+     Build your book
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../start/publish.html">
+     Publish your book online
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../start/example-book.html">
+     Build a small example project
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../tutorials/references.html">
+   Get started with references
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Topic Guides
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../basics/organize.html">
+   Structure and organize your content
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../customize/toc.html">
+     Structure the Table of Contents
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../structure/configure.html">
+     Configure the Table of Contents
+    </a>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../file-types/index.html">
+     Types of content source files
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+    <label for="toctree-checkbox-3">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../file-types/markdown.html">
+       Markdown files
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../file-types/notebooks.html">
+       Jupyter Notebook files
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../file-types/myst-notebooks.html">
+       Notebooks written entirely in Markdown
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../file-types/jupytext.html">
+       Custom notebook formats and Jupytext
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../file-types/restructuredtext.html">
+       reStructuredText files
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../basics/create.html">
+     Create books automatically
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../structure/sections-headers.html">
+     How headers and sections map onto to book structure
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../content/index.html">
+   Write narrative content
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../content/myst.html">
+     MyST Markdown overview
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../content/content-blocks.html">
+     Special content blocks
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../content/references.html">
+     References and cross-references
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../content/layout.html">
+     Control the page layout
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../content/citations.html">
+     Citations and bibliographies
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../content/math.html">
+     Math and equations
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../content/figures.html">
+     Images and figures
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../content/metadata.html">
+     Add metadata to your book pages
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../content/executable/index.html">
+   Write executable content
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+  <label for="toctree-checkbox-5">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../content/execute.html">
+     Execute and cache your pages
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../content/code-outputs.html">
+     Formatting code outputs
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../content/executable/output-insert.html">
+     Store code outputs and insert into content
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../interactive/interactive.html">
+     Interactive data visualizations
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../basics/building/index.html">
+   Build your book outputs
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+  <label for="toctree-checkbox-6">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../basics/build.html">
+     Use the Build command line interface
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../advanced/pdf.html">
+     Build a PDF
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../web/index.html">
+   Web and internet features
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
+  <label for="toctree-checkbox-7">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../basics/repository.html">
+     Connect your book to a code repository
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../interactive/hiding.html">
+     Hide or remove content
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../interactive/launchbuttons.html">
+     Launch into interactive computing interfaces
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../interactive/thebe.html">
+     Make your code cells executable
+    </a>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../interactive/comments.html">
+     Commenting and annotating
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
+    <label for="toctree-checkbox-8">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../interactive/comments/hypothesis.html">
+       Hypothesis
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../interactive/comments/utterances.html">
+       Utterances
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../publish/web.html">
+     Host your book on the internet
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/>
+    <label for="toctree-checkbox-9">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../publish/gh-pages.html">
+       GitHub Pages and Actions
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../publish/netlify.html">
+       Publish with Netlify
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../advanced/html.html">
+     Advanced HTML outputs
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../advanced/index.html">
+   Advanced Jupyter Book Usage
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/>
+  <label for="toctree-checkbox-10">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../advanced/sphinx.html">
+     Advanced Sphinx usage
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../advanced/windows.html">
+     Working on Windows
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../explain/sphinx.html">
+     How Jupyter Book and Sphinx relate to one another
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 current active">
+  <a class="current reference internal" href="#">
+   为 Jupyter Book 贡献
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Reference
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../customize/config.html">
+   Configuration reference
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../reference/cheatsheet.html">
+   MyST syntax cheat sheet
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../reference/cli.html">
+   The command-line interface
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../reference/glossary.html">
+   Glossary
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  About Jupyter Book
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference external" href="https://executablebooks.org/en/latest/gallery.html">
+   Gallery of Jupyter Books
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../explain/components.html">
+   The Jupyter Book toolchain and components
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../cite.html">
+   Cite Jupyter Book
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../reference/_changelog.html">
+   Change log
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  <div class="w3-padding w3-card-4 w3-pale-green">
+  <a href="https://github.com/xinetzone" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub"
+      data-position="top" data-delay="50">
+      <i class="fab fa-github"></i>
+  </a>
+  <a href="mailto:q735613050@163.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top"
+      data-delay="50">
+      <i class="fas fa-envelope-open"></i>
+  </a>
+  <a href="tencent://AddContact/?fromId=50&amp;fromSubId=1&amp;subcmd=all&amp;uin=735613050" class="tooltipped"
+      target="_blank" data-tooltip="QQ联系我: 735613050" data-position="top" data-delay="50">
+      <i class="fab fa-qq"></i>
+  </a>
+  <a href="https://www.zhihu.com/people/liu-xin-wei-55" class="tooltipped" target="_blank"
+      data-tooltip="关注我的知乎: liu-xin-wei-55" data-position="top" data-delay="50">
+      <i class="fab fa-zhihu1">知</i>
+  </a>
+  <a target="_blank" rel="noopener" href="https://www.linkedin.com/in/xinet" class="tooltipped"
+      data-tooltip="领英联系我: xinet" data-position="top" data-delay="50">
+      <i class="fab fa-linkedin"></i>
+  </a>
+  <div><a href="https://github.com/xinetzone/sanstyle">上善若水</a> 版权所有</div>
+</div>
+
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/contribute/intro.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/xinetzone/jupyter-book"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/xinetzone/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fcontribute/intro.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id1">
+   开发指南
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id2">
+   文档指南
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id3">
+   入门指南
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id4">
+     克隆并安装该包
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#pre-commit">
+     安装 pre-commit 钩子
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id5">
+     运行测试
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#pdf">
+     要测试 PDF 生成
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#github-actions-artifacts">
+     GitHub Actions Artifacts
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id6">
+   Jupyter Book 的仓库结构
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#myst-markdown">
+     MyST Markdown
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#python">
+     命令行工具和 Python 包
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id7">
+     Jupyter Book 模板
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#id8">
+     示例
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#id9">
+   Jupyter Book 栈中的其他主要工具
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <section id="jupyter-book">
+<h1>为 Jupyter Book 贡献<a class="headerlink" href="#jupyter-book" title="永久链接至标题">¶</a></h1>
+<p>欢迎来到 <code class="docutils literal notranslate"><span class="pre">jupyter-book</span></code> 仓库！我们很高兴你能来这里并想要有所贡献。✨</p>
+<div class="admonition- admonition">
+<p class="admonition-title">一定要看看我们的行为准则</p>
+<p>可执行书籍社区遵循<a class="reference external" href="https://github.com/executablebooks/.github/blob/master/CODE_OF_CONDUCT.md">行为准则</a>，以确保我们的在线空间是令人愉快的，包容性的，并对所有贡献者具有生产力。</p>
+</div>
+<section id="id1">
+<h2>开发指南<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h2>
+<p>有关开发约定、实践和基础设施的信息，请参阅 <a class="reference external" href="https://github.com/executablebooks/.github/blob/master/CONTRIBUTING.md"><code class="docutils literal notranslate"><span class="pre">executablebooks/</span></code> 开发指南</a>。</p>
+</section>
+<section id="id2">
+<h2>文档指南<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
+<p>Jupyter Book 的文档是受到 <a class="reference external" href="https://diataxis.fr/">Diataxis 文档框架</a>的启发。这将文档分为四个主要区域：</p>
+<dl class="simple myst">
+<dt><strong>教程</strong></dt><dd><p><strong>面向学习的循序渐进的指南</strong>。他们给学习者一种工具是如何工作的感觉，并让他们对学习更多的东西感到兴奋。教程位于文档的专门部分。</p>
+</dd>
+<dt><strong>How-To 指南</strong></dt><dd><p><strong>告诉读者如何做某事的简短指南</strong>。他们假定更多的 Jupyter Book 背景知识（通常，他们已经阅读教程）。他们专注于“做事”而不是长篇大论的解释。How-To 指南构成了大部分的 Jupyter Book 文档，并且针对不同的主题分为不同的部分。</p>
+</dd>
+<dt><strong>参考</strong></dt><dd><p><strong>完整地描述了 Jupyter Book 的结构和功能</strong>。它更具有编程性，更少叙述性，更感兴趣的是涵盖所有的配置和选项，而不是描述如何以及何时使用它们。Jupyter Book 在我们的主题部分之后有一个参考部分。此外，它下面有一个组织级参考部分。</p>
+</dd>
+<dt><strong>解释</strong></dt><dd><p><strong>关于与 Jupyter 有关的主题和概念的更高层次的讨论</strong>。他们不太专注于做事情，而更专注于获得关于  Jupyter Book 如何工作的概念性框架。Jupyter Book 目前没有专门的解释部分，但欢迎添加解释性内容和一个专门的部分。</p>
+</dd>
+</dl>
+<p>这四个方面并不是  Jupyter Book 文档的<strong>严格规则</strong>，但是应该作为决定文档内容和位置的灵感。任何属于该框架的文档贡献（例如，添加一个新教程，添加一个 How to 部分）都是最受欢迎的！</p>
+</section>
+<section id="id3">
+<h2>入门指南<a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h2>
+<p>要开始使用 Jupyter Book 的<em>代码库</em>，请执行以下步骤：</p>
+<section id="id4">
+<h3>克隆并安装该包<a class="headerlink" href="#id4" title="永久链接至标题">¶</a></h3>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git clone https://github.com/executablebooks/jupyter-book
+<span class="nb">cd</span> jupyter-book
+</pre></div>
+</div>
+<p>接下来，安装：</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip install -e .<span class="o">[</span>all<span class="o">]</span>
+</pre></div>
+</div>
+<p>这将在本地安装 Jupyter Book，以及测试它所需的包和确保代码风格的包。</p>
+</section>
+<section id="pre-commit">
+<h3>安装 pre-commit 钩子<a class="headerlink" href="#pre-commit" title="永久链接至标题">¶</a></h3>
+<p>在提交之前，Jupyter Book 使用 <a class="reference external" href="https://pre-commit.com/">pre-commit</a> 来确保代码风格和质量。这确保了 Jupyter Book 的外观和感觉随时间和开发人员保持一致。<code class="docutils literal notranslate"><span class="pre">pre-commit</span></code> 是在使用 <code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">-e</span> <span class="pre">.[code_style]</span></code> 安装 Jupyter Book 时安装的。</p>
+<p>要为您的克隆启用 <code class="docutils literal notranslate"><span class="pre">pre-commit</span></code>，请从存储库根目录运行以下命令：</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pre-commit install
+</pre></div>
+</div>
+<p>从现在开始，当你提交到 Jupyter Book 时，<code class="docutils literal notranslate"><span class="pre">pre-commit</span></code> 将确保你的代码根据一些检查看起来是正确的。</p>
+</section>
+<section id="id5">
+<h3>运行测试<a class="headerlink" href="#id5" title="永久链接至标题">¶</a></h3>
+<p>对于代码测试，Jupyter Book 使用 <a class="reference external" href="https://docs.pytest.org">pytest</a>。可以使用以下命令运行所有测试，或仅运行不需要额外安装的测试：</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>&gt;&gt; pytest -m <span class="s1">&#39;not requires_chrome and not requires_tex&#39;</span>
+</pre></div>
+</div>
+<p>您也可以使用 <a class="reference external" href="https://tox.readthedocs.io">tox</a> 在多个隔离的环境中运行测试，而且不需要安装初始依赖项（有关可用的测试环境和进一步说明，请参阅 <code class="docutils literal notranslate"><span class="pre">tox.ini</span></code> 文件）：</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>&gt;&gt; tox -e py38-sphinx3 -- -m <span class="s1">&#39;not requires_chrome and not requires_tex&#39;</span>
+</pre></div>
+</div>
+<p>除了 <em>PDF 测试</em>外，两者都将运行 Jupyter Book 测试套件。这是因为运行 PDF 生成测试需要一个完整的 LaTeX 环境，而您可能没有设置这个环境。</p>
+<div class="admonition note">
+<p class="admonition-title">注解</p>
+<p>Jupyter Book 使用 <a class="reference external" href="https://github.com/pytest-dev/pytest-xdist">pytest-xdist</a> 并行运行测试。您可以通过使用 <code class="docutils literal notranslate"><span class="pre">-n</span></code> 参数和您希望使用的 CPU 数量运行测试来利用这一点。例如：<code class="docutils literal notranslate"><span class="pre">pytest</span> <span class="pre">-n</span> <span class="pre">4</span></code> 这使得测试运行得更快。</p>
+</div>
+</section>
+<section id="pdf">
+<h3>要测试 PDF 生成<a class="headerlink" href="#pdf" title="永久链接至标题">¶</a></h3>
+<p>如果你想测试（或尝试）PDF 的生成，请执行以下步骤：</p>
+<p><strong>通过 HTML 生成 PDF 文件</strong>请确保使用 <code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">-e</span> <span class="pre">.[pdfhtml]</span></code> 安装 Jupiter Book。这将安装 <a class="reference external" href="https://github.com/pyppeteer/pyppeteer"><code class="docutils literal notranslate"><span class="pre">pyppeteer</span></code></a>，它运行一个 headless chrome 会话来将你的书转换成 PDF。接下来，遵照 <a class="reference internal" href="../advanced/pdf.html#pdf-html"><span class="std std-ref">Build a PDF from your book HTML</span></a> 的安装说明。然后，您应该能够通过 HTML 构建图书的 PDF。</p>
+<p><strong>要通过 LaTeX 生成 PDF 文件</strong>，确保您在本地安装了一个可工作的 LaTeX 发行版。请按照 <a class="reference internal" href="../advanced/pdf.html#pdf-latex"><span class="std std-ref">Build a PDF using LaTeX</span></a> 说明进行操作。</p>
+<p>如果您已经安装了 HTML 和 LaTeX 生成的需求，那么您应该能够使用 pytest 运行完整的测试套件。</p>
+</section>
+<section id="github-actions-artifacts">
+<h3>GitHub Actions Artifacts<a class="headerlink" href="#github-actions-artifacts" title="永久链接至标题">¶</a></h3>
+<p>每个 pull 请求都包含一个测试，即使用 <code class="docutils literal notranslate"><span class="pre">pdfhtml</span></code> 和 <code class="docutils literal notranslate"><span class="pre">pdflatex</span></code> 编写器将 <code class="docutils literal notranslate"><span class="pre">docs</span></code> 构建为 <code class="docutils literal notranslate"><span class="pre">PDF</span></code> 文件。这些测试构建 <code class="docutils literal notranslate"><span class="pre">pdf</span></code> 文件，然后将其保存为附加到每个运行的工作流的工件（artifact）。</p>
+<p>可以从<a class="reference external" href="https://github.com/actions/upload-artifact#where-does-the-upload-go">工作流运行的右上角</a>检索这些 <code class="docutils literal notranslate"><span class="pre">pdf</span></code> 文件。</p>
+</section>
+</section>
+<section id="id6">
+<h2>Jupyter Book 的仓库结构<a class="headerlink" href="#id6" title="永久链接至标题">¶</a></h2>
+<p>本节将介绍 <a class="reference external" href="https://github.com/executablebooks/jupyter-book">Jupyter Book 存储库</a> 的一般结构，并解释哪些部分位于何处。</p>
+<p>Jupyter Book 存储库包含两个主要部分：</p>
+<section id="myst-markdown">
+<h3>MyST Markdown<a class="headerlink" href="#myst-markdown" title="永久链接至标题">¶</a></h3>
+<p>Jupyter Book 支持名为“MyST Markdown”的 Jupyter Markdown 扩展版本。有关 MyST 语法和如何使用它的信息，请参见 <a class="reference external" href="https://myst-parser.readthedocs.io/en/latest/using/syntax.html">MyST-Parser 文档</a>。</p>
+</section>
+<section id="python">
+<h3>命令行工具和 Python 包<a class="headerlink" href="#python" title="永久链接至标题">¶</a></h3>
+<p>这是用来帮助创建和构建书籍。可以在 <a class="reference external" href="https://github.com/executablebooks/jupyter-book/tree/master/jupyter_book"><code class="docutils literal notranslate"><span class="pre">./jupyter_book</span></code></a> 中找到。</p>
+<ul class="simple">
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">commands/</span></code> 文件夹中的 CLI</strong>。这是用户通过命令行创建、构建和控制图书的接口。</p></li>
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">sphinx.py</span></code> 模块构建书籍</strong>。</p></li>
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">yaml.py</span></code> 模块处理配置</strong>。</p></li>
+<li><p><strong><code class="docutils literal notranslate"><span class="pre">toc.py</span></code> 模块准备目录</strong>。</p></li>
+</ul>
+<p>Jupyter Book 中其他模块处理更具体的功能。请参阅它们的模块文档字符串以获得更多信息。</p>
+</section>
+<section id="id7">
+<h3>Jupyter Book 模板<a class="headerlink" href="#id7" title="永久链接至标题">¶</a></h3>
+<p>Jupyter Book 捆绑了一个小的模板书来渲染内容。<code class="docutils literal notranslate"><span class="pre">jupyter-book</span> <span class="pre">build</span></code> 可以立即建立。可以在 <a class="reference external" href="https://github.com/executablebooks/jupyter-book/tree/master/jupyter_book/book_template"><code class="docutils literal notranslate"><span class="pre">jupyter_book/book_template</span></code></a> 中获取。</p>
+</section>
+<section id="id8">
+<h3>示例<a class="headerlink" href="#id8" title="永久链接至标题">¶</a></h3>
+<p>这里有一些示例，说明如何使用这些代码来帮助您入门。</p>
+<p>Here are a few examples of how this code gets used to help you get started.</p>
+<ul class="simple">
+<li><p>当运行 <code class="docutils literal notranslate"><span class="pre">jupyter-book</span> <span class="pre">create</span> <span class="pre">mybook/</span></code> 时，<code class="docutils literal notranslate"><span class="pre">create.py</span></code> 模块会使用 <code class="docutils literal notranslate"><span class="pre">jupyter_book/book_template/</span></code> 中的模板生成一个空模板。</p></li>
+<li><p>当运行 <code class="docutils literal notranslate"><span class="pre">jupyter-book</span> <span class="pre">build</span> <span class="pre">mybook/</span></code> 时，<code class="docutils literal notranslate"><span class="pre">build.py</span></code> 模块循环遍历页面内容文件，并使用 <code class="docutils literal notranslate"><span class="pre">page/</span></code> 模块将每个文件转换为 HTML，并将其放在 <code class="docutils literal notranslate"><span class="pre">mybook/_build</span></code> 中。</p></li>
+</ul>
+<p>希望这个解释能让你了解情况，并帮助你理解这些部分是如何组合在一起的。如果你有任何问题，请随时<a class="reference external" href="https://github.com/executablebooks/jupyter-book/issues/new">打开一个 issue 寻求</a>帮助！</p>
+</section>
+</section>
+<section id="id9">
+<h2>Jupyter Book 栈中的其他主要工具<a class="headerlink" href="#id9" title="永久链接至标题">¶</a></h2>
+<p>Jupyter Book 依赖于 Python/Sphinx 生态系统中的一组开源工具。这些工具做了许多繁重的工作，并且是许多改进和改变将需要的地方。以下是主要工具的列表以及它们支持的功能：</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="../reference/glossary.html#term-Sphinx"><span class="xref std std-term">Sphinx 文档引擎</span></a> 用于构建图书输出。这依赖于许多由 Jupyter Book 开发的扩展。</p></li>
+<li><p><a class="reference internal" href="../reference/glossary.html#term-MyST"><span class="xref std std-term">MyST Markdown</span></a> 被 <a class="reference internal" href="../reference/glossary.html#term-MyST-Parser"><span class="xref std std-term">MyST-Parser</span></a> 解析为 Sphinx。</p></li>
+<li><p><a class="reference internal" href="../reference/glossary.html#term-MyST-NB"><span class="xref std std-term">MyST-NB 包</span></a> 将 Jupyter 笔记本解析为 Sphinx，并控制笔记本执行的某些部分。它还允许 <a class="reference internal" href="../content/executable/output-insert.html#content-code-outputs-glue"><span class="std std-ref">将代码输出插入内容中</span></a>。</p></li>
+<li><p><a class="reference internal" href="../reference/glossary.html#term-Jupyter-Cache"><span class="xref std std-term">Jupyter-Cache</span></a> 在构建时管理笔记本内容的执行和缓存。它是由 <a class="reference internal" href="../reference/glossary.html#term-MyST-NB"><span class="xref std std-term">MyST-NB</span></a> 控制。</p></li>
+<li><p><a class="reference internal" href="../reference/glossary.html#term-Sphinx-Book-Theme"><span class="xref std std-term">Sphinx Book Theme</span></a> 定义了 Jupyter Book 的外观和感觉，并且是大多数 CSS 规则的定义的。</p></li>
+</ul>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "xinetzone/jupyter-book",
+            ref: "main",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./contribute"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+        <div class='prev-next-bottom'>
+            
+    <a class='left-prev' id="prev-link" href="../explain/sphinx.html" title="previous page">How Jupyter Book and Sphinx relate to one another</a>
+    <a class='right-next' id="next-link" href="../customize/config.html" title="next page">Configuration reference</a>
+
+        </div>
+        
+        </div>
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          <div class="extra_footer">
+            <p class="w3-card w3-pale-blue w3-padding">
+  Copyright © 2021
+  <a href="https://github.com/xinetzone">xinetzone</a> | 
+  Powered by <a href="https://github.com/executablebooks/jupyter-book">Jupyter Book</a>.
+</p>
+
+          </div>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  
+  </body>
+</html>

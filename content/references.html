@@ -1,0 +1,1085 @@
+
+<!DOCTYPE html>
+
+<html lang="zh">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>References and cross-references</title>
+    
+  <link href="../_static/css/theme.css" rel="stylesheet" />
+  <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-book-theme.acff12b8f9c144ce68a297486a2fa670.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/tabs.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/page.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/xin-css/main.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/w3css/4/w3pro.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/w3css/4/w3mobile.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/w3css/4/w3.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/tabs.js"></script>
+    <script async="async" kind="hypothesis" src="https://hypothes.is/embed.js"></script>
+    <script kind="utterances">
+
+    var commentsRunWhenDOMLoaded = cb => {
+    if (document.readyState != 'loading') {
+        cb()
+    } else if (document.addEventListener) {
+        document.addEventListener('DOMContentLoaded', cb)
+    } else {
+        document.attachEvent('onreadystatechange', function() {
+        if (document.readyState == 'complete') cb()
+        })
+    }
+}
+
+var addUtterances = () => {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src = "https://utteranc.es/client.js";
+    script.async = "async";
+
+    script.setAttribute("repo", "xinetzone/jupyter-book");
+    script.setAttribute("issue-term", "pathname");
+    script.setAttribute("theme", "github-light");
+    script.setAttribute("label", "💬 comment");
+    script.setAttribute("crossorigin", "anonymous");
+
+    sections = document.querySelectorAll("div.section");
+    if (sections !== null) {
+        section = sections[sections.length-1];
+        section.appendChild(script);
+    }
+}
+commentsRunWhenDOMLoaded(addUtterances);
+</script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.0/dist/embed-amd.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script>
+        const thebe_selector = ".thebe,.cell"
+        const thebe_selector_input = "pre,.cell_input div.highlight"
+        const thebe_selector_output = ".output,.cell_output"
+    </script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"TeX": {"Macros": {"N": "\\mathbb{N}", "floor": ["\\lfloor#1\\rfloor", 1], "bmat": ["\\left[\\begin{array}"], "emat": ["\\end{array}\\right]"]}}, "tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <link rel="canonical" href="https://xinetzone.github.io/jupyter-book/content/references.html" />
+    <link rel="shortcut icon" href="../_static/page-logo.jfif"/>
+    <link rel="index" title="索引" href="../genindex.html" />
+    <link rel="search" title="搜索" href="../search.html" />
+    <link rel="next" title="Control the page layout" href="layout.html" />
+    <link rel="prev" title="Special content blocks" href="content-blocks.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+      <img src="../_static/logo.jpg" class="logo" alt="logo">
+      
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <div class="bd-toc-item active">
+        <p class="caption">
+ <span class="caption-text">
+  Tutorials
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../start/your-first-book.html">
+   Create your first book
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../start/overview.html">
+     Overview
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../start/create.html">
+     Create your book’s source files
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../start/build.html">
+     Build your book
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../start/publish.html">
+     Publish your book online
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../start/example-book.html">
+     Build a small example project
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../tutorials/references.html">
+   Get started with references
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Topic Guides
+ </span>
+</p>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../basics/organize.html">
+   Structure and organize your content
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../customize/toc.html">
+     Structure the Table of Contents
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../structure/configure.html">
+     Configure the Table of Contents
+    </a>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../file-types/index.html">
+     Types of content source files
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+    <label for="toctree-checkbox-3">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../file-types/markdown.html">
+       Markdown files
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../file-types/notebooks.html">
+       Jupyter Notebook files
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../file-types/myst-notebooks.html">
+       Notebooks written entirely in Markdown
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../file-types/jupytext.html">
+       Custom notebook formats and Jupytext
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../file-types/restructuredtext.html">
+       reStructuredText files
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../basics/create.html">
+     Create books automatically
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../structure/sections-headers.html">
+     How headers and sections map onto to book structure
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="index.html">
+   Write narrative content
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2">
+    <a class="reference internal" href="myst.html">
+     MyST Markdown overview
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="content-blocks.html">
+     Special content blocks
+    </a>
+   </li>
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     References and cross-references
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="layout.html">
+     Control the page layout
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="citations.html">
+     Citations and bibliographies
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="math.html">
+     Math and equations
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="figures.html">
+     Images and figures
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="metadata.html">
+     Add metadata to your book pages
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="executable/index.html">
+   Write executable content
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+  <label for="toctree-checkbox-5">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="execute.html">
+     Execute and cache your pages
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="code-outputs.html">
+     Formatting code outputs
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="executable/output-insert.html">
+     Store code outputs and insert into content
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../interactive/interactive.html">
+     Interactive data visualizations
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../basics/building/index.html">
+   Build your book outputs
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+  <label for="toctree-checkbox-6">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../basics/build.html">
+     Use the Build command line interface
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../advanced/pdf.html">
+     Build a PDF
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../web/index.html">
+   Web and internet features
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
+  <label for="toctree-checkbox-7">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../basics/repository.html">
+     Connect your book to a code repository
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../interactive/hiding.html">
+     Hide or remove content
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../interactive/launchbuttons.html">
+     Launch into interactive computing interfaces
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../interactive/thebe.html">
+     Make your code cells executable
+    </a>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../interactive/comments.html">
+     Commenting and annotating
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
+    <label for="toctree-checkbox-8">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../interactive/comments/hypothesis.html">
+       Hypothesis
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../interactive/comments/utterances.html">
+       Utterances
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../publish/web.html">
+     Host your book on the internet
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/>
+    <label for="toctree-checkbox-9">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../publish/gh-pages.html">
+       GitHub Pages and Actions
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../publish/netlify.html">
+       Publish with Netlify
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../advanced/html.html">
+     Advanced HTML outputs
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../advanced/index.html">
+   Advanced Jupyter Book Usage
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/>
+  <label for="toctree-checkbox-10">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../advanced/sphinx.html">
+     Advanced Sphinx usage
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../advanced/windows.html">
+     Working on Windows
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../explain/sphinx.html">
+     How Jupyter Book and Sphinx relate to one another
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../contribute/intro.html">
+   为 Jupyter Book 贡献
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Reference
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../customize/config.html">
+   Configuration reference
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../reference/cheatsheet.html">
+   MyST syntax cheat sheet
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../reference/cli.html">
+   The command-line interface
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../reference/glossary.html">
+   Glossary
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  About Jupyter Book
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference external" href="https://executablebooks.org/en/latest/gallery.html">
+   Gallery of Jupyter Books
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../explain/components.html">
+   The Jupyter Book toolchain and components
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../cite.html">
+   Cite Jupyter Book
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../reference/_changelog.html">
+   Change log
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  <div class="w3-padding w3-card-4 w3-pale-green">
+  <a href="https://github.com/xinetzone" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub"
+      data-position="top" data-delay="50">
+      <i class="fab fa-github"></i>
+  </a>
+  <a href="mailto:q735613050@163.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我" data-position="top"
+      data-delay="50">
+      <i class="fas fa-envelope-open"></i>
+  </a>
+  <a href="tencent://AddContact/?fromId=50&amp;fromSubId=1&amp;subcmd=all&amp;uin=735613050" class="tooltipped"
+      target="_blank" data-tooltip="QQ联系我: 735613050" data-position="top" data-delay="50">
+      <i class="fab fa-qq"></i>
+  </a>
+  <a href="https://www.zhihu.com/people/liu-xin-wei-55" class="tooltipped" target="_blank"
+      data-tooltip="关注我的知乎: liu-xin-wei-55" data-position="top" data-delay="50">
+      <i class="fab fa-zhihu1">知</i>
+  </a>
+  <a target="_blank" rel="noopener" href="https://www.linkedin.com/in/xinet" class="tooltipped"
+      data-tooltip="领英联系我: xinet" data-position="top" data-delay="50">
+      <i class="fab fa-linkedin"></i>
+  </a>
+  <div><a href="https://github.com/xinetzone/sanstyle">上善若水</a> 版权所有</div>
+</div>
+
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        <a class="dropdown-buttons"
+            href="../_sources/content/references.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download notebook file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/content/references.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.md</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/xinetzone/jupyter-book"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/xinetzone/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fcontent/references.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/xinetzone/jupyter-book/main?urlpath=tree/./content/references.md"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="../_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        <button type="button" class="btn btn-secondary topbarbtn"
+            onclick="initThebeSBT()" title="Launch Thebe" data-toggle="tooltip" data-placement="left"><i
+                class="fas fa-play"></i><span style="margin-left: .4em;">Live Code</span></button>
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#reference-section-labels">
+   Reference section labels
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#reference-figures">
+   Reference figures
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#reference-tables">
+   Reference tables
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#reference-content-files">
+   Reference content files
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#reference-equations">
+   Reference equations
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#choose-the-reference-text">
+   Choose the reference text
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#number-your-references">
+   Number your references
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#reference-with-markdown-link-syntax">
+   Reference with markdown link syntax
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#check-for-missing-references">
+   Check for missing references
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <section id="references-and-cross-references">
+<span id="content-references"></span><h1>References and cross-references<a class="headerlink" href="#references-and-cross-references" title="永久链接至标题">¶</a></h1>
+<p>Because <code class="docutils literal notranslate"><span class="pre">jupyter-book</span></code> is built on top of <a class="reference internal" href="../reference/glossary.html#term-Sphinx"><span class="xref std std-term">Sphinx</span></a>,
+there are many ways to reference content within your book (or even across other books, or Sphinx websites).</p>
+<p>Referencing is accomplished with <strong>roles</strong> or with <strong>markdown link syntax</strong>, depending on your use-case.
+There are a few ways to reference content from your book, depending on what kind of content you’d like to reference.</p>
+<div class="admonition seealso">
+<p class="admonition-title">参见</p>
+<p>If you’re getting started, check out <a class="reference internal" href="../tutorials/references.html"><span class="doc std std-doc">Get started with references</span></a> for more information.</p>
+</div>
+<section id="reference-section-labels">
+<span id="content-references-labels"></span><h2>Reference section labels<a class="headerlink" href="#reference-section-labels" title="永久链接至标题">¶</a></h2>
+<p>Labels are a way to add tags to parts of your content so that you can reference them
+later on. This is helpful if you want to quickly insert links to other
+parts of your book. Labels can be added before major elements of a page,
+such as titles or figures.</p>
+<p>To add a label, use the following pattern <strong>before</strong> the element you wish
+to label:</p>
+<div class="highlight-md notranslate"><div class="highlight"><pre><span></span>(my-label)=
+<span class="gh">#</span> The thing to label
+</pre></div>
+</div>
+<p>For example, we’ve added the following label above the header for this section with:</p>
+<div class="highlight-md notranslate"><div class="highlight"><pre><span></span>(content:references:labels)=
+<span class="gu">##</span> Cross-references and labels
+</pre></div>
+</div>
+<p>You can insert cross-references to labels in your content with two kinds of syntax:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">{ref}`label-text`</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">[](label-text)</span></code></p></li>
+</ul>
+<p>For example, the syntax <code class="docutils literal notranslate"><span class="pre">{ref}`content:references:labels`</span></code> or <code class="docutils literal notranslate"><span class="pre">[](content:references:labels)</span></code> results in a link to this section like so: <a class="reference internal" href="#content-references-labels"><span class="std std-ref">Reference section labels</span></a>.</p>
+</section>
+<section id="reference-figures">
+<span id="references-figures"></span><h2>Reference figures<a class="headerlink" href="#reference-figures" title="永久链接至标题">¶</a></h2>
+<p>To reference a figure in your book, first add a figure and ensure that it has both a <code class="docutils literal notranslate"><span class="pre">name</span></code> as well as a caption associated with it:</p>
+<div class="sphinx-bs container pb-4 docutils">
+<div class="row docutils">
+<div class="d-flex col-lg-6 col-md-6 col-sm-6 col-xs-12 p-2 docutils">
+<div class="card w-100 shadow docutils">
+<div class="card-header docutils">
+<p class="card-text">source</p>
+</div>
+<div class="card-body docutils">
+<div class="highlight-md notranslate"><div class="highlight"><pre><span></span>```{figure} ../images/cool.jpg
+:name: my-fig-ref
+
+My figure title.
+```
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="d-flex col-lg-6 col-md-6 col-sm-6 col-xs-12 p-2 docutils">
+<div class="card w-100 shadow docutils">
+<div class="card-header docutils">
+<p class="card-text">result</p>
+</div>
+<div class="card-body docutils">
+<figure class="align-default" id="my-fig-ref">
+<img alt="../_images/cool.jpg" src="../_images/cool.jpg" />
+<figcaption>
+<p><span class="caption-number">图 3 </span><span class="caption-text">My figure title.</span><a class="headerlink" href="#my-fig-ref" title="永久链接至图片">¶</a></p>
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</div>
+<p>Then, reference the figure by its <code class="docutils literal notranslate"><span class="pre">:name:</span></code> value. For example:</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>source</p></th>
+<th class="head"><p>result</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">Here</span> <span class="pre">is</span> <span class="pre">{ref}`my-fig-ref`</span></code></p></td>
+<td><p>Here is <a class="reference internal" href="#my-fig-ref"><span class="std std-ref">My figure title.</span></a></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">Here</span> <span class="pre">is</span> <span class="pre">{ref}`My</span> <span class="pre">cool</span> <span class="pre">fig</span> <span class="pre">&lt;my-fig-ref&gt;`</span></code></p></td>
+<td><p>Here is <a class="reference internal" href="#my-fig-ref"><span class="std std-ref">My cool fig</span></a></p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">Here</span> <span class="pre">is</span> <span class="pre">[](my-fig-ref)</span></code></p></td>
+<td><p>Here is <a class="reference internal" href="#my-fig-ref"><span class="std std-ref">My figure title.</span></a></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">Here</span> <span class="pre">is</span> <span class="pre">[My</span> <span class="pre">cool</span> <span class="pre">fig](my-fig-ref)</span></code></p></td>
+<td><p>Here is <a class="reference internal" href="#my-fig-ref"><span class="std std-ref">My cool fig</span></a></p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">Here</span> <span class="pre">is</span> <span class="pre">{numref}`my-fig-ref`</span></code></p></td>
+<td><p>Here is <a class="reference internal" href="#my-fig-ref"><span class="std std-numref">图 3</span></a></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">Here</span> <span class="pre">is</span> <span class="pre">{numref}`Custom</span> <span class="pre">Figure</span> <span class="pre">%s</span> <span class="pre">text</span> <span class="pre">`</span></code></p></td>
+<td><p>Here is <a class="reference internal" href="#my-fig-ref"><span class="std std-numref">Custom Figure 3 text</span></a></p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="reference-tables">
+<span id="references-tables"></span><h2>Reference tables<a class="headerlink" href="#reference-tables" title="永久链接至标题">¶</a></h2>
+<p>To reference a table, first create a table and ensure that it has a <code class="docutils literal notranslate"><span class="pre">:name:</span></code> and a title:</p>
+<div class="sphinx-bs container pb-4 docutils">
+<div class="row docutils">
+<div class="d-flex col-lg-6 col-md-6 col-sm-6 col-xs-12 p-2 docutils">
+<div class="card w-100 shadow docutils">
+<div class="card-header docutils">
+<p class="card-text">source</p>
+</div>
+<div class="card-body docutils">
+<div class="highlight-md notranslate"><div class="highlight"><pre><span></span>```{table} My table title
+:name: my-table-ref
+
+| header 1 | header 2 |
+|---|---|
+| 3 | 4 |
+```
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="d-flex col-lg-6 col-md-6 col-sm-6 col-xs-12 p-2 docutils">
+<div class="card w-100 shadow docutils">
+<div class="card-header docutils">
+<p class="card-text">result</p>
+</div>
+<div class="card-body docutils">
+<table class="colwidths-auto table" id="my-table-ref">
+<caption class="card-title"><span class="caption-number">表 1 </span><span class="caption-text">My table title</span><a class="headerlink" href="#my-table-ref" title="永久链接至表格">¶</a></caption>
+<thead>
+<tr class="row-odd"><th class="head"><p class="card-text">header 1</p></th>
+<th class="head"><p class="card-text">header 2</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p class="card-text">3</p></td>
+<td><p class="card-text">4</p></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+</div>
+<p>Here are several ways to reference this content:</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>source</p></th>
+<th class="head"><p>result</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">Here</span> <span class="pre">is</span> <span class="pre">{ref}`my-table-ref`</span></code></p></td>
+<td><p>Here is <a class="reference internal" href="#my-table-ref"><span class="std std-ref">My table title</span></a></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">Here</span> <span class="pre">is</span> <span class="pre">{ref}`My</span> <span class="pre">cool</span> <span class="pre">table</span> <span class="pre">&lt;my-table-ref&gt;`</span></code></p></td>
+<td><p>Here is <a class="reference internal" href="#my-table-ref"><span class="std std-ref">My cool table</span></a></p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">Here</span> <span class="pre">is</span> <span class="pre">[](my-table-ref)</span></code></p></td>
+<td><p>Here is <a class="reference internal" href="#my-table-ref"><span class="std std-ref">My table title</span></a></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">Here</span> <span class="pre">is</span> <span class="pre">[My</span> <span class="pre">cool</span> <span class="pre">table](my-table-ref)</span></code></p></td>
+<td><p>Here is <a class="reference internal" href="#my-table-ref"><span class="std std-ref">My cool table</span></a></p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">Here</span> <span class="pre">is</span> <span class="pre">{numref}`my-table-ref`</span></code></p></td>
+<td><p>Here is <a class="reference internal" href="#my-table-ref"><span class="std std-numref">表 1</span></a></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">Here</span> <span class="pre">is</span> <span class="pre">{numref}`Custom</span> <span class="pre">Table</span> <span class="pre">%s</span> <span class="pre">text</span> <span class="pre">`</span></code></p></td>
+<td><p>Here is <a class="reference internal" href="#my-table-ref"><span class="std std-numref">Custom Table 1 text</span></a></p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="reference-content-files">
+<h2>Reference content files<a class="headerlink" href="#reference-content-files" title="永久链接至标题">¶</a></h2>
+<p>To reference other files of book content, use the <code class="docutils literal notranslate"><span class="pre">{doc}</span></code> role, or link directly to another file with Markdown link syntax. For exmaple:</p>
+<table class="colwidths-auto table">
+<thead>
+<tr class="row-odd"><th class="head"><p>source</p></th>
+<th class="head"><p>result</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">Here</span> <span class="pre">is</span> <span class="pre">{doc}`../file-types/myst-notebooks.md`</span></code></p></td>
+<td><p>Here is <a class="reference internal" href="../file-types/myst-notebooks.html"><span class="doc">Notebooks written entirely in Markdown</span></a></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">Here</span> <span class="pre">is</span> <span class="pre">{doc}`A</span> <span class="pre">different</span> <span class="pre">page</span> <span class="pre">&lt;../file-types/myst-notebooks.md&gt;`</span></code></p></td>
+<td><p>Here is <a class="reference internal" href="../file-types/myst-notebooks.html"><span class="doc">A different page</span></a></p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">Here</span> <span class="pre">is</span> <span class="pre">[](../file-types/myst-notebooks.md)</span></code></p></td>
+<td><p>Here is <a class="reference internal" href="../file-types/myst-notebooks.html"><span class="doc std std-doc">Notebooks written entirely in Markdown</span></a></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">Here</span> <span class="pre">is</span> <span class="pre">[A</span> <span class="pre">different</span> <span class="pre">page](../file-types/myst-notebooks.md)</span></code></p></td>
+<td><p>Here is <a class="reference internal" href="../file-types/myst-notebooks.html"><span class="doc std std-doc">A different page</span></a></p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="reference-equations">
+<h2>Reference equations<a class="headerlink" href="#reference-equations" title="永久链接至标题">¶</a></h2>
+<p>To reference equations, first insert an equation with a label like so:</p>
+<div class="math notranslate nohighlight" id="equation-my-math-ref">
+<span class="eqno">(1)<a class="headerlink" href="#equation-my-math-ref" title="公式的永久链接">¶</a></span>\[w_{t+1} = (1 + r_{t+1}) s(w_t) + y_{t+1}\]</div>
+<p>To reference equations, use the <code class="docutils literal notranslate"><span class="pre">{eq}</span></code> role. It will automatically insert the number of the equation.
+Note that you cannot modify the text of equation links.</p>
+<p>For example:</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">See</span> <span class="pre">Equation</span> <span class="pre">`{eq}`my-math-ref`</span></code> results in: See Equation <a class="reference internal" href="#equation-my-math-ref">(1)</a></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">See</span> <span class="pre">Equation</span> <span class="pre">[](my-math-ref)</span></code> results in: See Equation <a class="reference internal" href="#equation-my-math-ref">(1)</a>.</p></li>
+</ul>
+</section>
+<section id="choose-the-reference-text">
+<span id="references-custom-text"></span><h2>Choose the reference text<a class="headerlink" href="#choose-the-reference-text" title="永久链接至标题">¶</a></h2>
+<p>If you’d like to choose the text of the rendered reference link, use the following pattern:</p>
+<div class="highlight-md notranslate"><div class="highlight"><pre><span></span>{someref}`your text here &lt;reference-target&gt;`
+</pre></div>
+</div>
+<p>Above, <code class="docutils literal notranslate"><span class="pre">reference-target</span></code> is the reference to which you are referring, and <code class="docutils literal notranslate"><span class="pre">your</span> <span class="pre">text</span> <span class="pre">here</span></code> will be the displayed text on the page.</p>
+<p>For example, see the following references:</p>
+<table class="table">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Raw text</p></th>
+<th class="head"><p>Rendered text</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">{ref}`Here's</span> <span class="pre">another</span> <span class="pre">references</span> <span class="pre">section</span> <span class="pre">&lt;content:references:labels&gt;`</span> </code></p></td>
+<td><p><a class="reference internal" href="#content-references-labels"><span class="std std-ref">Here's another references section</span></a></p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">{doc}`Here's</span> <span class="pre">the</span> <span class="pre">code</span> <span class="pre">outputs</span> <span class="pre">section</span> <span class="pre">&lt;code-outputs&gt;`</span> </code></p></td>
+<td><p><a class="reference internal" href="code-outputs.html"><span class="doc">Here's the code outputs section</span></a></p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="number-your-references">
+<h2>Number your references<a class="headerlink" href="#number-your-references" title="永久链接至标题">¶</a></h2>
+<p>You can add <strong>numbered references</strong> to either <a class="reference internal" href="#references-tables"><span class="std std-ref">tables</span></a> or <a class="reference internal" href="#references-figures"><span class="std std-ref">figures</span></a>. To add a numbered reference to a table or figure, use the <code class="docutils literal notranslate"><span class="pre">{numref}</span></code> role. If you wish to <a class="reference internal" href="#references-custom-text"><span class="std std-ref">use custom text</span></a>, add <code class="docutils literal notranslate"><span class="pre">%s</span></code> as a placeholder for the number.</p>
+<p>See the examples in each section below for usage.</p>
+</section>
+<section id="reference-with-markdown-link-syntax">
+<span id="references-markdown-syntax"></span><h2>Reference with markdown link syntax<a class="headerlink" href="#reference-with-markdown-link-syntax" title="永久链接至标题">¶</a></h2>
+<p>If you wish to use Markdown style syntax, then MyST Markdown will try to find a reference from any of the above reference types (and more!).</p>
+<p>This has an advantage, in that you can used nested markdown syntax in your text, for example:</p>
+<table class="table">
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Raw text</p></th>
+<th class="head"><p>Rendered text</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><div class="highlight-md notranslate"><div class="highlight"><pre><span></span>[<span class="nt">A **bolded _reference_** to a page</span>](<span class="na">./myst.md</span>)
+
+[<span class="nt">A reference to a header</span>](<span class="na">content:references:labels</span>)
+</pre></div>
+</div>
+</td>
+<td><p><a class="reference internal" href="myst.html"><span class="doc std std-doc">A <strong>bolded <em>reference</em></strong> to a page</span></a></p>
+<p><a class="reference internal" href="#content-references-labels"><span class="std std-ref">A reference to a header</span></a></p>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Leaving the title empty will mean the reference uses the target as text, for example the syntax</p>
+<div class="highlight-md notranslate"><div class="highlight"><pre><span></span>[](./myst.md)
+</pre></div>
+</div>
+<p>will link to a section and use its header text as the link text itself:</p>
+<p><a class="reference internal" href="myst.html"><span class="doc std std-doc">MyST Markdown overview</span></a></p>
+<div class="tip admonition">
+<p class="admonition-title">Internal vs. External URLs</p>
+<p>You can control how MyST Markdown distinguishes between internal references and external URLs in your <code class="docutils literal notranslate"><span class="pre">_config.yml</span></code>.
+For example,</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">parse</span><span class="p">:</span>
+   <span class="nt">myst_url_schemes</span><span class="p">:</span> <span class="p p-Indicator">[</span><span class="nv">mailto</span><span class="p p-Indicator">,</span> <span class="nv">http</span><span class="p p-Indicator">,</span> <span class="nv">https</span><span class="p p-Indicator">]</span>
+</pre></div>
+</div>
+<p>means that <code class="docutils literal notranslate"><span class="pre">[Jupyter</span> <span class="pre">Book](https://jupyterbook.org)</span></code> will be recognised as a URL, but <code class="docutils literal notranslate"><span class="pre">[Citations](content:citations)</span></code> will not:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://jupyterbook.org">Jupyter Book</a></p></li>
+<li><p><a class="reference internal" href="citations.html#content-citations"><span class="std std-ref">Citations</span></a></p></li>
+</ul>
+</div>
+</section>
+<section id="check-for-missing-references">
+<h2>Check for missing references<a class="headerlink" href="#check-for-missing-references" title="永久链接至标题">¶</a></h2>
+<p>You can check for missing references when building a Jupyter Book.
+To do so, use the following options:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>jupyter-book build -W -n --keep-going docs/
+</pre></div>
+</div>
+<p>This will check for missing references (<code class="docutils literal notranslate"><span class="pre">-n</span></code>) and turn them into errors (<code class="docutils literal notranslate"><span class="pre">-W</span></code>),
+but will still attempt to run the full build (<code class="docutils literal notranslate"><span class="pre">--keep-going</span></code>),
+so that you can see all errors in one run.</p>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "xinetzone/jupyter-book",
+            ref: "main",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./content"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+        <div class='prev-next-bottom'>
+            
+    <a class='left-prev' id="prev-link" href="content-blocks.html" title="previous page">Special content blocks</a>
+    <a class='right-next' id="next-link" href="layout.html" title="next page">Control the page layout</a>
+
+        </div>
+        
+        </div>
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          <div class="extra_footer">
+            <p class="w3-card w3-pale-blue w3-padding">
+  Copyright © 2021
+  <a href="https://github.com/xinetzone">xinetzone</a> | 
+  Powered by <a href="https://github.com/executablebooks/jupyter-book">Jupyter Book</a>.
+</p>
+
+          </div>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  
+  </body>
+</html>

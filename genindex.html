@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>索引 &#8212; SanstyleLab</title>
+    <title>索引</title>
     
   <link href="_static/css/theme.css" rel="stylesheet" />
   <link href="_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
@@ -22,14 +22,15 @@
       
 
     
-    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="_static/sphinx-book-theme.acff12b8f9c144ce68a297486a2fa670.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-book-theme.acff12b8f9c144ce68a297486a2fa670.css" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
     <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
     <link rel="stylesheet" type="text/css" href="_static/tabs.css" />
     <link rel="stylesheet" type="text/css" href="_static/page.css" />
+    <link rel="stylesheet" type="text/css" href="_static/custom.css" />
     <link rel="stylesheet" type="text/css" href="_static/xin-css/main.css" />
     <link rel="stylesheet" type="text/css" href="_static/w3css/4/w3pro.css" />
     <link rel="stylesheet" type="text/css" href="_static/w3css/4/w3mobile.css" />
@@ -39,7 +40,7 @@
     
   <link rel="preload" as="script" href="_static/js/index.1c5a1a01449ed65a7b51.js">
 
-    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
     <script src="_static/jquery.js"></script>
     <script src="_static/underscore.js"></script>
     <script src="_static/doctools.js"></script>
@@ -68,7 +69,7 @@ var addUtterances = () => {
     script.src = "https://utteranc.es/client.js";
     script.async = "async";
 
-    script.setAttribute("repo", "xinetzone/sanstyle-starter");
+    script.setAttribute("repo", "xinetzone/jupyter-book");
     script.setAttribute("issue-term", "pathname");
     script.setAttribute("theme", "github-light");
     script.setAttribute("label", "💬 comment");
@@ -82,15 +83,18 @@ var addUtterances = () => {
 }
 commentsRunWhenDOMLoaded(addUtterances);
 </script>
-    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.0/dist/embed-amd.js"></script>
     <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
-    <script >
-        const thebe_selector = ".thebe"
-        const thebe_selector_input = "pre"
-        const thebe_selector_output = ".output"
+    <script>
+        const thebe_selector = ".thebe,.cell"
+        const thebe_selector_input = "pre,.cell_input div.highlight"
+        const thebe_selector_output = ".output,.cell_output"
     </script>
     <script async="async" src="_static/sphinx-thebe.js"></script>
+    <link rel="canonical" href="https://xinetzone.github.io/jupyter-book/genindex.html" />
     <link rel="shortcut icon" href="_static/page-logo.jfif"/>
     <link rel="index" title="索引" href="#" />
     <link rel="search" title="搜索" href="search.html" />
@@ -115,8 +119,6 @@ commentsRunWhenDOMLoaded(addUtterances);
       <img src="_static/logo.jpg" class="logo" alt="logo">
       
       
-      <h1 class="site-logo" id="site-title">SanstyleLab</h1>
-      
     </a>
 </div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
   <i class="icon fas fa-search"></i>
@@ -125,13 +127,13 @@ commentsRunWhenDOMLoaded(addUtterances);
     <div class="bd-toc-item active">
         <p class="caption">
  <span class="caption-text">
-  手册
+  Tutorials
  </span>
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1 has-children">
-  <a class="reference internal" href="basic/index.html">
-   基础
+  <a class="reference internal" href="start/your-first-book.html">
+   Create your first book
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
   <label for="toctree-checkbox-1">
@@ -140,11 +142,385 @@ commentsRunWhenDOMLoaded(addUtterances);
   </label>
   <ul>
    <li class="toctree-l2">
-    <a class="reference internal" href="basic/start.html">
-     快速入门
+    <a class="reference internal" href="start/overview.html">
+     Overview
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="start/create.html">
+     Create your book’s source files
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="start/build.html">
+     Build your book
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="start/publish.html">
+     Publish your book online
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="start/example-book.html">
+     Build a small example project
     </a>
    </li>
   </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="tutorials/references.html">
+   Get started with references
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Topic Guides
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="basics/organize.html">
+   Structure and organize your content
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="customize/toc.html">
+     Structure the Table of Contents
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="structure/configure.html">
+     Configure the Table of Contents
+    </a>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="file-types/index.html">
+     Types of content source files
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+    <label for="toctree-checkbox-3">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="file-types/markdown.html">
+       Markdown files
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="file-types/notebooks.html">
+       Jupyter Notebook files
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="file-types/myst-notebooks.html">
+       Notebooks written entirely in Markdown
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="file-types/jupytext.html">
+       Custom notebook formats and Jupytext
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="file-types/restructuredtext.html">
+       reStructuredText files
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="basics/create.html">
+     Create books automatically
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="structure/sections-headers.html">
+     How headers and sections map onto to book structure
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="content/index.html">
+   Write narrative content
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="content/myst.html">
+     MyST Markdown overview
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="content/content-blocks.html">
+     Special content blocks
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="content/references.html">
+     References and cross-references
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="content/layout.html">
+     Control the page layout
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="content/citations.html">
+     Citations and bibliographies
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="content/math.html">
+     Math and equations
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="content/figures.html">
+     Images and figures
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="content/metadata.html">
+     Add metadata to your book pages
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="content/executable/index.html">
+   Write executable content
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+  <label for="toctree-checkbox-5">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="content/execute.html">
+     Execute and cache your pages
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="content/code-outputs.html">
+     Formatting code outputs
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="content/executable/output-insert.html">
+     Store code outputs and insert into content
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="interactive/interactive.html">
+     Interactive data visualizations
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="basics/building/index.html">
+   Build your book outputs
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+  <label for="toctree-checkbox-6">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="basics/build.html">
+     Use the Build command line interface
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="advanced/pdf.html">
+     Build a PDF
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="web/index.html">
+   Web and internet features
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-7" name="toctree-checkbox-7" type="checkbox"/>
+  <label for="toctree-checkbox-7">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="basics/repository.html">
+     Connect your book to a code repository
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="interactive/hiding.html">
+     Hide or remove content
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="interactive/launchbuttons.html">
+     Launch into interactive computing interfaces
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="interactive/thebe.html">
+     Make your code cells executable
+    </a>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="interactive/comments.html">
+     Commenting and annotating
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
+    <label for="toctree-checkbox-8">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="interactive/comments/hypothesis.html">
+       Hypothesis
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="interactive/comments/utterances.html">
+       Utterances
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="publish/web.html">
+     Host your book on the internet
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/>
+    <label for="toctree-checkbox-9">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="publish/gh-pages.html">
+       GitHub Pages and Actions
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="publish/netlify.html">
+       Publish with Netlify
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="advanced/html.html">
+     Advanced HTML outputs
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="advanced/index.html">
+   Advanced Jupyter Book Usage
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/>
+  <label for="toctree-checkbox-10">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="advanced/sphinx.html">
+     Advanced Sphinx usage
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="advanced/windows.html">
+     Working on Windows
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="explain/sphinx.html">
+     How Jupyter Book and Sphinx relate to one another
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="contribute/intro.html">
+   为 Jupyter Book 贡献
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  Reference
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="customize/config.html">
+   Configuration reference
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="reference/cheatsheet.html">
+   MyST syntax cheat sheet
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="reference/cli.html">
+   The command-line interface
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="reference/glossary.html">
+   Glossary
+  </a>
+ </li>
+</ul>
+<p class="caption">
+ <span class="caption-text">
+  About Jupyter Book
+ </span>
+</p>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference external" href="https://executablebooks.org/en/latest/gallery.html">
+   Gallery of Jupyter Books
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="explain/components.html">
+   The Jupyter Book toolchain and components
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="cite.html">
+   Cite Jupyter Book
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="reference/_changelog.html">
+   Change log
+  </a>
  </li>
 </ul>
 
@@ -209,11 +585,11 @@ commentsRunWhenDOMLoaded(addUtterances);
         aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
     <div class="dropdown-buttons sourcebuttons">
         <a class="repository-button"
-            href="https://github.com/xinetzone/sanstyle-starter"><button type="button" class="btn btn-secondary topbarbtn"
+            href="https://github.com/xinetzone/jupyter-book"><button type="button" class="btn btn-secondary topbarbtn"
                 data-toggle="tooltip" data-placement="left" title="Source repository"><i
                     class="fab fa-github"></i>repository</button></a>
         <a class="issues-button"
-            href="https://github.com/xinetzone/sanstyle-starter/issues/new?title=Issue%20on%20page%20%2Fgenindex.html&body=Your%20issue%20content%20here."><button
+            href="https://github.com/xinetzone/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fgenindex.html&body=Your%20issue%20content%20here."><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
         
@@ -246,8 +622,402 @@ commentsRunWhenDOMLoaded(addUtterances);
 <h1 id="index">索引</h1>
 
 <div class="genindex-jumpbox">
+ <a href="#符号"><strong>符号</strong></a>
+ | <a href="#A"><strong>A</strong></a>
+ | <a href="#B"><strong>B</strong></a>
+ | <a href="#C"><strong>C</strong></a>
+ | <a href="#E"><strong>E</strong></a>
+ | <a href="#G"><strong>G</strong></a>
+ | <a href="#J"><strong>J</strong></a>
+ | <a href="#M"><strong>M</strong></a>
+ | <a href="#P"><strong>P</strong></a>
+ | <a href="#S"><strong>S</strong></a>
+ | <a href="#T"><strong>T</strong></a>
  
 </div>
+<h2 id="符号">符号</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li>
+    --all
+
+      <ul>
+        <li><a href="reference/cli.html#cmdoption-jupyter-book-build-all">jupyter-book-build命令行选项</a>
+</li>
+        <li><a href="reference/cli.html#cmdoption-jupyter-book-clean-a">jupyter-book-clean命令行选项</a>
+</li>
+      </ul></li>
+      <li>
+    --builder &lt;builder&gt;
+
+      <ul>
+        <li><a href="reference/cli.html#cmdoption-jupyter-book-build-builder">jupyter-book-build命令行选项</a>
+</li>
+      </ul></li>
+      <li>
+    --config &lt;config&gt;
+
+      <ul>
+        <li><a href="reference/cli.html#cmdoption-jupyter-book-build-config">jupyter-book-build命令行选项</a>
+</li>
+        <li><a href="reference/cli.html#cmdoption-jupyter-book-config-sphinx-config">jupyter-book-config-sphinx命令行选项</a>
+</li>
+      </ul></li>
+      <li>
+    --cookiecutter
+
+      <ul>
+        <li><a href="reference/cli.html#cmdoption-jupyter-book-create-cookiecutter">jupyter-book-create命令行选项</a>
+</li>
+      </ul></li>
+      <li>
+    --custom-builder &lt;custom_builder&gt;
+
+      <ul>
+        <li><a href="reference/cli.html#cmdoption-jupyter-book-build-custom-builder">jupyter-book-build命令行选项</a>
+</li>
+      </ul></li>
+      <li>
+    --html
+
+      <ul>
+        <li><a href="reference/cli.html#cmdoption-jupyter-book-clean-html">jupyter-book-clean命令行选项</a>
+</li>
+      </ul></li>
+      <li>
+    --individualpages
+
+      <ul>
+        <li><a href="reference/cli.html#cmdoption-jupyter-book-build-individualpages">jupyter-book-build命令行选项</a>
+</li>
+      </ul></li>
+      <li>
+    --keep-going
+
+      <ul>
+        <li><a href="reference/cli.html#cmdoption-jupyter-book-build-keep-going">jupyter-book-build命令行选项</a>
+</li>
+      </ul></li>
+      <li>
+    --kernel &lt;kernel&gt;
+
+      <ul>
+        <li><a href="reference/cli.html#cmdoption-jupyter-book-myst-init-kernel">jupyter-book-myst-init命令行选项</a>
+</li>
+      </ul></li>
+      <li>
+    --latex
+
+      <ul>
+        <li><a href="reference/cli.html#cmdoption-jupyter-book-clean-latex">jupyter-book-clean命令行选项</a>
+</li>
+      </ul></li>
+      <li>
+    --nitpick
+
+      <ul>
+        <li><a href="reference/cli.html#cmdoption-jupyter-book-build-n">jupyter-book-build命令行选项</a>
+</li>
+      </ul></li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li>
+    --path-output &lt;path_output&gt;
+
+      <ul>
+        <li><a href="reference/cli.html#cmdoption-jupyter-book-build-path-output">jupyter-book-build命令行选项</a>
+</li>
+      </ul></li>
+      <li>
+    --quiet
+
+      <ul>
+        <li><a href="reference/cli.html#cmdoption-jupyter-book-build-q">jupyter-book-build命令行选项</a>
+</li>
+      </ul></li>
+      <li>
+    --toc &lt;toc&gt;
+
+      <ul>
+        <li><a href="reference/cli.html#cmdoption-jupyter-book-build-toc">jupyter-book-build命令行选项</a>
+</li>
+        <li><a href="reference/cli.html#cmdoption-jupyter-book-config-sphinx-toc">jupyter-book-config-sphinx命令行选项</a>
+</li>
+      </ul></li>
+      <li>
+    --verbose
+
+      <ul>
+        <li><a href="reference/cli.html#cmdoption-jupyter-book-build-v">jupyter-book-build命令行选项</a>
+</li>
+      </ul></li>
+      <li>
+    --version
+
+      <ul>
+        <li><a href="reference/cli.html#cmdoption-jupyter-book-version">jupyter-book命令行选项</a>
+</li>
+      </ul></li>
+      <li>
+    --warningiserror
+
+      <ul>
+        <li><a href="reference/cli.html#cmdoption-jupyter-book-build-W">jupyter-book-build命令行选项</a>
+</li>
+      </ul></li>
+      <li>
+    -a
+
+      <ul>
+        <li><a href="reference/cli.html#cmdoption-jupyter-book-clean-a">jupyter-book-clean命令行选项</a>
+</li>
+      </ul></li>
+      <li>
+    -n
+
+      <ul>
+        <li><a href="reference/cli.html#cmdoption-jupyter-book-build-n">jupyter-book-build命令行选项</a>
+</li>
+      </ul></li>
+      <li>
+    -q
+
+      <ul>
+        <li><a href="reference/cli.html#cmdoption-jupyter-book-build-q">jupyter-book-build命令行选项</a>
+</li>
+      </ul></li>
+      <li>
+    -v
+
+      <ul>
+        <li><a href="reference/cli.html#cmdoption-jupyter-book-build-v">jupyter-book-build命令行选项</a>
+</li>
+      </ul></li>
+      <li>
+    -W
+
+      <ul>
+        <li><a href="reference/cli.html#cmdoption-jupyter-book-build-W">jupyter-book-build命令行选项</a>
+</li>
+      </ul></li>
+  </ul></td>
+</tr></table>
+
+<h2 id="A">A</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="content/content-blocks.html#term-A-second-term"><strong>A second term</strong></a>
+</li>
+  </ul></td>
+</tr></table>
+
+<h2 id="B">B</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="reference/glossary.html#term-Binder"><strong>Binder</strong></a>
+</li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="reference/glossary.html#term-BinderHub"><strong>BinderHub</strong></a>
+</li>
+  </ul></td>
+</tr></table>
+
+<h2 id="C">C</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="reference/glossary.html#term-CommonMark"><strong>CommonMark</strong></a>
+</li>
+  </ul></td>
+</tr></table>
+
+<h2 id="E">E</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="reference/glossary.html#term-ExecutableBookProject"><strong>ExecutableBookProject</strong></a>
+</li>
+  </ul></td>
+</tr></table>
+
+<h2 id="G">G</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="reference/glossary.html#term-Google-Colab"><strong>Google Colab</strong></a>
+</li>
+  </ul></td>
+</tr></table>
+
+<h2 id="J">J</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li>
+    jupyter-book-build命令行选项
+
+      <ul>
+        <li><a href="reference/cli.html#cmdoption-jupyter-book-build-all">--all</a>
+</li>
+        <li><a href="reference/cli.html#cmdoption-jupyter-book-build-builder">--builder &lt;builder&gt;</a>
+</li>
+        <li><a href="reference/cli.html#cmdoption-jupyter-book-build-config">--config &lt;config&gt;</a>
+</li>
+        <li><a href="reference/cli.html#cmdoption-jupyter-book-build-custom-builder">--custom-builder &lt;custom_builder&gt;</a>
+</li>
+        <li><a href="reference/cli.html#cmdoption-jupyter-book-build-individualpages">--individualpages</a>
+</li>
+        <li><a href="reference/cli.html#cmdoption-jupyter-book-build-keep-going">--keep-going</a>
+</li>
+        <li><a href="reference/cli.html#cmdoption-jupyter-book-build-n">--nitpick</a>
+</li>
+        <li><a href="reference/cli.html#cmdoption-jupyter-book-build-path-output">--path-output &lt;path_output&gt;</a>
+</li>
+        <li><a href="reference/cli.html#cmdoption-jupyter-book-build-q">--quiet</a>
+</li>
+        <li><a href="reference/cli.html#cmdoption-jupyter-book-build-toc">--toc &lt;toc&gt;</a>
+</li>
+        <li><a href="reference/cli.html#cmdoption-jupyter-book-build-v">--verbose</a>
+</li>
+        <li><a href="reference/cli.html#cmdoption-jupyter-book-build-W">--warningiserror</a>
+</li>
+        <li><a href="reference/cli.html#cmdoption-jupyter-book-build-n">-n</a>
+</li>
+        <li><a href="reference/cli.html#cmdoption-jupyter-book-build-q">-q</a>
+</li>
+        <li><a href="reference/cli.html#cmdoption-jupyter-book-build-v">-v</a>
+</li>
+        <li><a href="reference/cli.html#cmdoption-jupyter-book-build-W">-W</a>
+</li>
+        <li><a href="reference/cli.html#cmdoption-jupyter-book-build-arg-PATH_SOURCE">PATH_SOURCE</a>
+</li>
+      </ul></li>
+      <li>
+    jupyter-book-clean命令行选项
+
+      <ul>
+        <li><a href="reference/cli.html#cmdoption-jupyter-book-clean-a">--all</a>
+</li>
+        <li><a href="reference/cli.html#cmdoption-jupyter-book-clean-html">--html</a>
+</li>
+        <li><a href="reference/cli.html#cmdoption-jupyter-book-clean-latex">--latex</a>
+</li>
+        <li><a href="reference/cli.html#cmdoption-jupyter-book-clean-a">-a</a>
+</li>
+        <li><a href="reference/cli.html#cmdoption-jupyter-book-clean-arg-PATH_BOOK">PATH_BOOK</a>
+</li>
+      </ul></li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li>
+    jupyter-book-config-sphinx命令行选项
+
+      <ul>
+        <li><a href="reference/cli.html#cmdoption-jupyter-book-config-sphinx-config">--config &lt;config&gt;</a>
+</li>
+        <li><a href="reference/cli.html#cmdoption-jupyter-book-config-sphinx-toc">--toc &lt;toc&gt;</a>
+</li>
+        <li><a href="reference/cli.html#cmdoption-jupyter-book-config-sphinx-arg-PATH_SOURCE">PATH_SOURCE</a>
+</li>
+      </ul></li>
+      <li>
+    jupyter-book-create命令行选项
+
+      <ul>
+        <li><a href="reference/cli.html#cmdoption-jupyter-book-create-cookiecutter">--cookiecutter</a>
+</li>
+        <li><a href="reference/cli.html#cmdoption-jupyter-book-create-arg-PATH_BOOK">PATH_BOOK</a>
+</li>
+      </ul></li>
+      <li>
+    jupyter-book-myst-init命令行选项
+
+      <ul>
+        <li><a href="reference/cli.html#cmdoption-jupyter-book-myst-init-kernel">--kernel &lt;kernel&gt;</a>
+</li>
+        <li><a href="reference/cli.html#cmdoption-jupyter-book-myst-init-arg-PATH">PATH</a>
+</li>
+      </ul></li>
+      <li>
+    jupyter-book命令行选项
+
+      <ul>
+        <li><a href="reference/cli.html#cmdoption-jupyter-book-version">--version</a>
+</li>
+      </ul></li>
+      <li><a href="reference/glossary.html#term-Jupyter-Cache"><strong>Jupyter-Cache</strong></a>
+</li>
+      <li><a href="reference/glossary.html#term-JupyterHub"><strong>JupyterHub</strong></a>
+</li>
+  </ul></td>
+</tr></table>
+
+<h2 id="M">M</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="reference/glossary.html#term-MyST"><strong>MyST</strong></a>
+</li>
+      <li><a href="reference/glossary.html#term-MyST-Markdown"><strong>MyST Markdown</strong></a>
+</li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="reference/glossary.html#term-MyST-NB"><strong>MyST-NB</strong></a>
+</li>
+      <li><a href="reference/glossary.html#term-MyST-Parser"><strong>MyST-Parser</strong></a>
+</li>
+  </ul></td>
+</tr></table>
+
+<h2 id="P">P</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li>
+    PATH
+
+      <ul>
+        <li><a href="reference/cli.html#cmdoption-jupyter-book-myst-init-arg-PATH">jupyter-book-myst-init命令行选项</a>
+</li>
+      </ul></li>
+      <li>
+    PATH_BOOK
+
+      <ul>
+        <li><a href="reference/cli.html#cmdoption-jupyter-book-clean-arg-PATH_BOOK">jupyter-book-clean命令行选项</a>
+</li>
+        <li><a href="reference/cli.html#cmdoption-jupyter-book-create-arg-PATH_BOOK">jupyter-book-create命令行选项</a>
+</li>
+      </ul></li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li>
+    PATH_SOURCE
+
+      <ul>
+        <li><a href="reference/cli.html#cmdoption-jupyter-book-build-arg-PATH_SOURCE">jupyter-book-build命令行选项</a>
+</li>
+        <li><a href="reference/cli.html#cmdoption-jupyter-book-config-sphinx-arg-PATH_SOURCE">jupyter-book-config-sphinx命令行选项</a>
+</li>
+      </ul></li>
+  </ul></td>
+</tr></table>
+
+<h2 id="S">S</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="reference/glossary.html#term-Sphinx"><strong>Sphinx</strong></a>
+</li>
+  </ul></td>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="reference/glossary.html#term-Sphinx-Book-Theme"><strong>Sphinx Book Theme</strong></a>
+</li>
+  </ul></td>
+</tr></table>
+
+<h2 id="T">T</h2>
+<table style="width: 100%" class="indextable genindextable"><tr>
+  <td style="width: 33%; vertical-align: top;"><ul>
+      <li><a href="content/content-blocks.html#term-Term-one"><strong>Term one</strong></a>
+</li>
+  </ul></td>
+</tr></table>
+
 
 
               </div>
