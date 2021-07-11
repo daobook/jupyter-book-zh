@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Use the Build command line interface</title>
+    <title>使用 Build 命令行界面</title>
     
   <link href="../_static/css/theme.css" rel="stylesheet" />
   <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
@@ -100,7 +100,7 @@ commentsRunWhenDOMLoaded(addUtterances);
     <link rel="index" title="索引" href="../genindex.html" />
     <link rel="search" title="搜索" href="../search.html" />
     <link rel="next" title="Build a PDF" href="../advanced/pdf.html" />
-    <link rel="prev" title="Build your book outputs" href="building/index.html" />
+    <link rel="prev" title="构建你的书输出" href="building/index.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
     
@@ -242,7 +242,7 @@ commentsRunWhenDOMLoaded(addUtterances);
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="create.html">
-     Create books automatically
+     自动创建书
     </a>
    </li>
    <li class="toctree-l2">
@@ -338,7 +338,7 @@ commentsRunWhenDOMLoaded(addUtterances);
  </li>
  <li class="toctree-l1 current active has-children">
   <a class="reference internal" href="building/index.html">
-   Build your book outputs
+   构建你的书输出
   </a>
   <input checked="" class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
   <label for="toctree-checkbox-6">
@@ -348,7 +348,7 @@ commentsRunWhenDOMLoaded(addUtterances);
   <ul class="current">
    <li class="toctree-l2 current active">
     <a class="current reference internal" href="#">
-     Use the Build command line interface
+     使用 Build 命令行界面
     </a>
    </li>
    <li class="toctree-l2">
@@ -636,33 +636,33 @@ commentsRunWhenDOMLoaded(addUtterances);
             <nav id="bd-toc-nav">
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#build-via-the-command-line">
-   Build via the command-line
+  <a class="reference internal nav-link" href="#id1">
+   通过命令行构建
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#types-of-build-outputs">
-   Types of build outputs
+  <a class="reference internal nav-link" href="#id2">
+   构建输出的类型
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#exclude-some-pages-from-your-books-build">
-   Exclude some pages from your book’s build
+  <a class="reference internal nav-link" href="#id3">
+   从你的书的构建中排除一些页面
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#clean-your-books-generated-files">
-   Clean your book’s generated files
+  <a class="reference internal nav-link" href="#clean-build">
+   清理你的书的生成文件
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#disable-building-files-that-arent-specified-in-the-toc">
-   Disable building files that aren’t specified in the TOC
+  <a class="reference internal nav-link" href="#toc">
+   禁用在 TOC 中未指定的构建文件
   </a>
  </li>
  <li class="toc-h2 nav-item toc-entry">
-  <a class="reference internal nav-link" href="#debug-your-books-build-process">
-   Debug your book’s build process
+  <a class="reference internal nav-link" href="#id5">
+   调试您的书的构建过程
   </a>
  </li>
 </ul>
@@ -676,84 +676,68 @@ commentsRunWhenDOMLoaded(addUtterances);
         
               <div>
                 
-  <section id="use-the-build-command-line-interface">
-<h1>Use the Build command line interface<a class="headerlink" href="#use-the-build-command-line-interface" title="永久链接至标题">¶</a></h1>
-<p>When you’ve written your book’s content, it is now time to build outputs for your book so that you may share them with others.
-For example, you may wish to build HTML files to host as a static website, or a PDF to share with colleagues.</p>
-<section id="build-via-the-command-line">
-<h2>Build via the command-line<a class="headerlink" href="#build-via-the-command-line" title="永久链接至标题">¶</a></h2>
-<p>The basic way to build your book is via the following command:</p>
+  <section id="build">
+<h1>使用 Build 命令行界面<a class="headerlink" href="#build" title="永久链接至标题">¶</a></h1>
+<p>写完书的内容后，就该构建书的输出了，以便与他人分享。例如，您可能希望构建一个静态网站托管的 HTML 文件，或与同事共享的 PDF 文件。</p>
+<section id="id1">
+<h2>通过命令行构建<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h2>
+<p>构建你的书的基本方法是通过下面的命令：</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>jupyter-book build &lt;path-to-book&gt;
 </pre></div>
 </div>
-<p>In addition, you may control the kinds of outputs that are generated, and the ways in which your book conducts the build.
-The rest of the sections on this page cover some of these options.</p>
+<p>此外，您可以控制生成的输出的类型，以及您的书进行构建的方式。本页的其余部分涵盖了其中一些选项。</p>
 </section>
-<section id="types-of-build-outputs">
-<h2>Types of build outputs<a class="headerlink" href="#types-of-build-outputs" title="永久链接至标题">¶</a></h2>
-<p>You can build a variety of outputs using Jupyter Book. To choose a different builder, use the <code class="docutils literal notranslate"><span class="pre">--builder</span> <span class="pre">&lt;builder-name&gt;</span></code> configuration when running <code class="docutils literal notranslate"><span class="pre">jupyter-book</span> <span class="pre">build</span></code> from the command-line. Here is a list of builders that are available to you:</p>
+<section id="id2">
+<h2>构建输出的类型<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
+<p>您可以使用 Jupyter Book 构建各种输出。要选择不同的构建器，请在从命令行运行  <code class="docutils literal notranslate"><span class="pre">jupyter-book</span> <span class="pre">build</span></code>时使用 <code class="docutils literal notranslate"><span class="pre">--builder</span> <span class="pre">&lt;builder-name&gt;</span></code> 配置。以下是可供你选择的构建器名单：</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">html</span></code>: HTML outputs (default)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">singlehtml</span></code>: A single HTML page for your book</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">dirhtml</span></code>: HTML outputs with <code class="docutils literal notranslate"><span class="pre">&lt;filename&gt;/index.html</span></code> structure.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">pdfhtml</span></code>: Build a PDF via HTML outputs (see <a class="reference internal" href="../advanced/pdf.html#pdf-html"><span class="std std-ref">Build a PDF from your book HTML</span></a>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">linkcheck</span></code>: Run the Sphinx link checker (see <a class="reference internal" href="../advanced/html.html#html-link-check"><span class="std std-ref">Check external links in your book</span></a>)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">latex</span></code>: Build Latex files for your book</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">pdflatex</span></code>: Build a PDF of your book via Latex (see <a class="reference internal" href="../advanced/pdf.html#pdf-latex"><span class="std std-ref">Build a PDF using LaTeX</span></a>)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">html</span></code>：HTML输出（默认）</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">dirhtml</span></code>：HTML 输出具有 <code class="docutils literal notranslate"><span class="pre">&lt;filename&gt;/index.html</span></code> 结构。</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">pdfhtml</span></code>：通过HTML输出构建PDF（参阅 <a class="reference internal" href="../advanced/pdf.html#pdf-html"><span class="std std-ref">Build a PDF from your book HTML</span></a>）</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">linkcheck</span></code>：运行 Sphinx 链接检查器（参阅 <a class="reference internal" href="../advanced/html.html#html-link-check"><span class="std std-ref">Check external links in your book</span></a>）</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">latex</span></code>：为你的书建立 Latex 文件</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">pdflatex</span></code>：通过 Latex 构建你的书的 PDF 格式（参考 <a class="reference internal" href="../advanced/pdf.html#pdf-latex"><span class="std std-ref">Build a PDF using LaTeX</span></a>）</p></li>
 </ul>
 </section>
-<section id="exclude-some-pages-from-your-books-build">
-<h2>Exclude some pages from your book’s build<a class="headerlink" href="#exclude-some-pages-from-your-books-build" title="永久链接至标题">¶</a></h2>
-<p>By default, Jupyter Book will build all content files that are found in your book’s
-folder, even if they are not specified in <code class="docutils literal notranslate"><span class="pre">_toc.yml</span></code> (and will raise a warning if
-it finds a file that isn’t listed there).</p>
-<p>If you’d like Jupyter Book to skip a file entirely, you can do so with the following
-configuration in <code class="docutils literal notranslate"><span class="pre">_config.yml</span></code>:</p>
+<section id="id3">
+<h2>从你的书的构建中排除一些页面<a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h2>
+<p>默认情况下，Jupyter Book 将构建在你的书的文件夹中找到的所有内容文件，即使它们没有在 <code class="docutils literal notranslate"><span class="pre">_toc.yml</span></code> 中指定（如果它发现了一个没有列出的文件，就会发出警告）。</p>
+<p>如果你想让 Jupyter Book 完全跳过一个文件，你可以在 <code class="docutils literal notranslate"><span class="pre">_config.yml</span></code> 中使用以下配置：</p>
 <div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">exclude_patterns</span><span class="p">:</span> <span class="p p-Indicator">[</span><span class="nv">pattern1/*</span><span class="p p-Indicator">,</span> <span class="nv">path/to/myfile.ipynb</span><span class="p p-Indicator">]</span>
 </pre></div>
 </div>
-<p>Any files that match the patterns described there will be excluded from the build.
-If you’d like to exclude files from being <em>executed</em> but still wish for them to be
-built by Jupyter Book, see <a class="reference internal" href="../content/execute.html#execute-exclude"><span class="std std-ref">Exclude files from execution</span></a>.</p>
+<p>任何匹配这里描述的模式的文件都将被排除在构建之外。如果您想要排除正在执行的文件，但仍然希望它们由 Jupyter Book 构建，请参阅 (execute/exclude)。</p>
 </section>
-<section id="clean-your-books-generated-files">
-<span id="clean-build"></span><h2>Clean your book’s generated files<a class="headerlink" href="#clean-your-books-generated-files" title="永久链接至标题">¶</a></h2>
-<p>It is possible to “clean up” the files that you generate when you build
-your book. This is often useful if you have recently changed a lot of content
-in order to ensure that you build your book from a clean slate.</p>
-<p>You can clean up your book’s generated content by running the following command:</p>
+<section id="clean-build">
+<span id="id4"></span><h2>清理你的书的生成文件<a class="headerlink" href="#clean-build" title="永久链接至标题">¶</a></h2>
+<p>在构建图书时，可以“清理”生成的文件。如果你最近修改了很多内容，以确保你从头开始写书，这通常是有用的。</p>
+<p>你可以通过运行以下命令来清理你的书生成的内容：</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>jupyter-book clean mybookname/
 </pre></div>
 </div>
-<p>By default, this will delete all folders inside <code class="docutils literal notranslate"><span class="pre">mybookname/_build</span></code> <em>except</em>
-for a folder called <code class="docutils literal notranslate"><span class="pre">.jupyter_cache</span></code>. This ensures that the <em>content</em> of your book
-will be regenerated, while the cache that is generated by <em>running your book’s code</em>
-will not be deleted (because regenerating it may take some time).</p>
-<p>To delete the <code class="docutils literal notranslate"><span class="pre">.jupyter_cache</span></code> folder as well, add the <code class="docutils literal notranslate"><span class="pre">--all</span></code> flag like so:</p>
+<p>默认情况下，这将删除 <code class="docutils literal notranslate"><span class="pre">mybookname/_build</span></code>  中的所有除了一个名为 <code class="docutils literal notranslate"><span class="pre">.jupyter_cache</span></code> 文件夹的文件夹。这可以确保重新生成图书的内容，而运行图书的代码生成的缓存不会被删除（因为重新生成可能需要一些时间）。</p>
+<p>要删除 <code class="docutils literal notranslate"><span class="pre">.jupyter_cache</span></code> 文件夹，添加 <code class="docutils literal notranslate"><span class="pre">--all</span></code> 标志，如下所示:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>jupyter-book clean mybookname/ --all
 </pre></div>
 </div>
-<p>This will entirely remove the folders in the <code class="docutils literal notranslate"><span class="pre">_build/</span></code> directory.</p>
+<p>这将完全删除 <code class="docutils literal notranslate"><span class="pre">_build/</span></code> 目录中的文件夹。</p>
 </section>
-<section id="disable-building-files-that-arent-specified-in-the-toc">
-<span id="config-exclude-non-toc-files"></span><h2>Disable building files that aren’t specified in the TOC<a class="headerlink" href="#disable-building-files-that-arent-specified-in-the-toc" title="永久链接至标题">¶</a></h2>
-<p>By default, Jupyter Book will build all files that are in your book’s folder, regardless of whether they are specified in the Table of Contents.
-To disable this behavior and <em>only</em> build files that are specified in the TOC, use the following pattern in <code class="docutils literal notranslate"><span class="pre">_config.yml</span></code>:</p>
+<section id="toc">
+<span id="config-exclude-non-toc-files"></span><h2>禁用在 TOC 中未指定的构建文件<a class="headerlink" href="#toc" title="永久链接至标题">¶</a></h2>
+<p>默认情况下，Jupyter Book 将构建您的图书文件夹中的所有文件，无论它们是否在目录表中指定。要禁用此行为并只构建TOC中指定的文件，请使用 <code class="docutils literal notranslate"><span class="pre">_config.yml</span></code> 中的以下模式：</p>
 <div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">only_build_toc_files</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">true</span>
 </pre></div>
 </div>
-<p>Note that files that are in <em>hidden folders</em> (e.g. in <code class="docutils literal notranslate"><span class="pre">.github</span></code> or <code class="docutils literal notranslate"><span class="pre">.venv</span></code>) will still be built even if they are not specified in the TOC. You should exclude these files explicitly.</p>
+<p>注意，隐藏文件夹中的文件（例如 <code class="docutils literal notranslate"><span class="pre">.github</span></code> 或 <code class="docutils literal notranslate"><span class="pre">.venv</span></code>）仍然会被构建，即使它们没有在 TOC 中指定。您应该显式地排除这些文件。</p>
 </section>
-<section id="debug-your-books-build-process">
-<h2>Debug your book’s build process<a class="headerlink" href="#debug-your-books-build-process" title="永久链接至标题">¶</a></h2>
-<p>When debugging your book build, the following options can be helpful:</p>
+<section id="id5">
+<h2>调试您的书的构建过程<a class="headerlink" href="#id5" title="永久链接至标题">¶</a></h2>
+<p>当调试你的书构建时，以下选项可能会很有帮助：</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>jupyter-book build -W -n --keep-going mybookname/
 </pre></div>
 </div>
-<p>This will check for missing references (<code class="docutils literal notranslate"><span class="pre">-n</span></code>), turning them into errors (<code class="docutils literal notranslate"><span class="pre">-W</span></code>),
-but will still attempt to run the full build (<code class="docutils literal notranslate"><span class="pre">--keep-going</span></code>),
-so that you can see all errors in one run.</p>
-<p>You can also use <code class="docutils literal notranslate"><span class="pre">-v</span></code> or <code class="docutils literal notranslate"><span class="pre">-vvv</span></code> to increase verbosity.</p>
+<p>这将检查丢失的引用(<code class="docutils literal notranslate"><span class="pre">-n</span></code>)，将它们转换为错误(<code class="docutils literal notranslate"><span class="pre">-W</span></code>)，但仍将尝试运行完整的构建(<code class="docutils literal notranslate"><span class="pre">--keep-going</span></code>)，以便您可以在一次运行中看到所有错误。</p>
+<p>你也可以使用 <code class="docutils literal notranslate"><span class="pre">-v</span></code> 或 <code class="docutils literal notranslate"><span class="pre">-vvv</span></code> 来增加详细级别。</p>
 </section>
 </section>
 
@@ -782,7 +766,7 @@ so that you can see all errors in one run.</p>
         
         <div class='prev-next-bottom'>
             
-    <a class='left-prev' id="prev-link" href="building/index.html" title="previous page">Build your book outputs</a>
+    <a class='left-prev' id="prev-link" href="building/index.html" title="previous page">构建你的书输出</a>
     <a class='right-next' id="next-link" href="../advanced/pdf.html" title="next page">Build a PDF</a>
 
         </div>

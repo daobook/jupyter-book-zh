@@ -244,7 +244,7 @@ commentsRunWhenDOMLoaded(addUtterances);
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../../basics/create.html">
-     Create books automatically
+     自动创建书
     </a>
    </li>
    <li class="toctree-l2">
@@ -340,7 +340,7 @@ commentsRunWhenDOMLoaded(addUtterances);
  </li>
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="../../basics/building/index.html">
-   Build your book outputs
+   构建你的书输出
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
   <label for="toctree-checkbox-6">
@@ -350,7 +350,7 @@ commentsRunWhenDOMLoaded(addUtterances);
   <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="../../basics/build.html">
-     Use the Build command line interface
+     使用 Build 命令行界面
     </a>
    </li>
    <li class="toctree-l2">
@@ -849,13 +849,13 @@ to focus on the glueing part.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2.9995982494429168
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>3.0027741580223086
 </pre></div>
 </div>
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2.987266578204835
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2.990398090872855
 </pre></div>
 </div>
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>3.0121641969502164
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>3.0152117301857704
 </pre></div>
 </div>
 </div>
@@ -934,33 +934,33 @@ use the <code class="docutils literal notranslate"><span class="pre">display=Fal
   <tbody>
     <tr>
       <th>0</th>
-      <td>3.127081</td>
-      <td>2.732600</td>
-      <td>2.966214</td>
+      <td>2.836271</td>
+      <td>2.958530</td>
+      <td>3.112109</td>
     </tr>
     <tr>
       <th>1</th>
-      <td>2.925449</td>
-      <td>3.328287</td>
-      <td>2.681473</td>
+      <td>2.845109</td>
+      <td>2.979224</td>
+      <td>3.272869</td>
     </tr>
     <tr>
       <th>2</th>
-      <td>3.073587</td>
-      <td>2.935358</td>
-      <td>2.919248</td>
+      <td>3.045733</td>
+      <td>3.124474</td>
+      <td>3.171598</td>
     </tr>
     <tr>
       <th>3</th>
-      <td>3.001984</td>
-      <td>2.890582</td>
-      <td>2.928370</td>
+      <td>3.317697</td>
+      <td>3.333660</td>
+      <td>3.136087</td>
     </tr>
     <tr>
       <th>4</th>
-      <td>3.346477</td>
-      <td>3.226485</td>
-      <td>2.931228</td>
+      <td>3.281220</td>
+      <td>2.738610</td>
+      <td>2.830707</td>
     </tr>
   </tbody>
 </table>
@@ -1002,7 +1002,7 @@ Simply add this:</p>
 <div class="highlight-md notranslate"><div class="highlight"><pre><span></span>In-line text; {glue:}`boot_mean`, and a figure: {glue:}`boot_fig`.
 </pre></div>
 </div>
-<p>In-line text; <span class="pasted-inline"><code class="output text_plain docutils literal notranslate"><span class="pre">2.9995982494429168</span></code></span>, and a figure: <span class="pasted-inline"><img alt="../../_images/output-insert_10_0.png" src="../../_images/output-insert_10_0.png" /></span>.</p>
+<p>In-line text; <span class="pasted-inline"><code class="output text_plain docutils literal notranslate"><span class="pre">3.0027741580223086</span></code></span>, and a figure: <span class="pasted-inline"><img alt="../../_images/output-insert_10_0.png" src="../../_images/output-insert_10_0.png" /></span>.</p>
 <div class="admonition tip">
 <p class="admonition-title">小技巧</p>
 <p>We recommend using wider, shorter figures when plotting in-line, with a ratio
@@ -1033,7 +1033,7 @@ For example, the following text:</p>
 </pre></div>
 </div>
 <p>Is rendered as:
-The mean of the bootstrapped distribution was <span class="pasted-text">2.9995982494429168</span> (95% confidence interval <span class="pasted-text">2.987266578204835</span>/<span class="pasted-text">3.0121641969502164</span>)</p>
+The mean of the bootstrapped distribution was <span class="pasted-text">3.0027741580223086</span> (95% confidence interval <span class="pasted-text">2.990398090872855</span>/<span class="pasted-text">3.0152117301857704</span>)</p>
 <div class="admonition note">
 <p class="admonition-title">注解</p>
 <p><code class="docutils literal notranslate"><span class="pre">glue:text</span></code> only works with glued variables that contain a <code class="docutils literal notranslate"><span class="pre">text/plain</span></code> output.</p>
@@ -1044,7 +1044,7 @@ want to round the results. To add formatting, use this syntax:</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">{glue:text}`mykey:formatstring`</span></code></p></li>
 </ul>
-<p>For example, <code class="docutils literal notranslate"><span class="pre">My</span> <span class="pre">rounded</span> <span class="pre">mean:</span> <span class="pre">{glue:text}`boot_mean:.2f`</span> </code> will be rendered like this: My rounded mean: <span class="pasted-text">3.00</span> (95% CI: <span class="pasted-text">2.99</span>/<span class="pasted-text">3.01</span>).</p>
+<p>For example, <code class="docutils literal notranslate"><span class="pre">My</span> <span class="pre">rounded</span> <span class="pre">mean:</span> <span class="pre">{glue:text}`boot_mean:.2f`</span> </code> will be rendered like this: My rounded mean: <span class="pasted-text">3.00</span> (95% CI: <span class="pasted-text">2.99</span>/<span class="pasted-text">3.02</span>).</p>
 </section>
 <section id="the-glue-figure-directive">
 <h3>The <code class="docutils literal notranslate"><span class="pre">glue:figure</span></code> directive<a class="headerlink" href="#the-glue-figure-directive" title="永久链接至标题">¶</a></h3>
@@ -1111,33 +1111,33 @@ A caption for a pandas table.
   <tbody>
     <tr>
       <th>0</th>
-      <td>3.127081</td>
-      <td>2.732600</td>
-      <td>2.966214</td>
+      <td>2.836271</td>
+      <td>2.958530</td>
+      <td>3.112109</td>
     </tr>
     <tr>
       <th>1</th>
-      <td>2.925449</td>
-      <td>3.328287</td>
-      <td>2.681473</td>
+      <td>2.845109</td>
+      <td>2.979224</td>
+      <td>3.272869</td>
     </tr>
     <tr>
       <th>2</th>
-      <td>3.073587</td>
-      <td>2.935358</td>
-      <td>2.919248</td>
+      <td>3.045733</td>
+      <td>3.124474</td>
+      <td>3.171598</td>
     </tr>
     <tr>
       <th>3</th>
-      <td>3.001984</td>
-      <td>2.890582</td>
-      <td>2.928370</td>
+      <td>3.317697</td>
+      <td>3.333660</td>
+      <td>3.136087</td>
     </tr>
     <tr>
       <th>4</th>
-      <td>3.346477</td>
-      <td>3.226485</td>
-      <td>2.931228</td>
+      <td>3.281220</td>
+      <td>2.738610</td>
+      <td>2.830707</td>
     </tr>
   </tbody>
 </table>
@@ -1210,13 +1210,13 @@ that were generated in other cells or other notebooks. For example, the followin
 <tbody>
 <tr class="row-even"><td class="text-align:center"><p>histogram and raw text</p></td>
 <td class="text-align:center"><p><span class="pasted-inline"><img alt="../../_images/output-insert_10_0.png" src="../../_images/output-insert_10_0.png" /></span></p></td>
-<td><p><span class="pasted-inline"><code class="output text_plain docutils literal notranslate"><span class="pre">2.9995982494429168</span></code></span></p></td>
-<td><p><span class="pasted-inline"><code class="output text_plain docutils literal notranslate"><span class="pre">2.987266578204835</span></code></span>-<span class="pasted-inline"><code class="output text_plain docutils literal notranslate"><span class="pre">3.0121641969502164</span></code></span></p></td>
+<td><p><span class="pasted-inline"><code class="output text_plain docutils literal notranslate"><span class="pre">3.0027741580223086</span></code></span></p></td>
+<td><p><span class="pasted-inline"><code class="output text_plain docutils literal notranslate"><span class="pre">2.990398090872855</span></code></span>-<span class="pasted-inline"><code class="output text_plain docutils literal notranslate"><span class="pre">3.0152117301857704</span></code></span></p></td>
 </tr>
 <tr class="row-odd"><td class="text-align:center"><p>sorted means and formatted text</p></td>
 <td class="text-align:center"><p><span class="pasted-inline"><img alt="../../_images/output-insert_10_1.png" src="../../_images/output-insert_10_1.png" /></span></p></td>
-<td><p><span class="pasted-text">3.000</span></p></td>
-<td><p><span class="pasted-text">2.987</span>-<span class="pasted-text">3.012</span></p></td>
+<td><p><span class="pasted-text">3.003</span></p></td>
+<td><p><span class="pasted-text">2.990</span>-<span class="pasted-text">3.015</span></p></td>
 </tr>
 </tbody>
 </table>
