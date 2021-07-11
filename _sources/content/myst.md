@@ -133,7 +133,7 @@ Some content {rolename}`and here is my role's content!`
 Again, roles will only work if `rolename` is a valid role name.
 For example, the `doc` role can be used to refer to another page in your book.
 You can refer directly to another page by its relative path.
-For example, the syntax `` {doc}`../intro` `` will result in: {doc}`../intro`.
+For example, the syntax `` {doc}`../README` `` will result in: {doc}`../README`.
 
 ```{warning}
 It is currently a requirement for roles to be on the **same line** in your source file. It will

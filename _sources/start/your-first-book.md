@@ -1,22 +1,22 @@
-# Create your first book
+# 创建你的第一本书
 
-In this tutorial, we'll cover the basics of the Jupyter Book ecosystem, and step you through creating, building, and publishing your first book.
+在本教程中，我们将介绍 Jupyter Book 生态系统的基础知识，并逐步引导您创建、构建和出版您的第一本书。
 
-:::{admonition} What you should already know
-In order to complete this tutorial, you should be relatively familiar with using the command line, as well as using a text editor.
+:::{admonition} 你应该需要知道
+为了完成本教程，您应该相对熟悉使用命令行，以及使用文本编辑器。
 :::
 
-:::{admonition} A note for Windows users
+:::{admonition} Windows 用户注意事项
 :class: warning
 
-Jupyter Book is now also tested against Windows OS 😀
+Jupyter Book 现在也针对 Windows 操作系统进行了测试 😀
 
-However, there is a known incompatibility for notebook execution when using Python 3.8.
+然而，在使用 Python 3.8 时，笔记本执行有一个众所周知的不兼容性。
 
 See [](working-on-windows)
 :::
 
-See the sections of this tutorial to the left to get started!
+请参阅本教程左边的章节来开始学习！
 
 ```{tableofcontents}
 ```

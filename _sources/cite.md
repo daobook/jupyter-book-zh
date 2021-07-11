@@ -1,15 +1,13 @@
-# Cite Jupyter Book
+# 引用 Jupyter Book
 
-Jupyter Book is developed by many people across academia and industry.
-Moreover, Jupyter Book is powered by an ecosystem of open source tools, most notably within the [Executable Books Project](https://executablebook.org).
+Jupyter Book 是由学术界和工业界的许多人开发的。此外，Jupyter Book 是由一个开源工具生态系统支持的，最著名的是 [Executable Books 项目](https://executablebook.org)。
 
-Rather than citing each tool, we choose to use a single blanket citation for the entire project and all of its community members.
+我们不是引用每个工具，而是选择对整个项目及其所有社区成员使用单一的引用。
 
-To cite Jupyter Book in publications, please use the following Zenodo reference:
+在出版物中引用 Jupyter Book，请使用以下 Zenodo 引用：
 
 ```{only} html
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.2561065.svg)](https://doi.org/10.5281/zenodo.2561065)
 ```
 
-The full author list is available by viewing the [contributors graph on GitHub](https://github.com/executablebooks/jupyter-book/graphs/contributors).
-To get the full picture, you should look at this for all projects within [the Executable Books organization](https://github.com/executablebooks).
+完整的作者列表可以在 [GitHub 上查看贡献者图](https://github.com/executablebooks/jupyter-book/graphs/contributors)。为了获得全貌，您应该查看 [Executable Books 组织](https://github.com/executablebooks)内的所有项目。

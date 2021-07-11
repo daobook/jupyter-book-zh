@@ -1,5 +1,5 @@
 
 ```{include} ../CHANGELOG.md
-:relative-docs: ./
+:relative-docs: ../
 :relative-images:
 ```

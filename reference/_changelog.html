@@ -99,7 +99,7 @@ commentsRunWhenDOMLoaded(addUtterances);
     <link rel="shortcut icon" href="../_static/page-logo.jfif"/>
     <link rel="index" title="索引" href="../genindex.html" />
     <link rel="search" title="搜索" href="../search.html" />
-    <link rel="prev" title="Cite Jupyter Book" href="../cite.html" />
+    <link rel="prev" title="引用 Jupyter Book" href="../cite.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
     
@@ -129,13 +129,13 @@ commentsRunWhenDOMLoaded(addUtterances);
     <div class="bd-toc-item active">
         <p class="caption">
  <span class="caption-text">
-  Tutorials
+  教程
  </span>
 </p>
 <ul class="nav bd-sidenav">
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="../start/your-first-book.html">
-   Create your first book
+   创建你的第一本书
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
   <label for="toctree-checkbox-1">
@@ -178,7 +178,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 </ul>
 <p class="caption">
  <span class="caption-text">
-  Topic Guides
+  主题指南
  </span>
 </p>
 <ul class="nav bd-sidenav">
@@ -473,7 +473,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 </ul>
 <p class="caption">
  <span class="caption-text">
-  Reference
+  参考
  </span>
 </p>
 <ul class="nav bd-sidenav">
@@ -500,7 +500,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 </ul>
 <p class="caption">
  <span class="caption-text">
-  About Jupyter Book
+  关于 Jupyter Book
  </span>
 </p>
 <ul class="current nav bd-sidenav">
@@ -516,7 +516,7 @@ commentsRunWhenDOMLoaded(addUtterances);
  </li>
  <li class="toctree-l1">
   <a class="reference internal" href="../cite.html">
-   Cite Jupyter Book
+   引用 Jupyter Book
   </a>
  </li>
  <li class="toctree-l1 current active">
@@ -1060,14 +1060,14 @@ You may now enable individual <code class="docutils literal notranslate"><span c
     <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">&lt;list-of-extensions&gt;</span>
 </pre></div>
 </div>
-<p>See the <a class="reference internal" href="../content/content-blocks.html"><span class="doc std std-doc">MyST syntax extension section here</span></a> for more information.</p>
+<p>See the <span class="xref myst">MyST syntax extension section here</span> for more information.</p>
 </dd>
 <dt>Citations and references configuration</dt><dd><p>This version comes with a version bump to <code class="docutils literal notranslate"><span class="pre">sphinxcontrib.bibtex</span> <span class="pre">v2.1.*</span></code>. This introduces new configuration for connecting your bibfiles (no longer using the bibliography directive), and makes the citation resolution process much more stable and dependable.</p>
 </dd>
 <dd><p>See <a class="reference internal" href="../content/citations.html#content-citations"><span class="std std-ref">Citations and bibliographies</span></a> for more information, and the <a class="reference external" href="https://sphinxcontrib-bibtex.readthedocs.io/en/latest/"><code class="docutils literal notranslate"><span class="pre">sphinxcontrib.bibtex</span></code> documentation</a> for more information about updates in the latest version.</p>
 </dd>
 <dt>TOC depth numbering</dt><dd><p>You can now set the depth of numbering (e.g., 3.2 vs. 3.2.1) via the the <code class="docutils literal notranslate"><span class="pre">numbered</span></code> flag in your Table of Contents.
-See <a class="reference internal" href="../customize/toc.html"><span class="doc std std-doc">the table of contents documentation</span></a> for more information.</p>
+See <span class="xref myst">the table of contents documentation</span> for more information.</p>
 </dd>
 </dl>
 </section>
@@ -1139,21 +1139,21 @@ This note contains <span class="ge">*Markdown*</span>
 <section id="id3">
 <h3>New<a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h3>
 <ul class="simple">
-<li><p>👌 IMPROVE: Option to exclude every file not in the toc. (<a class="reference internal" href="../customize/config.html"><span class="doc std std-doc">docs</span></a>, <a class="reference external" href="https://github.com/executablebooks/jupyter-book/pull/1123">#1123</a>, <a class="reference external" href="https://github.com/alex-treebeard">&#64;alex-treebeard</a>)</p></li>
-<li><p>✨ NEW: Enable the use of local Sphinx extension via _config.yml. (<a class="reference internal" href="../customize/config.html"><span class="doc std std-doc">docs</span></a>, <a class="reference external" href="https://github.com/executablebooks/jupyter-book/pull/1102">#1102</a>, <a class="reference external" href="https://github.com/mmcky">&#64;mmcky</a>)</p></li>
+<li><p>👌 IMPROVE: Option to exclude every file not in the toc. (<span class="xref myst">docs</span>, <a class="reference external" href="https://github.com/executablebooks/jupyter-book/pull/1123">#1123</a>, <a class="reference external" href="https://github.com/alex-treebeard">&#64;alex-treebeard</a>)</p></li>
+<li><p>✨ NEW: Enable the use of local Sphinx extension via _config.yml. (<span class="xref myst">docs</span>, <a class="reference external" href="https://github.com/executablebooks/jupyter-book/pull/1102">#1102</a>, <a class="reference external" href="https://github.com/mmcky">&#64;mmcky</a>)</p></li>
 <li><p>✨ NEW: Enable custom builder passthrough. This is an <strong>advanced feature</strong>
-that enables the use of additional sphinx builders via jupyter-book that may be provided by an extension. (<a class="reference internal" href="../advanced/sphinx.html"><span class="doc std std-doc">docs</span></a>, <a class="reference external" href="%5B#1094%5D(https://github.com/executablebooks/jupyter-book/pull/1094)">#1094</a>, <a class="reference external" href="https://github.com/mmcky">&#64;mmcky</a>)</p></li>
+that enables the use of additional sphinx builders via jupyter-book that may be provided by an extension. (<span class="xref myst">docs</span>, <a class="reference external" href="%5B#1094%5D(https://github.com/executablebooks/jupyter-book/pull/1094)">#1094</a>, <a class="reference external" href="https://github.com/mmcky">&#64;mmcky</a>)</p></li>
 </ul>
 <p><strong>HTML:</strong></p>
 <ul class="simple">
 <li><p>👌 NEW: Add <code class="docutils literal notranslate"><span class="pre">dirhtml</span></code> builder. This enables the use
-of the <code class="docutils literal notranslate"><span class="pre">dirhtml</span></code> sphinx builder when using jupyter book. (<a class="reference internal" href="../start/build.html"><span class="doc std std-doc">docs</span></a>, <a class="reference external" href="https://github.com/executablebooks/jupyter-book/pull/1092">#1092</a>, <a class="reference external" href="https://github.com/choldgraf">&#64;choldgraf</a>)</p></li>
+of the <code class="docutils literal notranslate"><span class="pre">dirhtml</span></code> sphinx builder when using jupyter book. (<span class="xref myst">docs</span>, <a class="reference external" href="https://github.com/executablebooks/jupyter-book/pull/1092">#1092</a>, <a class="reference external" href="https://github.com/choldgraf">&#64;choldgraf</a>)</p></li>
 </ul>
 <p><strong>LaTeX:</strong></p>
 <ul class="simple">
 <li><p>✨ NEW: Add <code class="docutils literal notranslate"><span class="pre">--individualpages</span></code> option for pdflatex builder.
 This option enables building individual (pdflatex) files for each page of the project. <strong>Note:</strong> Further work is ongoing to improve the styling and formatting of pdflatex output.
-(<a class="reference internal" href="../advanced/pdf.html"><span class="doc std std-doc">docs</span></a>, <a class="reference external" href="https://github.com/executablebooks/jupyter-book/pull/944">#944</a>, <a class="reference external" href="https://github.com/mmcky">&#64;mmcky</a>)</p></li>
+(<span class="xref myst">docs</span>, <a class="reference external" href="https://github.com/executablebooks/jupyter-book/pull/944">#944</a>, <a class="reference external" href="https://github.com/mmcky">&#64;mmcky</a>)</p></li>
 </ul>
 </section>
 <section id="id4">
@@ -1243,14 +1243,14 @@ with tonnes of bugs fixes, improvements and new features 🎉</p>
 <p>The <code class="docutils literal notranslate"><span class="pre">jupyter-book</span></code>/<code class="docutils literal notranslate"><span class="pre">jb</span></code> executable should work almost identically to in v0.7.5, and all existing books will generally build as before (open an issue if not!).</p>
 <p>The key change is that <code class="docutils literal notranslate"><span class="pre">jupyter-book</span> <span class="pre">page</span></code> is no longer available.
 Instead you can now pass a single file path to <code class="docutils literal notranslate"><span class="pre">jupyter-book</span> <span class="pre">build</span></code>, as opposed to a directory, and it will build your single page (thanks to <a class="reference external" href="https://github.com/AakashGfude">&#64;AakashGfude</a>).
-See <a class="reference internal" href="../start/build.html"><span class="doc std std-doc">Build a standalone page</span></a>.</p>
+See <span class="xref myst">Build a standalone page</span>.</p>
 <p>Another thing to note, is that if you are using “bare” LaTeX math in your documentation,
 then this will only render if you activate in your <code class="docutils literal notranslate"><span class="pre">_config.yml</span></code>:</p>
 <div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">parse</span><span class="p">:</span>
   <span class="nt">myst_extended_syntax</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">true</span>
 </pre></div>
 </div>
-<p>See <a class="reference internal" href="../content/math.html"><span class="doc std std-doc">the math documentation</span></a> for details.</p>
+<p>See <span class="xref myst">the math documentation</span> for details.</p>
 </section>
 <section id="new-and-improved">
 <h3>New and Improved ✨👌<a class="headerlink" href="#new-and-improved" title="永久链接至标题">¶</a></h3>
@@ -1263,7 +1263,7 @@ then this will only render if you activate in your <code class="docutils literal
 <p>Here’s the headlines:</p>
 <dl class="simple myst">
 <dt>Windows support</dt><dd><p>Continuous Integration (CI) testing is now run against Windows OS throughout the EBP stack.
-The fixes this entailed, mean that Jupyter Book can now be run on Windows with minimal issue (see <a class="reference internal" href="../advanced/windows.html"><span class="doc std std-doc">Working on Windows</span></a>)</p>
+The fixes this entailed, mean that Jupyter Book can now be run on Windows with minimal issue (see <span class="xref myst">Working on Windows</span>)</p>
 </dd>
 <dt>Extended “Markdown friendly” syntaxes</dt><dd><p>MyST Markdown directives offer a high degree of extensibility, to add all the features we might need to create a scientific document.
 However, they are not (yet) very well integrated with external editors, like the Jupyter Notebook interface.
@@ -1275,18 +1275,18 @@ Extended syntax parsing to the rescue!</p>
 </div>
 <p>You can access to a number of <em>Markdown friendly</em> syntaxes, which extend the <a class="reference external" href="https://commonmark.org/">CommonMark specification</a>:</p>
 <ul class="simple">
-<li><p><code class="docutils literal notranslate"><span class="pre">:::</span></code> fenced admonitions render Markdown as standard (see <a class="reference internal" href="../content/content-blocks.html"><span class="doc std std-doc">new style admonitions</span></a>).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">:::</span></code> fenced admonitions render Markdown as standard (see <span class="xref myst">new style admonitions</span>).</p></li>
 <li><p>HTML images are correctly handled, allowing for control of size and style attributes,
-and Markdown style figures extend this for captions and referencing (see <a class="reference internal" href="../content/figures.html"><span class="doc std std-doc">images and figures</span></a>).</p></li>
-<li><p>Definition lists are what you see here and provide a simple format for writing term/definition blocks (see <a class="reference internal" href="../content/content-blocks.html"><span class="doc std std-doc">definition lists</span></a>).</p></li>
+and Markdown style figures extend this for captions and referencing (see <span class="xref myst">images and figures</span>).</p></li>
+<li><p>Definition lists are what you see here and provide a simple format for writing term/definition blocks (see <span class="xref myst">definition lists</span>).</p></li>
 <li><p>LaTeX math is now intrinsically supported,
-meaning that it will rendered correctly in both HTML and LaTeX/PDF outputs (see <a class="reference internal" href="../content/math.html"><span class="doc std std-doc">math and equations</span></a>).</p></li>
+meaning that it will rendered correctly in both HTML and LaTeX/PDF outputs (see <span class="xref myst">math and equations</span>).</p></li>
 </ul>
 </dd>
 <dt>Custom Notebook Formats</dt><dd><p>Want to write your notebooks as RMarkdown, Python files, …?
 Jupyter Book now supports linking any file extension to a custom conversion function,
 run before notebook execution and parsing.
-See the <a class="reference internal" href="../file-types/jupytext.html"><span class="doc std std-doc">custom notebook formats and Jupytext</span></a> documentation, which itself is written in RMarkdown!</p>
+See the <span class="xref myst">custom notebook formats and Jupytext</span> documentation, which itself is written in RMarkdown!</p>
 </dd>
 <dt>Execution Configuration</dt><dd><p>Execution and caching of notebook outputs has been improved, to make it more consistent across <code class="docutils literal notranslate"><span class="pre">auto</span></code> and <code class="docutils literal notranslate"><span class="pre">cache</span></code> methods (<code class="docutils literal notranslate"><span class="pre">cache</span></code> execution is now also run in the notebook directory) and provide numerous configuration options, including:</p>
 <ul class="simple">
@@ -1296,19 +1296,19 @@ See the <a class="reference internal" href="../file-types/jupytext.html"><span c
 <li><p>Removing stderr/stdout outputs or logging warnings when they are encountered</p></li>
 <li><p>A directive for displaying execution statistics for all notebooks in the book (status, run time, etc)</p></li>
 </ul>
-<p>See the <a class="reference internal" href="../content/execute.html"><span class="doc std std-doc">execution documentation</span></a> for more details.</p>
+<p>See the <span class="xref myst">execution documentation</span> for more details.</p>
 </dd>
 <dt>Code Output Formatting</dt><dd><p>More cell outputs are handled, including Markdown and ANSI outputs,
 and you can use cell metadata to set image size, style, captions and references.
-See <a class="reference internal" href="../content/code-outputs.html"><span class="doc std std-doc">formatting code outputs</span></a>.</p>
+See <span class="xref myst">formatting code outputs</span>.</p>
 </dd>
 <dt>Build options and error reporting</dt><dd><p>The <code class="docutils literal notranslate"><span class="pre">jupyter-book</span> <span class="pre">build</span></code> command includes additional options/flags for controlling the build behaviour,
 such as verbose (<code class="docutils literal notranslate"><span class="pre">-v</span></code>), quiet (<code class="docutils literal notranslate"><span class="pre">-q</span></code>) and nitpick mode for checking references (<code class="docutils literal notranslate"><span class="pre">-n</span></code>).
-See the <a class="reference internal" href="cli.html"><span class="doc std std-doc">command-line interface documentation</span></a> for more details.</p>
+See the <span class="xref myst">command-line interface documentation</span> for more details.</p>
 </dd>
 <dt>sphinx-panels integration</dt><dd><p>The <a class="reference external" href="https://sphinx-panels.readthedocs.io">sphinx-panels</a> package is now provided directly in the Jupyter Book distribution.
 This adds additional functionality for creating web based elements, such as gridded panels and dropdown boxes.
-See the <a class="reference internal" href="../content/content-blocks.html"><span class="doc std std-doc">Panels and Dropdowns</span></a> section for details.</p>
+See the <span class="xref myst">Panels and Dropdowns</span> section for details.</p>
 </dd>
 </dl>
 </section>
@@ -1958,7 +1958,7 @@ Previous versions erroneously allow for the new v0.9, which is not yet strictly 
         
         <div class='prev-next-bottom'>
             
-    <a class='left-prev' id="prev-link" href="../cite.html" title="previous page">Cite Jupyter Book</a>
+    <a class='left-prev' id="prev-link" href="../cite.html" title="previous page">引用 Jupyter Book</a>
 
         </div>
         
