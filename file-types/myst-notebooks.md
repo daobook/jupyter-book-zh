@@ -10,70 +10,59 @@ kernelspec:
 ---
 
 (file-types:myst-notebooks)=
-# Notebooks written entirely in Markdown
+# 完全用 Markdown 书写笔记本
 
-It is possible to store Jupyter notebooks in plain Markdown. This allows you
-to define a notebook structure entirely using MyST Markdown. For more information
-about MyST Markdown, see {doc}`../content/myst`.
+在 Markdown 中存储 Jupyter 笔记本是可能的。这允许你完全使用 MyST Markdown 定义一个笔记本结构。关于 MyST Markdown 的更多信息，请参见 {doc}`../content/myst`。
 
-Notebooks with Markdown can be read in, executed, and cached by Jupyter Book (see {doc}`../content/execute` for information on how to cache pages).
-This allows you to store all of your notebook content in a text format that is much nicer for version control software, while still having all the functionality of a Jupyter notebook.
+使用 Markdown 的笔记本可以在 Jupyter Book 中读取、执行和缓存(参见 {doc}`../content/execute` 来获取关于如何缓存页面的信息)。
+这允许你以文本格式存储你所有的笔记本内容，这对于版本控制软件来说是更好的，同时仍然拥有一个 Jupyter 笔记本的所有功能。
 
 :::{note}
-MyST notebooks uses [MyST-NB to convert between ipynb and text files][myst-nb:index].
-See its documentation for more information.
+MyST 笔记本使用 [MyST-NB to convert between ipynb and text files][myst-nb:index]。
+有关更多信息，请参阅文档。
 :::
 
-To see an example of a MyST notebook, you can look at
-[many of the pages of this documentation](https://github.com/executablebooks/jupyter-book/tree/master/docs).
-For example, see {download}`../interactive/hiding.md` and {download}`../content/layout.md`.
+要查看 MyST 笔记本的示例，您可以查看[本文档的许多页面](https://github.com/executablebooks/jupyter-book/tree/master/docs)。
+例如，查看 {download}`../interactive/hiding.md` 和 {download}`../content/layout.md`。
 
-## Create a MyST notebook with Jupytext
+## 用 Jupytext 创建一个 MyST 笔记本
 
-The easiest way to create a MyST notebook is to use [Jupytext](https://jupytext.readthedocs.io), a tool
-that allows for two-way conversion between `.ipynb` and a variety of text files.
+创建 MyST 笔记本最简单的方法是使用 [Jupytext](https://jupytext.readthedocs.io)，这是一个允许双向转换 `.ipynb` 和各种文本文件的工具。
 
-You can convert an `.ipynb` file to a MyST notebook with the following command:
+你可以用下面的命令将 `.ipynb` 文件转换为 MyST 笔记本：
 
 ```bash
 jupytext mynotebook.ipynb --to myst
 ```
 
-A resulting `mynotebook.md` file will be created.
-This can then be used as a page in your book.
+`mynotebook.md` 文件的结果将被创建。
+这可以作为你书中的一页。
 
 :::{important}
-For full compatibility with `myst-parser`, it is necessary to use `jupytext>=1.6.0`.
+为了与 `myst-parser` 完全兼容，必须使用 `jupytext>=1.6.0`。
 :::
 
-Jupytext can also **automatically synchronize an `.ipynb` file with your Markdown**.
-To do so, use a Jupyter interface such as Jupyter Lab or the classic notebook interface
-and follow the [Jupytext instructions for paired notebooks](https://jupytext.readthedocs.io/en/latest/paired-notebooks.html).
+Jupytext 也可以**与您的 Markdown 自动同步 `.ipynb` 文件**。
+要做到这一点，请使用 Jupyter 接口，如 Jupyter Lab 或经典的笔记本接口，并遵循[配对笔记本的 Jupytext 说明](https://jupytext.readthedocs.io/en/latest/paired-notebooks.html)。
 
-```{margin} Markdown takes precedence
-If **both** an `.ipynb` and a `.md` file exist in your book's folders, then
-the `.md` file will take precedence!
+```{margin} Markdown 优先
+如果 `.ipynb` 和 `.md` 文件都存在于你的书的文件夹中，则 `.md` 文件将优先使用！
 ```
 
-### Convert a Markdown file into Jupytext MyST Markdown
+### 将 Markdown 文件转换为 MyST Markdown
 
-Jupyter Book has a small CLI to provide common functionality for manipulating and
-creating MyST Markdown files that synchronize with Jupytext. To add Jupytext syntax
-to a Markdown file (that will tell Jupytext it is a MyST Markdown file), run the
-following command:
+Jupyter Book 有一个小的 CLI，为操作和创建与 Jupytext 同步的 MyST Markdown 文件提供通用功能。将 Jupytext 语法添加到 Markdown 文件中(这将告诉 Jupytext 它是一个 MyST Markdown 文件)，运行以下命令:
 
 ```bash
 jupyter-book myst init mymarkdownfile.md --kernel kernelname
 ```
 
-If you do not specify `--kernel`, then the default kernel will be used *if there is
-only one available*. If there are multiple kernels available, you must specify one
-manually.
+如果您没有指定 `--kernel`，那么如果只有一个可用的*默认的内核* 将被使用。如果有多个可用内核，则必须手动指定一个。
 
-## Structure of MyST notebooks
 
-Let's take a look at the structure that Jupytext creates, which you may also use
-to create a MyST notebook from scratch. First, let's take a look at a simple MyST notebook:
+## MyST 笔记本的结构
+
+让我们看一下 Jupytext 创建的结构，您也可以使用它从头创建 MyST 笔记本。首先，让我们看看一个简单的 MyST 笔记本:
 
 ````md
 ---
@@ -103,12 +92,11 @@ print("A python cell")
 And some more Markdown...
 ````
 
-There are three main sections to notice:
+这里有三个主要部分需要注意：
 
 ### Frontmatter YAML
 
-MyST notebooks need special frontmatter YAML to tell Jupytext that they
-can be converted to `.ipynb` files. The frontmatter YAML block
+MyST 笔记本需要特殊的前端格式的 YAML 来告诉 Jupytext 他们可以被转换成 `.ipynb` 文件。frontmatter YAML 块：
 
 ```yaml
 ---
@@ -124,16 +112,15 @@ kernelspec:
 ---
 ```
 
-tells Jupytext that the file is in `myst` format, and that its code should
-be run with a Python 3 kernel.
+告诉 Jupytext 此文件是 `myst` 格式的，并且它的代码应该在 Python 3 内核下运行。
 
 ```{margin}
-Remember that Jupyter always defines one, and only one, kernel per notebook.
+记住，Jupyter 总是为每个笔记本定义一个而且只有一个内核。
 ```
 
-### Code cells
+### 代码单元格
 
-Code blocks in MyST notebooks are defined with the following MyST directive:
+MyST 笔记本中的代码块是用下面的 MyST 指令定义的：
 
 ````md
 ```{code-cell}
@@ -141,9 +128,7 @@ your-code
 ```
 ````
 
-You can optionally add extra metadata to the code cell, which will be converted
-into cell metadata in the `.ipynb` file. For example, you can add tags to your code
-cell like so:
+您可以选择向代码单元添加额外的元数据，这些元数据将转换在 `.ipynb` 文件中。例如，你可以像这样在代码单元格中添加标签：
 
 ````md
 ```{code-cell}
@@ -152,8 +137,7 @@ your-code
 ```
 ````
 
-You may also explicitly pass the kernel name after `{code-cell}` to make it clear which
-kernel you are running. For example:
+您也可以显式地在 `{code-cell}` 之后传递内核名称，以明确您正在运行的内核。例如：
 
 ````md
 ```{code-cell} python3
@@ -161,16 +145,13 @@ your-code
 ```
 ````
 
-However, remember that there is only one kernel allowed per page.
+但是，请记住，每个页面只允许一个内核。
 
-### Markdown content
+### Markdown 内容
 
-Everything in-between your code cells is parsed as Markdown content using the
-[MyST Markdown parser](https://myst-parser.readthedocs.io/). See {doc}`../content/myst` for
-more information about MyST Markdown.
+代码单元之间的所有内容都使用[MyST Markdown 解析器](https://myst-parser.readthedocs.io/) 解析为 Markdown 内容。查阅 {doc}`../content/myst` 获取 MyST Markdown 的更多信息。
 
-To explicitly split up Markdown content into two Markdown cells, use the following
-pattern:
+要明确地将 Markdown 内容拆分为两个 Markdown 单元格，请使用以下模式：
 
 ```md
 Content in one Markdown cell
@@ -180,8 +161,8 @@ Content in one Markdown cell
 Content in another Markdown cell
 ```
 
-You may also attach metadata to the cell by adding a Python dictionary after the `+++`.
-For example, to add tags to the second cell above:
+您也可以通过在 `+++` 后面添加 Python 字典来将元数据附加到单元格。
+例如，要向上面的第二个单元格添加标记:
 
 ```md
 Content in one Markdown cell
@@ -192,8 +173,5 @@ Content in another Markdown cell
 ```
 
 ```{warning}
-Please note that cell breaks and metadata specified in MyST files via the `+++` syntax
-only propagate to their `.ipynb` counterpart. When generating the book's HTML, *Markdown
-cell* information is discarded to avoid conflicting hierarchies in the structure of the
-document. In other words, only *code cell* tags have an effect on the generated HTML.
+请注意，在 MyST 文件中通过 `+++` 语法指定的单元格中断和元数据只会传播到它们的 `.ipynb`。在生成书的 HTML 时，*Markdown单元格* 信息将被丢弃，以避免文档结构中的层次结构冲突。换句话说，只有 *code cell* 标签对生成的 HTML 有影响。
 ```

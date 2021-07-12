@@ -17,6 +17,7 @@ jupyter-book build <path-to-book>
 您可以使用 Jupyter Book 构建各种输出。要选择不同的构建器，请在从命令行运行  `jupyter-book build`时使用 `--builder <builder-name>` 配置。以下是可供你选择的构建器名单：
 
 - `html`：HTML输出（默认）
+- `singlehtml:`：你的书的一个 HTML 单页。
 - `dirhtml`：HTML 输出具有 `<filename>/index.html` 结构。
 - `pdfhtml`：通过HTML输出构建PDF（参阅 [](pdf:html)）
 - `linkcheck`：运行 Sphinx 链接检查器（参阅 [](html:link-check)）

@@ -4,15 +4,15 @@
 <script async="async" src="https://hypothes.is/embed.js"></script>
 ```
 
-[Hypothesis](https://hypothes.is/) is a centralized web service that allows you to comment and annotate arbitrary web pages across the web. It allows your readers to log in and comment on your book.
+[Hypothesis](https://hypothes.is/) 是一个集中式的 web 服务，允许您对 web 上的任意网页进行评论和注释。它允许你的读者登录并评论你的书。
 
 ```{note}
-Hypothesis is activated on this page. You can see the web overlay by clicking on the `<` button in the upper-right corner of this page.
+Hypothesis 在本页被激活。你可以通过点击页面右上角的 `<` 按钮来看到网页覆盖。
 ```
 
-## Activate `Hypothesis`
+## 激活 `Hypothesis`
 
-You can activate `Hypothesis` by adding the following to your `_conf.yml` file:
+你可以通过在 `_conf.yml` 文件中添加以下内容来 `Hypothesis`：
 
 ```yaml
 html:
@@ -20,6 +20,6 @@ html:
     hypothesis: true
 ```
 
-This will add a [Hypothesis overlay](https://web.hypothes.is/) to your documentation. This extension simply activates the Hypothesis JavaScript bundle on your Sphinx site.
+这将在您的文档中添加一个 [Hypothesis 覆盖层](https://web.hypothes.is/)。这个扩展只是激活你的 Sphinx 网站上的 Hypothesis JavaScript 包。
 
-When you build your documentation, you will see the Hypothesis overlay to the right of your screen.
+当您构建文档时，您将看到屏幕右侧的 Hypothesis 覆盖层。

@@ -11,55 +11,49 @@ kernelspec:
 ---
 
 (content:references)=
-# References and cross-references
+# 引用和交叉引用
 
-Because `jupyter-book` is built on top of {term}`Sphinx`,
-there are many ways to reference content within your book (or even across other books, or Sphinx websites).
+因为 `jupyter-book` 是建立在 {term}`Sphinx` 之上的，有很多方法可以在你的书中引用内容(甚至跨其他书籍，或 Sphinx 网站)。
 
-Referencing is accomplished with **roles** or with **markdown link syntax**, depending on your use-case.
-There are a few ways to reference content from your book, depending on what kind of content you'd like to reference.
+引用是通过**角色**或**markdown 链接语法**来完成的，这取决于你的用例。书中有几种引用内容的方法，这取决于你想要参考的内容类型。
 
 :::{seealso}
-If you're getting started, check out [](../tutorials/references.md) for more information.
+如果你已经开始学习，请查看 [](../tutorials/references.md) 以获得更多信息。
 :::
 
 (content:references:labels)=
-## Reference section labels
+## 引用 section 标签
 
-Labels are a way to add tags to parts of your content so that you can reference them
-later on. This is helpful if you want to quickly insert links to other
-parts of your book. Labels can be added before major elements of a page,
-such as titles or figures.
+标签是一种将标签添加到内容部分的方法，以便以后可以引用它们。如果你想快速插入到书的其他部分的链接，这是很有用的。标签可以添加在页面的主要元素之前，如标题或 `figure`。
 
-To add a label, use the following pattern **before** the element you wish
-to label:
+要添加一个标签，在你想要标记的元素前使用以下模式：
 
 ```md
 (my-label)=
 # The thing to label
 ```
 
-For example, we've added the following label above the header for this section with:
+例如，我们在本节的标题上面添加了以下标签：
 
 ```md
 (content:references:labels)=
 ## Cross-references and labels
 ```
 
-You can insert cross-references to labels in your content with two kinds of syntax:
+您可以使用两种语法在内容中插入对标签的交叉引用：
 
 - `` {ref}`label-text` ``
 - `[](label-text)`
 
-For example, the syntax `` {ref}`content:references:labels` `` or `[](content:references:labels)` results in a link to this section like so: {ref}`content:references:labels`.
+例如，语法 `` {ref}`content:references:labels` `` 或 `[](content:references:labels)` 会产生到这个部分的链接，像这样 {ref}`content:references:labels`。
 
 (references:figures)=
-## Reference figures
+## 引用图像
 
-To reference a figure in your book, first add a figure and ensure that it has both a `name` as well as a caption associated with it:
+要在你的书中引用一个图，首先添加一个图，并确保它有一个 `name` 和一个关联的字幕:
 
 `````{panels}
-source
+源
 ^^^
 ````md
 ```{figure} ../images/cool.jpg
@@ -69,7 +63,7 @@ My figure title.
 ```
 ````
 ---
-result
+结果
 ^^^
 ```{figure} ../images/cool.jpg
 :name: my-fig-ref
@@ -78,7 +72,7 @@ My figure title.
 ```
 `````
 
-Then, reference the figure by its `:name:` value. For example:
+然后，通过其 `:name:` 值引用该图形。例如:
 
 | source                                         | result                                   |
 |------------------------------------------------|------------------------------------------|
@@ -90,9 +84,9 @@ Then, reference the figure by its `:name:` value. For example:
 | `` Here is {numref}`Custom Figure %s text ` `` | Here is {numref}`Custom Figure %s text <my-fig-ref>` |
 
 (references:tables)=
-## Reference tables
+## 引用表格
 
-To reference a table, first create a table and ensure that it has a `:name:` and a title:
+要引用一个表，首先创建一个表，并确保它有一个 `:name:` 和一个 title:
 
 `````{panels}
 source
@@ -118,7 +112,7 @@ result
 ```
 `````
 
-Here are several ways to reference this content:
+以下是引用该内容的几种方法：
 
 | source                                         | result                                   |
 |------------------------------------------------|------------------------------------------|
@@ -130,47 +124,46 @@ Here are several ways to reference this content:
 | `` Here is {numref}`Custom Table %s text ` `` | Here is {numref}`Custom Table %s text <my-table-ref>` |
 
 
-## Reference content files
+## 引用内容文件
 
-To reference other files of book content, use the `{doc}` role, or link directly to another file with Markdown link syntax. For exmaple:
+要引用书籍内容的其他文件，可以使用 `{doc}` 角色，或者使用 Markdown 链接语法直接链接到另一个文件。例如:
 
 | source                                         | result                                   |
 |------------------------------------------------|------------------------------------------|
-| `` Here is {doc}`../file-types/myst-notebooks.md` ``               | Here is {doc}`../file-types/myst-notebooks`               |
-| `` Here is {doc}`A different page <../file-types/myst-notebooks.md>` `` | Here is {doc}`A different page <../file-types/myst-notebooks>`              |
+| `` Here is {doc}`../file-types/myst-notebooks` ``               | Here is {doc}`../file-types/myst-notebooks`               |
+| `` Here is {doc}`A different page <../file-types/myst-notebooks>` `` | Here is {doc}`A different page <../file-types/myst-notebooks>`              |
 | `` Here is [](../file-types/myst-notebooks.md) ``               | Here is [](../file-types/myst-notebooks.md)               |
 | `` Here is [A different page](../file-types/myst-notebooks.md) `` | Here is [A different page](../file-types/myst-notebooks.md)              |
 
-## Reference equations
+## 引用公式
 
-To reference equations, first insert an equation with a label like so:
+要引用公式，首先插入一个带有如下标签的公式：
 
 ```{math}
 :label: my-math-ref
 w_{t+1} = (1 + r_{t+1}) s(w_t) + y_{t+1}
 ```
 
-To reference equations, use the `{eq}` role. It will automatically insert the number of the equation.
-Note that you cannot modify the text of equation links.
+要引用公式，请使用 `{eq}` 角色。它会自动插入等式的个数。注意，您不能修改等式链接的文本。
 
-For example:
+例如：
 
-- `` See Equation `{eq}`my-math-ref` `` results in: See Equation {eq}`my-math-ref`
-- `` See Equation [](my-math-ref) `` results in: See Equation [](my-math-ref).
+- `` See Equation `{eq}`my-math-ref` `` 结果:见公式 {eq}`my-math-ref`
+- `` See Equation [](my-math-ref) `` 结果:见公式 [](my-math-ref).
 
 
 (references:custom-text)=
-## Choose the reference text
+## 选择引用文本
 
-If you'd like to choose the text of the rendered reference link, use the following pattern:
+如果你想选择渲染引用链接的文本，使用以下模式：
 
 ```md
 {someref}`your text here <reference-target>`
 ```
 
-Above, `reference-target` is the reference to which you are referring, and `your text here` will be the displayed text on the page.
+在上面，`reference-target` 是您所引用的目标，`your text here` 是页面上显示的文本。
 
-For example, see the following references:
+例如，引用如下:
 
 ```{list-table}
 :header-rows: 1
@@ -184,19 +177,18 @@ For example, see the following references:
 ```
 
 
-## Number your references
+## 引用编号
 
-You can add **numbered references** to either [tables](references:tables) or [figures](references:figures). To add a numbered reference to a table or figure, use the `{numref}` role. If you wish to [use custom text](references:custom-text), add `%s` as a placeholder for the number.
+您可以在表格或图表中添加**编号引用**。要向 [表](references:tables)或 [图形](references:figures) 添加编号引用，请使用 `{numref}` 角色。如果您希望使用 [自定义文本](references:custom-text)，请添加 `%s` 作为数字的占位符。
 
-See the examples in each section below for usage.
-
+有关用法，请参阅下面一节中的示例。
 
 (references:markdown-syntax)=
-## Reference with markdown link syntax
+## 使用 markdown 链接语法的引用
 
-If you wish to use Markdown style syntax, then MyST Markdown will try to find a reference from any of the above reference types (and more!).
+如果你想使用 Markdown 风格的语法，那么 MyST Markdown 将尝试从以上引用类型中找到一个引用(以及更多!)
 
-This has an advantage, in that you can used nested markdown syntax in your text, for example:
+这有一个优点，你可以在你的文本中使用嵌套的标记语法，例如：
 
 ```{list-table}
 :header-rows: 1
@@ -213,43 +205,38 @@ This has an advantage, in that you can used nested markdown syntax in your text,
     [A reference to a header](content:references:labels)
 ```
 
-Leaving the title empty will mean the reference uses the target as text, for example the syntax
+将标题保留为空意味着引用将目标作为文本，例如语法
 
 ```md
 [](./myst.md)
 ```
 
-will link to a section and use its header text as the link text itself:
+将链接到一个节，并使用它的标题文本作为链接文本本身：
 
 [](./myst.md)
 
-:::{admonition} Internal vs. External URLs
+:::{admonition} 内部和外部 URLs
 :class: tip
-You can control how MyST Markdown distinguishes between internal references and external URLs in your `_config.yml`.
-For example,
+你可以在 `_config.yml` 中控制 MyST Markdown 如何区分内部引用和外部 URLs。例如，
 
 ```yaml
 parse:
    myst_url_schemes: [mailto, http, https]
 ```
 
-means that `[Jupyter Book](https://jupyterbook.org)` will be recognised as a URL, but `[Citations](content:citations)` will not:
+意味着 `[Jupyter Book](https://jupyterbook.org)` 将被识别为一个 URL，但 `[Citations](content:citations)`  将不会：
 
 * [Jupyter Book](https://jupyterbook.org)
 * [Citations](content:citations)
 
 :::
 
+## 检查遗漏的引用
 
-## Check for missing references
-
-You can check for missing references when building a Jupyter Book.
-To do so, use the following options:
+你可以在构建 Jupyter  Book 时检查丢失的参考。要做到这一点，可以使用以下选项:
 
 ```bash
 jupyter-book build -W -n --keep-going docs/
 ```
 
-This will check for missing references (`-n`) and turn them into errors (`-W`),
-but will still attempt to run the full build (`--keep-going`),
-so that you can see all errors in one run.
+这将检查丢失的引用(`-n`)并将它们转换为错误(`-W`)，但仍将尝试运行完整的构建(`--keep-going`)，以便您可以在一次运行中看到所有错误。

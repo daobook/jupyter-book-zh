@@ -1,53 +1,45 @@
 (file-types:index)=
-# Types of content source files
+# 内容源文件的类型
 
-Jupyter Book supports many kinds of source files for your book's content.
-These sections cover the major types of content and how you can control their behavior in Jupyter Book.
-See the list of sections to the left for information about each type.
+Jupyter Book 为您的书的内容支持多种源文件。
+这些部分涵盖了 Jupyter Book 中的主要内容类型，以及如何控制它们的行为。
+有关每种类型的信息，请参阅左边的章节列表。
 
-## Section table of contents
+## 章节目录
 
 ```{tableofcontents}
 ```
 
-## Allowed content types
+## 允许的内容类型
 
-In general, these are the types of content supported by Jupyter Book (along with
-links to their section in this book):
+总的来说，以下是 Jupyter Book 支持的内容类型(以及到本书中它们部分的链接)：
 
 [Markdown files](./markdown.md)
-: These are text files written in either CommonMark or in MyST Markdown.
+: 这些都是用 CommonMark 或 MyST Markdown 编写的文本文件。
 
 [Jupyter notebooks](./notebooks.md)
-: AKA, `.ipynb` files. These files can contain Markdown cells with MyST Markdown.
-: A Jupyter notebook can utilise any program kernel that implements the [Jupyter messaging protocol](http://jupyter-client.readthedocs.io/en/latest/messaging.html) for executing code.
-  There are kernels available for [Python](http://ipython.org/notebook.html), [Julia](https://github.com/JuliaLang/IJulia.jl), [Ruby](https://github.com/minad/iruby), [Haskell](https://github.com/gibiansky/IHaskell) and [many other languages](https://github.com/jupyter/jupyter/wiki/Jupyter-kernels).
+: 又名 `.ipynb` 文件。这些文件可以包含 MyST Markdown 的 Markdown 单元格。
+: Jupyter 笔记本可以利用任何实现了 [Jupyter 消息协议](http://jupyter-client.readthedocs.io/en/latest/messaging.html) 的程序内核来执行代码。
+  可用的内核有 [Python](http://ipython.org/notebook.html), [Julia](https://github.com/JuliaLang/IJulia.jl), [Ruby](https://github.com/minad/iruby), [Haskell](https://github.com/gibiansky/IHaskell) 和 [更多其它语言](https://github.com/jupyter/jupyter/wiki/Jupyter-kernels)。
 
 [MyST Markdown notebooks](./myst-notebooks.md)
-: These are Markdown files (ending in `.md`) that will be *converted to a notebook and executed*.
+: 这些是 Markdown 文件(以 `.md` 结尾)，将被转换为笔记本并执行。
 
 [reStructuredText](./restructuredtext.md).
-: These are text files used by the Sphinx documentation engine (which is used by Jupyter Book).
-  It is recommended to use MyST Markdown instead.
+: 这些是 Sphinx 文档引擎(被 Jupyter Book 使用)所使用的文本文件。推荐使用 MyST Markdown。
 
 [Custom notebook formats](file-types:custom)
-: Any other file type can be *auto-converted* before execution by assigning it a custom Python function, for example those provided by the Jupytext conversion tool.
+: 任何其他文件类型都可以在执行前通过指定一个定制的 Python 函数自动转换，例如那些由 Jupytext 转换工具提供的函数。
 
 (rules-all-content-types)=
-## Rules for all content types
+## 所有内容类型的规则
 
-There are a few things that are true for all content types. Here is a short list:
+有一些事情对所有内容类型都适用。以下是一个简短的列表：
 
-* **Files must have a title**. Generally this means that they must begin with
-  a line that starts with a single `#`
-* **Use only one top-level header**. Because each page must have a clear
-  title, it must also only have one top-level header. You cannot have multiple
-  headers with single `#` tag in them.
-* **Headers should increase linearly**. If you're inside of a section with
-  one `#`, then the next nested section should start with `##`. Avoid jumping straight
-  from `#` to `###`.
+* **文件必须有一个 title**。一般来说，这意味着它们必须以一行 `#` 开头
+* **只使用一个顶级 header**。因为每个页面必须有一个明确的 title，所以它也必须只有一个顶级 header。您不能在多个 headers 文件中使用单个 `#` 标记。
+* **Headers 应该线性增加**。如果您位于带有一个 `#` 的部分中，那么下一个嵌套的部分应该以 `##` 开始。避免直接从 `#` 跳到`###`。
 
-## Two-way conversion between text-files and `.ipynb` files
+## 文本文件和 `.ipynb` 文件之间的双向转换
 
-For information about how to convert between text files and `.ipynb` files for use
-with Jupyter Book, see [](file-types:custom:jupytext).
+关于如何使用的 Jupyter Book 相互转换文本文件和 `.ipynb` 文件，请参阅 [](file-types:custom:jupytext)。

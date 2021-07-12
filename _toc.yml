@@ -87,5 +87,5 @@ parts:
     title: Gallery of Jupyter Books
   - file: explain/components
   - file: cite
-  - file: reference/_changelog
-    title: Change log
+  # - file: reference/_changelog
+  #   title: Change log

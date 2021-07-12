@@ -1,8 +1,8 @@
-# Write executable content
+# 写可执行内容
 
-This section covers topics related to **executing** your content and interweaving **computational material** with your narrative. For example, if you're writing your content as _Jupyter Notebooks_ and wish for the output of cells to be included with your book.
+本节涵盖了与**执行**内容和将**计算材料**与叙述交织相关的主题。例如，如果您正在以  *Jupyter  Notebook* 的形式编写内容，并希望将单元格的输出包含在您的书中。
 
-See the sections below to get started.
+参见下面的章节开始。
 
 ```{tableofcontents}
 ```

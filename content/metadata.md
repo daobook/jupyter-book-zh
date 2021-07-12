@@ -1,50 +1,40 @@
-# Add metadata to your book pages
+# 将元数据添加到您的书籍页面
 
-Metadata is information about a book or its content.
-It is often used to control the behavior of Jupyter Book and its features.
-This is a short guide to how metadata is added to various kinds of content in Jupyter Book.
+元数据是关于一本书或其内容的信息。它经常被用来控制 Jupyter Book 及其特性的行为。这是一个简短的指南，介绍如何将元数据添加到 Jupyter Book 的各种内容中。
 
 (jupyter-cell-tags)=
-## Add metadata to notebooks
+## 将元数据添加到笔记本
 
-You can control the behaviour of Jupyter Book by putting custom tags
-in the metadata of your cells. This allows you to do things like
-{doc}`automatically hide code cells <../interactive/hiding>` as well as
-{ref}`add interactive widgets to cells <launch:thebe>`.
+您可以通过在单元格元数据中放置自定义标记来控制 Jupyter Book 的行为。这允许您 {doc}`自动隐藏代码单元格 <../interactive/hiding>` 以及 [向单元格添加交互式小部件](launch:thebe)。
 
-### Adding tags using notebook interfaces
+### 使用笔记本界面添加标签
 
-There are two straightforward ways to add metadata to cells:
+有两种简单的方法可以将元数据添加到单元格中：
 
-1. **Use the Jupyter Notebook cell tag editor**. The Jupyter Notebook ships with a
-   cell tag editor by default. This lets you add cell tags to each cell quickly.
+1. **使用 Jupyter Notebook 单元格标签编辑器**. 默认情况下，Jupyter Notebook 附带一个单元格标记编辑器。这允许您快速地向每个单元格添加单元格标记。
 
-   To enable the cell tag editor, click `View -> Cell Toolbar -> Tags`. This
-   will enable the tags UI. Here's what the menu looks like.
+   要启用单元格标签编辑器，单击 `View -> Cell Toolbar -> Tags`。这将启用标签 UI。菜单是这样的。
 
    ![tags_notebook](../images/tags_notebook.png)
 
-2. **Use the JupyterLab Cell Tags plugin**. JupyterLab is an IDE-like Jupyter
-   environment that runs in your browser. It has a "cell tags" plugin built-in,
-   which exposes a user interface that lets you quickly insert cell tags.
+2. **使用 JupyterLab Cell Tags 插件**。JupyterLab 是一个类似 IDE 的 Jupyter 环境，可以在浏览器中运行。它有一个内置的“单元格标签”插件，它公开了一个用户界面，允许您快速插入单元格标签。
 
-   You'll find tags under the "wrench" menu section.
-   Here's what the tags UI in JupyterLab looks like.
+   您将在"wrench"菜单部分找到标签。
+   以下是 JupyterLab 中的标签 UI。
 
    ![tags_jupyterlab](../images/tags_jupyterlab.png)
 
-Tags are actually just a special section of cell level metadata.
-There are three levels of metadata:
+标签实际上只是单元级元数据的一个特殊部分。元数据有三种级别:
 
-* For notebook level: in the Jupyter Notebook Toolbar go to `Edit -> Edit Notebook Metadata`
-* For cell level: in the Jupyter Notebook Toolbar go to `View -> Cell Toolbar -> Edit Metadata` and a button will appear above each cell.
-* For output level: using e.g. `IPython.display.display(obj,metadata={"tags": [])`, you can set metadata specific to a certain output (but Jupyter Book does not utilize this just yet).
+* 对于笔记本级别：在 Jupyter 笔记本工具栏上转到 `Edit -> Edit Notebook Metadata`
+* 对于单元格级别：在 Jupyter 笔记本工具栏中，点击 `View -> Cell Toolbar -> Edit Metadata`，每个单元格上方都会出现一个按钮。
+* 对于输出级别：使用如 `IPython.display.display(obj,metadata={"tags": [])`，你可以设置特定于某个输出的元数据(但是 Jupyter Book 还没有利用这一点)。
 
 ![NB Metadata GIF](../images/metadata_edit.*)
 
-### Add tags using MyST Markdown notebooks
+### 使用 MyST Markdown 笔记本添加标签
 
-If you're writing notebooks with MyST Markdown, then you can add tags to each code cell when you write the `{code-cell}` block. For example, below we:
+如果你正在用 MyST Markdown 写笔记本，那么当你写 `{code-cell}` 块时，你可以添加标签到每个代码单元格。例如，下面我们:
 
 ````
 ```{code-cell}
@@ -53,19 +43,13 @@ print("some code")
 ```
 ````
 
-Will create a code cell with those three tags attached to it. For more information about MyST Markdown notebooks, see [](../file-types/myst-notebooks.md).
+将创建一个带有这三个标签的代码单元格。有关 MyST Markdown 笔记本的更多信息，请参阅 [](../file-types/myst-notebooks.md)。
 
-### Add tags using Python code
+### 使用 Python 代码添加标记
 
-Sometimes you'd like to quickly scan through a notebook's cells in order to
-add tags based on the content of the cell. For example, you might want to
-hide any cell with an import statement in it using the `remove-input` tag.
+有时您希望快速扫描笔记本的单元格，以便根据单元格的内容添加标记。例如，您可能希望使用 `remove-input` 标记隐藏任何包含 import 语句的单元格。
 
-Here's a short Python snippet to accomplish something close to this.
-First change directories into the root of your book folder, and then
-run the script below as a Python script or within a Jupyter Notebook
-(modifying as necessary for your use case).
-Finally, check the changes that will be made and commit them to your repository.
+下面是一个简短的 Python 代码片段，可以实现类似于此的功能。首先将目录更改到图书文件夹的根目录，然后将下面的脚本作为Python脚本或在 Jupyter Notebook 中运行(根据用例进行必要的修改)。最后，检查将要做出的更改并将它们提交到存储库。
 
 ```python
 import nbformat as nbf
@@ -97,6 +81,6 @@ for ipath in notebooks:
     nbf.write(ntbk, ipath)
 ```
 
-## Add metadata to notebook cells
+## 向笔记本单元格添加元数据
 
-Stuff about tags etc
+标签之类的东西

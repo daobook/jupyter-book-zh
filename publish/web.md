@@ -1,7 +1,7 @@
-# Host your book on the internet
+# 把你的书放在网上
 
-A common way to publish your book content is to create an HTML version of your book (also called a _static website_) and host it on the web somewhere.
-There are a few ways to do this, and this section covers the methods available to you.
+发布你的书内容的一种常见方法是创建你的书的 HTML 版本(也称为 _static website_)，并将其托管在网络上的某个地方。
+有几种方法可以做到这一点，本节将介绍可用的方法。
 
 ```{tableofcontents}
 ```
