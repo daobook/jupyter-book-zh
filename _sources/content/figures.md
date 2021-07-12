@@ -1,26 +1,25 @@
-# Images and figures
+# `image` 和 `figure`
 
 (content-blocks-images)=
-## Images
+## `image`
 
-MyST Markdown provides a few different syntaxes for including images in your documents, as explained below.
+MyST Markdown 为在文档中包含图像提供了几种不同的语法，如下所述。
 
-The first is the standard Markdown syntax, by which
+第一个是标准的 Markdown 语法
 
 ```md
 ![fishy](../images/fun-fish.png)
 ```
 
-results in
+结果是
 
 ![fishy](../images/fun-fish.png)
 
-This will correctly copy the image to the build folder and will render it in all output formats (HTML, TeX, etc).
-However, it is limited in the configuration that can be applied. For example, the image width cannot be set with this syntax.
+这将正确地将图像复制到构建文件夹，并将其呈现在所有输出格式(HTML, TeX 等)。但是，它在可应用的配置中受到限制。例如，图像宽度不能用此语法设置。
 
-As discussed in [this section](content:myst/directives), MyST allows for directives such as `image` and `figure` to be used (see [the Sphinx documentation](sphinx:rst-primer) for available options).
+正如在 [本节](content:myst/directives) 中讨论的，myst 允许使用诸如 `image` 和 `figure` 等指令(参见 [Sphinx文档](sphinx:rst-primer) 以获得可用选项)。
 
-As an example,
+作为一个例子，
 
 ````md
 ```{image} ../images/fun-fish.png
@@ -31,7 +30,7 @@ As an example,
 ```
 ````
 
-will include the following _customized_ figure:
+将包括以下_定制_图：
 
 ```{image} ../images/fun-fish.png
 :alt: fishy
@@ -40,77 +39,70 @@ will include the following _customized_ figure:
 :align: center
 ```
 
-These directives allow you to control aspects of the image with [directive arguments](directive-arguments).
-
+这些指令允许您使用 [指令参数](directive-arguments) 控制图像的各个方面。
 
 (figures:raw-html)=
-### Raw HTML images
+### 原始 HTML 图片
 
-The image syntax described above gives you more customizability, but note that this syntax will not show the image in common Markdown viewers (for example when the files are viewed on GitHub).
+上面描述的图像语法为您提供了更多的可定制性，但请注意，这种语法不会在常见的 Markdown 查看器中显示图像(例如，当文件在 GitHub 上查看时)。
 
-A workaround is to use HTML directly, and MyST can parse HTML images directly via the `html_image` extension.
+解决方法是直接使用 HTML, MyST 可以通过扩展名 `html_image` 直接解析 HTML 图像。
 
 :::{warning}
-Using raw HTML is usually a bad choice (see [this explanation](raw-html-in-markdown)), so be careful before doing so!
+使用原始 HTML 通常是一个糟糕的选择(见 [此解释](raw-html-in-markdown))，所以在这样做之前要小心！
 :::
 
-To parse raw HTML image syntax, enable the `html_image` extension to your list of extensions in `_config.yml`:
+要解析原始 HTML 图像语法，请在 `_config.yml` 中启用扩展 `html_image`：
 
 ```yaml
 parse:
   myst_enable_extensions:
-    # don't forget to list any other extensions you want enabled,
-    # including those that are enabled by default!
+    # 不要忘记列出任何其他你想要启用的扩展，
+    # 包括那些默认启用的！
     - html_image
 ```
 
-HTML images will be parsed like any other image. For example:
+HTML 图像将像其他图像一样被解析。例如：
 
 ```html
 <img src="../images/fun-fish.png" alt="fishy" class="bg-primary" width="200px">
 ```
 
-will correctly render
+将正确的渲染
 
 <img src="../images/fun-fish.png" alt="fishy" class="bg-primary mb-1" width="200px">
 
-This will also be output in PDF LaTeX builds!
+这也将输出在 PDF LaTeX 构建！
 
-Allowed attributes are equivalent to the `image` directive: `src`, `alt`, `class`, `width` and `height`.
-Any other attributes will be ignored.
+允许的属性等价于 `image` 指令：`src`, `alt`, `class`,` width` 和 `height`。任何其他属性将被忽略。
 
 (content-blocks-images/formats)=
-### Supported image formats
+### 图像格式支持
 
-Standard rasterized image formats, such as `.png` and `jpg`, are supported for both HTML and LaTeX/PDF output formats.
-By contrast, vector formats such as `.svg`, `.pdf` and `.eps` are normally builder specific.
-See the `supported_image_types` specification for each Sphinx builder [here](sphinx:builders).
+HTML 和 LaTeX/PDF 输出格式都支持标准的栅格化图像格式，如 `.png` 和 `.jpg`。相比之下，向量格式，如 `.svg`、`.pdf` 和 `.eps` 通常是特定于 [构建器](sphinx:builders) 的。请参阅每个 Sphinx 构建器的 `supported_image_types` 规范。
 
-To support multiple builders, Jupyter Book allows you to use a `*` asterisk as the extension. For example, with the HTML
+为了支持多个构建器，Jupyter Book 允许你使用 `*` 星号作为扩展。例如，使用 HTML
 
 ```html
 <img src="../images/fun-fish.*" alt="fishy" class="bg-primary mb-1" width="200px">
 ```
 
-all images matching the provided pattern will then be searched for and each builder chooses the best image out of the available candidates.
+然后将搜索所有匹配所提供模式的图像，每个构建器从可用的候选图像中选择最佳图像。
 
-The code above produced the following image:
+上面的代码产生了下面的图像：
 
 <img src="../images/fun-fish.*" alt="fishy" class="bg-primary mb-1" width="200px">
 
-You can use a tool such as [imagemagick](https://imagemagick.org), to convert your images to multiple formats prior to building your book.
+您可以使用 [imagemagick](https://imagemagick.org) 等工具，在构建图书之前将图像转换为多种格式。
 
-Alternatively, you may wish to check out these Sphinx extensions:
+或者，你也可以看看这些 Sphinx 扩展：
 
 - [sphinx.ext.imgconverter](sphinx:sphinx.ext.imgconverter)
 - [sphinxcontrib-svg2pdfconverter](https://github.com/missinglinkelectronics/sphinxcontrib-svg2pdfconverter)
 
-## Figures
+## `figure`
 
-MyST Markdown also lets you include **figures** in your page. Figures are
-like images, except that they are easier to reference elsewhere in your
-book, and they include things like captions. To include a figure, use this
-syntax:
+MyST Markdown 也允许你在页面中包含 **`<figure>`**。就像图像一样，除了它们更容易在你的书的其他地方引用，它们包括像标题这样的东西。要包含一个 `<figure>`，请使用以下语法：
 
 ````md
 ```{figure} ../images/C-3PO_droid.png
@@ -122,7 +114,7 @@ Here is my figure caption!
 ```
 ````
 
-which will produce the following:
+这将产生以下内容：
 
 ```{figure} ../images/C-3PO_droid.png
 ---
@@ -133,25 +125,22 @@ Here is my figure caption!
 ```
 
 :::{note}
-You can also include figures that were generated by your code in notebooks.
-To do so, see [](content:code-outputs:glue).
+您还可以在笔记本中包含由您的代码生成的数字。要这样做，看 [](content:code-outputs:glue).
 :::
 
 ## Markdown figures
 
-Markdown figures combine [colon style admonitions](admonitions:colons) and [HTML image parsing](figures:raw-html), to produce a "Markdown friendly" syntax for figures,
-with equivalent behaviour to the `figure` directive above.
+Markdown figures 结合 [colon 风格的 admonitions](admonitions:colons) 和 [HTML 图像解析](figures:raw-html)，生成了一个 “Markdown友好” 的 figures 语法，与上面的 `figure` 指令具有相同的行为。
 
 :::{note}
-Using this feature requires that [HTML image parsing is enabled](figures:raw-html).
+使用此特性需要 [启用 HTML 图像解析](figures:raw-html)。
 :::
 
-The figure block must contain **only** two components; an image, in either Markdown or HTML syntax, and a single paragraph for the caption. See below for an example.
+图形块必须**只**包含两个组件；Markdown 或 HTML 语法的图片，以及一个单独的段落作为标题。请看下面的例子。
 
-As with admonitions, the figure can have additional classes set.
-The "title" of the admonition is used as the label that can be targeted by your cross-references.
+与 admonition 一样，figure 可以设置其他类。admonition 的“标题”被用作标签，可以作为交叉引用的目标。
 
-For example, the code
+例如，代码
 
 ```md
 :::{figure-md} markdown-fig
@@ -161,7 +150,7 @@ This is a caption in **Markdown**!
 :::
 ```
 
-generates this figure:
+生成这个图：
 
 :::{figure-md} markdown-fig
 <img src="../images/fun-fish.png" alt="fishy" class="bg-primary mb-1" width="200px">
@@ -169,58 +158,55 @@ generates this figure:
 This is a caption in **Markdown**!
 :::
 
-As we see here, we can reference the figure:
+正如我们在这里看到的，我们可以参考这个图：
 
 [Go to the fish!](markdown-fig)
 
-We just have to use the title of the admonition as target:
+我们只需要把这句提示的标题作为目标：
 
 ```md
 [Go to the fish!](markdown-fig)
 ```
 
 (figures:referencing)=
-## Referencing figures
+## 引用图形
 
-You can then refer to your figures by using the `{ref}` role or Markdown style references like:
+然后，您可以使用 `{ref}` 角色或 Markdown 样式引用您的图形，如：
 
 ```md
 - {ref}`directive-fig`
 - [](markdown-fig)
 ```
 
-which will replace the reference with the figure caption like so:
+它将用下图标题代替引用，如下所示：
 
 - {ref}`directive-fig`
 - [](markdown-fig)
 
 (figures:numref)=
-### Numbered references
+### 引用编号
 
-Another convenient way to create cross-references is with the `{numref}` role,
-which referes to the labelled objects by the numbers they automatically get.
-For example, `` {numref}`directive-fig` `` will produce a reference like: {numref}`directive-fig`.
+创建交叉引用的另一种方便方法是使用 `{numref}` 角色，该角色通过自动获取的数字引用带标签的对象。例如，`` {numref}`directive-fig` `` 将产生如下引用：{numref}`directive-fig`。
 
-If an explicit text is provided, this caption will serve as the title of the reference. For example,
+如果提供了显式文本，则此标题将作为引用的标题。例如，
 
 ```md
 - {ref}`Fly to the droid <directive-fig>`
 - [Swim to the fish](markdown-fig)
 ```
 
-produces the following cross-references:
+生成以下交叉引用：
 
 - {ref}`Fly to the droid <directive-fig>`
 - [Swim to the fish](markdown-fig)
 
-With `numref` you can also access the figure number and caption individually:
-the sequences "%s" and "{number}" will be replaced with the figure number, while "{name}" will be replaced with the figure caption.
+使用 `numref`，您还可以单独访问数字和标题：序列 "%s" 和 "{number}" 将被替换为数字，而 "{name}" 将被替换为数字标题。
 
-For example, ``{numref}`Figure {number}: {name} <directive-fig>` `` will produce {numref}`Figure {number}: {name} <directive-fig>`.
+例如，``{numref}`Figure {number}: {name} <directive-fig>` `` 将生成 {numref}`Figure {number}: {name} <directive-fig>`。
 
 ## Margin captions and figures
 
-You can include a figure caption on the margin using `:figclass: margin-caption`, as seen in {numref}`margin_caption_figure`:
+你可以使用 `:figclass: margin-caption` 在页边距添加一个图说明，如 {numref}`margin_caption_figure` 所示：
 
 ```{figure} ../images/cool.jpg
 ---
@@ -231,7 +217,7 @@ name: margin_caption_figure
 Here is my figure caption!
 ```
 
-Another option is to include figures on the margin by using `:figclass: margin` as seen in {numref}`margin_figure`:
+另一种选择是使用 `:figclass: margin` (如 {numref}`margin_figure` 所示)在页边距中包含图形：
 
 ```{figure} ../images/cool.jpg
 ---
@@ -242,11 +228,11 @@ name: margin_figure
 Here is my figure caption!
 ```
 
-## Figure scaling and aligning
+## 图形缩放和对齐
 
-Figures can also be aligned by using the option `:align: right` or `:align: left`. By default, figures are aligned to the center (see {numref}`directive-fig`).
+图形也可以使用 `:align: right` 或 `:align: left` 选项来对齐。默认情况下，图形对齐到中心(见 {numref}`directive-fig`)。
 
-To align a figure on the left, you'd write
+要使一个图形在左边对齐，你需要写
 
 ````md
 ```{figure} ../images/cool.jpg
@@ -258,7 +244,7 @@ Here is my figure caption!
 ```
 ````
 
-to get
+得到
 
 ```{figure} ../images/cool.jpg
 ---
@@ -268,7 +254,7 @@ align: left
 Here is my figure caption!
 ```
 
-Similarly, if you write
+类似地，如果你写
 
 ````md
 ```{figure} ../images/cool.jpg
@@ -280,7 +266,7 @@ Here is my figure caption!
 ```
 ````
 
-your figure becomes right-aligned:
+你的图形右对齐:
 
 ```{figure} ../images/cool.jpg
 ---
@@ -291,29 +277,30 @@ align: right
 Here is my figure caption!
 ```
 
-## Figure parameters
+## Figure 参数
 
-The following options are supported:
+支持以下选项：
 
-`scale` : _integer percentage_
-:  Uniformly scale the figure. The default is "100" which indicates no scaling. The symbol "%" is optional.
+`scale` : _整数百分比_
+:  均匀地缩放图形。默认值是“100”，表示没有伸缩性。符号“%”是可选的。
 
-`width` : _length or percentage_
-:  You can set the figure width in the following units: "em", "ex", "px","in" ,"cm", "mm", "pt", "pc", "%".
+`width` : _长度或百分_
+:  您可以以下单位设置图形宽度："em", "ex", "px","in" ,"cm", "mm", "pt", "pc", "%".
 
-`height` : _length_
-:  You can set the figure height in the following units: "em", "ex", "px", "in", "cm", "mm", "pt", "pc".
+`height` : _长度_
+:  您可以以下单位设置图形高度："em", "ex", "px", "in", "cm", "mm", "pt", "pc".
 
-`alt` : _text_
-:  Text to be displayed if the figure cannot be displayed or if the reader is using assistive technologies. Generally entails a short description of the figure.
+`alt` : _文本_
+:  如果无法显示图形或读者正在使用辅助技术，则将显示文本。通常需要对图形进行简短的描述。
 
-`align` : _"left", "center", or "right"_
-:  Align the figure left, center, or right. Default alignment is center.
+`align` : _"left", "center", 或 "right"_
+:  使图形左、中、右对齐。默认对齐方式为居中对齐。
 
-`name` : _text_
-:  A unique identifier for your figure that you can use to reference it with `{ref}` or `{numref}` roles. Cannot contain spaces or special characters.
+`name` : _文本_
+:  您的图形的唯一标识符，您可以使用 `{ref}` 或 `{numref}` 角色来引用它。不能包含空格或特殊字符。
 
-`figclass` : _text_
-:  Value of the figure's class attribute which can be used to add custom CSS or JavaScript. Predefined options include:
-  * _"margin"_ : Display figure on the margin
-  * _"margin-caption"_ : Display figure caption on the margin
+`figclass` : _文本_
+:  值的图像类属性，可以用来添加自定义 CSS 或 JavaScript。预定义的选项包括：
+
+  * _"margin"_ : 在空白处显示图形
+  * _"margin-caption"_ : 在空白处显示图形字幕

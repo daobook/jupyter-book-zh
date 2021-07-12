@@ -15,32 +15,30 @@ substitutions:
   repo_url: "[my repo url](https://github.com/executablebooks/jupyter-book)"
 ---
 
-# Special content blocks
+# 特殊内容块
 
-A common use of directives and roles is to designate "special blocks" of your content.
-This allows you to include more complex information such as warnings and notes, citations, and figures.
-This section covers a few common ones.
+指令和角色的常见用法是指定内容的“特殊块”。这使您可以包含更复杂的信息，例如警告和注释，引文和图形。本节涵盖了一些常见的内容。
 
 (content-blocks:myst-extensions)=
-## MyST syntax extensions
+## MyST 语法扩展
 
-{term}`MyST Markdown` has a base syntax that it supports, and additional syntax can be enabled to add extra functionality.
-By default, Jupyter Book enables a few extra syntax pieces for MyST in order to more closely resemble the Markdown experience in Jupyter Notebooks and interfaces.
-These extensions are:
+{term}`MyST Markdown` 具有支持的基本语法，并且可以启用其他语法以添加其他功能。默认情况下，Jupyter Book 为 MyST 启用了一些额外的语法，以更加类似于 Jupyter Notebook 和界面中的 Markdown 体验。
+
+这些扩展是：
 
 `dollarmath`
-: To support `$$` and `$` syntax for math blocks. See [](./math.md).
+: 为数学块支持 `$$` 和 `$` 语法。参见 [](./math.md)。
 
 `linkify`
-: To auto-detect HTML-like links in your markdown and convert them to hyperlinks.
+: 自动检测 Markdown 中类似 HTML 的链接并将其转换为超链接。
 
 `substitution`
-: To allow you to define markdown "variables" and substitute text in using them. See [](content:substitutions).
+: 为了允许您定义 Markdown “变量”并在使用它们时替换文本。看 [](content:substitutions)。
 
 `colon_fence`
-: To allow you to use `:::` fences for admonitions, in order to make them easier to render in interfaces that do not support MyST. See [](admonitions:colons).
+: 为了使您可以使用 `:::` 防护栅栏，以便使其更易于在不支持 MyST 的界面中呈现。查阅 [](admonitions:colons)。
 
-To enable your own syntax extensions, use the following configuration pattern:
+要启用自己的语法扩展，请使用以下配置模式：
 
 ```yaml
 parse:
@@ -49,20 +47,18 @@ parse:
     - extension-2
 ```
 
-Note that this will **override** the default Jupyter Book extension list.
-You should include all of the extensions that you want to be enabled.
+请注意，这将“覆盖”默认的 Jupyter Book 扩展名列表。您应该包括要启用的所有扩展。
 
 :::{seealso}
-For a list of syntax extensions in MyST, see [the MyST documentation](https://myst-parser.readthedocs.io/en/latest/using/syntax-optional.html).
+有关 MuST 中语法扩展的列表，请参见 [MyST 文档](https://myst-parser.readthedocs.io/en/latest/using/syntax-optional.html)。
 :::
 
 (content:admonitions)=
-## Notes, warnings, and other admonitions
+## 备注、警告和其他提示
 
-Let's say you wish to highlight a particular block of text that exists slightly apart from the narrative of your page.
-You can use the **`{note}`** directive for this.
+假设您希望突出显示与页面叙述略有不同的特定文本块。您可以为此使用 **`{note}`** 指令。
 
-For example, the following text:
+例如，以下文本：
 
 ````md
 ```{note}
@@ -70,39 +66,37 @@ Here is a note!
 ```
 ````
 
-Results in the following output:
+结果如下：
 
 ```{note}
 Here is a note!
 ```
 
-````{margin} A note on nesting
-You can nest admonitions (and other content blocks) inside one another. For example:
+````{margin} 关于嵌套的说明
+您可以将警告（和其他内容块）彼此嵌套。例如：
 
 :::{note}
-Here's a note block inside a margin block
+这是边距块内的一个 note 块
 :::
 
-See {ref}`markdown/nesting` for instructions to do this.
+有关执行此操作的说明，请参见 {ref}`markdown/nesting`。
 ````
 
-There are a number of similarly-styled blocks of text. For example, here is a `{warning}`
-block:
+有许多类似样式的文本块。例如，下面是一个 `{warning}` 块：
 
 `````{warning}
-Here's a warning! It was created with:
+这是警告！它是通过以下方式创建的：
 ````
 ```{warning}
 ```
 ````
 `````
 
-For a complete list of options, see [the `sphinx-book-theme` documentation](https://sphinx-book-theme.readthedocs.io/en/latest/reference/demo.html#admonitions).
+有关选项的完整列表，请参见 [`sphinx-book-theme` 文档](https://sphinx-book-theme.readthedocs.io/en/latest/reference/demo.html#admonitions)。
 
-### Blocks of text with custom titles
+### 具有自定义标题的文本块
 
-You can also choose the title of your message box by using the
-**`{admonition}`** directive. For example, the following text:
+您还可以通过使用 **`{admonition}`** 指令来选择消息框的标题。例如，以下文本：
 
 ````md
 ```{admonition} Here's your admonition
@@ -110,14 +104,13 @@ Here's the admonition content
 ```
 ````
 
-Results in the following output:
+结果如下：
 
 ```{admonition} Here's your admonition
 Here's the admonition content
 ```
 
-If you'd like to **style these blocks**, then use the `:class:` option. For
-example:
+如果您想对这些块进行样式设置，请使用 `:class:` 选项。例如：
 
 `````{admonition} This admonition was styled...
 :class: tip
@@ -131,14 +124,11 @@ My content
 `````
 
 (admonitions:colons)=
-### Markdown-friendly directives with `:::`
+### 与 `:::` 兼容 Markdown 的指令
 
-The admonition syntax above utilises the general [directives syntax](content:myst/directives).
-However, if you're using an interface that does not support {term}`MyST Markdown`, it will render as a raw literal block.
-Many directives contain markdown inside, and if you'd like this markdown to render "normally", you may also use `:::` fences rather than ` ``` ` fences to define the directive. As a result, the contents of the directive will be rendered as markdown.
+上面的提示语法使用常规的 [指令语法](content:myst/directives)。但是，如果您使用的接口不支持 {term}`MyST Markdown`，它将呈现为原始文字块。许多指令内部都包含 markdown，如果您希望此 markdown 可以“正常”呈现，则还可以使用 `:::` 栅栏而不是 ` ``` ` 栅栏来定义指令。结果，指令的内容将呈现为 markdown。
 
-
-For example:
+例如：
 
 ```md
 :::{note}
@@ -150,7 +140,7 @@ This text is **standard** _Markdown_
 This text is **standard** _Markdown_
 :::
 
-Similar to normal directives, these admonitions can also be nested:
+类似于普通指令，这些警告也可以嵌套：
 
 ```md
 ::::{important}
@@ -167,17 +157,14 @@ This text is **standard** _Markdown_
 ::::
 
 :::{note}
-You can use this syntax for any kind of directive, though it is generally recommended to use only with directives that contain pure markdown in their content.
+尽管通常建议仅对内容中包含纯 markdown 的指令使用该语法，但是可以将其用于任何类型的指令。
 :::
 
+### 将代码单元输出插入提示
 
-### Insert code cell outputs into admonitions
+如果您想在提示框内插入运行代码的输出，建议使用 [`glue` 函数](content:code-outputs:glue)。例如，我们将从 [代码输出页面](./code-outputs.md) 插入粘贴到书中的输出之一。
 
-If you'd like to insert the outputs of running code *inside* admonition
-blocks, we recommend using [`glue` functionality](content:code-outputs:glue).
-For example, we'll insert one of the outputs that was glued into the book from the [code outputs page](./code-outputs.md).
-
-The code below:
+下面的代码：
 
 ````md
 ```{note}
@@ -186,36 +173,35 @@ Here's my figure:
 ```
 ````
 
-generates:
+生成：
 
 ```{note}
 Here's my figure:
 {glue:}`sorted_means_fig`
 ```
 
-See [](content:code-outputs:glue) for more information on how to use `glue` to insert your outputs directly into your content.
+请参阅 [](content:code-outputs:glue)，以获取有关如何使用 `glue` 将输出直接插入内容中的更多信息。
 
 :::{tip}
-To hide code input and output that generated the variable you are inserting, use the `remove_cell` tag.
-See [](../interactive/hiding.md) for more information and other tag options.
+要隐藏生成要插入的变量的代码输入和输出，请使用 `remove_cell` 标签。有关更多信息和其他标签选项，请参见 [](../interactive/hiding.md)。
 :::
 
 (content-blocks:html-admonitions)=
 ### HTML admonitions
 
-A drawback of admonition syntax is that it will not render in interfaces that do not support this syntax (e.g., GitHub). If you'd like to use admonitions that are defined *purely with HTML*, MyST can parse them via the `html_admonitions` extension. To use it, first enable it with the following configuration:
+`admonition` 语法的一个缺点是它不会在不支持该语法的接口中呈现（例如 GitHub）。如果您想使用*纯定义为 HTML* 的提示，MyST 可以通过 `html_admonitions` 扩展来解析它们。要使用它，请首先通过以下配置启用它：
 
 ```yaml
 parse:
   myst_enable_extensions:
-    # don't forget to list any other extensions you want enabled,
-    # including those that are enabled by default!
+    # 不要忘记列出您要启用的其他任何扩展，
+    # 包括默认情况下启用的那些！
     - html_admonition
 ```
 
-Then, you may define admonitions in your book like so:
+然后，您可以像这样在书中定义警告：
 
-:::{tabbed} Markdown Input
+:::{tabbed} Markdown 输入
 ```html
 <div class="admonition note" name="html-admonition" style="background: lightgreen; padding: 10px">
 <p class="title">This is the **title**</p>
@@ -224,23 +210,21 @@ This is the *content*
 ```
 :::
 
-:::{tabbed} Rendered Output
+:::{tabbed} 渲染输出
 <div class="admonition note" name="html-admonition" style="background: lightgreen; padding: 10px">
 <p class="title">This is the **title**</p>
 This is the *content*
 </div>
 :::
 
-See [](myst-parser:syntax/html-admonition) for more information about HTML admonitions.
+有关 HTML 警示的更多信息，请参见 [](myst-parser:syntax/html-admonition)。
 
 (content/panels)=
 ## Panels
 
-Panels provide an easy way for you to organize chunks of content into flexible containers on your page.
-They are useful for creating card-like layouts, flexible columns, and grids.
-Panels are based off of [Bootstrap CSS](https://getbootstrap.com/docs/4.5/components/card/), and utilize Bootstrap's classes to control the look and feel of panels.
+`panels` 为您提供了一种简便的方法，可将内容块组织到页面上的灵活容器中。它们对于创建类似卡片的布局，灵活的列和网格很有用。`panels` 基于 [Bootstrap CSS](https://getbootstrap.com/docs/4.5/components/card/)，并利用 Bootstrap 的类来控制面板的外观。
 
-Here is an example that creates two panels:
+这是一个创建两个 `panels` 的示例：
 
 `````
 ````{panels}
@@ -259,16 +243,15 @@ Panel footer 2
 ````
 `````
 
-- `---` separates each panel
-- `^^^` defines the panel header
-- `+++` defines the panel footer
+- `---` 分隔每个面板
+- `^^^` 定义面板页眉（header）
+- `+++` 定义面板页脚（footer）
 
 ```{note}
-Panel headers and footers are optional.
-If you don't include `^^^` or `+++` in your panel, they will not show up.
+面板页眉和页脚是可选的。如果您的面板中未包含 `^^^` 或 `+++`，它们将不会显示。
 ```
 
-You can embed all kinds of content inside of panels. For example, the following panels:
+您可以将各种内容嵌入面板中。例如，以下面板：
 
 ````{panels}
 Content of the left panel.
@@ -284,8 +267,7 @@ Content of the left panel.
 ```
 ````
 
-were created with:
-
+使用以下内容创建：
 
 `````md
 ````{panels}
@@ -305,22 +287,20 @@ Content of the left panel.
 `````
 
 ```{seealso}
-See the [Sphinx Panels card layout documentation](https://sphinx-panels.readthedocs.io/en/latest/#card-layout) for more information.
+有关更多信息，请参见 [Sphinx Panels 卡片布局文档](https://sphinx-panels.readthedocs.io/en/latest/#card-layout)。
 ```
 
-### Controlling the look and feel of panels
+### 控制面板的外观
 
-You can control the look and feel of panels by passing attaching bootstrap classes to panel headers/body/footers.
-You do this by passing configuration options to your  `{panels}` directive.
+您可以通过将 bootstrap 传递到面板的页眉/主体/页脚来控制面板的外观。您可以通过将配置选项传递给 `{panels}` 指令来实现。
 
-For example:
-
+例如：
 
 ```{seealso}
-See the [Panels card styling documentation](https://sphinx-panels.readthedocs.io/en/latest/#card-styling) for more information.
+有关更多信息，请参见 [Panel 卡片样式文档](https://sphinx-panels.readthedocs.io/en/latest/#card-styling)。
 ```
 
-For example, you can control how many columns are in your panels by using [Bootstrap column classes](https://getbootstrap.com/docs/4.0/layout/grid/). These panels:
+例如，您可以使用 [Bootstrap column 类](https://getbootstrap.com/docs/4.0/layout/grid/) 控制面板中的列数。这些面板：
 
 ````{panels}
 :column: col-4
@@ -338,7 +318,7 @@ Header C
 Body C
 ````
 
-Were created by this code:
+通过以下代码创建：
 
 `````
 ````{panels}
@@ -359,19 +339,18 @@ Body C
 `````
 
 (content:dropdowns)=
-## Dropdowns
+## 下拉菜单
 
-Dropdowns allows you to hide content behind a title and a button.
-There are two kinds of dropdowns in Jupyter Book:
+下拉菜单使您可以将内容隐藏在标题和按钮后面。Jupyter Book 中有两种下拉菜单：
 
-### The `{dropdown}` directive
+### `{dropdown}` 指令
 
-Use the `{dropdown}` directive to create a clickable dropdown with a title.
+使用 `{dropdown}` 指令创建带有标题的可点击下拉菜单。
 
-For example:
+例如：
 
 `````{panels}
-source
+源
 ^^^
 ````
 ```{dropdown} Here's my dropdown
@@ -379,7 +358,7 @@ And here's my dropdown content
 ```
 ````
 ---
-result
+结果
 ^^^
 ```{dropdown} Here's my dropdown
 And here's my dropdown content
@@ -387,15 +366,14 @@ And here's my dropdown content
 `````
 
 (content/toggle-admonitions)=
-### Dropdown admonitions
+### 下拉式提示
 
-You can also hide the body of your admonition blocks so that users must click a button to reveal their content.
-This is helpful if you'd like to include some text that isn't immediately visible to the user.
+您还可以隐藏提示栏的主体，以便用户必须单击按钮才能显示其内容。如果您希望包含一些用户无法立即看到的文本，这将很有帮助。
 
-To turn an admonition into a dropdown, add the `dropdown` class to them. For example:
+要将提示变成下拉菜单，请向其中添加 `dropdown` 类。例如：
 
 `````{panels}
-source
+源
 ^^^
 ````md
 ```{note}
@@ -404,7 +382,7 @@ The note body will be hidden!
 ```
 ````
 ---
-result
+结果
 ^^^
 ```{note}
 :class: dropdown
@@ -412,8 +390,7 @@ The note body will be hidden!
 ```
 `````
 
-You can use this in conjunction with `{admonition}` directives to include your
-own titles and stylings. For example:
+您可以将其与 `{admonition}` 指令结合使用，以包括自己的标题和样式。例如：
 
 `````{panels}
 source
@@ -434,28 +411,26 @@ Here's what's inside!
 `````
 
 :::{important}
-Admonition dropdowns require JavaScript to be enabled on the browser which they are viewed.
-By contrast, the [dropdown directive](content/panels) below works purely *via* HTML+CSS.
+下拉菜单式提示要求在查看它们的浏览器中启用 JavaScript。相比之下，下面的 [dropdown 指令](content/panels) 纯粹*通过* HTML + CSS 起作用。
 :::
-
 
 (content/definition-lists)=
 
-## Definition lists
+## 定义清单
 
-Definition lists are enabled by defining the following setting in your `_config.yml`:
+通过在您的 `_config.yml` 中定义以下设置来启用定义清单：
 
 ```yaml
 parse:
   myst_enable_extensions:
-    # don't forget to list any other extensions you want enabled,
-    # including those that are enabled by default!
+    # 不要忘记列出您要启用的其他任何扩展，
+    # 包括默认情况下启用的那些！
     - deflist
 ```
 
-Definition lists utilise the [markdown-it-py deflist plugin](https://markdown-it-py.readthedocs.io/en/latest/plugins.html), which itself is based on the [Pandoc definition list specification](http://johnmacfarlane.net/pandoc/README.html#definition-lists).
+定义清单利用了 [markdown-it-py deflist 插件](https://markdown-it-py.readthedocs.io/en/latest/plugins.html)，它本身是基于 [Pandoc 定义清单规范](http://johnmacfarlane.net/pandoc/README.html#definition-lists)。
 
-Here's an example:
+这里有个例子：
 
 ````{panels}
 source
@@ -477,14 +452,14 @@ Term 2
 : Definition
 ````
 
-From the [Pandoc documentation](https://pandoc.org/MANUAL.html#definition-lists):
+来自 [Pandoc 文档](https://pandoc.org/MANUAL.html#definition-lists):
 
-> Each term must fit on one line, which may optionally be followed by a blank line, and must be followed by one or more definitions.
-> A definition begins with a colon or tilde, which may be indented one or two spaces.
+> 每个术语必须占一行，可以选择在其后跟随一个空白行，并且必须跟随一个或多个定义。
+> 定义以冒号或波浪号开头，可以缩进一个或两个空格。
 >
-> A term may have multiple definitions, and each definition may consist of one or more block elements (paragraphs, code blocks, lists, etc.)
+> 一个术语可以具有多个定义，并且每个定义都可以包含一个或多个块元素（段落，代码块，列表等）。
 
-Here is a more complex example, demonstrating some of these features:
+这是一个更复杂的示例，展示了其中一些功能：
 
 Term *with Markdown*
 : Definition [with reference](content/definition-lists)
@@ -503,7 +478,7 @@ Term 3
 
   <img src="../images/fun-fish.png" alt="fishy" width="200px">
 
-This was created with the following Markdown:
+这是使用以下 Markdown 创建的：
 
 ```md
 Term *with Markdown*
@@ -525,14 +500,13 @@ Term 3
   <img src="../images/fun-fish.png" alt="fishy" width="200px">
 ```
 
-## Quotations and epigraphs
+## 语录和题词
 
-Quotations and epigraphs provide ways to highlight information given by others.
+语录和题词（Quotations and epigraphs） 提供突出显示他人提供的信息的方法。
 
-### Quotations
+### 语录
 
-**Regular quotations** are controlled with standard Markdown syntax, i.e., by
-inserting a caret (`>`) symbol in front of one or more lines of text. For example:
+**常规语录**由标准的 Markdown 语法控制，即通过在一行或多行文本的前面插入一个插入符号（`>`）来控制。例如：
 
 ````{panels}
 source
@@ -550,11 +524,9 @@ result
 > From me, Jo the Jovyan
 ````
 
-### Epigraphs
+### 题词
 
-**Epigraphs** draw more attention to a quote and highlight its author. You should
-keep these relatively short so that they don't take up too much vertical space. Here's
-how an epigraph looks:
+**题词**引起人们对引文的更多关注，并突出了其作者。您应该将它们保持相对较短，以免它们占用过多的垂直空间。这是题词的外观：
 
 `````{panels}
 source
@@ -576,7 +548,7 @@ From me, Jo the Jovyan
 ```
 `````
 
-You can provide an **attribution** to an epigraph by adding `--` to the final line, followed by the quote author. For example:
+您可以通过在最后一行中添加 `--`，再加上引用的作者，来为题词提供“署名”。例如：
 
 `````{panels}
 source
@@ -598,11 +570,9 @@ Here is a cool quotation.
 ```
 `````
 
-## Glossaries
+## 术语表
 
-Glossaries allow you to define terms in a glossary so you can then link back to it
-throughout your content. You can create a glossary with the following
-syntax:
+术语表允许您在词汇表中定义术语，以便随后可以在整个内容中链接回它。您可以使用以下语法创建术语表：
 
 ````md
 ```{glossary}
@@ -614,7 +584,7 @@ A second term
 ```
 ````
 
-which creates:
+这将创建：
 
 ```{glossary}
 Term one
@@ -624,17 +594,14 @@ A second term
   An indented explanation of term2
 ```
 
-To reference terms in your glossary, use the `{term}` role. For example,
-`` {term}`Term one` `` becomes {term}`Term one` and `` {term}`A second term` ``
-becomes {term}`A second term`.
+要在术语表中引用术语，请使用 `{term}` 角色。例如，`` {term}`Term one` `` 变成 {term}`Term one`，而 `` {term}`A second term` `` 变成 {term}`A second term`。
 
 (content:tabs)=
-## Tabbed content
+## 选项卡式内容
 
-You can also use [`sphinx-panels`](sphinx-panels:panels/usage) to produce [**tabbed content**](sphinx-panels:components-tabbed).
-This allows you to display a variety of tabbed content blocks that users can click on.
+您还可以使用 [`sphinx-panels`](sphinx-panels:panels/usage) 生成 [**选项卡式内容**](sphinx-panels:components-tabbed)。这使您可以显示用户可以单击的各种选项卡式内容块。
 
-For example, here's a group of tabs showing off code in a few different languages:
+例如，以下是一组标签，以几种不同的语言展示代码：
 
 ````{tabbed} c++
 
@@ -684,9 +651,9 @@ END PROGRAM main
 ```
 ````
 
-You can use this functionality with the `{tabbed}` directive. You can provide a sequence of `{tabbed}` directives, and each one will be used to generate a new tab (unless the `:new-group:` option is added to a `{tabbed}` directive.)
+您可以将这个功能与 `{tabbed}` 指令一起使用。您可以提供一系列的 `{tabbed}` 指令，并且每个指令都将用于生成一个新的选项卡（除非在 `{tabbed}` 指令中添加 `:new-group:` 选项。）
 
-For example, the following code:
+例如，以下代码：
 
 ````
 ```{tabbed} Tab 1 title
@@ -698,7 +665,7 @@ My second tab with `some code`!
 ```
 ````
 
-produces
+输出
 
 ```{tabbed} Tab 1 title
 My first tab
@@ -708,9 +675,7 @@ My first tab
 My second tab with `some code`!
 ```
 
-**Insert code outputs in your tabs** with the [`glue` functionality](glue/gluing).
-
-For example, the following tabs use this functionality to glue images and tables generated somewhere else in these docs:
+使用 [`glue` 函数](glue/gluing) 在选项卡中**插入代码输出**。例如，以下选项卡使用此函数来粘合这些文档中其他位置生成的图像和表格：
 
 ````{tabbed} A histogram
 ```{glue:figure} boot_fig
@@ -754,14 +719,14 @@ A caption for a pandas table.
 `````
 ``````
 
-See the [`sphinx-panels` tabbed](sphinx-panels:components-tabbed) documentation for more information on how to use this.
+有关如何使用此功能的更多信息，请参见 [`sphinx-panels` 选项卡式](sphinx-panels:components-tabbed) 文档。
 
 (content:substitutions)=
-## Substitutions and variables in markdown
+## markdown 中的置换和变量
 
-Substitutions allow you to define **variables** in the front-matter of your page, and then **insert** those variables into your content throughout.
+置换（`Substitutions`）允许您在页面的 front-matter 定义**变量**，然后将这些变量**插入**整个内容中。
 
-To use a substitution, first add front-matter content to the top of a page like so:
+要使用置换，请首先将 front-matter 的内容添加到页面顶部，如下所示：
 
 ````yaml
 ---
@@ -779,9 +744,9 @@ substitutions:
 ---
 ````
 
-You can use these substitutions inline or as blocks, and you can even nest substitutions in other substitutions (but circular references are prohibited):
+您可以内联或作为块使用这些置换，甚至可以将置换嵌套在其他置换中（但禁止循环引用）：
 
-:::{tabbed} Markdown Input
+:::{tabbed} Markdown 输入
 
 ```md
 Inline: {{ key1 }}
@@ -793,7 +758,7 @@ Block level:
 ```
 :::
 
-:::{tabbed} Rendered Output
+:::{tabbed} 渲染输出
 Inline: {{ key1 }}
 
 Block level:
@@ -801,9 +766,9 @@ Block level:
 {{ key2 }}
 :::
 
-You can also insert substitutions inside of other markdown structures like tables:
+您还可以在其他 markdown 结构（例如表格）中插入置换项：
 
-:::{tabbed} Markdown Input
+:::{tabbed} Markdown 输入
 
 ```md
 | col1     | col2      |
@@ -812,19 +777,19 @@ You can also insert substitutions inside of other markdown structures like table
 ```
 :::
 
-:::{tabbed} Rendered Output
+:::{tabbed} 渲染输出
 | col1     | col2      |
 | -------- | --------- |
 | {{key2}} | {{fishy}} |
 :::
 
 :::{seealso}
-For more information about Substitutions, see [](myst-parser:syntax/substitutions).
+有关置换的更多信息，请参见 [](myst-parser:syntax/substitutions)。
 :::
 
-### Define substitutions for your whole book
+### 为整本书定义置换
 
-You can also define book-level substitution variables with the following configuration:
+您还可以使用以下配置定义书籍级置换变量：
 
 ```yaml
 parse:
@@ -832,13 +797,13 @@ parse:
     key: value
 ```
 
-These substitutions will be available throughout your book. For example, the global substitution key `my-global-substitution` is defined in this book's `_config.yml` file, and it produces: {{ sub3 }}.
+这些置换内容将在您的整本书中提供。例如，在本书的 `_config.yml` 文件中定义了全局置换键 `my-global-substitution`，`{{ sub3 }}` 产生：{{ sub3 }}。
 
-### Formatting substitutions
+### 格式化置换
 
-MyST substitutions use {{ jinja }} in order to substite in key / values. This means that you can apply any standard Jinja formatting to your substitutions. For example, you can **replace text in your substitutions** like so:
+MyST 替换使用 {{ jinja }} 来置换键/值。这意味着您可以将任何标准的 Jinja 格式应用于置换。例如，您可以像这样 **replace 置换文本**：
 
-:::{tabbed} Markdown Input
+:::{tabbed} Markdown 输入
 
 ```md
 The original key1: {{ key1 }}
@@ -847,19 +812,19 @@ The original key1: {{ key1 }}
 ```
 :::
 
-:::{tabbed} Rendered Output
+:::{tabbed} 渲染输出
 The original key1: {{ key1 }}
 
 {{ key1 | replace("a **substitution**", "**the best substitution**")}}
 :::
 
-### Using substitutions in links
+### 在链接中使用置换
 
-If you'd like to use substitutions to insert and modify **links** in your book, here are two options to explore:
+如果您想使用置换来插入和修改书中的“链接”，请探索以下两种方法：
 
-1. **Define the entire markdown link as a variable**. For example:
+1. **将整个 markdown 链接定义为变量**。例如：
 
-   :::{tabbed} Markdown Input
+   :::{tabbed} Markdown 输入
 
    ```yaml
    substitutions:
@@ -870,14 +835,12 @@ If you'd like to use substitutions to insert and modify **links** in your book, 
    ```
    :::
 
-   :::{tabbed} Rendered Output
+   :::{tabbed} 渲染输出
    Here's my link: {{ repo_url }}
    :::
-2. Use Jinja features to insert the variable.
-   Because substitutions use {{ jinja }}, you also have access to **Python formatting** operations in your substitution.
-   For example:
+2. 使用 Jinja 功能插入变量。由于置换使用  {{ jinja }}，因此您还可以访问置换中的 **Python 格式** 操作。例如：
 
-   :::{tabbed} Markdown Input
+   :::{tabbed} Markdown 输入
 
    ```yaml
    substitutions:
@@ -888,42 +851,33 @@ If you'd like to use substitutions to insert and modify **links** in your book, 
    ```
    :::
 
-   :::{tabbed} Rendered Output
+   :::{tabbed} 渲染输出
    Here's my link: {{ '[my repo: `{repo}`](https://github.com/executablebooks/{repo})'.format(repo=repo_name) }}
    :::
 
-## Citations and cross-references
+## 引用和交叉引用
 
-You can add citations and cross-references to your book. See
-{doc}`citations` for more information on how to do this.
+你可以在你的书中添加**引用和交叉引用**（citations and cross-references）。有关如何执行此操作的更多信息，请参见 {doc}`citations`。
 
-## Figures
+## 图形
 
-You can thoroughly customise the look of figures in your book. See {doc}`figures` for
-more information.
+您可以彻底自定义书中图形的外观。有关更多信息，请参见 {doc}`figures`。
 
-## Page layout and sidebar content
+## 页面布局和侧边栏内容
 
-You can also use MyST to control various aspects of the page layout. For more
-information on this, see {doc}`layout`.
+您还可以使用 MyST 来控制页面布局的各个方面。有关此的更多信息，请参见 {doc}`layout`。
 
-## Footnotes
+## 脚注
 
-You can include footnotes in your book using standard Markdown syntax.
-This will include a numbered reference to the footnote in-line, and append the footnote
-to a list of footnotes at the bottom of the page.
+您可以使用标准的 Markdown 语法在您的书中添加脚注。这将包括对内嵌脚注的编号引用，并将脚注附加到页面底部的脚注列表中。
 
-To create a footnote, first insert a reference in-line with this syntax: `[^mylabel]`.
-Then, define the text for that label like so:
+要创建脚注，请首先使用以下语法内联插入参考：`[^mylabel]`。然后，为该标签定义文本，如下所示：
 
 ```md
 [^mylabel]: My footnote text.
 ```
 
-You can define `[^mylabel]` anywhere in the page, though its definition will always
-be placed at the bottom of your built page. For example, here's a footnote [^mynote]
-and here's another one [^mynote2]. You can click either of them to see the footnotes
-at the bottom of this page.
+您可以在页面中的任何位置定义 `[^mylabel]`，尽管其定义始终位于构建页面的底部。例如，这是脚注 [^mynote]，而另一个脚注 [^mynote2]。您可以单击其中任何一个以查看此页面底部的脚注。
 
 [^mynote]: Here's the text of my first note.
 [^mynote2]: And the text of my second note.
@@ -931,10 +885,9 @@ at the bottom of this page.
             [you can include Markdown footnote definitions](https://executablebooks.org).
 
 (custom-div-blocks)=
-## Custom `<div>` blocks
+## 自定义 `<div>` 块
 
-You can add custom `div` blocks along with whatever classes you'd like using
-the `{div}` directive. The `{div}` directive will wrap everything inside in a single `<div>` with the classes you provide. For example:
+您可以使用 `{div}` 指令添加自定义 `div` 块以及所需的任何类。指令 `{div}` 将所有内容与您提供的类一起包装在单个 `<div>` 中。例如：
 
 ````md
 ```{div} my-class
@@ -942,7 +895,7 @@ the `{div}` directive. The `{div}` directive will wrap everything inside in a si
 ```
 ````
 
-Will result in the following HTML when your book is built:
+构建您的书籍时，将产生以下 HTML：
 
 ```html
 <div class="my-class">
@@ -950,4 +903,4 @@ Will result in the following HTML when your book is built:
 </div>
 ```
 
-This can be useful if you'd like to style your book with [custom CSS or JavaScript](custom-assets).
+如果您想使用 [自定义 CSS 或 JavaScript](custom-assets) 为书本添加样式，这可能会很有用。

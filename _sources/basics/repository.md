@@ -1,24 +1,21 @@
-# Connect your book to a code repository
+# 将您的书连接到代码存储库
 
-There are many ways that you can connect your book's content back to the source files in a public repository.
-Below we cover a few options.
+有很多方法可以将图书内容与公共存储库中的源文件连接起来。下面介绍一些选择。
 
 (source-repository-button)=
-## Add source repository buttons
+## 添加源存储库按钮
 
+这里有一组按钮，您可以使用它们链接回源存储库。这允许用户浏览存储库，或采取建议编辑或打开问题等操作。在每种情况下，它们都需要设置以下配置：
 There is a collection of buttons that you can use to link back to your source
-repository. This lets users browse the repository or take actions like suggesting
-an edit or opening an issue. In each case, they require the following configuration
-to be set:
 
 ```yaml
 repository:
   url: https://github.com/{your-book-url}
 ```
 
-### Add a link to your repository
+### 给存储库添加一个链接
 
-To add a link to your repository, add the following configuration:
+要添加到存储库的链接，请添加以下配置：
 
 ```yaml
 repository:
@@ -27,10 +24,9 @@ html:
   use_repository_button: true
 ```
 
-### Add a button to open issues
+### 添加一个按钮来打开议题
 
-To add a button to open an issue about the current page, use the following
-configuration:
+要添加一个按钮来打开关于当前页面的议题，使用以下配置：
 
 ```yaml
 repository:
@@ -39,11 +35,9 @@ html:
   use_issues_button: true
 ```
 
-### Add a button to suggest edits
+### 添加一个按钮来建议编辑
 
-You can add a button to each page that will allow users to edit the page text
-directly and submit a pull request to update the documentation.
-To include this button, use the following configuration:
+您可以向每个页面添加一个按钮，允许用户直接编辑页面文本，并提交一个 pull 请求来更新文档。要包含此按钮，请使用以下配置：
 
 ```yaml
 repository:

@@ -102,7 +102,7 @@ commentsRunWhenDOMLoaded(addUtterances);
     <link rel="index" title="索引" href="../genindex.html" />
     <link rel="search" title="搜索" href="../search.html" />
     <link rel="next" title="命令行界面" href="cli.html" />
-    <link rel="prev" title="Configuration reference" href="../customize/config.html" />
+    <link rel="prev" title="配置参考" href="../customize/config.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
     
@@ -130,7 +130,7 @@ commentsRunWhenDOMLoaded(addUtterances);
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
 </form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
     <div class="bd-toc-item active">
-        <p class="caption">
+        <p class="caption" role="heading">
  <span class="caption-text">
   教程
  </span>
@@ -179,7 +179,7 @@ commentsRunWhenDOMLoaded(addUtterances);
   </a>
  </li>
 </ul>
-<p class="caption">
+<p class="caption" role="heading">
  <span class="caption-text">
   主题指南
  </span>
@@ -207,7 +207,7 @@ commentsRunWhenDOMLoaded(addUtterances);
    </li>
    <li class="toctree-l2 has-children">
     <a class="reference internal" href="../file-types/index.html">
-     Types of content source files
+     内容源文件的类型
     </a>
     <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
     <label for="toctree-checkbox-3">
@@ -217,27 +217,27 @@ commentsRunWhenDOMLoaded(addUtterances);
     <ul>
      <li class="toctree-l3">
       <a class="reference internal" href="../file-types/markdown.html">
-       Markdown files
+       Markdown 文件
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="../file-types/notebooks.html">
-       Jupyter Notebook files
+       Jupyter Notebook 文件
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="../file-types/myst-notebooks.html">
-       Notebooks written entirely in Markdown
+       完全用 Markdown 书写笔记本
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="../file-types/jupytext.html">
-       Custom notebook formats and Jupytext
+       自定义笔记本格式和 Jupytext
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="../file-types/restructuredtext.html">
-       reStructuredText files
+       reStructuredText 文件
       </a>
      </li>
     </ul>
@@ -249,14 +249,14 @@ commentsRunWhenDOMLoaded(addUtterances);
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../structure/sections-headers.html">
-     How headers and sections map onto to book structure
+     标题和章节如何映射到书的结构
     </a>
    </li>
   </ul>
  </li>
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="../content/index.html">
-   Write narrative content
+   撰写叙述内容
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
   <label for="toctree-checkbox-4">
@@ -266,49 +266,59 @@ commentsRunWhenDOMLoaded(addUtterances);
   <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="../content/myst.html">
-     MyST Markdown overview
+     MyST Markdown 概述
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../content/content-blocks.html">
-     Special content blocks
+     特殊内容块
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../content/references.html">
-     References and cross-references
+     引用和交叉引用
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../content/layout.html">
-     Control the page layout
+     控制页面布局
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../content/citations.html">
-     Citations and bibliographies
+     引用和参考书目
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../content/math.html">
-     Math and equations
+     数学和公式
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../content/figures.html">
-     Images and figures
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       image
+      </span>
+     </code>
+     和
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       figure
+      </span>
+     </code>
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../content/metadata.html">
-     Add metadata to your book pages
+     将元数据添加到您的书籍页面
     </a>
    </li>
   </ul>
  </li>
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="../content/executable/index.html">
-   Write executable content
+   写可执行内容
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
   <label for="toctree-checkbox-5">
@@ -318,22 +328,22 @@ commentsRunWhenDOMLoaded(addUtterances);
   <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="../content/execute.html">
-     Execute and cache your pages
+     执行并缓存页面
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../content/code-outputs.html">
-     Formatting code outputs
+     格式化代码输出
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../content/executable/output-insert.html">
-     Store code outputs and insert into content
+     存储代码输出并插入到内容中
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../interactive/interactive.html">
-     Interactive data visualizations
+     交互式数据可视化
     </a>
    </li>
   </ul>
@@ -372,27 +382,27 @@ commentsRunWhenDOMLoaded(addUtterances);
   <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="../basics/repository.html">
-     Connect your book to a code repository
+     将您的书连接到代码存储库
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../interactive/hiding.html">
-     Hide or remove content
+     隐藏或删除内容
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../interactive/launchbuttons.html">
-     Launch into interactive computing interfaces
+     启动交互式计算接口
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../interactive/thebe.html">
-     Make your code cells executable
+     使您的代码单元格可执行
     </a>
    </li>
    <li class="toctree-l2 has-children">
     <a class="reference internal" href="../interactive/comments.html">
-     Commenting and annotating
+     评论和注释
     </a>
     <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
     <label for="toctree-checkbox-8">
@@ -414,7 +424,7 @@ commentsRunWhenDOMLoaded(addUtterances);
    </li>
    <li class="toctree-l2 has-children">
     <a class="reference internal" href="../publish/web.html">
-     Host your book on the internet
+     把你的书放在网上
     </a>
     <input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/>
     <label for="toctree-checkbox-9">
@@ -424,7 +434,7 @@ commentsRunWhenDOMLoaded(addUtterances);
     <ul>
      <li class="toctree-l3">
       <a class="reference internal" href="../publish/gh-pages.html">
-       GitHub Pages and Actions
+       GitHub Pages 与 Actions
       </a>
      </li>
      <li class="toctree-l3">
@@ -436,14 +446,14 @@ commentsRunWhenDOMLoaded(addUtterances);
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../advanced/html.html">
-     Advanced HTML outputs
+     高级 HTML 输出
     </a>
    </li>
   </ul>
  </li>
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="../advanced/index.html">
-   Advanced Jupyter Book Usage
+   Jupyter Book 高级语法
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/>
   <label for="toctree-checkbox-10">
@@ -458,7 +468,7 @@ commentsRunWhenDOMLoaded(addUtterances);
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../advanced/windows.html">
-     Working on Windows
+     Windows 上的配置
     </a>
    </li>
    <li class="toctree-l2">
@@ -474,7 +484,7 @@ commentsRunWhenDOMLoaded(addUtterances);
   </a>
  </li>
 </ul>
-<p class="caption">
+<p class="caption" role="heading">
  <span class="caption-text">
   参考
  </span>
@@ -482,7 +492,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 <ul class="current nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../customize/config.html">
-   Configuration reference
+   配置参考
   </a>
  </li>
  <li class="toctree-l1 current active">
@@ -501,7 +511,7 @@ commentsRunWhenDOMLoaded(addUtterances);
   </a>
  </li>
 </ul>
-<p class="caption">
+<p class="caption" role="heading">
  <span class="caption-text">
   关于 Jupyter Book
  </span>
@@ -520,11 +530,6 @@ commentsRunWhenDOMLoaded(addUtterances);
  <li class="toctree-l1">
   <a class="reference internal" href="../cite.html">
    引用 Jupyter Book
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="_changelog.html">
-   Change log
   </a>
  </li>
 </ul>
@@ -1725,7 +1730,7 @@ Here is my figure caption!
 </tr>
 </tbody>
 </table>
-<p>See <a class="reference internal" href="../content/figures.html"><span class="doc">Images and figures</span></a> and <a class="reference internal" href="../file-types/markdown.html"><span class="doc">Markdown files</span></a> for more information.</p>
+<p>See <a class="reference internal" href="../content/figures.html"><span class="doc">image 和 figure</span></a> and <a class="reference internal" href="../file-types/markdown.html"><span class="doc">Markdown 文件</span></a> for more information.</p>
 <section id="referencing-figures">
 <h3>Referencing figures<a class="headerlink" href="#referencing-figures" title="永久链接至标题">¶</a></h3>
 <table class="colwidths-given table">
@@ -1892,7 +1897,7 @@ label</p>
 </tr>
 </tbody>
 </table>
-<p>See <a class="reference internal" href="../content/math.html"><span class="doc">Math and equations</span></a> for more information.</p>
+<p>See <a class="reference internal" href="../content/math.html"><span class="doc">数学和公式</span></a> for more information.</p>
 <section id="referencing-math-directives">
 <h3>Referencing math directives<a class="headerlink" href="#referencing-math-directives" title="永久链接至标题">¶</a></h3>
 <table class="colwidths-given table">
@@ -2000,7 +2005,7 @@ print(note)
 </div>
 </div>
 </div>
-<p>See <a class="reference internal" href="../file-types/myst-notebooks.html"><span class="doc std std-doc">Notebooks written entirely in Markdown</span></a> for more information.</p>
+<p>See <a class="reference internal" href="../file-types/myst-notebooks.html"><span class="doc std std-doc">完全用 Markdown 书写笔记本</span></a> for more information.</p>
 <section id="tags">
 <span id="myst-cheatsheet-code-cell-tags"></span><h4>Tags<a class="headerlink" href="#tags" title="永久链接至标题">¶</a></h4>
 <p>The following <code class="docutils literal notranslate"><span class="pre">tags</span></code> can be applied to code cells by introducing them as options:</p>
@@ -2150,7 +2155,7 @@ Here is an example of how to glue text: {glue:}`glued_text`
 </div>
 </div>
 <p>Here is an example of how to glue text: <span class="pasted-inline"><code class="output text_plain docutils literal notranslate"><span class="pre">'here</span> <span class="pre">is</span> <span class="pre">some</span> <span class="pre">text!'</span></code></span></p>
-<p>See <a class="reference internal" href="../content/executable/output-insert.html#glue-gluing"><span class="std std-ref">Gluing variables in your notebook</span></a> for more information.</p>
+<p>See <a class="reference internal" href="../content/executable/output-insert.html#glue-gluing"><span class="std std-ref">把变量 glue 在你的笔记本上</span></a> for more information.</p>
 </section>
 <section id="gluing-numbers">
 <h3>Gluing numbers<a class="headerlink" href="#gluing-numbers" title="永久链接至标题">¶</a></h3>
@@ -2186,13 +2191,13 @@ Here is an example of how to glue numbers: {glue:}`ss_mean` and {glue:}`ns_mean`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>-0.06920388587988044
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.21939902224594302
 </pre></div>
 </div>
 </div>
 </div>
-<p>Here is an example of how to glue numbers: <span class="pasted-inline"><code class="output text_plain docutils literal notranslate"><span class="pre">-0.06920388587988044</span></code></span> and <span class="pasted-inline"><code class="output text_plain docutils literal notranslate"><span class="pre">0.1049820711851261</span></code></span>.</p>
-<p>See <a class="reference internal" href="../content/executable/output-insert.html#glue-gluing"><span class="std std-ref">Gluing variables in your notebook</span></a> for more information.</p>
+<p>Here is an example of how to glue numbers: <span class="pasted-inline"><code class="output text_plain docutils literal notranslate"><span class="pre">0.21939902224594302</span></code></span> and <span class="pasted-inline"><code class="output text_plain docutils literal notranslate"><span class="pre">-0.06831872374422378</span></code></span>.</p>
+<p>See <a class="reference internal" href="../content/executable/output-insert.html#glue-gluing"><span class="std std-ref">把变量 glue 在你的笔记本上</span></a> for more information.</p>
 </section>
 <section id="gluing-visualizations">
 <h3>Gluing visualizations<a class="headerlink" href="#gluing-visualizations" title="永久链接至标题">¶</a></h3>
@@ -2241,7 +2246,7 @@ This is an example of pasting a glued output as a block:</p>
 <div class="cell_output docutils container">
 <img alt="../_images/cheatsheet_7_0.png" src="../_images/cheatsheet_7_0.png" />
 </div>
-<p>See <a class="reference internal" href="../content/executable/output-insert.html#glue-gluing"><span class="std std-ref">Gluing variables in your notebook</span></a> for more information.</p>
+<p>See <a class="reference internal" href="../content/executable/output-insert.html#glue-gluing"><span class="std std-ref">把变量 glue 在你的笔记本上</span></a> for more information.</p>
 </section>
 <section id="gluing-math">
 <h3>Gluing math<a class="headerlink" href="#gluing-math" title="永久链接至标题">¶</a></h3>
@@ -2277,7 +2282,7 @@ To glue a math equation try
 <p>To glue a math equation try:</p>
 <div class="pasted-math math notranslate nohighlight" id="equation-glue-eq-example">
 <span class="eqno">()<a class="headerlink" href="#equation-glue-eq-example" title="公式的永久链接">¶</a></span>\[\displaystyle \sqrt{x^{2} + y^{2}}\]</div>
-<p>See <a class="reference internal" href="../content/executable/output-insert.html#content-code-outputs-glue"><span class="std std-ref">Store code outputs and insert into content</span></a> for more information.</p>
+<p>See <a class="reference internal" href="../content/executable/output-insert.html#content-code-outputs-glue"><span class="std std-ref">存储代码输出并插入到内容中</span></a> for more information.</p>
 </section>
 </section>
 <section id="reference-documents">
@@ -2304,7 +2309,7 @@ for more information.
 </pre></div>
 </div>
 </td>
-<td><p>See <a class="reference internal" href="../content/citations.html"><span class="doc">Citations and bibliographies</span></a>
+<td><p>See <a class="reference internal" href="../content/citations.html"><span class="doc">引用和参考书目</span></a>
 for more information.</p></td>
 </tr>
 <tr class="row-odd"><td><div class="highlight-md notranslate"><div class="highlight"><pre><span></span>{doc}`text &lt;path/to/document&gt;`
@@ -2395,7 +2400,7 @@ citation {cite}`perez2011python`.
 </div>
 </td>
 <td><p>This example generates the following
-citation <span id="id2">[<a class="reference internal" href="../content/citations.html#id6">Perez <em>et al.</em>, 2011</a>]</span>.</p></td>
+citation <span id="id2">[<a class="reference internal" href="../content/citations.html#id13">Perez <em>et al.</em>, 2011</a>]</span>.</p></td>
 </tr>
 </tbody>
 </table>
@@ -2405,7 +2410,7 @@ citation <span id="id2">[<a class="reference internal" href="../content/citation
 ```
 </pre></div>
 </div>
-<p>See <a class="reference internal" href="../content/citations.html"><span class="doc">Citations and bibliographies</span></a> for more information.</p>
+<p>See <a class="reference internal" href="../content/citations.html"><span class="doc">引用和参考书目</span></a> for more information.</p>
 <hr class="footnotes docutils" />
 <dl class="footnote brackets">
 <dt class="label" id="myref"><span class="brackets"><a class="fn-backref" href="#id1">1</a></span></dt>
@@ -2440,7 +2445,7 @@ citation <span id="id2">[<a class="reference internal" href="../content/citation
         
         <div class='prev-next-bottom'>
             
-    <a class='left-prev' id="prev-link" href="../customize/config.html" title="previous page">Configuration reference</a>
+    <a class='left-prev' id="prev-link" href="../customize/config.html" title="previous page">配置参考</a>
     <a class='right-next' id="next-link" href="cli.html" title="next page">命令行界面</a>
 
         </div>

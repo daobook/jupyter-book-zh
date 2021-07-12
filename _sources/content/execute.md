@@ -11,52 +11,43 @@ kernelspec:
   name: python3
 ---
 
-# Execute and cache your pages
+# 执行并缓存页面
 
-Jupyter Book can automatically run and cache any notebook pages.
-Notebooks can either be run each time the documentation is built,
-or cached locally so that notebooks will only be re-run when the code cells in a notebook have changed.
+Jupyter Book 可以自动运行和缓存任何笔记本的页面。笔记本可以在每次构建文档时运行，也可以在本地缓存，以便只有当笔记本中的代码单元发生更改时才会重新运行笔记本。
 
-Caching behaviour is controlled with the `execute:` section [in your `_config.yml` file](../customize/config.md). See
-the sections below for each configuration option and its effect.
+缓存行为由 [`_config.yml` 文件](../customize/config.md) 中的 `execute:` 部分控制。有关每个配置选项及其效果，请参见下面的部分。
 
 :::{tip}
-If you'd like to execute code that is in your Markdown files,
-you can use the `{code-cell}` directive in MyST Markdown.
-See [](../file-types/myst-notebooks.md) for more information.
+如果你想执行 Markdown 文件中的代码，你可以使用 MyST Markdown 中的 `{code-cell}` 指令。查看 [](../file-types/myst-notebooks.md) 以获取更多信息。
 :::
 
-## Trigger notebook execution
+## 触发笔记本执行
 
-By default, Jupyter Book will execute any content files that have a notebook structure
-and that are missing at least one output. This is equivalent to the following configuration in _config.yml`:
+默认情况下，Jupyter Book 将执行任何具有笔记本结构且至少缺少一个输出的内容文件。这相当于 `_config.yml` 中的以下配置:
 
 ```yaml
 execute:
   execute_notebooks: auto
 ```
 
-This will only execute notebooks that are missing at least one output.
-If the notebook has *all* of its outputs populated, then it will not be executed.
+这将只执行缺少至少一个输出的笔记本。如果笔记本已经填充了它的所有输出，那么它将不会被执行。
 
-**To force the execution of all notebooks, regardless of their outputs**, change the
-above configuration value to:
+要**强制执行所有笔记本，而不管它们的输出**，请将上面的配置值更改为：
 
 ```yaml
 execute_notebooks: force
 ```
 
-**To cache execution outputs with [jupyter-cache]**, change the above configuration
-value to:
+要**使用 [jupyter-cache] 缓存执行输出**，请将上面的配置值更改为：
 
 ```yaml
 execute:
   execute_notebooks: cache
 ```
 
-See {ref}`execute/cache` for more information.
+有关更多信息，请参见 {ref}`execute/cache` 。
 
-**To turn off notebook execution**, change the above configuration value to:
+要**关闭笔记本执行**，请将上述配置值更改为：
 
 ```yaml
 execute:
@@ -64,10 +55,9 @@ execute:
 ```
 
 (execute/exclude)=
-## Exclude files from execution
+## 从执行中排除文件
 
-**To exclude certain file patterns from execution**, use the following
-configuration:
+要**从执行中排除某些文件模式**，请使用以下配置：
 
 ```yaml
 execute:
@@ -77,91 +67,77 @@ execute:
     - '*pattern3withwildcard'
 ```
 
-Any file that matches one of the items in `exclude_patterns` will not be executed.
+任何匹配 `exclude_patterns` 中的一个项的文件都不会被执行。
 
 :::{tip}
-To auto-exclude all files outside of your table of contents, see [](config:exclude-non-toc-files)
+要自动排除目录之外的所有文件，请参见 [](config:exclude-non-toc-files)
 :::
 
 (execute/cache)=
-## Caching the notebook execution
+## 缓存笔记本执行
 
-You may also **cache the results of executing a notebook page** using [jupyter-cache].
-In this case, when a page is executed, its outputs will be stored in a local database.
-This allows you to be sure that the outputs in your documentation are up-to-date,
-while saving time avoiding unnecessary re-execution.
-It also allows you to store your `.ipynb` files in your `git` repository *without their outputs*,
-but still leverage a cache to save time when building your site.
+您也可以使用 [jupyter-cache] 缓存执行笔记本页面的结果。在这种情况下，当执行页面时，它的输出将存储在本地数据库中。这允许您确保文档中的输出是最新的，同时节省时间，避免不必要的重新执行。它还允许您在 `git` 存储库中存储 `.ipynb` 文件，而不需要它们的输出，但在构建站点时仍然利用缓存节省时间。
 
-When you re-build your site, the following will happen:
+当你重新构建你的网站时，会发生以下情况：
 
-* Notebooks that have not seen changes to their **code cells** since the last build will not be re-executed.
-  Instead, their outputs will be pulled from the cache and inserted into your site.
-* Notebooks that **have had any change to their code cells** will be re-executed
-  and the cache will be updated with the new outputs.
+* 自上次构建以来**代码单元**没有发生变化的笔记本将不会被重新执行。相反，它们的输出将从缓存中提取并插入到您的站点中。
+* 对其代码单元**有任何更改的笔记本**将被重新执行，缓存将被新的输出更新。
 
-To enable caching of notebook outputs, use the following configuration:
+要启用笔记本输出的缓存，请使用以下配置：
 
 ```yaml
 execute:
   execute_notebooks: cache
 ```
 
-By default, the cache will be placed in the parent of your build folder.
-Generally, this is in `_build/.jupyter_cache`.
+默认情况下，缓存将放置在构建文件夹的父目录中。一般来说，这是 `_build/.jupyter_cache` 中。
 
-You may also specify a path to the location of a jupyter cache you'd like to use:
+你也可以指定一个路径到你想要使用的 jupyter cache 的位置：
 
 ```yaml
 execute:
   cache: path/to/mycache
 ```
 
-The path should point to an **empty folder**, or a folder where a **jupyter cache already exists**.
+该路径应该指向一个**空文件夹**，或者一个文件夹中已经**存在的 jupyter cache**。
 
 [jupyter-cache]: https://github.com/executablebooks/jupyter-cache "the Jupyter Cache Project"
 
-## Execution configuration
+## 执行配置
 
-You can control notebook execution and how output content is handled at a project level using your `_config.yml` but, in some cases, also at a notebook and code cell level.
-Below we explore a number of ways to achieve this.
+你可以使用 `_config.yml` 在项目级别控制笔记本的执行和输出内容的处理，但在某些情况下，也在笔记本和代码单元级别。下面我们将探讨几种实现这一目标的方法。
 
 :::{seealso}
-[](jupyter-cell-tags) and [](./code-outputs.md).
+[](jupyter-cell-tags) 和 [](./code-outputs.md).
 :::
 
-### The execution working directory
+### 执行工作目录
 
 :::{important}
-The default behaviour of `cache` is now to run in the local directory.
-This is a change from `v0.7`.
+`cache` 的默认行为现在是在本地目录中运行。这是 `v0.7` 的一个变化。
 :::
 
-By default, the command working directory (cwd) in which a notebook runs will be the directory in which it is located (for both `auto` and `cache`). This means that notebooks requiring access to assets in relative paths will work.
+默认情况下，运行笔记本的命令工作目录（cwd）将是笔记本所在的目录（对于 `auto` 和 `cache` 而言）。这意味着需要在相对路径上访问 assets 的笔记本可以工作。
 
-Alternatively, if you wish for your notebooks to isolate your notebook execution in a temporary folder,
-you can use the following `_config.yml` setting:
+或者，如果您希望您的笔记本在一个临时文件夹中隔离您的笔记本执行，您可以使用以下 `_config.yml` 设置：
 
 ```yaml
 execute:
   run_in_temp: true
 ```
 
-### Setting execution timeout
+### 设置执行超时
 
-Execution timeout defines the maximum time (in seconds) each notebook cell is allowed to run for.
-If the execution takes longer an exception will be raised.
-The default is 30 seconds, so in cases of long-running cells you may want to specify a higher value.
-The timeout option can also be set to -1, to remove any restriction on execution time.
+执行超时定义了每个笔记本单元格允许运行的最大时间(以秒为单位)。如果执行时间较长，将引发异常。默认值是 30 秒，因此对于长时间运行的单元格，您可能希望指定一个更高的值。`timeout` 选项也可以设置为 `-1`，以删除对执行时间的任何限制。
 
-You can set the timeout for all notebook executions in your `_config.yml`:
+你可以在 `_config.yml` 中设置所有笔记本执行的超时时间：
 
 ```yaml
 execute:
   timeout: 100
 ```
 
-This global value can also be overridden per notebook by adding this to your notebook metadata:
+这个全局值也可以通过添加到你的笔记本元数据来覆盖每个笔记本：
 
 ```json
 {
@@ -172,19 +148,18 @@ This global value can also be overridden per notebook by adding this to your not
 }
 ```
 
-### Dealing with code that raises errors
+### 处理引发错误的代码
 
-In some cases, you may want to intentionally show code that doesn't work
-(e.g., to show the error message).
+在某些情况下，您可能希望有意地显示不起作用的代码（例如，显示错误消息）
 
-You can allow errors for all notebooks in your `_config.yml`:
+你可以在 `_config.yml` 中允许所有笔记本出错：
 
 ```yaml
 execute:
   allow_errors: true
 ```
 
-This global value can also be overridden per notebook by adding this to your notebook metadata:
+这个全局值也可以通过添加到你的笔记本元数据来覆盖每个笔记本：
 
 ```json
 {
@@ -194,6 +169,8 @@ This global value can also be overridden per notebook by adding this to your not
   }
 }
 ```
+
+最后，通过向代码单元格添加 `raises-exception` 标记，可以允许单元格级别的错误。这可以通过一个 Jupyter 接口来实现，或者通过 `{code-cell}` 指令:
 
 Lastly, you can allow errors at a cell level, by adding a `raises-exception` tag to your code cell.
 This can be done via a Jupyter interface, or via the `{code-cell}` directive like so:
@@ -207,7 +184,7 @@ print(thisvariabledoesntexist)
 ```
 ````
 
-Which produces:
+将产生
 
 ```{code-cell}
 ---
@@ -216,27 +193,27 @@ tags: [raises-exception]
 print(thisvariabledoesntexist)
 ```
 
-### Dealing with code that produces stderr
+### 处理产生标准错误的代码
 
-You may also wish to control how stderr outputs are dealt with.
+您可能还希望控制如何处理 stderr 输出。
 
-Alternatively, you can configure how stdout is dealt with at a global configuration level, using the `nb_output_stderr` configuration value.
+或者，您可以使用 `nb_output_stderr` 配置值在全局配置级别配置如何处理 stdout。
 
-You can configure the default behaviour for all notebooks in your `_config.yml`:
+你可以在 `_config.yml` 中配置所有笔记本的默认行为：
 
 ```yaml
 execute:
   stderr_output: show
 ```
 
-Where the value is one of:
+其中值为：
 
-* `"show"` (default): show all stderr (unless a `remove-stderr` tag is present)
-* `"remove"`: remove all stderr
-* `"remove-warn"`: remove all stderr, but log a warning if any found
-* `"warn"`, `"error"` or `"severe"`: log the stderr at a certain level, if any found.
+* `"show"` （默认）：显示所有 stderr（除非有 `remove-stderr` 标记）
+* `"remove"`: 移除全部 stderr
+* `"remove-warn"`：移除全部 stderr，但如果有发现，就记录警告
+* `"warn"`, `"error"` 或 `"severe"`：如果发现任何标准错误，则将其记录在某个级别。
 
-You can also remove stderr at a cell level, using the `remove-stderr` [cell tag](https://jupyter-notebook.readthedocs.io/en/stable/changelog.html#cell-tags), like so:
+你也可以在单元格级别删除 stderr，使用 `remove-stderr` [cell 标签](https://jupyter-notebook.readthedocs.io/en/stable/changelog.html#cell-tags)，如下所示：
 
 ````md
 ```{code-cell} ipython3
@@ -248,7 +225,7 @@ print("this is some stderr", file=sys.stderr)
 ```
 ````
 
-which produces
+生成：
 
 ```{code-cell} ipython3
 :tags: [remove-stderr]
@@ -258,9 +235,9 @@ print("this is some stdout")
 print("this is some stderr", file=sys.stderr)
 ```
 
-### Dealing with code that produces stdout
+### 处理产生标准输出的代码
 
-Similar to stderr, you can remove stdout at a cell level with the `remove-stdout` tag, by which
+与 stderr 类似，您可以使用 `remove-stdout` 标记在单元格级别删除 stdout，通过此标记
 
 ````md
 ```{code-cell} ipython3
@@ -272,7 +249,7 @@ print("this is some stderr", file=sys.stderr)
 ```
 ````
 
-produces the following:
+产生以下：
 
 ```{code-cell} ipython3
 :tags: [remove-stdout]
@@ -282,23 +259,22 @@ print("this is some stdout")
 print("this is some stderr", file=sys.stderr)
 ```
 
-## Execution statistics
+## 执行统计数据
 
-As notebooks are executed, certain statistics are stored on the build environment by MyST-NB.
-The simplest way to access and visualise this data is using the `{nb-exec-table}` directive.
+当笔记本被执行时，某些统计数据被 MyST-NB 存储在构建环境中。访问和可视化这些数据的最简单的方法是使用 `{nb-exec-table}` 指令。
 
 :::{seealso}
-The [MyST-NB documentation](myst-nb:execute/statistics), for creating your own directives to manipulate this data.
+[MyST-NB 文档](myst-nb:execute/statistics)，用于创建自己的指令来操作这些数据。
 :::
 
-The simple directive
+简单的指令
 
 ````md
 ```{nb-exec-table}
 ```
 ````
 
-produces:
+输出：
 
 ```{nb-exec-table}
 ```

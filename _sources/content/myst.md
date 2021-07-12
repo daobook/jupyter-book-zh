@@ -1,53 +1,39 @@
-# MyST Markdown overview
+# MyST Markdown 概述
 
-In addition to [Jupyter Notebook Markdown](../file-types/notebooks.ipynb),
-Jupyter Book also supports a special flavour of Markdown called **MyST (or
-Markedly Structured Text)**.
-It was designed to make it easier to create publishable computational documents written with Markdown notation.
-It is a superset of [CommonMark Markdown](https://commonmark.org/) and draws heavy inspiration from the fantastic [RMarkdown language from RStudio](https://rmarkdown.rstudio.com/).
+除了 [Jupyter Notebook Markdown](../file-types/notebooks.ipynb)，Jupyter Book 还支持 Markdown 的一种特殊样式，称为**MyST（或标记结构化文本）**。它旨在简化创建以 Markdown 标记编写的可发布计算文档的过程。它是 [CommonMark Markdown](https://commonmark.org/) 的超集，并从奇妙的 [RMarkdown language from RStudio](https://rmarkdown.rstudio.com/) 中汲取了很多灵感。
 
 ```{margin}
-For those who are familiar with Sphinx, MyST Markdown is basically
-CommonMark + Markdown extensions + Sphinx roles and directives
+对于那些熟悉 Sphinx 的人来说，MyST Markdown 基本上是 CommonMark + Markdown 扩展 + Sphinx 的角色和指令
 ```
 
-Whether you write your book's content in Jupyter notebooks (`.ipynb`) or in regular Markdown files (`.md`),
-you'll write in the same flavour of **MyST Markdown**. Jupyter Book will know how to parse both of them.
+无论您是在 Jupyter 笔记本（`.ipynb`）中还是在常规 Markdown 文件（`.md`）中编写书籍的内容，都将使用**MyST Markdown**风格书写。Jupyter Book 将知道如何解析它们两者。
 
-This page contains a few pieces of information about MyST Markdown and how it relates to Jupyter Book.
-You can find much more information about this flavour of Markdown at
-[the Myst Parser documentation](myst-parser:example_syntax).
+此页面包含有关 MyST Markdown 及其与 Jupyter Book 的关系的一些信息。您可以在 [Myst Parser 文档](myst-parser:example_syntax) 中找到有关 Markdown 风格的更多信息。
 
-:::{admonition} Want to use RMarkdown directly?
+:::{admonition} 是否要直接使用 RMarkdown？
 :class: tip
-See [](../file-types/jupytext.md)
+查阅 [](../file-types/jupytext.md)
 :::
 
-## Directives and roles
 
-Roles and directives are two of the most powerful tools in Jupyter Book.
-They are kind of like *functions*, but written in a markup language.
-They both serve a similar purpose, but **roles are written in one line** whereas **directives span many lines**.
-They both accept different kinds of inputs, and what they do with those inputs depends on the specific role or directive being used.
+## 指令与角色
+
+角色和指令是 Jupyter Book 中两个功能最强大的工具。它们有点像*函数*，但是是以标记语言编写的。指令（directive）与角色（role）的目标相似，但是**角色写在一行中**而**指令跨越很多行**。它们都接受不同种类的输入，它们对这些输入的处理方式取决于所使用的特定角色或指令。
 
 (content:myst/directives)=
-### Directives
+### 指令
 
-Directives customize the look, feel, and behaviour of your book.
-They are kind of like *functions*, and come in a variety of names with different behaviour.
-This section covers how to structure and use them.
+指令可自定义书的外观，感觉和行为。它们有点像*函数*，并且以不同的方式出现各种名称。本节介绍如何构造和使用它们。
 
-At its simplest, you can use directives in your book like so:
+最简单的，您可以这样使用指令：
 
 ````md
-```{mydirectivename}
-My directive content
+```{指令}
+这里是指令内容
 ```
 ````
 
-This will only work if a directive with name `mydirectivename` already exists (which it doesn't).
-There are many pre-defined directives associated with Jupyter Book.
-For example, to insert a note box into your content, you can use the following directive:
+仅在名称为 `指令` 的指令已经存在（不存在）的情况下才有效。有许多与 Jupyter Book 相关的预定义指令。例如，要插入注释框，可以使用以下指令：
 
 ````
 ```{note}
@@ -55,26 +41,25 @@ Here is a note
 ```
 ````
 
-This results in:
+结果是：
 
 ```{note}
 Here is a note
 ```
 
-being inserted in your built book.
+被插入到您的已建书中。
 
-For more information on using directives, see the [MyST documentation](myst-parser:syntax/directives).
+
+有关使用指令的更多信息，请参见 [MyST 文档](myst-parser:syntax/directives)。
 
 (directive-arguments)=
-#### More arguments and metadata in directives
+#### 指令中的更多参数和元数据
 
-Many directives allow you to control their behaviour with extra pieces of
-information. In addition to the directive name and the directive content,
-directives allow two other configuration points:
+许多指令允许您使用额外的信息来控制它们的行为。除了指令名称和指令内容外，指令还允许其他两个配置点：
 
-**directive arguments** - a list of words that come just after the `{directivename}`.
+**指令参数**：紧跟在 `{directivename}` 之后的单词列表。
 
-Here's an example usage of directive arguments:
+这是指令参数的示例用法：
 
 ````md
 ```{directivename} arg1 arg2
@@ -82,13 +67,11 @@ My directive content.
 ```
 ````
 
-**directive keywords** - a collection of flags or key/value pairs
-that come just underneath `{directivename}`.
+**指令关键字**：位于 `{directivename}` 下方的标志或键/值对的集合。
 
-There are two ways to write directive keywords, either as `:key: val` pairs, or
-as `key: val` pairs enclosed by `---` lines. They both work the same way:
+有两种写指令关键字的方法，要么是 `:key: val` 对，要么是 `---` 括起来的 `key: val` 对。它们都以相同的方式工作：
 
-Here's an example of directive keywords using the `:key: val` syntax:
+以下是使用 `:key: val` 语法的指令关键字的示例：
 
 ````md
 ```{directivename}
@@ -98,7 +81,7 @@ My directive content.
 ```
 ````
 
-and here's an example of directive keywords using the enclosing `---` syntax:
+以下是使用封闭式 `---` 语法的指令关键字的示例：
 
 ````md
 ```{directivename}
@@ -111,65 +94,45 @@ My directive content.
 ````
 
 :::{tip}
-Remember, specifying directive keywords with `:key:` or `---` will make no difference.
-We recommend using `---` if you have many keywords you wish to specify, or if some values
-will span multiple lines. Use the `:key: val` syntax as a shorthand for just one or two
-keywords.
+记住，用 `:key:` 或 `---` 指定指令关键字没有什么区别。如果您要指定许多关键字，或者某些值跨越多行，建议您使用 `---`。使用 `:key: val` 语法作为一个或两个关键字的简写。
 :::
 
-For examples of how this is used, see the sections below.
+有关如何使用它的示例，请参见以下各节。
 
 (content:myst/roles)=
-### Roles
+### 角色
 
-Roles are very similar to directives, but they are less complex and written
-entirely in one line. You can use a role in your book with
-this syntax:
+角色与指令非常相似，但它们的复杂性和编写性较低
 
 ```md
 Some content {rolename}`and here is my role's content!`
 ```
 
-Again, roles will only work if `rolename` is a valid role name.
-For example, the `doc` role can be used to refer to another page in your book.
-You can refer directly to another page by its relative path.
-For example, the syntax `` {doc}`../README` `` will result in: {doc}`../README`.
+同样，仅当 `rolename` 是有效的角色名称时，角色才起作用。例如，`doc` 角色可用于引用书中的另一页。您可以通过相对路径直接引用另一个页面。例如，语法 `` {doc}`../README` `` 将产生 {doc}`../README`。
 
 ```{warning}
-It is currently a requirement for roles to be on the **same line** in your source file. It will
-not be parsed correctly if it spans more than one line. Progress towards supporting roles
-that span multiple lines can be tracked [by this issue](https://github.com/executablebooks/MyST-Parser/issues/269)
+目前要求角色在您的源文件中位于“同一行”上。如果它跨越多行，将无法正确解析。可以跟踪 [此议题](https://github.com/executablebooks/MyST-Parser/issues/269) 跨多个角色的支持角色的进展情况。
 ```
 
-For more information on using roles, see the [MyST documentation](myst-parser:syntax/roles).
+有关使用角色的更多信息，请参阅 [MyST 文档](myst-parser:syntax/roles)。
 
-## What roles and directives are available?
+## 有哪些角色和指令可用？
 
-There is currently no single list of roles / directives to use as a reference, but this
-section tries to give as much as information as possible. For those who are familiar
-with the Sphinx ecosystem, **you may use any directive / role that is available in Sphinx**.
-This is because Jupyter Book uses Sphinx to build your book, and MyST Markdown supports
-all syntax that Sphinx supports (think of it as a Markdown version of reStructuredText).
+当前没有角色/指令的单个列表用作参考，但是本节尝试提供尽可能多的信息。对于那些熟悉 Sphinx 生态系统的人，**您可以使用 Sphinx 中可用的任何指令/角色**。这是因为 Jupyter Book 使用 Sphinx 来构建您的书，而 MyST Markdown 支持 Sphinx 支持的所有语法（将其视为 reStructuredText 的 Markdown 版本）。
 
 :::{caution}
-If you search the internet (and the links below) for information about roles and directives,
-the documentation will generally be written with reStructuredText in mind. MyST Markdown
-is different from reStructuredText, but all of the functionality should be the same.
-See [the MyST Sphinx parser documentation](myst-parser:intro/get-started) for more information about the differences between MyST and rST.
+如果您在网（和下面的链接）上搜索有关角色和指令的信息，则通常在编写文档时会考虑到 reStructuredText。MyST Markdown 与 reStructuredText 不同，但是所有功能都应该相同。查阅 [MyST Sphinx 解析器文档](myst-parser:intro/get-started) 获取有关 MyST 和 rST 之间差异的更多信息。
 :::
 
-For a list of directives that are available to you, there are three places to check:
+有关可供您使用的指令列表，请检查三个地方：
 
-1. [The Sphinx directives page](sphinx:usage/restructuredtext/directives)
-   has a list of directives that are available by default in Sphinx.
-2. [The reStructuredText directives page](https://docutils.sourceforge.io/docs/ref/rst/directives.html)
-   has a list of directives in the Python "docutils" module.
-3. This documentation has several additional directives that are specific to Jupyter Book.
+1. [Sphinx 指令页面](sphinx:usage/restructuredtext/directives) 包含一个指令列表，默认情况下在 Sphinx 中可用。
+2. [reStructuredText 指令页面](https://docutils.sourceforge.io/docs/ref/rst/directives.html) 在 Python "docutils" 模块中具有指令列表。
+3. 本文档还有一些特定于 Jupyter Book 的其他指令。
 
-:::{admonition} What if it exists in rST but not MyST?
+:::{admonition} 如果它存在于 rST 中但不存在于 MyST 怎么办？
 :class: tip
-In some unusual cases, MyST may be incompatible with a certain role or directive.
-In this case, you can use the special `eval-rst` directive, to directly parse reStructuredText:
+在某些特殊情况下，MyST 可能与某个角色或指令不兼容。在这种情况下，可以使用特殊的 `eval-rst` 指令直接解析 reStructuredText：
 
 ````md
 ```{eval-rst}
@@ -179,7 +142,7 @@ In this case, you can use the special `eval-rst` directive, to directly parse re
 ```
 ````
 
-which produces
+产生
 
 ```{eval-rst}
 .. note::
@@ -189,18 +152,15 @@ which produces
 :::
 
 :::{seealso}
-The MyST-Parser documentation on [how directives parse content](myst-parser:syntax/directives/parsing), and its use for [including rST files into a Markdown file](myst-parser:howto/include-rst), and [using `sphinx.ext.autodoc` in Markdown files](myst-parser:howto/autodoc).
+关于 [指令如何解析内容](myst-parser:syntax/directives/parsing) 的 MyST-Parser 文档，及其用于 [将 rST 文件包含到Markdown文件中](myst-parser:howto/include-rst) 的用法，以及 [在 Markdown 文件中使用 `sphinx.ext.autodoc`](myst-parser:howto/autodoc)。
 :::
 
 (markdown/nesting)=
-## Nesting content blocks in Markdown
+## 在 Markdown 中嵌套内容块
 
-If you'd like to nest content blocks inside one another in Markdown (for
-example, to put a `{note}` inside of a `{margin}`), you may do so by adding
-extra backticks (`` ` ``) to the outer-most block. This works for literal
-code blocks as well.
+如果您想在 Markdown 中将内容块彼此嵌套（例如，将 `{note}` 放在 `{margin}` 中），则可以通过添加额外的反引号（`` ` ``）到最外面的块。这也适用于文字代码块。
 
-For example, the following syntax:
+例如，以下语法：
 
 `````md
 ````
@@ -209,15 +169,14 @@ For example, the following syntax:
 ````
 `````
 
-yields
+生成
 
 ````md
 ```
 ```
 ````
 
-Thus, if you'd like to nest directives inside one another, you can take the same
-approach. For example, the following syntax:
+因此，如果您希望将指令彼此嵌套在一起，则可以采用相同的方法。例如，以下语法：
 
 `````md
 ````{margin}
@@ -227,7 +186,7 @@ Here's my note!
 ````
 `````
 
-produces:
+生成：
 
 ````{margin}
 ```{note}
@@ -235,57 +194,44 @@ Here's my note!
 ```
 ````
 
-## Other MyST Markdown syntax
+## 其他 MyST Markdown 语法
 
-In addition to roles and directives, there are numerous other kinds of syntax
-that MyST Markdown supports.
-MyST supports all syntax of CommonMark Markdown (the kind of Markdown that Jupyter notebooks use), as well as an extended syntax that is used for scientific publishing.
+除了角色和指令外，MyST Markdown 还支持许多其他类型的语法。MyST支持 CommonMark Markdown 的所有语法（Jupyter 笔记本使用的 Markdown 类型），以及用于科学出版的扩展语法。
 
-The [MyST-Parser](myst-parser:intro/get-started) is the tool that Jupyter Book uses to allow you to write your book content in MyST.
-It is also a good source of information about the MyST syntax.
-Here are some links you can use as a reference:
+[MyST-Parser](myst-parser:intro/get-started) 是 Jupyter Book 用来允许您在 MyST 中写书内容的工具。它也是有关 MyST 语法的良好信息来源。以下是一些可以用作参考的链接：
 
-* [CommonMark block syntax](myst-parser:commonmark-block-tokens)
-* [Extended MyST block syntax in MyST](myst-parser:extended-block-tokens)
-* [CommonMark in-line syntax](myst-parser:commonmark-span-tokens)
-* [Extended in-line syntax in MyST](myst-parser:extended-span-tokens)
+* [CommonMark 块语法](myst-parser:commonmark-block-tokens)
+* [MyST 中的扩展 MyST 块语法](myst-parser:extended-block-tokens)
+* [CommonMark 内联语法](myst-parser:commonmark-span-tokens)
+* [MyST 中的扩展 MyST 内联语法](myst-parser:extended-span-tokens)
 
 :::{seealso}
-For information about enabling extended MyST syntax, see [](content-blocks:myst-extensions).
-In addition, see other examples of this extended syntax (and how to enable each) throughout this documentation.
+有关启用扩展 MyST 语法的信息，请参见 [](content-blocks:myst-extensions).
+此外，请参阅本文档中有关此扩展语法的其他示例（以及如何启用每个扩展语法）。
 :::
 
-## What can I create with MyST Markdown?
+## 可以使用 MyST Markdown 创建什么？
 
-See [](./content-blocks.md) for an introduction to what you can do with MyST Markdown
-in Jupyter Book.
-In addition, the other pages in this site cover many more use-cases for how to use directives with MyST.
+请参阅 [](./content-blocks.md)，以获取在 Jupyter Book 中有关如何使用 MyST Markdown 进行操作的介绍。此外，该站点的其他页面还介绍了有关如何在 MyST 中使用指令的更多用例。
 
-## Tools for writing MyST Markdown
+## 编写 MyST Markdown 的工具
 
-There is some support for MyST Markdown in tools across the community. Here we include
-a few prominent ones.
+整个社区的工具中都对 MyST Markdown 提供了一些支持。在这里，我们包括一些杰出的。
 
-### Jupyter interfaces
+### Jupyter 接口
 
-While MyST Markdown does not (yet) render in traditional Jupyter interfaces, most
-of its syntax should "gracefully degrade", meaning that you can still work with
-MyST in Jupyter, and then build your book with Jupyter Book.
+尽管 MyST Markdown 尚未在传统的 Jupyter 界面中呈现，但其大多数语法应“优美地降级”，这意味着您仍然可以在 Jupyter 中使用 MyST，然后使用 Jupyter Book 来构建您的书。
 
-### Jupytext and text sync
+### Jupytext 和文本同步
 
-For working with Jupyter notebook and Markdown files, we recommend [jupytext](https://jupytext.readthedocs.io/en/latest),
-an open source tool for two-way conversion between `.ipynb` and text files.
-Jupytext [supports the MyST Markdown format](https://jupytext.readthedocs.io/en/latest/formats.html#myst-markdown).
+要使用 Jupyter 笔记本和 Markdown 文件，建议使用 [jupytext](https://jupytext.readthedocs.io/en/latest)，这是一种用于在 `.ipynb` 和文本文件之间进行双向转换的开源工具。Jupytext [支持 MyST Markdown 格式](https://jupytext.readthedocs.io/en/latest/formats.html#myst-markdown).
 
 :::{note}
-For full compatibility with `myst-parser`, it is necessary to use `jupytext>=1.6.0`.
+为了与 `myst-parser` 完全兼容，必须使用 `jupytext>=1.6.0`。
 
-See also [](file-types:custom:jupytext).
+也可参阅 [](file-types:custom:jupytext)。
 :::
 
 ### VS Code
 
-If editing the Markdown files using VS Code, the
-[VS Code MyST Markdown extension](https://marketplace.visualstudio.com/items?itemName=ExecutableBookProject.myst-highlight)
-provides syntax highlighting and other features.
+如果使用 VS Code 编辑 Markdown 文件，则 [VS Code MyST Markdown 扩展](https://marketplace.visualstudio.com/items?itemName=ExecutableBookProject.myst-highlight) 提供语法高亮显示和其他功能。

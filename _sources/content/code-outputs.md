@@ -11,23 +11,22 @@ kernelspec:
 
 (content:code-outputs)=
 
-# Formatting code outputs
+# 格式化代码输出
 
-The formatting of code outputs is highly configurable.
-Below we give examples of how to format particular outputs and even insert outputs into other locations of the document.
+代码输出的格式化是高度可配置的。下面我们给出一些示例，说明如何格式化特定输出，甚至如何将输出插入到文档的其他位置。
 
-The [MyST cheat sheet](myst_cheatsheet) provides a [list of `code-cell` tags available](myst_cheatsheet:code-cell:tags)
+[MyST 备忘单](myst_cheatsheet) 提供了 [可用的 `code-cell` 标签列表](myst_cheatsheet:code-cell:tags)
 
 :::{seealso}
-The [MyST-NB documentation](myst-nb:use/format/cutomise), for how to fully customize the output renderer.
+[MyST-NB 文档](myst-nb:use/format/cutomise)，关于如何完全定制输出渲染器。
 :::
 
 (content:code-outputs:library-outputs)=
-## Library output formatting
+## 库输出格式化
 
-Many libraries support their own HTML output formatting, and this generally carries over to Jupyter Book outputs as well.
+许多库都支持自己的 HTML 输出格式，这通常也适用于 Jupyter Book 输出。
 
-For example, the following cell uses Pandas to format cells based on their values:
+例如，下面的单元格使用 Pandas 基于它们的值格式化单元格：
 
 ```{code-cell} ipython3
 :tags: [hide-input]
@@ -64,17 +63,14 @@ df.style.\
     set_table_attributes('style="font-size: 10px"')
 ```
 
-See the [Pandas Styling docs](https://pandas.pydata.org/pandas-docs/stable/user_guide/style.html) for more information about styling DataFrames, and check out the documentation of your library of choice to see if they support similar features.
+有关样式化 DataFrames 的更多信息，请参阅 [Pandas styles 文档](https://pandas.pydata.org/pandas-docs/stable/user_guide/style.html)，并查看您选择的库的文档，看看它们是否支持类似的特性。
 
 (content:code-outputs:scrolling)=
-## Scrolling cell outputs
+## 滚动单元输出
 
-The traditional Jupyter Notebook interface allows you to toggle **output scrolling**
-for your cells. This allows you to visualize part of a long output without it taking up
-the entire page.
+传统的 Jupyter Notebook 界面允许您为单元格切换**输出滚动**。这允许您可视化长输出的一部分，而不会占用整个页面。
 
-You can trigger this behavior in Jupyter Book by adding the following
-tag to a cell's metadata:
+你可以在 Jupyter Book 中通过添加以下标签到单元格的元数据来触发这种行为：
 
 ```json
 {
@@ -84,7 +80,7 @@ tag to a cell's metadata:
 }
 ```
 
-For example, the following cell has a long output, but will be scrollable in the book:
+例如，下面的单元格有一个很长的输出，但是可以在书中滚动：
 
 ```{code-cell} ipython3
 :tags: [output_scroll]
@@ -94,23 +90,22 @@ for ii in range(40):
 ```
 
 (content:code-outputs:images)=
-## Images
+## 图像
 
-For any image types output by the code, we can apply formatting *via* cell metadata.
-Then for the image we can apply all the variables of the standard [image directive](https://docutils.sourceforge.io/docs/ref/rst/directives.html#image):
+对于代码输出的任何图像类型，我们都可以通过单元格元数据应用格式。然后，对于图像，我们可以应用标准 [图像指令](https://docutils.sourceforge.io/docs/ref/rst/directives.html#image) 的所有变量：
 
 ```{margin}
-Units of length are: 'em', 'ex', 'px', 'in', 'cm', 'mm', 'pt', 'pc'
+长度的单位是：'em', 'ex', 'px', 'in', 'cm', 'mm', 'pt', 'pc'
 ```
 
-- **width**: length or percentage (%) of the current line width
-- **height**: length
-- **scale**: integer percentage (the "%" symbol is optional)
-- **align**: "top", "middle", "bottom", "left", "center", or "right"
-- **classes**: space separated strings
-- **alt**: string
+- **width**: 当前行宽的长度或百分比(%)
+- **height**: 长度
+- **scale**: 整数百分比(“%”符号是可选的)
+- **align**: "top", "middle", "bottom", "left", "center", 或者 "right"
+- **classes**: 空格分隔的字符串
+- **alt**: 字符串
 
-We can also set a caption (which is rendered as [CommonMark](https://commonmark.org/)) and name by which to reference the figure. The code
+我们还可以设置一个 caption（呈现为 [CommonMark](https://commonmark.org/)）和 name，通过它们来引用图像。代码
 
 ````md
 ```{code-cell} ipython3
@@ -130,25 +125,25 @@ Image("../images/fun-fish.png")
 ```
 ````
 
-produces the following code cell and figure:
+生成以下代码单元格和图像：
 
 ```{code-cell} ipython3
 ---
 render:
+  figure:
+    caption: 'Hey everyone its **party** time!
+
+      '
+    name: fun-fish
   image:
-    width: 300px
     alt: fun-fish
     classes: shadow bg-primary
-  figure:
-    caption: |
-      Hey everyone its **party** time!
-    name: fun-fish
 ---
 from IPython.display import Image
 Image("../images/fun-fish.png")
 ```
 
-Now we can link to the image from anywhere in our documentation: [swim to the fish](fun-fish)
+现在我们可以从文档中的任何地方链接到该图像：[swim to the fish](fun-fish)
 
 :::{seealso}
 [](jupyter-cell-tags)
@@ -157,25 +152,25 @@ Now we can link to the image from anywhere in our documentation: [swim to the fi
 (content:code-outputs:markdown)=
 ## Markdown
 
-Markdown output is parsed by MyST-Parser, currently with the parsing set to strictly [CommonMark](https://commonmark.org/).
+Markdown 输出由 MyST-Parser 解析，目前解析设置为严格的 [CommonMark](https://commonmark.org/)。
 
-The parsed Markdown is then integrated into the wider context of the document. This means it is possible, for example, to include internal references:
+然后，解析后的 Markdown 被集成到文档的更广泛的上下文中。这意味着它是可能的，例如，包括内部引用：
 
 ```{code-cell} ipython3
 from IPython.display import display, Markdown
 display(Markdown('**_some_ markdown** and an [internal reference](use/format/markdown)!'))
 ```
 
-and even internal images can be rendered, as the code below exemplifies:
+甚至内部图像也可以渲染，如下面的代码所示：
 
 ```{code-cell} ipython3
 display(Markdown('![figure](../images/logo-wide.svg)'))
 ```
 
 (content:code-outputs:ansi)=
-## ANSI outputs
+## ANSI 输出
 
-By default, the standard output/error streams and text/plain MIME outputs may contain ANSI escape sequences to change the text and background colors.
+默认情况下，标准 output/error 流和 text/plain MIME 输出可能包含用于更改文本和背景颜色的 ANSI 转义序列。
 
 ```{code-cell} ipython3
 import sys
@@ -184,8 +179,7 @@ print("AB\x1b[43mCD\x1b[35mEF\x1b[1mGH\x1b[4mIJ\x1b[7m"
       "KL\x1b[49mMN\x1b[39mOP\x1b[22mQR\x1b[24mST\x1b[27mUV")
 ```
 
-This uses the built-in {py:class}`~myst-nb:myst_nb.ansi_lexer.AnsiColorLexer` [pygments lexer](https://pygments.org/).
-You can change the lexer used in the `_config.yml`, for example to turn off lexing:
+这使用内置的 {py:class}`~myst-nb:myst_nb.ansi_lexer.AnsiColorLexer` [pygments lexer](https://pygments.org/)。您可以更改 `_config.yml` 文件中使用的 lexer，例如关闭词法分析:
 
 ```yaml
 sphinx:
@@ -193,8 +187,7 @@ sphinx:
     nb_render_text_lexer: "none"
 ```
 
-The following code shows the 8 basic ANSI colors it is based on.
-Each of the 8 colors has an “intense” variation, which is used for bold text.
+下面的代码显示了它所基于的 8 种基本的 ANSI 颜色。这 8 种颜色中的每一种都有一个“强烈的”变化，用于粗体文本。
 
 ```{code-cell} ipython3
 text = " XYZ "
@@ -218,18 +211,16 @@ for fg in range(30, 38):
 ```
 
 :::{note}
+ANSI 还支持一组 256 种索引颜色。目前还不支持此功能，但我们希望稍后引入它（如果您需要它，可以在存储库上提出议题！）。
 ANSI also supports a set of 256 indexed colors.
-This is currently not supported, but we hope to introduce it at a later date
-(raise an issue on the repository if you require it!).
 :::
 
 (content:code-outputs:priority)=
-## Render priority
+## 渲染优先级
 
-When Jupyter executes a code cell it can produce multiple outputs, and each of these outputs can contain multiple [MIME media types](https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types) to use with different output formats (like HTML or LaTeX).
+当 Jupyter 执行一个代码单元时，它可以产生多个输出，每个输出可以包含多个 [MIME 媒体类型](https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types)，用于不同的输出格式（如 HTML 或 LaTeX）。
 
-MyST-NB stores a default priority dictionary for most of the common [output builders](https://www.sphinx-doc.org/en/master/usage/builders/index.html), which you can also update in your `_config.yml`.
-For example, this is the default priority list for HTML:
+MyST-NB 为大多数常见的[输出构建器](https://www.sphinx-doc.org/en/master/usage/builders/index.html)存储了一个默认的优先级字典，你也可以在 `_config.yml` 中更新它。例如，这是 HTML 的默认优先级列表：
 
 ```yaml
 sphinx:

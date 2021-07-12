@@ -13,7 +13,7 @@ Jupyter Book 现在也针对 Windows 操作系统进行了测试 😀
 
 然而，在使用 Python 3.8 时，笔记本执行有一个众所周知的不兼容性。
 
-See [](working-on-windows)
+阅读 [](working-on-windows)。
 :::
 
 请参阅本教程左边的章节来开始学习！

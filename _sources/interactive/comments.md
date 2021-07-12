@@ -1,26 +1,24 @@
 (interactive:comments)=
-# Commenting and annotating
+# 评论和注释
 
 ```{danger}
-This is an experimental feature that may change quickly!
-If you're interested in trying this out, we recommend using the `master` branch
-version of Jupyter Book.
+这是一个实验性的特性，可能会很快改变！如果你有兴趣尝试这个，我们建议使用主分支版本的 Jupyter Book。
 ```
 
-You can add functionality for web commenting and annotating through a number of web services and tools. These allow readers of your book to share conversations, ideas and questions in a centralized location. It is useful for classes, communities of practice, asking for user feedback, etc.
+您可以通过许多 web 服务和工具添加用于 web 评论和注释的功能。这些可以让你的读者在一个集中的地方分享对话、想法和问题。它对课程、实践社区、征求用户反馈等都很有用。
 
-Currently, these commenting engines are supported:
+目前，支持的评论引擎有：
 
-- [Hypothesis](https://hypothes.is/) provides a web overlay that allows you to annotate and comment collaboratively.
-- [utterances](https://utteranc.es/) is a web commenting system that uses GitHub Issues to store and manage comments.
+- [Hypothesis](https://hypothes.is/) 提供一个 web 覆盖，允许您注释和注释协作。
+- [utterances](https://utteranc.es/) 是一个使用 GitHub Issues 来存储和管理评论的 web 评论系统。
 
 ```{note}
-Jupyter Book uses the [`sphinx-comments`](https://sphinx-comments.readthedocs.io/) Sphinx extension for this functionality.
+Jupyter Book 使用 [`sphinx-comments`](https://sphinx-comments.readthedocs.io/) Sphinx 扩展来实现此功能。
 ```
 
-**Documentation for supported services**
+**支持服务的文档**
 
-For examples of each service, as well as instructions on how to activate it, click on the links for each service in the left navigation bar or below.
+要查看每个服务的示例以及如何激活它的说明，请单击左侧导航栏或下方的每个服务的链接。
 
 ```{tableofcontents}
 ```

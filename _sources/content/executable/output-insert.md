@@ -10,46 +10,32 @@ kernelspec:
 ---
 
 (content:code-outputs:glue)=
-# Store code outputs and insert into content
+# 存储代码输出并插入到内容中
 
-You often wish to run analyses in one notebook and insert them in your
-documents elsewhere. For example, if you'd like to include a figure,
-or if you want to cite an analysis that you have run.
+您经常希望在一个笔记本中运行分析，并将它们插入到文档的其他地方。例如，如果你想包含一个图，或者如果你想引用你做过的一个分析。
 
 ```{margin}
-Currently, `glue` only works with Python.
+目前，`glue` 只适用于 Python。
 ```
+来自 [MyST-NB](https://myst-nb.readthedocs.io/) 的 `glue` 工具允许你在笔记本中添加一个键到变量中，然后通过引用该键在你的书中显示这些变量。它遵循两个步骤：
 
-The `glue` tool from [MyST-NB](https://myst-nb.readthedocs.io/)
-allows you to add a key to variables in a notebook,
-then display those variables in your book by referencing the key. It
-follows a two-step process:
+* **将变量绑定（glue）到名称（name）上**。通过在您想在书中其他地方重用的变量上使用 `myst_nb.glue` 函数来实现这一点。您将为该变量指定一个日后可以引用的名称。
+* **从页面内容中引用该变量**。然后，在编写内容时，使用 `{glue:}` 角色将变量插入到文本中。
 
-* **Glue a variable to a name**. Do this by using
-  the `myst_nb.glue` function on a variable
-  that you'd like to re-use elsewhere in the book. You'll give the variable
-  a name that can be referenced later.
-* **Reference that variable from your page's content**. Then, when you are
-  writing your content, insert the variable into your text by using a
-  `{glue:}` role.
+我们将在下面更详细地介绍每个步骤。
 
-We'll cover each step in more detail below.
-
-:::{margin}
-For more information about roles, see [](../myst.md).
-:::
+```{margin}
+有关角色的更多信息，请参阅 [](../myst.md)。
+```
 
 +++
 
 (glue/gluing)=
-## Gluing variables in your notebook
+## 把变量 glue 在你的笔记本上
 
-You can use `myst_nb.glue()` to assign the value of a variable to
-a key of your choice. `glue` will store all of the information that is normally used to **display**
-that variable (i.e., whatever happens when you display the variable by putting it at the end of a
-code cell). Choose a key that you will remember, as you will use it later.
+您可以使用 `myst_nb.glue()` 将变量的值赋给您选择的键。`glue` 将存储通常用于显示该变量的所有信息（例如，通过将变量放在代码单元格的末尾来显示该变量时发生的任何事情）。选择一个您将记住的键，因为您将在以后使用它。
 
-The following code glues a variable inside the notebook to the key `"cool_text"`:
+下面的代码将一个变量绑定在笔记本的 `"cool_text"` 键上：
 
 ```{code-cell} ipython3
 from myst_nb import glue
@@ -57,16 +43,11 @@ my_variable = "here is some text!"
 glue("cool_text", my_variable)
 ```
 
-You can then insert it into your text. Adding
-`` {glue:}`cool_text` `` to your content results in the
-following: {glue:}`cool_text`.
+然后可以将其插入到文本中。在内容中添加 `` {glue:}`cool_text` ``，结果如下：{glue:}`cool_text`。
 
-### Gluing numbers, plots, and tables
+### 将数字、图和表绑定起来
 
-You can glue anything in your notebook and display it later with `{glue:}`. Here
-we'll show how to glue and paste **numbers and images**. We'll simulate some
-data and run a simple bootstrap on it. We'll hide most of this process below,
-to focus on the glueing part.
+你可以把任何东西绑定在笔记本上，然后用 `{glue:}` 显示出来。这里我们将展示如何绑定**数字和图像**。我们将模拟一些数据并在其上运行一个简单的引导程序。我们将隐藏此过程大部分代码，以集中在绑定部分。
 
 +++
 
@@ -85,8 +66,7 @@ data = sd*np.random.randn(n_points) + mean
 bootstrap_indices = np.random.randint(0, n_points, n_points*n_boots).reshape((n_boots, n_points))
 ```
 
-In the cell below, `data` contains our data, and `bootstrap_indices` is a collection of sample indices in each bootstrap. Below we'll calculate a few statistics of interest, and
-**`glue()`** them into the notebook.
+在下面的单元格中，`data` 包含我们的数据，`bootstrap_indices` 是每个引导程序中的示例索引的集合。下面我们将计算一些感兴趣的统计数据，并将它们 **`glue()`** 在笔记本上。
 
 ```{code-cell} ipython3
 # Calculate the mean of a bunch of random samples
@@ -100,16 +80,13 @@ glue("boot_clo", clo)
 glue("boot_chi", chi)
 ```
 
-By default, `glue` will display the value of the variable you are gluing. This
-is useful for sanity-checking its value at glue-time. If you'd like to **prevent display**,
-use the `display=False` option. Note that below, we also *overwrite* the value of
-`boot_chi` (but using the same value):
+默认情况下，`glue` 将显示您正在绑定的变量的值。这对于 sanity-checking 其值的完整性很有用。如果您想**阻止显示**，请使用 `display=False` 选项。注意下面，我们也覆盖了 `boot_chi` 的值（但使用了相同的值）：
 
 ```{code-cell} ipython3
 glue("boot_chi_notdisplayed", chi, display=False)
 ```
 
-You can also glue visualizations, such as Matplotlib figures (here we use `display=False` to ensure that the figure isn't plotted twice):
+你也可以绑定可视化，比如 Matplotlib 图形（这里我们使用 `display=False` 来确保图形不会绘制两次）：
 
 ```{code-cell} ipython3
 # Visualize the historgram with the intervals
@@ -128,7 +105,7 @@ glue("boot_fig", fig, display=False)
 glue("sorted_means_fig", fig2, display=False)
 ```
 
-The same can be done for `DataFrame`s (or other table-like objects) as well.
+对于 `DataFrames`（或其他类似表的对象）也可以这样做。
 
 ```{code-cell} ipython3
 bootstrap_subsets = data[bootstrap_indices][:3, :5].T
@@ -137,48 +114,41 @@ glue("df_tbl", df)
 ```
 
 ```{tip}
-Since we are going to paste this figure into our document at a later point,
-you may wish to remove the output here, using the `remove-output` tag
-(see {ref}`hiding/remove-content`).
+由于我们将在稍后将此图粘贴到我们的文档中，您可能希望在这里删除输出，使用 `remove-output` 标记（参见 {ref}`hiding/remove-content`）。
 ```
 
 +++
 
 (glue/pasting)=
 
-## Pasting glued variables into your page
+### 将绑定的变量粘贴到页面中
 
-Once you have glued variables to their names, you can then **paste**
-those variables into your text in your book anywhere you like (even on other pages).
-These variables can be pasted using one of the roles or directives in the `glue` *family*.
+一旦你把变量绑定到它们的名字上，你就可以把这些变量粘贴到你的书的任何地方（甚至在其他页面上）。这些变量可以使用 `glue` 家族中的角色或指令之一进行**粘贴**。
 
 +++
 
-### The `glue` role/directive
+### `glue` 角色/指令
 
-The simplest role and directive is `glue:any`,
-which pastes the glued output in-line or as a block respectively,
-with no additional formatting.
-Simply add this:
+最简单的角色和指令是 `glue:any`，它将被粘合的输出分别内联粘贴或作为一个块，不需要其他格式。简单的添加：
 
 ````
 ```{glue:} your-key
 ```
 ````
 
-For example, we'll paste the plot we generated above with the following text:
+例如，我们将使用以下文本粘贴上面生成的 plot：
 
 ````md
 ```{glue:} boot_fig
 ```
 ````
 
-Here's how it looks:
+它看起来是这样的：
 
 ```{glue:} boot_fig
 ```
 
-Or we can paste in-line objects like so:
+或者我们可以像这样粘贴作为内联对象：
 
 ```md
 In-line text; {glue:}`boot_mean`, and a figure: {glue:}`boot_fig`.
@@ -187,61 +157,50 @@ In-line text; {glue:}`boot_mean`, and a figure: {glue:}`boot_fig`.
 In-line text; {glue:}`boot_mean`, and a figure: {glue:}`boot_fig`.
 
 ```{tip}
-We recommend using wider, shorter figures when plotting in-line, with a ratio
-around 6x2. For example, here's an in-line figure of sorted means
-from our bootstrap: {glue:}`sorted_means_fig`.
-It can be used to make a visual point that isn't too complex! For more
-ideas, check out [how sparklines are used](https://en.wikipedia.org/wiki/Sparkline).
+我们建议在绘制内联图时使用更宽、更短的图形，其比值约为 6x2。例如，这是一个从引导程序中排序的方法的内联图：{glue:}`sorted_means_fig`。它可以用来做一个不太复杂的视觉点！想了解更多，请查看[火花线是如何使用的](https://en.wikipedia.org/wiki/Sparkline)。
 ```
 
-Next we'll cover some more specific pasting functionality, which gives you more
-control over how the pasted outputs look in your pages.
+接下来，我们将介绍一些更具体的粘贴功能，它可以让您更好地控制粘贴后的输出在页面中的外观。
 
 +++
 
-## Controlling the pasted outputs
+## 控制粘贴的输出
 
-You can control the pasted outputs by using a sub-command of `{glue:}`. These are used like so:
-`` {glue:subcommand}`key` ``. These subcommands allow you to control more of the look, feel, and
-content of the pasted output.
+您可以使用子命令 `{glue:}` 来控制粘贴的输出。这些可以这样使用：`` {glue:subcommand}`key` ``。这些子命令允许您控制粘贴输出的更多外观、感觉和内容。
 
 ```{tip}
-When you use `{glue:}` you are actually using shorthand for `{glue:any}`. This is a
-generic command that doesn't make many assumptions about what you are gluing.
+当你使用 `{glue:}` 时，你实际上是在使用 `{glue:any}` 的简写。这是一个通用的命令，它不会对你要粘的东西做很多假设。
 ```
 
 +++
 
-### The `glue:text` role
+### `glue:text` 角色
 
-The `glue:text` role is specific to text outputs.
-For example, the following text:
+`glue:text` 角色特定于文本输出。例如，以下文字:
 
 ```md
 The mean of the bootstrapped distribution was {glue:text}`boot_mean` (95% confidence interval {glue:text}`boot_clo`/{glue:text}`boot_chi`).
 ```
 
-Is rendered as:
+呈现的是：
+
 The mean of the bootstrapped distribution was {glue:text}`boot_mean` (95% confidence interval {glue:text}`boot_clo`/{glue:text}`boot_chi`)
 
 ```{note}
-`glue:text` only works with glued variables that contain a `text/plain` output.
+`glue:text` 仅适用于包含 `text/plain` 输出的 glue 变量。
 ```
 
-With `glue:text` we can **add formatting to the output**.
-This is particularly useful if you are displaying numbers and
-want to round the results. To add formatting, use this syntax:
+使用 `glue:text`，我们可以为**输出添加格式**。如果您要显示数字并希望将结果四舍五入，这尤其有用。要添加格式，请使用以下语法：
 
 * `` {glue:text}`mykey:formatstring` ``
 
-For example, ``My rounded mean: {glue:text}`boot_mean:.2f` `` will be rendered like this: My rounded mean: {glue:text}`boot_mean:.2f` (95% CI: {glue:text}`boot_clo:.2f`/{glue:text}`boot_chi:.2f`).
+例如，``My rounded mean: {glue:text}`boot_mean:.2f` `` 将被渲染为： My rounded mean: {glue:text}`boot_mean:.2f` (95% CI: {glue:text}`boot_clo:.2f`/{glue:text}`boot_chi:.2f`)。
 
 +++
 
-### The `glue:figure` directive
+### `glue:figure` 指令
 
-With `glue:figure` you can apply more formatting to figure-like objects,
-such as giving them a caption and referenceable label. For example,
+使用 `glue:figure`，你可以对类似于 figure 的对象应用更多的格式，比如给它们一个标题和可参考的标签。例如，
 
 ````md
 ```{glue:figure} boot_fig
@@ -252,7 +211,7 @@ This is a **caption**, with an embedded `{glue:text}` element: {glue:text}`boot_
 ```
 ````
 
-produces the following figure:
+生成如下图：
 
 ```{glue:figure} boot_fig
 :figwidth: 300px
@@ -261,19 +220,19 @@ produces the following figure:
 This is a **caption**, with an embedded `{glue:text}` element: {glue:text}`boot_mean:.2f`!
 ```
 
-Later, the code
+后来,代码
 
 ```md
 Here is a {ref}`reference to the figure <fig-boot>`
 ```
 
-can be used to reference the figure.
+可用于引用图。
 
 Here is a {ref}`reference to the figure <fig-boot>`
 
 +++
 
-Here's a table:
+这里有一个表：
 
 ````md
 ```{glue:figure} df_tbl
@@ -285,7 +244,7 @@ A caption for a pandas table.
 
 ````
 
-which gets rendered as
+被渲染成
 
 ```{glue:figure} df_tbl
 :figwidth: 300px
@@ -296,12 +255,9 @@ A caption for a pandas table.
 
 +++
 
-### The `glue:math` directive
+### `glue:math` 指令
 
-The `glue:math` directive is specific to LaTeX math outputs
-(glued variables that contain a `text/latex` MIME type),
-and works similarly to the [Sphinx math directive](https://www.sphinx-doc.org/en/1.8/usage/restructuredtext/directives.html#math).
-For example, with this code we glue an equation:
+`glue:math` 指令特定于 LaTeX 数学输出（包含 `text/latex` MIME 类型的粘合变量），其工作原理类似于 [Sphinx math 指令](https://www.sphinx-doc.org/en/1.8/usage/restructuredtext/directives.html#math)。例如，我们用这段代码粘合一个等式：
 
 ```{code-cell} ipython3
 import sympy as sym
@@ -312,7 +268,7 @@ f = y(n)-2*y(n-1/sym.pi)-5*y(n-2)
 glue("sym_eq", sym.rsolve(f,y(n),[1,4]))
 ```
 
-and now we can use the following code:
+现在我们可以使用以下代码：
 
 ````md
 ```{glue:math} sym_eq
@@ -320,7 +276,7 @@ and now we can use the following code:
 ```
 ````
 
-to insert the equation here:
+在这里插入方程：
 
 ```{glue:math} sym_eq
 :label: eq-sym
@@ -330,20 +286,18 @@ to insert the equation here:
 % Which we then reference as Equation {eq}`eq-sym`.
 
 ```{note}
-`glue:math` only works with glued variables that contain a `text/latex` output.
+`glue:math` 仅适用于包含 `text/latex`  输出的粘合变量。
 ```
 
 +++
 
-## Advanced `glue` use-cases
+## 高级 `glue` 用例
 
-Here are a few more specific and advanced uses of the `glue` submodule.
+下面是 `glue` 子模块的一些更具体、更高级的用法。
 
-### Pasting into tables
+### 粘贴到表
 
-In addition to pasting blocks of outputs, or in-line with text, you can also paste directly
-into tables. This allows you to compose complex collections of structured data using outputs
-that were generated in other cells or other notebooks. For example, the following Markdown table:
+除了粘贴输出块或内联文本外，还可以直接粘贴到表中。这允许您使用在其他单元格或其他笔记本中生成的输出来组成结构化数据的复杂集合。例如，下面的 Markdown 表：
 
 ````md
 | name                            |       plot                    | mean                      | ci                                                |
@@ -352,7 +306,7 @@ that were generated in other cells or other notebooks. For example, the followin
 | sorted means and formatted text | {glue:}`sorted_means_fig`     | {glue:text}`boot_mean:.3f` | {glue:text}`boot_clo:.3f`-{glue:text}`boot_chi:.3f` |
 ````
 
-Results in:
+结果：
 
 | name                            |       plot                  | mean                      | ci                                                |
 |:-------------------------------:|:---------------------------:|---------------------------|---------------------------------------------------|

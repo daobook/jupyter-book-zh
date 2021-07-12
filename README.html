@@ -127,7 +127,7 @@ commentsRunWhenDOMLoaded(addUtterances);
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
 </form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
     <div class="bd-toc-item active">
-        <p class="caption">
+        <p class="caption" role="heading">
  <span class="caption-text">
   教程
  </span>
@@ -176,7 +176,7 @@ commentsRunWhenDOMLoaded(addUtterances);
   </a>
  </li>
 </ul>
-<p class="caption">
+<p class="caption" role="heading">
  <span class="caption-text">
   主题指南
  </span>
@@ -204,7 +204,7 @@ commentsRunWhenDOMLoaded(addUtterances);
    </li>
    <li class="toctree-l2 has-children">
     <a class="reference internal" href="file-types/index.html">
-     Types of content source files
+     内容源文件的类型
     </a>
     <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
     <label for="toctree-checkbox-3">
@@ -214,27 +214,27 @@ commentsRunWhenDOMLoaded(addUtterances);
     <ul>
      <li class="toctree-l3">
       <a class="reference internal" href="file-types/markdown.html">
-       Markdown files
+       Markdown 文件
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="file-types/notebooks.html">
-       Jupyter Notebook files
+       Jupyter Notebook 文件
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="file-types/myst-notebooks.html">
-       Notebooks written entirely in Markdown
+       完全用 Markdown 书写笔记本
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="file-types/jupytext.html">
-       Custom notebook formats and Jupytext
+       自定义笔记本格式和 Jupytext
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="file-types/restructuredtext.html">
-       reStructuredText files
+       reStructuredText 文件
       </a>
      </li>
     </ul>
@@ -246,14 +246,14 @@ commentsRunWhenDOMLoaded(addUtterances);
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="structure/sections-headers.html">
-     How headers and sections map onto to book structure
+     标题和章节如何映射到书的结构
     </a>
    </li>
   </ul>
  </li>
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="content/index.html">
-   Write narrative content
+   撰写叙述内容
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
   <label for="toctree-checkbox-4">
@@ -263,49 +263,59 @@ commentsRunWhenDOMLoaded(addUtterances);
   <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="content/myst.html">
-     MyST Markdown overview
+     MyST Markdown 概述
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="content/content-blocks.html">
-     Special content blocks
+     特殊内容块
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="content/references.html">
-     References and cross-references
+     引用和交叉引用
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="content/layout.html">
-     Control the page layout
+     控制页面布局
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="content/citations.html">
-     Citations and bibliographies
+     引用和参考书目
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="content/math.html">
-     Math and equations
+     数学和公式
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="content/figures.html">
-     Images and figures
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       image
+      </span>
+     </code>
+     和
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       figure
+      </span>
+     </code>
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="content/metadata.html">
-     Add metadata to your book pages
+     将元数据添加到您的书籍页面
     </a>
    </li>
   </ul>
  </li>
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="content/executable/index.html">
-   Write executable content
+   写可执行内容
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
   <label for="toctree-checkbox-5">
@@ -315,22 +325,22 @@ commentsRunWhenDOMLoaded(addUtterances);
   <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="content/execute.html">
-     Execute and cache your pages
+     执行并缓存页面
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="content/code-outputs.html">
-     Formatting code outputs
+     格式化代码输出
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="content/executable/output-insert.html">
-     Store code outputs and insert into content
+     存储代码输出并插入到内容中
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="interactive/interactive.html">
-     Interactive data visualizations
+     交互式数据可视化
     </a>
    </li>
   </ul>
@@ -369,27 +379,27 @@ commentsRunWhenDOMLoaded(addUtterances);
   <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="basics/repository.html">
-     Connect your book to a code repository
+     将您的书连接到代码存储库
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="interactive/hiding.html">
-     Hide or remove content
+     隐藏或删除内容
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="interactive/launchbuttons.html">
-     Launch into interactive computing interfaces
+     启动交互式计算接口
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="interactive/thebe.html">
-     Make your code cells executable
+     使您的代码单元格可执行
     </a>
    </li>
    <li class="toctree-l2 has-children">
     <a class="reference internal" href="interactive/comments.html">
-     Commenting and annotating
+     评论和注释
     </a>
     <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
     <label for="toctree-checkbox-8">
@@ -411,7 +421,7 @@ commentsRunWhenDOMLoaded(addUtterances);
    </li>
    <li class="toctree-l2 has-children">
     <a class="reference internal" href="publish/web.html">
-     Host your book on the internet
+     把你的书放在网上
     </a>
     <input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/>
     <label for="toctree-checkbox-9">
@@ -421,7 +431,7 @@ commentsRunWhenDOMLoaded(addUtterances);
     <ul>
      <li class="toctree-l3">
       <a class="reference internal" href="publish/gh-pages.html">
-       GitHub Pages and Actions
+       GitHub Pages 与 Actions
       </a>
      </li>
      <li class="toctree-l3">
@@ -433,14 +443,14 @@ commentsRunWhenDOMLoaded(addUtterances);
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="advanced/html.html">
-     Advanced HTML outputs
+     高级 HTML 输出
     </a>
    </li>
   </ul>
  </li>
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="advanced/index.html">
-   Advanced Jupyter Book Usage
+   Jupyter Book 高级语法
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/>
   <label for="toctree-checkbox-10">
@@ -455,7 +465,7 @@ commentsRunWhenDOMLoaded(addUtterances);
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="advanced/windows.html">
-     Working on Windows
+     Windows 上的配置
     </a>
    </li>
    <li class="toctree-l2">
@@ -471,7 +481,7 @@ commentsRunWhenDOMLoaded(addUtterances);
   </a>
  </li>
 </ul>
-<p class="caption">
+<p class="caption" role="heading">
  <span class="caption-text">
   参考
  </span>
@@ -479,7 +489,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="customize/config.html">
-   Configuration reference
+   配置参考
   </a>
  </li>
  <li class="toctree-l1">
@@ -498,7 +508,7 @@ commentsRunWhenDOMLoaded(addUtterances);
   </a>
  </li>
 </ul>
-<p class="caption">
+<p class="caption" role="heading">
  <span class="caption-text">
   关于 Jupyter Book
  </span>
@@ -517,11 +527,6 @@ commentsRunWhenDOMLoaded(addUtterances);
  <li class="toctree-l1">
   <a class="reference internal" href="cite.html">
    引用 Jupyter Book
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="reference/_changelog.html">
-   Change log
   </a>
  </li>
 </ul>
@@ -670,7 +675,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 <div class="tip dropdown w3-pale-blue w3-card-4 w3-padding w3-round-xlarge w3-margin-top admonition">
 <p class="admonition-title">导航</p>
 <div class="toctree-wrapper compound">
-<p class="caption"><span class="caption-text">教程</span></p>
+<p class="caption" role="heading"><span class="caption-text">教程</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="start/your-first-book.html">创建你的第一本书</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="start/overview.html">概述</a></li>
@@ -684,85 +689,84 @@ commentsRunWhenDOMLoaded(addUtterances);
 </ul>
 </div>
 <div class="toctree-wrapper compound">
-<p class="caption"><span class="caption-text">主题指南</span></p>
+<p class="caption" role="heading"><span class="caption-text">主题指南</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="basics/organize.html">组织你的书</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="customize/toc.html">Structure the Table of Contents</a></li>
 <li class="toctree-l2"><a class="reference internal" href="structure/configure.html">Configure the Table of Contents</a></li>
-<li class="toctree-l2"><a class="reference internal" href="file-types/index.html">Types of content source files</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="file-types/markdown.html">Markdown files</a></li>
-<li class="toctree-l3"><a class="reference internal" href="file-types/notebooks.html">Jupyter Notebook files</a></li>
-<li class="toctree-l3"><a class="reference internal" href="file-types/myst-notebooks.html">Notebooks written entirely in Markdown</a></li>
-<li class="toctree-l3"><a class="reference internal" href="file-types/jupytext.html">Custom notebook formats and Jupytext</a></li>
-<li class="toctree-l3"><a class="reference internal" href="file-types/restructuredtext.html">reStructuredText files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="file-types/index.html">内容源文件的类型</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="file-types/markdown.html">Markdown 文件</a></li>
+<li class="toctree-l3"><a class="reference internal" href="file-types/notebooks.html">Jupyter Notebook 文件</a></li>
+<li class="toctree-l3"><a class="reference internal" href="file-types/myst-notebooks.html">完全用 Markdown 书写笔记本</a></li>
+<li class="toctree-l3"><a class="reference internal" href="file-types/jupytext.html">自定义笔记本格式和 Jupytext</a></li>
+<li class="toctree-l3"><a class="reference internal" href="file-types/restructuredtext.html">reStructuredText 文件</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="basics/create.html">自动创建书</a></li>
-<li class="toctree-l2"><a class="reference internal" href="structure/sections-headers.html">How headers and sections map onto to book structure</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structure/sections-headers.html">标题和章节如何映射到书的结构</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="content/index.html">Write narrative content</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="content/myst.html">MyST Markdown overview</a></li>
-<li class="toctree-l2"><a class="reference internal" href="content/content-blocks.html">Special content blocks</a></li>
-<li class="toctree-l2"><a class="reference internal" href="content/references.html">References and cross-references</a></li>
-<li class="toctree-l2"><a class="reference internal" href="content/layout.html">Control the page layout</a></li>
-<li class="toctree-l2"><a class="reference internal" href="content/citations.html">Citations and bibliographies</a></li>
-<li class="toctree-l2"><a class="reference internal" href="content/math.html">Math and equations</a></li>
-<li class="toctree-l2"><a class="reference internal" href="content/figures.html">Images and figures</a></li>
-<li class="toctree-l2"><a class="reference internal" href="content/metadata.html">Add metadata to your book pages</a></li>
+<li class="toctree-l1"><a class="reference internal" href="content/index.html">撰写叙述内容</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="content/myst.html">MyST Markdown 概述</a></li>
+<li class="toctree-l2"><a class="reference internal" href="content/content-blocks.html">特殊内容块</a></li>
+<li class="toctree-l2"><a class="reference internal" href="content/references.html">引用和交叉引用</a></li>
+<li class="toctree-l2"><a class="reference internal" href="content/layout.html">控制页面布局</a></li>
+<li class="toctree-l2"><a class="reference internal" href="content/citations.html">引用和参考书目</a></li>
+<li class="toctree-l2"><a class="reference internal" href="content/math.html">数学和公式</a></li>
+<li class="toctree-l2"><a class="reference internal" href="content/figures.html"><code class="docutils literal notranslate"><span class="pre">image</span></code> 和 <code class="docutils literal notranslate"><span class="pre">figure</span></code></a></li>
+<li class="toctree-l2"><a class="reference internal" href="content/metadata.html">将元数据添加到您的书籍页面</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="content/executable/index.html">Write executable content</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="content/execute.html">Execute and cache your pages</a></li>
-<li class="toctree-l2"><a class="reference internal" href="content/code-outputs.html">Formatting code outputs</a></li>
-<li class="toctree-l2"><a class="reference internal" href="content/executable/output-insert.html">Store code outputs and insert into content</a></li>
-<li class="toctree-l2"><a class="reference internal" href="interactive/interactive.html">Interactive data visualizations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="content/executable/index.html">写可执行内容</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="content/execute.html">执行并缓存页面</a></li>
+<li class="toctree-l2"><a class="reference internal" href="content/code-outputs.html">格式化代码输出</a></li>
+<li class="toctree-l2"><a class="reference internal" href="content/executable/output-insert.html">存储代码输出并插入到内容中</a></li>
+<li class="toctree-l2"><a class="reference internal" href="interactive/interactive.html">交互式数据可视化</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="basics/building/index.html">构建你的书输出</a></li>
 <li class="toctree-l1"><a class="reference internal" href="web/index.html">Web and internet features</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="basics/repository.html">Connect your book to a code repository</a></li>
-<li class="toctree-l2"><a class="reference internal" href="interactive/hiding.html">Hide or remove content</a></li>
-<li class="toctree-l2"><a class="reference internal" href="interactive/launchbuttons.html">Launch into interactive computing interfaces</a></li>
-<li class="toctree-l2"><a class="reference internal" href="interactive/thebe.html">Make your code cells executable</a></li>
-<li class="toctree-l2"><a class="reference internal" href="interactive/comments.html">Commenting and annotating</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="basics/repository.html">将您的书连接到代码存储库</a></li>
+<li class="toctree-l2"><a class="reference internal" href="interactive/hiding.html">隐藏或删除内容</a></li>
+<li class="toctree-l2"><a class="reference internal" href="interactive/launchbuttons.html">启动交互式计算接口</a></li>
+<li class="toctree-l2"><a class="reference internal" href="interactive/thebe.html">使您的代码单元格可执行</a></li>
+<li class="toctree-l2"><a class="reference internal" href="interactive/comments.html">评论和注释</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="interactive/comments/hypothesis.html">Hypothesis</a></li>
 <li class="toctree-l3"><a class="reference internal" href="interactive/comments/utterances.html">Utterances</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="publish/web.html">Host your book on the internet</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="publish/gh-pages.html">GitHub Pages and Actions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="publish/web.html">把你的书放在网上</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="publish/gh-pages.html">GitHub Pages 与 Actions</a></li>
 <li class="toctree-l3"><a class="reference internal" href="publish/netlify.html">Publish with Netlify</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="advanced/html.html">Advanced HTML outputs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="advanced/html.html">高级 HTML 输出</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="advanced/index.html">Advanced Jupyter Book Usage</a></li>
+<li class="toctree-l1"><a class="reference internal" href="advanced/index.html">Jupyter Book 高级语法</a></li>
 <li class="toctree-l1"><a class="reference internal" href="contribute/intro.html">为 Jupyter Book 贡献</a></li>
 </ul>
 </div>
 <div class="toctree-wrapper compound">
-<p class="caption"><span class="caption-text">参考</span></p>
+<p class="caption" role="heading"><span class="caption-text">参考</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="customize/config.html">Configuration reference</a></li>
+<li class="toctree-l1"><a class="reference internal" href="customize/config.html">配置参考</a></li>
 <li class="toctree-l1"><a class="reference internal" href="reference/cheatsheet.html">MyST syntax cheat sheet</a></li>
 <li class="toctree-l1"><a class="reference internal" href="reference/cli.html">命令行界面</a></li>
 <li class="toctree-l1"><a class="reference internal" href="reference/glossary.html">术语表</a></li>
 </ul>
 </div>
 <div class="toctree-wrapper compound">
-<p class="caption"><span class="caption-text">关于 Jupyter Book</span></p>
+<p class="caption" role="heading"><span class="caption-text">关于 Jupyter Book</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference external" href="https://executablebooks.org/en/latest/gallery.html">Gallery of Jupyter Books</a></li>
 <li class="toctree-l1"><a class="reference internal" href="explain/components.html">The Jupyter Book toolchain and components</a></li>
 <li class="toctree-l1"><a class="reference internal" href="cite.html">引用 Jupyter Book</a></li>
-<li class="toctree-l1"><a class="reference internal" href="reference/_changelog.html">Change log</a></li>
 </ul>
 </div>
 </div>
 <section id="jupyter">
-<h2>Jupyter <a class="reference internal" href="_images/logo-square.svg"><img alt="_images/logo-square.svg" src="_images/logo-square.svg" width="40" /></a> 速览<a class="headerlink" href="#jupyter" title="永久链接至标题">¶</a></h2>
+<span id="intro"></span><h2>Jupyter <a class="reference internal" href="_images/logo-square.svg"><img alt="_images/logo-square.svg" src="_images/logo-square.svg" width="40" /></a> 速览<a class="headerlink" href="#jupyter" title="永久链接至标题">¶</a></h2>
 <p><a class="reference external" href="https://doi.org/10.5281/zenodo.2561065"><img alt="DOI" src="https://zenodo.org/badge/DOI/10.5281/zenodo.2561065.svg" /></a></p>
 <p>Jupyter Book 是一个开源项目，用于从计算材料中构建漂亮且具有出版质量的书籍和文档。</p>
 <p>以下是 Jupyter Book 的一些特点：</p>
@@ -795,7 +799,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 <p class="card-text"><strong><a class="reference internal" href="interactive/launchbuttons.html"><span class="doc std std-doc">向内容和输出添加交互性</span></a></strong> ✨</p>
 </div>
 <div class="card-body docutils">
-<p class="card-text">创建交互式内容块，如 <a class="reference internal" href="content/content-blocks.html#content-tabs"><span class="std std-ref">Tabbed content</span></a>、<a class="reference internal" href="content/content-blocks.html#content-dropdowns"><span class="std std-ref">Dropdowns</span></a>。<a class="reference internal" href="interactive/hiding.html"><span class="doc std std-doc">切换单元格可见性</span></a>，并包含与 Jupyter 笔记本<a class="reference internal" href="interactive/interactive.html"><span class="doc std std-doc">交互的单元格输出</span></a>。使用 Binder 或 Colab <a class="reference internal" href="interactive/launchbuttons.html"><span class="doc std std-doc">启动互动会话</span></a>，<a class="reference internal" href="interactive/thebe.html#launch-thebe"><span class="std std-ref">让你的代码在 Thebe 上可执行</span></a>，或<a class="reference internal" href="interactive/comments.html#interactive-comments"><span class="std std-ref">与像 Hypothes.is 这样的评论服务连接</span></a>。</p>
+<p class="card-text">创建交互式内容块，如 <a class="reference internal" href="content/content-blocks.html#content-tabs"><span class="std std-ref">选项卡式内容</span></a>、<a class="reference internal" href="content/content-blocks.html#content-dropdowns"><span class="std std-ref">下拉菜单</span></a>。<a class="reference internal" href="interactive/hiding.html"><span class="doc std std-doc">切换单元格可见性</span></a>，并包含与 Jupyter 笔记本<a class="reference internal" href="interactive/interactive.html"><span class="doc std std-doc">交互的单元格输出</span></a>。使用 Binder 或 Colab <a class="reference internal" href="interactive/launchbuttons.html"><span class="doc std std-doc">启动互动会话</span></a>，<a class="reference internal" href="interactive/thebe.html#launch-thebe"><span class="std std-ref">让你的代码在 Thebe 上可执行</span></a>，或<a class="reference internal" href="interactive/comments.html#interactive-comments"><span class="std std-ref">与像 Hypothes.is 这样的评论服务连接</span></a>。</p>
 </div>
 </div>
 </div>
@@ -857,8 +861,8 @@ commentsRunWhenDOMLoaded(addUtterances);
 </div>
 <div class="card-body docutils">
 <p class="card-text"><strong><a class="reference internal" href="basics/organize.html#structure-index"><span class="std std-ref">组织你的书</span></a></strong>：学习如何结构化和组织内容。</p>
-<p class="card-text"><strong><a class="reference internal" href="content/index.html"><span class="doc std std-doc">Write narrative content</span></a></strong>：学习如何写丰富的叙事内容。</p>
-<p class="card-text"><strong><a class="reference internal" href="content/executable/index.html"><span class="doc std std-doc">Write executable content</span></a></strong>：编写计算性内容。</p>
+<p class="card-text"><strong><a class="reference internal" href="content/index.html"><span class="doc std std-doc">撰写叙述内容</span></a></strong>：学习如何写丰富的叙事内容。</p>
+<p class="card-text"><strong><a class="reference internal" href="content/executable/index.html"><span class="doc std std-doc">写可执行内容</span></a></strong>：编写计算性内容。</p>
 </div>
 </div>
 </div>

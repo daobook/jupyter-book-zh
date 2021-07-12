@@ -9,17 +9,15 @@ kernelspec:
   name: python3
 ---
 
-# Control the page layout
+# 控制页面布局
 
 ```{warning}
-Many of the features on this page are experimental and may change at any time.
+这个页面上的许多特性都是实验性的，可以随时更改。
 ```
 
-There are a few ways to control the layout of a page with Jupyter Book. Many of these
-ideas take inspiration from the [Edward Tufte layout CSS guide](https://edwardtufte.github.io/tufte-css/).
+有几种方法可以用 Jupyter Book 控制页面的布局。这些想法中的许多灵感来自于 [Edward Tufte 的 CSS布局指南](https://edwardtufte.github.io/tufte-css/)。
 
-Let's begin with a sample plot. You can click the toggle button to the right
-to see the code that generated it.
+让我们从一个示例图开始。您可以单击右边的触发按钮来查看生成它的代码。
 
 ```{code-cell} ipython3
 :tags: [hide-input]
@@ -52,39 +50,27 @@ make_fig(figsize=(10, 5))
 ```
 
 (layout/sidebar)=
-## Sidebar content
+## 侧边栏内容
 
-Adding sidebar elements allow you to provide contextual information that doesn't break
-up the flow of your main content. It is one of the main patterns recommended in the
-[Tufte style guide](https://edwardtufte.github.io/tufte-css/).
+添加侧边栏元素允许您提供上下文信息，而不会破坏主要内容的流。它是 [Tufte 风格指南](https://edwardtufte.github.io/tufte-css/) 中推荐的主要模式之一。
 
-There are two kinds of sidebars supported by Jupyter Book. We'll
-describe them below.
+Jupyter Book 支持两种侧边栏。我们将在下面描述它们。
 
 ```{note}
-Some sidebar content behaves differently depending on the screen size. If the screen is narrow
-enough, the sidebar content will exist in-line with your content. Make the screen
-wider and it'll pop out to the right.
+一些侧边栏内容根据屏幕大小表现不同。如果屏幕足够窄，侧边栏内容将与您的内容保持一致。把屏幕调宽，它就会向右弹出。
 ```
 
-### Sidebars within content
+### 侧边栏内的内容
 
-
-````{sidebar} Here is some sidebar content
-It spans a bit of your main content, as well as the margin, as seen by the
-note block below:
+````{sidebar} 下面是一些侧边栏内容
+它跨越了一些你的主要内容，以及空白处，如下面的注释块所示：
 ```{note}
-Here's a note block within the sidebar!
+在侧边栏中有一个注释块！
 ```
 ````
 
-If you use a sidebar within your content, the sidebar will stay in-line with your page's content. However, it will be
-placed to the right, allowing your content to wrap around it. This prevents
-the sidebar from breaking up the flow of your content. This is particularly
-useful if you've got tall-and-long blocks of content or images that you would
-like to provide context to throughout your content.
-
-To add a sidebar to your content, use the following syntax:
+如果在内容中使用侧边栏，侧边栏将与页面内容保持一致。然而，它将被放置在右侧，允许您的内容环绕它。这可以防止侧边栏破坏内容的流动。如果您需要为整个内容提供上下文的内容或图像块，这一点特别有用。
+要在内容中添加侧边栏，请使用以下语法:
 
 ````md
 ```{sidebar} My sidebar title
@@ -92,9 +78,9 @@ My sidebar content
 ```
 ````
 
-### Margin content
+### 页边距内容
 
-To add content to the margin with MyST Markdown, use this syntax:
+使用 MyST Markdown 将内容添加到页边距，使用以下语法：
 
 ````md
 ```{margin} An optional title
@@ -102,26 +88,23 @@ My margin content
 ```
 ````
 
-`````{margin} **For example**
-Here's some margin content! It was created by using the
+`````{margin} **例子**
+这里有一些页边距内容！创建时使用
 ````
 ```{margin}
 ```
 ````
-directive in a Markdown cell. Jupyter Book automatically converts these
-cells into helpful margin content.
+Markdown 单元格的指令。Jupyter Book 自动将这些单元格转换为有用的页边距内容。
 `````
 
-Controlling margin content with code cells uses a slightly different syntax,
-which we'll cover below.
+用代码单元格控制页边距内容使用的语法略有不同，我们将在下面介绍。
 
-### Margins with code cells
+### 带有代码单元格的页边距
 
-You can make a code cell move to the right margin by adding `margin` to your
-cell's tags.
+通过向单元格的标记添加 `margin`，可以将代码单元格移动到右边页边距。
 
 ````{tabbed} Jupyter Notebook
-Here's what the cell metadata for a margin cell looks like:
+页边距单元格的元数据是这样的:
 ```json
 {
     "tags": [
@@ -134,8 +117,8 @@ Here's what the cell metadata for a margin cell looks like:
 :::
 ````
 
-`````{tabbed} MyST Text File
-For a MyST text file these tags can be added to the `code-cell`
+`````{tabbed} MyST 文本文件
+对于 MyST 文本文件，可以将这些标记添加到 `code-cell` 中
 ````md
 ```{code-cell} <language>
 :tags: [margin]
@@ -143,7 +126,7 @@ For a MyST text file these tags can be added to the `code-cell`
 ````
 `````
 
-For example, we'll re-display the figure above, and add a `margin` tag to the code cell.
+例如，我们将重新显示上面的图，并向代码单元格添加一个 `margin` 标记。
 
 ```{code-cell} ipython3
 :tags: [margin]
@@ -151,18 +134,17 @@ For example, we'll re-display the figure above, and add a `margin` tag to the co
 make_fig(figsize=(10, 5))
 ```
 
-This can be combined with other tags like `remove-input` to **only display the figure**.
+这可以与其他标记(如 `remove-input`)结合使用，用以**仅显示图形**。
 
-The [MyST cheat sheet](myst_cheatsheet) provides a [list of `code-cell` tags available](myst_cheatsheet:code-cell:tags)
+[MyST 备忘单](myst_cheatsheet) 提供了 [可用的 `code-cell` 标签列表](myst_cheatsheet:code-cell:tags)
 
-## Full-width content
+## 宽屏的内容
 
-Sometimes, you'd like to use **all** of the horizontal space available to you.
-This allows you to highlight particular ideas, visualizations, etc.
+有时，您希望使用**所有**可用的水平空间。这可以让你突出特定的想法，可视化等。
 
-### Full-width code cells
+### 宽屏的代码单元
 
-You can specify that a code cell's inputs and/or outputs should take up all of the horizontal space (including the margin to the right) using the following cell metadata tag:
+你可以指定一个代码单元格的输入和/或输出应该占用所有的水平空间(包括右边的页边距)，使用以下单元格元数据标签:
 
 ```json
 {
@@ -173,11 +155,10 @@ You can specify that a code cell's inputs and/or outputs should take up all of t
 ```
 
 ```{seealso}
-For tips on how to add cell metadata to your notebooks, see [](jupyter-cell-tags).
+有关如何将单元格元数据添加到笔记本的提示，请参见 [](jupyter-cell-tags)。
 ```
 
-For example, let's take a look at the figure in the margin above in a cell with `full-width` set. We'll tell Matplotlib
-to make it a bit wider so we can take advantage of the extra space!
+例如，让我们看一下上面设置了 `full-width` 的单元格的边距中的图。我们将告诉 Matplotlib 将其设置得更宽一些，以便我们能够利用额外的空间!
 
 ```{code-cell} ipython3
 :tags: [hide-input, full-width]
@@ -185,12 +166,11 @@ to make it a bit wider so we can take advantage of the extra space!
 make_fig(figsize=(20, 5))
 ```
 
-### Full-width markdown content
+### 宽屏的 markdown 内容
 
-If you'd like to make your markdown content full-width, you cannot do so via cell tags.
-Instead, you have a few options:
+如果您想使您的标记内容全宽，您不能这样做通过单元格标签。相反，你有以下几种选择:
 
-1. **Use the `{div}` directive with a `full-width` class.**. Any content with a `full-width` class will take up the full width of the screen. For example, the following code:
+1. **使用 `{div}` 指令的 `full-width` 类**。任何带有 `full-width` 的内容都会占用屏幕的全宽。例如，以下代码：
 
    `````
    ````{div} full-width
@@ -200,7 +180,7 @@ Instead, you have a few options:
    ````
    `````
 
-   results in:
+   结果是：
 
    ````{div} full-width
    ```{note}
@@ -208,10 +188,10 @@ Instead, you have a few options:
    ```
    ````
 
-   For more information on `<div>` blocks, see [](custom-div-blocks).
-2. **Add a `full-width` class to directives that support classes**. Many directives allow you to directly add a CSS class to them.
+   有关 `<div>` 块的更多信息，请参见 `<div>` [](custom-div-blocks)。
+2. **向支持类的指令添加一个 `full-width` 类**。许多指令允许你直接向它们添加 CSS 类。
 
-   For example, the `{note}` directive above allows for this:
+   例如，上面的 `{note}` 指令允许这样做：
 
    ````
    ```{note}
@@ -220,18 +200,17 @@ Instead, you have a few options:
    ```
    ````
 
-   results in:
+   结果是：
 
    ```{note}
    :class: full-width
    Here's a note that will take the full width
    ```
 
-   Check the documentation of the directive to see if it supports adding your own classes, or use the `{div}` directive as described above.
+   检查该指令的文档，看看它是否支持添加你自己的类，或者使用上面描述的 `{div}` 指令。
 
-```{admonition} **Mixing margins and full-width content**
+```{admonition} **混合页边距和全宽内容**
 :class: warning, full-width
 
-Be careful when mixing margins and full-width content.
-Sometimes these can conflict with one another in visual space. You should use them relatively sparingly in order for them to have their full effect of highlighting information.
+在混合页边距和全宽内容时要小心。有时这些会在视觉空间中相互冲突。您应该相对较少地使用它们，以便它们能够充分地突出显示信息。
 ```

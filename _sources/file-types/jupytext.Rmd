@@ -7,12 +7,12 @@ jupyter:
 ---
 
 (file-types:custom)=
-# Custom notebook formats and Jupytext
+# 自定义笔记本格式和 Jupytext
 
-You can designate additional file types to be converted to notebooks and then executed/parsed in the same manner as regular notebooks.
+您可以指定将其他文件类型转换为笔记本，然后以与常规笔记本相同的方式执行/解析。
 
 :::{tip}
-This page itself is written as an [RMarkdown](https://rmarkdown.rstudio.com/) notebook!
+本页本身就是一个 [RMarkdown](https://rmarkdown.rstudio.com/) 笔记本！
 :::
 
 ```yaml
@@ -22,11 +22,10 @@ sphinx:
         .mysuffix: mylibrary.converter_function
 ```
 
-- The string should be a Python function that will be loaded by `import mylibrary.converter_function`
-- The function should take a file's contents (as a `str`) and return an [nbformat.NotebookNode](nbformat:api)
+- 该字符串应该是一个 Python 函数，它将由 `import mylibrary.converter_function` 加载
+- 该函数应该接受文件的内容（以 `str` 形式）并返回 [nbformat.NotebookNode](nbformat:api)
 
-If the function takes additional keyword arguments, then you can specify these as a dictionary in a second argument.
-For example this is what the default conversion would look like:
+如果函数接受其他关键字参数，则可以在第二个参数中指定这些关键字作为字典。例如，这是默认转换的样子：
 
 ```yaml
 sphinx:
@@ -39,9 +38,9 @@ sphinx:
 
 :::{important}
 
-By default, Markdown cells in the notebook will be parsed using the same MyST parser configuration as for other Markdown files.
+默认情况下，笔记本中的 Markdown 单元格将使用与其他 Markdown 文件相同的 MyST 解析器配置进行解析。
 
-But, if this is incompatible with your file format, then you can specify for the Markdown to be parsed as **strictly CommonMark**, using a third argument:
+但是，如果这与你的文件格式不兼容，那么你可以指定 Markdown 被严格地解析为 CommonMark，使用第三个参数：
 
 ```yaml
 sphinx:
@@ -55,8 +54,7 @@ sphinx:
 
 :::
 
-Finally, for text-based formats, MyST-NB also searches for an optional `source_map` key in the output notebook's metadata.
-This key should be a list mapping each cell to the starting line number in the original source file, for example for a notebook with three cells:
+最后，对于基于文本的格式，MyST-NB 还在输出笔记本的元数据中搜索一个可选的 `source_map` 键。这个键应该是一个列表，将每个单元格映射到原始源文件的起始行号，例如一个有三个单元格的笔记本：
 
 ```json
 {
@@ -66,17 +64,15 @@ This key should be a list mapping each cell to the starting line number in the o
 }
 ```
 
-This mapping allows for "true" error reporting, as described in [](myst-nb:start/error-reporting).
+此映射允许 "true" 错误报告，如 [](myst-nb:start/error-reporting) 中所述。
 
-## Using Jupytext
+## 使用 Jupytext
 
-[Jupytext](https://jupytext.readthedocs.io/en/latest/) is an excellent Python tool for two-way conversion
-between Jupyter Notebook `.ipynb` files and
-[a variety of text-based files](https://jupytext.readthedocs.io/en/latest/formats.html).
+[Jupytext](https://jupytext.readthedocs.io/en/latest/) 是一个优秀的 Python 工具，用于在 Jupyter Notebook `.ipynb` 文件和[各种基于文本的文件](https://jupytext.readthedocs.io/en/latest/formats.html)之间进行双向转换。
 
-Jupyter Book natively supports the Jupytext file format: [notebooks with MyST Markdown](./myst-notebooks.md), but you can add other formats like [RMarkdown](https://rmarkdown.rstudio.com/) or Python files.
+Jupyter Book 原生支持 Jupytext 文件格式：[带有 MyST Markdown 的笔记本](./myst-notebooks.md)，但你可以添加其他格式，如 [RMarkdown](https://rmarkdown.rstudio.com/) 或 Python 文件。
 
-The configuration looks like:
+配置看起来像这样：
 
 ```yaml
 sphinx:
@@ -88,10 +84,10 @@ sphinx:
 ```
 
 :::{warning}
-Note that some execution features (such as in-line code execution in RMarkdown) are not available in Jupyter Book.
+请注意，有些执行特性（比如 RMarkdown 中的内联代码执行）在 Jupyter Book 中是不可用的。
 :::
 
-Now you can use RMarkdown blocks:
+现在你可以使用 RMarkdown 块：
 
     ```{python echo=TRUE}
     print("Hallo I'm an RMarkdown block!")
@@ -102,24 +98,22 @@ print("Hallo I'm an RMarkdown block!")
 ```
 
 :::{important}
-For full compatibility with `myst-parser`, it is necessary to use `jupytext>=1.6.0`.
+为了与 `myst-parser` 完全兼容，必须使用 `jupytext>=1.6.0`。
 :::
 
 (file-types:custom:jupytext)=
-## Convert a Jupytext file into a MyST notebook
+## 将一个 Jupytext 文件转换为 MyST 笔记本
 
-Alternatively, if you'd like to convert your pre-existing Jupytext files into the MyST notebook format,
-to use directly in your book, install Jupytext and then run the following command:
+或者，如果你想把你之前存在的 Jupytext 文件转换成 MyST 笔记本的格式，直接在你的书中使用，安装 Jupytext，然后运行以下命令：
 
 ```bash
 jupytext --to myst path/to/yourfile
 ```
 
-Note that you may also pass a wildcard that will be used to convert multiple
-files. For example:
+请注意，您还可以传递一个通配符，它将用于转换多个文件。例如：
 
 ```bash
 jupytext --to myst ./*.py
 ```
 
-See [the Jupytext CLI documentation](https://jupytext.readthedocs.io/en/latest/using-cli.html) for more information.
+更多信息请参见 [Jupytext CLI 文档](https://jupytext.readthedocs.io/en/latest/using-cli.html)。

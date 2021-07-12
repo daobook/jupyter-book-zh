@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Working on Windows</title>
+    <title>Windows 上的配置</title>
     
   <link href="../_static/css/theme.css" rel="stylesheet" />
   <link href="../_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
@@ -128,7 +128,7 @@ commentsRunWhenDOMLoaded(addUtterances);
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
 </form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
     <div class="bd-toc-item active">
-        <p class="caption">
+        <p class="caption" role="heading">
  <span class="caption-text">
   教程
  </span>
@@ -177,7 +177,7 @@ commentsRunWhenDOMLoaded(addUtterances);
   </a>
  </li>
 </ul>
-<p class="caption">
+<p class="caption" role="heading">
  <span class="caption-text">
   主题指南
  </span>
@@ -205,7 +205,7 @@ commentsRunWhenDOMLoaded(addUtterances);
    </li>
    <li class="toctree-l2 has-children">
     <a class="reference internal" href="../file-types/index.html">
-     Types of content source files
+     内容源文件的类型
     </a>
     <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
     <label for="toctree-checkbox-3">
@@ -215,27 +215,27 @@ commentsRunWhenDOMLoaded(addUtterances);
     <ul>
      <li class="toctree-l3">
       <a class="reference internal" href="../file-types/markdown.html">
-       Markdown files
+       Markdown 文件
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="../file-types/notebooks.html">
-       Jupyter Notebook files
+       Jupyter Notebook 文件
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="../file-types/myst-notebooks.html">
-       Notebooks written entirely in Markdown
+       完全用 Markdown 书写笔记本
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="../file-types/jupytext.html">
-       Custom notebook formats and Jupytext
+       自定义笔记本格式和 Jupytext
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="../file-types/restructuredtext.html">
-       reStructuredText files
+       reStructuredText 文件
       </a>
      </li>
     </ul>
@@ -247,14 +247,14 @@ commentsRunWhenDOMLoaded(addUtterances);
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../structure/sections-headers.html">
-     How headers and sections map onto to book structure
+     标题和章节如何映射到书的结构
     </a>
    </li>
   </ul>
  </li>
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="../content/index.html">
-   Write narrative content
+   撰写叙述内容
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
   <label for="toctree-checkbox-4">
@@ -264,49 +264,59 @@ commentsRunWhenDOMLoaded(addUtterances);
   <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="../content/myst.html">
-     MyST Markdown overview
+     MyST Markdown 概述
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../content/content-blocks.html">
-     Special content blocks
+     特殊内容块
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../content/references.html">
-     References and cross-references
+     引用和交叉引用
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../content/layout.html">
-     Control the page layout
+     控制页面布局
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../content/citations.html">
-     Citations and bibliographies
+     引用和参考书目
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../content/math.html">
-     Math and equations
+     数学和公式
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../content/figures.html">
-     Images and figures
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       image
+      </span>
+     </code>
+     和
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       figure
+      </span>
+     </code>
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../content/metadata.html">
-     Add metadata to your book pages
+     将元数据添加到您的书籍页面
     </a>
    </li>
   </ul>
  </li>
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="../content/executable/index.html">
-   Write executable content
+   写可执行内容
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
   <label for="toctree-checkbox-5">
@@ -316,22 +326,22 @@ commentsRunWhenDOMLoaded(addUtterances);
   <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="../content/execute.html">
-     Execute and cache your pages
+     执行并缓存页面
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../content/code-outputs.html">
-     Formatting code outputs
+     格式化代码输出
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../content/executable/output-insert.html">
-     Store code outputs and insert into content
+     存储代码输出并插入到内容中
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../interactive/interactive.html">
-     Interactive data visualizations
+     交互式数据可视化
     </a>
    </li>
   </ul>
@@ -370,27 +380,27 @@ commentsRunWhenDOMLoaded(addUtterances);
   <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="../basics/repository.html">
-     Connect your book to a code repository
+     将您的书连接到代码存储库
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../interactive/hiding.html">
-     Hide or remove content
+     隐藏或删除内容
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../interactive/launchbuttons.html">
-     Launch into interactive computing interfaces
+     启动交互式计算接口
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../interactive/thebe.html">
-     Make your code cells executable
+     使您的代码单元格可执行
     </a>
    </li>
    <li class="toctree-l2 has-children">
     <a class="reference internal" href="../interactive/comments.html">
-     Commenting and annotating
+     评论和注释
     </a>
     <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
     <label for="toctree-checkbox-8">
@@ -412,7 +422,7 @@ commentsRunWhenDOMLoaded(addUtterances);
    </li>
    <li class="toctree-l2 has-children">
     <a class="reference internal" href="../publish/web.html">
-     Host your book on the internet
+     把你的书放在网上
     </a>
     <input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/>
     <label for="toctree-checkbox-9">
@@ -422,7 +432,7 @@ commentsRunWhenDOMLoaded(addUtterances);
     <ul>
      <li class="toctree-l3">
       <a class="reference internal" href="../publish/gh-pages.html">
-       GitHub Pages and Actions
+       GitHub Pages 与 Actions
       </a>
      </li>
      <li class="toctree-l3">
@@ -434,14 +444,14 @@ commentsRunWhenDOMLoaded(addUtterances);
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="html.html">
-     Advanced HTML outputs
+     高级 HTML 输出
     </a>
    </li>
   </ul>
  </li>
  <li class="toctree-l1 current active has-children">
   <a class="reference internal" href="index.html">
-   Advanced Jupyter Book Usage
+   Jupyter Book 高级语法
   </a>
   <input checked="" class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/>
   <label for="toctree-checkbox-10">
@@ -456,7 +466,7 @@ commentsRunWhenDOMLoaded(addUtterances);
    </li>
    <li class="toctree-l2 current active">
     <a class="current reference internal" href="#">
-     Working on Windows
+     Windows 上的配置
     </a>
    </li>
    <li class="toctree-l2">
@@ -472,7 +482,7 @@ commentsRunWhenDOMLoaded(addUtterances);
   </a>
  </li>
 </ul>
-<p class="caption">
+<p class="caption" role="heading">
  <span class="caption-text">
   参考
  </span>
@@ -480,7 +490,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../customize/config.html">
-   Configuration reference
+   配置参考
   </a>
  </li>
  <li class="toctree-l1">
@@ -499,7 +509,7 @@ commentsRunWhenDOMLoaded(addUtterances);
   </a>
  </li>
 </ul>
-<p class="caption">
+<p class="caption" role="heading">
  <span class="caption-text">
   关于 Jupyter Book
  </span>
@@ -518,11 +528,6 @@ commentsRunWhenDOMLoaded(addUtterances);
  <li class="toctree-l1">
   <a class="reference internal" href="../cite.html">
    引用 Jupyter Book
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../reference/_changelog.html">
-   Change log
   </a>
  </li>
 </ul>
@@ -638,52 +643,40 @@ commentsRunWhenDOMLoaded(addUtterances);
         
               <div>
                 
-  <section id="working-on-windows">
-<span id="id1"></span><h1>Working on Windows<a class="headerlink" href="#working-on-windows" title="永久链接至标题">¶</a></h1>
-<p>Jupyter Book is now also tested against a Windows environment on Python 3.7 😀</p>
-<p>For its specification, see the <a class="reference external" href="https://docs.github.com/en/actions/reference/virtual-environments-for-github-hosted-runners#supported-runners-and-hardware-resources"><code class="docutils literal notranslate"><span class="pre">windows-latest</span></code> runner</a> used by GitHub CI.</p>
-<p>However, there is a known incompatibility for notebook execution, when using Python 3.8
-(see issue <a class="reference external" href="https://github.com/executablebooks/jupyter-book/issues/906">#906</a>).</p>
-<p>If you’re running a recent version of Windows 10 and encounter any issues, you may also wish to try
-<a class="reference external" href="https://docs.microsoft.com/en-us/windows/wsl/install-win10">installing Windows Subsystem for Linux</a>.</p>
-<p>As of June 5, 2020, there were three open issues that required Windows-specific changes.
-We hope these are now fixed in version 0.8 of Jupyter Book but, in case any issues still arise,
-we leave these community tips, which are known to work for some users.
-Note that there is no guarantee that they will work on all Windows installations.</p>
+  <section id="windows">
+<span id="working-on-windows"></span><h1>Windows 上的配置<a class="headerlink" href="#windows" title="永久链接至标题">¶</a></h1>
+<p>Jupyter Book 现在也在 Python 3.7 的 Windows 环境下进行了测试 😀。</p>
+<p>有关其规范，请参阅 GitHub CI 使用的<a class="reference external" href="https://docs.github.com/en/actions/reference/virtual-environments-for-github-hosted-runners#supported-runners-and-hardware-resources"><code class="docutils literal notranslate"><span class="pre">windows-latest</span></code> runner</a>。</p>
+<p>然而，在使用 Python 3.8 时，笔记本（notebook）执行有一个已知的不兼容性
+(见问题<a class="reference external" href="https://github.com/executablebooks/jupyter-book/issues/906">#906</a>)。</p>
+<p>如果你运行的是最新版本的 Windows 10，遇到任何问题，你也可以尝试一下
+<a class="reference external" href="https://docs.microsoft.com/en-us/windows/wsl/install-win10">安装 Windows Linux 子系统</a>。</p>
+<p>截至 2020 年 6 月 5 日，有三个需要针对 windows 系统进行修改的未解决问题。
+我们希望这些问题在 0.8 版的 Jupyter Book 中得到修复，但是，如果仍然出现任何问题，
+我们留下这些社区提示，它们对一些用户来说是有用的。</p>
 <ol>
-<li><p>Character encoding</p>
-<p>Jupyter Book currently reads and writes files on Windows in the native Windows
-encoding, which causes encoding errors for some characters in UTF8 encoded
-notebooks.</p>
-<p><strong>Work-around:</strong>  Beginning with
-<a class="reference external" href="https://docs.python.org/3/using/cmdline.html#envvar-PYTHONUTF8">Python 3.7</a>
-cmd.exe or powershell enviroments that set PYTHONUTF8=1  override the native
-locale encoding and use UTF8 for all input/output.</p>
+<li><p>字符编码</p>
+<p>Jupyter Book 目前在 Windows 上以本机 Windows 编码读取和写入文件，这将导致 UTF8 编码的笔记本中某些字符的编码错误。</p>
+<p><strong>Work-around:</strong>  从 <a class="reference external" href="https://docs.python.org/3/using/cmdline.html#envvar-PYTHONUTF8">Python 3.7</a> 开始
+设置 <code class="docutils literal notranslate"><span class="pre">PYTHONUTF8=1</span></code> 的 cmd.exe 或 powershell 环境将覆盖本机语言环境编码，并对所有输入/输出使用 UTF8。</p>
 <div class="admonition tip">
 <p class="admonition-title">小技巧</p>
-<p>To make it easier to use this option,
-the EOAS/UBC notebook courseware project has created a Conda package <a class="reference external" href="https://anaconda.org/eoas_ubc/runjb">runjb</a> which <a class="reference external" href="https://github.com/eoas-ubc/eoas_tlef/blob/master/converted_docs/wintools/binwin/runjb.ps1">does this automatically for powershell</a></p>
+<p>为了方便使用这个选项，
+EOAS/UBC 笔记本课件项目创建了一个 Conda 包<a class="reference external" href="https://anaconda.org/eoas_ubc/runjb">runjb</a>，<a class="reference external" href="https://github.com/eoas-ubc/eoas_tlef/blob/master/converted_docs/wintools/binwin/runjb.ps1">为 powershell 自动执行此操作</a></p>
 </div>
 </li>
-<li><p>A new Windows event loop</p>
-<p>The asyncio event loop <a class="reference external" href="https://github.com/sphinx-doc/sphinx/issues/7310">has been changed for Python 3.8</a>
-causing sphinx-build to fail.</p>
-<p><strong>Work-around:</strong>  Pin to Python 3.7.6. This
-<a class="reference external" href="https://github.com/eoas-ubc/quantecon-mini-example/blob/windows/environment_win.yml">environment_win.yml</a>
-file does that, and also installs runjb to fix issue 1.</p>
+<li><p>一个新的 Windows 事件循环</p>
+<p>asyncio 事件循环<a class="reference external" href="https://github.com/sphinx-doc/sphinx/issues/7310">已在Python 3.8 中更改</a>导致 sphinx-build 失败。</p>
+<p><strong>Work-around:</strong>  Pin to Python 3.7.6. 这个 <a class="reference external" href="https://github.com/eoas-ubc/quantecon-mini-example/blob/windows/environment_win.yml">environment_win.yml</a> 文件做到了这一点，并且还安装了 runjb 来修复问题1。</p>
 </li>
-<li><p>Nested tables of contents</p>
-<p>Currently, <code class="docutils literal notranslate"><span class="pre">_toc.yml</span></code> files that reference Markdown files
-in sub-folders are failing for some Windows users. That is, this
-<a class="reference external" href="https://github.com/eoas-ubc/quantecon-mini-example/blob/master/mini_book/_toc.yml">original _toc.yml</a>
-file will fail with a message saying Jupyter Book “<code class="docutils literal notranslate"><span class="pre">cannot</span> <span class="pre">find</span> <span class="pre">index.md</span></code>”</p>
-<p><strong>Work-around</strong>: Flatten the layout of the book to a single level, i.e.
-<a class="reference external" href="https://github.com/eoas-ubc/quantecon-mini-example/blob/windows/mini_book/docs/_toc.yml">this _toc.yml</a>
-file works with Windows.</p>
+<li><p>嵌套的目录</p>
+<p>目前 <code class="docutils literal notranslate"><span class="pre">_toc.yml</span></code> 对于一些 Windows 用户来说，引用子文件夹中的 Markdown 文件是失败的。也就是说，这个<a class="reference external" href="https://github.com/eoas-ubc/quantecon-mini-example/blob/master/mini_book/_toc.yml">原始_toc.yml</a>文件将会失败，并有一个消息说 Jupyter Book &quot; “<code class="docutils literal notranslate"><span class="pre">cannot</span> <span class="pre">find</span> <span class="pre">index.md</span></code>”</p>
+<p><strong>Work-around</strong>: 把书的布局平铺到一个层次，即：
+<a class="reference external" href="https://github.com/eoas-ubc/quantecon-mini-example/blob/windows/mini_book/docs/_toc.yml">此 <code class="docutils literal notranslate"><span class="pre">_toc.yml</span></code></a> 文件适用于 Windows。</p>
 </li>
 </ol>
 <p><strong>Summary</strong></p>
-<p>The following workflow should succeed using a miniconda powershell terminal on Windows 10:</p>
+<p>在 Windows 10 上使用 miniconda powershell 终端应该可以成功执行以下工作流程:</p>
 <ol class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">install</span> <span class="pre">git</span></code></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">clone</span> <span class="pre">https://github.com/eoas-ubc/quantecon-mini-example.git</span></code></p></li>
@@ -694,7 +687,7 @@ file works with Windows.</p>
 <li><p><code class="docutils literal notranslate"><span class="pre">cd</span> <span class="pre">mini_book</span></code></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">runjb</span> <span class="pre">docs</span></code></p></li>
 </ol>
-<p>After the build, view the HTML with:</p>
+<p>构建完成后，使用以下命令查看 HTML:</p>
 <p><code class="docutils literal notranslate"><span class="pre">start</span> <span class="pre">docs\_build\html\index.html</span></code></p>
 </section>
 

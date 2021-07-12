@@ -101,8 +101,8 @@ commentsRunWhenDOMLoaded(addUtterances);
     <link rel="shortcut icon" href="../_static/page-logo.jfif"/>
     <link rel="index" title="索引" href="../genindex.html" />
     <link rel="search" title="搜索" href="../search.html" />
-    <link rel="next" title="Working on Windows" href="windows.html" />
-    <link rel="prev" title="Advanced Jupyter Book Usage" href="index.html" />
+    <link rel="next" title="Windows 上的配置" href="windows.html" />
+    <link rel="prev" title="Jupyter Book 高级语法" href="index.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
     
@@ -130,7 +130,7 @@ commentsRunWhenDOMLoaded(addUtterances);
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
 </form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
     <div class="bd-toc-item active">
-        <p class="caption">
+        <p class="caption" role="heading">
  <span class="caption-text">
   教程
  </span>
@@ -179,7 +179,7 @@ commentsRunWhenDOMLoaded(addUtterances);
   </a>
  </li>
 </ul>
-<p class="caption">
+<p class="caption" role="heading">
  <span class="caption-text">
   主题指南
  </span>
@@ -207,7 +207,7 @@ commentsRunWhenDOMLoaded(addUtterances);
    </li>
    <li class="toctree-l2 has-children">
     <a class="reference internal" href="../file-types/index.html">
-     Types of content source files
+     内容源文件的类型
     </a>
     <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
     <label for="toctree-checkbox-3">
@@ -217,27 +217,27 @@ commentsRunWhenDOMLoaded(addUtterances);
     <ul>
      <li class="toctree-l3">
       <a class="reference internal" href="../file-types/markdown.html">
-       Markdown files
+       Markdown 文件
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="../file-types/notebooks.html">
-       Jupyter Notebook files
+       Jupyter Notebook 文件
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="../file-types/myst-notebooks.html">
-       Notebooks written entirely in Markdown
+       完全用 Markdown 书写笔记本
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="../file-types/jupytext.html">
-       Custom notebook formats and Jupytext
+       自定义笔记本格式和 Jupytext
       </a>
      </li>
      <li class="toctree-l3">
       <a class="reference internal" href="../file-types/restructuredtext.html">
-       reStructuredText files
+       reStructuredText 文件
       </a>
      </li>
     </ul>
@@ -249,14 +249,14 @@ commentsRunWhenDOMLoaded(addUtterances);
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../structure/sections-headers.html">
-     How headers and sections map onto to book structure
+     标题和章节如何映射到书的结构
     </a>
    </li>
   </ul>
  </li>
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="../content/index.html">
-   Write narrative content
+   撰写叙述内容
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
   <label for="toctree-checkbox-4">
@@ -266,49 +266,59 @@ commentsRunWhenDOMLoaded(addUtterances);
   <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="../content/myst.html">
-     MyST Markdown overview
+     MyST Markdown 概述
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../content/content-blocks.html">
-     Special content blocks
+     特殊内容块
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../content/references.html">
-     References and cross-references
+     引用和交叉引用
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../content/layout.html">
-     Control the page layout
+     控制页面布局
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../content/citations.html">
-     Citations and bibliographies
+     引用和参考书目
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../content/math.html">
-     Math and equations
+     数学和公式
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../content/figures.html">
-     Images and figures
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       image
+      </span>
+     </code>
+     和
+     <code class="docutils literal notranslate">
+      <span class="pre">
+       figure
+      </span>
+     </code>
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../content/metadata.html">
-     Add metadata to your book pages
+     将元数据添加到您的书籍页面
     </a>
    </li>
   </ul>
  </li>
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="../content/executable/index.html">
-   Write executable content
+   写可执行内容
   </a>
   <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
   <label for="toctree-checkbox-5">
@@ -318,22 +328,22 @@ commentsRunWhenDOMLoaded(addUtterances);
   <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="../content/execute.html">
-     Execute and cache your pages
+     执行并缓存页面
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../content/code-outputs.html">
-     Formatting code outputs
+     格式化代码输出
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../content/executable/output-insert.html">
-     Store code outputs and insert into content
+     存储代码输出并插入到内容中
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../interactive/interactive.html">
-     Interactive data visualizations
+     交互式数据可视化
     </a>
    </li>
   </ul>
@@ -372,27 +382,27 @@ commentsRunWhenDOMLoaded(addUtterances);
   <ul>
    <li class="toctree-l2">
     <a class="reference internal" href="../basics/repository.html">
-     Connect your book to a code repository
+     将您的书连接到代码存储库
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../interactive/hiding.html">
-     Hide or remove content
+     隐藏或删除内容
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../interactive/launchbuttons.html">
-     Launch into interactive computing interfaces
+     启动交互式计算接口
     </a>
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="../interactive/thebe.html">
-     Make your code cells executable
+     使您的代码单元格可执行
     </a>
    </li>
    <li class="toctree-l2 has-children">
     <a class="reference internal" href="../interactive/comments.html">
-     Commenting and annotating
+     评论和注释
     </a>
     <input class="toctree-checkbox" id="toctree-checkbox-8" name="toctree-checkbox-8" type="checkbox"/>
     <label for="toctree-checkbox-8">
@@ -414,7 +424,7 @@ commentsRunWhenDOMLoaded(addUtterances);
    </li>
    <li class="toctree-l2 has-children">
     <a class="reference internal" href="../publish/web.html">
-     Host your book on the internet
+     把你的书放在网上
     </a>
     <input class="toctree-checkbox" id="toctree-checkbox-9" name="toctree-checkbox-9" type="checkbox"/>
     <label for="toctree-checkbox-9">
@@ -424,7 +434,7 @@ commentsRunWhenDOMLoaded(addUtterances);
     <ul>
      <li class="toctree-l3">
       <a class="reference internal" href="../publish/gh-pages.html">
-       GitHub Pages and Actions
+       GitHub Pages 与 Actions
       </a>
      </li>
      <li class="toctree-l3">
@@ -436,14 +446,14 @@ commentsRunWhenDOMLoaded(addUtterances);
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="html.html">
-     Advanced HTML outputs
+     高级 HTML 输出
     </a>
    </li>
   </ul>
  </li>
  <li class="toctree-l1 current active has-children">
   <a class="reference internal" href="index.html">
-   Advanced Jupyter Book Usage
+   Jupyter Book 高级语法
   </a>
   <input checked="" class="toctree-checkbox" id="toctree-checkbox-10" name="toctree-checkbox-10" type="checkbox"/>
   <label for="toctree-checkbox-10">
@@ -458,7 +468,7 @@ commentsRunWhenDOMLoaded(addUtterances);
    </li>
    <li class="toctree-l2">
     <a class="reference internal" href="windows.html">
-     Working on Windows
+     Windows 上的配置
     </a>
    </li>
    <li class="toctree-l2">
@@ -474,7 +484,7 @@ commentsRunWhenDOMLoaded(addUtterances);
   </a>
  </li>
 </ul>
-<p class="caption">
+<p class="caption" role="heading">
  <span class="caption-text">
   参考
  </span>
@@ -482,7 +492,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 <ul class="nav bd-sidenav">
  <li class="toctree-l1">
   <a class="reference internal" href="../customize/config.html">
-   Configuration reference
+   配置参考
   </a>
  </li>
  <li class="toctree-l1">
@@ -501,7 +511,7 @@ commentsRunWhenDOMLoaded(addUtterances);
   </a>
  </li>
 </ul>
-<p class="caption">
+<p class="caption" role="heading">
  <span class="caption-text">
   关于 Jupyter Book
  </span>
@@ -520,11 +530,6 @@ commentsRunWhenDOMLoaded(addUtterances);
  <li class="toctree-l1">
   <a class="reference internal" href="../cite.html">
    引用 Jupyter Book
-  </a>
- </li>
- <li class="toctree-l1">
-  <a class="reference internal" href="../reference/_changelog.html">
-   Change log
   </a>
  </li>
 </ul>
@@ -922,8 +927,8 @@ and the section on <a class="reference internal" href="../content/math.html#myst
 </pre></div>
 </div>
 <p>which renders as</p>
-<div class="amsmath math notranslate nohighlight" id="equation-7f8ec49a-04f5-4278-afe4-28983f800094">
-<span class="eqno">(5)<a class="headerlink" href="#equation-7f8ec49a-04f5-4278-afe4-28983f800094" title="公式的永久链接">¶</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-1feb6b87-656f-4381-b467-8aced75b72d4">
+<span class="eqno">(5)<a class="headerlink" href="#equation-1feb6b87-656f-4381-b467-8aced75b72d4" title="公式的永久链接">¶</a></span>\[\begin{equation}
   \int_0^\infty \frac{x^3}{e^x-1}\,dx = \frac{\pi^4}{15}
 \end{equation}\]</div>
 </div>
@@ -987,8 +992,8 @@ further details</p>
         
         <div class='prev-next-bottom'>
             
-    <a class='left-prev' id="prev-link" href="index.html" title="previous page">Advanced Jupyter Book Usage</a>
-    <a class='right-next' id="next-link" href="windows.html" title="next page">Working on Windows</a>
+    <a class='left-prev' id="prev-link" href="index.html" title="previous page">Jupyter Book 高级语法</a>
+    <a class='right-next' id="next-link" href="windows.html" title="next page">Windows 上的配置</a>
 
         </div>
         

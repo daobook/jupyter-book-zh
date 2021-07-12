@@ -15,6 +15,7 @@ Jupyter Book 可以直接运行代码，且持续化集成和部署到 GitHub Pa
 ```
 ````
 
+(intro)=
 ## Jupyter <img src="images/logo-square.svg" width=40 /> 速览
 
 ```{only} html

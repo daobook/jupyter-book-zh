@@ -1,9 +1,8 @@
-# Write narrative content
+# 撰写叙述内容
 
-In this section we'll cover the many ways that you can write content for your book.
-You can write book content in a variety of markup languages and file formats, and create special kinds of content for your book with MyST Markdown.
+在这一节中，我们将介绍为您的书编写内容的许多方法。您可以用各种标记语言和文件格式编写图书内容，并使用 MyST Markdown 为您的图书创建特殊类型的内容。
 
-See the sections below to get started.
+请参阅以下各节以开始使用。
 
 ```{tableofcontents}
 ```

@@ -1,84 +1,83 @@
 (publish/gh-pages)=
-# GitHub Pages and Actions
+# GitHub Pages 与 Actions
 
-Once your content is on GitHub, you can easily host it as a [GitHub Pages](https://docs.github.com/en/github/working-with-github-pages) website. This is a service where GitHub hosts your static files as if they were a standalone website.
+一旦你的内容在 GitHub 上，你可以很容易地托管它作为一个 [GitHub Pages](https://docs.github.com/en/github/working-with-github-pages) 网站。这是一个 GitHub 托管静态文件的服务，就像它们是一个独立的网站。
 
-There are three ways you can quickly host your book with GitHub Pages:
+有三种方法可以让你快速在 GitHub 页面上托管你的书:
 
-* Copy/paste your book's HTML to a `docs/` folder, or a `gh-pages` branch of your repository.
-* Use the `ghp-import` tool to automatically push your built documentation to a `gh-pages` branch.
-* Use a GitHub Action to automatically build your book and update your website when you change the content.
+* 复制/粘贴你的书的HTML到 `docs/` 文件夹，或 `gh-pages` 的存储库分支。
+* 使用 `ghp-import` 工具自动将您构建的文档推送到 `gh-pages` 分支。
+* 使用 GitHub Action 自动构建你的书和更新你的网站时，你改变的内容。
 
-We'll cover each option below.
+我们将涵盖下面的每个选项。
 
-## Manually put your book's contents online
+## 手动将你的书的内容放到网上
 
-In this case, you manually build your book's files, and then push them to a GitHub repository in order to be hosted as a website.
-There are two ways to do so
+在这种情况下，你手动构建你的书的文件，然后把它们推到一个 GitHub 仓库，以便作为一个网站托管。
+有两种方法
 
-:::{admonition} Make sure these steps are done first
+:::{admonition} 确保先完成这些步骤
 :class: warning
-Before you do any of the following, make sure that these two steps are completed:
+在执行以下任何操作之前，请确保已完成以下两个步骤:
 
-1. Build HTML for your book (see [](../start/build.md)).
-   There should be a collection of HTML files in your book's `_build/html` folder.
-2. Configure your GitHub repository to serve a website via GitHub Pages at the location of your choice (either a branch or the `docs/` folder).
-   See [the GitHub Pages documentation](https://docs.github.com/en/github/working-with-github-pages) for more information.
+1. 为你的书构建HTML(见 [](../start/build.md))。
+  在你的书的 `_build/html` 文件夹中应该有一个 HTML 文件集合。
+2. 配置你的 GitHub 库，通过 GitHub 页面在你选择的位置(一个分支或 `docs/` 文件夹)服务一个网站。
+   更多信息请参见[GitHub Pages文档](https://docs.github.com/en/github/working-with-github-pages)。
 :::
 
-### (Option 1) Copy and paste your book's `_build` contents into a new folder
+### (选项1)复制并粘贴你的书的 `_build` 内容到一个新的文件夹
 
-The simplest way to host your book online is to simply copy everything that is inside `_build` and put it in a location where GitHub Pages knows to look.
-There are two places we recommend:
+最简单的方法来托管你的书在线是简单地复制一切是在 `_build` 内，并把它放在一个位置，GitHub 页面知道看。
+我们推荐两个地方：
 
-In a separate branch
-: You can configure GitHub Pages to build any books that are in a branch that you specify.
-  By default, this is `gh-pages`.
+在一个单独的分支中
+: 你可以配置 GitHub Pages 来构建你指定的分支中的任何书籍。
+  默认情况下，是 `gh-pages`。
 
-In a `docs/` folder of your main branch
-: If you'd like to keep your built book alongside your book's source files, you may paste them into a `docs/` folder.
+在主分支的 `docs/` 文件夹中
+: 如果你想把构建好的书放在源文件旁边，你可以把它们粘贴到 `docs/` 文件夹中。
   :::{warning}
-  Note that copying all of your book's build files into the same branch as your source files will cause your repository to become very large over time, especially if you have many images in your book.
+  请注意，将所有图书的构建文件复制到与源文件相同的分支中，会导致您的存储库随着时间的推移变得非常大，特别是如果您的图书中有许多图像。
   :::
 
-In either case, follow these steps:
+无论哪种情况，请遵循以下步骤：
 
-1. Copy the contents of `_build/html` directory into `docs` (or your other branch).
-2. Add a file called `.nojekyll` alongside your book's contents.
-   This tells GitHub Pages to treat your files as a "static HTML website".
-3. Push your changes to GitHub, and [configure it to start hosting your documentation](https://docs.github.com/en/github/working-with-github-pages).
+1. 复制 `_build/html` 目录的内容到 `docs`(或你的其他分支)。
+2. 添加一个名为 `.nojekyll` 的文件在你书的内容旁边。
+   这告诉 GitHub Pages 把你的文件当作一个“静态HTML网站”。
+3. 将你的更改推送到 GitHub，然后 [configure it to start hosting your documentation](https://docs.github.com/en/github/working-with-github-pages).
 
-### (Option 2) Automatically push your build files with `ghp-import`
+### (选项2)使用 `ghp-import` 自动推送你的构建文件
 
-The easiest way to use GitHub Pages with your built HTML is to use the [`ghp-import`](https://github.com/davisp/ghp-import) package. `ghp-import` is a lightweight Python package that makes it easy to push HTML content to a GitHub repository.
+使用 GitHub 页面与你构建的 HTML 最简单的方法是使用 [`ghp-import`](https://github.com/davisp/ghp-import) 包。`ghp-import` 是一个轻量级的 Python 包，可以很容易地将 HTML 内容推送到 GitHub 存储库。
 
-`ghp-import` works by copying *all* of the contents of your built book (i.e., the `_build/html` folder) to a branch of your repository called `gh-pages`, and pushes it to GitHub.
-The `gh-pages` branch will be created and populated automatically for you by `ghp-import`.
-To use `ghp-import` to host your book online with GitHub Pages follow the steps below:
+`ghp-import` 通过复制你构建的书的*所有*内容(即 `_build/html` 文件夹)到你的存储库名为 `gh-pages` 的分支，并将其推送到 GitHub。
+`gh-pages` 分支将由 `ghp-import` 自动创建并填充。
+使用 `ghp-import` 来托管您的图书在线 GitHub 页面遵循以下步骤:
 
-1. Install `ghp-import`
+1. 安装 `ghp-import`
 
    ```bash
    pip install ghp-import
    ```
 
-2. From the `master` branch of your book's root directory (which should contain the `_build/html` folder) call `ghp-import` and point it to your HTML files, like so:
+2. 从你的书的根目录的 `main` 分支(它应该包含 `_build/html` 文件夹)调用 `ghp-import`，并指向你的 HTML 文件，像这样：
 
    ```bash
    ghp-import -n -p -f _build/html
    ```
 
 ```{warning}
-Make sure that you included the `-n`. This adds a file called `.nojekyll` to the output of your book, which tells GitHub *not* to build your book with
-[Jekyll](https://jekyllrb.com/).
+确保包含了`-n`。这将添加一个名为 `.nojekyll` 到你的书的输出，这告诉 GitHub 不要使用 [Jekyll](https://jekyllrb.com/) 构建你的书。
 ```
 
-Typically after a few minutes your site should be viewable online at a url such as: `https://<user>.github.io/<myonlinebook>/`. If not, check your repository settings under **Pages** to ensure that the `gh-pages` branch is configured as the build source for GitHub Pages and/or to find the url address GitHub is building for you.
+通常在几分钟后，您的网站应该可以在线查看，网址如：`https://<user>.github.io/<myonlinebook>/`。如果不行，检查你的仓库设置下**Options** -> **GitHub Pages**，以确保 `gh-pages` 分支配置为 GitHub 页面的构建源和/或找到 GitHub 正在为你构建的 url 地址。
 
-To update your online book, make changes to your book's content on the `main` branch of your repository, re-build your book with `jupyter-book build mybookname/` and then use `ghp-import -n -p -f mylocalbook/_build/html` as before to push the newly built HTML to the `gh-pages` branch.
+要更新你的在线图书，请在你的存储库的 `main` 分支上修改你的图书的内容，用 `jupyter-book build mybookname/` 重新构建你的图书，然后像以前一样使用 `ghp-import -n -p -f mylocalbook/_build/html` 将新构建的 HTML 推到 `gh-pages` 分支。
 
 ```{warning}
-Note this warning from the [`ghp-import` GitHub repository](https://github.com/davisp/ghp-import):
+注意这个警告来自 [`ghp-import` GitHub repository](https://github.com/davisp/ghp-import)：
 
 "...*`ghp-import` will DESTROY your gh-pages branch... and assumes that the `gh-pages` branch is 100% derivative. You should never edit files in your `gh-pages` branch by hand if you're using this script...*"
 ```
@@ -86,54 +85,45 @@ Note this warning from the [`ghp-import` GitHub repository](https://github.com/d
 (publish/gh-actions)=
 ## Automatically host your book with GitHub Actions
 
-[GitHub Actions](https://docs.github.com/en/actions) is a tool that allows you to automate things on GitHub.
-It is used for a variety of things, such as testing, publishing packages and continuous integration.
+[GitHub Actions](https://docs.github.com/en/actions) 是一个让你在 GitHub 上自动化的工具。
+它被用于各种各样的事情，比如测试、发布包和持续集成。
 
-Note that if you're not hosting your book on GitHub,
-or if you'd like another, user-friendly service to build it automatically,
-see the [guide to publishing your book on Netlify](./netlify.md).
+请注意，如果你没有在 GitHub 上托管你的书，或者如果你想要另一个用户友好的服务来自动构建它，请参阅 [guide to publishing your book on Netlify](./netlify.md)。
 
 ```{note}
-You should be familiar with GitHub Actions before using them
-to automatically host your Jupyter Books.
-[See the GitHub Actions documentation](https://help.github.com/en/actions)
-for more information.
+在使用 GitHub Actions 自动托管你的 Jupyter Books 之前，你应该熟悉 GitHub Actions。
+参见 [GitHub Actions文档](https://help.github.com/en/actions) 获取更多信息。
 ```
 
-To build your book with GitHub Actions, you'll need to create
-an action that does the following things:
+要用 GitHub 的 Actions 构建你的书，你需要创建一个做以下事情的动作:
 
-* Activates when a *push* event happens on `master` (or whichever)
-  branch has your latest book content.
-* Installs Jupyter Book and any dependencies needed to build
-  your book.
-* Builds your book's HTML.
-* Uses a `gh-pages` action to upload that HTML to your `gh-pages` branch.
+* 当 `main` (或任何一个)分支上发生一个 *push* 事件时激活，该分支有你最新的书内容。
+* 安装 Jupyter Book 和构建图书所需的任何依赖项。
+* 构建你的书的 HTML。
+* 使用 `gh-pages` 动作将 HTML 上传到 `gh-pages` 分支。
 
-For reference, [here is a sample repository](https://github.com/executablebooks/github-action-demo)
-that builds a book with GitHub Actions.
+作为参考，[这里有一个示例库](https://github.com/executablebooks/github-action-demo) 使用 GitHub Actions 构建了一本书。
 
 ```{note}
-Ensure that Jupyter Book's version in your `requirements.txt` file is at least
+确保你的 `requirements.txt` 文件中的 Jupyter Book 版本至少是
 `0.7.0`.
 ```
 
 :::{tip}
-You can use the [Jupyter Book cookiecutter](https://github.com/executablebooks/cookiecutter-jupyter-book) to quickly create a book template that already includes the GitHub Actions workflow file needed to automatically deploy your book to GitHub Pages:
+你可以使用 [Jupyter Book cookiecutter](https://github.com/executablebooks/cookiecutter-jupyter-book) 快速创建一个已经包含 GitHub Actions 工作流文件的图书模板，该文件需要自动部署你的图书到 GitHub 页面：
 
 ```bash
 jupyter-book create --cookiecutter mybookpath/
 ```
 
-For more help, see the [Jupyter Book cookiecutter GitHub repository](https://github.com/executablebooks/cookiecutter-jupyter-book), or run:
+更多帮助，请参阅 [Jupyter Book cookiecutter GitHub repository](https://github.com/executablebooks/cookiecutter-jupyter-book)，或运行:
 
 ```bash
 jupyter-book create --help
 ```
 :::
 
-Here is a simple YAML configuration
-for a Github Action that will publish your book to a `gh-pages` branch.
+下面是一个 Github Action 的简单 YAML 配置，它将把你的书发布到一个 `gh-pages` 分支。
 
 ```yaml
 name: deploy-book
@@ -159,9 +149,9 @@ jobs:
 
     # Install dependencies
     - name: Set up Python 3.7
-      uses: actions/setup-python@v1
+      uses: actions/setup-python@v2
       with:
-        python-version: 3.7
+        python-version: 3.8
 
     - name: Install dependencies
       run: |
@@ -180,4 +170,4 @@ jobs:
         publish_dir: ./_build/html
 ```
 
-If you want to deploy your site to GitHub Pages at a User and Organization repository (`<username>.github.io`), check another example workflow and available options at the README of [peaceiris/actions-gh-pages](https://github.com/peaceiris/actions-gh-pages).
+如果你想把你的站点部署到一个用户和组织库的 GitHub 页面(`<username>.github.io`)，检查另一个示例工作流和可用的选项在 [peaceiris/actions-gh-pages](https://github.com/peaceiris/actions-gh-pages) 的 README。

@@ -1,34 +1,25 @@
 (file-types:rst)=
-# reStructuredText files
+# reStructuredText 文件
 
-In addition to writing your content in Markdown, Jupyter Book also supports
-writing content in [reStructuredText](https://docutils.sourceforge.io/rst.html),
-another markup language that is common in the Python documentation community.
+除了在 Markdown 中编写内容外，Jupyter Book 还支持用 [reStructuredText](https://docutils.sourceforge.io/rst.html)（Python 文档社区中常见的另一种标记语言）编写内容。
 
 :::{warning}
-Writing content in reStructuredText is only recommended for users who are already
-familiar with it.
-For others, we recommend using [MyST Markdown](../content/myst.md),
-which has all of the same features of rST and Sphinx, but with a Markdown flavour.
+只建议已经熟悉 reStructuredText 的用户使用它来编写内容。对于其他人，我们推荐使用 [MyST Markdown](../content/myst.md)，它具有 rST 和 Sphinx 的所有相同功能，但带有 Markdown 的味道。
 :::
 
-Because Jupyter Book uses Sphinx under the hood, any document that is written in rST
-for the Sphinx ecosystem should also work with Jupyter Book. This is particularly
-useful if you've already got a significant amount of documentation written in rST
-and you'd like to try it out with Jupyter Book.
+因为 Jupyter Book 在底层使用了 Sphinx，所以任何用 rST 为 Sphinx 生态系统编写的文档也应该在 Jupyter Book 中生效。如果您已经有了大量用 rST 编写的文档，并且您想在 Jupyter Book 中试用它，那么这是特别有用的。
 
-For more information on writing content with reStructuredText, we recommend
-reading [the Sphinx rST documentation](https://www.sphinx-doc.org/es/stable/rest.html).
+关于使用 reStructuredText 编写内容的更多信息，我们建议阅读 [Sphinx rST文档](https://www.sphinx-doc.org/es/stable/rest.html)。
 
-## Including reStructuredText in Markdown
+## 包括 reStructuredText 在 Markdown
 
-To insert rST into Markdown, you can use the [eval-rst directive](myst-parser:syntax/directives/parsing):
+要插入 rST 到 Markdown，你可以使用 [eval-rst 指令](myst-parser:syntax/directives/parsing)：
 
 ````md
 ```{eval-rst}
 .. note::
 
-   A note written in reStructuredText.
+   用 reStructuredText 写的注释。
 
 .. include:: ./include-rst.rst
 ```
@@ -37,7 +28,7 @@ To insert rST into Markdown, you can use the [eval-rst directive](myst-parser:sy
 ```{eval-rst}
 .. note::
 
-   A note written in reStructuredText.
+   用 reStructuredText 写的注释。
 
 .. include:: ./include-rst.rst
 ```
