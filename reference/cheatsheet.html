@@ -867,16 +867,16 @@ commentsRunWhenDOMLoaded(addUtterances);
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><div class="highlight-md notranslate"><div class="highlight"><pre><span></span><span class="gh">#</span> Heading level 1
-<span class="gu">##</span> Heading level 2
-<span class="gu">###</span> Heading level 3
-<span class="gu">####</span> Heading level 4
-<span class="gu">#####</span> Heading level 5
-<span class="gu">######</span> Heading level 6
+<tr class="row-even"><td><div class="highlight-md notranslate"><div class="highlight"><pre><span></span><span class="gh"># Heading level 1</span>
+<span class="gu">## Heading level 2</span>
+<span class="gu">### Heading level 3</span>
+<span class="gu">#### Heading level 4</span>
+<span class="gu">##### Heading level 5</span>
+<span class="gu">###### Heading level 6</span>
 </pre></div>
 </div>
 </td>
-<td><div class="highlight-md notranslate"><div class="highlight"><pre><span></span><span class="gh">#</span> MyST Cheat Sheet
+<td><div class="highlight-md notranslate"><div class="highlight"><pre><span></span><span class="gh"># MyST Cheat Sheet</span>
 </pre></div>
 </div>
 </td>
@@ -905,7 +905,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 </div>
 </td>
 <td><div class="highlight-md notranslate"><div class="highlight"><pre><span></span>(myst_cheatsheet)=
-<span class="gh">#</span> MyST Cheat Sheet
+<span class="gh"># MyST Cheat Sheet</span>
 </pre></div>
 </div>
 </td>
@@ -980,7 +980,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 
 ---
 
-<span class="gu">##</span> New Header
+<span class="gu">## New Header</span>
 </pre></div>
 </div>
 </td>
@@ -1135,13 +1135,13 @@ a block break
 </td>
 <td><p><a class="reference external" href="https://jupyterbook.org">https://jupyterbook.org</a></p></td>
 </tr>
-<tr class="row-even"><td><div class="highlight-md notranslate"><div class="highlight"><pre><span></span>[text][key]
+<tr class="row-even"><td><div class="highlight-md notranslate"><div class="highlight"><pre><span></span>[<span class="nt">text</span>][<span class="nl">key</span>]
 </pre></div>
 </div>
 </td>
-<td><div class="highlight-md notranslate"><div class="highlight"><pre><span></span>[Jupyter Book][intro_page]
+<td><div class="highlight-md notranslate"><div class="highlight"><pre><span></span>[<span class="nt">Jupyter Book</span>][<span class="nl">intro_page</span>]
 
-[intro_page]: https://jupyterbook.org
+[<span class="nl">intro_page</span>]: <span class="na">https://jupyterbook.org</span>
 </pre></div>
 </div>
 </td>
@@ -1941,22 +1941,22 @@ label</p>
 <section id="code-and-syntax-highlighting">
 <h3>Code and syntax highlighting<a class="headerlink" href="#code-and-syntax-highlighting" title="永久链接至标题">¶</a></h3>
 <p><strong>Example</strong>:</p>
-<div class="highlight-md notranslate"><div class="highlight"><pre><span></span><span class="s">```python</span>
+<div class="highlight-md notranslate"><div class="highlight"><pre><span></span><span class="sb">```python</span>
 <span class="n">note</span> <span class="o">=</span> <span class="s2">&quot;Python syntax highlighting&quot;</span>
-<span class="k">print</span><span class="p">(</span><span class="n">node</span><span class="p">)</span>
-<span class="s">```</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">node</span><span class="p">)</span>
+<span class="sb">```</span>
 </pre></div>
 </div>
 <p>or</p>
-<div class="highlight-md notranslate"><div class="highlight"><pre><span></span><span class="s">```</span>
-No syntax highlighting if no language
-is indicated.
-<span class="s">```</span>
+<div class="highlight-md notranslate"><div class="highlight"><pre><span></span><span class="sb">```</span>
+<span class="sb">No syntax highlighting if no language</span>
+<span class="sb">is indicated.</span>
+<span class="sb">```</span>
 </pre></div>
 </div>
 <p><strong>Result</strong>:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">note</span> <span class="o">=</span> <span class="s2">&quot;Python syntax highlighting&quot;</span>
-<span class="k">print</span><span class="p">(</span><span class="n">node</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">node</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>or</p>
@@ -2142,7 +2142,7 @@ Here is an example of how to glue text: {glue:}`glued_text`
 <p><strong>Result</strong>:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">myst_nb</span> <span class="k">import</span> <span class="n">glue</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">myst_nb</span> <span class="kn">import</span> <span class="n">glue</span>
 <span class="n">my_variable</span> <span class="o">=</span> <span class="s2">&quot;here is some text!&quot;</span>
 <span class="n">glue</span><span class="p">(</span><span class="s2">&quot;glued_text&quot;</span><span class="p">,</span> <span class="n">my_variable</span><span class="p">)</span>
 </pre></div>
@@ -2178,7 +2178,7 @@ Here is an example of how to glue numbers: {glue:}`ss_mean` and {glue:}`ns_mean`
 <p><strong>Result</strong>:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">myst_nb</span> <span class="k">import</span> <span class="n">glue</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">myst_nb</span> <span class="kn">import</span> <span class="n">glue</span>
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
 
@@ -2191,12 +2191,12 @@ Here is an example of how to glue numbers: {glue:}`ss_mean` and {glue:}`ns_mean`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.21939902224594302
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>-0.7975854007264398
 </pre></div>
 </div>
 </div>
 </div>
-<p>Here is an example of how to glue numbers: <span class="pasted-inline"><code class="output text_plain docutils literal notranslate"><span class="pre">0.21939902224594302</span></code></span> and <span class="pasted-inline"><code class="output text_plain docutils literal notranslate"><span class="pre">-0.06831872374422378</span></code></span>.</p>
+<p>Here is an example of how to glue numbers: <span class="pasted-inline"><code class="output text_plain docutils literal notranslate"><span class="pre">-0.7975854007264398</span></code></span> and <span class="pasted-inline"><code class="output text_plain docutils literal notranslate"><span class="pre">0.06702028210512259</span></code></span>.</p>
 <p>See <a class="reference internal" href="../content/executable/output-insert.html#glue-gluing"><span class="std std-ref">把变量 glue 在你的笔记本上</span></a> for more information.</p>
 </section>
 <section id="gluing-visualizations">
@@ -2213,18 +2213,18 @@ fig, ax = plt.subplots()
 ax.plot(x, y, &#39;b-&#39;, linewidth=2)
 
 glue(&quot;glued_fig&quot;, fig, display=False)
-<span class="s">```</span>
+<span class="sb">```</span>
 
-This is an inline glue example of a figure: {glue:}`glued_fig`.
-This is an example of pasting a glued output as a block:
-```{glue:} glued_fig
-<span class="s">```</span>
+<span class="sb">This is an inline glue example of a figure: {glue:}`glued_fig`.</span>
+<span class="sb">This is an example of pasting a glued output as a block:</span>
+<span class="sb">```{glue:} glued_fig</span>
+<span class="sb">```</span>
 </pre></div>
 </div>
 <p><strong>Result</strong>:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">myst_nb</span> <span class="k">import</span> <span class="n">glue</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">myst_nb</span> <span class="kn">import</span> <span class="n">glue</span>
 <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 
@@ -2257,12 +2257,12 @@ x, y = sym.symbols(&#39;x y&#39;)
 z = sym.Function(&#39;z&#39;)
 z = sym.sqrt(x**2+y**2)
 glue(&quot;example_eq&quot;, z, display=False)
-<span class="s">```</span>
+<span class="sb">```</span>
 
-To glue a math equation try
-```{glue:math} example_eq
-:label: glue-eq-example
-<span class="s">```</span>
+<span class="sb">To glue a math equation try</span>
+<span class="sb">```{glue:math} example_eq</span>
+<span class="sb">:label: glue-eq-example</span>
+<span class="sb">```</span>
 </pre></div>
 </div>
 <p><strong>Result</strong>:</p>
@@ -2352,13 +2352,13 @@ for more information.</p></td>
 <tbody>
 <tr class="row-even"><td><div class="highlight-md notranslate"><div class="highlight"><pre><span></span>[^ref]
 
-[^ref]: Footnote text
+[<span class="nl">^ref</span>]: <span class="na">Footnote text</span>
 </pre></div>
 </div>
 </td>
 <td><div class="highlight-md notranslate"><div class="highlight"><pre><span></span>This is an example of a footnote.[^footnote1]
 
-[^footnote1]: The definition for referencing
+[<span class="nl">^footnote1</span>]: <span class="na">The definition for referencing</span>
  footnotes is generally placed at the bottom
  of the document.
 </pre></div>

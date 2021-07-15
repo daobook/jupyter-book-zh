@@ -781,7 +781,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 <p>下面的代码将一个变量绑定在笔记本的 <code class="docutils literal notranslate"><span class="pre">&quot;cool_text&quot;</span></code> 键上：</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">myst_nb</span> <span class="k">import</span> <span class="n">glue</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">myst_nb</span> <span class="kn">import</span> <span class="n">glue</span>
 <span class="n">my_variable</span> <span class="o">=</span> <span class="s2">&quot;here is some text!&quot;</span>
 <span class="n">glue</span><span class="p">(</span><span class="s2">&quot;cool_text&quot;</span><span class="p">,</span> <span class="n">my_variable</span><span class="p">)</span>
 </pre></div>
@@ -806,7 +806,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 
 <span class="n">n_points</span> <span class="o">=</span> <span class="mi">10000</span>
 <span class="n">n_boots</span> <span class="o">=</span> <span class="mi">1000</span>
-<span class="n">mean</span><span class="p">,</span> <span class="n">sd</span> <span class="o">=</span> <span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="o">.</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">mean</span><span class="p">,</span> <span class="n">sd</span> <span class="o">=</span> <span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="mf">.2</span><span class="p">)</span>
 <span class="n">data</span> <span class="o">=</span> <span class="n">sd</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randn</span><span class="p">(</span><span class="n">n_points</span><span class="p">)</span> <span class="o">+</span> <span class="n">mean</span>
 <span class="n">bootstrap_indices</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">n_points</span><span class="p">,</span> <span class="n">n_points</span><span class="o">*</span><span class="n">n_boots</span><span class="p">)</span><span class="o">.</span><span class="n">reshape</span><span class="p">((</span><span class="n">n_boots</span><span class="p">,</span> <span class="n">n_points</span><span class="p">))</span>
 </pre></div>
@@ -829,13 +829,13 @@ commentsRunWhenDOMLoaded(addUtterances);
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>3.003561398533161
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>3.0006467554090754
 </pre></div>
 </div>
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2.9912841265680608
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2.9882928121202266
 </pre></div>
 </div>
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>3.015785886143174
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>3.012996093941383
 </pre></div>
 </div>
 </div>
@@ -911,33 +911,33 @@ commentsRunWhenDOMLoaded(addUtterances);
   <tbody>
     <tr>
       <th>0</th>
-      <td>3.315757</td>
-      <td>3.226539</td>
-      <td>2.951657</td>
+      <td>3.075544</td>
+      <td>3.524621</td>
+      <td>2.957950</td>
     </tr>
     <tr>
       <th>1</th>
-      <td>2.826502</td>
-      <td>2.984757</td>
-      <td>2.769396</td>
+      <td>3.120152</td>
+      <td>2.822234</td>
+      <td>2.866887</td>
     </tr>
     <tr>
       <th>2</th>
-      <td>2.937749</td>
-      <td>3.042466</td>
-      <td>2.577987</td>
+      <td>2.960115</td>
+      <td>2.886280</td>
+      <td>2.945771</td>
     </tr>
     <tr>
       <th>3</th>
-      <td>3.200370</td>
-      <td>3.259550</td>
-      <td>3.240244</td>
+      <td>3.247486</td>
+      <td>2.894169</td>
+      <td>3.304696</td>
     </tr>
     <tr>
       <th>4</th>
-      <td>2.884683</td>
-      <td>3.170954</td>
-      <td>3.058436</td>
+      <td>2.950029</td>
+      <td>3.045269</td>
+      <td>3.051378</td>
     </tr>
   </tbody>
 </table>
@@ -972,7 +972,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 <div class="highlight-md notranslate"><div class="highlight"><pre><span></span>In-line text; {glue:}`boot_mean`, and a figure: {glue:}`boot_fig`.
 </pre></div>
 </div>
-<p>In-line text; <span class="pasted-inline"><code class="output text_plain docutils literal notranslate"><span class="pre">3.003561398533161</span></code></span>, and a figure: <span class="pasted-inline"><img alt="../../_images/output-insert_10_0.png" src="../../_images/output-insert_10_0.png" /></span>.</p>
+<p>In-line text; <span class="pasted-inline"><code class="output text_plain docutils literal notranslate"><span class="pre">3.0006467554090754</span></code></span>, and a figure: <span class="pasted-inline"><img alt="../../_images/output-insert_10_0.png" src="../../_images/output-insert_10_0.png" /></span>.</p>
 <div class="admonition tip">
 <p class="admonition-title">小技巧</p>
 <p>我们建议在绘制内联图时使用更宽、更短的图形，其比值约为 6x2。例如，这是一个从引导程序中排序的方法的内联图：<span class="pasted-inline"><img alt="../../_images/output-insert_10_1.png" src="../../_images/output-insert_10_1.png" /></span>。它可以用来做一个不太复杂的视觉点！想了解更多，请查看<a class="reference external" href="https://en.wikipedia.org/wiki/Sparkline">火花线是如何使用的</a>。</p>
@@ -994,7 +994,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 </pre></div>
 </div>
 <p>呈现的是：</p>
-<p>The mean of the bootstrapped distribution was <span class="pasted-text">3.003561398533161</span> (95% confidence interval <span class="pasted-text">2.9912841265680608</span>/<span class="pasted-text">3.015785886143174</span>)</p>
+<p>The mean of the bootstrapped distribution was <span class="pasted-text">3.0006467554090754</span> (95% confidence interval <span class="pasted-text">2.9882928121202266</span>/<span class="pasted-text">3.012996093941383</span>)</p>
 <div class="admonition note">
 <p class="admonition-title">注解</p>
 <p><code class="docutils literal notranslate"><span class="pre">glue:text</span></code> 仅适用于包含 <code class="docutils literal notranslate"><span class="pre">text/plain</span></code> 输出的 glue 变量。</p>
@@ -1003,7 +1003,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">{glue:text}`mykey:formatstring`</span></code></p></li>
 </ul>
-<p>例如，<code class="docutils literal notranslate"><span class="pre">My</span> <span class="pre">rounded</span> <span class="pre">mean:</span> <span class="pre">{glue:text}`boot_mean:.2f`</span> </code> 将被渲染为： My rounded mean: <span class="pasted-text">3.00</span> (95% CI: <span class="pasted-text">2.99</span>/<span class="pasted-text">3.02</span>)。</p>
+<p>例如，<code class="docutils literal notranslate"><span class="pre">My</span> <span class="pre">rounded</span> <span class="pre">mean:</span> <span class="pre">{glue:text}`boot_mean:.2f`</span> </code> 将被渲染为： My rounded mean: <span class="pasted-text">3.00</span> (95% CI: <span class="pasted-text">2.99</span>/<span class="pasted-text">3.01</span>)。</p>
 </section>
 <section id="glue-figure">
 <h3><code class="docutils literal notranslate"><span class="pre">glue:figure</span></code> 指令<a class="headerlink" href="#glue-figure" title="永久链接至标题">¶</a></h3>
@@ -1069,33 +1069,33 @@ A caption for a pandas table.
   <tbody>
     <tr>
       <th>0</th>
-      <td>3.315757</td>
-      <td>3.226539</td>
-      <td>2.951657</td>
+      <td>3.075544</td>
+      <td>3.524621</td>
+      <td>2.957950</td>
     </tr>
     <tr>
       <th>1</th>
-      <td>2.826502</td>
-      <td>2.984757</td>
-      <td>2.769396</td>
+      <td>3.120152</td>
+      <td>2.822234</td>
+      <td>2.866887</td>
     </tr>
     <tr>
       <th>2</th>
-      <td>2.937749</td>
-      <td>3.042466</td>
-      <td>2.577987</td>
+      <td>2.960115</td>
+      <td>2.886280</td>
+      <td>2.945771</td>
     </tr>
     <tr>
       <th>3</th>
-      <td>3.200370</td>
-      <td>3.259550</td>
-      <td>3.240244</td>
+      <td>3.247486</td>
+      <td>2.894169</td>
+      <td>3.304696</td>
     </tr>
     <tr>
       <th>4</th>
-      <td>2.884683</td>
-      <td>3.170954</td>
-      <td>3.058436</td>
+      <td>2.950029</td>
+      <td>3.045269</td>
+      <td>3.051378</td>
     </tr>
   </tbody>
 </table>
@@ -1163,13 +1163,13 @@ A caption for a pandas table.
 <tbody>
 <tr class="row-even"><td class="text-align:center"><p>histogram and raw text</p></td>
 <td class="text-align:center"><p><span class="pasted-inline"><img alt="../../_images/output-insert_10_0.png" src="../../_images/output-insert_10_0.png" /></span></p></td>
-<td><p><span class="pasted-inline"><code class="output text_plain docutils literal notranslate"><span class="pre">3.003561398533161</span></code></span></p></td>
-<td><p><span class="pasted-inline"><code class="output text_plain docutils literal notranslate"><span class="pre">2.9912841265680608</span></code></span>-<span class="pasted-inline"><code class="output text_plain docutils literal notranslate"><span class="pre">3.015785886143174</span></code></span></p></td>
+<td><p><span class="pasted-inline"><code class="output text_plain docutils literal notranslate"><span class="pre">3.0006467554090754</span></code></span></p></td>
+<td><p><span class="pasted-inline"><code class="output text_plain docutils literal notranslate"><span class="pre">2.9882928121202266</span></code></span>-<span class="pasted-inline"><code class="output text_plain docutils literal notranslate"><span class="pre">3.012996093941383</span></code></span></p></td>
 </tr>
 <tr class="row-odd"><td class="text-align:center"><p>sorted means and formatted text</p></td>
 <td class="text-align:center"><p><span class="pasted-inline"><img alt="../../_images/output-insert_10_1.png" src="../../_images/output-insert_10_1.png" /></span></p></td>
-<td><p><span class="pasted-text">3.004</span></p></td>
-<td><p><span class="pasted-text">2.991</span>-<span class="pasted-text">3.016</span></p></td>
+<td><p><span class="pasted-text">3.001</span></p></td>
+<td><p><span class="pasted-text">2.988</span>-<span class="pasted-text">3.013</span></p></td>
 </tr>
 </tbody>
 </table>

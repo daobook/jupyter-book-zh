@@ -776,11 +776,11 @@ My directive content.
 </pre></div>
 </div>
 <p>以下是使用封闭式 <code class="docutils literal notranslate"><span class="pre">---</span></code> 语法的指令关键字的示例：</p>
-<div class="highlight-md notranslate"><div class="highlight"><pre><span></span>```{directivename}
----
+<div class="highlight-md notranslate"><div class="highlight"><pre><span></span><span class="gu">```{directivename}</span>
+<span class="gu">---</span>
 metadata1: metadata2
-metadata3: metadata4
----
+<span class="gu">metadata3: metadata4</span>
+<span class="gu">---</span>
 My directive content.
 ```
 </pre></div>
@@ -845,14 +845,14 @@ My directive content.
 <p>如果您想在 Markdown 中将内容块彼此嵌套（例如，将 <code class="docutils literal notranslate"><span class="pre">{note}</span></code> 放在 <code class="docutils literal notranslate"><span class="pre">{margin}</span></code> 中），则可以通过添加额外的反引号（<code class="docutils literal notranslate"><span class="pre">`</span></code>）到最外面的块。这也适用于文字代码块。</p>
 <p>例如，以下语法：</p>
 <div class="highlight-md notranslate"><div class="highlight"><pre><span></span>````
-<span class="s">```</span>
-<span class="s">```</span>
+<span class="sb">```</span>
+<span class="sb">```</span>
 ````
 </pre></div>
 </div>
 <p>生成</p>
-<div class="highlight-md notranslate"><div class="highlight"><pre><span></span><span class="s">```</span>
-<span class="s">```</span>
+<div class="highlight-md notranslate"><div class="highlight"><pre><span></span><span class="sb">```</span>
+<span class="sb">```</span>
 </pre></div>
 </div>
 <p>因此，如果您希望将指令彼此嵌套在一起，则可以采用相同的方法。例如，以下语法：</p>

@@ -853,10 +853,10 @@ commentsRunWhenDOMLoaded(addUtterances);
 <p>最后，通过向代码单元格添加 <code class="docutils literal notranslate"><span class="pre">raises-exception</span></code> 标记，可以允许单元格级别的错误。这可以通过一个 Jupyter 接口来实现，或者通过 <code class="docutils literal notranslate"><span class="pre">{code-cell}</span></code> 指令:</p>
 <p>Lastly, you can allow errors at a cell level, by adding a <code class="docutils literal notranslate"><span class="pre">raises-exception</span></code> tag to your code cell.
 This can be done via a Jupyter interface, or via the <code class="docutils literal notranslate"><span class="pre">{code-cell}</span></code> directive like so:</p>
-<div class="highlight-md notranslate"><div class="highlight"><pre><span></span>```{code-cell}
----
-tags: [raises-exception]
----
+<div class="highlight-md notranslate"><div class="highlight"><pre><span></span><span class="gu">```{code-cell}</span>
+<span class="gu">---</span>
+<span class="gu">tags: [raises-exception]</span>
+<span class="gu">---</span>
 print(thisvariabledoesntexist)
 ```
 </pre></div>
@@ -871,8 +871,8 @@ print(thisvariabledoesntexist)
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_2814</span><span class="o">/</span><span class="mf">1091175326.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
-<span class="ne">----&gt; </span><span class="mi">1</span> <span class="k">print</span><span class="p">(</span><span class="n">thisvariabledoesntexist</span><span class="p">)</span>
+<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">1</span><span class="o">-</span><span class="mi">125</span><span class="n">c53ec1b82</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="nb">print</span><span class="p">(</span><span class="n">thisvariabledoesntexist</span><span class="p">)</span>
 
 <span class="ne">NameError</span>: name &#39;thisvariabledoesntexist&#39; is not defined
 </pre></div>
@@ -975,105 +975,105 @@ print(&quot;this is some stderr&quot;, file=sys.stderr)
 </thead>
 <tbody>
 <tr class="row-even"><td><p>basics/create</p></td>
-<td><p>2021-07-12 14:05</p></td>
+<td><p>2021-07-15 08:40</p></td>
 <td><p>cache</p></td>
-<td><p>1.32</p></td>
+<td><p>1.8</p></td>
 <td><p>✅</p></td>
 </tr>
 <tr class="row-odd"><td><p>content/code-outputs</p></td>
-<td><p>2021-07-12 14:05</p></td>
+<td><p>2021-07-15 08:40</p></td>
 <td><p>cache</p></td>
-<td><p>1.92</p></td>
+<td><p>1.58</p></td>
 <td><p>✅</p></td>
 </tr>
 <tr class="row-even"><td><p>content/executable/output-insert</p></td>
-<td><p>2021-07-12 14:05</p></td>
+<td><p>2021-07-15 08:40</p></td>
 <td><p>cache</p></td>
-<td><p>4.02</p></td>
+<td><p>3.75</p></td>
 <td><p>✅</p></td>
 </tr>
 <tr class="row-odd"><td><p>content/execute</p></td>
-<td><p>2021-07-12 14:05</p></td>
+<td><p>2021-07-15 08:40</p></td>
 <td><p>cache</p></td>
-<td><p>0.82</p></td>
+<td><p>0.97</p></td>
 <td><p>✅</p></td>
 </tr>
 <tr class="row-even"><td><p>content/layout</p></td>
-<td><p>2021-07-12 14:05</p></td>
+<td><p>2021-07-15 08:40</p></td>
 <td><p>cache</p></td>
-<td><p>1.64</p></td>
+<td><p>1.86</p></td>
 <td><p>✅</p></td>
 </tr>
 <tr class="row-odd"><td><p>content/math</p></td>
-<td><p>2021-07-12 14:05</p></td>
-<td><p>cache</p></td>
-<td><p>0.8</p></td>
-<td><p>✅</p></td>
-</tr>
-<tr class="row-even"><td><p>content/references</p></td>
-<td><p>2021-07-12 14:05</p></td>
-<td><p>cache</p></td>
-<td><p>0.8</p></td>
-<td><p>✅</p></td>
-</tr>
-<tr class="row-odd"><td><p>customize/toc</p></td>
-<td><p>2021-07-12 14:05</p></td>
-<td><p>cache</p></td>
-<td><p>1.11</p></td>
-<td><p>✅</p></td>
-</tr>
-<tr class="row-even"><td><p>file-types/jupytext</p></td>
-<td><p>2021-07-12 14:05</p></td>
-<td><p>cache</p></td>
-<td><p>0.81</p></td>
-<td><p>✅</p></td>
-</tr>
-<tr class="row-odd"><td><p>file-types/myst-notebooks</p></td>
-<td><p>2021-07-12 14:05</p></td>
-<td><p>cache</p></td>
-<td><p>0.8</p></td>
-<td><p>✅</p></td>
-</tr>
-<tr class="row-even"><td><p>file-types/notebooks</p></td>
-<td><p>2021-07-12 14:05</p></td>
-<td><p>cache</p></td>
-<td><p>2.42</p></td>
-<td><p>✅</p></td>
-</tr>
-<tr class="row-odd"><td><p>interactive/hiding</p></td>
-<td><p>2021-07-12 14:05</p></td>
-<td><p>cache</p></td>
-<td><p>1.7</p></td>
-<td><p>✅</p></td>
-</tr>
-<tr class="row-even"><td><p>interactive/interactive</p></td>
-<td><p>2021-07-12 14:05</p></td>
-<td><p>cache</p></td>
-<td><p>3.02</p></td>
-<td><p>✅</p></td>
-</tr>
-<tr class="row-odd"><td><p>interactive/launchbuttons</p></td>
-<td><p>2021-07-12 14:05</p></td>
-<td><p>cache</p></td>
-<td><p>0.79</p></td>
-<td><p>✅</p></td>
-</tr>
-<tr class="row-even"><td><p>interactive/thebe</p></td>
-<td><p>2021-07-12 14:05</p></td>
+<td><p>2021-07-15 08:40</p></td>
 <td><p>cache</p></td>
 <td><p>2.02</p></td>
 <td><p>✅</p></td>
 </tr>
-<tr class="row-odd"><td><p>reference/cheatsheet</p></td>
-<td><p>2021-07-12 14:05</p></td>
+<tr class="row-even"><td><p>content/references</p></td>
+<td><p>2021-07-15 08:40</p></td>
 <td><p>cache</p></td>
-<td><p>2.6</p></td>
+<td><p>2.02</p></td>
+<td><p>✅</p></td>
+</tr>
+<tr class="row-odd"><td><p>customize/toc</p></td>
+<td><p>2021-07-15 08:40</p></td>
+<td><p>cache</p></td>
+<td><p>1.39</p></td>
+<td><p>✅</p></td>
+</tr>
+<tr class="row-even"><td><p>file-types/jupytext</p></td>
+<td><p>2021-07-15 08:40</p></td>
+<td><p>cache</p></td>
+<td><p>0.85</p></td>
+<td><p>✅</p></td>
+</tr>
+<tr class="row-odd"><td><p>file-types/myst-notebooks</p></td>
+<td><p>2021-07-15 08:40</p></td>
+<td><p>cache</p></td>
+<td><p>2.02</p></td>
+<td><p>✅</p></td>
+</tr>
+<tr class="row-even"><td><p>file-types/notebooks</p></td>
+<td><p>2021-07-15 08:40</p></td>
+<td><p>cache</p></td>
+<td><p>2.84</p></td>
+<td><p>✅</p></td>
+</tr>
+<tr class="row-odd"><td><p>interactive/hiding</p></td>
+<td><p>2021-07-15 08:40</p></td>
+<td><p>cache</p></td>
+<td><p>1.83</p></td>
+<td><p>✅</p></td>
+</tr>
+<tr class="row-even"><td><p>interactive/interactive</p></td>
+<td><p>2021-07-15 08:40</p></td>
+<td><p>cache</p></td>
+<td><p>2.35</p></td>
+<td><p>✅</p></td>
+</tr>
+<tr class="row-odd"><td><p>interactive/launchbuttons</p></td>
+<td><p>2021-07-15 08:40</p></td>
+<td><p>cache</p></td>
+<td><p>0.91</p></td>
+<td><p>✅</p></td>
+</tr>
+<tr class="row-even"><td><p>interactive/thebe</p></td>
+<td><p>2021-07-15 08:40</p></td>
+<td><p>cache</p></td>
+<td><p>4.43</p></td>
+<td><p>✅</p></td>
+</tr>
+<tr class="row-odd"><td><p>reference/cheatsheet</p></td>
+<td><p>2021-07-15 08:40</p></td>
+<td><p>cache</p></td>
+<td><p>2.88</p></td>
 <td><p>✅</p></td>
 </tr>
 <tr class="row-even"><td><p>start/overview</p></td>
-<td><p>2021-07-12 14:05</p></td>
+<td><p>2021-07-15 08:40</p></td>
 <td><p>cache</p></td>
-<td><p>1.21</p></td>
+<td><p>1.52</p></td>
 <td><p>✅</p></td>
 </tr>
 </tbody>

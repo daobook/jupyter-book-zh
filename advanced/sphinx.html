@@ -743,30 +743,30 @@ One-such package is <a class="reference external" href="https://sphinx-inline-ta
 <div class="highlight-md notranslate"><div class="highlight"><pre><span></span>First two tabs showing off defining a function.
 
 ````{tab} Python
-<span class="s">```python</span>
+<span class="sb">```python</span>
 <span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
     <span class="k">return</span>
-<span class="s">```</span>
+<span class="sb">```</span>
 ````
 ````{tab} C++
 ```c++
 int main(const int argc, const char **argv) {
   return 0;
 }
-<span class="s">```</span>
-````
+<span class="sb">```</span>
+<span class="sb">````</span>
 
-Second two tabs showing off printing.
+<span class="sb">Second two tabs showing off printing.</span>
 
-````{tab} Python
-```python
-print(&quot;Hello World!&quot;)
-<span class="s">```</span>
+<span class="sb">````{tab} Python</span>
+<span class="sb">```python</span>
+<span class="sb">print(&quot;Hello World!&quot;)</span>
+<span class="sb">```</span>
 ````
 
 ````{tab} C++
 ```c++
-<span class="gh">#</span>include &lt;iostream&gt;
+<span class="gh">#include &lt;iostream&gt;</span>
 
 int main() {
   std::cout &lt;&lt; &quot;Hello World!&quot; &lt;&lt; std::endl;
@@ -807,7 +807,7 @@ int main() {
 <p>Second two tabs showing off printing.</p>
 <div class="tab-set docutils">
 <input checked="True" class="tab-input" id="tab-set--1-input--1" name="tab-set--1" type="radio"><label class="tab-label" for="tab-set--1-input--1">Python</label><div class="tab-content docutils">
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">print</span><span class="p">(</span><span class="s2">&quot;Hello World!&quot;</span><span class="p">)</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Hello World!&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -878,10 +878,10 @@ Some of their configuration is already exposed in the <code class="docutils lite
     <span class="nt">mathjax_config</span><span class="p">:</span>
       <span class="nt">TeX</span><span class="p">:</span>
         <span class="nt">Macros</span><span class="p">:</span>
-          <span class="nt">&quot;N&quot;</span><span class="p">:</span> <span class="s">&quot;\\mathbb{N}&quot;</span>
-          <span class="nt">&quot;floor&quot;</span><span class="p">:</span> <span class="p p-Indicator">[</span><span class="s">&quot;\\lfloor#1\\rfloor&quot;</span><span class="p p-Indicator">,</span> <span class="nv">1</span><span class="p p-Indicator">]</span>
-          <span class="nt">&quot;bmat&quot; </span><span class="p">:</span> <span class="p p-Indicator">[</span><span class="s">&quot;\\left[\\begin{array}&quot;</span><span class="p p-Indicator">]</span>
-          <span class="nt">&quot;emat&quot; </span><span class="p">:</span> <span class="p p-Indicator">[</span><span class="s">&quot;\\end{array}\\right]&quot;</span><span class="p p-Indicator">]</span>
+          <span class="s">&quot;N&quot;</span><span class="p p-Indicator">:</span> <span class="s">&quot;\\mathbb{N}&quot;</span>
+          <span class="s">&quot;floor&quot;</span><span class="p p-Indicator">:</span> <span class="p p-Indicator">[</span><span class="s">&quot;\\lfloor#1\\rfloor&quot;</span><span class="p p-Indicator">,</span> <span class="nv">1</span><span class="p p-Indicator">]</span>
+          <span class="s">&quot;bmat&quot;</span> <span class="p p-Indicator">:</span> <span class="p p-Indicator">[</span><span class="s">&quot;\\left[\\begin{array}&quot;</span><span class="p p-Indicator">]</span>
+          <span class="s">&quot;emat&quot;</span> <span class="p p-Indicator">:</span> <span class="p p-Indicator">[</span><span class="s">&quot;\\end{array}\\right]&quot;</span><span class="p p-Indicator">]</span>
 </pre></div>
 </div>
 <p>You can also define TeX macros for a specific file by introducing them at the beginning of the file under a <code class="docutils literal notranslate"><span class="pre">math</span></code> directive. For example</p>
@@ -927,8 +927,8 @@ and the section on <a class="reference internal" href="../content/math.html#myst
 </pre></div>
 </div>
 <p>which renders as</p>
-<div class="amsmath math notranslate nohighlight" id="equation-1feb6b87-656f-4381-b467-8aced75b72d4">
-<span class="eqno">(5)<a class="headerlink" href="#equation-1feb6b87-656f-4381-b467-8aced75b72d4" title="公式的永久链接">¶</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-f4afbe69-98c7-412d-898e-1249c51aad27">
+<span class="eqno">(5)<a class="headerlink" href="#equation-f4afbe69-98c7-412d-898e-1249c51aad27" title="公式的永久链接">¶</a></span>\[\begin{equation}
   \int_0^\infty \frac{x^3}{e^x-1}\,dx = \frac{\pi^4}{15}
 \end{equation}\]</div>
 </div>

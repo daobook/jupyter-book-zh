@@ -721,11 +721,11 @@ print(&quot;some code&quot;)
 <h3>使用 Python 代码添加标记<a class="headerlink" href="#python" title="永久链接至标题">¶</a></h3>
 <p>有时您希望快速扫描笔记本的单元格，以便根据单元格的内容添加标记。例如，您可能希望使用 <code class="docutils literal notranslate"><span class="pre">remove-input</span></code> 标记隐藏任何包含 import 语句的单元格。</p>
 <p>下面是一个简短的 Python 代码片段，可以实现类似于此的功能。首先将目录更改到图书文件夹的根目录，然后将下面的脚本作为Python脚本或在 Jupyter Notebook 中运行(根据用例进行必要的修改)。最后，检查将要做出的更改并将它们提交到存储库。</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">nbformat</span> <span class="kn">as</span> <span class="nn">nbf</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">nbformat</span> <span class="k">as</span> <span class="nn">nbf</span>
 <span class="kn">from</span> <span class="nn">glob</span> <span class="kn">import</span> <span class="n">glob</span>
 
 <span class="c1"># Collect a list of all notebooks in the content folder</span>
-<span class="n">notebooks</span> <span class="o">=</span> <span class="n">glob</span><span class="p">(</span><span class="s2">&quot;./content/**/*.ipynb&quot;</span><span class="p">,</span> <span class="n">recursive</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+<span class="n">notebooks</span> <span class="o">=</span> <span class="n">glob</span><span class="p">(</span><span class="s2">&quot;./content/**/*.ipynb&quot;</span><span class="p">,</span> <span class="n">recursive</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 
 <span class="c1"># Text to look for in adding tags</span>
 <span class="n">text_search_dict</span> <span class="o">=</span> <span class="p">{</span>

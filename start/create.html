@@ -731,7 +731,7 @@ Jupyter Book 支持两种 Markdown 样式：</p>
 <li><p><a class="reference internal" href="../content/myst.html"><span class="doc std std-doc">MyST Markdown</span></a>：CommonMark 的扩展，具有用于富文档的附加功能。</p></li>
 </ul>
 <p>让我们看一下模板书中的 markdown 文件之一：<code class="docutils literal notranslate"><span class="pre">intro.md</span></code>：</p>
-<div class="highlight-md notranslate"><div class="highlight"><pre><span></span><span class="gh">#</span> Welcome to your Jupyter Book
+<div class="highlight-md notranslate"><div class="highlight"><pre><span></span><span class="gh"># Welcome to your Jupyter Book</span>
 
 This is a small sample book to give you a feel for how book content is
 structured.
@@ -742,9 +742,9 @@ Here is a note!
 
 And here is a code block:
 
-<span class="s">```</span>
-e = mc^2
-<span class="s">```</span>
+<span class="sb">```</span>
+<span class="sb">e = mc^2</span>
+<span class="sb">```</span>
 
 Check out the content pages bundled with this sample book to see more.
 </pre></div>
@@ -832,12 +832,12 @@ TOC 的第一项总是你的书的登陆页：人们在看你的书时看到的�
 <h2>创建自己的内容文件<a class="headerlink" href="#id6" title="永久链接至标题">¶</a></h2>
 <p>现在您已经看到了一些示例内容文件，请尝试创建您自己的内容文件!</p>
 <p>在包含所有示例书内容的文件夹中，创建一个名为 <code class="docutils literal notranslate"><span class="pre">mymarkdownfile.md</span></code> 的新文件。填入以下内容:</p>
-<div class="highlight-md notranslate"><div class="highlight"><pre><span></span><span class="gh">#</span> Here&#39;s my sample title
+<div class="highlight-md notranslate"><div class="highlight"><pre><span></span><span class="gh"># Here&#39;s my sample title</span>
 
 This is some sample text.
 
 (section-label)=
-<span class="gu">##</span> Here&#39;s my first section
+<span class="gu">## Here&#39;s my first section</span>
 
 Here is a [<span class="nt">reference to the intro</span>](<span class="na">intro.md</span>). Here is a reference to [](section-label).
 </pre></div>

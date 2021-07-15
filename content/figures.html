@@ -784,11 +784,11 @@ commentsRunWhenDOMLoaded(addUtterances);
 <section id="figure">
 <h2><code class="docutils literal notranslate"><span class="pre">figure</span></code><a class="headerlink" href="#figure" title="永久链接至标题">¶</a></h2>
 <p>MyST Markdown 也允许你在页面中包含 <strong><code class="docutils literal notranslate"><span class="pre">&lt;figure&gt;</span></code></strong>。就像图像一样，除了它们更容易在你的书的其他地方引用，它们包括像标题这样的东西。要包含一个 <code class="docutils literal notranslate"><span class="pre">&lt;figure&gt;</span></code>，请使用以下语法：</p>
-<div class="highlight-md notranslate"><div class="highlight"><pre><span></span>```{figure} ../images/C-3PO_droid.png
----
+<div class="highlight-md notranslate"><div class="highlight"><pre><span></span><span class="gu">```{figure} ../images/C-3PO_droid.png</span>
+<span class="gu">---</span>
 height: 150px
-name: directive-fig
----
+<span class="gu">name: directive-fig</span>
+<span class="gu">---</span>
 Here is my figure caption!
 ```
 </pre></div>
@@ -886,11 +886,11 @@ This is a caption in <span class="gs">**Markdown**</span>!
 <h2>图形缩放和对齐<a class="headerlink" href="#id4" title="永久链接至标题">¶</a></h2>
 <p>图形也可以使用 <code class="docutils literal notranslate"><span class="pre">:align:</span> <span class="pre">right</span></code> 或 <code class="docutils literal notranslate"><span class="pre">:align:</span> <span class="pre">left</span></code> 选项来对齐。默认情况下，图形对齐到中心(见 <a class="reference internal" href="#directive-fig"><span class="std std-numref">图 4</span></a>)。</p>
 <p>要使一个图形在左边对齐，你需要写</p>
-<div class="highlight-md notranslate"><div class="highlight"><pre><span></span>```{figure} ../images/cool.jpg
----
+<div class="highlight-md notranslate"><div class="highlight"><pre><span></span><span class="gu">```{figure} ../images/cool.jpg</span>
+<span class="gu">---</span>
 scale: 50%
-align: left
----
+<span class="gu">align: left</span>
+<span class="gu">---</span>
 Here is my figure caption!
 ```
 </pre></div>
@@ -903,11 +903,11 @@ Here is my figure caption!
 </figcaption>
 </figure>
 <p>类似地，如果你写</p>
-<div class="highlight-md notranslate"><div class="highlight"><pre><span></span>```{figure} ../images/cool.jpg
----
+<div class="highlight-md notranslate"><div class="highlight"><pre><span></span><span class="gu">```{figure} ../images/cool.jpg</span>
+<span class="gu">---</span>
 scale: 50%
-align: right
----
+<span class="gu">align: right</span>
+<span class="gu">---</span>
 Here is my figure caption!
 ```
 </pre></div>
