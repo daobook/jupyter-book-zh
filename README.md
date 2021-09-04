@@ -30,21 +30,24 @@ Jupyter Book 是一个开源项目，用于从计算材料中构建漂亮且具�
 :container: +full-width text-center
 :column: col-lg-6 px-2 py-2
 :card:
-
+:header: w3-light-blue
 **[可发布内容](file-types:markdown)** ✍
 ^^^
-写在 Jupyter Markdown, 更多[发布功能](content/myst) 的 MyST Markdown，[reStructuredText](file-types:rst)，[Jupyter Notebooks](file-types:notebooks)，或[任何 Jupytext 格式](file-types:custom)。
+使用 Jupyter Markdown, MyST Markdown，以及更多[发布功能](content/myst) 的 [reStructuredText](file-types:rst)，[Jupyter Notebooks](file-types:notebooks)，或 [任何 Jupytext 格式](file-types:custom)。
 
 包括对富文本语法的支持，如[引用和交叉引用](content/citations)、[数学和等式](content/math)，以及[图](content/figures)。
 ---
+:header: w3-light-gray
 **[执行、缓存和插入可计算性内容](content/execute)** 🚀
 ^^^
 执行笔记本单元格，然后[格式化并将最新输出插入](content:code-outputs)到您的书中。[缓存输出以节省稍后重建的时间](execute/cache)。甚至[保存笔记本输出并插入到其他页面](content:code-outputs:glue)。
 ---
+:header: w3-pale-blue
 **[向内容和输出添加交互性](interactive/launchbuttons)** ✨
 ^^^
 创建交互式内容块，如 [](content:tabs)、[](content:dropdowns)。[切换单元格可见性](interactive/hiding)，并包含与 Jupyter 笔记本[交互的单元格输出](interactive/interactive)。使用 Binder 或 Colab [启动互动会话](interactive/launchbuttons)，[让你的代码在 Thebe 上可执行](launch:thebe)，或[与像 Hypothes.is 这样的评论服务连接](interactive:comments)。
 ---
+:header: w3-pale-yellow
 **[构建多种格式的书籍和文章](start/build)** 🎁
 ^^^
 构建[多页的书籍](structure:book)或[单页文章](structure:article)，并从中生成多种输出，如 [HTML 网站](start/build) 或 [PDF 输出](advanced/pdf)。Jupyter Book 使用 [Sphinx 文档引擎](https://sphinx-doc.org)，支持[多种输出类型](https://www.sphinx-doc.org/en/master/usage/builders/index.html)。
@@ -64,7 +67,7 @@ Jupyter Book 是一个开源项目，用于从计算材料中构建漂亮且具�
 💡 [打开议题](https://github.com/executablebooks/jupyter-book/issues/new/choose)
 : 通过 GitHub issue 跟踪增强请求、bug 报告和待办事项。
 
-💬 [加入讨论]](https://github.com/executablebooks/meta/discussions)
+💬 [加入讨论](https://github.com/executablebooks/meta/discussions)
 : 在[社区论坛](https://github.com/executablebooks/meta/discussions)上进行社区讨论，讨论想法，分享一般性问题和反馈。
 
 👍 [为新功能投票](ebp:feature-note)

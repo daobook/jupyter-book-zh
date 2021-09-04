@@ -4,8 +4,6 @@ jupytext:
   text_representation:
     extension: .md
     format_name: myst
-    format_version: 0.12
-    jupytext_version: 1.6.0
 kernelspec:
   display_name: Python 3
   language: python
@@ -25,7 +23,7 @@ kernelspec:
 pip install -U jupyter-book
 ```
 
-这将安装在本地构建 Jupyter Book 所需的一切。
+在本地构建 Jupyter Book 所需的一切将被安装。
 
 ## Jupyter Book 的命令行界面
 
@@ -51,15 +49,14 @@ jupyter-book --help
 
 ## 书籍构建过程
 
-构建一本Jupyter Book大致包括以下步骤：
+构建一本 Jupyter Book 大致包括以下步骤：
 
 1. **创建你的书的内容**。您可以用文件夹、文件和配置的集合来构造您的书。 参见 [](anatomy-of-a-book)。
 2. **构建你的书**。使用 Jupyter Book 的命令行界面，您可以将页面转换为 HTML 或 PDF 图书。参见 [](build.md)。
 3. **在网上发布你的书**。一旦你的书建好了，你就可以和别人分享了。最常见的是构建 HTML，并将其作为公共网站托管。参见 [](publish.md)。
 
 :::{note}
-我们将使用“book”这个词来描述本教程生成的输出，但是您也可以使用 Jupyter Book 来构建**文章**。
-阅读 [](structure:article) 了解更多信息。
+我们将使用“book”这个词来描述本教程生成的输出，但是您也可以使用 Jupyter Book 来构建**文章**。阅读 [](structure:article) 了解更多信息。
 :::
 
 (anatomy-of-a-book)=
