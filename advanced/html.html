@@ -4,8 +4,7 @@
 <html lang="zh">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>高级 HTML 输出</title>
     
   <link href="../_static/css/theme.css" rel="stylesheet" />
@@ -23,8 +22,8 @@
       
 
     
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-book-theme.acff12b8f9c144ce68a297486a2fa670.css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.e8f53015daec13862f6db5e763c41738.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
@@ -32,16 +31,16 @@
     <link rel="stylesheet" type="text/css" href="../_static/tabs.css" />
     <link rel="stylesheet" type="text/css" href="../_static/page.css" />
     <link rel="stylesheet" type="text/css" href="../_static/custom.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/xin-css/main.css" />
     <link rel="stylesheet" type="text/css" href="../_static/w3css/4/w3pro.css" />
     <link rel="stylesheet" type="text/css" href="../_static/w3css/4/w3mobile.css" />
     <link rel="stylesheet" type="text/css" href="../_static/w3css/4/w3.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/xin-css/main.css" />
     <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     
   <link rel="preload" as="script" href="../_static/js/index.1c5a1a01449ed65a7b51.js">
 
-    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
@@ -84,12 +83,12 @@ var addUtterances = () => {
 }
 commentsRunWhenDOMLoaded(addUtterances);
 </script>
-    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.0/dist/embed-amd.js"></script>
-    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
-    <script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script >
         const thebe_selector = ".thebe,.cell"
         const thebe_selector_input = "pre,.cell_input div.highlight"
         const thebe_selector_output = ".output,.cell_output"
@@ -126,9 +125,9 @@ commentsRunWhenDOMLoaded(addUtterances);
 </div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
   <i class="icon fas fa-search"></i>
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
-</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item active">
-        <p class="caption" role="heading">
+        <p class="caption">
  <span class="caption-text">
   教程
  </span>
@@ -177,7 +176,7 @@ commentsRunWhenDOMLoaded(addUtterances);
   </a>
  </li>
 </ul>
-<p class="caption" role="heading">
+<p class="caption">
  <span class="caption-text">
   主题指南
  </span>
@@ -482,7 +481,7 @@ commentsRunWhenDOMLoaded(addUtterances);
   </a>
  </li>
 </ul>
-<p class="caption" role="heading">
+<p class="caption">
  <span class="caption-text">
   参考
  </span>
@@ -509,7 +508,7 @@ commentsRunWhenDOMLoaded(addUtterances);
   </a>
  </li>
 </ul>
-<p class="caption" role="heading">
+<p class="caption">
  <span class="caption-text">
   关于 Jupyter Book
  </span>
@@ -638,7 +637,7 @@ commentsRunWhenDOMLoaded(addUtterances);
             <div class="tocsection onthispage pt-5 pb-3">
                 <i class="fas fa-list"></i> Contents
             </div>
-            <nav id="bd-toc-nav">
+            <nav id="bd-toc-nav" aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#custom-css-or-javascript">
@@ -710,9 +709,9 @@ commentsRunWhenDOMLoaded(addUtterances);
         
               <div>
                 
-  <section id="html">
+  <div class="section" id="html">
 <h1>高级 HTML 输出<a class="headerlink" href="#html" title="永久链接至标题">¶</a></h1>
-<section id="custom-css-or-javascript">
+<div class="section" id="custom-css-or-javascript">
 <span id="custom-assets"></span><h2>Custom CSS or JavaScript<a class="headerlink" href="#custom-css-or-javascript" title="永久链接至标题">¶</a></h2>
 <p>If you’d like to include custom CSS rules or JavaScript scripts in your book, add them to a folder called <code class="docutils literal notranslate"><span class="pre">_static</span></code> in your book’s folder.
 Any files that end in <code class="docutils literal notranslate"><span class="pre">.css</span></code> or <code class="docutils literal notranslate"><span class="pre">.js</span></code> in this folder will automatically be copied into your built book HTML and linked in the header of each page.</p>
@@ -734,7 +733,7 @@ Any files that end in <code class="docutils literal notranslate"><span class="pr
 <p>The rules should then automatically be applied to your site. In general, these
 CSS and JS files will be loaded <em>after</em> others are loaded on your page, so they
 should overwrite pre-existing rules and behaviour.</p>
-<section id="an-example-justify-the-text">
+<div class="section" id="an-example-justify-the-text">
 <h3>An example: justify the text<a class="headerlink" href="#an-example-justify-the-text" title="永久链接至标题">¶</a></h3>
 <p>If you want the text of you book to be justified instead of left aligned then create <code class="docutils literal notranslate"><span class="pre">myfile.css</span></code> under <code class="docutils literal notranslate"><span class="pre">mybook/_static</span></code> with the following CSS:</p>
 <div class="highlight-css notranslate"><div class="highlight"><pre><span></span><span class="nt">p</span> <span class="p">{</span>
@@ -742,9 +741,9 @@ should overwrite pre-existing rules and behaviour.</p>
 <span class="p">}</span>
 </pre></div>
 </div>
-</section>
-</section>
-<section id="google-analytics">
+</div>
+</div>
+<div class="section" id="google-analytics">
 <h2>启用 Google Analytics<a class="headerlink" href="#google-analytics" title="永久链接至标题">¶</a></h2>
 <p>如果你有谷歌账户，你可以使用谷歌 Analytics 来收集一些关于你的 Jupyter Book 的流量信息。有了这个工具，你可以知道有多少人在使用你的书，他们来自哪里，他们如何访问它，他们使用的是桌面版本还是移动版本等等。</p>
 <p>要添加谷歌 Analytics 到您的 Jupyter Book，导航到<a class="reference external" href="https://analytics.google.com/analytics/web/">谷歌 Analytics</a>，创建一个新的谷歌 Analytics 帐户，并添加您的 Jupyter Book 的 url 到一个新的属性。一旦你设置好了一切，你的谷歌 Analytics 属性将拥有一个所谓的 Tracking-ID，它通常以字母 UA 开头。你需要做的就是复制这个 ID 并粘贴到你的配置文件中：</p>
@@ -752,21 +751,21 @@ should overwrite pre-existing rules and behaviour.</p>
   <span class="nt">google_analytics_id</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">UA-XXXXXXXXX-X</span>
 </pre></div>
 </div>
-</section>
-<section id="html-link-check">
+</div>
+<div class="section" id="html-link-check">
 <span id="id1"></span><h2>检查你书中的外部链接<a class="headerlink" href="#html-link-check" title="永久链接至标题">¶</a></h2>
 <p>如果您想确保您的书之外的链接是有效的，请使用 Jupyter Book 运行 Sphinx 链接检查器。这将检查您的每个外部链接，并确保它们解析。</p>
-<aside class="margin sidebar">
+<div class="margin sidebar">
 <p class="sidebar-title"></p>
 <p>请注意，您必须确保每个链接都是正确的 target，链接检查器只会确保它能够解析。</p>
-</aside>
+</div>
 <p>运行链接检查器，使用如下命令：</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>jupyter-book build mybookname/ --builder linkcheck
 </pre></div>
 </div>
 <p>它会打印出你书中每个链接的状态，以便你以后可以解决任何不正确的链接。</p>
-</section>
-<section id="markdown-html">
+</div>
+<div class="section" id="markdown-html">
 <span id="raw-html-in-markdown"></span><h2>在 Markdown 中使用原始 HTML<a class="headerlink" href="#markdown-html" title="永久链接至标题">¶</a></h2>
 <p>Jupyter Notebook Markdown 允许您在 Markdown 单元格中使用原始 HTML。在大多数情况下，这是不鼓励的，因为它通常只是作为原始文本通过构建过程，所以不会受到以下过程的影响：</p>
 <ul class="simple">
@@ -794,11 +793,11 @@ should overwrite pre-existing rules and behaviour.</p>
 <a class="reference internal image-reference" href="../_images/fun-fish.png"><img alt="the fun fish!" src="../_images/fun-fish.png" style="width: 200px;" /></a>
 <p>有关详细信息，请参阅<a class="reference internal" href="../content/figures.html#content-blocks-images"><span class="std std-ref">图像部分</span></a>。</p>
 </div>
-</section>
-<section id="id2">
+</div>
+<div class="section" id="id2">
 <h2>添加额外的 HTML 到你的书<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
 <p>在 Jupyter Book 中有一些地方可以添加额外的任意 HTML。在所有情况下，这都是通过 <code class="docutils literal notranslate"><span class="pre">_config.yml</span></code> 文件中的配置值来完成的。</p>
-<section id="id3">
+<div class="section" id="id3">
 <h3>在你的页脚拓展 HTML<a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h3>
 <p>要在书的页脚添加额外的 HTML，使用以下配置：</p>
 <div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">html</span><span class="p">:</span>
@@ -809,8 +808,8 @@ should overwrite pre-existing rules and behaviour.</p>
 </pre></div>
 </div>
 <p><code class="docutils literal notranslate"><span class="pre">extra_footer</span></code> 的内容将被插入到页面的 HTML 中，但在所有其他页脚内容之后。</p>
-</section>
-<section id="id4">
+</div>
+<div class="section" id="id4">
 <h3>添加额外的 HTML 到你的左导航栏<a class="headerlink" href="#id4" title="永久链接至标题">¶</a></h3>
 <p>要在书的左侧导航栏中添加额外的 HTML，请使用以下配置：</p>
 <div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">html</span><span class="p">:</span>
@@ -821,9 +820,9 @@ should overwrite pre-existing rules and behaviour.</p>
 </pre></div>
 </div>
 <p><code class="docutils literal notranslate"><span class="pre">extra_navbar</span></code> 的内容会被插入到页面的 HTML中，在所有其他 HTML 内容之后。</p>
-</section>
-</section>
-<section id="id5">
+</div>
+</div>
+<div class="section" id="id5">
 <h2>向 HTML 页脚添加许可证<a class="headerlink" href="#id5" title="永久链接至标题">¶</a></h2>
 <p>如果您想为您的书添加更详细的许可证，或者想为许可证添加到外部页面的链接，最简单的方法是使用自定义页脚。你可以禁用自动添加到每个页脚的“版权”文本，并添加任何你想要的页脚 HTML。</p>
 <p>例如，请看下面的配置：</p>
@@ -838,8 +837,8 @@ should overwrite pre-existing rules and behaviour.</p>
 </pre></div>
 </div>
 <p>注意，这可能不适用于 LaTeX 生成的页面的 PDF 构建。</p>
-</section>
-<section id="sphinx-manual-assets">
+</div>
+<div class="section" id="sphinx-manual-assets">
 <span id="id6"></span><h2>手动指定网站中要包含的额外文件/文件夹<a class="headerlink" href="#sphinx-manual-assets" title="永久链接至标题">¶</a></h2>
 <p>Jupyter Book 将复制任何文件，从其页面内的链接，使链接工作在构建网站。然而，有时你想手动确保文件和文件夹包含在你构建的网站中。例如，如果您希望从构建文档之外而不是从构建文档内部链接到它们。</p>
 <p>若要手动指定要复制的项，请使用 <a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/configuration.html#confval-html_extra_path"><code class="docutils literal notranslate"><span class="pre">html_extra_path</span></code> Sphinx 配置</a>。你可以用 Jupyter Book 这样配置：</p>
@@ -862,8 +861,8 @@ should overwrite pre-existing rules and behaviour.</p>
 </pre></div>
 </div>
 <p>然后可以通过 <code class="docutils literal notranslate"><span class="pre">yourwebsite.com/data/mydataset.csv</span></code> 访问该数据集。</p>
-</section>
-<section id="id7">
+</div>
+<div class="section" id="id7">
 <h2>配置提升可访问性<a class="headerlink" href="#id7" title="永久链接至标题">¶</a></h2>
 <p>声明书中使用的主要语言有助于改善屏幕阅读器和浏览器翻译工具。</p>
 <p>可以通过在 <code class="docutils literal notranslate"><span class="pre">_config.yml</span></code> 中的 <code class="docutils literal notranslate"><span class="pre">sphinx</span></code> 配置中为 <code class="docutils literal notranslate"><span class="pre">language</span></code> 选项提供适当的 <a class="reference external" href="https://www.w3schools.com/tags/ref_language_codes.asp">语言代码</a> 来配置：</p>
@@ -873,8 +872,8 @@ should overwrite pre-existing rules and behaviour.</p>
 </pre></div>
 </div>
 <p>这个例子将把书的语言设置为英语，在你书的 HTML 中，它将表示为 <code class="docutils literal notranslate"><span class="pre">&lt;html</span> <span class="pre">lang=&quot;en&quot;&gt;...&lt;/html&gt;</span></code>。</p>
-</section>
-</section>
+</div>
+</div>
 
     <script type="text/x-thebe-config">
     {
@@ -899,12 +898,32 @@ should overwrite pre-existing rules and behaviour.</p>
               </div>
               
         
-        <div class='prev-next-bottom'>
             
-    <a class='left-prev' id="prev-link" href="../publish/netlify.html" title="previous page">Publish with Netlify</a>
-    <a class='right-next' id="next-link" href="index.html" title="next page">Jupyter Book 高级语法</a>
 
-        </div>
+
+
+<div class='prev-next-bottom'>
+    
+    <div id="prev">
+        <a class="left-prev" href="../publish/netlify.html" title="上一页 页">
+            <i class="prevnext-label fas fa-angle-left"></i>
+            <div class="prevnext-info">
+                <p class="prevnext-label">上一页</p>
+                <p class="prevnext-title">Publish with Netlify</p>
+            </div>
+        </a>
+    </div>
+     <div id="next">
+        <a class="right-next" href="index.html" title="下一页 页">
+            <div class="prevnext-info">
+                <p class="prevnext-label">下一页</p>
+                <p class="prevnext-title">Jupyter Book 高级语法</p>
+            </div>
+            <i class="prevnext-label fas fa-angle-right"></i>
+        </a>
+     </div>
+
+</div>
         
         </div>
     </div>

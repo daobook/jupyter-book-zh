@@ -4,8 +4,7 @@
 <html lang="zh">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>数学和公式</title>
     
   <link href="../_static/css/theme.css" rel="stylesheet" />
@@ -23,8 +22,8 @@
       
 
     
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-book-theme.acff12b8f9c144ce68a297486a2fa670.css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.e8f53015daec13862f6db5e763c41738.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
@@ -32,16 +31,16 @@
     <link rel="stylesheet" type="text/css" href="../_static/tabs.css" />
     <link rel="stylesheet" type="text/css" href="../_static/page.css" />
     <link rel="stylesheet" type="text/css" href="../_static/custom.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/xin-css/main.css" />
     <link rel="stylesheet" type="text/css" href="../_static/w3css/4/w3pro.css" />
     <link rel="stylesheet" type="text/css" href="../_static/w3css/4/w3mobile.css" />
     <link rel="stylesheet" type="text/css" href="../_static/w3css/4/w3.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/xin-css/main.css" />
     <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     
   <link rel="preload" as="script" href="../_static/js/index.1c5a1a01449ed65a7b51.js">
 
-    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
@@ -84,19 +83,19 @@ var addUtterances = () => {
 }
 commentsRunWhenDOMLoaded(addUtterances);
 </script>
-    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.0/dist/embed-amd.js"></script>
-    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
-    <script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"TeX": {"Macros": {"N": "\\mathbb{N}", "floor": ["\\lfloor#1\\rfloor", 1], "bmat": ["\\left[\\begin{array}"], "emat": ["\\end{array}\\right]"]}}, "tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script >
         const thebe_selector = ".thebe,.cell"
         const thebe_selector_input = "pre,.cell_input div.highlight"
         const thebe_selector_output = ".output,.cell_output"
     </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
-    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <script type="text/x-mathjax-config">MathJax.Hub.Config({"TeX": {"Macros": {"N": "\\mathbb{N}", "floor": ["\\lfloor#1\\rfloor", 1], "bmat": ["\\left[\\begin{array}"], "emat": ["\\end{array}\\right]"]}}, "tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
     <link rel="canonical" href="https://xinetzone.github.io/jupyter-book/content/math.html" />
     <link rel="shortcut icon" href="../_static/page-logo.jfif"/>
     <link rel="index" title="索引" href="../genindex.html" />
@@ -128,9 +127,9 @@ commentsRunWhenDOMLoaded(addUtterances);
 </div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
   <i class="icon fas fa-search"></i>
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
-</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item active">
-        <p class="caption" role="heading">
+        <p class="caption">
  <span class="caption-text">
   教程
  </span>
@@ -179,7 +178,7 @@ commentsRunWhenDOMLoaded(addUtterances);
   </a>
  </li>
 </ul>
-<p class="caption" role="heading">
+<p class="caption">
  <span class="caption-text">
   主题指南
  </span>
@@ -484,7 +483,7 @@ commentsRunWhenDOMLoaded(addUtterances);
   </a>
  </li>
 </ul>
-<p class="caption" role="heading">
+<p class="caption">
  <span class="caption-text">
   参考
  </span>
@@ -511,7 +510,7 @@ commentsRunWhenDOMLoaded(addUtterances);
   </a>
  </li>
 </ul>
-<p class="caption" role="heading">
+<p class="caption">
  <span class="caption-text">
   关于 Jupyter Book
  </span>
@@ -663,7 +662,7 @@ commentsRunWhenDOMLoaded(addUtterances);
             <div class="tocsection onthispage pt-5 pb-3">
                 <i class="fas fa-list"></i> Contents
             </div>
-            <nav id="bd-toc-nav">
+            <nav id="bd-toc-nav" aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#id2">
@@ -703,7 +702,7 @@ commentsRunWhenDOMLoaded(addUtterances);
         
               <div>
                 
-  <section id="myst-content-math">
+  <div class="section" id="myst-content-math">
 <span id="id1"></span><h1>数学和公式<a class="headerlink" href="#myst-content-math" title="永久链接至标题">¶</a></h1>
 <p>Jupyter Book使用 <a class="reference external" href="http://docs.mathjax.org/">MathJax</a> 在 HTML 图书版本中排版数学。这使您可以在在线内容中使用 LaTeX 风格的数学。此页面显示了几种控制方法。</p>
 <div class="admonition seealso">
@@ -718,13 +717,13 @@ commentsRunWhenDOMLoaded(addUtterances);
     <span class="nt">mathjax_path</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js</span>
 </pre></div>
 </div>
-<p>细节见 <a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/extensions/math.html#module-sphinx.ext.mathjax" title="(在 Sphinx v5.0.0+/dd00bade7)"><span class="xref myst">Sphinx documentation</span></a>。</p>
+<p>细节见 <a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/extensions/math.html#module-sphinx.ext.mathjax" title="(在 Sphinx v5.0.0+)"><span class="xref myst">Sphinx documentation</span></a>。</p>
 </div>
-<section id="id2">
+<div class="section" id="id2">
 <h2>行内数学<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
 <p>要插入行内数学，请在 Markdown 单元格内使用 <code class="docutils literal notranslate"><span class="pre">$</span></code> 符号。例如，文本 <code class="docutils literal notranslate"><span class="pre">$this_{is}^{inline}$</span></code> 将产生：<span class="math notranslate nohighlight">\(this_{is}^{inline}\)</span>。</p>
-</section>
-<section id="id3">
+</div>
+<div class="section" id="id3">
 <h2>数学块<a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h2>
 <p>您还可以为单独的公式包括数学块。这使您可以将注意力集中在更复杂或更长时间的公式上，以及在页面中链接到它们。要使用块公式，请将公式包装在 <code class="docutils literal notranslate"><span class="pre">$$</span></code> 或 <code class="docutils literal notranslate"><span class="pre">\begin</span></code> 语句中。</p>
 <p>例如，</p>
@@ -738,7 +737,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 \[
   \int_0^\infty \frac{x^3}{e^x-1}\,dx = \frac{\pi^4}{15}
 \]</div>
-<section id="latex">
+<div class="section" id="latex">
 <span id="math-latex"></span><h3>Latex 风格的数学<a class="headerlink" href="#latex" title="永久链接至标题">¶</a></h3>
 <p>您可以使用 <code class="docutils literal notranslate"><span class="pre">amsmath</span></code> MyST 扩展启用解析 LaTeX 样式的数学块。通过将以下内容添加到 <code class="docutils literal notranslate"><span class="pre">_config.yml</span></code> 中来启用它</p>
 <div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">parse</span><span class="p">:</span>
@@ -768,8 +767,8 @@ a<span class="nb">_{</span>21<span class="nb">}&amp;</span> =b<span class="nb">_
 a_1=b_1+c_1\\
 a_2=b_2+c_2-d_2+e_2
 \end{gather*}\]</div>
-<div class="amsmath math notranslate nohighlight" id="equation-a8fa4848-1dd6-453a-93a6-21d4598ab76c">
-<span class="eqno">(2)<a class="headerlink" href="#equation-a8fa4848-1dd6-453a-93a6-21d4598ab76c" title="公式的永久链接">¶</a></span>\[\begin{align}
+<div class="amsmath math notranslate nohighlight" id="equation-673358c0-98f4-4ce1-96cb-58a7b13d0b1e">
+<span class="eqno">(2)<a class="headerlink" href="#equation-673358c0-98f4-4ce1-96cb-58a7b13d0b1e" title="公式的永久链接">¶</a></span>\[\begin{align}
 a_{11}&amp; =b_{11}&amp;
   a_{12}&amp; =b_{12}\\
 a_{21}&amp; =b_{21}&amp;
@@ -777,11 +776,11 @@ a_{21}&amp; =b_{21}&amp;
 \end{align}\]</div>
 <div class="admonition seealso">
 <p class="admonition-title">参见</p>
-<p>MyST 教程有 <a class="reference external" href="https://myst-parser.readthedocs.io/en/latest/syntax/optional.html#syntax-math" title="(在 MyST Parser v0.15.1)"><span class="xref myst">dollar 数学语法</span></a>，<a class="reference external" href="https://myst-parser.readthedocs.io/en/latest/syntax/optional.html#syntax-amsmath" title="(在 MyST Parser v0.15.1)"><span class="xref myst">LaTeX 数学语法</span></a> 和 <a class="reference external" href="https://myst-parser.readthedocs.io/en/latest/syntax/optional.html#syntax-mathjax" title="(在 MyST Parser v0.15.1)"><span class="xref myst">MyST-Parser 如何与 MathJax 一起使用</span></a>。</p>
+<p>MyST 教程有 <a class="reference external" href="https://myst-parser.readthedocs.io/en/latest/syntax/optional.html#syntax-math" title="(在 MyST Parser v0.15.2)"><span class="xref myst">dollar 数学语法</span></a>，<a class="reference external" href="https://myst-parser.readthedocs.io/en/latest/syntax/optional.html#syntax-amsmath" title="(在 MyST Parser v0.15.2)"><span class="xref myst">LaTeX 数学语法</span></a> 和 <a class="reference external" href="https://myst-parser.readthedocs.io/en/latest/syntax/optional.html#syntax-mathjax" title="(在 MyST Parser v0.15.2)"><span class="xref myst">MyST-Parser 如何与 MathJax 一起使用</span></a>。</p>
 <p>对于高级用法，还请参见如何 <a class="reference internal" href="../advanced/sphinx.html#sphinx-tex-macros"><span class="std std-ref">定义 MathJax TeX 宏</span></a>。</p>
 </div>
-</section>
-<section id="id4">
+</div>
+<div class="section" id="id4">
 <h3>公式编号<a class="headerlink" href="#id4" title="永久链接至标题">¶</a></h3>
 <p>如果您希望对公式进行编号，以便以后可以引用它们，请使用 <strong>math 指令</strong>。看起来像这样：</p>
 <div class="highlight-md notranslate"><div class="highlight"><pre><span></span>```{math}
@@ -815,8 +814,8 @@ $$ (my_other_label)
 <p class="admonition-title">注解</p>
 <p>标签不能以整数开头，否则将无法被引用，如果被引用，则会引发警告消息。例如，不能引用 <code class="docutils literal notranslate"><span class="pre">:label:</span> <span class="pre">1</span></code> 和 <code class="docutils literal notranslate"><span class="pre">:label:</span> <span class="pre">1eq</span></code>。</p>
 </div>
-</section>
-<section id="id5">
+</div>
+<div class="section" id="id5">
 <h3>链接到公式<a class="headerlink" href="#id5" title="永久链接至标题">¶</a></h3>
 <p>如果您创建了带有标签的公式，则可以从文本内（以及跨页面！）链接到该公式。</p>
 <p>您可以使用通过 <code class="docutils literal notranslate"><span class="pre">{eq}</span></code> 角色提供的标签来引用公式。例如：</p>
@@ -833,9 +832,9 @@ $$ (my_other_label)
 <p class="admonition-title">注解</p>
 <p>LaTeX 环境中的 <code class="docutils literal notranslate"><span class="pre">\labels</span></code> 目前尚未识别，因此无法引用。我们希望在以后的更新中实现这一点(见 <a class="reference external" href="https://github.com/executablebooks/MyST-Parser/issues/202">executablebooks/MyST-Parser#202</a>)！</p>
 </div>
-</section>
-</section>
-</section>
+</div>
+</div>
+</div>
 
     <script type="text/x-thebe-config">
     {
@@ -860,12 +859,32 @@ $$ (my_other_label)
               </div>
               
         
-        <div class='prev-next-bottom'>
             
-    <a class='left-prev' id="prev-link" href="citations.html" title="previous page">引用和参考书目</a>
-    <a class='right-next' id="next-link" href="figures.html" title="next page"><code class="docutils literal notranslate"><span class="pre">image</span></code> 和 <code class="docutils literal notranslate"><span class="pre">figure</span></code></a>
 
-        </div>
+
+
+<div class='prev-next-bottom'>
+    
+    <div id="prev">
+        <a class="left-prev" href="citations.html" title="上一页 页">
+            <i class="prevnext-label fas fa-angle-left"></i>
+            <div class="prevnext-info">
+                <p class="prevnext-label">上一页</p>
+                <p class="prevnext-title">引用和参考书目</p>
+            </div>
+        </a>
+    </div>
+     <div id="next">
+        <a class="right-next" href="figures.html" title="下一页 页">
+            <div class="prevnext-info">
+                <p class="prevnext-label">下一页</p>
+                <p class="prevnext-title"><code class="docutils literal notranslate"><span class="pre">image</span></code> 和 <code class="docutils literal notranslate"><span class="pre">figure</span></code></p>
+            </div>
+            <i class="prevnext-label fas fa-angle-right"></i>
+        </a>
+     </div>
+
+</div>
         
         </div>
     </div>

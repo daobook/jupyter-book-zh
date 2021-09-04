@@ -4,8 +4,7 @@
 <html lang="zh">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>存储代码输出并插入到内容中</title>
     
   <link href="../../_static/css/theme.css" rel="stylesheet" />
@@ -23,8 +22,8 @@
       
 
     
-    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-book-theme.acff12b8f9c144ce68a297486a2fa670.css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/sphinx-book-theme.e8f53015daec13862f6db5e763c41738.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
@@ -32,16 +31,16 @@
     <link rel="stylesheet" type="text/css" href="../../_static/tabs.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/page.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/custom.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/xin-css/main.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/w3css/4/w3pro.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/w3css/4/w3mobile.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/w3css/4/w3.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/xin-css/main.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     
   <link rel="preload" as="script" href="../../_static/js/index.1c5a1a01449ed65a7b51.js">
 
-    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
     <script src="../../_static/doctools.js"></script>
@@ -84,19 +83,19 @@ var addUtterances = () => {
 }
 commentsRunWhenDOMLoaded(addUtterances);
 </script>
-    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.0/dist/embed-amd.js"></script>
-    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
-    <script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"TeX": {"Macros": {"N": "\\mathbb{N}", "floor": ["\\lfloor#1\\rfloor", 1], "bmat": ["\\left[\\begin{array}"], "emat": ["\\end{array}\\right]"]}}, "tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script >
         const thebe_selector = ".thebe,.cell"
         const thebe_selector_input = "pre,.cell_input div.highlight"
         const thebe_selector_output = ".output,.cell_output"
     </script>
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
-    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <script type="text/x-mathjax-config">MathJax.Hub.Config({"TeX": {"Macros": {"N": "\\mathbb{N}", "floor": ["\\lfloor#1\\rfloor", 1], "bmat": ["\\left[\\begin{array}"], "emat": ["\\end{array}\\right]"]}}, "tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
     <link rel="canonical" href="https://xinetzone.github.io/jupyter-book/content/executable/output-insert.html" />
     <link rel="shortcut icon" href="../../_static/page-logo.jfif"/>
     <link rel="index" title="索引" href="../../genindex.html" />
@@ -128,9 +127,9 @@ commentsRunWhenDOMLoaded(addUtterances);
 </div><form class="bd-search d-flex align-items-center" action="../../search.html" method="get">
   <i class="icon fas fa-search"></i>
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
-</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item active">
-        <p class="caption" role="heading">
+        <p class="caption">
  <span class="caption-text">
   教程
  </span>
@@ -179,7 +178,7 @@ commentsRunWhenDOMLoaded(addUtterances);
   </a>
  </li>
 </ul>
-<p class="caption" role="heading">
+<p class="caption">
  <span class="caption-text">
   主题指南
  </span>
@@ -484,7 +483,7 @@ commentsRunWhenDOMLoaded(addUtterances);
   </a>
  </li>
 </ul>
-<p class="caption" role="heading">
+<p class="caption">
  <span class="caption-text">
   参考
  </span>
@@ -511,7 +510,7 @@ commentsRunWhenDOMLoaded(addUtterances);
   </a>
  </li>
 </ul>
-<p class="caption" role="heading">
+<p class="caption">
  <span class="caption-text">
   关于 Jupyter Book
  </span>
@@ -663,7 +662,7 @@ commentsRunWhenDOMLoaded(addUtterances);
             <div class="tocsection onthispage pt-5 pb-3">
                 <i class="fas fa-list"></i> Contents
             </div>
-            <nav id="bd-toc-nav">
+            <nav id="bd-toc-nav" aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#glue">
@@ -758,24 +757,24 @@ commentsRunWhenDOMLoaded(addUtterances);
         
               <div>
                 
-  <section id="content-code-outputs-glue">
+  <div class="section" id="content-code-outputs-glue">
 <span id="id1"></span><h1>存储代码输出并插入到内容中<a class="headerlink" href="#content-code-outputs-glue" title="永久链接至标题">¶</a></h1>
 <p>您经常希望在一个笔记本中运行分析，并将它们插入到文档的其他地方。例如，如果你想包含一个图，或者如果你想引用你做过的一个分析。</p>
-<aside class="margin sidebar">
+<div class="margin sidebar">
 <p class="sidebar-title"></p>
 <p>目前，<code class="docutils literal notranslate"><span class="pre">glue</span></code> 只适用于 Python。</p>
-</aside>
+</div>
 <p>来自 <a class="reference external" href="https://myst-nb.readthedocs.io/">MyST-NB</a> 的 <code class="docutils literal notranslate"><span class="pre">glue</span></code> 工具允许你在笔记本中添加一个键到变量中，然后通过引用该键在你的书中显示这些变量。它遵循两个步骤：</p>
 <ul class="simple">
 <li><p><strong>将变量绑定（glue）到名称（name）上</strong>。通过在您想在书中其他地方重用的变量上使用 <code class="docutils literal notranslate"><span class="pre">myst_nb.glue</span></code> 函数来实现这一点。您将为该变量指定一个日后可以引用的名称。</p></li>
 <li><p><strong>从页面内容中引用该变量</strong>。然后，在编写内容时，使用 <code class="docutils literal notranslate"><span class="pre">{glue:}</span></code> 角色将变量插入到文本中。</p></li>
 </ul>
 <p>我们将在下面更详细地介绍每个步骤。</p>
-<aside class="margin sidebar">
+<div class="margin sidebar">
 <p class="sidebar-title"></p>
 <p>有关角色的更多信息，请参阅 <a class="reference internal" href="../myst.html"><span class="doc std std-doc">MyST Markdown 概述</span></a>。</p>
-</aside>
-<section id="glue">
+</div>
+<div class="section" id="glue">
 <span id="glue-gluing"></span><h2>把变量 glue 在你的笔记本上<a class="headerlink" href="#glue" title="永久链接至标题">¶</a></h2>
 <p>您可以使用 <code class="docutils literal notranslate"><span class="pre">myst_nb.glue()</span></code> 将变量的值赋给您选择的键。<code class="docutils literal notranslate"><span class="pre">glue</span></code> 将存储通常用于显示该变量的所有信息（例如，通过将变量放在代码单元格的末尾来显示该变量时发生的任何事情）。选择一个您将记住的键，因为您将在以后使用它。</p>
 <p>下面的代码将一个变量绑定在笔记本的 <code class="docutils literal notranslate"><span class="pre">&quot;cool_text&quot;</span></code> 键上：</p>
@@ -794,7 +793,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 </div>
 </div>
 <p>然后可以将其插入到文本中。在内容中添加 <code class="docutils literal notranslate"><span class="pre">{glue:}`cool_text`</span></code>，结果如下：<span class="pasted-inline"><code class="output text_plain docutils literal notranslate"><span class="pre">'here</span> <span class="pre">is</span> <span class="pre">some</span> <span class="pre">text!'</span></code></span>。</p>
-<section id="id2">
+<div class="section" id="id2">
 <h3>将数字、图和表绑定起来<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h3>
 <p>你可以把任何东西绑定在笔记本上，然后用 <code class="docutils literal notranslate"><span class="pre">{glue:}</span></code> 显示出来。这里我们将展示如何绑定<strong>数字和图像</strong>。我们将模拟一些数据并在其上运行一个简单的引导程序。我们将隐藏此过程大部分代码，以集中在绑定部分。</p>
 <div class="cell tag_hide-cell docutils container">
@@ -829,13 +828,13 @@ commentsRunWhenDOMLoaded(addUtterances);
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>3.0006467554090754
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2.998269248690492
 </pre></div>
 </div>
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2.9882928121202266
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2.986024906653744
 </pre></div>
 </div>
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>3.012996093941383
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>3.0105870884933004
 </pre></div>
 </div>
 </div>
@@ -911,33 +910,33 @@ commentsRunWhenDOMLoaded(addUtterances);
   <tbody>
     <tr>
       <th>0</th>
-      <td>3.075544</td>
-      <td>3.524621</td>
-      <td>2.957950</td>
+      <td>3.236786</td>
+      <td>2.663274</td>
+      <td>3.313494</td>
     </tr>
     <tr>
       <th>1</th>
-      <td>3.120152</td>
-      <td>2.822234</td>
-      <td>2.866887</td>
+      <td>2.874729</td>
+      <td>2.888184</td>
+      <td>2.906788</td>
     </tr>
     <tr>
       <th>2</th>
-      <td>2.960115</td>
-      <td>2.886280</td>
-      <td>2.945771</td>
+      <td>2.886826</td>
+      <td>3.070225</td>
+      <td>2.985214</td>
     </tr>
     <tr>
       <th>3</th>
-      <td>3.247486</td>
-      <td>2.894169</td>
-      <td>3.304696</td>
+      <td>2.901106</td>
+      <td>3.195858</td>
+      <td>2.706086</td>
     </tr>
     <tr>
       <th>4</th>
-      <td>2.950029</td>
-      <td>3.045269</td>
-      <td>3.051378</td>
+      <td>3.223310</td>
+      <td>2.583306</td>
+      <td>3.036628</td>
     </tr>
   </tbody>
 </table>
@@ -947,12 +946,12 @@ commentsRunWhenDOMLoaded(addUtterances);
 <p class="admonition-title">小技巧</p>
 <p>由于我们将在稍后将此图粘贴到我们的文档中，您可能希望在这里删除输出，使用 <code class="docutils literal notranslate"><span class="pre">remove-output</span></code> 标记（参见 <a class="reference internal" href="../../interactive/hiding.html#hiding-remove-content"><span class="std std-ref">删除代码单元格内容</span></a>）。</p>
 </div>
-</section>
-<section id="glue-pasting">
+</div>
+<div class="section" id="glue-pasting">
 <span id="id3"></span><h3>将绑定的变量粘贴到页面中<a class="headerlink" href="#glue-pasting" title="永久链接至标题">¶</a></h3>
 <p>一旦你把变量绑定到它们的名字上，你就可以把这些变量粘贴到你的书的任何地方（甚至在其他页面上）。这些变量可以使用 <code class="docutils literal notranslate"><span class="pre">glue</span></code> 家族中的角色或指令之一进行<strong>粘贴</strong>。</p>
-</section>
-<section id="id4">
+</div>
+<div class="section" id="id4">
 <h3><code class="docutils literal notranslate"><span class="pre">glue</span></code> 角色/指令<a class="headerlink" href="#id4" title="永久链接至标题">¶</a></h3>
 <p>最简单的角色和指令是 <code class="docutils literal notranslate"><span class="pre">glue:any</span></code>，它将被粘合的输出分别内联粘贴或作为一个块，不需要其他格式。简单的添加：</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>```{glue:} your-key
@@ -972,29 +971,29 @@ commentsRunWhenDOMLoaded(addUtterances);
 <div class="highlight-md notranslate"><div class="highlight"><pre><span></span>In-line text; {glue:}`boot_mean`, and a figure: {glue:}`boot_fig`.
 </pre></div>
 </div>
-<p>In-line text; <span class="pasted-inline"><code class="output text_plain docutils literal notranslate"><span class="pre">3.0006467554090754</span></code></span>, and a figure: <span class="pasted-inline"><img alt="../../_images/output-insert_10_0.png" src="../../_images/output-insert_10_0.png" /></span>.</p>
+<p>In-line text; <span class="pasted-inline"><code class="output text_plain docutils literal notranslate"><span class="pre">2.998269248690492</span></code></span>, and a figure: <span class="pasted-inline"><img alt="../../_images/output-insert_10_0.png" src="../../_images/output-insert_10_0.png" /></span>.</p>
 <div class="admonition tip">
 <p class="admonition-title">小技巧</p>
 <p>我们建议在绘制内联图时使用更宽、更短的图形，其比值约为 6x2。例如，这是一个从引导程序中排序的方法的内联图：<span class="pasted-inline"><img alt="../../_images/output-insert_10_1.png" src="../../_images/output-insert_10_1.png" /></span>。它可以用来做一个不太复杂的视觉点！想了解更多，请查看<a class="reference external" href="https://en.wikipedia.org/wiki/Sparkline">火花线是如何使用的</a>。</p>
 </div>
 <p>接下来，我们将介绍一些更具体的粘贴功能，它可以让您更好地控制粘贴后的输出在页面中的外观。</p>
-</section>
-</section>
-<section id="id5">
+</div>
+</div>
+<div class="section" id="id5">
 <h2>控制粘贴的输出<a class="headerlink" href="#id5" title="永久链接至标题">¶</a></h2>
 <p>您可以使用子命令 <code class="docutils literal notranslate"><span class="pre">{glue:}</span></code> 来控制粘贴的输出。这些可以这样使用：<code class="docutils literal notranslate"><span class="pre">{glue:subcommand}`key`</span></code>。这些子命令允许您控制粘贴输出的更多外观、感觉和内容。</p>
 <div class="admonition tip">
 <p class="admonition-title">小技巧</p>
 <p>当你使用 <code class="docutils literal notranslate"><span class="pre">{glue:}</span></code> 时，你实际上是在使用 <code class="docutils literal notranslate"><span class="pre">{glue:any}</span></code> 的简写。这是一个通用的命令，它不会对你要粘的东西做很多假设。</p>
 </div>
-<section id="glue-text">
+<div class="section" id="glue-text">
 <h3><code class="docutils literal notranslate"><span class="pre">glue:text</span></code> 角色<a class="headerlink" href="#glue-text" title="永久链接至标题">¶</a></h3>
 <p><code class="docutils literal notranslate"><span class="pre">glue:text</span></code> 角色特定于文本输出。例如，以下文字:</p>
 <div class="highlight-md notranslate"><div class="highlight"><pre><span></span>The mean of the bootstrapped distribution was {glue:text}`boot_mean` (95% confidence interval {glue:text}`boot_clo`/{glue:text}`boot_chi`).
 </pre></div>
 </div>
 <p>呈现的是：</p>
-<p>The mean of the bootstrapped distribution was <span class="pasted-text">3.0006467554090754</span> (95% confidence interval <span class="pasted-text">2.9882928121202266</span>/<span class="pasted-text">3.012996093941383</span>)</p>
+<p>The mean of the bootstrapped distribution was <span class="pasted-text">2.998269248690492</span> (95% confidence interval <span class="pasted-text">2.986024906653744</span>/<span class="pasted-text">3.0105870884933004</span>)</p>
 <div class="admonition note">
 <p class="admonition-title">注解</p>
 <p><code class="docutils literal notranslate"><span class="pre">glue:text</span></code> 仅适用于包含 <code class="docutils literal notranslate"><span class="pre">text/plain</span></code> 输出的 glue 变量。</p>
@@ -1004,8 +1003,8 @@ commentsRunWhenDOMLoaded(addUtterances);
 <li><p><code class="docutils literal notranslate"><span class="pre">{glue:text}`mykey:formatstring`</span></code></p></li>
 </ul>
 <p>例如，<code class="docutils literal notranslate"><span class="pre">My</span> <span class="pre">rounded</span> <span class="pre">mean:</span> <span class="pre">{glue:text}`boot_mean:.2f`</span> </code> 将被渲染为： My rounded mean: <span class="pasted-text">3.00</span> (95% CI: <span class="pasted-text">2.99</span>/<span class="pasted-text">3.01</span>)。</p>
-</section>
-<section id="glue-figure">
+</div>
+<div class="section" id="glue-figure">
 <h3><code class="docutils literal notranslate"><span class="pre">glue:figure</span></code> 指令<a class="headerlink" href="#glue-figure" title="永久链接至标题">¶</a></h3>
 <p>使用 <code class="docutils literal notranslate"><span class="pre">glue:figure</span></code>，你可以对类似于 figure 的对象应用更多的格式，比如给它们一个标题和可参考的标签。例如，</p>
 <div class="highlight-md notranslate"><div class="highlight"><pre><span></span>```{glue:figure} boot_fig
@@ -1017,14 +1016,12 @@ This is a <span class="gs">**caption**</span>, with an embedded <span class="sb"
 </pre></div>
 </div>
 <p>生成如下图：</p>
-<figure class="align-default" id="fig-boot" style="width: 300px">
+<div class="figure align-default" id="fig-boot" style="width: 300px">
 <div class="cell_output docutils container">
 <img alt="../../_images/output-insert_10_0.png" src="../../_images/output-insert_10_0.png" />
 </div>
-<figcaption>
-<p><span class="caption-number">图 10 </span><span class="caption-text">This is a <strong>caption</strong>, with an embedded <code class="docutils literal notranslate"><span class="pre">{glue:text}</span></code> element: <span class="pasted-text">3.00</span>!</span><a class="headerlink" href="#fig-boot" title="永久链接至图片">¶</a></p>
-</figcaption>
-</figure>
+<p class="caption"><span class="caption-number">图 10 </span><span class="caption-text">This is a <strong>caption</strong>, with an embedded <code class="docutils literal notranslate"><span class="pre">{glue:text}</span></code> element: <span class="pasted-text">3.00</span>!</span><a class="headerlink" href="#fig-boot" title="永久链接至图片">¶</a></p>
+</div>
 <p>后来,代码</p>
 <div class="highlight-md notranslate"><div class="highlight"><pre><span></span>Here is a {ref}`reference to the figure &lt;fig-boot&gt;`
 </pre></div>
@@ -1041,7 +1038,7 @@ A caption for a pandas table.
 </pre></div>
 </div>
 <p>被渲染成</p>
-<figure class="align-default" id="tbl-df" style="width: 300px">
+<div class="figure align-default" id="tbl-df" style="width: 300px">
 <div class="cell_output docutils container">
 <div class="output text_html"><div>
 <style scoped>
@@ -1069,43 +1066,41 @@ A caption for a pandas table.
   <tbody>
     <tr>
       <th>0</th>
-      <td>3.075544</td>
-      <td>3.524621</td>
-      <td>2.957950</td>
+      <td>3.236786</td>
+      <td>2.663274</td>
+      <td>3.313494</td>
     </tr>
     <tr>
       <th>1</th>
-      <td>3.120152</td>
-      <td>2.822234</td>
-      <td>2.866887</td>
+      <td>2.874729</td>
+      <td>2.888184</td>
+      <td>2.906788</td>
     </tr>
     <tr>
       <th>2</th>
-      <td>2.960115</td>
-      <td>2.886280</td>
-      <td>2.945771</td>
+      <td>2.886826</td>
+      <td>3.070225</td>
+      <td>2.985214</td>
     </tr>
     <tr>
       <th>3</th>
-      <td>3.247486</td>
-      <td>2.894169</td>
-      <td>3.304696</td>
+      <td>2.901106</td>
+      <td>3.195858</td>
+      <td>2.706086</td>
     </tr>
     <tr>
       <th>4</th>
-      <td>2.950029</td>
-      <td>3.045269</td>
-      <td>3.051378</td>
+      <td>3.223310</td>
+      <td>2.583306</td>
+      <td>3.036628</td>
     </tr>
   </tbody>
 </table>
 </div></div></div>
-<figcaption>
-<p><span class="caption-number">图 11 </span><span class="caption-text">A caption for a pandas table.</span><a class="headerlink" href="#tbl-df" title="永久链接至图片">¶</a></p>
-</figcaption>
-</figure>
-</section>
-<section id="glue-math">
+<p class="caption"><span class="caption-number">图 11 </span><span class="caption-text">A caption for a pandas table.</span><a class="headerlink" href="#tbl-df" title="永久链接至图片">¶</a></p>
+</div>
+</div>
+<div class="section" id="glue-math">
 <h3><code class="docutils literal notranslate"><span class="pre">glue:math</span></code> 指令<a class="headerlink" href="#glue-math" title="永久链接至标题">¶</a></h3>
 <p><code class="docutils literal notranslate"><span class="pre">glue:math</span></code> 指令特定于 LaTeX 数学输出（包含 <code class="docutils literal notranslate"><span class="pre">text/latex</span></code> MIME 类型的粘合变量），其工作原理类似于 <a class="reference external" href="https://www.sphinx-doc.org/en/1.8/usage/restructuredtext/directives.html#math">Sphinx math 指令</a>。例如，我们用这段代码粘合一个等式：</p>
 <div class="cell docutils container">
@@ -1137,12 +1132,12 @@ A caption for a pandas table.
 <p class="admonition-title">注解</p>
 <p><code class="docutils literal notranslate"><span class="pre">glue:math</span></code> 仅适用于包含 <code class="docutils literal notranslate"><span class="pre">text/latex</span></code>  输出的粘合变量。</p>
 </div>
-</section>
-</section>
-<section id="id6">
+</div>
+</div>
+<div class="section" id="id6">
 <h2>高级 <code class="docutils literal notranslate"><span class="pre">glue</span></code> 用例<a class="headerlink" href="#id6" title="永久链接至标题">¶</a></h2>
 <p>下面是 <code class="docutils literal notranslate"><span class="pre">glue</span></code> 子模块的一些更具体、更高级的用法。</p>
-<section id="id7">
+<div class="section" id="id7">
 <h3>粘贴到表<a class="headerlink" href="#id7" title="永久链接至标题">¶</a></h3>
 <p>除了粘贴输出块或内联文本外，还可以直接粘贴到表中。这允许您使用在其他单元格或其他笔记本中生成的输出来组成结构化数据的复杂集合。例如，下面的 Markdown 表：</p>
 <div class="highlight-md notranslate"><div class="highlight"><pre><span></span>| name                            |       plot                    | mean                      | ci                                                |
@@ -1163,19 +1158,19 @@ A caption for a pandas table.
 <tbody>
 <tr class="row-even"><td class="text-align:center"><p>histogram and raw text</p></td>
 <td class="text-align:center"><p><span class="pasted-inline"><img alt="../../_images/output-insert_10_0.png" src="../../_images/output-insert_10_0.png" /></span></p></td>
-<td><p><span class="pasted-inline"><code class="output text_plain docutils literal notranslate"><span class="pre">3.0006467554090754</span></code></span></p></td>
-<td><p><span class="pasted-inline"><code class="output text_plain docutils literal notranslate"><span class="pre">2.9882928121202266</span></code></span>-<span class="pasted-inline"><code class="output text_plain docutils literal notranslate"><span class="pre">3.012996093941383</span></code></span></p></td>
+<td><p><span class="pasted-inline"><code class="output text_plain docutils literal notranslate"><span class="pre">2.998269248690492</span></code></span></p></td>
+<td><p><span class="pasted-inline"><code class="output text_plain docutils literal notranslate"><span class="pre">2.986024906653744</span></code></span>-<span class="pasted-inline"><code class="output text_plain docutils literal notranslate"><span class="pre">3.0105870884933004</span></code></span></p></td>
 </tr>
 <tr class="row-odd"><td class="text-align:center"><p>sorted means and formatted text</p></td>
 <td class="text-align:center"><p><span class="pasted-inline"><img alt="../../_images/output-insert_10_1.png" src="../../_images/output-insert_10_1.png" /></span></p></td>
-<td><p><span class="pasted-text">3.001</span></p></td>
-<td><p><span class="pasted-text">2.988</span>-<span class="pasted-text">3.013</span></p></td>
+<td><p><span class="pasted-text">2.998</span></p></td>
+<td><p><span class="pasted-text">2.986</span>-<span class="pasted-text">3.011</span></p></td>
 </tr>
 </tbody>
 </table>
-</section>
-</section>
-</section>
+</div>
+</div>
+</div>
 
     <script type="text/x-thebe-config">
     {
@@ -1200,12 +1195,32 @@ A caption for a pandas table.
               </div>
               
         
-        <div class='prev-next-bottom'>
             
-    <a class='left-prev' id="prev-link" href="../code-outputs.html" title="previous page">格式化代码输出</a>
-    <a class='right-next' id="next-link" href="../../interactive/interactive.html" title="next page">交互式数据可视化</a>
 
-        </div>
+
+
+<div class='prev-next-bottom'>
+    
+    <div id="prev">
+        <a class="left-prev" href="../code-outputs.html" title="上一页 页">
+            <i class="prevnext-label fas fa-angle-left"></i>
+            <div class="prevnext-info">
+                <p class="prevnext-label">上一页</p>
+                <p class="prevnext-title">格式化代码输出</p>
+            </div>
+        </a>
+    </div>
+     <div id="next">
+        <a class="right-next" href="../../interactive/interactive.html" title="下一页 页">
+            <div class="prevnext-info">
+                <p class="prevnext-label">下一页</p>
+                <p class="prevnext-title">交互式数据可视化</p>
+            </div>
+            <i class="prevnext-label fas fa-angle-right"></i>
+        </a>
+     </div>
+
+</div>
         
         </div>
     </div>

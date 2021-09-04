@@ -4,8 +4,7 @@
 <html lang="zh">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>创建书籍的源文件</title>
     
   <link href="../_static/css/theme.css" rel="stylesheet" />
@@ -23,8 +22,8 @@
       
 
     
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-book-theme.acff12b8f9c144ce68a297486a2fa670.css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.e8f53015daec13862f6db5e763c41738.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
@@ -32,16 +31,16 @@
     <link rel="stylesheet" type="text/css" href="../_static/tabs.css" />
     <link rel="stylesheet" type="text/css" href="../_static/page.css" />
     <link rel="stylesheet" type="text/css" href="../_static/custom.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/xin-css/main.css" />
     <link rel="stylesheet" type="text/css" href="../_static/w3css/4/w3pro.css" />
     <link rel="stylesheet" type="text/css" href="../_static/w3css/4/w3mobile.css" />
     <link rel="stylesheet" type="text/css" href="../_static/w3css/4/w3.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/xin-css/main.css" />
     <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     
   <link rel="preload" as="script" href="../_static/js/index.1c5a1a01449ed65a7b51.js">
 
-    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
@@ -84,12 +83,12 @@ var addUtterances = () => {
 }
 commentsRunWhenDOMLoaded(addUtterances);
 </script>
-    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.0/dist/embed-amd.js"></script>
-    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
-    <script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script >
         const thebe_selector = ".thebe,.cell"
         const thebe_selector_input = "pre,.cell_input div.highlight"
         const thebe_selector_output = ".output,.cell_output"
@@ -126,9 +125,9 @@ commentsRunWhenDOMLoaded(addUtterances);
 </div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
   <i class="icon fas fa-search"></i>
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
-</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item active">
-        <p class="caption" role="heading">
+        <p class="caption">
  <span class="caption-text">
   教程
  </span>
@@ -177,7 +176,7 @@ commentsRunWhenDOMLoaded(addUtterances);
   </a>
  </li>
 </ul>
-<p class="caption" role="heading">
+<p class="caption">
  <span class="caption-text">
   主题指南
  </span>
@@ -482,7 +481,7 @@ commentsRunWhenDOMLoaded(addUtterances);
   </a>
  </li>
 </ul>
-<p class="caption" role="heading">
+<p class="caption">
  <span class="caption-text">
   参考
  </span>
@@ -509,7 +508,7 @@ commentsRunWhenDOMLoaded(addUtterances);
   </a>
  </li>
 </ul>
-<p class="caption" role="heading">
+<p class="caption">
  <span class="caption-text">
   关于 Jupyter Book
  </span>
@@ -638,7 +637,7 @@ commentsRunWhenDOMLoaded(addUtterances);
             <div class="tocsection onthispage pt-5 pb-3">
                 <i class="fas fa-list"></i> Contents
             </div>
-            <nav id="bd-toc-nav">
+            <nav id="bd-toc-nav" aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#id2">
@@ -705,22 +704,22 @@ commentsRunWhenDOMLoaded(addUtterances);
         
               <div>
                 
-  <section id="id1">
+  <div class="section" id="id1">
 <h1>创建书籍的源文件<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h1>
 <p>现在，我们了解了书的结构，让我们创建一个样本书来学习。</p>
-<section id="id2">
+<div class="section" id="id2">
 <h2>快速生成样本书<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
 <p>Jupyter Book 随附了一个轻量级的示例书，可帮助您了解书的结构。通过运行以下命令来创建样本书：</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">jupyter</span><span class="o">-</span><span class="n">book</span> <span class="n">create</span> <span class="n">mynewbook</span><span class="o">/</span>
 </pre></div>
 </div>
 <p>这将生成一个迷你的 Jupyter Book，您可以在本地进行构建和浏览。它将为您做出一些决定，您可以在 <code class="docutils literal notranslate"><span class="pre">_config.yml</span></code> 中探索本书的配置，并在 <code class="docutils literal notranslate"><span class="pre">_toc.yml</span></code> 中探索书的结构。将此书用作灵感或作为工作的起点。</p>
-</section>
-<section id="id3">
+</div>
+<div class="section" id="id3">
 <h2>研究书的内容文件<a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h2>
 <p>首先，请注意至少有两种不同的内容文件：<strong>markdown</strong> 文件（以 <code class="docutils literal notranslate"><span class="pre">.md</span></code> 结尾）和 <strong>Jupyter Notebooks</strong>（以 <code class="docutils literal notranslate"><span class="pre">.ipynb</span></code> 结尾）。</p>
 <p>我们将在下面进行讨论。</p>
-<section id="markdown-md">
+<div class="section" id="markdown-md">
 <h3>Markdown 文件（<code class="docutils literal notranslate"><span class="pre">.md</span></code>）<a class="headerlink" href="#markdown-md" title="永久链接至标题">¶</a></h3>
 <p>Markdown 是一种 <a class="reference external" href="https://en.wikipedia.org/wiki/Markup_language">markup language</a> 的示例-一种用额外的字符和语法构造文本的方法，该字符和语法赋予其额外的含义（例如，使用<code class="docutils literal notranslate"><span class="pre">**bold**</span></code>表示 <strong>粗体</strong>。
 它非常流行，并在许多不同的技术平台上使用。</p>
@@ -770,22 +769,22 @@ Check out the content pages bundled with this sample book to see more.
 </ul>
 <p>所有内容文件必须有一个页面标题(指定为第一个标题)。所有随后的标题必须线性增加(所以没有从 H1 跳转到 H3)。请参见 <a class="reference internal" href="../file-types/index.html#rules-all-content-types"><span class="std std-ref">所有内容类型的规则</span></a> 了解所有内容必须遵守的更多规则。</p>
 <p>想了解更多关于 MyST markdown 的信息以及你可以用它做的所有事情，请查看 <a class="reference internal" href="../content/myst.html"><span class="doc std std-doc">MyST Markdown 概述</span></a>。</p>
-</section>
-<section id="jupyter-notebooks-ipynb">
+</div>
+<div class="section" id="jupyter-notebooks-ipynb">
 <h3>Jupyter Notebooks (<code class="docutils literal notranslate"><span class="pre">.ipynb</span></code>)<a class="headerlink" href="#jupyter-notebooks-ipynb" title="永久链接至标题">¶</a></h3>
 <p>我们要注意的另一种类型是一个以 <code class="docutils literal notranslate"><span class="pre">.ipynb</span></code> 结尾的 <strong>Jupyter Notebook</strong> 的内容。
 Jupyter Notebook 集计算内容和叙述内容于一体。
 每个笔记本都与一个 <strong>kernel</strong> (又名 Python、R、Julia 等)相关联，该内核定义了用于执行笔记本计算内容的语言。</p>
 <p>默认情况下，当 Jupyter Book 构建你的书，<strong>笔记本将被执行，其输出缓存</strong>。在后续构建中，只有当代码发生更改时，笔记本页面才会重新执行。</p>
-<aside class="margin sidebar">
+<div class="margin sidebar">
 <p class="sidebar-title">✨带有文本文件的笔记本✨</p>
 <p>您还可以将 Jupyter 笔记本存储为 markdown 文件或其他文本文件。查看 <a class="reference internal" href="../file-types/myst-notebooks.html"><span class="doc std std-doc">完全用 Markdown 书写笔记本</span></a> 和 <a class="reference internal" href="../file-types/jupytext.html"><span class="doc std std-doc">自定义笔记本格式和 Jupytext</span></a>。</p>
-</aside>
+</div>
 <p>任何由笔记本产生的输出都会被插入到你的内置笔记本中(尽管它们可能不在你的输入笔记本中)。通过这种方式，您不需要将笔记本的输出存储在存储库中。更多信息请参见 <a class="reference internal" href="../content/execute.html"><span class="doc std std-doc">执行并缓存页面</span></a>。</p>
 <p>还有许多其他有趣的事情你可以做的笔记本内容作为你的书的一部分。我们建议查看 <a class="reference internal" href="../content/code-outputs.html"><span class="doc std std-doc">格式化代码输出</span></a> 以及 <a class="reference internal" href="../interactive/interactive.html"><span class="doc std std-doc">交互式数据可视化</span></a> 来开始使用 Jupyter notebook。</p>
-</section>
-</section>
-<section id="id4">
+</div>
+</div>
+<div class="section" id="id4">
 <h2>检查配置文件<a class="headerlink" href="#id4" title="永久链接至标题">¶</a></h2>
 <p>除了这些内容文件之外，您的书还有一个<strong>配置文件</strong> (<code class="docutils literal notranslate"><span class="pre">_config.yml</span></code>))。
 这在很多方面控制了你的书的行为。</p>
@@ -814,8 +813,8 @@ Jupyter Notebook 集计算内容和叙述内容于一体。
 </pre></div>
 </div>
 <p>查看配置文件中的其他内容，并将其引用到本文档中的页面中，以了解它的功能。</p>
-</section>
-<section id="id5">
+</div>
+<div class="section" id="id5">
 <h2>你的书的目录<a class="headerlink" href="#id5" title="永久链接至标题">¶</a></h2>
 <p>最后，你的书也有一个<strong>目录</strong>告诉 Jupyter Book 你的每个内容源文件应该去哪里。</p>
 <div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="p p-Indicator">-</span> <span class="nt">file</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">intro</span>
@@ -827,8 +826,8 @@ Jupyter Notebook 集计算内容和叙述内容于一体。
 TOC 的第一项总是你的书的登陆页：人们在看你的书时看到的第一页。</p>
 <p>后续页面按顺序定义。
 除了定义一个页面列表之外，你还可以做很多事情——请参阅 <a class="reference internal" href="../customize/toc.html"><span class="doc std std-doc">Structure the Table of Contents</span></a> 来了解更多关于结构化你的书的信息。</p>
-</section>
-<section id="id6">
+</div>
+<div class="section" id="id6">
 <h2>创建自己的内容文件<a class="headerlink" href="#id6" title="永久链接至标题">¶</a></h2>
 <p>现在您已经看到了一些示例内容文件，请尝试创建您自己的内容文件!</p>
 <p>在包含所有示例书内容的文件夹中，创建一个名为 <code class="docutils literal notranslate"><span class="pre">mymarkdownfile.md</span></code> 的新文件。填入以下内容:</p>
@@ -848,12 +847,12 @@ Here is a [<span class="nt">reference to the intro</span>](<span class="na">intr
 <li><p><code class="docutils literal notranslate"><span class="pre">[link</span> <span class="pre">text](link-target)</span></code> 语法是你在 markdown 中指定链接的方式。这里我们已经链接到另一个页面，以及我们上面创建的标签。</p></li>
 </ul>
 <p>在构建图书时，您将在输出中看到这些链接是如何解析的。</p>
-</section>
-<section id="id7">
+</div>
+<div class="section" id="id7">
 <h2>下一步：构建你的书<a class="headerlink" href="#id7" title="永久链接至标题">¶</a></h2>
 <p>现在您已经有了一个 Jupyter Book 文件夹结构，您可以为图书的每个页面创建 HTML(或 PDF)。这将在下一节中讨论。</p>
-</section>
-</section>
+</div>
+</div>
 
     <script type="text/x-thebe-config">
     {
@@ -878,12 +877,32 @@ Here is a [<span class="nt">reference to the intro</span>](<span class="na">intr
               </div>
               
         
-        <div class='prev-next-bottom'>
             
-    <a class='left-prev' id="prev-link" href="overview.html" title="previous page">概述</a>
-    <a class='right-next' id="next-link" href="build.html" title="next page">建立你的书</a>
 
-        </div>
+
+
+<div class='prev-next-bottom'>
+    
+    <div id="prev">
+        <a class="left-prev" href="overview.html" title="上一页 页">
+            <i class="prevnext-label fas fa-angle-left"></i>
+            <div class="prevnext-info">
+                <p class="prevnext-label">上一页</p>
+                <p class="prevnext-title">概述</p>
+            </div>
+        </a>
+    </div>
+     <div id="next">
+        <a class="right-next" href="build.html" title="下一页 页">
+            <div class="prevnext-info">
+                <p class="prevnext-label">下一页</p>
+                <p class="prevnext-title">建立你的书</p>
+            </div>
+            <i class="prevnext-label fas fa-angle-right"></i>
+        </a>
+     </div>
+
+</div>
         
         </div>
     </div>

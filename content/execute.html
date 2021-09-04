@@ -4,8 +4,7 @@
 <html lang="zh">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>执行并缓存页面</title>
     
   <link href="../_static/css/theme.css" rel="stylesheet" />
@@ -23,8 +22,8 @@
       
 
     
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-book-theme.acff12b8f9c144ce68a297486a2fa670.css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.e8f53015daec13862f6db5e763c41738.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
@@ -32,16 +31,16 @@
     <link rel="stylesheet" type="text/css" href="../_static/tabs.css" />
     <link rel="stylesheet" type="text/css" href="../_static/page.css" />
     <link rel="stylesheet" type="text/css" href="../_static/custom.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/xin-css/main.css" />
     <link rel="stylesheet" type="text/css" href="../_static/w3css/4/w3pro.css" />
     <link rel="stylesheet" type="text/css" href="../_static/w3css/4/w3mobile.css" />
     <link rel="stylesheet" type="text/css" href="../_static/w3css/4/w3.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/xin-css/main.css" />
     <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     
   <link rel="preload" as="script" href="../_static/js/index.1c5a1a01449ed65a7b51.js">
 
-    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
@@ -84,12 +83,12 @@ var addUtterances = () => {
 }
 commentsRunWhenDOMLoaded(addUtterances);
 </script>
-    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.0/dist/embed-amd.js"></script>
-    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
-    <script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script >
         const thebe_selector = ".thebe,.cell"
         const thebe_selector_input = "pre,.cell_input div.highlight"
         const thebe_selector_output = ".output,.cell_output"
@@ -126,9 +125,9 @@ commentsRunWhenDOMLoaded(addUtterances);
 </div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
   <i class="icon fas fa-search"></i>
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
-</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item active">
-        <p class="caption" role="heading">
+        <p class="caption">
  <span class="caption-text">
   教程
  </span>
@@ -177,7 +176,7 @@ commentsRunWhenDOMLoaded(addUtterances);
   </a>
  </li>
 </ul>
-<p class="caption" role="heading">
+<p class="caption">
  <span class="caption-text">
   主题指南
  </span>
@@ -482,7 +481,7 @@ commentsRunWhenDOMLoaded(addUtterances);
   </a>
  </li>
 </ul>
-<p class="caption" role="heading">
+<p class="caption">
  <span class="caption-text">
   参考
  </span>
@@ -509,7 +508,7 @@ commentsRunWhenDOMLoaded(addUtterances);
   </a>
  </li>
 </ul>
-<p class="caption" role="heading">
+<p class="caption">
  <span class="caption-text">
   关于 Jupyter Book
  </span>
@@ -661,7 +660,7 @@ commentsRunWhenDOMLoaded(addUtterances);
             <div class="tocsection onthispage pt-5 pb-3">
                 <i class="fas fa-list"></i> Contents
             </div>
-            <nav id="bd-toc-nav">
+            <nav id="bd-toc-nav" aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#id2">
@@ -726,7 +725,7 @@ commentsRunWhenDOMLoaded(addUtterances);
         
               <div>
                 
-  <section id="id1">
+  <div class="section" id="id1">
 <h1>执行并缓存页面<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h1>
 <p>Jupyter Book 可以自动运行和缓存任何笔记本的页面。笔记本可以在每次构建文档时运行，也可以在本地缓存，以便只有当笔记本中的代码单元发生更改时才会重新运行笔记本。</p>
 <p>缓存行为由 <a class="reference internal" href="../customize/config.html"><span class="doc std std-doc"><code class="docutils literal notranslate"><span class="pre">_config.yml</span></code> 文件</span></a> 中的 <code class="docutils literal notranslate"><span class="pre">execute:</span></code> 部分控制。有关每个配置选项及其效果，请参见下面的部分。</p>
@@ -734,7 +733,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 <p class="admonition-title">小技巧</p>
 <p>如果你想执行 Markdown 文件中的代码，你可以使用 MyST Markdown 中的 <code class="docutils literal notranslate"><span class="pre">{code-cell}</span></code> 指令。查看 <a class="reference internal" href="../file-types/myst-notebooks.html"><span class="doc std std-doc">完全用 Markdown 书写笔记本</span></a> 以获取更多信息。</p>
 </div>
-<section id="id2">
+<div class="section" id="id2">
 <h2>触发笔记本执行<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
 <p>默认情况下，Jupyter Book 将执行任何具有笔记本结构且至少缺少一个输出的内容文件。这相当于 <code class="docutils literal notranslate"><span class="pre">_config.yml</span></code> 中的以下配置:</p>
 <div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">execute</span><span class="p">:</span>
@@ -757,8 +756,8 @@ commentsRunWhenDOMLoaded(addUtterances);
   <span class="nt">execute_notebooks</span><span class="p">:</span> <span class="s">&#39;off&#39;</span>
 </pre></div>
 </div>
-</section>
-<section id="execute-exclude">
+</div>
+<div class="section" id="execute-exclude">
 <span id="id3"></span><h2>从执行中排除文件<a class="headerlink" href="#execute-exclude" title="永久链接至标题">¶</a></h2>
 <p>要<strong>从执行中排除某些文件模式</strong>，请使用以下配置：</p>
 <div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">execute</span><span class="p">:</span>
@@ -773,8 +772,8 @@ commentsRunWhenDOMLoaded(addUtterances);
 <p class="admonition-title">小技巧</p>
 <p>要自动排除目录之外的所有文件，请参见 <a class="reference internal" href="../basics/build.html#config-exclude-non-toc-files"><span class="std std-ref">禁用在 TOC 中未指定的构建文件</span></a></p>
 </div>
-</section>
-<section id="execute-cache">
+</div>
+<div class="section" id="execute-cache">
 <span id="id4"></span><h2>缓存笔记本执行<a class="headerlink" href="#execute-cache" title="永久链接至标题">¶</a></h2>
 <p>您也可以使用 <a class="reference external" href="https://github.com/executablebooks/jupyter-cache">jupyter-cache</a> 缓存执行笔记本页面的结果。在这种情况下，当执行页面时，它的输出将存储在本地数据库中。这允许您确保文档中的输出是最新的，同时节省时间，避免不必要的重新执行。它还允许您在 <code class="docutils literal notranslate"><span class="pre">git</span></code> 存储库中存储 <code class="docutils literal notranslate"><span class="pre">.ipynb</span></code> 文件，而不需要它们的输出，但在构建站点时仍然利用缓存节省时间。</p>
 <p>当你重新构建你的网站时，会发生以下情况：</p>
@@ -794,15 +793,15 @@ commentsRunWhenDOMLoaded(addUtterances);
 </pre></div>
 </div>
 <p>该路径应该指向一个<strong>空文件夹</strong>，或者一个文件夹中已经<strong>存在的 jupyter cache</strong>。</p>
-</section>
-<section id="id5">
+</div>
+<div class="section" id="id5">
 <h2>执行配置<a class="headerlink" href="#id5" title="永久链接至标题">¶</a></h2>
 <p>你可以使用 <code class="docutils literal notranslate"><span class="pre">_config.yml</span></code> 在项目级别控制笔记本的执行和输出内容的处理，但在某些情况下，也在笔记本和代码单元级别。下面我们将探讨几种实现这一目标的方法。</p>
 <div class="admonition seealso">
 <p class="admonition-title">参见</p>
 <p><a class="reference internal" href="metadata.html#jupyter-cell-tags"><span class="std std-ref">将元数据添加到笔记本</span></a> 和 <a class="reference internal" href="code-outputs.html"><span class="doc std std-doc">格式化代码输出</span></a>.</p>
 </div>
-<section id="id6">
+<div class="section" id="id6">
 <h3>执行工作目录<a class="headerlink" href="#id6" title="永久链接至标题">¶</a></h3>
 <div class="admonition important">
 <p class="admonition-title">重要</p>
@@ -814,8 +813,8 @@ commentsRunWhenDOMLoaded(addUtterances);
   <span class="nt">run_in_temp</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">true</span>
 </pre></div>
 </div>
-</section>
-<section id="id7">
+</div>
+<div class="section" id="id7">
 <h3>设置执行超时<a class="headerlink" href="#id7" title="永久链接至标题">¶</a></h3>
 <p>执行超时定义了每个笔记本单元格允许运行的最大时间(以秒为单位)。如果执行时间较长，将引发异常。默认值是 30 秒，因此对于长时间运行的单元格，您可能希望指定一个更高的值。<code class="docutils literal notranslate"><span class="pre">timeout</span></code> 选项也可以设置为 <code class="docutils literal notranslate"><span class="pre">-1</span></code>，以删除对执行时间的任何限制。</p>
 <p>你可以在 <code class="docutils literal notranslate"><span class="pre">_config.yml</span></code> 中设置所有笔记本执行的超时时间：</p>
@@ -832,8 +831,8 @@ commentsRunWhenDOMLoaded(addUtterances);
 <span class="p">}</span>
 </pre></div>
 </div>
-</section>
-<section id="id8">
+</div>
+<div class="section" id="id8">
 <h3>处理引发错误的代码<a class="headerlink" href="#id8" title="永久链接至标题">¶</a></h3>
 <p>在某些情况下，您可能希望有意地显示不起作用的代码（例如，显示错误消息）</p>
 <p>你可以在 <code class="docutils literal notranslate"><span class="pre">_config.yml</span></code> 中允许所有笔记本出错：</p>
@@ -871,7 +870,7 @@ print(thisvariabledoesntexist)
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="o">&lt;</span><span class="n">ipython</span><span class="o">-</span><span class="nb">input</span><span class="o">-</span><span class="mi">1</span><span class="o">-</span><span class="mi">125</span><span class="n">c53ec1b82</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_2306</span><span class="o">/</span><span class="mf">1091175326.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
 <span class="ne">----&gt; </span><span class="mi">1</span> <span class="nb">print</span><span class="p">(</span><span class="n">thisvariabledoesntexist</span><span class="p">)</span>
 
 <span class="ne">NameError</span>: name &#39;thisvariabledoesntexist&#39; is not defined
@@ -879,8 +878,8 @@ print(thisvariabledoesntexist)
 </div>
 </div>
 </div>
-</section>
-<section id="id9">
+</div>
+<div class="section" id="id9">
 <h3>处理产生标准错误的代码<a class="headerlink" href="#id9" title="永久链接至标题">¶</a></h3>
 <p>您可能还希望控制如何处理 stderr 输出。</p>
 <p>或者，您可以使用 <code class="docutils literal notranslate"><span class="pre">nb_output_stderr</span></code> 配置值在全局配置级别配置如何处理 stdout。</p>
@@ -921,8 +920,8 @@ print(&quot;this is some stderr&quot;, file=sys.stderr)
 </div>
 </div>
 </div>
-</section>
-<section id="id10">
+</div>
+<div class="section" id="id10">
 <h3>处理产生标准输出的代码<a class="headerlink" href="#id10" title="永久链接至标题">¶</a></h3>
 <p>与 stderr 类似，您可以使用 <code class="docutils literal notranslate"><span class="pre">remove-stdout</span></code> 标记在单元格级别删除 stdout，通过此标记</p>
 <div class="highlight-md notranslate"><div class="highlight"><pre><span></span>```{code-cell} ipython3
@@ -949,9 +948,9 @@ print(&quot;this is some stderr&quot;, file=sys.stderr)
 </div>
 </div>
 </div>
-</section>
-</section>
-<section id="id11">
+</div>
+</div>
+<div class="section" id="id11">
 <h2>执行统计数据<a class="headerlink" href="#id11" title="永久链接至标题">¶</a></h2>
 <p>当笔记本被执行时，某些统计数据被 MyST-NB 存储在构建环境中。访问和可视化这些数据的最简单的方法是使用 <code class="docutils literal notranslate"><span class="pre">{nb-exec-table}</span></code> 指令。</p>
 <div class="admonition seealso">
@@ -975,111 +974,111 @@ print(&quot;this is some stderr&quot;, file=sys.stderr)
 </thead>
 <tbody>
 <tr class="row-even"><td><p>basics/create</p></td>
-<td><p>2021-07-15 08:40</p></td>
+<td><p>2021-09-04 08:58</p></td>
 <td><p>cache</p></td>
-<td><p>1.8</p></td>
+<td><p>1.72</p></td>
 <td><p>✅</p></td>
 </tr>
 <tr class="row-odd"><td><p>content/code-outputs</p></td>
-<td><p>2021-07-15 08:40</p></td>
+<td><p>2021-09-04 08:58</p></td>
 <td><p>cache</p></td>
-<td><p>1.58</p></td>
+<td><p>1.56</p></td>
 <td><p>✅</p></td>
 </tr>
 <tr class="row-even"><td><p>content/executable/output-insert</p></td>
-<td><p>2021-07-15 08:40</p></td>
+<td><p>2021-09-04 08:58</p></td>
 <td><p>cache</p></td>
-<td><p>3.75</p></td>
+<td><p>3.6</p></td>
 <td><p>✅</p></td>
 </tr>
 <tr class="row-odd"><td><p>content/execute</p></td>
-<td><p>2021-07-15 08:40</p></td>
+<td><p>2021-09-04 08:58</p></td>
 <td><p>cache</p></td>
-<td><p>0.97</p></td>
+<td><p>1.01</p></td>
 <td><p>✅</p></td>
 </tr>
 <tr class="row-even"><td><p>content/layout</p></td>
-<td><p>2021-07-15 08:40</p></td>
+<td><p>2021-09-04 08:58</p></td>
 <td><p>cache</p></td>
 <td><p>1.86</p></td>
 <td><p>✅</p></td>
 </tr>
 <tr class="row-odd"><td><p>content/math</p></td>
-<td><p>2021-07-15 08:40</p></td>
+<td><p>2021-09-04 08:58</p></td>
 <td><p>cache</p></td>
 <td><p>2.02</p></td>
 <td><p>✅</p></td>
 </tr>
 <tr class="row-even"><td><p>content/references</p></td>
-<td><p>2021-07-15 08:40</p></td>
+<td><p>2021-09-04 08:58</p></td>
 <td><p>cache</p></td>
 <td><p>2.02</p></td>
 <td><p>✅</p></td>
 </tr>
 <tr class="row-odd"><td><p>customize/toc</p></td>
-<td><p>2021-07-15 08:40</p></td>
+<td><p>2021-09-04 08:58</p></td>
 <td><p>cache</p></td>
-<td><p>1.39</p></td>
+<td><p>1.25</p></td>
 <td><p>✅</p></td>
 </tr>
 <tr class="row-even"><td><p>file-types/jupytext</p></td>
-<td><p>2021-07-15 08:40</p></td>
+<td><p>2021-09-04 08:58</p></td>
 <td><p>cache</p></td>
-<td><p>0.85</p></td>
+<td><p>0.93</p></td>
 <td><p>✅</p></td>
 </tr>
 <tr class="row-odd"><td><p>file-types/myst-notebooks</p></td>
-<td><p>2021-07-15 08:40</p></td>
+<td><p>2021-09-04 08:58</p></td>
 <td><p>cache</p></td>
 <td><p>2.02</p></td>
 <td><p>✅</p></td>
 </tr>
 <tr class="row-even"><td><p>file-types/notebooks</p></td>
-<td><p>2021-07-15 08:40</p></td>
+<td><p>2021-09-04 08:58</p></td>
 <td><p>cache</p></td>
-<td><p>2.84</p></td>
+<td><p>2.98</p></td>
 <td><p>✅</p></td>
 </tr>
 <tr class="row-odd"><td><p>interactive/hiding</p></td>
-<td><p>2021-07-15 08:40</p></td>
+<td><p>2021-09-04 08:58</p></td>
 <td><p>cache</p></td>
-<td><p>1.83</p></td>
+<td><p>1.95</p></td>
 <td><p>✅</p></td>
 </tr>
 <tr class="row-even"><td><p>interactive/interactive</p></td>
-<td><p>2021-07-15 08:40</p></td>
+<td><p>2021-09-04 08:58</p></td>
 <td><p>cache</p></td>
-<td><p>2.35</p></td>
+<td><p>3.02</p></td>
 <td><p>✅</p></td>
 </tr>
 <tr class="row-odd"><td><p>interactive/launchbuttons</p></td>
-<td><p>2021-07-15 08:40</p></td>
+<td><p>2021-09-04 08:58</p></td>
 <td><p>cache</p></td>
 <td><p>0.91</p></td>
 <td><p>✅</p></td>
 </tr>
 <tr class="row-even"><td><p>interactive/thebe</p></td>
-<td><p>2021-07-15 08:40</p></td>
+<td><p>2021-09-04 08:58</p></td>
 <td><p>cache</p></td>
-<td><p>4.43</p></td>
+<td><p>1.4</p></td>
 <td><p>✅</p></td>
 </tr>
 <tr class="row-odd"><td><p>reference/cheatsheet</p></td>
-<td><p>2021-07-15 08:40</p></td>
+<td><p>2021-09-04 08:58</p></td>
 <td><p>cache</p></td>
-<td><p>2.88</p></td>
+<td><p>2.97</p></td>
 <td><p>✅</p></td>
 </tr>
 <tr class="row-even"><td><p>start/overview</p></td>
-<td><p>2021-07-15 08:40</p></td>
+<td><p>2021-09-04 08:58</p></td>
 <td><p>cache</p></td>
-<td><p>1.52</p></td>
+<td><p>1.42</p></td>
 <td><p>✅</p></td>
 </tr>
 </tbody>
 </table>
-</section>
-</section>
+</div>
+</div>
 
     <script type="text/x-thebe-config">
     {
@@ -1104,12 +1103,32 @@ print(&quot;this is some stderr&quot;, file=sys.stderr)
               </div>
               
         
-        <div class='prev-next-bottom'>
             
-    <a class='left-prev' id="prev-link" href="executable/index.html" title="previous page">写可执行内容</a>
-    <a class='right-next' id="next-link" href="code-outputs.html" title="next page">格式化代码输出</a>
 
-        </div>
+
+
+<div class='prev-next-bottom'>
+    
+    <div id="prev">
+        <a class="left-prev" href="executable/index.html" title="上一页 页">
+            <i class="prevnext-label fas fa-angle-left"></i>
+            <div class="prevnext-info">
+                <p class="prevnext-label">上一页</p>
+                <p class="prevnext-title">写可执行内容</p>
+            </div>
+        </a>
+    </div>
+     <div id="next">
+        <a class="right-next" href="code-outputs.html" title="下一页 页">
+            <div class="prevnext-info">
+                <p class="prevnext-label">下一页</p>
+                <p class="prevnext-title">格式化代码输出</p>
+            </div>
+            <i class="prevnext-label fas fa-angle-right"></i>
+        </a>
+     </div>
+
+</div>
         
         </div>
     </div>

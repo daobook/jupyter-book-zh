@@ -4,8 +4,7 @@
 <html lang="zh">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>自动创建书</title>
     
   <link href="../_static/css/theme.css" rel="stylesheet" />
@@ -23,8 +22,8 @@
       
 
     
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-book-theme.acff12b8f9c144ce68a297486a2fa670.css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.e8f53015daec13862f6db5e763c41738.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
@@ -32,16 +31,16 @@
     <link rel="stylesheet" type="text/css" href="../_static/tabs.css" />
     <link rel="stylesheet" type="text/css" href="../_static/page.css" />
     <link rel="stylesheet" type="text/css" href="../_static/custom.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/xin-css/main.css" />
     <link rel="stylesheet" type="text/css" href="../_static/w3css/4/w3pro.css" />
     <link rel="stylesheet" type="text/css" href="../_static/w3css/4/w3mobile.css" />
     <link rel="stylesheet" type="text/css" href="../_static/w3css/4/w3.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/xin-css/main.css" />
     <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     
   <link rel="preload" as="script" href="../_static/js/index.1c5a1a01449ed65a7b51.js">
 
-    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
@@ -84,12 +83,12 @@ var addUtterances = () => {
 }
 commentsRunWhenDOMLoaded(addUtterances);
 </script>
-    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.0/dist/embed-amd.js"></script>
-    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
-    <script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script >
         const thebe_selector = ".thebe,.cell"
         const thebe_selector_input = "pre,.cell_input div.highlight"
         const thebe_selector_output = ".output,.cell_output"
@@ -126,9 +125,9 @@ commentsRunWhenDOMLoaded(addUtterances);
 </div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
   <i class="icon fas fa-search"></i>
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
-</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item active">
-        <p class="caption" role="heading">
+        <p class="caption">
  <span class="caption-text">
   教程
  </span>
@@ -177,7 +176,7 @@ commentsRunWhenDOMLoaded(addUtterances);
   </a>
  </li>
 </ul>
-<p class="caption" role="heading">
+<p class="caption">
  <span class="caption-text">
   主题指南
  </span>
@@ -482,7 +481,7 @@ commentsRunWhenDOMLoaded(addUtterances);
   </a>
  </li>
 </ul>
-<p class="caption" role="heading">
+<p class="caption">
  <span class="caption-text">
   参考
  </span>
@@ -509,7 +508,7 @@ commentsRunWhenDOMLoaded(addUtterances);
   </a>
  </li>
 </ul>
-<p class="caption" role="heading">
+<p class="caption">
  <span class="caption-text">
   关于 Jupyter Book
  </span>
@@ -661,7 +660,7 @@ commentsRunWhenDOMLoaded(addUtterances);
             <div class="tocsection onthispage pt-5 pb-3">
                 <i class="fas fa-list"></i> Contents
             </div>
-            <nav id="bd-toc-nav">
+            <nav id="bd-toc-nav" aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#create-a-book-from-a-simple-template">
@@ -689,10 +688,10 @@ commentsRunWhenDOMLoaded(addUtterances);
         
               <div>
                 
-  <section id="create-a-template-book">
+  <div class="section" id="create-a-template-book">
 <span id="id1"></span><h1>自动创建书<a class="headerlink" href="#create-a-template-book" title="永久链接至标题">¶</a></h1>
 <p>本节介绍如何自动创建书籍，以便更快地入门。</p>
-<section id="create-a-book-from-a-simple-template">
+<div class="section" id="create-a-book-from-a-simple-template">
 <h2>Create a book from a simple template<a class="headerlink" href="#create-a-book-from-a-simple-template" title="永久链接至标题">¶</a></h2>
 <p>Jupyter Book lets you quickly generate a book structure from templates.
 This section covers the process of creating a template book and building it as an alternative to manually creating the files in your book.</p>
@@ -709,6 +708,7 @@ This section covers the process of creating a template book and building it as a
 Options:
   --cookiecutter  Use cookiecutter to interactively create a Jupyter Book
                   template.
+
   -h, --help      Show this message and exit.
 </pre></div>
 </div>
@@ -720,23 +720,23 @@ Options:
 </pre></div>
 </div>
 <p>This will generate a mini Jupyter Book that you can both build and explore locally. It will have a few decisions made for you, and you can explore the configuration of the book in <code class="docutils literal notranslate"><span class="pre">_config.yml</span></code> and its structure in <code class="docutils literal notranslate"><span class="pre">_toc.yml</span></code>. Use this book as inspiration, or as a starting point to work from.</p>
-</section>
-<section id="create-a-more-complete-book-from-interactive-prompts">
+</div>
+<div class="section" id="create-a-more-complete-book-from-interactive-prompts">
 <h2>Create a more complete book from interactive prompts<a class="headerlink" href="#create-a-more-complete-book-from-interactive-prompts" title="永久链接至标题">¶</a></h2>
 <p>This option is best if you’d like to answer a few questions from the command line in order to create a template book that is more complex and customized for your use-case.</p>
 <p>Jupyter Book also provides a <a class="reference external" href="https://github.com/executablebooks/cookiecutter-jupyter-book">Jupyter Book cookiecutter</a> that can be used to interactively create a book directory structure.</p>
-<aside class="margin sidebar">
+<div class="margin sidebar">
 <p class="sidebar-title"></p>
 <p><a class="reference external" href="https://cookiecutter.readthedocs.io/en/latest/"><code class="docutils literal notranslate"><span class="pre">cookiecutter</span></code></a> is a Python tool for quickly generating folders from a templatized repository. Jupyter Book uses <code class="docutils literal notranslate"><span class="pre">cookiecutter</span></code> under the hood.</p>
-</aside>
+</div>
 <p>The cookiecutter is suitable for users that want to create a ready-to-go repository to host their book that includes pre-populated metafiles such as <code class="docutils literal notranslate"><span class="pre">README</span></code>, <code class="docutils literal notranslate"><span class="pre">LICENSE</span></code>, <code class="docutils literal notranslate"><span class="pre">CONDUCT</span></code>, <code class="docutils literal notranslate"><span class="pre">CONTRIBUTING</span></code>, etc., as well as GitHub Actions workflow files to <a class="reference internal" href="../publish/gh-pages.html#publish-gh-actions"><span class="std std-ref">Automatically host your book with GitHub Actions</span></a>.</p>
 <p>To try the cookiecutter template, run the following command:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>jupyter-book create mynewbook/ --cookiecutter
 </pre></div>
 </div>
 <p>For more help, see the <a class="reference external" href="https://github.com/executablebooks/cookiecutter-jupyter-book">Jupyter Book cookiecutter GitHub repository</a>, or run:</p>
-</section>
-<section id="create-book-files-from-a-table-of-contents">
+</div>
+<div class="section" id="create-book-files-from-a-table-of-contents">
 <h2>Create book files from a Table of Contents<a class="headerlink" href="#create-book-files-from-a-table-of-contents" title="永久链接至标题">¶</a></h2>
 <p>It is possible to use a <code class="docutils literal notranslate"><span class="pre">_toc.yml</span></code> file in order to create the skeleton of a book automatically.
 This is useful if you wish to quickly generate empty files from a single structure, and then populate them with content yourselves.</p>
@@ -762,8 +762,8 @@ Options:
 </div>
 </div>
 </div>
-</section>
-</section>
+</div>
+</div>
 
     <script type="text/x-thebe-config">
     {
@@ -788,12 +788,32 @@ Options:
               </div>
               
         
-        <div class='prev-next-bottom'>
             
-    <a class='left-prev' id="prev-link" href="../file-types/restructuredtext.html" title="previous page">reStructuredText 文件</a>
-    <a class='right-next' id="next-link" href="../structure/sections-headers.html" title="next page">标题和章节如何映射到书的结构</a>
 
-        </div>
+
+
+<div class='prev-next-bottom'>
+    
+    <div id="prev">
+        <a class="left-prev" href="../file-types/restructuredtext.html" title="上一页 页">
+            <i class="prevnext-label fas fa-angle-left"></i>
+            <div class="prevnext-info">
+                <p class="prevnext-label">上一页</p>
+                <p class="prevnext-title">reStructuredText 文件</p>
+            </div>
+        </a>
+    </div>
+     <div id="next">
+        <a class="right-next" href="../structure/sections-headers.html" title="下一页 页">
+            <div class="prevnext-info">
+                <p class="prevnext-label">下一页</p>
+                <p class="prevnext-title">标题和章节如何映射到书的结构</p>
+            </div>
+            <i class="prevnext-label fas fa-angle-right"></i>
+        </a>
+     </div>
+
+</div>
         
         </div>
     </div>

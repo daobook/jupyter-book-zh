@@ -4,8 +4,7 @@
 <html lang="zh">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>为 Jupyter Book 贡献</title>
     
   <link href="../_static/css/theme.css" rel="stylesheet" />
@@ -23,8 +22,8 @@
       
 
     
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-book-theme.acff12b8f9c144ce68a297486a2fa670.css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.e8f53015daec13862f6db5e763c41738.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
@@ -32,16 +31,16 @@
     <link rel="stylesheet" type="text/css" href="../_static/tabs.css" />
     <link rel="stylesheet" type="text/css" href="../_static/page.css" />
     <link rel="stylesheet" type="text/css" href="../_static/custom.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/xin-css/main.css" />
     <link rel="stylesheet" type="text/css" href="../_static/w3css/4/w3pro.css" />
     <link rel="stylesheet" type="text/css" href="../_static/w3css/4/w3mobile.css" />
     <link rel="stylesheet" type="text/css" href="../_static/w3css/4/w3.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/xin-css/main.css" />
     <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     
   <link rel="preload" as="script" href="../_static/js/index.1c5a1a01449ed65a7b51.js">
 
-    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
@@ -84,12 +83,12 @@ var addUtterances = () => {
 }
 commentsRunWhenDOMLoaded(addUtterances);
 </script>
-    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.0/dist/embed-amd.js"></script>
-    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
-    <script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script >
         const thebe_selector = ".thebe,.cell"
         const thebe_selector_input = "pre,.cell_input div.highlight"
         const thebe_selector_output = ".output,.cell_output"
@@ -126,9 +125,9 @@ commentsRunWhenDOMLoaded(addUtterances);
 </div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
   <i class="icon fas fa-search"></i>
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
-</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item active">
-        <p class="caption" role="heading">
+        <p class="caption">
  <span class="caption-text">
   教程
  </span>
@@ -177,7 +176,7 @@ commentsRunWhenDOMLoaded(addUtterances);
   </a>
  </li>
 </ul>
-<p class="caption" role="heading">
+<p class="caption">
  <span class="caption-text">
   主题指南
  </span>
@@ -482,7 +481,7 @@ commentsRunWhenDOMLoaded(addUtterances);
   </a>
  </li>
 </ul>
-<p class="caption" role="heading">
+<p class="caption">
  <span class="caption-text">
   参考
  </span>
@@ -509,7 +508,7 @@ commentsRunWhenDOMLoaded(addUtterances);
   </a>
  </li>
 </ul>
-<p class="caption" role="heading">
+<p class="caption">
  <span class="caption-text">
   关于 Jupyter Book
  </span>
@@ -638,7 +637,7 @@ commentsRunWhenDOMLoaded(addUtterances);
             <div class="tocsection onthispage pt-5 pb-3">
                 <i class="fas fa-list"></i> Contents
             </div>
-            <nav id="bd-toc-nav">
+            <nav id="bd-toc-nav" aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#id1">
@@ -725,18 +724,18 @@ commentsRunWhenDOMLoaded(addUtterances);
         
               <div>
                 
-  <section id="jupyter-book">
+  <div class="section" id="jupyter-book">
 <h1>为 Jupyter Book 贡献<a class="headerlink" href="#jupyter-book" title="永久链接至标题">¶</a></h1>
 <p>欢迎来到 <code class="docutils literal notranslate"><span class="pre">jupyter-book</span></code> 仓库！我们很高兴你能来这里并想要有所贡献。✨</p>
 <div class="admonition- admonition">
 <p class="admonition-title">一定要看看我们的行为准则</p>
 <p>可执行书籍社区遵循<a class="reference external" href="https://github.com/executablebooks/.github/blob/master/CODE_OF_CONDUCT.md">行为准则</a>，以确保我们的在线空间是令人愉快的，包容性的，并对所有贡献者具有生产力。</p>
 </div>
-<section id="id1">
+<div class="section" id="id1">
 <h2>开发指南<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h2>
 <p>有关开发约定、实践和基础设施的信息，请参阅 <a class="reference external" href="https://github.com/executablebooks/.github/blob/master/CONTRIBUTING.md"><code class="docutils literal notranslate"><span class="pre">executablebooks/</span></code> 开发指南</a>。</p>
-</section>
-<section id="id2">
+</div>
+<div class="section" id="id2">
 <h2>文档指南<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
 <p>Jupyter Book 的文档是受到 <a class="reference external" href="https://diataxis.fr/">Diataxis 文档框架</a>的启发。这将文档分为四个主要区域：</p>
 <dl class="simple myst">
@@ -750,11 +749,11 @@ commentsRunWhenDOMLoaded(addUtterances);
 </dd>
 </dl>
 <p>这四个方面并不是  Jupyter Book 文档的<strong>严格规则</strong>，但是应该作为决定文档内容和位置的灵感。任何属于该框架的文档贡献（例如，添加一个新教程，添加一个 How to 部分）都是最受欢迎的！</p>
-</section>
-<section id="id3">
+</div>
+<div class="section" id="id3">
 <h2>入门指南<a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h2>
 <p>要开始使用 Jupyter Book 的<em>代码库</em>，请执行以下步骤：</p>
-<section id="id4">
+<div class="section" id="id4">
 <h3>克隆并安装该包<a class="headerlink" href="#id4" title="永久链接至标题">¶</a></h3>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git clone https://github.com/executablebooks/jupyter-book
 <span class="nb">cd</span> jupyter-book
@@ -765,8 +764,8 @@ commentsRunWhenDOMLoaded(addUtterances);
 </pre></div>
 </div>
 <p>这将在本地安装 Jupyter Book，以及测试它所需的包和确保代码风格的包。</p>
-</section>
-<section id="pre-commit">
+</div>
+<div class="section" id="pre-commit">
 <h3>安装 pre-commit 钩子<a class="headerlink" href="#pre-commit" title="永久链接至标题">¶</a></h3>
 <p>在提交之前，Jupyter Book 使用 <a class="reference external" href="https://pre-commit.com/">pre-commit</a> 来确保代码风格和质量。这确保了 Jupyter Book 的外观和感觉随时间和开发人员保持一致。<code class="docutils literal notranslate"><span class="pre">pre-commit</span></code> 是在使用 <code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">-e</span> <span class="pre">.[code_style]</span></code> 安装 Jupyter Book 时安装的。</p>
 <p>要为您的克隆启用 <code class="docutils literal notranslate"><span class="pre">pre-commit</span></code>，请从存储库根目录运行以下命令：</p>
@@ -774,8 +773,8 @@ commentsRunWhenDOMLoaded(addUtterances);
 </pre></div>
 </div>
 <p>从现在开始，当你提交到 Jupyter Book 时，<code class="docutils literal notranslate"><span class="pre">pre-commit</span></code> 将确保你的代码根据一些检查看起来是正确的。</p>
-</section>
-<section id="id5">
+</div>
+<div class="section" id="id5">
 <h3>运行测试<a class="headerlink" href="#id5" title="永久链接至标题">¶</a></h3>
 <p>对于代码测试，Jupyter Book 使用 <a class="reference external" href="https://docs.pytest.org">pytest</a>。可以使用以下命令运行所有测试，或仅运行不需要额外安装的测试：</p>
 <div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>&gt;&gt; pytest -m <span class="s1">&#39;not requires_chrome and not requires_tex&#39;</span>
@@ -790,29 +789,29 @@ commentsRunWhenDOMLoaded(addUtterances);
 <p class="admonition-title">注解</p>
 <p>Jupyter Book 使用 <a class="reference external" href="https://github.com/pytest-dev/pytest-xdist">pytest-xdist</a> 并行运行测试。您可以通过使用 <code class="docutils literal notranslate"><span class="pre">-n</span></code> 参数和您希望使用的 CPU 数量运行测试来利用这一点。例如：<code class="docutils literal notranslate"><span class="pre">pytest</span> <span class="pre">-n</span> <span class="pre">4</span></code> 这使得测试运行得更快。</p>
 </div>
-</section>
-<section id="pdf">
+</div>
+<div class="section" id="pdf">
 <h3>要测试 PDF 生成<a class="headerlink" href="#pdf" title="永久链接至标题">¶</a></h3>
 <p>如果你想测试（或尝试）PDF 的生成，请执行以下步骤：</p>
 <p><strong>通过 HTML 生成 PDF 文件</strong>请确保使用 <code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">-e</span> <span class="pre">.[pdfhtml]</span></code> 安装 Jupiter Book。这将安装 <a class="reference external" href="https://github.com/pyppeteer/pyppeteer"><code class="docutils literal notranslate"><span class="pre">pyppeteer</span></code></a>，它运行一个 headless chrome 会话来将你的书转换成 PDF。接下来，遵照 <a class="reference internal" href="../advanced/pdf.html#pdf-html"><span class="std std-ref">Build a PDF from your book HTML</span></a> 的安装说明。然后，您应该能够通过 HTML 构建图书的 PDF。</p>
 <p><strong>要通过 LaTeX 生成 PDF 文件</strong>，确保您在本地安装了一个可工作的 LaTeX 发行版。请按照 <a class="reference internal" href="../advanced/pdf.html#pdf-latex"><span class="std std-ref">Build a PDF using LaTeX</span></a> 说明进行操作。</p>
 <p>如果您已经安装了 HTML 和 LaTeX 生成的需求，那么您应该能够使用 pytest 运行完整的测试套件。</p>
-</section>
-<section id="github-actions-artifacts">
+</div>
+<div class="section" id="github-actions-artifacts">
 <h3>GitHub Actions Artifacts<a class="headerlink" href="#github-actions-artifacts" title="永久链接至标题">¶</a></h3>
 <p>每个 pull 请求都包含一个测试，即使用 <code class="docutils literal notranslate"><span class="pre">pdfhtml</span></code> 和 <code class="docutils literal notranslate"><span class="pre">pdflatex</span></code> 编写器将 <code class="docutils literal notranslate"><span class="pre">docs</span></code> 构建为 <code class="docutils literal notranslate"><span class="pre">PDF</span></code> 文件。这些测试构建 <code class="docutils literal notranslate"><span class="pre">pdf</span></code> 文件，然后将其保存为附加到每个运行的工作流的工件（artifact）。</p>
 <p>可以从<a class="reference external" href="https://github.com/actions/upload-artifact#where-does-the-upload-go">工作流运行的右上角</a>检索这些 <code class="docutils literal notranslate"><span class="pre">pdf</span></code> 文件。</p>
-</section>
-</section>
-<section id="id6">
+</div>
+</div>
+<div class="section" id="id6">
 <h2>Jupyter Book 的仓库结构<a class="headerlink" href="#id6" title="永久链接至标题">¶</a></h2>
 <p>本节将介绍 <a class="reference external" href="https://github.com/executablebooks/jupyter-book">Jupyter Book 存储库</a> 的一般结构，并解释哪些部分位于何处。</p>
 <p>Jupyter Book 存储库包含两个主要部分：</p>
-<section id="myst-markdown">
+<div class="section" id="myst-markdown">
 <h3>MyST Markdown<a class="headerlink" href="#myst-markdown" title="永久链接至标题">¶</a></h3>
 <p>Jupyter Book 支持名为“MyST Markdown”的 Jupyter Markdown 扩展版本。有关 MyST 语法和如何使用它的信息，请参见 <a class="reference external" href="https://myst-parser.readthedocs.io/en/latest/using/syntax.html">MyST-Parser 文档</a>。</p>
-</section>
-<section id="python">
+</div>
+<div class="section" id="python">
 <h3>命令行工具和 Python 包<a class="headerlink" href="#python" title="永久链接至标题">¶</a></h3>
 <p>这是用来帮助创建和构建书籍。可以在 <a class="reference external" href="https://github.com/executablebooks/jupyter-book/tree/master/jupyter_book"><code class="docutils literal notranslate"><span class="pre">./jupyter_book</span></code></a> 中找到。</p>
 <ul class="simple">
@@ -822,12 +821,12 @@ commentsRunWhenDOMLoaded(addUtterances);
 <li><p><strong><code class="docutils literal notranslate"><span class="pre">toc.py</span></code> 模块准备目录</strong>。</p></li>
 </ul>
 <p>Jupyter Book 中其他模块处理更具体的功能。请参阅它们的模块文档字符串以获得更多信息。</p>
-</section>
-<section id="id7">
+</div>
+<div class="section" id="id7">
 <h3>Jupyter Book 模板<a class="headerlink" href="#id7" title="永久链接至标题">¶</a></h3>
 <p>Jupyter Book 捆绑了一个小的模板书来渲染内容。<code class="docutils literal notranslate"><span class="pre">jupyter-book</span> <span class="pre">build</span></code> 可以立即建立。可以在 <a class="reference external" href="https://github.com/executablebooks/jupyter-book/tree/master/jupyter_book/book_template"><code class="docutils literal notranslate"><span class="pre">jupyter_book/book_template</span></code></a> 中获取。</p>
-</section>
-<section id="id8">
+</div>
+<div class="section" id="id8">
 <h3>示例<a class="headerlink" href="#id8" title="永久链接至标题">¶</a></h3>
 <p>这里有一些示例，说明如何使用这些代码来帮助您入门。</p>
 <p>Here are a few examples of how this code gets used to help you get started.</p>
@@ -836,9 +835,9 @@ commentsRunWhenDOMLoaded(addUtterances);
 <li><p>当运行 <code class="docutils literal notranslate"><span class="pre">jupyter-book</span> <span class="pre">build</span> <span class="pre">mybook/</span></code> 时，<code class="docutils literal notranslate"><span class="pre">build.py</span></code> 模块循环遍历页面内容文件，并使用 <code class="docutils literal notranslate"><span class="pre">page/</span></code> 模块将每个文件转换为 HTML，并将其放在 <code class="docutils literal notranslate"><span class="pre">mybook/_build</span></code> 中。</p></li>
 </ul>
 <p>希望这个解释能让你了解情况，并帮助你理解这些部分是如何组合在一起的。如果你有任何问题，请随时<a class="reference external" href="https://github.com/executablebooks/jupyter-book/issues/new">打开一个 issue 寻求</a>帮助！</p>
-</section>
-</section>
-<section id="id9">
+</div>
+</div>
+<div class="section" id="id9">
 <h2>Jupyter Book 栈中的其他主要工具<a class="headerlink" href="#id9" title="永久链接至标题">¶</a></h2>
 <p>Jupyter Book 依赖于 Python/Sphinx 生态系统中的一组开源工具。这些工具做了许多繁重的工作，并且是许多改进和改变将需要的地方。以下是主要工具的列表以及它们支持的功能：</p>
 <ul class="simple">
@@ -848,8 +847,8 @@ commentsRunWhenDOMLoaded(addUtterances);
 <li><p><a class="reference internal" href="../reference/glossary.html#term-Jupyter-Cache"><span class="xref std std-term">Jupyter-Cache</span></a> 在构建时管理笔记本内容的执行和缓存。它是由 <a class="reference internal" href="../reference/glossary.html#term-MyST-NB"><span class="xref std std-term">MyST-NB</span></a> 控制。</p></li>
 <li><p><a class="reference internal" href="../reference/glossary.html#term-Sphinx-Book-Theme"><span class="xref std std-term">Sphinx Book Theme</span></a> 定义了 Jupyter Book 的外观和感觉，并且是大多数 CSS 规则的定义的。</p></li>
 </ul>
-</section>
-</section>
+</div>
+</div>
 
     <script type="text/x-thebe-config">
     {
@@ -874,12 +873,32 @@ commentsRunWhenDOMLoaded(addUtterances);
               </div>
               
         
-        <div class='prev-next-bottom'>
             
-    <a class='left-prev' id="prev-link" href="../explain/sphinx.html" title="previous page">How Jupyter Book and Sphinx relate to one another</a>
-    <a class='right-next' id="next-link" href="../customize/config.html" title="next page">配置参考</a>
 
-        </div>
+
+
+<div class='prev-next-bottom'>
+    
+    <div id="prev">
+        <a class="left-prev" href="../explain/sphinx.html" title="上一页 页">
+            <i class="prevnext-label fas fa-angle-left"></i>
+            <div class="prevnext-info">
+                <p class="prevnext-label">上一页</p>
+                <p class="prevnext-title">How Jupyter Book and Sphinx relate to one another</p>
+            </div>
+        </a>
+    </div>
+     <div id="next">
+        <a class="right-next" href="../customize/config.html" title="下一页 页">
+            <div class="prevnext-info">
+                <p class="prevnext-label">下一页</p>
+                <p class="prevnext-title">配置参考</p>
+            </div>
+            <i class="prevnext-label fas fa-angle-right"></i>
+        </a>
+     </div>
+
+</div>
         
         </div>
     </div>

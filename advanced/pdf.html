@@ -4,8 +4,7 @@
 <html lang="zh">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Build a PDF</title>
     
   <link href="../_static/css/theme.css" rel="stylesheet" />
@@ -23,8 +22,8 @@
       
 
     
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-book-theme.acff12b8f9c144ce68a297486a2fa670.css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.e8f53015daec13862f6db5e763c41738.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
@@ -32,16 +31,16 @@
     <link rel="stylesheet" type="text/css" href="../_static/tabs.css" />
     <link rel="stylesheet" type="text/css" href="../_static/page.css" />
     <link rel="stylesheet" type="text/css" href="../_static/custom.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/xin-css/main.css" />
     <link rel="stylesheet" type="text/css" href="../_static/w3css/4/w3pro.css" />
     <link rel="stylesheet" type="text/css" href="../_static/w3css/4/w3mobile.css" />
     <link rel="stylesheet" type="text/css" href="../_static/w3css/4/w3.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/xin-css/main.css" />
     <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     
   <link rel="preload" as="script" href="../_static/js/index.1c5a1a01449ed65a7b51.js">
 
-    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
@@ -84,12 +83,12 @@ var addUtterances = () => {
 }
 commentsRunWhenDOMLoaded(addUtterances);
 </script>
-    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.0/dist/embed-amd.js"></script>
-    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
-    <script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script >
         const thebe_selector = ".thebe,.cell"
         const thebe_selector_input = "pre,.cell_input div.highlight"
         const thebe_selector_output = ".output,.cell_output"
@@ -126,9 +125,9 @@ commentsRunWhenDOMLoaded(addUtterances);
 </div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
   <i class="icon fas fa-search"></i>
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
-</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item active">
-        <p class="caption" role="heading">
+        <p class="caption">
  <span class="caption-text">
   教程
  </span>
@@ -177,7 +176,7 @@ commentsRunWhenDOMLoaded(addUtterances);
   </a>
  </li>
 </ul>
-<p class="caption" role="heading">
+<p class="caption">
  <span class="caption-text">
   主题指南
  </span>
@@ -482,7 +481,7 @@ commentsRunWhenDOMLoaded(addUtterances);
   </a>
  </li>
 </ul>
-<p class="caption" role="heading">
+<p class="caption">
  <span class="caption-text">
   参考
  </span>
@@ -509,7 +508,7 @@ commentsRunWhenDOMLoaded(addUtterances);
   </a>
  </li>
 </ul>
-<p class="caption" role="heading">
+<p class="caption">
  <span class="caption-text">
   关于 Jupyter Book
  </span>
@@ -638,7 +637,7 @@ commentsRunWhenDOMLoaded(addUtterances);
             <div class="tocsection onthispage pt-5 pb-3">
                 <i class="fas fa-list"></i> Contents
             </div>
-            <nav id="bd-toc-nav">
+            <nav id="bd-toc-nav" aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#build-a-pdf-from-your-book-html">
@@ -705,7 +704,7 @@ commentsRunWhenDOMLoaded(addUtterances);
         
               <div>
                 
-  <section id="build-a-pdf">
+  <div class="section" id="build-a-pdf">
 <h1>Build a PDF<a class="headerlink" href="#build-a-pdf" title="永久链接至标题">¶</a></h1>
 <p>It is possible to build a single PDF that contains all of your book’s content. This
 page describes a couple ways to do so.</p>
@@ -714,12 +713,12 @@ page describes a couple ways to do so.</p>
 <p>PDF building is experimental, and may change or have bugs.</p>
 </div>
 <p>There are two approaches to building PDF files.</p>
-<section id="build-a-pdf-from-your-book-html">
+<div class="section" id="build-a-pdf-from-your-book-html">
 <span id="pdf-html"></span><h2>Build a PDF from your book HTML<a class="headerlink" href="#build-a-pdf-from-your-book-html" title="永久链接至标题">¶</a></h2>
 <p>It is possible to build a single PDF from your book’s HTML. This starts by
 converting all of your book’s content into a single HTML file, and then renders
 it as a PDF by emulating a browser from the command-line.</p>
-<section id="installation">
+<div class="section" id="installation">
 <h3>Installation<a class="headerlink" href="#installation" title="永久链接至标题">¶</a></h3>
 <p>Your system will need to use <code class="docutils literal notranslate"><span class="pre">pyppeteer</span></code> to parse the generated HTML for
 conversion to PDF.</p>
@@ -769,14 +768,14 @@ conversion to PDF.</p>
 <span class="n">wget</span>
 </pre></div>
 </div>
-<aside class="margin sidebar">
+<div class="margin sidebar">
 <p class="sidebar-title"></p>
 <p>In addition, if you get errors about libraries that don’t exist, check out
 <a class="reference external" href="https://circleci.com/orbs/registry/orb/threetreeslight/puppeteer">these install commands</a>
 to see if that fixes it. We warned you it was an experimental feature :-)</p>
-</aside>
-</section>
-<section id="build">
+</div>
+</div>
+<div class="section" id="build">
 <h3>Build<a class="headerlink" href="#build" title="永久链接至标题">¶</a></h3>
 <p>To build a single PDF from your book’s HTML, use the following command:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>jupyter-book build mybookname/ --builder pdfhtml
@@ -794,8 +793,8 @@ See <a class="reference external" href="https://github.com/miyakogi/pyppeteer/is
 for a potential fix, and <a class="reference external" href="https://github.com/executablebooks/jupyter-book/issues/593">this Jupyter Book issue</a>
 where we’re tracking the issue.</p>
 </div>
-</section>
-<section id="control-the-look-of-pdf-via-html">
+</div>
+<div class="section" id="control-the-look-of-pdf-via-html">
 <h3>Control the look of PDF via HTML<a class="headerlink" href="#control-the-look-of-pdf-via-html" title="永久链接至标题">¶</a></h3>
 <p>Because you are using HTML as an intermediary for your book’s PDF, you can control the look and feel of the HTML via your own CSS rules. Most CSS changes that you make to your HTML website will also persist in the PDF version of that website. For information about how to define your own CSS rules, see <a class="reference internal" href="html.html#custom-assets"><span class="std std-ref">Custom CSS or JavaScript</span></a>.</p>
 <p>To add CSS rules that <strong>only apply to the printed PDF</strong>, use the <code class="docutils literal notranslate"><span class="pre">&#64;media</span> <span class="pre">print</span></code> CSS pattern to define print-specific rules. These will <em>only</em> be applied when the HTML is being printed, and will not show up in your non-PDF website.</p>
@@ -808,9 +807,9 @@ where we’re tracking the issue.</p>
 </pre></div>
 </div>
 <p>The right Table of Contents would be present in your live website, but hidden when someone printed a PDF of your website.</p>
-</section>
-</section>
-<section id="build-a-pdf-using-latex">
+</div>
+</div>
+<div class="section" id="build-a-pdf-using-latex">
 <span id="pdf-latex"></span><h2>Build a PDF using LaTeX<a class="headerlink" href="#build-a-pdf-using-latex" title="永久链接至标题">¶</a></h2>
 <p>You can also use LaTeX to build a PDF of your book.
 This can behave differently depending on your operating system and <code class="docutils literal notranslate"><span class="pre">tex</span></code> setup.
@@ -822,7 +821,7 @@ This section tries to recommend a few best-practices.</p>
 <p>The default is to build your project as a single PDF file, however it is possible to build
 individual PDF files for each page of the project by enabling the <code class="docutils literal notranslate"><span class="pre">--individualpages</span></code> option
 when using the <code class="docutils literal notranslate"><span class="pre">pdflatex</span></code> builder.</p>
-<section id="id1">
+<div class="section" id="id1">
 <h3>Installation<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h3>
 <p>For <code class="docutils literal notranslate"><span class="pre">Debian</span></code>-based <code class="docutils literal notranslate"><span class="pre">Linux</span></code> platforms it is recommended to install the following packages:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo apt-get install texlive-latex-recommended texlive-latex-extra <span class="se">\</span>
@@ -834,8 +833,8 @@ when using the <code class="docutils literal notranslate"><span class="pre">pdfl
 <p>For <code class="docutils literal notranslate"><span class="pre">OSX</span></code> you may want to use <a class="reference external" href="http://www.tug.org/mactex/">MacTeX</a> which is a more
 user friendly approach. Alternatively you may also use <a class="reference external" href="https://www.tug.org/texlive/quickinstall.html">TeX Live</a>.</p>
 <p>For <code class="docutils literal notranslate"><span class="pre">Windows</span></code> users, please install <a class="reference external" href="https://www.tug.org/texlive/windows.html">TeX Live</a>.</p>
-</section>
-<section id="id2">
+</div>
+<div class="section" id="id2">
 <h3>Build<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h3>
 <p><code class="docutils literal notranslate"><span class="pre">jupyter-book</span></code> uses the <a class="reference external" href="https://github.com/executablebooks/sphinx-jupyterbook-latex">sphinx-jupyterbook-latex</a> package
 which handles much of the customised LaTeX infrastructure. A feature list of this package can be found
@@ -883,8 +882,8 @@ the <code class="docutils literal notranslate"><span class="pre">--individualpag
 <p>In the future we intend for this to produce latex documents more suitable to single pages
 (see <a class="reference external" href="https://github.com/executablebooks/jupyter-book/issues/904">issue #904</a>).</p>
 </div>
-</section>
-<section id="updating-the-name-of-the-global-pdf-file">
+</div>
+<div class="section" id="updating-the-name-of-the-global-pdf-file">
 <h3>Updating the name of the Global PDF file<a class="headerlink" href="#updating-the-name-of-the-global-pdf-file" title="永久链接至标题">¶</a></h3>
 <p>To update the name of your <code class="docutils literal notranslate"><span class="pre">PDF</span></code> file you can set the following in <code class="docutils literal notranslate"><span class="pre">_config.yml</span></code></p>
 <div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">latex</span><span class="p">:</span>
@@ -896,8 +895,8 @@ the <code class="docutils literal notranslate"><span class="pre">--individualpag
 <a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/configuration.html#confval-latex_documents">latex_documents</a>. It is typically inferred by <code class="docutils literal notranslate"><span class="pre">Sphinx</span></code> but when
 using <code class="docutils literal notranslate"><span class="pre">jupyter-book</span></code> naming the file in the <code class="docutils literal notranslate"><span class="pre">_config.yml</span></code> generally makes it
 easier to find.</p>
-</section>
-<section id="using-a-different-latex-engine">
+</div>
+<div class="section" id="using-a-different-latex-engine">
 <h3>Using a different LaTeX engine<a class="headerlink" href="#using-a-different-latex-engine" title="永久链接至标题">¶</a></h3>
 <p>The current default is to use <code class="docutils literal notranslate"><span class="pre">xelatex</span></code> to build <code class="docutils literal notranslate"><span class="pre">pdf</span></code> files.</p>
 <div class="admonition warning">
@@ -915,8 +914,8 @@ To revert the <code class="docutils literal notranslate"><span class="pre">LaTeX
 <p>The Sphinx documentation <a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/configuration.html#confval-latex_engine">for available builders</a>
 contains a full list of supported <code class="docutils literal notranslate"><span class="pre">latex</span></code> builders.</p>
 </div>
-</section>
-<section id="other-sphinx-latex-settings">
+</div>
+<div class="section" id="other-sphinx-latex-settings">
 <h3>Other Sphinx LaTeX settings<a class="headerlink" href="#other-sphinx-latex-settings" title="永久链接至标题">¶</a></h3>
 <p>Other <a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/configuration.html#confval-latex_engine">LaTeX settings</a> available
 to Sphinx can be passed through using the config section
@@ -927,9 +926,9 @@ of <code class="docutils literal notranslate"><span class="pre">Sphinx</span></c
     <span class="nt">latex_toplevel_sectioning</span><span class="p">:</span> <span class="s">&#39;part&#39;</span>
 </pre></div>
 </div>
-</section>
-</section>
-</section>
+</div>
+</div>
+</div>
 
     <script type="text/x-thebe-config">
     {
@@ -954,12 +953,32 @@ of <code class="docutils literal notranslate"><span class="pre">Sphinx</span></c
               </div>
               
         
-        <div class='prev-next-bottom'>
             
-    <a class='left-prev' id="prev-link" href="../basics/build.html" title="previous page">使用 Build 命令行界面</a>
-    <a class='right-next' id="next-link" href="../web/index.html" title="next page">Web and internet features</a>
 
-        </div>
+
+
+<div class='prev-next-bottom'>
+    
+    <div id="prev">
+        <a class="left-prev" href="../basics/build.html" title="上一页 页">
+            <i class="prevnext-label fas fa-angle-left"></i>
+            <div class="prevnext-info">
+                <p class="prevnext-label">上一页</p>
+                <p class="prevnext-title">使用 Build 命令行界面</p>
+            </div>
+        </a>
+    </div>
+     <div id="next">
+        <a class="right-next" href="../web/index.html" title="下一页 页">
+            <div class="prevnext-info">
+                <p class="prevnext-label">下一页</p>
+                <p class="prevnext-title">Web and internet features</p>
+            </div>
+            <i class="prevnext-label fas fa-angle-right"></i>
+        </a>
+     </div>
+
+</div>
         
         </div>
     </div>

@@ -4,8 +4,7 @@
 <html lang="zh">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Build a small example project</title>
     
   <link href="../_static/css/theme.css" rel="stylesheet" />
@@ -23,8 +22,8 @@
       
 
     
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-book-theme.acff12b8f9c144ce68a297486a2fa670.css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.e8f53015daec13862f6db5e763c41738.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
@@ -32,16 +31,16 @@
     <link rel="stylesheet" type="text/css" href="../_static/tabs.css" />
     <link rel="stylesheet" type="text/css" href="../_static/page.css" />
     <link rel="stylesheet" type="text/css" href="../_static/custom.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/xin-css/main.css" />
     <link rel="stylesheet" type="text/css" href="../_static/w3css/4/w3pro.css" />
     <link rel="stylesheet" type="text/css" href="../_static/w3css/4/w3mobile.css" />
     <link rel="stylesheet" type="text/css" href="../_static/w3css/4/w3.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/xin-css/main.css" />
     <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     
   <link rel="preload" as="script" href="../_static/js/index.1c5a1a01449ed65a7b51.js">
 
-    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
@@ -84,12 +83,12 @@ var addUtterances = () => {
 }
 commentsRunWhenDOMLoaded(addUtterances);
 </script>
-    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.0/dist/embed-amd.js"></script>
-    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
-    <script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script >
         const thebe_selector = ".thebe,.cell"
         const thebe_selector_input = "pre,.cell_input div.highlight"
         const thebe_selector_output = ".output,.cell_output"
@@ -126,9 +125,9 @@ commentsRunWhenDOMLoaded(addUtterances);
 </div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
   <i class="icon fas fa-search"></i>
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
-</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item active">
-        <p class="caption" role="heading">
+        <p class="caption">
  <span class="caption-text">
   教程
  </span>
@@ -177,7 +176,7 @@ commentsRunWhenDOMLoaded(addUtterances);
   </a>
  </li>
 </ul>
-<p class="caption" role="heading">
+<p class="caption">
  <span class="caption-text">
   主题指南
  </span>
@@ -482,7 +481,7 @@ commentsRunWhenDOMLoaded(addUtterances);
   </a>
  </li>
 </ul>
-<p class="caption" role="heading">
+<p class="caption">
  <span class="caption-text">
   参考
  </span>
@@ -509,7 +508,7 @@ commentsRunWhenDOMLoaded(addUtterances);
   </a>
  </li>
 </ul>
-<p class="caption" role="heading">
+<p class="caption">
  <span class="caption-text">
   关于 Jupyter Book
  </span>
@@ -638,7 +637,7 @@ commentsRunWhenDOMLoaded(addUtterances);
             <div class="tocsection onthispage pt-5 pb-3">
                 <i class="fas fa-list"></i> Contents
             </div>
-            <nav id="bd-toc-nav">
+            <nav id="bd-toc-nav" aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#mini-book-source-files">
@@ -666,7 +665,7 @@ commentsRunWhenDOMLoaded(addUtterances);
         
               <div>
                 
-  <section id="build-a-small-example-project">
+  <div class="section" id="build-a-small-example-project">
 <span id="example-project"></span><h1>Build a small example project<a class="headerlink" href="#build-a-small-example-project" title="永久链接至标题">¶</a></h1>
 <p>Now that you’ve built your first book, you may wish to get some inspiration from a more “complete” book example.</p>
 <p>This section describes the <a class="reference external" href="https://executablebooks.github.io/quantecon-mini-example/docs/index.html">QuantEcom mini book</a> to show you how it’s made.</p>
@@ -681,15 +680,15 @@ commentsRunWhenDOMLoaded(addUtterances);
 <p class="admonition-title">参见</p>
 <p>For more inspiration and example books, see <a class="reference external" href="https://executablebooks.org/en/latest/gallery.html">the Jupyter Book gallery</a></p>
 </div>
-<section id="mini-book-source-files">
+<div class="section" id="mini-book-source-files">
 <h2>Mini-book source files<a class="headerlink" href="#mini-book-source-files" title="永久链接至标题">¶</a></h2>
 <p>The source files can be <a class="reference external" href="https://github.com/executablebooks/quantecon-mini-example/">found on GitHub</a>
 in the <a class="reference external" href="https://github.com/executablebooks/quantecon-mini-example/tree/master/mini_book/docs">docs directory</a>.
 These files are written in <a class="reference internal" href="../content/myst.html"><span class="doc std std-doc">MyST Markdown</span></a>, an
 extension of the Jupyter Notebook Markdown, that allows for additional scientific markup.
 They could alternatively have been written directly as Jupyter notebooks.</p>
-</section>
-<section id="build-the-demo-book">
+</div>
+<div class="section" id="build-the-demo-book">
 <h2>Build the demo book<a class="headerlink" href="#build-the-demo-book" title="永久链接至标题">¶</a></h2>
 <p>You can build this book locally on the command line via the following steps:</p>
 <ol>
@@ -699,14 +698,14 @@ They could alternatively have been written directly as Jupyter notebooks.</p>
 <span class="nb">cd</span> quantecon-mini-example
 </pre></div>
 </div>
-<aside class="margin sidebar">
+<div class="margin sidebar">
 <p class="sidebar-title"></p>
 <p>If you’d like to install Jupyter Book with <code class="docutils literal notranslate"><span class="pre">pip</span></code>, you can do so with:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pip install -U jupyter-book
 </pre></div>
 </div>
 <p>See <a class="reference internal" href="overview.html"><span class="doc std std-doc">the getting started page</span></a> for more information.</p>
-</aside>
+</div>
 </li>
 <li><p>Install the Python libraries needed to run the code in this particular example
 from <a class="reference external" href="https://github.com/executablebooks/quantecon-mini-example/blob/master/environment.yml">the <code class="docutils literal notranslate"><span class="pre">environment.yml</span></code> file</a>.
@@ -730,13 +729,13 @@ conda activate qe-mini-example
 </ol>
 <p>Now you might like to try editing the files in <code class="docutils literal notranslate"><span class="pre">mini_book/docs</span></code> and then
 rebuilding.</p>
-</section>
-<section id="further-reading">
+</div>
+<div class="section" id="further-reading">
 <h2>Further reading<a class="headerlink" href="#further-reading" title="永久链接至标题">¶</a></h2>
 <p>See <a class="reference external" href="https://executablebooks.github.io/quantecon-example/docs/index.html">the full QuantEcon example</a>
 for a longer Jupyter Book use case, drawn from the same source material.</p>
-</section>
-</section>
+</div>
+</div>
 
     <script type="text/x-thebe-config">
     {
@@ -761,12 +760,32 @@ for a longer Jupyter Book use case, drawn from the same source material.</p>
               </div>
               
         
-        <div class='prev-next-bottom'>
             
-    <a class='left-prev' id="prev-link" href="publish.html" title="previous page">在线发布您的书</a>
-    <a class='right-next' id="next-link" href="../tutorials/references.html" title="next page">开始使用引用</a>
 
-        </div>
+
+
+<div class='prev-next-bottom'>
+    
+    <div id="prev">
+        <a class="left-prev" href="publish.html" title="上一页 页">
+            <i class="prevnext-label fas fa-angle-left"></i>
+            <div class="prevnext-info">
+                <p class="prevnext-label">上一页</p>
+                <p class="prevnext-title">在线发布您的书</p>
+            </div>
+        </a>
+    </div>
+     <div id="next">
+        <a class="right-next" href="../tutorials/references.html" title="下一页 页">
+            <div class="prevnext-info">
+                <p class="prevnext-label">下一页</p>
+                <p class="prevnext-title">开始使用引用</p>
+            </div>
+            <i class="prevnext-label fas fa-angle-right"></i>
+        </a>
+     </div>
+
+</div>
         
         </div>
     </div>

@@ -4,8 +4,7 @@
 <html lang="zh">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>启动交互式计算接口</title>
     
   <link href="../_static/css/theme.css" rel="stylesheet" />
@@ -23,8 +22,8 @@
       
 
     
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-book-theme.acff12b8f9c144ce68a297486a2fa670.css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.e8f53015daec13862f6db5e763c41738.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
@@ -32,16 +31,16 @@
     <link rel="stylesheet" type="text/css" href="../_static/tabs.css" />
     <link rel="stylesheet" type="text/css" href="../_static/page.css" />
     <link rel="stylesheet" type="text/css" href="../_static/custom.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/xin-css/main.css" />
     <link rel="stylesheet" type="text/css" href="../_static/w3css/4/w3pro.css" />
     <link rel="stylesheet" type="text/css" href="../_static/w3css/4/w3mobile.css" />
     <link rel="stylesheet" type="text/css" href="../_static/w3css/4/w3.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/xin-css/main.css" />
     <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     
   <link rel="preload" as="script" href="../_static/js/index.1c5a1a01449ed65a7b51.js">
 
-    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
@@ -84,12 +83,12 @@ var addUtterances = () => {
 }
 commentsRunWhenDOMLoaded(addUtterances);
 </script>
-    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.0/dist/embed-amd.js"></script>
-    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
-    <script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script >
         const thebe_selector = ".thebe,.cell"
         const thebe_selector_input = "pre,.cell_input div.highlight"
         const thebe_selector_output = ".output,.cell_output"
@@ -126,9 +125,9 @@ commentsRunWhenDOMLoaded(addUtterances);
 </div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
   <i class="icon fas fa-search"></i>
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
-</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item active">
-        <p class="caption" role="heading">
+        <p class="caption">
  <span class="caption-text">
   教程
  </span>
@@ -177,7 +176,7 @@ commentsRunWhenDOMLoaded(addUtterances);
   </a>
  </li>
 </ul>
-<p class="caption" role="heading">
+<p class="caption">
  <span class="caption-text">
   主题指南
  </span>
@@ -482,7 +481,7 @@ commentsRunWhenDOMLoaded(addUtterances);
   </a>
  </li>
 </ul>
-<p class="caption" role="heading">
+<p class="caption">
  <span class="caption-text">
   参考
  </span>
@@ -509,7 +508,7 @@ commentsRunWhenDOMLoaded(addUtterances);
   </a>
  </li>
 </ul>
-<p class="caption" role="heading">
+<p class="caption">
  <span class="caption-text">
   关于 Jupyter Book
  </span>
@@ -663,7 +662,7 @@ commentsRunWhenDOMLoaded(addUtterances);
             <div class="tocsection onthispage pt-5 pb-3">
                 <i class="fas fa-list"></i> Contents
             </div>
-            <nav id="bd-toc-nav">
+            <nav id="bd-toc-nav" aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#launch">
@@ -713,11 +712,11 @@ commentsRunWhenDOMLoaded(addUtterances);
         
               <div>
                 
-  <section id="id1">
+  <div class="section" id="id1">
 <h1>启动交互式计算接口<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h1>
 <p>因为 Jupyter Book 是用 Jupyter 笔记本构建的，所以您可以允许用户直接从您的书在云中启动实时的 Jupyter 会话。这使得读者可以在传统的编码界面中快速地与您的内容交互。他们通过点击一个将他们带到交互式环境的 <strong>Launch Button</strong> 来做到这一点。</p>
 <p>有许多在线笔记本服务——<a class="reference external" href="https://www.dataschool.io/cloud-services-for-jupyter-notebook">这篇文章</a>提供了一个很好的比较——下面的章节描述了 Jupyter Book 提供的可用集成。</p>
-<section id="launch">
+<div class="section" id="launch">
 <span id="launchbuttons-configuration"></span><h2>通用 Launch 按钮配置<a class="headerlink" href="#launch" title="永久链接至标题">¶</a></h2>
 <p>对于每个交互式服务，您都需要告诉 Jupyter Book 您的图书内容在线的位置。要做到这一点，请在 <code class="docutils literal notranslate"><span class="pre">_config.yml</span></code> 中配置:</p>
 <div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="c1"># Information about where the book exists on the web</span>
@@ -734,8 +733,8 @@ commentsRunWhenDOMLoaded(addUtterances);
 相对于存储库的根目录，到图书源文件的路径。如果你的书在存储库的子文件夹中（例如 <code class="docutils literal notranslate"><span class="pre">docs/</span></code> 或 <code class="docutils literal notranslate"><span class="pre">book/</span></code>），可以使用这个方法。</p>
 <p><code class="docutils literal notranslate"><span class="pre">branch</span></code>:
 存储图书源文件的分支（不是通常存在于 <code class="docutils literal notranslate"><span class="pre">gh-pages/</span></code> 分支的图书的构建文件）。</p>
-</section>
-<section id="id2">
+</div>
+<div class="section" id="id2">
 <h2>控制打开的笔记本界面<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
 <p>Binder 和 JupyterHub 会话可以使用“经典的” Jupyter Notebook 或新的 JupyterLab 接口后端打开（详情见 <a class="reference external" href="https://jupyter.org">jupyter.org</a>）。这是用以下方式配置的：</p>
 <div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">launch_buttons</span><span class="p">:</span>
@@ -748,8 +747,8 @@ commentsRunWhenDOMLoaded(addUtterances);
 <li><p>使用“classic”界面，它会立即打开这些文件作为笔记本。</p></li>
 <li><p>“jupyterlab”界面(在撰写本文时)还没有实现这种行为，所以你需要指导读者右键单击 Markdown 文件，然后点击“在笔记本编辑器中打开”。</p></li>
 </ul>
-</section>
-<section id="binder">
+</div>
+<div class="section" id="binder">
 <span id="launchbuttons-binder"></span><h2>添加 <a class="reference internal" href="../reference/glossary.html#term-Binder"><span class="xref std std-term">Binder</span></a> 启动按钮<a class="headerlink" href="#binder" title="永久链接至标题">¶</a></h2>
 <p>可以使用 <a class="reference internal" href="../reference/glossary.html#term-BinderHub"><span class="xref std std-term">BinderHub</span></a> 构建运行存储库所需的环境，并提供一个链接，允许其他人与该存储库进行交互。如果你的 Jupyter Book 是在 GitHub 上托管的，你可以自动插入链接到运行在 BinderHub 的 Jupyter Notebook 的按钮。当用户单击该按钮时，他们将被带到页面的实时版本。如果您的代码不需要大量的 CPU 或 RAM，您可以使用在 <a class="reference external" href="https://mybinder.org">https://mybinder.org</a> 上运行的免费公共 BinderHub。</p>
 <p>要自动在你的 Jupyter Book 的每一页中包含 Binder 链接按钮，请使用 <code class="docutils literal notranslate"><span class="pre">_config.yml</span></code> 中的以下配置：</p>
@@ -758,8 +757,8 @@ commentsRunWhenDOMLoaded(addUtterances);
 </pre></div>
 </div>
 <p>通过添加这个配置以及上面的存储库 url 配置，Jupyter Book 将插入 Binder 链接到从笔记本内容构建的任何页面。</p>
-</section>
-<section id="jupyterhub">
+</div>
+<div class="section" id="jupyterhub">
 <h2>添加 <a class="reference internal" href="../reference/glossary.html#term-JupyterHub"><span class="xref std std-term">JupyterHub</span></a> 启动按钮<a class="headerlink" href="#jupyterhub" title="永久链接至标题">¶</a></h2>
 <p>JupyterHub 允许您托管一个在线服务，该服务为用户提供自己的  Jupyter 服务器和您为他们指定的环境。它允许用户访问您在云中提供的资源和硬件，并允许您对用户进行身份验证，以控制谁可以访问您的硬件。</p>
 <p>与 Binder 链接按钮类似，您还可以自动包含交互链接，这些链接将您的读者发送到正在运行您页面的动态交互版本的 JupyterHub。这是通过使用 <a class="reference external" href="https://github.com/jupyterhub/nbgitpuller">nbgitpuller</a> 服务器扩展来完成的。</p>
@@ -777,8 +776,8 @@ commentsRunWhenDOMLoaded(addUtterances);
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">RUN</span> <span class="n">pip</span> <span class="n">install</span> <span class="n">jupytext</span> <span class="n">nbgitpuller</span>
 </pre></div>
 </div>
-</section>
-<section id="google-colab">
+</div>
+<div class="section" id="google-colab">
 <h2>添加 <a class="reference internal" href="../reference/glossary.html#term-Google-Colab"><span class="xref std std-term">Google Colab</span></a> 启动按钮<a class="headerlink" href="#google-colab" title="永久链接至标题">¶</a></h2>
 <p>如果你的 Jupyter Book 托管在 GitHub 上，你可以自动插入按钮，链接到运行在 <a class="reference external" href="https://colab.research.google.com/">Google Colab</a> 上的 Jupyter Notebook。当用户单击该按钮时，他们将被带到页面的实时版本。</p>
 <p>类似于 Binder 链接按钮，你可以在 <code class="docutils literal notranslate"><span class="pre">_config.yml</span></code> 中自动包含以下配置的谷歌 Colab 链接按钮:</p>
@@ -790,8 +789,8 @@ commentsRunWhenDOMLoaded(addUtterances);
 <p class="admonition-title">注解</p>
 <p>谷歌 Colab 链接只适用于具有 <code class="docutils literal notranslate"><span class="pre">.ipynb</span></code> 扩展名的页面。</p>
 </div>
-</section>
-</section>
+</div>
+</div>
 
     <script type="text/x-thebe-config">
     {
@@ -816,12 +815,32 @@ commentsRunWhenDOMLoaded(addUtterances);
               </div>
               
         
-        <div class='prev-next-bottom'>
             
-    <a class='left-prev' id="prev-link" href="hiding.html" title="previous page">隐藏或删除内容</a>
-    <a class='right-next' id="next-link" href="thebe.html" title="next page">使您的代码单元格可执行</a>
 
-        </div>
+
+
+<div class='prev-next-bottom'>
+    
+    <div id="prev">
+        <a class="left-prev" href="hiding.html" title="上一页 页">
+            <i class="prevnext-label fas fa-angle-left"></i>
+            <div class="prevnext-info">
+                <p class="prevnext-label">上一页</p>
+                <p class="prevnext-title">隐藏或删除内容</p>
+            </div>
+        </a>
+    </div>
+     <div id="next">
+        <a class="right-next" href="thebe.html" title="下一页 页">
+            <div class="prevnext-info">
+                <p class="prevnext-label">下一页</p>
+                <p class="prevnext-title">使您的代码单元格可执行</p>
+            </div>
+            <i class="prevnext-label fas fa-angle-right"></i>
+        </a>
+     </div>
+
+</div>
         
         </div>
     </div>

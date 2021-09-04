@@ -4,8 +4,7 @@
 <html lang="zh">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Configure the Table of Contents</title>
     
   <link href="../_static/css/theme.css" rel="stylesheet" />
@@ -23,8 +22,8 @@
       
 
     
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-book-theme.acff12b8f9c144ce68a297486a2fa670.css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.e8f53015daec13862f6db5e763c41738.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
@@ -32,16 +31,16 @@
     <link rel="stylesheet" type="text/css" href="../_static/tabs.css" />
     <link rel="stylesheet" type="text/css" href="../_static/page.css" />
     <link rel="stylesheet" type="text/css" href="../_static/custom.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/xin-css/main.css" />
     <link rel="stylesheet" type="text/css" href="../_static/w3css/4/w3pro.css" />
     <link rel="stylesheet" type="text/css" href="../_static/w3css/4/w3mobile.css" />
     <link rel="stylesheet" type="text/css" href="../_static/w3css/4/w3.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/xin-css/main.css" />
     <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     
   <link rel="preload" as="script" href="../_static/js/index.1c5a1a01449ed65a7b51.js">
 
-    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
@@ -84,12 +83,12 @@ var addUtterances = () => {
 }
 commentsRunWhenDOMLoaded(addUtterances);
 </script>
-    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.0/dist/embed-amd.js"></script>
-    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
-    <script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script >
         const thebe_selector = ".thebe,.cell"
         const thebe_selector_input = "pre,.cell_input div.highlight"
         const thebe_selector_output = ".output,.cell_output"
@@ -126,9 +125,9 @@ commentsRunWhenDOMLoaded(addUtterances);
 </div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
   <i class="icon fas fa-search"></i>
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
-</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item active">
-        <p class="caption" role="heading">
+        <p class="caption">
  <span class="caption-text">
   教程
  </span>
@@ -177,7 +176,7 @@ commentsRunWhenDOMLoaded(addUtterances);
   </a>
  </li>
 </ul>
-<p class="caption" role="heading">
+<p class="caption">
  <span class="caption-text">
   主题指南
  </span>
@@ -482,7 +481,7 @@ commentsRunWhenDOMLoaded(addUtterances);
   </a>
  </li>
 </ul>
-<p class="caption" role="heading">
+<p class="caption">
  <span class="caption-text">
   参考
  </span>
@@ -509,7 +508,7 @@ commentsRunWhenDOMLoaded(addUtterances);
   </a>
  </li>
 </ul>
-<p class="caption" role="heading">
+<p class="caption">
  <span class="caption-text">
   关于 Jupyter Book
  </span>
@@ -638,7 +637,7 @@ commentsRunWhenDOMLoaded(addUtterances);
             <div class="tocsection onthispage pt-5 pb-3">
                 <i class="fas fa-list"></i> Contents
             </div>
-            <nav id="bd-toc-nav">
+            <nav id="bd-toc-nav" aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#configure-all-entries-in-the-toc">
@@ -691,10 +690,10 @@ commentsRunWhenDOMLoaded(addUtterances);
         
               <div>
                 
-  <section id="configure-the-table-of-contents">
+  <div class="section" id="configure-the-table-of-contents">
 <span id="structure-configure"></span><h1>Configure the Table of Contents<a class="headerlink" href="#configure-the-table-of-contents" title="永久链接至标题">¶</a></h1>
 <p>This page covers some of the options you have available to control your book’s behavior via the Table of Contents.</p>
-<section id="configure-all-entries-in-the-toc">
+<div class="section" id="configure-all-entries-in-the-toc">
 <h2>Configure all entries in the TOC<a class="headerlink" href="#configure-all-entries-in-the-toc" title="永久链接至标题">¶</a></h2>
 <p>To configure options for all entries of your TOC, use the <code class="docutils literal notranslate"><span class="pre">defaults:</span></code> configuration at the root of your Table of Contents.
 This configuration will be applied to every list of chapters or sections within your book.</p>
@@ -708,8 +707,8 @@ This configuration will be applied to every list of chapters or sections within 
 <span class="p p-Indicator">-</span> <span class="nt">file</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">path/to/chapter2</span>
 </pre></div>
 </div>
-</section>
-<section id="configure-a-single-top-level-set-of-chapters-sections">
+</div>
+<div class="section" id="configure-a-single-top-level-set-of-chapters-sections">
 <h2>Configure a single top-level set of chapters/sections<a class="headerlink" href="#configure-a-single-top-level-set-of-chapters-sections" title="永久链接至标题">¶</a></h2>
 <p>If you’re only using a single list of chapters, and not organizing them into parts, you can configure each with the <code class="docutils literal notranslate"><span class="pre">options:</span></code> key.</p>
 <p>For example:</p>
@@ -722,8 +721,8 @@ This configuration will be applied to every list of chapters or sections within 
 <span class="p p-Indicator">-</span> <span class="nt">file</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">path/to/part1/chapter2</span>
 </pre></div>
 </div>
-</section>
-<section id="configure-an-individual-part">
+</div>
+<div class="section" id="configure-an-individual-part">
 <h2>Configure an individual Part<a class="headerlink" href="#configure-an-individual-part" title="永久链接至标题">¶</a></h2>
 <p>If you are organizing your book into <strong>parts</strong> (groups of chapters), you can configure each set of chapters separately by providing <code class="docutils literal notranslate"><span class="pre">key:</span> <span class="pre">value</span></code> pairs alongside each <code class="docutils literal notranslate"><span class="pre">part</span></code> entry, like so:</p>
 <div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">format</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">jb-book</span>
@@ -753,8 +752,8 @@ project you will need to add <code class="docutils literal notranslate"><span cl
 <p>as sphinx will issue warnings due to <code class="docutils literal notranslate"><span class="pre">numbered</span></code> flag being set for substrees. It also causes unexpected
 output.</p>
 </div>
-</section>
-<section id="add-captions-to-parts">
+</div>
+<div class="section" id="add-captions-to-parts">
 <h2>Add captions to Parts<a class="headerlink" href="#add-captions-to-parts" title="永久链接至标题">¶</a></h2>
 <p>To add a caption to a Part (so that it shows up in the sidebar, for example) use the <code class="docutils literal notranslate"><span class="pre">caption:</span></code> option like so:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">-</span> <span class="n">caption</span><span class="p">:</span> <span class="n">My</span> <span class="n">part</span> <span class="n">name</span>
@@ -763,8 +762,8 @@ output.</p>
   <span class="o">...</span>
 </pre></div>
 </div>
-</section>
-<section id="specify-alternate-titles">
+</div>
+<div class="section" id="specify-alternate-titles">
 <h2>Specify alternate titles<a class="headerlink" href="#specify-alternate-titles" title="永久链接至标题">¶</a></h2>
 <p>If you’d like to specify an alternate title from the one defined within a file,
 you may do so with the <code class="docutils literal notranslate"><span class="pre">title:</span></code> key. For example:</p>
@@ -774,8 +773,8 @@ you may do so with the <code class="docutils literal notranslate"><span class="p
 </div>
 <p>Note that this only applies to the sidebar
 in the table of contents, it does not change the actual chapter/section title.</p>
-</section>
-<section id="number-your-chapters-and-sections">
+</div>
+<div class="section" id="number-your-chapters-and-sections">
 <span id="toc-numbering"></span><h2>Number your chapters and sections<a class="headerlink" href="#number-your-chapters-and-sections" title="永久链接至标题">¶</a></h2>
 <p>You can automatically add numbers to each chapter of your book.
 To add numbers to <strong>all chapters of your book</strong>, add the <code class="docutils literal notranslate"><span class="pre">numbered:</span> <span class="pre">true</span></code> flag to your book’s defaults, like so:</p>
@@ -789,10 +788,10 @@ To add numbers to <strong>all chapters of your book</strong>, add the <code clas
 </pre></div>
 </div>
 <p>Numbers will follow a hierarchy according to the structure defined in your <code class="docutils literal notranslate"><span class="pre">_toc.yml</span></code> file.</p>
-<aside class="margin sidebar">
+<div class="margin sidebar">
 <p class="sidebar-title"></p>
 <p>Continuous numbering is now the default behavior from <code class="docutils literal notranslate"><span class="pre">jupyter-book&gt;=0.11.2</span></code></p>
-</aside>
+</div>
 <p>By default, chapter numbering will be continuous between parts (i.e. they will not re-start each section at <code class="docutils literal notranslate"><span class="pre">1.</span></code> each time)
 using an extension called <a class="reference external" href="https://github.com/executablebooks/sphinx-multitoc-numbering">sphinx-multitoc-numbering</a>.</p>
 <div class="admonition tip">
@@ -846,8 +845,8 @@ have two sets of <code class="docutils literal notranslate"><span class="pre">1.
 </ul>
 </div>
 </div>
-</section>
-<section id="add-a-table-of-contents-to-a-pages-content">
+</div>
+<div class="section" id="add-a-table-of-contents-to-a-pages-content">
 <h2>Add a table of contents to a page’s content<a class="headerlink" href="#add-a-table-of-contents-to-a-pages-content" title="永久链接至标题">¶</a></h2>
 <p>If you’d like to add a table of contents for the sub-sections of a page
 <em>within the page content</em> (in-line with the content on the page), you
@@ -857,8 +856,8 @@ may do so by using the <code class="docutils literal notranslate"><span class="p
 </pre></div>
 </div>
 <p>See the source of <a class="reference internal" href="../file-types/index.html"><span class="doc std std-doc">the content types page</span></a> for an example.</p>
-</section>
-<section id="control-the-depth-of-the-displayed-table-of-contents">
+</div>
+<div class="section" id="control-the-depth-of-the-displayed-table-of-contents">
 <h2>Control the depth of the displayed Table of Contents<a class="headerlink" href="#control-the-depth-of-the-displayed-table-of-contents" title="永久链接至标题">¶</a></h2>
 <p>To control the maximum depth of the Table of Contents that you insert, use the <code class="docutils literal notranslate"><span class="pre">maxdepth:</span></code> option in your <code class="docutils literal notranslate"><span class="pre">_toc.yml</span></code> file. For example:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">-</span> <span class="n">caption</span><span class="p">:</span> <span class="n">My</span> <span class="n">part</span> <span class="n">name</span>
@@ -868,8 +867,8 @@ may do so by using the <code class="docutils literal notranslate"><span class="p
   <span class="o">...</span>
 </pre></div>
 </div>
-</section>
-</section>
+</div>
+</div>
 
     <script type="text/x-thebe-config">
     {
@@ -894,12 +893,32 @@ may do so by using the <code class="docutils literal notranslate"><span class="p
               </div>
               
         
-        <div class='prev-next-bottom'>
             
-    <a class='left-prev' id="prev-link" href="../customize/toc.html" title="previous page">Structure the Table of Contents</a>
-    <a class='right-next' id="next-link" href="../file-types/index.html" title="next page">内容源文件的类型</a>
 
-        </div>
+
+
+<div class='prev-next-bottom'>
+    
+    <div id="prev">
+        <a class="left-prev" href="../customize/toc.html" title="上一页 页">
+            <i class="prevnext-label fas fa-angle-left"></i>
+            <div class="prevnext-info">
+                <p class="prevnext-label">上一页</p>
+                <p class="prevnext-title">Structure the Table of Contents</p>
+            </div>
+        </a>
+    </div>
+     <div id="next">
+        <a class="right-next" href="../file-types/index.html" title="下一页 页">
+            <div class="prevnext-info">
+                <p class="prevnext-label">下一页</p>
+                <p class="prevnext-title">内容源文件的类型</p>
+            </div>
+            <i class="prevnext-label fas fa-angle-right"></i>
+        </a>
+     </div>
+
+</div>
         
         </div>
     </div>

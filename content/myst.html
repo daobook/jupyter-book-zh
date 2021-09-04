@@ -4,8 +4,7 @@
 <html lang="zh">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>MyST Markdown 概述</title>
     
   <link href="../_static/css/theme.css" rel="stylesheet" />
@@ -23,8 +22,8 @@
       
 
     
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-book-theme.acff12b8f9c144ce68a297486a2fa670.css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.e8f53015daec13862f6db5e763c41738.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
@@ -32,16 +31,16 @@
     <link rel="stylesheet" type="text/css" href="../_static/tabs.css" />
     <link rel="stylesheet" type="text/css" href="../_static/page.css" />
     <link rel="stylesheet" type="text/css" href="../_static/custom.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/xin-css/main.css" />
     <link rel="stylesheet" type="text/css" href="../_static/w3css/4/w3pro.css" />
     <link rel="stylesheet" type="text/css" href="../_static/w3css/4/w3mobile.css" />
     <link rel="stylesheet" type="text/css" href="../_static/w3css/4/w3.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/xin-css/main.css" />
     <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     
   <link rel="preload" as="script" href="../_static/js/index.1c5a1a01449ed65a7b51.js">
 
-    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
@@ -84,12 +83,12 @@ var addUtterances = () => {
 }
 commentsRunWhenDOMLoaded(addUtterances);
 </script>
-    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.0/dist/embed-amd.js"></script>
-    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
-    <script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script >
         const thebe_selector = ".thebe,.cell"
         const thebe_selector_input = "pre,.cell_input div.highlight"
         const thebe_selector_output = ".output,.cell_output"
@@ -126,9 +125,9 @@ commentsRunWhenDOMLoaded(addUtterances);
 </div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
   <i class="icon fas fa-search"></i>
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
-</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item active">
-        <p class="caption" role="heading">
+        <p class="caption">
  <span class="caption-text">
   教程
  </span>
@@ -177,7 +176,7 @@ commentsRunWhenDOMLoaded(addUtterances);
   </a>
  </li>
 </ul>
-<p class="caption" role="heading">
+<p class="caption">
  <span class="caption-text">
   主题指南
  </span>
@@ -482,7 +481,7 @@ commentsRunWhenDOMLoaded(addUtterances);
   </a>
  </li>
 </ul>
-<p class="caption" role="heading">
+<p class="caption">
  <span class="caption-text">
   参考
  </span>
@@ -509,7 +508,7 @@ commentsRunWhenDOMLoaded(addUtterances);
   </a>
  </li>
 </ul>
-<p class="caption" role="heading">
+<p class="caption">
  <span class="caption-text">
   关于 Jupyter Book
  </span>
@@ -638,7 +637,7 @@ commentsRunWhenDOMLoaded(addUtterances);
             <div class="tocsection onthispage pt-5 pb-3">
                 <i class="fas fa-list"></i> Contents
             </div>
-            <nav id="bd-toc-nav">
+            <nav id="bd-toc-nav" aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#id1">
@@ -717,23 +716,23 @@ commentsRunWhenDOMLoaded(addUtterances);
         
               <div>
                 
-  <section id="myst-markdown">
+  <div class="section" id="myst-markdown">
 <h1>MyST Markdown 概述<a class="headerlink" href="#myst-markdown" title="永久链接至标题">¶</a></h1>
 <p>除了 <a class="reference internal" href="../file-types/notebooks.html"><span class="doc std std-doc">Jupyter Notebook Markdown</span></a>，Jupyter Book 还支持 Markdown 的一种特殊样式，称为<strong>MyST（或标记结构化文本）</strong>。它旨在简化创建以 Markdown 标记编写的可发布计算文档的过程。它是 <a class="reference external" href="https://commonmark.org/">CommonMark Markdown</a> 的超集，并从奇妙的 <a class="reference external" href="https://rmarkdown.rstudio.com/">RMarkdown language from RStudio</a> 中汲取了很多灵感。</p>
-<aside class="margin sidebar">
+<div class="margin sidebar">
 <p class="sidebar-title"></p>
 <p>对于那些熟悉 Sphinx 的人来说，MyST Markdown 基本上是 CommonMark + Markdown 扩展 + Sphinx 的角色和指令</p>
-</aside>
+</div>
 <p>无论您是在 Jupyter 笔记本（<code class="docutils literal notranslate"><span class="pre">.ipynb</span></code>）中还是在常规 Markdown 文件（<code class="docutils literal notranslate"><span class="pre">.md</span></code>）中编写书籍的内容，都将使用<strong>MyST Markdown</strong>风格书写。Jupyter Book 将知道如何解析它们两者。</p>
-<p>此页面包含有关 MyST Markdown 及其与 Jupyter Book 的关系的一些信息。您可以在 <a class="reference external" href="https://myst-parser.readthedocs.io/en/latest/syntax/syntax.html#example-syntax" title="(在 MyST Parser v0.15.1)"><span class="xref myst">Myst Parser 文档</span></a> 中找到有关 Markdown 风格的更多信息。</p>
+<p>此页面包含有关 MyST Markdown 及其与 Jupyter Book 的关系的一些信息。您可以在 <a class="reference external" href="https://myst-parser.readthedocs.io/en/latest/syntax/syntax.html#example-syntax" title="(在 MyST Parser v0.15.2)"><span class="xref myst">Myst Parser 文档</span></a> 中找到有关 Markdown 风格的更多信息。</p>
 <div class="tip admonition">
 <p class="admonition-title">是否要直接使用 RMarkdown？</p>
 <p>查阅 <a class="reference internal" href="../file-types/jupytext.html"><span class="doc std std-doc">自定义笔记本格式和 Jupytext</span></a></p>
 </div>
-<section id="id1">
+<div class="section" id="id1">
 <h2>指令与角色<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h2>
 <p>角色和指令是 Jupyter Book 中两个功能最强大的工具。它们有点像<em>函数</em>，但是是以标记语言编写的。指令（directive）与角色（role）的目标相似，但是<strong>角色写在一行中</strong>而<strong>指令跨越很多行</strong>。它们都接受不同种类的输入，它们对这些输入的处理方式取决于所使用的特定角色或指令。</p>
-<section id="content-myst-directives">
+<div class="section" id="content-myst-directives">
 <span id="id2"></span><h3>指令<a class="headerlink" href="#content-myst-directives" title="永久链接至标题">¶</a></h3>
 <p>指令可自定义书的外观，感觉和行为。它们有点像<em>函数</em>，并且以不同的方式出现各种名称。本节介绍如何构造和使用它们。</p>
 <p>最简单的，您可以这样使用指令：</p>
@@ -754,8 +753,8 @@ Here is a note
 <p>Here is a note</p>
 </div>
 <p>被插入到您的已建书中。</p>
-<p>有关使用指令的更多信息，请参见 <a class="reference external" href="https://myst-parser.readthedocs.io/en/latest/syntax/syntax.html#syntax-directives" title="(在 MyST Parser v0.15.1)"><span class="xref myst">MyST 文档</span></a>。</p>
-<section id="directive-arguments">
+<p>有关使用指令的更多信息，请参见 <a class="reference external" href="https://myst-parser.readthedocs.io/en/latest/syntax/syntax.html#syntax-directives" title="(在 MyST Parser v0.15.2)"><span class="xref myst">MyST 文档</span></a>。</p>
+<div class="section" id="directive-arguments">
 <span id="id3"></span><h4>指令中的更多参数和元数据<a class="headerlink" href="#directive-arguments" title="永久链接至标题">¶</a></h4>
 <p>许多指令允许您使用额外的信息来控制它们的行为。除了指令名称和指令内容外，指令还允许其他两个配置点：</p>
 <p><strong>指令参数</strong>：紧跟在 <code class="docutils literal notranslate"><span class="pre">{directivename}</span></code> 之后的单词列表。</p>
@@ -790,9 +789,9 @@ My directive content.
 <p>记住，用 <code class="docutils literal notranslate"><span class="pre">:key:</span></code> 或 <code class="docutils literal notranslate"><span class="pre">---</span></code> 指定指令关键字没有什么区别。如果您要指定许多关键字，或者某些值跨越多行，建议您使用 <code class="docutils literal notranslate"><span class="pre">---</span></code>。使用 <code class="docutils literal notranslate"><span class="pre">:key:</span> <span class="pre">val</span></code> 语法作为一个或两个关键字的简写。</p>
 </div>
 <p>有关如何使用它的示例，请参见以下各节。</p>
-</section>
-</section>
-<section id="content-myst-roles">
+</div>
+</div>
+<div class="section" id="content-myst-roles">
 <span id="id4"></span><h3>角色<a class="headerlink" href="#content-myst-roles" title="永久链接至标题">¶</a></h3>
 <p>角色与指令非常相似，但它们的复杂性和编写性较低</p>
 <div class="highlight-md notranslate"><div class="highlight"><pre><span></span>Some content {rolename}`and here is my role&#39;s content!`
@@ -803,19 +802,19 @@ My directive content.
 <p class="admonition-title">警告</p>
 <p>目前要求角色在您的源文件中位于“同一行”上。如果它跨越多行，将无法正确解析。可以跟踪 <a class="reference external" href="https://github.com/executablebooks/MyST-Parser/issues/269">此议题</a> 跨多个角色的支持角色的进展情况。</p>
 </div>
-<p>有关使用角色的更多信息，请参阅 <a class="reference external" href="https://myst-parser.readthedocs.io/en/latest/syntax/syntax.html#syntax-roles" title="(在 MyST Parser v0.15.1)"><span class="xref myst">MyST 文档</span></a>。</p>
-</section>
-</section>
-<section id="id5">
+<p>有关使用角色的更多信息，请参阅 <a class="reference external" href="https://myst-parser.readthedocs.io/en/latest/syntax/syntax.html#syntax-roles" title="(在 MyST Parser v0.15.2)"><span class="xref myst">MyST 文档</span></a>。</p>
+</div>
+</div>
+<div class="section" id="id5">
 <h2>有哪些角色和指令可用？<a class="headerlink" href="#id5" title="永久链接至标题">¶</a></h2>
 <p>当前没有角色/指令的单个列表用作参考，但是本节尝试提供尽可能多的信息。对于那些熟悉 Sphinx 生态系统的人，<strong>您可以使用 Sphinx 中可用的任何指令/角色</strong>。这是因为 Jupyter Book 使用 Sphinx 来构建您的书，而 MyST Markdown 支持 Sphinx 支持的所有语法（将其视为 reStructuredText 的 Markdown 版本）。</p>
 <div class="admonition caution">
-<p class="admonition-title">小心</p>
-<p>如果您在网（和下面的链接）上搜索有关角色和指令的信息，则通常在编写文档时会考虑到 reStructuredText。MyST Markdown 与 reStructuredText 不同，但是所有功能都应该相同。查阅 <a class="reference external" href="https://myst-parser.readthedocs.io/en/latest/sphinx/intro.html#intro-get-started" title="(在 MyST Parser v0.15.1)"><span class="xref myst">MyST Sphinx 解析器文档</span></a> 获取有关 MyST 和 rST 之间差异的更多信息。</p>
+<p class="admonition-title">警告</p>
+<p>如果您在网（和下面的链接）上搜索有关角色和指令的信息，则通常在编写文档时会考虑到 reStructuredText。MyST Markdown 与 reStructuredText 不同，但是所有功能都应该相同。查阅 <a class="reference external" href="https://myst-parser.readthedocs.io/en/latest/sphinx/intro.html#intro-get-started" title="(在 MyST Parser v0.15.2)"><span class="xref myst">MyST Sphinx 解析器文档</span></a> 获取有关 MyST 和 rST 之间差异的更多信息。</p>
 </div>
 <p>有关可供您使用的指令列表，请检查三个地方：</p>
 <ol class="simple">
-<li><p><a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/restructuredtext/directives.html" title="(在 Sphinx v5.0.0+/dd00bade7)"><span class="xref myst">Sphinx 指令页面</span></a> 包含一个指令列表，默认情况下在 Sphinx 中可用。</p></li>
+<li><p><a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/restructuredtext/directives.html" title="(在 Sphinx v5.0.0+)"><span class="xref myst">Sphinx 指令页面</span></a> 包含一个指令列表，默认情况下在 Sphinx 中可用。</p></li>
 <li><p><a class="reference external" href="https://docutils.sourceforge.io/docs/ref/rst/directives.html">reStructuredText 指令页面</a> 在 Python “docutils” 模块中具有指令列表。</p></li>
 <li><p>本文档还有一些特定于 Jupyter Book 的其他指令。</p></li>
 </ol>
@@ -837,10 +836,10 @@ My directive content.
 </div>
 <div class="admonition seealso">
 <p class="admonition-title">参见</p>
-<p>关于 <a class="reference external" href="https://myst-parser.readthedocs.io/en/latest/syntax/syntax.html#syntax-directives-parsing" title="(在 MyST Parser v0.15.1)"><span class="xref myst">指令如何解析内容</span></a> 的 MyST-Parser 文档，及其用于 <a class="reference external" href="https://myst-parser.readthedocs.io/en/latest/sphinx/use.html#howto-include-rst" title="(在 MyST Parser v0.15.1)"><span class="xref myst">将 rST 文件包含到Markdown文件中</span></a> 的用法，以及 <a class="reference external" href="https://myst-parser.readthedocs.io/en/latest/sphinx/use.html#howto-autodoc" title="(在 MyST Parser v0.15.1)"><span class="xref myst">在 Markdown 文件中使用 <code class="docutils literal notranslate"><span class="pre">sphinx.ext.autodoc</span></code></span></a>。</p>
+<p>关于 <a class="reference external" href="https://myst-parser.readthedocs.io/en/latest/syntax/syntax.html#syntax-directives-parsing" title="(在 MyST Parser v0.15.2)"><span class="xref myst">指令如何解析内容</span></a> 的 MyST-Parser 文档，及其用于 <a class="reference external" href="https://myst-parser.readthedocs.io/en/latest/sphinx/use.html#howto-include-rst" title="(在 MyST Parser v0.15.2)"><span class="xref myst">将 rST 文件包含到Markdown文件中</span></a> 的用法，以及 <a class="reference external" href="https://myst-parser.readthedocs.io/en/latest/sphinx/use.html#howto-autodoc" title="(在 MyST Parser v0.15.2)"><span class="xref myst">在 Markdown 文件中使用 <code class="docutils literal notranslate"><span class="pre">sphinx.ext.autodoc</span></code></span></a>。</p>
 </div>
-</section>
-<section id="markdown">
+</div>
+<div class="section" id="markdown">
 <span id="markdown-nesting"></span><h2>在 Markdown 中嵌套内容块<a class="headerlink" href="#markdown" title="永久链接至标题">¶</a></h2>
 <p>如果您想在 Markdown 中将内容块彼此嵌套（例如，将 <code class="docutils literal notranslate"><span class="pre">{note}</span></code> 放在 <code class="docutils literal notranslate"><span class="pre">{margin}</span></code> 中），则可以通过添加额外的反引号（<code class="docutils literal notranslate"><span class="pre">`</span></code>）到最外面的块。这也适用于文字代码块。</p>
 <p>例如，以下语法：</p>
@@ -864,42 +863,42 @@ Here&#39;s my note!
 </pre></div>
 </div>
 <p>生成：</p>
-<aside class="margin sidebar">
+<div class="margin sidebar">
 <p class="sidebar-title"></p>
 <div class="admonition note">
 <p class="admonition-title">注解</p>
 <p>Here’s my note!</p>
 </div>
-</aside>
-</section>
-<section id="id6">
+</div>
+</div>
+<div class="section" id="id6">
 <h2>其他 MyST Markdown 语法<a class="headerlink" href="#id6" title="永久链接至标题">¶</a></h2>
 <p>除了角色和指令外，MyST Markdown 还支持许多其他类型的语法。MyST支持 CommonMark Markdown 的所有语法（Jupyter 笔记本使用的 Markdown 类型），以及用于科学出版的扩展语法。</p>
-<p><a class="reference external" href="https://myst-parser.readthedocs.io/en/latest/sphinx/intro.html#intro-get-started" title="(在 MyST Parser v0.15.1)"><span class="xref myst">MyST-Parser</span></a> 是 Jupyter Book 用来允许您在 MyST 中写书内容的工具。它也是有关 MyST 语法的良好信息来源。以下是一些可以用作参考的链接：</p>
+<p><a class="reference external" href="https://myst-parser.readthedocs.io/en/latest/sphinx/intro.html#intro-get-started" title="(在 MyST Parser v0.15.2)"><span class="xref myst">MyST-Parser</span></a> 是 Jupyter Book 用来允许您在 MyST 中写书内容的工具。它也是有关 MyST 语法的良好信息来源。以下是一些可以用作参考的链接：</p>
 <ul class="simple">
-<li><p><a class="reference external" href="https://myst-parser.readthedocs.io/en/latest/syntax/reference.html#commonmark-block-tokens" title="(在 MyST Parser v0.15.1)"><span class="xref myst">CommonMark 块语法</span></a></p></li>
-<li><p><a class="reference external" href="https://myst-parser.readthedocs.io/en/latest/syntax/reference.html#extended-block-tokens" title="(在 MyST Parser v0.15.1)"><span class="xref myst">MyST 中的扩展 MyST 块语法</span></a></p></li>
-<li><p><a class="reference external" href="https://myst-parser.readthedocs.io/en/latest/syntax/reference.html#commonmark-span-tokens" title="(在 MyST Parser v0.15.1)"><span class="xref myst">CommonMark 内联语法</span></a></p></li>
-<li><p><a class="reference external" href="https://myst-parser.readthedocs.io/en/latest/syntax/reference.html#extended-span-tokens" title="(在 MyST Parser v0.15.1)"><span class="xref myst">MyST 中的扩展 MyST 内联语法</span></a></p></li>
+<li><p><a class="reference external" href="https://myst-parser.readthedocs.io/en/latest/syntax/reference.html#commonmark-block-tokens" title="(在 MyST Parser v0.15.2)"><span class="xref myst">CommonMark 块语法</span></a></p></li>
+<li><p><a class="reference external" href="https://myst-parser.readthedocs.io/en/latest/syntax/reference.html#extended-block-tokens" title="(在 MyST Parser v0.15.2)"><span class="xref myst">MyST 中的扩展 MyST 块语法</span></a></p></li>
+<li><p><a class="reference external" href="https://myst-parser.readthedocs.io/en/latest/syntax/reference.html#commonmark-span-tokens" title="(在 MyST Parser v0.15.2)"><span class="xref myst">CommonMark 内联语法</span></a></p></li>
+<li><p><a class="reference external" href="https://myst-parser.readthedocs.io/en/latest/syntax/reference.html#extended-span-tokens" title="(在 MyST Parser v0.15.2)"><span class="xref myst">MyST 中的扩展 MyST 内联语法</span></a></p></li>
 </ul>
 <div class="admonition seealso">
 <p class="admonition-title">参见</p>
 <p>有关启用扩展 MyST 语法的信息，请参见 <a class="reference internal" href="content-blocks.html#content-blocks-myst-extensions"><span class="std std-ref">MyST 语法扩展</span></a>.
 此外，请参阅本文档中有关此扩展语法的其他示例（以及如何启用每个扩展语法）。</p>
 </div>
-</section>
-<section id="id7">
+</div>
+<div class="section" id="id7">
 <h2>可以使用 MyST Markdown 创建什么？<a class="headerlink" href="#id7" title="永久链接至标题">¶</a></h2>
 <p>请参阅 <a class="reference internal" href="content-blocks.html"><span class="doc std std-doc">特殊内容块</span></a>，以获取在 Jupyter Book 中有关如何使用 MyST Markdown 进行操作的介绍。此外，该站点的其他页面还介绍了有关如何在 MyST 中使用指令的更多用例。</p>
-</section>
-<section id="id8">
+</div>
+<div class="section" id="id8">
 <h2>编写 MyST Markdown 的工具<a class="headerlink" href="#id8" title="永久链接至标题">¶</a></h2>
 <p>整个社区的工具中都对 MyST Markdown 提供了一些支持。在这里，我们包括一些杰出的。</p>
-<section id="jupyter">
+<div class="section" id="jupyter">
 <h3>Jupyter 接口<a class="headerlink" href="#jupyter" title="永久链接至标题">¶</a></h3>
 <p>尽管 MyST Markdown 尚未在传统的 Jupyter 界面中呈现，但其大多数语法应“优美地降级”，这意味着您仍然可以在 Jupyter 中使用 MyST，然后使用 Jupyter Book 来构建您的书。</p>
-</section>
-<section id="jupytext">
+</div>
+<div class="section" id="jupytext">
 <h3>Jupytext 和文本同步<a class="headerlink" href="#jupytext" title="永久链接至标题">¶</a></h3>
 <p>要使用 Jupyter 笔记本和 Markdown 文件，建议使用 <a class="reference external" href="https://jupytext.readthedocs.io/en/latest">jupytext</a>，这是一种用于在 <code class="docutils literal notranslate"><span class="pre">.ipynb</span></code> 和文本文件之间进行双向转换的开源工具。Jupytext <a class="reference external" href="https://jupytext.readthedocs.io/en/latest/formats.html#myst-markdown">支持 MyST Markdown 格式</a>.</p>
 <div class="admonition note">
@@ -907,13 +906,13 @@ Here&#39;s my note!
 <p>为了与 <code class="docutils literal notranslate"><span class="pre">myst-parser</span></code> 完全兼容，必须使用 <code class="docutils literal notranslate"><span class="pre">jupytext&gt;=1.6.0</span></code>。</p>
 <p>也可参阅 <a class="reference internal" href="../file-types/jupytext.html#file-types-custom-jupytext"><span class="std std-ref">将一个 Jupytext 文件转换为 MyST 笔记本</span></a>。</p>
 </div>
-</section>
-<section id="vs-code">
+</div>
+<div class="section" id="vs-code">
 <h3>VS Code<a class="headerlink" href="#vs-code" title="永久链接至标题">¶</a></h3>
 <p>如果使用 VS Code 编辑 Markdown 文件，则 <a class="reference external" href="https://marketplace.visualstudio.com/items?itemName=ExecutableBookProject.myst-highlight">VS Code MyST Markdown 扩展</a> 提供语法高亮显示和其他功能。</p>
-</section>
-</section>
-</section>
+</div>
+</div>
+</div>
 
     <script type="text/x-thebe-config">
     {
@@ -938,12 +937,32 @@ Here&#39;s my note!
               </div>
               
         
-        <div class='prev-next-bottom'>
             
-    <a class='left-prev' id="prev-link" href="index.html" title="previous page">撰写叙述内容</a>
-    <a class='right-next' id="next-link" href="content-blocks.html" title="next page">特殊内容块</a>
 
-        </div>
+
+
+<div class='prev-next-bottom'>
+    
+    <div id="prev">
+        <a class="left-prev" href="index.html" title="上一页 页">
+            <i class="prevnext-label fas fa-angle-left"></i>
+            <div class="prevnext-info">
+                <p class="prevnext-label">上一页</p>
+                <p class="prevnext-title">撰写叙述内容</p>
+            </div>
+        </a>
+    </div>
+     <div id="next">
+        <a class="right-next" href="content-blocks.html" title="下一页 页">
+            <div class="prevnext-info">
+                <p class="prevnext-label">下一页</p>
+                <p class="prevnext-title">特殊内容块</p>
+            </div>
+            <i class="prevnext-label fas fa-angle-right"></i>
+        </a>
+     </div>
+
+</div>
         
         </div>
     </div>

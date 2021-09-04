@@ -4,8 +4,7 @@
 <html lang="zh">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>控制页面布局</title>
     
   <link href="../_static/css/theme.css" rel="stylesheet" />
@@ -23,8 +22,8 @@
       
 
     
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-book-theme.acff12b8f9c144ce68a297486a2fa670.css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.e8f53015daec13862f6db5e763c41738.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
@@ -32,16 +31,16 @@
     <link rel="stylesheet" type="text/css" href="../_static/tabs.css" />
     <link rel="stylesheet" type="text/css" href="../_static/page.css" />
     <link rel="stylesheet" type="text/css" href="../_static/custom.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/xin-css/main.css" />
     <link rel="stylesheet" type="text/css" href="../_static/w3css/4/w3pro.css" />
     <link rel="stylesheet" type="text/css" href="../_static/w3css/4/w3mobile.css" />
     <link rel="stylesheet" type="text/css" href="../_static/w3css/4/w3.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/xin-css/main.css" />
     <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     
   <link rel="preload" as="script" href="../_static/js/index.1c5a1a01449ed65a7b51.js">
 
-    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
@@ -84,12 +83,12 @@ var addUtterances = () => {
 }
 commentsRunWhenDOMLoaded(addUtterances);
 </script>
-    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.0/dist/embed-amd.js"></script>
-    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
-    <script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script >
         const thebe_selector = ".thebe,.cell"
         const thebe_selector_input = "pre,.cell_input div.highlight"
         const thebe_selector_output = ".output,.cell_output"
@@ -126,9 +125,9 @@ commentsRunWhenDOMLoaded(addUtterances);
 </div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
   <i class="icon fas fa-search"></i>
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
-</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item active">
-        <p class="caption" role="heading">
+        <p class="caption">
  <span class="caption-text">
   教程
  </span>
@@ -177,7 +176,7 @@ commentsRunWhenDOMLoaded(addUtterances);
   </a>
  </li>
 </ul>
-<p class="caption" role="heading">
+<p class="caption">
  <span class="caption-text">
   主题指南
  </span>
@@ -482,7 +481,7 @@ commentsRunWhenDOMLoaded(addUtterances);
   </a>
  </li>
 </ul>
-<p class="caption" role="heading">
+<p class="caption">
  <span class="caption-text">
   参考
  </span>
@@ -509,7 +508,7 @@ commentsRunWhenDOMLoaded(addUtterances);
   </a>
  </li>
 </ul>
-<p class="caption" role="heading">
+<p class="caption">
  <span class="caption-text">
   关于 Jupyter Book
  </span>
@@ -661,7 +660,7 @@ commentsRunWhenDOMLoaded(addUtterances);
             <div class="tocsection onthispage pt-5 pb-3">
                 <i class="fas fa-list"></i> Contents
             </div>
-            <nav id="bd-toc-nav">
+            <nav id="bd-toc-nav" aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#layout-sidebar">
@@ -713,7 +712,7 @@ commentsRunWhenDOMLoaded(addUtterances);
         
               <div>
                 
-  <section id="id1">
+  <div class="section" id="id1">
 <h1>控制页面布局<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h1>
 <div class="admonition warning">
 <p class="admonition-title">警告</p>
@@ -755,7 +754,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 <img alt="../_images/layout_1_0.png" src="../_images/layout_1_0.png" />
 </div>
 </div>
-<section id="layout-sidebar">
+<div class="section" id="layout-sidebar">
 <span id="id2"></span><h2>侧边栏内容<a class="headerlink" href="#layout-sidebar" title="永久链接至标题">¶</a></h2>
 <p>添加侧边栏元素允许您提供上下文信息，而不会破坏主要内容的流。它是 <a class="reference external" href="https://edwardtufte.github.io/tufte-css/">Tufte 风格指南</a> 中推荐的主要模式之一。</p>
 <p>Jupyter Book 支持两种侧边栏。我们将在下面描述它们。</p>
@@ -763,16 +762,16 @@ commentsRunWhenDOMLoaded(addUtterances);
 <p class="admonition-title">注解</p>
 <p>一些侧边栏内容根据屏幕大小表现不同。如果屏幕足够窄，侧边栏内容将与您的内容保持一致。把屏幕调宽，它就会向右弹出。</p>
 </div>
-<section id="id3">
+<div class="section" id="id3">
 <h3>侧边栏内的内容<a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h3>
-<aside class="sidebar">
+<div class="sidebar">
 <p class="sidebar-title">下面是一些侧边栏内容</p>
 <p>它跨越了一些你的主要内容，以及空白处，如下面的注释块所示：</p>
 <div class="admonition note">
 <p class="admonition-title">注解</p>
 <p>在侧边栏中有一个注释块！</p>
 </div>
-</aside>
+</div>
 <p>如果在内容中使用侧边栏，侧边栏将与页面内容保持一致。然而，它将被放置在右侧，允许您的内容环绕它。这可以防止侧边栏破坏内容的流动。如果您需要为整个内容提供上下文的内容或图像块，这一点特别有用。
 要在内容中添加侧边栏，请使用以下语法:</p>
 <div class="highlight-md notranslate"><div class="highlight"><pre><span></span>```{sidebar} My sidebar title
@@ -780,8 +779,8 @@ My sidebar content
 ```
 </pre></div>
 </div>
-</section>
-<section id="id4">
+</div>
+<div class="section" id="id4">
 <h3>页边距内容<a class="headerlink" href="#id4" title="永久链接至标题">¶</a></h3>
 <p>使用 MyST Markdown 将内容添加到页边距，使用以下语法：</p>
 <div class="highlight-md notranslate"><div class="highlight"><pre><span></span>```{margin} An optional title
@@ -789,7 +788,7 @@ My margin content
 ```
 </pre></div>
 </div>
-<aside class="margin sidebar">
+<div class="margin sidebar">
 <p class="sidebar-title"><strong>例子</strong></p>
 <p>这里有一些页边距内容！创建时使用</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>```{margin}
@@ -797,15 +796,15 @@ My margin content
 </pre></div>
 </div>
 <p>Markdown 单元格的指令。Jupyter Book 自动将这些单元格转换为有用的页边距内容。</p>
-</aside>
+</div>
 <p>用代码单元格控制页边距内容使用的语法略有不同，我们将在下面介绍。</p>
-</section>
-<section id="id5">
+</div>
+<div class="section" id="id5">
 <h3>带有代码单元格的页边距<a class="headerlink" href="#id5" title="永久链接至标题">¶</a></h3>
 <p>通过向单元格的标记添加 <code class="docutils literal notranslate"><span class="pre">margin</span></code>，可以将代码单元格移动到右边页边距。</p>
 <div class="tabbed-set docutils">
-<input checked="checked" id="56493e2b-175a-44bc-b4fd-fb3ee94d3c60" name="78886dc8-ae4d-4c35-9db2-a9e8f88a390b" type="radio">
-</input><label class="tabbed-label" for="56493e2b-175a-44bc-b4fd-fb3ee94d3c60">
+<input checked="checked" id="e49fbe6f-b048-4f40-8b24-c1a7ce65a80e" name="8718a9a9-3dd0-4161-aea2-ab48c163b4d7" type="radio">
+</input><label class="tabbed-label" for="e49fbe6f-b048-4f40-8b24-c1a7ce65a80e">
 Jupyter Notebook</label><div class="tabbed-content docutils">
 <p>页边距单元格的元数据是这样的:</p>
 <div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
@@ -820,8 +819,8 @@ Jupyter Notebook</label><div class="tabbed-content docutils">
 <p><a class="reference internal" href="metadata.html#jupyter-cell-tags"><span class="std std-ref">将元数据添加到笔记本</span></a></p>
 </div>
 </div>
-<input id="e989be54-1b04-48df-a386-aaed89c86ae1" name="78886dc8-ae4d-4c35-9db2-a9e8f88a390b" type="radio">
-</input><label class="tabbed-label" for="e989be54-1b04-48df-a386-aaed89c86ae1">
+<input id="602fa4cd-50ae-4bba-83c6-f0b3b682785f" name="8718a9a9-3dd0-4161-aea2-ab48c163b4d7" type="radio">
+</input><label class="tabbed-label" for="602fa4cd-50ae-4bba-83c6-f0b3b682785f">
 MyST 文本文件</label><div class="tabbed-content docutils">
 <p>对于 MyST 文本文件，可以将这些标记添加到 <code class="docutils literal notranslate"><span class="pre">code-cell</span></code> 中</p>
 <div class="highlight-md notranslate"><div class="highlight"><pre><span></span>```{code-cell} &lt;language&gt;
@@ -844,12 +843,12 @@ MyST 文本文件</label><div class="tabbed-content docutils">
 </div>
 <p>这可以与其他标记(如 <code class="docutils literal notranslate"><span class="pre">remove-input</span></code>)结合使用，用以<strong>仅显示图形</strong>。</p>
 <p><a class="reference internal" href="../reference/cheatsheet.html#myst-cheatsheet"><span class="std std-ref">MyST 备忘单</span></a> 提供了 <a class="reference internal" href="../reference/cheatsheet.html#myst-cheatsheet-code-cell-tags"><span class="std std-ref">可用的 <code class="docutils literal notranslate"><span class="pre">code-cell</span></code> 标签列表</span></a></p>
-</section>
-</section>
-<section id="id6">
+</div>
+</div>
+<div class="section" id="id6">
 <h2>宽屏的内容<a class="headerlink" href="#id6" title="永久链接至标题">¶</a></h2>
 <p>有时，您希望使用<strong>所有</strong>可用的水平空间。这可以让你突出特定的想法，可视化等。</p>
-<section id="id7">
+<div class="section" id="id7">
 <h3>宽屏的代码单元<a class="headerlink" href="#id7" title="永久链接至标题">¶</a></h3>
 <p>你可以指定一个代码单元格的输入和/或输出应该占用所有的水平空间(包括右边的页边距)，使用以下单元格元数据标签:</p>
 <div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
@@ -874,8 +873,8 @@ MyST 文本文件</label><div class="tabbed-content docutils">
 <img alt="../_images/layout_5_0.png" src="../_images/layout_5_0.png" />
 </div>
 </div>
-</section>
-<section id="markdown">
+</div>
+<div class="section" id="markdown">
 <h3>宽屏的 markdown 内容<a class="headerlink" href="#markdown" title="永久链接至标题">¶</a></h3>
 <p>如果您想使您的标记内容全宽，您不能这样做通过单元格标签。相反，你有以下几种选择:</p>
 <ol>
@@ -916,9 +915,9 @@ Here&#39;s a note that will take the full width
 <p class="admonition-title"><strong>混合页边距和全宽内容</strong></p>
 <p>在混合页边距和全宽内容时要小心。有时这些会在视觉空间中相互冲突。您应该相对较少地使用它们，以便它们能够充分地突出显示信息。</p>
 </div>
-</section>
-</section>
-</section>
+</div>
+</div>
+</div>
 
     <script type="text/x-thebe-config">
     {
@@ -943,12 +942,32 @@ Here&#39;s a note that will take the full width
               </div>
               
         
-        <div class='prev-next-bottom'>
             
-    <a class='left-prev' id="prev-link" href="references.html" title="previous page">引用和交叉引用</a>
-    <a class='right-next' id="next-link" href="citations.html" title="next page">引用和参考书目</a>
 
-        </div>
+
+
+<div class='prev-next-bottom'>
+    
+    <div id="prev">
+        <a class="left-prev" href="references.html" title="上一页 页">
+            <i class="prevnext-label fas fa-angle-left"></i>
+            <div class="prevnext-info">
+                <p class="prevnext-label">上一页</p>
+                <p class="prevnext-title">引用和交叉引用</p>
+            </div>
+        </a>
+    </div>
+     <div id="next">
+        <a class="right-next" href="citations.html" title="下一页 页">
+            <div class="prevnext-info">
+                <p class="prevnext-label">下一页</p>
+                <p class="prevnext-title">引用和参考书目</p>
+            </div>
+            <i class="prevnext-label fas fa-angle-right"></i>
+        </a>
+     </div>
+
+</div>
         
         </div>
     </div>

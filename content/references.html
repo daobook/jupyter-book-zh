@@ -4,8 +4,7 @@
 <html lang="zh">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>引用和交叉引用</title>
     
   <link href="../_static/css/theme.css" rel="stylesheet" />
@@ -23,8 +22,8 @@
       
 
     
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-book-theme.acff12b8f9c144ce68a297486a2fa670.css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.e8f53015daec13862f6db5e763c41738.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
@@ -32,16 +31,16 @@
     <link rel="stylesheet" type="text/css" href="../_static/tabs.css" />
     <link rel="stylesheet" type="text/css" href="../_static/page.css" />
     <link rel="stylesheet" type="text/css" href="../_static/custom.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/xin-css/main.css" />
     <link rel="stylesheet" type="text/css" href="../_static/w3css/4/w3pro.css" />
     <link rel="stylesheet" type="text/css" href="../_static/w3css/4/w3mobile.css" />
     <link rel="stylesheet" type="text/css" href="../_static/w3css/4/w3.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/xin-css/main.css" />
     <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     
   <link rel="preload" as="script" href="../_static/js/index.1c5a1a01449ed65a7b51.js">
 
-    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
@@ -84,19 +83,19 @@ var addUtterances = () => {
 }
 commentsRunWhenDOMLoaded(addUtterances);
 </script>
-    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.0/dist/embed-amd.js"></script>
-    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
-    <script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"TeX": {"Macros": {"N": "\\mathbb{N}", "floor": ["\\lfloor#1\\rfloor", 1], "bmat": ["\\left[\\begin{array}"], "emat": ["\\end{array}\\right]"]}}, "tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script >
         const thebe_selector = ".thebe,.cell"
         const thebe_selector_input = "pre,.cell_input div.highlight"
         const thebe_selector_output = ".output,.cell_output"
     </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
-    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <script type="text/x-mathjax-config">MathJax.Hub.Config({"TeX": {"Macros": {"N": "\\mathbb{N}", "floor": ["\\lfloor#1\\rfloor", 1], "bmat": ["\\left[\\begin{array}"], "emat": ["\\end{array}\\right]"]}}, "tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
     <link rel="canonical" href="https://xinetzone.github.io/jupyter-book/content/references.html" />
     <link rel="shortcut icon" href="../_static/page-logo.jfif"/>
     <link rel="index" title="索引" href="../genindex.html" />
@@ -128,9 +127,9 @@ commentsRunWhenDOMLoaded(addUtterances);
 </div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
   <i class="icon fas fa-search"></i>
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
-</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item active">
-        <p class="caption" role="heading">
+        <p class="caption">
  <span class="caption-text">
   教程
  </span>
@@ -179,7 +178,7 @@ commentsRunWhenDOMLoaded(addUtterances);
   </a>
  </li>
 </ul>
-<p class="caption" role="heading">
+<p class="caption">
  <span class="caption-text">
   主题指南
  </span>
@@ -484,7 +483,7 @@ commentsRunWhenDOMLoaded(addUtterances);
   </a>
  </li>
 </ul>
-<p class="caption" role="heading">
+<p class="caption">
  <span class="caption-text">
   参考
  </span>
@@ -511,7 +510,7 @@ commentsRunWhenDOMLoaded(addUtterances);
   </a>
  </li>
 </ul>
-<p class="caption" role="heading">
+<p class="caption">
  <span class="caption-text">
   关于 Jupyter Book
  </span>
@@ -663,7 +662,7 @@ commentsRunWhenDOMLoaded(addUtterances);
             <div class="tocsection onthispage pt-5 pb-3">
                 <i class="fas fa-list"></i> Contents
             </div>
-            <nav id="bd-toc-nav">
+            <nav id="bd-toc-nav" aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#section">
@@ -721,7 +720,7 @@ commentsRunWhenDOMLoaded(addUtterances);
         
               <div>
                 
-  <section id="content-references">
+  <div class="section" id="content-references">
 <span id="id1"></span><h1>引用和交叉引用<a class="headerlink" href="#content-references" title="永久链接至标题">¶</a></h1>
 <p>因为 <code class="docutils literal notranslate"><span class="pre">jupyter-book</span></code> 是建立在 <a class="reference internal" href="../reference/glossary.html#term-Sphinx"><span class="xref std std-term">Sphinx</span></a> 之上的，有很多方法可以在你的书中引用内容(甚至跨其他书籍，或 Sphinx 网站)。</p>
 <p>引用是通过<strong>角色</strong>或<strong>markdown 链接语法</strong>来完成的，这取决于你的用例。书中有几种引用内容的方法，这取决于你想要参考的内容类型。</p>
@@ -729,7 +728,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 <p class="admonition-title">参见</p>
 <p>如果你已经开始学习，请查看 <a class="reference internal" href="../tutorials/references.html"><span class="doc std std-doc">开始使用引用</span></a> 以获得更多信息。</p>
 </div>
-<section id="section">
+<div class="section" id="section">
 <span id="content-references-labels"></span><h2>引用 section 标签<a class="headerlink" href="#section" title="永久链接至标题">¶</a></h2>
 <p>标签是一种将标签添加到内容部分的方法，以便以后可以引用它们。如果你想快速插入到书的其他部分的链接，这是很有用的。标签可以添加在页面的主要元素之前，如标题或 <code class="docutils literal notranslate"><span class="pre">figure</span></code>。</p>
 <p>要添加一个标签，在你想要标记的元素前使用以下模式：</p>
@@ -748,8 +747,8 @@ commentsRunWhenDOMLoaded(addUtterances);
 <li><p><code class="docutils literal notranslate"><span class="pre">[](label-text)</span></code></p></li>
 </ul>
 <p>例如，语法 <code class="docutils literal notranslate"><span class="pre">{ref}`content:references:labels`</span></code> 或 <code class="docutils literal notranslate"><span class="pre">[](content:references:labels)</span></code> 会产生到这个部分的链接，像这样 <a class="reference internal" href="#content-references-labels"><span class="std std-ref">引用 section 标签</span></a>。</p>
-</section>
-<section id="references-figures">
+</div>
+<div class="section" id="references-figures">
 <span id="id2"></span><h2>引用图像<a class="headerlink" href="#references-figures" title="永久链接至标题">¶</a></h2>
 <p>要在你的书中引用一个图，首先添加一个图，并确保它有一个 <code class="docutils literal notranslate"><span class="pre">name</span></code> 和一个关联的字幕:</p>
 <div class="sphinx-bs container pb-4 docutils">
@@ -776,12 +775,10 @@ My figure title.
 <p class="card-text">结果</p>
 </div>
 <div class="card-body docutils">
-<figure class="align-default" id="my-fig-ref">
+<div class="figure align-default" id="my-fig-ref">
 <img alt="../_images/cool.jpg" src="../_images/cool.jpg" />
-<figcaption>
-<p><span class="caption-number">图 3 </span><span class="caption-text">My figure title.</span><a class="headerlink" href="#my-fig-ref" title="永久链接至图片">¶</a></p>
-</figcaption>
-</figure>
+<p class="caption"><span class="caption-number">图 3 </span><span class="caption-text">My figure title.</span><a class="headerlink" href="#my-fig-ref" title="永久链接至图片">¶</a></p>
+</div>
 </div>
 </div>
 </div>
@@ -815,8 +812,8 @@ My figure title.
 </tr>
 </tbody>
 </table>
-</section>
-<section id="references-tables">
+</div>
+<div class="section" id="references-tables">
 <span id="id3"></span><h2>引用表格<a class="headerlink" href="#references-tables" title="永久链接至标题">¶</a></h2>
 <p>要引用一个表，首先创建一个表，并确保它有一个 <code class="docutils literal notranslate"><span class="pre">:name:</span></code> 和一个 title:</p>
 <div class="sphinx-bs container pb-4 docutils">
@@ -891,8 +888,8 @@ My figure title.
 </tr>
 </tbody>
 </table>
-</section>
-<section id="id4">
+</div>
+<div class="section" id="id4">
 <h2>引用内容文件<a class="headerlink" href="#id4" title="永久链接至标题">¶</a></h2>
 <p>要引用书籍内容的其他文件，可以使用 <code class="docutils literal notranslate"><span class="pre">{doc}</span></code> 角色，或者使用 Markdown 链接语法直接链接到另一个文件。例如:</p>
 <table class="colwidths-auto table">
@@ -916,8 +913,8 @@ My figure title.
 </tr>
 </tbody>
 </table>
-</section>
-<section id="id5">
+</div>
+<div class="section" id="id5">
 <h2>引用公式<a class="headerlink" href="#id5" title="永久链接至标题">¶</a></h2>
 <p>要引用公式，首先插入一个带有如下标签的公式：</p>
 <div class="math notranslate nohighlight" id="equation-my-math-ref">
@@ -928,8 +925,8 @@ My figure title.
 <li><p><code class="docutils literal notranslate"><span class="pre">See</span> <span class="pre">Equation</span> <span class="pre">`{eq}`my-math-ref`</span></code> 结果:见公式 <a class="reference internal" href="#equation-my-math-ref">(1)</a></p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">See</span> <span class="pre">Equation</span> <span class="pre">[](my-math-ref)</span></code> 结果:见公式 <a class="reference internal" href="#equation-my-math-ref">(1)</a>.</p></li>
 </ul>
-</section>
-<section id="references-custom-text">
+</div>
+<div class="section" id="references-custom-text">
 <span id="id6"></span><h2>选择引用文本<a class="headerlink" href="#references-custom-text" title="永久链接至标题">¶</a></h2>
 <p>如果你想选择渲染引用链接的文本，使用以下模式：</p>
 <div class="highlight-md notranslate"><div class="highlight"><pre><span></span>{someref}`your text here &lt;reference-target&gt;`
@@ -956,13 +953,13 @@ My figure title.
 </tr>
 </tbody>
 </table>
-</section>
-<section id="id7">
+</div>
+<div class="section" id="id7">
 <h2>引用编号<a class="headerlink" href="#id7" title="永久链接至标题">¶</a></h2>
 <p>您可以在表格或图表中添加<strong>编号引用</strong>。要向 <a class="reference internal" href="#references-tables"><span class="std std-ref">表</span></a>或 <a class="reference internal" href="#references-figures"><span class="std std-ref">图形</span></a> 添加编号引用，请使用 <code class="docutils literal notranslate"><span class="pre">{numref}</span></code> 角色。如果您希望使用 <a class="reference internal" href="#references-custom-text"><span class="std std-ref">自定义文本</span></a>，请添加 <code class="docutils literal notranslate"><span class="pre">%s</span></code> 作为数字的占位符。</p>
 <p>有关用法，请参阅下面一节中的示例。</p>
-</section>
-<section id="markdown">
+</div>
+<div class="section" id="markdown">
 <span id="references-markdown-syntax"></span><h2>使用 markdown 链接语法的引用<a class="headerlink" href="#markdown" title="永久链接至标题">¶</a></h2>
 <p>如果你想使用 Markdown 风格的语法，那么 MyST Markdown 将尝试从以上引用类型中找到一个引用(以及更多!)</p>
 <p>这有一个优点，你可以在你的文本中使用嵌套的标记语法，例如：</p>
@@ -1008,16 +1005,16 @@ My figure title.
 <li><p><a class="reference internal" href="citations.html#content-citations"><span class="std std-ref">Citations</span></a></p></li>
 </ul>
 </div>
-</section>
-<section id="id8">
+</div>
+<div class="section" id="id8">
 <h2>检查遗漏的引用<a class="headerlink" href="#id8" title="永久链接至标题">¶</a></h2>
 <p>你可以在构建 Jupyter  Book 时检查丢失的参考。要做到这一点，可以使用以下选项:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>jupyter-book build -W -n --keep-going docs/
 </pre></div>
 </div>
 <p>这将检查丢失的引用(<code class="docutils literal notranslate"><span class="pre">-n</span></code>)并将它们转换为错误(<code class="docutils literal notranslate"><span class="pre">-W</span></code>)，但仍将尝试运行完整的构建(<code class="docutils literal notranslate"><span class="pre">--keep-going</span></code>)，以便您可以在一次运行中看到所有错误。</p>
-</section>
-</section>
+</div>
+</div>
 
     <script type="text/x-thebe-config">
     {
@@ -1042,12 +1039,32 @@ My figure title.
               </div>
               
         
-        <div class='prev-next-bottom'>
             
-    <a class='left-prev' id="prev-link" href="content-blocks.html" title="previous page">特殊内容块</a>
-    <a class='right-next' id="next-link" href="layout.html" title="next page">控制页面布局</a>
 
-        </div>
+
+
+<div class='prev-next-bottom'>
+    
+    <div id="prev">
+        <a class="left-prev" href="content-blocks.html" title="上一页 页">
+            <i class="prevnext-label fas fa-angle-left"></i>
+            <div class="prevnext-info">
+                <p class="prevnext-label">上一页</p>
+                <p class="prevnext-title">特殊内容块</p>
+            </div>
+        </a>
+    </div>
+     <div id="next">
+        <a class="right-next" href="layout.html" title="下一页 页">
+            <div class="prevnext-info">
+                <p class="prevnext-label">下一页</p>
+                <p class="prevnext-title">控制页面布局</p>
+            </div>
+            <i class="prevnext-label fas fa-angle-right"></i>
+        </a>
+     </div>
+
+</div>
         
         </div>
     </div>

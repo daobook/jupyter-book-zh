@@ -4,8 +4,7 @@
 <html lang="zh">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>GitHub Pages 与 Actions</title>
     
   <link href="../_static/css/theme.css" rel="stylesheet" />
@@ -23,8 +22,8 @@
       
 
     
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-book-theme.acff12b8f9c144ce68a297486a2fa670.css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.e8f53015daec13862f6db5e763c41738.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
@@ -32,16 +31,16 @@
     <link rel="stylesheet" type="text/css" href="../_static/tabs.css" />
     <link rel="stylesheet" type="text/css" href="../_static/page.css" />
     <link rel="stylesheet" type="text/css" href="../_static/custom.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/xin-css/main.css" />
     <link rel="stylesheet" type="text/css" href="../_static/w3css/4/w3pro.css" />
     <link rel="stylesheet" type="text/css" href="../_static/w3css/4/w3mobile.css" />
     <link rel="stylesheet" type="text/css" href="../_static/w3css/4/w3.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/xin-css/main.css" />
     <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     
   <link rel="preload" as="script" href="../_static/js/index.1c5a1a01449ed65a7b51.js">
 
-    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
@@ -84,12 +83,12 @@ var addUtterances = () => {
 }
 commentsRunWhenDOMLoaded(addUtterances);
 </script>
-    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.0/dist/embed-amd.js"></script>
-    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
-    <script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script >
         const thebe_selector = ".thebe,.cell"
         const thebe_selector_input = "pre,.cell_input div.highlight"
         const thebe_selector_output = ".output,.cell_output"
@@ -126,9 +125,9 @@ commentsRunWhenDOMLoaded(addUtterances);
 </div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
   <i class="icon fas fa-search"></i>
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
-</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item active">
-        <p class="caption" role="heading">
+        <p class="caption">
  <span class="caption-text">
   教程
  </span>
@@ -177,7 +176,7 @@ commentsRunWhenDOMLoaded(addUtterances);
   </a>
  </li>
 </ul>
-<p class="caption" role="heading">
+<p class="caption">
  <span class="caption-text">
   主题指南
  </span>
@@ -482,7 +481,7 @@ commentsRunWhenDOMLoaded(addUtterances);
   </a>
  </li>
 </ul>
-<p class="caption" role="heading">
+<p class="caption">
  <span class="caption-text">
   参考
  </span>
@@ -509,7 +508,7 @@ commentsRunWhenDOMLoaded(addUtterances);
   </a>
  </li>
 </ul>
-<p class="caption" role="heading">
+<p class="caption">
  <span class="caption-text">
   关于 Jupyter Book
  </span>
@@ -638,7 +637,7 @@ commentsRunWhenDOMLoaded(addUtterances);
             <div class="tocsection onthispage pt-5 pb-3">
                 <i class="fas fa-list"></i> Contents
             </div>
-            <nav id="bd-toc-nav">
+            <nav id="bd-toc-nav" aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#id1">
@@ -685,7 +684,7 @@ commentsRunWhenDOMLoaded(addUtterances);
         
               <div>
                 
-  <section id="github-pages-actions">
+  <div class="section" id="github-pages-actions">
 <span id="publish-gh-pages"></span><h1>GitHub Pages 与 Actions<a class="headerlink" href="#github-pages-actions" title="永久链接至标题">¶</a></h1>
 <p>一旦你的内容在 GitHub 上，你可以很容易地托管它作为一个 <a class="reference external" href="https://docs.github.com/en/github/working-with-github-pages">GitHub Pages</a> 网站。这是一个 GitHub 托管静态文件的服务，就像它们是一个独立的网站。</p>
 <p>有三种方法可以让你快速在 GitHub 页面上托管你的书:</p>
@@ -695,7 +694,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 <li><p>使用 GitHub Action 自动构建你的书和更新你的网站时，你改变的内容。</p></li>
 </ul>
 <p>我们将涵盖下面的每个选项。</p>
-<section id="id1">
+<div class="section" id="id1">
 <h2>手动将你的书的内容放到网上<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h2>
 <p>在这种情况下，你手动构建你的书的文件，然后把它们推到一个 GitHub 仓库，以便作为一个网站托管。
 有两种方法</p>
@@ -709,7 +708,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 更多信息请参见<a class="reference external" href="https://docs.github.com/en/github/working-with-github-pages">GitHub Pages文档</a>。</p></li>
 </ol>
 </div>
-<section id="build">
+<div class="section" id="build">
 <h3>(选项1)复制并粘贴你的书的 <code class="docutils literal notranslate"><span class="pre">_build</span></code> 内容到一个新的文件夹<a class="headerlink" href="#build" title="永久链接至标题">¶</a></h3>
 <p>最简单的方法来托管你的书在线是简单地复制一切是在 <code class="docutils literal notranslate"><span class="pre">_build</span></code> 内，并把它放在一个位置，GitHub 页面知道看。
 我们推荐两个地方：</p>
@@ -731,8 +730,8 @@ commentsRunWhenDOMLoaded(addUtterances);
 这告诉 GitHub Pages 把你的文件当作一个“静态HTML网站”。</p></li>
 <li><p>将你的更改推送到 GitHub，然后 <a class="reference external" href="https://docs.github.com/en/github/working-with-github-pages">configure it to start hosting your documentation</a>.</p></li>
 </ol>
-</section>
-<section id="ghp-import">
+</div>
+<div class="section" id="ghp-import">
 <h3>(选项2)使用 <code class="docutils literal notranslate"><span class="pre">ghp-import</span></code> 自动推送你的构建文件<a class="headerlink" href="#ghp-import" title="永久链接至标题">¶</a></h3>
 <p>使用 GitHub 页面与你构建的 HTML 最简单的方法是使用 <a class="reference external" href="https://github.com/davisp/ghp-import"><code class="docutils literal notranslate"><span class="pre">ghp-import</span></code></a> 包。<code class="docutils literal notranslate"><span class="pre">ghp-import</span></code> 是一个轻量级的 Python 包，可以很容易地将 HTML 内容推送到 GitHub 存储库。</p>
 <p><code class="docutils literal notranslate"><span class="pre">ghp-import</span></code> 通过复制你构建的书的<em>所有</em>内容(即 <code class="docutils literal notranslate"><span class="pre">_build/html</span></code> 文件夹)到你的存储库名为 <code class="docutils literal notranslate"><span class="pre">gh-pages</span></code> 的分支，并将其推送到 GitHub。
@@ -761,9 +760,9 @@ commentsRunWhenDOMLoaded(addUtterances);
 <p>注意这个警告来自 <a class="reference external" href="https://github.com/davisp/ghp-import"><code class="docutils literal notranslate"><span class="pre">ghp-import</span></code> GitHub repository</a>：</p>
 <p>“…<em><code class="docutils literal notranslate"><span class="pre">ghp-import</span></code> will DESTROY your gh-pages branch… and assumes that the <code class="docutils literal notranslate"><span class="pre">gh-pages</span></code> branch is 100% derivative. You should never edit files in your <code class="docutils literal notranslate"><span class="pre">gh-pages</span></code> branch by hand if you’re using this script…</em>”</p>
 </div>
-</section>
-</section>
-<section id="automatically-host-your-book-with-github-actions">
+</div>
+</div>
+<div class="section" id="automatically-host-your-book-with-github-actions">
 <span id="publish-gh-actions"></span><h2>Automatically host your book with GitHub Actions<a class="headerlink" href="#automatically-host-your-book-with-github-actions" title="永久链接至标题">¶</a></h2>
 <p><a class="reference external" href="https://docs.github.com/en/actions">GitHub Actions</a> 是一个让你在 GitHub 上自动化的工具。
 它被用于各种各样的事情，比如测试、发布包和持续集成。</p>
@@ -843,8 +842,8 @@ commentsRunWhenDOMLoaded(addUtterances);
 </pre></div>
 </div>
 <p>如果你想把你的站点部署到一个用户和组织库的 GitHub 页面(<code class="docutils literal notranslate"><span class="pre">&lt;username&gt;.github.io</span></code>)，检查另一个示例工作流和可用的选项在 <a class="reference external" href="https://github.com/peaceiris/actions-gh-pages">peaceiris/actions-gh-pages</a> 的 README。</p>
-</section>
-</section>
+</div>
+</div>
 
     <script type="text/x-thebe-config">
     {
@@ -869,12 +868,32 @@ commentsRunWhenDOMLoaded(addUtterances);
               </div>
               
         
-        <div class='prev-next-bottom'>
             
-    <a class='left-prev' id="prev-link" href="web.html" title="previous page">把你的书放在网上</a>
-    <a class='right-next' id="next-link" href="netlify.html" title="next page">Publish with Netlify</a>
 
-        </div>
+
+
+<div class='prev-next-bottom'>
+    
+    <div id="prev">
+        <a class="left-prev" href="web.html" title="上一页 页">
+            <i class="prevnext-label fas fa-angle-left"></i>
+            <div class="prevnext-info">
+                <p class="prevnext-label">上一页</p>
+                <p class="prevnext-title">把你的书放在网上</p>
+            </div>
+        </a>
+    </div>
+     <div id="next">
+        <a class="right-next" href="netlify.html" title="下一页 页">
+            <div class="prevnext-info">
+                <p class="prevnext-label">下一页</p>
+                <p class="prevnext-title">Publish with Netlify</p>
+            </div>
+            <i class="prevnext-label fas fa-angle-right"></i>
+        </a>
+     </div>
+
+</div>
         
         </div>
     </div>

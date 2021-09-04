@@ -4,8 +4,7 @@
 <html lang="zh">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>使用 Build 命令行界面</title>
     
   <link href="../_static/css/theme.css" rel="stylesheet" />
@@ -23,8 +22,8 @@
       
 
     
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-book-theme.acff12b8f9c144ce68a297486a2fa670.css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.e8f53015daec13862f6db5e763c41738.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
@@ -32,16 +31,16 @@
     <link rel="stylesheet" type="text/css" href="../_static/tabs.css" />
     <link rel="stylesheet" type="text/css" href="../_static/page.css" />
     <link rel="stylesheet" type="text/css" href="../_static/custom.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/xin-css/main.css" />
     <link rel="stylesheet" type="text/css" href="../_static/w3css/4/w3pro.css" />
     <link rel="stylesheet" type="text/css" href="../_static/w3css/4/w3mobile.css" />
     <link rel="stylesheet" type="text/css" href="../_static/w3css/4/w3.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/xin-css/main.css" />
     <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     
   <link rel="preload" as="script" href="../_static/js/index.1c5a1a01449ed65a7b51.js">
 
-    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
@@ -84,12 +83,12 @@ var addUtterances = () => {
 }
 commentsRunWhenDOMLoaded(addUtterances);
 </script>
-    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.0/dist/embed-amd.js"></script>
-    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
-    <script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script >
         const thebe_selector = ".thebe,.cell"
         const thebe_selector_input = "pre,.cell_input div.highlight"
         const thebe_selector_output = ".output,.cell_output"
@@ -126,9 +125,9 @@ commentsRunWhenDOMLoaded(addUtterances);
 </div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
   <i class="icon fas fa-search"></i>
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
-</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item active">
-        <p class="caption" role="heading">
+        <p class="caption">
  <span class="caption-text">
   教程
  </span>
@@ -177,7 +176,7 @@ commentsRunWhenDOMLoaded(addUtterances);
   </a>
  </li>
 </ul>
-<p class="caption" role="heading">
+<p class="caption">
  <span class="caption-text">
   主题指南
  </span>
@@ -482,7 +481,7 @@ commentsRunWhenDOMLoaded(addUtterances);
   </a>
  </li>
 </ul>
-<p class="caption" role="heading">
+<p class="caption">
  <span class="caption-text">
   参考
  </span>
@@ -509,7 +508,7 @@ commentsRunWhenDOMLoaded(addUtterances);
   </a>
  </li>
 </ul>
-<p class="caption" role="heading">
+<p class="caption">
  <span class="caption-text">
   关于 Jupyter Book
  </span>
@@ -638,7 +637,7 @@ commentsRunWhenDOMLoaded(addUtterances);
             <div class="tocsection onthispage pt-5 pb-3">
                 <i class="fas fa-list"></i> Contents
             </div>
-            <nav id="bd-toc-nav">
+            <nav id="bd-toc-nav" aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#id1">
@@ -681,18 +680,18 @@ commentsRunWhenDOMLoaded(addUtterances);
         
               <div>
                 
-  <section id="build">
+  <div class="section" id="build">
 <h1>使用 Build 命令行界面<a class="headerlink" href="#build" title="永久链接至标题">¶</a></h1>
 <p>写完书的内容后，就该构建书的输出了，以便与他人分享。例如，您可能希望构建一个静态网站托管的 HTML 文件，或与同事共享的 PDF 文件。</p>
-<section id="id1">
+<div class="section" id="id1">
 <h2>通过命令行构建<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h2>
 <p>构建你的书的基本方法是通过下面的命令：</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>jupyter-book build &lt;path-to-book&gt;
 </pre></div>
 </div>
 <p>此外，您可以控制生成的输出的类型，以及您的书进行构建的方式。本页的其余部分涵盖了其中一些选项。</p>
-</section>
-<section id="id2">
+</div>
+<div class="section" id="id2">
 <h2>构建输出的类型<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
 <p>您可以使用 Jupyter Book 构建各种输出。要选择不同的构建器，请在从命令行运行  <code class="docutils literal notranslate"><span class="pre">jupyter-book</span> <span class="pre">build</span></code>时使用 <code class="docutils literal notranslate"><span class="pre">--builder</span> <span class="pre">&lt;builder-name&gt;</span></code> 配置。以下是可供你选择的构建器名单：</p>
 <ul class="simple">
@@ -704,8 +703,8 @@ commentsRunWhenDOMLoaded(addUtterances);
 <li><p><code class="docutils literal notranslate"><span class="pre">latex</span></code>：为你的书建立 Latex 文件</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">pdflatex</span></code>：通过 Latex 构建你的书的 PDF 格式（参考 <a class="reference internal" href="../advanced/pdf.html#pdf-latex"><span class="std std-ref">Build a PDF using LaTeX</span></a>）</p></li>
 </ul>
-</section>
-<section id="id3">
+</div>
+<div class="section" id="id3">
 <h2>从你的书的构建中排除一些页面<a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h2>
 <p>默认情况下，Jupyter Book 将构建在你的书的文件夹中找到的所有内容文件，即使它们没有在 <code class="docutils literal notranslate"><span class="pre">_toc.yml</span></code> 中指定（如果它发现了一个没有列出的文件，就会发出警告）。</p>
 <p>如果你想让 Jupyter Book 完全跳过一个文件，你可以在 <code class="docutils literal notranslate"><span class="pre">_config.yml</span></code> 中使用以下配置：</p>
@@ -713,8 +712,8 @@ commentsRunWhenDOMLoaded(addUtterances);
 </pre></div>
 </div>
 <p>任何匹配这里描述的模式的文件都将被排除在构建之外。如果您想要排除正在执行的文件，但仍然希望它们由 Jupyter Book 构建，请参阅 (execute/exclude)。</p>
-</section>
-<section id="clean-build">
+</div>
+<div class="section" id="clean-build">
 <span id="id4"></span><h2>清理你的书的生成文件<a class="headerlink" href="#clean-build" title="永久链接至标题">¶</a></h2>
 <p>在构建图书时，可以“清理”生成的文件。如果你最近修改了很多内容，以确保你从头开始写书，这通常是有用的。</p>
 <p>你可以通过运行以下命令来清理你的书生成的内容：</p>
@@ -727,16 +726,16 @@ commentsRunWhenDOMLoaded(addUtterances);
 </pre></div>
 </div>
 <p>这将完全删除 <code class="docutils literal notranslate"><span class="pre">_build/</span></code> 目录中的文件夹。</p>
-</section>
-<section id="toc">
+</div>
+<div class="section" id="toc">
 <span id="config-exclude-non-toc-files"></span><h2>禁用在 TOC 中未指定的构建文件<a class="headerlink" href="#toc" title="永久链接至标题">¶</a></h2>
 <p>默认情况下，Jupyter Book 将构建您的图书文件夹中的所有文件，无论它们是否在目录表中指定。要禁用此行为并只构建TOC中指定的文件，请使用 <code class="docutils literal notranslate"><span class="pre">_config.yml</span></code> 中的以下模式：</p>
 <div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">only_build_toc_files</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">true</span>
 </pre></div>
 </div>
 <p>注意，隐藏文件夹中的文件（例如 <code class="docutils literal notranslate"><span class="pre">.github</span></code> 或 <code class="docutils literal notranslate"><span class="pre">.venv</span></code>）仍然会被构建，即使它们没有在 TOC 中指定。您应该显式地排除这些文件。</p>
-</section>
-<section id="id5">
+</div>
+<div class="section" id="id5">
 <h2>调试您的书的构建过程<a class="headerlink" href="#id5" title="永久链接至标题">¶</a></h2>
 <p>当调试你的书构建时，以下选项可能会很有帮助：</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>jupyter-book build -W -n --keep-going mybookname/
@@ -744,8 +743,8 @@ commentsRunWhenDOMLoaded(addUtterances);
 </div>
 <p>这将检查丢失的引用(<code class="docutils literal notranslate"><span class="pre">-n</span></code>)，将它们转换为错误(<code class="docutils literal notranslate"><span class="pre">-W</span></code>)，但仍将尝试运行完整的构建(<code class="docutils literal notranslate"><span class="pre">--keep-going</span></code>)，以便您可以在一次运行中看到所有错误。</p>
 <p>你也可以使用 <code class="docutils literal notranslate"><span class="pre">-v</span></code> 或 <code class="docutils literal notranslate"><span class="pre">-vvv</span></code> 来增加详细级别。</p>
-</section>
-</section>
+</div>
+</div>
 
     <script type="text/x-thebe-config">
     {
@@ -770,12 +769,32 @@ commentsRunWhenDOMLoaded(addUtterances);
               </div>
               
         
-        <div class='prev-next-bottom'>
             
-    <a class='left-prev' id="prev-link" href="building/index.html" title="previous page">构建你的书输出</a>
-    <a class='right-next' id="next-link" href="../advanced/pdf.html" title="next page">Build a PDF</a>
 
-        </div>
+
+
+<div class='prev-next-bottom'>
+    
+    <div id="prev">
+        <a class="left-prev" href="building/index.html" title="上一页 页">
+            <i class="prevnext-label fas fa-angle-left"></i>
+            <div class="prevnext-info">
+                <p class="prevnext-label">上一页</p>
+                <p class="prevnext-title">构建你的书输出</p>
+            </div>
+        </a>
+    </div>
+     <div id="next">
+        <a class="right-next" href="../advanced/pdf.html" title="下一页 页">
+            <div class="prevnext-info">
+                <p class="prevnext-label">下一页</p>
+                <p class="prevnext-title">Build a PDF</p>
+            </div>
+            <i class="prevnext-label fas fa-angle-right"></i>
+        </a>
+     </div>
+
+</div>
         
         </div>
     </div>

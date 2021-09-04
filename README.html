@@ -4,8 +4,7 @@
 <html lang="zh">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Jupyter Book 中文</title>
     
   <link href="_static/css/theme.css" rel="stylesheet" />
@@ -23,8 +22,8 @@
       
 
     
-    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="_static/sphinx-book-theme.acff12b8f9c144ce68a297486a2fa670.css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/sphinx-book-theme.e8f53015daec13862f6db5e763c41738.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
@@ -32,16 +31,16 @@
     <link rel="stylesheet" type="text/css" href="_static/tabs.css" />
     <link rel="stylesheet" type="text/css" href="_static/page.css" />
     <link rel="stylesheet" type="text/css" href="_static/custom.css" />
-    <link rel="stylesheet" type="text/css" href="_static/xin-css/main.css" />
     <link rel="stylesheet" type="text/css" href="_static/w3css/4/w3pro.css" />
     <link rel="stylesheet" type="text/css" href="_static/w3css/4/w3mobile.css" />
     <link rel="stylesheet" type="text/css" href="_static/w3css/4/w3.css" />
+    <link rel="stylesheet" type="text/css" href="_static/xin-css/main.css" />
     <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     
   <link rel="preload" as="script" href="_static/js/index.1c5a1a01449ed65a7b51.js">
 
-    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
     <script src="_static/jquery.js"></script>
     <script src="_static/underscore.js"></script>
     <script src="_static/doctools.js"></script>
@@ -84,12 +83,12 @@ var addUtterances = () => {
 }
 commentsRunWhenDOMLoaded(addUtterances);
 </script>
-    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.0/dist/embed-amd.js"></script>
-    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
-    <script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script >
         const thebe_selector = ".thebe,.cell"
         const thebe_selector_input = "pre,.cell_input div.highlight"
         const thebe_selector_output = ".output,.cell_output"
@@ -125,9 +124,9 @@ commentsRunWhenDOMLoaded(addUtterances);
 </div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
   <i class="icon fas fa-search"></i>
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
-</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item active">
-        <p class="caption" role="heading">
+        <p class="caption">
  <span class="caption-text">
   教程
  </span>
@@ -176,7 +175,7 @@ commentsRunWhenDOMLoaded(addUtterances);
   </a>
  </li>
 </ul>
-<p class="caption" role="heading">
+<p class="caption">
  <span class="caption-text">
   主题指南
  </span>
@@ -481,7 +480,7 @@ commentsRunWhenDOMLoaded(addUtterances);
   </a>
  </li>
 </ul>
-<p class="caption" role="heading">
+<p class="caption">
  <span class="caption-text">
   参考
  </span>
@@ -508,7 +507,7 @@ commentsRunWhenDOMLoaded(addUtterances);
   </a>
  </li>
 </ul>
-<p class="caption" role="heading">
+<p class="caption">
  <span class="caption-text">
   关于 Jupyter Book
  </span>
@@ -637,7 +636,7 @@ commentsRunWhenDOMLoaded(addUtterances);
             <div class="tocsection onthispage pt-5 pb-3">
                 <i class="fas fa-list"></i> Contents
             </div>
-            <nav id="bd-toc-nav">
+            <nav id="bd-toc-nav" aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#jupyter">
@@ -665,7 +664,7 @@ commentsRunWhenDOMLoaded(addUtterances);
         
               <div>
                 
-  <section id="jupyter-book">
+  <div class="section" id="jupyter-book">
 <h1>Jupyter Book 中文<a class="headerlink" href="#jupyter-book" title="永久链接至标题">¶</a></h1>
 <p><a class="reference external" href="https://github.com/xinetzone/jupyter-book/issues"><img alt="GitHub issues" src="https://img.shields.io/github/issues/xinetzone/jupyter-book" /></a> <a class="reference external" href="https://github.com/xinetzone/jupyter-book/network"><img alt="GitHub forks" src="https://img.shields.io/github/forks/xinetzone/jupyter-book" /></a> <a class="reference external" href="https://github.com/xinetzone/jupyter-book/stargazers"><img alt="GitHub stars" src="https://img.shields.io/github/stars/xinetzone/jupyter-book" /></a> <a class="reference external" href="https://github.com/xinetzone/jupyter-book/blob/main/LICENSE"><img alt="GitHub license" src="https://img.shields.io/github/license/xinetzone/jupyter-book" /></a>  <img alt="repo size" src="https://img.shields.io/github/repo-size/xinetzone/jupyter-book.svg" /> <a class="reference external" href="https://github.com/xinetzone/jupyter-book/graphs/contributors"><img alt="contributors" src="https://img.shields.io/github/contributors/xinetzone/jupyter-book.svg" /></a> <a class="reference external" href="https://github.com/xinetzone/jupyter-book/watchers"><img alt="watcher" src="https://img.shields.io/github/watchers/xinetzone/jupyter-book.svg" /></a> <img alt="" src="https://github.com/xinetzone/jupyter-book/actions/workflows/docs.yml/badge.svg" /></p>
 <div class="w3-pale-green w3-card w3-padding w3-round-xlarge w3-margin-top docutils">
@@ -675,7 +674,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 <div class="tip dropdown w3-pale-blue w3-card-4 w3-padding w3-round-xlarge w3-margin-top admonition">
 <p class="admonition-title">导航</p>
 <div class="toctree-wrapper compound">
-<p class="caption" role="heading"><span class="caption-text">教程</span></p>
+<p class="caption"><span class="caption-text">教程</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="start/your-first-book.html">创建你的第一本书</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="start/overview.html">概述</a></li>
@@ -689,7 +688,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 </ul>
 </div>
 <div class="toctree-wrapper compound">
-<p class="caption" role="heading"><span class="caption-text">主题指南</span></p>
+<p class="caption"><span class="caption-text">主题指南</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="basics/organize.html">组织你的书</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="customize/toc.html">Structure the Table of Contents</a></li>
@@ -748,7 +747,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 </ul>
 </div>
 <div class="toctree-wrapper compound">
-<p class="caption" role="heading"><span class="caption-text">参考</span></p>
+<p class="caption"><span class="caption-text">参考</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="customize/config.html">配置参考</a></li>
 <li class="toctree-l1"><a class="reference internal" href="reference/cheatsheet.html">MyST syntax cheat sheet</a></li>
@@ -757,7 +756,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 </ul>
 </div>
 <div class="toctree-wrapper compound">
-<p class="caption" role="heading"><span class="caption-text">关于 Jupyter Book</span></p>
+<p class="caption"><span class="caption-text">关于 Jupyter Book</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference external" href="https://executablebooks.org/en/latest/gallery.html">Gallery of Jupyter Books</a></li>
 <li class="toctree-l1"><a class="reference internal" href="explain/components.html">The Jupyter Book toolchain and components</a></li>
@@ -765,7 +764,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 </ul>
 </div>
 </div>
-<section id="jupyter">
+<div class="section" id="jupyter">
 <span id="intro"></span><h2>Jupyter <a class="reference internal" href="_images/logo-square.svg"><img alt="_images/logo-square.svg" src="_images/logo-square.svg" width="40" /></a> 速览<a class="headerlink" href="#jupyter" title="永久链接至标题">¶</a></h2>
 <p><a class="reference external" href="https://doi.org/10.5281/zenodo.2561065"><img alt="DOI" src="https://zenodo.org/badge/DOI/10.5281/zenodo.2561065.svg" /></a></p>
 <p>Jupyter Book 是一个开源项目，用于从计算材料中构建漂亮且具有出版质量的书籍和文档。</p>
@@ -774,18 +773,18 @@ commentsRunWhenDOMLoaded(addUtterances);
 <div class="row docutils">
 <div class="d-flex col-lg-6 px-2 py-2 docutils">
 <div class="card w-100 docutils">
-<div class="card-header docutils">
+<div class="card-header w3-light-blue docutils">
 <p class="card-text"><strong><a class="reference internal" href="file-types/markdown.html#file-types-markdown"><span class="std std-ref">可发布内容</span></a></strong> ✍</p>
 </div>
 <div class="card-body docutils">
-<p class="card-text">写在 Jupyter Markdown, 更多<a class="reference internal" href="content/myst.html"><span class="doc std std-doc">发布功能</span></a> 的 MyST Markdown，<a class="reference internal" href="file-types/restructuredtext.html#file-types-rst"><span class="std std-ref">reStructuredText</span></a>，<a class="reference internal" href="file-types/notebooks.html#file-types-notebooks"><span class="std std-ref">Jupyter Notebooks</span></a>，或<a class="reference internal" href="file-types/jupytext.html#file-types-custom"><span class="std std-ref">任何 Jupytext 格式</span></a>。</p>
+<p class="card-text">使用 Jupyter Markdown, MyST Markdown，以及更多<a class="reference internal" href="content/myst.html"><span class="doc std std-doc">发布功能</span></a> 的 <a class="reference internal" href="file-types/restructuredtext.html#file-types-rst"><span class="std std-ref">reStructuredText</span></a>，<a class="reference internal" href="file-types/notebooks.html#file-types-notebooks"><span class="std std-ref">Jupyter Notebooks</span></a>，或 <a class="reference internal" href="file-types/jupytext.html#file-types-custom"><span class="std std-ref">任何 Jupytext 格式</span></a>。</p>
 <p class="card-text">包括对富文本语法的支持，如<a class="reference internal" href="content/citations.html"><span class="doc std std-doc">引用和交叉引用</span></a>、<a class="reference internal" href="content/math.html"><span class="doc std std-doc">数学和等式</span></a>，以及<a class="reference internal" href="content/figures.html"><span class="doc std std-doc">图</span></a>。</p>
 </div>
 </div>
 </div>
 <div class="d-flex col-lg-6 px-2 py-2 docutils">
 <div class="card w-100 docutils">
-<div class="card-header docutils">
+<div class="card-header w3-light-gray docutils">
 <p class="card-text"><strong><a class="reference internal" href="content/execute.html"><span class="doc std std-doc">执行、缓存和插入可计算性内容</span></a></strong> 🚀</p>
 </div>
 <div class="card-body docutils">
@@ -795,7 +794,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 </div>
 <div class="d-flex col-lg-6 px-2 py-2 docutils">
 <div class="card w-100 docutils">
-<div class="card-header docutils">
+<div class="card-header w3-pale-blue docutils">
 <p class="card-text"><strong><a class="reference internal" href="interactive/launchbuttons.html"><span class="doc std std-doc">向内容和输出添加交互性</span></a></strong> ✨</p>
 </div>
 <div class="card-body docutils">
@@ -805,7 +804,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 </div>
 <div class="d-flex col-lg-6 px-2 py-2 docutils">
 <div class="card w-100 docutils">
-<div class="card-header docutils">
+<div class="card-header w3-pale-yellow docutils">
 <p class="card-text"><strong><a class="reference internal" href="start/build.html"><span class="doc std std-doc">构建多种格式的书籍和文章</span></a></strong> 🎁</p>
 </div>
 <div class="card-body docutils">
@@ -827,7 +826,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 <dl class="simple myst">
 <dt>💡 <a class="reference external" href="https://github.com/executablebooks/jupyter-book/issues/new/choose">打开议题</a></dt><dd><p>通过 GitHub issue 跟踪增强请求、bug 报告和待办事项。</p>
 </dd>
-<dt>💬 [加入讨论]](<a class="reference external" href="https://github.com/executablebooks/meta/discussions">https://github.com/executablebooks/meta/discussions</a>)</dt><dd><p>在<a class="reference external" href="https://github.com/executablebooks/meta/discussions">社区论坛</a>上进行社区讨论，讨论想法，分享一般性问题和反馈。</p>
+<dt>💬 <a class="reference external" href="https://github.com/executablebooks/meta/discussions">加入讨论</a></dt><dd><p>在<a class="reference external" href="https://github.com/executablebooks/meta/discussions">社区论坛</a>上进行社区讨论，讨论想法，分享一般性问题和反馈。</p>
 </dd>
 <dt>👍 <a class="reference external" href="https://executablebooks.org/en/latest/feature-vote.html#feature-note" title="(在 Executable Book Project)"><span class="xref myst">为新功能投票</span></a></dt><dd><p>社区通过在我们的存储库中添加👍对问题的反应来提供反馈。您可以在 <a class="reference external" href="https://executablebooks.org/en/latest/feature-vote.html#feature-note" title="(在 Executable Book Project)"><span class="xref myst">Executable Books 问题排行榜</span></a> 中找到一个最重要的问题列表。</p>
 </dd>
@@ -837,8 +836,8 @@ commentsRunWhenDOMLoaded(addUtterances);
 </dd>
 </dl>
 </div>
-</section>
-<section id="id1">
+</div>
+<div class="section" id="id1">
 <h2>找到正确的文档资源<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h2>
 <p>这里有一些建议可以帮助你开始。</p>
 <div class="sphinx-bs container pb-4 full-width docutils">
@@ -879,14 +878,14 @@ commentsRunWhenDOMLoaded(addUtterances);
 </div>
 </div>
 </div>
-</section>
-<section id="id2">
+</div>
+<div class="section" id="id2">
 <h2>致谢<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
 <p>Jupyter Book 由一个<a class="reference external" href="https://github.com/executablebooks/jupyter-book/graphs/contributors">开放的贡献者社区</a>支持，其中很多人来自<a class="reference external" href="https://executablebooks.org">可执行书籍社区</a>和 <a class="reference external" href="https://jupyter.org/community">Jupyter 社区</a>。</p>
 <a class="float-left mr-2 rounded reference internal image-reference" href="https://pbs.twimg.com/profile_images/1226944724365447169/MzFpwY5P_400x400.png"><img alt="https://pbs.twimg.com/profile_images/1226944724365447169/MzFpwY5P_400x400.png" class="float-left mr-2 rounded" src="https://pbs.twimg.com/profile_images/1226944724365447169/MzFpwY5P_400x400.png" style="width: 100px;" /></a>
 <p>非常感谢 Sloan 基金会<a class="reference external" href="https://sloan.org/grant-detail/9231">为可执行图书项目提供支持</a>。</p>
-</section>
-</section>
+</div>
+</div>
 
     <script type="text/x-thebe-config">
     {
@@ -911,11 +910,23 @@ commentsRunWhenDOMLoaded(addUtterances);
               </div>
               
         
-        <div class='prev-next-bottom'>
             
-    <a class='right-next' id="next-link" href="start/your-first-book.html" title="next page">创建你的第一本书</a>
 
-        </div>
+
+
+<div class='prev-next-bottom'>
+    
+     <div id="next">
+        <a class="right-next" href="start/your-first-book.html" title="下一页 页">
+            <div class="prevnext-info">
+                <p class="prevnext-label">下一页</p>
+                <p class="prevnext-title">创建你的第一本书</p>
+            </div>
+            <i class="prevnext-label fas fa-angle-right"></i>
+        </a>
+     </div>
+
+</div>
         
         </div>
     </div>

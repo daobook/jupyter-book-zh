@@ -4,8 +4,7 @@
 <html lang="zh">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>完全用 Markdown 书写笔记本</title>
     
   <link href="../_static/css/theme.css" rel="stylesheet" />
@@ -23,8 +22,8 @@
       
 
     
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-book-theme.acff12b8f9c144ce68a297486a2fa670.css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.e8f53015daec13862f6db5e763c41738.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
@@ -32,16 +31,16 @@
     <link rel="stylesheet" type="text/css" href="../_static/tabs.css" />
     <link rel="stylesheet" type="text/css" href="../_static/page.css" />
     <link rel="stylesheet" type="text/css" href="../_static/custom.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/xin-css/main.css" />
     <link rel="stylesheet" type="text/css" href="../_static/w3css/4/w3pro.css" />
     <link rel="stylesheet" type="text/css" href="../_static/w3css/4/w3mobile.css" />
     <link rel="stylesheet" type="text/css" href="../_static/w3css/4/w3.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/xin-css/main.css" />
     <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     
   <link rel="preload" as="script" href="../_static/js/index.1c5a1a01449ed65a7b51.js">
 
-    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
@@ -84,12 +83,12 @@ var addUtterances = () => {
 }
 commentsRunWhenDOMLoaded(addUtterances);
 </script>
-    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.0/dist/embed-amd.js"></script>
-    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
-    <script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script >
         const thebe_selector = ".thebe,.cell"
         const thebe_selector_input = "pre,.cell_input div.highlight"
         const thebe_selector_output = ".output,.cell_output"
@@ -126,9 +125,9 @@ commentsRunWhenDOMLoaded(addUtterances);
 </div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
   <i class="icon fas fa-search"></i>
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
-</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item active">
-        <p class="caption" role="heading">
+        <p class="caption">
  <span class="caption-text">
   教程
  </span>
@@ -177,7 +176,7 @@ commentsRunWhenDOMLoaded(addUtterances);
   </a>
  </li>
 </ul>
-<p class="caption" role="heading">
+<p class="caption">
  <span class="caption-text">
   主题指南
  </span>
@@ -482,7 +481,7 @@ commentsRunWhenDOMLoaded(addUtterances);
   </a>
  </li>
 </ul>
-<p class="caption" role="heading">
+<p class="caption">
  <span class="caption-text">
   参考
  </span>
@@ -509,7 +508,7 @@ commentsRunWhenDOMLoaded(addUtterances);
   </a>
  </li>
 </ul>
-<p class="caption" role="heading">
+<p class="caption">
  <span class="caption-text">
   关于 Jupyter Book
  </span>
@@ -661,7 +660,7 @@ commentsRunWhenDOMLoaded(addUtterances);
             <div class="tocsection onthispage pt-5 pb-3">
                 <i class="fas fa-list"></i> Contents
             </div>
-            <nav id="bd-toc-nav">
+            <nav id="bd-toc-nav" aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#jupytext-myst">
@@ -708,7 +707,7 @@ commentsRunWhenDOMLoaded(addUtterances);
         
               <div>
                 
-  <section id="markdown">
+  <div class="section" id="markdown">
 <span id="file-types-myst-notebooks"></span><h1>完全用 Markdown 书写笔记本<a class="headerlink" href="#markdown" title="永久链接至标题">¶</a></h1>
 <p>在 Markdown 中存储 Jupyter 笔记本是可能的。这允许你完全使用 MyST Markdown 定义一个笔记本结构。关于 MyST Markdown 的更多信息，请参见 <a class="reference internal" href="../content/myst.html"><span class="doc">MyST Markdown 概述</span></a>。</p>
 <p>使用 Markdown 的笔记本可以在 Jupyter Book 中读取、执行和缓存(参见 <a class="reference internal" href="../content/execute.html"><span class="doc">执行并缓存页面</span></a> 来获取关于如何缓存页面的信息)。
@@ -720,7 +719,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 </div>
 <p>要查看 MyST 笔记本的示例，您可以查看<a class="reference external" href="https://github.com/executablebooks/jupyter-book/tree/master/docs">本文档的许多页面</a>。
 例如，查看 <a class="reference download internal" download="" href="../_downloads/b42d2b4229de564661ffb7a061305749/hiding.md"><code class="xref download docutils literal notranslate"><span class="pre">../interactive/hiding.md</span></code></a> 和 <a class="reference download internal" download="" href="../_downloads/620ffbdff166a2f661f3ac1bfaf809b7/layout.md"><code class="xref download docutils literal notranslate"><span class="pre">../content/layout.md</span></code></a>。</p>
-<section id="jupytext-myst">
+<div class="section" id="jupytext-myst">
 <h2>用 Jupytext 创建一个 MyST 笔记本<a class="headerlink" href="#jupytext-myst" title="永久链接至标题">¶</a></h2>
 <p>创建 MyST 笔记本最简单的方法是使用 <a class="reference external" href="https://jupytext.readthedocs.io">Jupytext</a>，这是一个允许双向转换 <code class="docutils literal notranslate"><span class="pre">.ipynb</span></code> 和各种文本文件的工具。</p>
 <p>你可以用下面的命令将 <code class="docutils literal notranslate"><span class="pre">.ipynb</span></code> 文件转换为 MyST 笔记本：</p>
@@ -735,20 +734,20 @@ commentsRunWhenDOMLoaded(addUtterances);
 </div>
 <p>Jupytext 也可以<strong>与您的 Markdown 自动同步 <code class="docutils literal notranslate"><span class="pre">.ipynb</span></code> 文件</strong>。
 要做到这一点，请使用 Jupyter 接口，如 Jupyter Lab 或经典的笔记本接口，并遵循<a class="reference external" href="https://jupytext.readthedocs.io/en/latest/paired-notebooks.html">配对笔记本的 Jupytext 说明</a>。</p>
-<aside class="margin sidebar">
+<div class="margin sidebar">
 <p class="sidebar-title">Markdown 优先</p>
 <p>如果 <code class="docutils literal notranslate"><span class="pre">.ipynb</span></code> 和 <code class="docutils literal notranslate"><span class="pre">.md</span></code> 文件都存在于你的书的文件夹中，则 <code class="docutils literal notranslate"><span class="pre">.md</span></code> 文件将优先使用！</p>
-</aside>
-<section id="markdown-myst-markdown">
+</div>
+<div class="section" id="markdown-myst-markdown">
 <h3>将 Markdown 文件转换为 MyST Markdown<a class="headerlink" href="#markdown-myst-markdown" title="永久链接至标题">¶</a></h3>
 <p>Jupyter Book 有一个小的 CLI，为操作和创建与 Jupytext 同步的 MyST Markdown 文件提供通用功能。将 Jupytext 语法添加到 Markdown 文件中(这将告诉 Jupytext 它是一个 MyST Markdown 文件)，运行以下命令:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>jupyter-book myst init mymarkdownfile.md --kernel kernelname
 </pre></div>
 </div>
 <p>如果您没有指定 <code class="docutils literal notranslate"><span class="pre">--kernel</span></code>，那么如果只有一个可用的<em>默认的内核</em> 将被使用。如果有多个可用内核，则必须手动指定一个。</p>
-</section>
-</section>
-<section id="myst">
+</div>
+</div>
+<div class="section" id="myst">
 <h2>MyST 笔记本的结构<a class="headerlink" href="#myst" title="永久链接至标题">¶</a></h2>
 <p>让我们看一下 Jupytext 创建的结构，您也可以使用它从头创建 MyST 笔记本。首先，让我们看看一个简单的 MyST 笔记本:</p>
 <div class="highlight-md notranslate"><div class="highlight"><pre><span></span>---
@@ -779,7 +778,7 @@ And some more Markdown...
 </pre></div>
 </div>
 <p>这里有三个主要部分需要注意：</p>
-<section id="frontmatter-yaml">
+<div class="section" id="frontmatter-yaml">
 <h3>Frontmatter YAML<a class="headerlink" href="#frontmatter-yaml" title="永久链接至标题">¶</a></h3>
 <p>MyST 笔记本需要特殊的前端格式的 YAML 来告诉 Jupytext 他们可以被转换成 <code class="docutils literal notranslate"><span class="pre">.ipynb</span></code> 文件。frontmatter YAML 块：</p>
 <div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nn">---</span>
@@ -796,12 +795,12 @@ And some more Markdown...
 </pre></div>
 </div>
 <p>告诉 Jupytext 此文件是 <code class="docutils literal notranslate"><span class="pre">myst</span></code> 格式的，并且它的代码应该在 Python 3 内核下运行。</p>
-<aside class="margin sidebar">
+<div class="margin sidebar">
 <p class="sidebar-title"></p>
 <p>记住，Jupyter 总是为每个笔记本定义一个而且只有一个内核。</p>
-</aside>
-</section>
-<section id="id1">
+</div>
+</div>
+<div class="section" id="id1">
 <h3>代码单元格<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h3>
 <p>MyST 笔记本中的代码块是用下面的 MyST 指令定义的：</p>
 <div class="highlight-md notranslate"><div class="highlight"><pre><span></span>```{code-cell}
@@ -823,8 +822,8 @@ your-code
 </pre></div>
 </div>
 <p>但是，请记住，每个页面只允许一个内核。</p>
-</section>
-<section id="id2">
+</div>
+<div class="section" id="id2">
 <h3>Markdown 内容<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h3>
 <p>代码单元之间的所有内容都使用<a class="reference external" href="https://myst-parser.readthedocs.io/">MyST Markdown 解析器</a> 解析为 Markdown 内容。查阅 <a class="reference internal" href="../content/myst.html"><span class="doc">MyST Markdown 概述</span></a> 获取 MyST Markdown 的更多信息。</p>
 <p>要明确地将 Markdown 内容拆分为两个 Markdown 单元格，请使用以下模式：</p>
@@ -848,9 +847,9 @@ Content in another Markdown cell
 <p class="admonition-title">警告</p>
 <p>请注意，在 MyST 文件中通过 <code class="docutils literal notranslate"><span class="pre">+++</span></code> 语法指定的单元格中断和元数据只会传播到它们的 <code class="docutils literal notranslate"><span class="pre">.ipynb</span></code>。在生成书的 HTML 时，<em>Markdown单元格</em> 信息将被丢弃，以避免文档结构中的层次结构冲突。换句话说，只有 <em>code cell</em> 标签对生成的 HTML 有影响。</p>
 </div>
-</section>
-</section>
-</section>
+</div>
+</div>
+</div>
 
     <script type="text/x-thebe-config">
     {
@@ -875,12 +874,32 @@ Content in another Markdown cell
               </div>
               
         
-        <div class='prev-next-bottom'>
             
-    <a class='left-prev' id="prev-link" href="notebooks.html" title="previous page">Jupyter Notebook 文件</a>
-    <a class='right-next' id="next-link" href="jupytext.html" title="next page">自定义笔记本格式和 Jupytext</a>
 
-        </div>
+
+
+<div class='prev-next-bottom'>
+    
+    <div id="prev">
+        <a class="left-prev" href="notebooks.html" title="上一页 页">
+            <i class="prevnext-label fas fa-angle-left"></i>
+            <div class="prevnext-info">
+                <p class="prevnext-label">上一页</p>
+                <p class="prevnext-title">Jupyter Notebook 文件</p>
+            </div>
+        </a>
+    </div>
+     <div id="next">
+        <a class="right-next" href="jupytext.html" title="下一页 页">
+            <div class="prevnext-info">
+                <p class="prevnext-label">下一页</p>
+                <p class="prevnext-title">自定义笔记本格式和 Jupytext</p>
+            </div>
+            <i class="prevnext-label fas fa-angle-right"></i>
+        </a>
+     </div>
+
+</div>
         
         </div>
     </div>

@@ -4,8 +4,7 @@
 <html lang="zh">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>使您的代码单元格可执行</title>
     
   <link href="../_static/css/theme.css" rel="stylesheet" />
@@ -23,8 +22,8 @@
       
 
     
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-book-theme.acff12b8f9c144ce68a297486a2fa670.css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.e8f53015daec13862f6db5e763c41738.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
@@ -32,16 +31,16 @@
     <link rel="stylesheet" type="text/css" href="../_static/tabs.css" />
     <link rel="stylesheet" type="text/css" href="../_static/page.css" />
     <link rel="stylesheet" type="text/css" href="../_static/custom.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/xin-css/main.css" />
     <link rel="stylesheet" type="text/css" href="../_static/w3css/4/w3pro.css" />
     <link rel="stylesheet" type="text/css" href="../_static/w3css/4/w3mobile.css" />
     <link rel="stylesheet" type="text/css" href="../_static/w3css/4/w3.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/xin-css/main.css" />
     <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     
   <link rel="preload" as="script" href="../_static/js/index.1c5a1a01449ed65a7b51.js">
 
-    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
@@ -84,12 +83,12 @@ var addUtterances = () => {
 }
 commentsRunWhenDOMLoaded(addUtterances);
 </script>
-    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.0/dist/embed-amd.js"></script>
-    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
-    <script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script >
         const thebe_selector = ".thebe,.cell"
         const thebe_selector_input = "pre,.cell_input div.highlight"
         const thebe_selector_output = ".output,.cell_output"
@@ -126,9 +125,9 @@ commentsRunWhenDOMLoaded(addUtterances);
 </div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
   <i class="icon fas fa-search"></i>
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
-</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item active">
-        <p class="caption" role="heading">
+        <p class="caption">
  <span class="caption-text">
   教程
  </span>
@@ -177,7 +176,7 @@ commentsRunWhenDOMLoaded(addUtterances);
   </a>
  </li>
 </ul>
-<p class="caption" role="heading">
+<p class="caption">
  <span class="caption-text">
   主题指南
  </span>
@@ -482,7 +481,7 @@ commentsRunWhenDOMLoaded(addUtterances);
   </a>
  </li>
 </ul>
-<p class="caption" role="heading">
+<p class="caption">
  <span class="caption-text">
   参考
  </span>
@@ -509,7 +508,7 @@ commentsRunWhenDOMLoaded(addUtterances);
   </a>
  </li>
 </ul>
-<p class="caption" role="heading">
+<p class="caption">
  <span class="caption-text">
   关于 Jupyter Book
  </span>
@@ -661,7 +660,7 @@ commentsRunWhenDOMLoaded(addUtterances);
             <div class="tocsection onthispage pt-5 pb-3">
                 <i class="fas fa-list"></i> Contents
             </div>
-            <nav id="bd-toc-nav">
+            <nav id="bd-toc-nav" aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#thebe">
@@ -689,7 +688,7 @@ commentsRunWhenDOMLoaded(addUtterances);
         
               <div>
                 
-  <section id="launch-thebe">
+  <div class="section" id="launch-thebe">
 <span id="id1"></span><h1>使您的代码单元格可执行<a class="headerlink" href="#launch-thebe" title="永久链接至标题">¶</a></h1>
 <p>这一节描述了如何为你的书带来交互性。这允许用户运行代码并查看输出，而无需离开页面。交互性是由运行在公共<a class="reference external" href="https://mybinder.org"><strong>MyBinder</strong></a> 服务上的内核提供的。</p>
 <p>例如，单击此页上方的 <span class="fa fa-rocket"></span> --&gt; <span class="guilabel">Live Code</span> 按钮，并运行下面的代码。</p>
@@ -708,7 +707,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.collections.PathCollection at 0x7fe91cf28b50&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;matplotlib.collections.PathCollection at 0x7f22dc163760&gt;
 </pre></div>
 </div>
 <img alt="../_images/thebe_1_1.png" src="../_images/thebe_1_1.png" />
@@ -718,7 +717,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 <p class="admonition-title">警告</p>
 <p>这是一个实验性的特性，在未来可能会发生变化或意想不到的效果。</p>
 </div>
-<section id="thebe">
+<div class="section" id="thebe">
 <h2>激活 Thebe<a class="headerlink" href="#thebe" title="永久链接至标题">¶</a></h2>
 <p>为了使您的内容具有交互性，而不要求读者离开当前页面，您可以使用一个名为 <a class="reference external" href="https://github.com/executablebooks/thebe">Thebe</a> 的项目。这为您提供了一个 <span class="guilabel">Live Code</span> 按钮，单击该按钮时，将把每个代码单元格转换为可以编辑的交互式单元格。它还向每个单元添加一个 “run” 按钮，并连接到在云中运行的 Binder 内核。</p>
 <p>要将 Thebe 按钮添加到你的 Jupyter Book 页面，采取以下步骤：</p>
@@ -731,12 +730,12 @@ commentsRunWhenDOMLoaded(addUtterances);
 </div>
 </li>
 </ol>
-</section>
-<section id="id2">
+</div>
+<div class="section" id="id2">
 <h2>配置 Thebe<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h2>
 <p>此外，您还可以配置 Binder 设置，这些设置用于为 Thebe 提供运行代码的内核。它们使用与上面描述的 BinderHub 交互按钮相同的配置字段。有关如何做到这一点的信息，请参见 <a class="reference internal" href="launchbuttons.html#launchbuttons-binder"><span class="std std-ref">BinderHub 启动按钮文档</span></a>。</p>
-</section>
-<section id="id3">
+</div>
+<div class="section" id="id3">
 <h2>在初始化 Thebe 时预执行单元格<a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h2>
 <p>有时，您希望在请求内核时立即运行一些代码单元格。这可能是您随后对用户隐藏的代码，以便缩小用户与之交互的焦点。这是可以通过使用 Jupyter Notebook 的<strong>单元格标签</strong>。</p>
 <p>将标签 <span class="guilabel">thebe-init</span> 添加到任何代码单元格将导致 Thebe 在接收到内核后运行这个单元格。任何后续 Thebe 单元格都可以访问相同的环境(例如，在初始化单元格中进行的任何模块导入)。</p>
@@ -761,8 +760,8 @@ commentsRunWhenDOMLoaded(addUtterances);
 </div>
 </div>
 </div>
-</section>
-</section>
+</div>
+</div>
 
     <script type="text/x-thebe-config">
     {
@@ -787,12 +786,32 @@ commentsRunWhenDOMLoaded(addUtterances);
               </div>
               
         
-        <div class='prev-next-bottom'>
             
-    <a class='left-prev' id="prev-link" href="launchbuttons.html" title="previous page">启动交互式计算接口</a>
-    <a class='right-next' id="next-link" href="comments.html" title="next page">评论和注释</a>
 
-        </div>
+
+
+<div class='prev-next-bottom'>
+    
+    <div id="prev">
+        <a class="left-prev" href="launchbuttons.html" title="上一页 页">
+            <i class="prevnext-label fas fa-angle-left"></i>
+            <div class="prevnext-info">
+                <p class="prevnext-label">上一页</p>
+                <p class="prevnext-title">启动交互式计算接口</p>
+            </div>
+        </a>
+    </div>
+     <div id="next">
+        <a class="right-next" href="comments.html" title="下一页 页">
+            <div class="prevnext-info">
+                <p class="prevnext-label">下一页</p>
+                <p class="prevnext-title">评论和注释</p>
+            </div>
+            <i class="prevnext-label fas fa-angle-right"></i>
+        </a>
+     </div>
+
+</div>
         
         </div>
     </div>

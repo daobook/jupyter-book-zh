@@ -4,8 +4,7 @@
 <html lang="zh">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>将元数据添加到您的书籍页面</title>
     
   <link href="../_static/css/theme.css" rel="stylesheet" />
@@ -23,8 +22,8 @@
       
 
     
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-book-theme.acff12b8f9c144ce68a297486a2fa670.css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.e8f53015daec13862f6db5e763c41738.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
@@ -32,16 +31,16 @@
     <link rel="stylesheet" type="text/css" href="../_static/tabs.css" />
     <link rel="stylesheet" type="text/css" href="../_static/page.css" />
     <link rel="stylesheet" type="text/css" href="../_static/custom.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/xin-css/main.css" />
     <link rel="stylesheet" type="text/css" href="../_static/w3css/4/w3pro.css" />
     <link rel="stylesheet" type="text/css" href="../_static/w3css/4/w3mobile.css" />
     <link rel="stylesheet" type="text/css" href="../_static/w3css/4/w3.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/xin-css/main.css" />
     <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     
   <link rel="preload" as="script" href="../_static/js/index.1c5a1a01449ed65a7b51.js">
 
-    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
@@ -84,12 +83,12 @@ var addUtterances = () => {
 }
 commentsRunWhenDOMLoaded(addUtterances);
 </script>
-    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.0/dist/embed-amd.js"></script>
-    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
-    <script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script >
         const thebe_selector = ".thebe,.cell"
         const thebe_selector_input = "pre,.cell_input div.highlight"
         const thebe_selector_output = ".output,.cell_output"
@@ -126,9 +125,9 @@ commentsRunWhenDOMLoaded(addUtterances);
 </div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
   <i class="icon fas fa-search"></i>
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
-</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item active">
-        <p class="caption" role="heading">
+        <p class="caption">
  <span class="caption-text">
   教程
  </span>
@@ -177,7 +176,7 @@ commentsRunWhenDOMLoaded(addUtterances);
   </a>
  </li>
 </ul>
-<p class="caption" role="heading">
+<p class="caption">
  <span class="caption-text">
   主题指南
  </span>
@@ -482,7 +481,7 @@ commentsRunWhenDOMLoaded(addUtterances);
   </a>
  </li>
 </ul>
-<p class="caption" role="heading">
+<p class="caption">
  <span class="caption-text">
   参考
  </span>
@@ -509,7 +508,7 @@ commentsRunWhenDOMLoaded(addUtterances);
   </a>
  </li>
 </ul>
-<p class="caption" role="heading">
+<p class="caption">
  <span class="caption-text">
   关于 Jupyter Book
  </span>
@@ -638,7 +637,7 @@ commentsRunWhenDOMLoaded(addUtterances);
             <div class="tocsection onthispage pt-5 pb-3">
                 <i class="fas fa-list"></i> Contents
             </div>
-            <nav id="bd-toc-nav">
+            <nav id="bd-toc-nav" aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#jupyter-cell-tags">
@@ -678,13 +677,13 @@ commentsRunWhenDOMLoaded(addUtterances);
         
               <div>
                 
-  <section id="id1">
+  <div class="section" id="id1">
 <h1>将元数据添加到您的书籍页面<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h1>
 <p>元数据是关于一本书或其内容的信息。它经常被用来控制 Jupyter Book 及其特性的行为。这是一个简短的指南，介绍如何将元数据添加到 Jupyter Book 的各种内容中。</p>
-<section id="jupyter-cell-tags">
+<div class="section" id="jupyter-cell-tags">
 <span id="id2"></span><h2>将元数据添加到笔记本<a class="headerlink" href="#jupyter-cell-tags" title="永久链接至标题">¶</a></h2>
 <p>您可以通过在单元格元数据中放置自定义标记来控制 Jupyter Book 的行为。这允许您 <a class="reference internal" href="../interactive/hiding.html"><span class="doc">自动隐藏代码单元格</span></a> 以及 <a class="reference internal" href="../interactive/thebe.html#launch-thebe"><span class="std std-ref">向单元格添加交互式小部件</span></a>。</p>
-<section id="id3">
+<div class="section" id="id3">
 <h3>使用笔记本界面添加标签<a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h3>
 <p>有两种简单的方法可以将元数据添加到单元格中：</p>
 <ol>
@@ -705,8 +704,8 @@ commentsRunWhenDOMLoaded(addUtterances);
 <li><p>对于输出级别：使用如 <code class="docutils literal notranslate"><span class="pre">IPython.display.display(obj,metadata={&quot;tags&quot;:</span> <span class="pre">[])</span></code>，你可以设置特定于某个输出的元数据(但是 Jupyter Book 还没有利用这一点)。</p></li>
 </ul>
 <p><img alt="NB Metadata GIF" src="../_images/metadata_edit.png" /></p>
-</section>
-<section id="myst-markdown">
+</div>
+<div class="section" id="myst-markdown">
 <h3>使用 MyST Markdown 笔记本添加标签<a class="headerlink" href="#myst-markdown" title="永久链接至标题">¶</a></h3>
 <p>如果你正在用 MyST Markdown 写笔记本，那么当你写 <code class="docutils literal notranslate"><span class="pre">{code-cell}</span></code> 块时，你可以添加标签到每个代码单元格。例如，下面我们:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>```{code-cell}
@@ -716,8 +715,8 @@ print(&quot;some code&quot;)
 </pre></div>
 </div>
 <p>将创建一个带有这三个标签的代码单元格。有关 MyST Markdown 笔记本的更多信息，请参阅 <a class="reference internal" href="../file-types/myst-notebooks.html"><span class="doc std std-doc">完全用 Markdown 书写笔记本</span></a>。</p>
-</section>
-<section id="python">
+</div>
+<div class="section" id="python">
 <h3>使用 Python 代码添加标记<a class="headerlink" href="#python" title="永久链接至标题">¶</a></h3>
 <p>有时您希望快速扫描笔记本的单元格，以便根据单元格的内容添加标记。例如，您可能希望使用 <code class="docutils literal notranslate"><span class="pre">remove-input</span></code> 标记隐藏任何包含 import 语句的单元格。</p>
 <p>下面是一个简短的 Python 代码片段，可以实现类似于此的功能。首先将目录更改到图书文件夹的根目录，然后将下面的脚本作为Python脚本或在 Jupyter Notebook 中运行(根据用例进行必要的修改)。最后，检查将要做出的更改并将它们提交到存储库。</p>
@@ -750,13 +749,13 @@ print(&quot;some code&quot;)
     <span class="n">nbf</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">ntbk</span><span class="p">,</span> <span class="n">ipath</span><span class="p">)</span>
 </pre></div>
 </div>
-</section>
-</section>
-<section id="id4">
+</div>
+</div>
+<div class="section" id="id4">
 <h2>向笔记本单元格添加元数据<a class="headerlink" href="#id4" title="永久链接至标题">¶</a></h2>
 <p>标签之类的东西</p>
-</section>
-</section>
+</div>
+</div>
 
     <script type="text/x-thebe-config">
     {
@@ -781,12 +780,32 @@ print(&quot;some code&quot;)
               </div>
               
         
-        <div class='prev-next-bottom'>
             
-    <a class='left-prev' id="prev-link" href="figures.html" title="previous page"><code class="docutils literal notranslate"><span class="pre">image</span></code> 和 <code class="docutils literal notranslate"><span class="pre">figure</span></code></a>
-    <a class='right-next' id="next-link" href="executable/index.html" title="next page">写可执行内容</a>
 
-        </div>
+
+
+<div class='prev-next-bottom'>
+    
+    <div id="prev">
+        <a class="left-prev" href="figures.html" title="上一页 页">
+            <i class="prevnext-label fas fa-angle-left"></i>
+            <div class="prevnext-info">
+                <p class="prevnext-label">上一页</p>
+                <p class="prevnext-title"><code class="docutils literal notranslate"><span class="pre">image</span></code> 和 <code class="docutils literal notranslate"><span class="pre">figure</span></code></p>
+            </div>
+        </a>
+    </div>
+     <div id="next">
+        <a class="right-next" href="executable/index.html" title="下一页 页">
+            <div class="prevnext-info">
+                <p class="prevnext-label">下一页</p>
+                <p class="prevnext-title">写可执行内容</p>
+            </div>
+            <i class="prevnext-label fas fa-angle-right"></i>
+        </a>
+     </div>
+
+</div>
         
         </div>
     </div>

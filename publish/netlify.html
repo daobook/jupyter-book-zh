@@ -4,8 +4,7 @@
 <html lang="zh">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Publish with Netlify</title>
     
   <link href="../_static/css/theme.css" rel="stylesheet" />
@@ -23,8 +22,8 @@
       
 
     
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-book-theme.acff12b8f9c144ce68a297486a2fa670.css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.e8f53015daec13862f6db5e763c41738.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
@@ -32,16 +31,16 @@
     <link rel="stylesheet" type="text/css" href="../_static/tabs.css" />
     <link rel="stylesheet" type="text/css" href="../_static/page.css" />
     <link rel="stylesheet" type="text/css" href="../_static/custom.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/xin-css/main.css" />
     <link rel="stylesheet" type="text/css" href="../_static/w3css/4/w3pro.css" />
     <link rel="stylesheet" type="text/css" href="../_static/w3css/4/w3mobile.css" />
     <link rel="stylesheet" type="text/css" href="../_static/w3css/4/w3.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/xin-css/main.css" />
     <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     
   <link rel="preload" as="script" href="../_static/js/index.1c5a1a01449ed65a7b51.js">
 
-    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
@@ -84,12 +83,12 @@ var addUtterances = () => {
 }
 commentsRunWhenDOMLoaded(addUtterances);
 </script>
-    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.0/dist/embed-amd.js"></script>
-    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
-    <script>
+    <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
+    <script >
         const thebe_selector = ".thebe,.cell"
         const thebe_selector_input = "pre,.cell_input div.highlight"
         const thebe_selector_output = ".output,.cell_output"
@@ -126,9 +125,9 @@ commentsRunWhenDOMLoaded(addUtterances);
 </div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
   <i class="icon fas fa-search"></i>
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
-</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item active">
-        <p class="caption" role="heading">
+        <p class="caption">
  <span class="caption-text">
   教程
  </span>
@@ -177,7 +176,7 @@ commentsRunWhenDOMLoaded(addUtterances);
   </a>
  </li>
 </ul>
-<p class="caption" role="heading">
+<p class="caption">
  <span class="caption-text">
   主题指南
  </span>
@@ -482,7 +481,7 @@ commentsRunWhenDOMLoaded(addUtterances);
   </a>
  </li>
 </ul>
-<p class="caption" role="heading">
+<p class="caption">
  <span class="caption-text">
   参考
  </span>
@@ -509,7 +508,7 @@ commentsRunWhenDOMLoaded(addUtterances);
   </a>
  </li>
 </ul>
-<p class="caption" role="heading">
+<p class="caption">
  <span class="caption-text">
   关于 Jupyter Book
  </span>
@@ -638,7 +637,7 @@ commentsRunWhenDOMLoaded(addUtterances);
             <div class="tocsection onthispage pt-5 pb-3">
                 <i class="fas fa-list"></i> Contents
             </div>
-            <nav id="bd-toc-nav">
+            <nav id="bd-toc-nav" aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
  <li class="toc-h2 nav-item toc-entry">
   <a class="reference internal nav-link" href="#step-1-connect-your-github-repo-to-netlify">
@@ -666,7 +665,7 @@ commentsRunWhenDOMLoaded(addUtterances);
         
               <div>
                 
-  <section id="publish-with-netlify">
+  <div class="section" id="publish-with-netlify">
 <span id="publish-netlify"></span><h1>Publish with Netlify<a class="headerlink" href="#publish-with-netlify" title="永久链接至标题">¶</a></h1>
 <p><a class="reference external" href="https://www.netlify.com/">Netlify</a> is a continuous deployment service that can
 <strong>automatically build an updated copy of your Jupyter Book</strong> as you push new content.
@@ -677,11 +676,11 @@ If you’re pushing your HTML to GitHub,
 you’ll want to <a class="reference internal" href="gh-pages.html"><span class="doc std std-doc">host your book on GitHub Pages</span></a> instead.</p>
 <p>Although Netlify has both free and paid tiers, the build process is the same across both
 Importantly, the free tier only allows for 100GB of bandwidth usage per month across all of your Netlify built projects.</p>
-<aside class="margin sidebar">
+<div class="margin sidebar">
 <p class="sidebar-title"></p>
 <p>If your Jupyter Book will be used by a large audience, or if you’re creating many Jupyter
 Books, you might want to consider registering for <a class="reference external" href="https://www.netlify.com/pricing/">a paid account</a>.</p>
-</aside>
+</div>
 <p>In order to use Netlify, you’ll need to <a class="reference external" href="https://app.netlify.com/signup">create an account</a>.
 Here, we’ll walk through connecting your Jupyter Book to Netlify’s continous deployment services using their UI.
 You can also check out their <a class="reference external" href="https://www.netlify.com/docs/continuous-deployment/">documentation on continuous deployment</a>.</p>
@@ -693,7 +692,7 @@ as detailed in <a class="reference external" href="https://www.netlify.com/docs/
 <p>For a full list of available environments,
 please see the <a class="reference external" href="https://github.com/netlify/build-image/blob/xenial/included_software.md#languages">Netlify build image details</a>.</p>
 </div>
-<section id="step-1-connect-your-github-repo-to-netlify">
+<div class="section" id="step-1-connect-your-github-repo-to-netlify">
 <h2>Step 1: Connect your GitHub repo to Netlify<a class="headerlink" href="#step-1-connect-your-github-repo-to-netlify" title="永久链接至标题">¶</a></h2>
 <p>After you’ve created a Netlify account, you’ll need to log in.
 The home page will be a dashboard of all sites you’re currently building with Netlify.
@@ -705,14 +704,14 @@ For the purposes of this tutorial, we’ll assume that your book is hosted on Gi
 <p>When you select the “GitHub” option, you’ll be asked to grant permission for Netlify to access your GitHub account.
 Authorizing access will take you to the next step of the build process, where you can select your Jupyter Book repository.</p>
 <p><img alt="Netlify continuous deployment" src="../_images/netlify-cd.png" /></p>
-</section>
-<section id="step-2-add-the-command-to-install-and-build-your-book">
+</div>
+<div class="section" id="step-2-add-the-command-to-install-and-build-your-book">
 <h2>Step 2: Add the command to install and build your book<a class="headerlink" href="#step-2-add-the-command-to-install-and-build-your-book" title="永久链接至标题">¶</a></h2>
-<aside class="margin sidebar">
+<div class="margin sidebar">
 <p class="sidebar-title"></p>
 <p>If your book content is not in the root of your repository, make sure you point to it
 in the <code class="docutils literal notranslate"><span class="pre">jupyter-book</span> <span class="pre">build</span></code> command.</p>
-</aside>
+</div>
 <p>Once you’ve selected the correct repository, you’ll need to supply build instructions.
 This is a command that Netlify runs before hosting your site. We’ll use it to do the
 following:</p>
@@ -736,8 +735,8 @@ In this example, we’ll use the <code class="docutils literal notranslate"><spa
 <p><img alt="Netlify build command" src="../_images/netlify-build.png" /></p>
 <p>You can then select <em>Deploy site</em> and wait for the site to build.
 You’ll be redirected to the site dashboard during the build process.</p>
-</section>
-<section id="step-3-updating-your-domain-name">
+</div>
+<div class="section" id="step-3-updating-your-domain-name">
 <h2>Step 3: Updating your domain name<a class="headerlink" href="#step-3-updating-your-domain-name" title="永久链接至标题">¶</a></h2>
 <p>If your site has successfully built, it will be assigned a random domain name.
 In order to have a more memorable address, you can update your site’s name.</p>
@@ -748,8 +747,8 @@ This will take you to a sub-menu, where you can choose to update your site name.
 Note that it will be prepended to <code class="docutils literal notranslate"><span class="pre">.netlify.com</span></code> so, <code class="docutils literal notranslate"><span class="pre">MY-BOOK</span></code> will become <code class="docutils literal notranslate"><span class="pre">MY-BOOK.netlify.com</span></code>.</p>
 <p>You can also use a custom domain (i.e., one that you have purchased through a DNS registrar).
 See the <a class="reference external" href="https://www.netlify.com/docs/custom-domains/">Netlify documentation on custom domains</a> for more details on this process.</p>
-</section>
-</section>
+</div>
+</div>
 
     <script type="text/x-thebe-config">
     {
@@ -774,12 +773,32 @@ See the <a class="reference external" href="https://www.netlify.com/docs/custom-
               </div>
               
         
-        <div class='prev-next-bottom'>
             
-    <a class='left-prev' id="prev-link" href="gh-pages.html" title="previous page">GitHub Pages 与 Actions</a>
-    <a class='right-next' id="next-link" href="../advanced/html.html" title="next page">高级 HTML 输出</a>
 
-        </div>
+
+
+<div class='prev-next-bottom'>
+    
+    <div id="prev">
+        <a class="left-prev" href="gh-pages.html" title="上一页 页">
+            <i class="prevnext-label fas fa-angle-left"></i>
+            <div class="prevnext-info">
+                <p class="prevnext-label">上一页</p>
+                <p class="prevnext-title">GitHub Pages 与 Actions</p>
+            </div>
+        </a>
+    </div>
+     <div id="next">
+        <a class="right-next" href="../advanced/html.html" title="下一页 页">
+            <div class="prevnext-info">
+                <p class="prevnext-label">下一页</p>
+                <p class="prevnext-title">高级 HTML 输出</p>
+            </div>
+            <i class="prevnext-label fas fa-angle-right"></i>
+        </a>
+     </div>
+
+</div>
         
         </div>
     </div>
