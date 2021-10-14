@@ -23,7 +23,7 @@
 
     
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/sphinx-book-theme.e8f53015daec13862f6db5e763c41738.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
@@ -31,10 +31,10 @@
     <link rel="stylesheet" type="text/css" href="../_static/tabs.css" />
     <link rel="stylesheet" type="text/css" href="../_static/page.css" />
     <link rel="stylesheet" type="text/css" href="../_static/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/xin-css/main.css" />
     <link rel="stylesheet" type="text/css" href="../_static/w3css/4/w3pro.css" />
     <link rel="stylesheet" type="text/css" href="../_static/w3css/4/w3mobile.css" />
     <link rel="stylesheet" type="text/css" href="../_static/w3css/4/w3.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/xin-css/main.css" />
     <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     
@@ -69,7 +69,7 @@ var addUtterances = () => {
     script.src = "https://utteranc.es/client.js";
     script.async = "async";
 
-    script.setAttribute("repo", "xinetzone/jupyter-book");
+    script.setAttribute("repo", "daobook/jupyter-book");
     script.setAttribute("issue-term", "pathname");
     script.setAttribute("theme", "github-light");
     script.setAttribute("label", "💬 comment");
@@ -94,7 +94,7 @@ commentsRunWhenDOMLoaded(addUtterances);
         const thebe_selector_output = ".output,.cell_output"
     </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
-    <link rel="canonical" href="https://xinetzone.github.io/jupyter-book/content/layout.html" />
+    <link rel="canonical" href="https://daobook.github.io/jupyter-book/content/layout.html" />
     <link rel="shortcut icon" href="../_static/page-logo.jfif"/>
     <link rel="index" title="索引" href="../genindex.html" />
     <link rel="search" title="搜索" href="../search.html" />
@@ -117,6 +117,10 @@ commentsRunWhenDOMLoaded(addUtterances);
     
         <div class="navbar-brand-box">
     <a class="navbar-brand text-wrap" href="../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
       
       <img src="../_static/logo.jpg" class="logo" alt="logo">
       
@@ -612,11 +616,11 @@ commentsRunWhenDOMLoaded(addUtterances);
         aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
     <div class="dropdown-buttons sourcebuttons">
         <a class="repository-button"
-            href="https://github.com/xinetzone/jupyter-book"><button type="button" class="btn btn-secondary topbarbtn"
+            href="https://github.com/daobook/jupyter-book"><button type="button" class="btn btn-secondary topbarbtn"
                 data-toggle="tooltip" data-placement="left" title="Source repository"><i
                     class="fab fa-github"></i>repository</button></a>
         <a class="issues-button"
-            href="https://github.com/xinetzone/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fcontent/layout.html&body=Your%20issue%20content%20here."><button
+            href="https://github.com/daobook/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fcontent/layout.html&body=Your%20issue%20content%20here."><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
         
@@ -637,7 +641,7 @@ commentsRunWhenDOMLoaded(addUtterances);
         aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
     <div class="dropdown-buttons">
         
-        <a class="binder-button" href="https://mybinder.org/v2/gh/xinetzone/jupyter-book/main?urlpath=tree/./content/layout.md"><button type="button"
+        <a class="binder-button" href="https://mybinder.org/v2/gh/daobook/jupyter-book/main?urlpath=tree/./content/layout.md"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
                 data-placement="left"><img class="binder-button-logo"
                     src="../_static/images/logo_binder.svg"
@@ -803,8 +807,8 @@ My margin content
 <h3>带有代码单元格的页边距<a class="headerlink" href="#id5" title="永久链接至标题">¶</a></h3>
 <p>通过向单元格的标记添加 <code class="docutils literal notranslate"><span class="pre">margin</span></code>，可以将代码单元格移动到右边页边距。</p>
 <div class="tabbed-set docutils">
-<input checked="checked" id="e49fbe6f-b048-4f40-8b24-c1a7ce65a80e" name="8718a9a9-3dd0-4161-aea2-ab48c163b4d7" type="radio">
-</input><label class="tabbed-label" for="e49fbe6f-b048-4f40-8b24-c1a7ce65a80e">
+<input checked="checked" id="ef2ff655-da68-4726-8c89-2cf2d1cdb326" name="8236d4e8-08ba-4353-a793-3d248738288e" type="radio">
+</input><label class="tabbed-label" for="ef2ff655-da68-4726-8c89-2cf2d1cdb326">
 Jupyter Notebook</label><div class="tabbed-content docutils">
 <p>页边距单元格的元数据是这样的:</p>
 <div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
@@ -819,8 +823,8 @@ Jupyter Notebook</label><div class="tabbed-content docutils">
 <p><a class="reference internal" href="metadata.html#jupyter-cell-tags"><span class="std std-ref">将元数据添加到笔记本</span></a></p>
 </div>
 </div>
-<input id="602fa4cd-50ae-4bba-83c6-f0b3b682785f" name="8718a9a9-3dd0-4161-aea2-ab48c163b4d7" type="radio">
-</input><label class="tabbed-label" for="602fa4cd-50ae-4bba-83c6-f0b3b682785f">
+<input id="13ebdd94-e403-4963-b5e5-34784142e667" name="8236d4e8-08ba-4353-a793-3d248738288e" type="radio">
+</input><label class="tabbed-label" for="13ebdd94-e403-4963-b5e5-34784142e667">
 MyST 文本文件</label><div class="tabbed-content docutils">
 <p>对于 MyST 文本文件，可以将这些标记添加到 <code class="docutils literal notranslate"><span class="pre">code-cell</span></code> 中</p>
 <div class="highlight-md notranslate"><div class="highlight"><pre><span></span>```{code-cell} &lt;language&gt;
@@ -923,7 +927,7 @@ Here&#39;s a note that will take the full width
     {
         requestKernel: true,
         binderOptions: {
-            repo: "xinetzone/jupyter-book",
+            repo: "daobook/jupyter-book",
             ref: "main",
         },
         codeMirrorConfig: {
@@ -971,7 +975,7 @@ Here&#39;s a note that will take the full width
         
         </div>
     </div>
-    <footer class="footer mt-5 mt-md-0">
+    <footer class="footer">
     <div class="container">
       <p>
         

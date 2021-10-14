@@ -23,7 +23,7 @@
 
     
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../../_static/sphinx-book-theme.e8f53015daec13862f6db5e763c41738.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/mystnb.css" />
@@ -31,10 +31,10 @@
     <link rel="stylesheet" type="text/css" href="../../_static/tabs.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/page.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/xin-css/main.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/w3css/4/w3pro.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/w3css/4/w3mobile.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/w3css/4/w3.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/xin-css/main.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     
@@ -69,7 +69,7 @@ var addUtterances = () => {
     script.src = "https://utteranc.es/client.js";
     script.async = "async";
 
-    script.setAttribute("repo", "xinetzone/jupyter-book");
+    script.setAttribute("repo", "daobook/jupyter-book");
     script.setAttribute("issue-term", "pathname");
     script.setAttribute("theme", "github-light");
     script.setAttribute("label", "💬 comment");
@@ -96,7 +96,7 @@ commentsRunWhenDOMLoaded(addUtterances);
         const thebe_selector_output = ".output,.cell_output"
     </script>
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
-    <link rel="canonical" href="https://xinetzone.github.io/jupyter-book/content/executable/output-insert.html" />
+    <link rel="canonical" href="https://daobook.github.io/jupyter-book/content/executable/output-insert.html" />
     <link rel="shortcut icon" href="../../_static/page-logo.jfif"/>
     <link rel="index" title="索引" href="../../genindex.html" />
     <link rel="search" title="搜索" href="../../search.html" />
@@ -119,6 +119,10 @@ commentsRunWhenDOMLoaded(addUtterances);
     
         <div class="navbar-brand-box">
     <a class="navbar-brand text-wrap" href="../../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
       
       <img src="../../_static/logo.jpg" class="logo" alt="logo">
       
@@ -614,11 +618,11 @@ commentsRunWhenDOMLoaded(addUtterances);
         aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
     <div class="dropdown-buttons sourcebuttons">
         <a class="repository-button"
-            href="https://github.com/xinetzone/jupyter-book"><button type="button" class="btn btn-secondary topbarbtn"
+            href="https://github.com/daobook/jupyter-book"><button type="button" class="btn btn-secondary topbarbtn"
                 data-toggle="tooltip" data-placement="left" title="Source repository"><i
                     class="fab fa-github"></i>repository</button></a>
         <a class="issues-button"
-            href="https://github.com/xinetzone/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fcontent/executable/output-insert.html&body=Your%20issue%20content%20here."><button
+            href="https://github.com/daobook/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fcontent/executable/output-insert.html&body=Your%20issue%20content%20here."><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
         
@@ -639,7 +643,7 @@ commentsRunWhenDOMLoaded(addUtterances);
         aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
     <div class="dropdown-buttons">
         
-        <a class="binder-button" href="https://mybinder.org/v2/gh/xinetzone/jupyter-book/main?urlpath=tree/./content/executable/output-insert.md"><button type="button"
+        <a class="binder-button" href="https://mybinder.org/v2/gh/daobook/jupyter-book/main?urlpath=tree/./content/executable/output-insert.md"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
                 data-placement="left"><img class="binder-button-logo"
                     src="../../_static/images/logo_binder.svg"
@@ -828,13 +832,13 @@ commentsRunWhenDOMLoaded(addUtterances);
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2.998269248690492
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>3.001742727585933
 </pre></div>
 </div>
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2.986024906653744
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2.989305469957695
 </pre></div>
 </div>
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>3.0105870884933004
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>3.014251306123964
 </pre></div>
 </div>
 </div>
@@ -910,33 +914,33 @@ commentsRunWhenDOMLoaded(addUtterances);
   <tbody>
     <tr>
       <th>0</th>
-      <td>3.236786</td>
-      <td>2.663274</td>
-      <td>3.313494</td>
+      <td>3.092179</td>
+      <td>2.946747</td>
+      <td>3.204763</td>
     </tr>
     <tr>
       <th>1</th>
-      <td>2.874729</td>
-      <td>2.888184</td>
-      <td>2.906788</td>
+      <td>3.146026</td>
+      <td>3.124673</td>
+      <td>3.480811</td>
     </tr>
     <tr>
       <th>2</th>
-      <td>2.886826</td>
-      <td>3.070225</td>
-      <td>2.985214</td>
+      <td>3.371067</td>
+      <td>3.135544</td>
+      <td>2.689223</td>
     </tr>
     <tr>
       <th>3</th>
-      <td>2.901106</td>
-      <td>3.195858</td>
-      <td>2.706086</td>
+      <td>2.900060</td>
+      <td>3.021646</td>
+      <td>2.989675</td>
     </tr>
     <tr>
       <th>4</th>
-      <td>3.223310</td>
-      <td>2.583306</td>
-      <td>3.036628</td>
+      <td>2.886987</td>
+      <td>2.915536</td>
+      <td>2.556874</td>
     </tr>
   </tbody>
 </table>
@@ -971,7 +975,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 <div class="highlight-md notranslate"><div class="highlight"><pre><span></span>In-line text; {glue:}`boot_mean`, and a figure: {glue:}`boot_fig`.
 </pre></div>
 </div>
-<p>In-line text; <span class="pasted-inline"><code class="output text_plain docutils literal notranslate"><span class="pre">2.998269248690492</span></code></span>, and a figure: <span class="pasted-inline"><img alt="../../_images/output-insert_10_0.png" src="../../_images/output-insert_10_0.png" /></span>.</p>
+<p>In-line text; <span class="pasted-inline"><code class="output text_plain docutils literal notranslate"><span class="pre">3.001742727585933</span></code></span>, and a figure: <span class="pasted-inline"><img alt="../../_images/output-insert_10_0.png" src="../../_images/output-insert_10_0.png" /></span>.</p>
 <div class="admonition tip">
 <p class="admonition-title">小技巧</p>
 <p>我们建议在绘制内联图时使用更宽、更短的图形，其比值约为 6x2。例如，这是一个从引导程序中排序的方法的内联图：<span class="pasted-inline"><img alt="../../_images/output-insert_10_1.png" src="../../_images/output-insert_10_1.png" /></span>。它可以用来做一个不太复杂的视觉点！想了解更多，请查看<a class="reference external" href="https://en.wikipedia.org/wiki/Sparkline">火花线是如何使用的</a>。</p>
@@ -993,7 +997,7 @@ commentsRunWhenDOMLoaded(addUtterances);
 </pre></div>
 </div>
 <p>呈现的是：</p>
-<p>The mean of the bootstrapped distribution was <span class="pasted-text">2.998269248690492</span> (95% confidence interval <span class="pasted-text">2.986024906653744</span>/<span class="pasted-text">3.0105870884933004</span>)</p>
+<p>The mean of the bootstrapped distribution was <span class="pasted-text">3.001742727585933</span> (95% confidence interval <span class="pasted-text">2.989305469957695</span>/<span class="pasted-text">3.014251306123964</span>)</p>
 <div class="admonition note">
 <p class="admonition-title">注解</p>
 <p><code class="docutils literal notranslate"><span class="pre">glue:text</span></code> 仅适用于包含 <code class="docutils literal notranslate"><span class="pre">text/plain</span></code> 输出的 glue 变量。</p>
@@ -1066,33 +1070,33 @@ A caption for a pandas table.
   <tbody>
     <tr>
       <th>0</th>
-      <td>3.236786</td>
-      <td>2.663274</td>
-      <td>3.313494</td>
+      <td>3.092179</td>
+      <td>2.946747</td>
+      <td>3.204763</td>
     </tr>
     <tr>
       <th>1</th>
-      <td>2.874729</td>
-      <td>2.888184</td>
-      <td>2.906788</td>
+      <td>3.146026</td>
+      <td>3.124673</td>
+      <td>3.480811</td>
     </tr>
     <tr>
       <th>2</th>
-      <td>2.886826</td>
-      <td>3.070225</td>
-      <td>2.985214</td>
+      <td>3.371067</td>
+      <td>3.135544</td>
+      <td>2.689223</td>
     </tr>
     <tr>
       <th>3</th>
-      <td>2.901106</td>
-      <td>3.195858</td>
-      <td>2.706086</td>
+      <td>2.900060</td>
+      <td>3.021646</td>
+      <td>2.989675</td>
     </tr>
     <tr>
       <th>4</th>
-      <td>3.223310</td>
-      <td>2.583306</td>
-      <td>3.036628</td>
+      <td>2.886987</td>
+      <td>2.915536</td>
+      <td>2.556874</td>
     </tr>
   </tbody>
 </table>
@@ -1158,13 +1162,13 @@ A caption for a pandas table.
 <tbody>
 <tr class="row-even"><td class="text-align:center"><p>histogram and raw text</p></td>
 <td class="text-align:center"><p><span class="pasted-inline"><img alt="../../_images/output-insert_10_0.png" src="../../_images/output-insert_10_0.png" /></span></p></td>
-<td><p><span class="pasted-inline"><code class="output text_plain docutils literal notranslate"><span class="pre">2.998269248690492</span></code></span></p></td>
-<td><p><span class="pasted-inline"><code class="output text_plain docutils literal notranslate"><span class="pre">2.986024906653744</span></code></span>-<span class="pasted-inline"><code class="output text_plain docutils literal notranslate"><span class="pre">3.0105870884933004</span></code></span></p></td>
+<td><p><span class="pasted-inline"><code class="output text_plain docutils literal notranslate"><span class="pre">3.001742727585933</span></code></span></p></td>
+<td><p><span class="pasted-inline"><code class="output text_plain docutils literal notranslate"><span class="pre">2.989305469957695</span></code></span>-<span class="pasted-inline"><code class="output text_plain docutils literal notranslate"><span class="pre">3.014251306123964</span></code></span></p></td>
 </tr>
 <tr class="row-odd"><td class="text-align:center"><p>sorted means and formatted text</p></td>
 <td class="text-align:center"><p><span class="pasted-inline"><img alt="../../_images/output-insert_10_1.png" src="../../_images/output-insert_10_1.png" /></span></p></td>
-<td><p><span class="pasted-text">2.998</span></p></td>
-<td><p><span class="pasted-text">2.986</span>-<span class="pasted-text">3.011</span></p></td>
+<td><p><span class="pasted-text">3.002</span></p></td>
+<td><p><span class="pasted-text">2.989</span>-<span class="pasted-text">3.014</span></p></td>
 </tr>
 </tbody>
 </table>
@@ -1176,7 +1180,7 @@ A caption for a pandas table.
     {
         requestKernel: true,
         binderOptions: {
-            repo: "xinetzone/jupyter-book",
+            repo: "daobook/jupyter-book",
             ref: "main",
         },
         codeMirrorConfig: {
@@ -1224,7 +1228,7 @@ A caption for a pandas table.
         
         </div>
     </div>
-    <footer class="footer mt-5 mt-md-0">
+    <footer class="footer">
     <div class="container">
       <p>
         

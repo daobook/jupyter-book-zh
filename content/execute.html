@@ -23,7 +23,7 @@
 
     
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/sphinx-book-theme.e8f53015daec13862f6db5e763c41738.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
@@ -31,10 +31,10 @@
     <link rel="stylesheet" type="text/css" href="../_static/tabs.css" />
     <link rel="stylesheet" type="text/css" href="../_static/page.css" />
     <link rel="stylesheet" type="text/css" href="../_static/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/xin-css/main.css" />
     <link rel="stylesheet" type="text/css" href="../_static/w3css/4/w3pro.css" />
     <link rel="stylesheet" type="text/css" href="../_static/w3css/4/w3mobile.css" />
     <link rel="stylesheet" type="text/css" href="../_static/w3css/4/w3.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/xin-css/main.css" />
     <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     
@@ -69,7 +69,7 @@ var addUtterances = () => {
     script.src = "https://utteranc.es/client.js";
     script.async = "async";
 
-    script.setAttribute("repo", "xinetzone/jupyter-book");
+    script.setAttribute("repo", "daobook/jupyter-book");
     script.setAttribute("issue-term", "pathname");
     script.setAttribute("theme", "github-light");
     script.setAttribute("label", "💬 comment");
@@ -94,7 +94,7 @@ commentsRunWhenDOMLoaded(addUtterances);
         const thebe_selector_output = ".output,.cell_output"
     </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
-    <link rel="canonical" href="https://xinetzone.github.io/jupyter-book/content/execute.html" />
+    <link rel="canonical" href="https://daobook.github.io/jupyter-book/content/execute.html" />
     <link rel="shortcut icon" href="../_static/page-logo.jfif"/>
     <link rel="index" title="索引" href="../genindex.html" />
     <link rel="search" title="搜索" href="../search.html" />
@@ -117,6 +117,10 @@ commentsRunWhenDOMLoaded(addUtterances);
     
         <div class="navbar-brand-box">
     <a class="navbar-brand text-wrap" href="../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
       
       <img src="../_static/logo.jpg" class="logo" alt="logo">
       
@@ -612,11 +616,11 @@ commentsRunWhenDOMLoaded(addUtterances);
         aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
     <div class="dropdown-buttons sourcebuttons">
         <a class="repository-button"
-            href="https://github.com/xinetzone/jupyter-book"><button type="button" class="btn btn-secondary topbarbtn"
+            href="https://github.com/daobook/jupyter-book"><button type="button" class="btn btn-secondary topbarbtn"
                 data-toggle="tooltip" data-placement="left" title="Source repository"><i
                     class="fab fa-github"></i>repository</button></a>
         <a class="issues-button"
-            href="https://github.com/xinetzone/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fcontent/execute.html&body=Your%20issue%20content%20here."><button
+            href="https://github.com/daobook/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fcontent/execute.html&body=Your%20issue%20content%20here."><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
         
@@ -637,7 +641,7 @@ commentsRunWhenDOMLoaded(addUtterances);
         aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
     <div class="dropdown-buttons">
         
-        <a class="binder-button" href="https://mybinder.org/v2/gh/xinetzone/jupyter-book/main?urlpath=tree/./content/execute.md"><button type="button"
+        <a class="binder-button" href="https://mybinder.org/v2/gh/daobook/jupyter-book/main?urlpath=tree/./content/execute.md"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
                 data-placement="left"><img class="binder-button-logo"
                     src="../_static/images/logo_binder.svg"
@@ -870,7 +874,7 @@ print(thisvariabledoesntexist)
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
 <span class="ne">NameError</span><span class="g g-Whitespace">                                 </span>Traceback (most recent call last)
-<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_2306</span><span class="o">/</span><span class="mf">1091175326.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">ipykernel_2287</span><span class="o">/</span><span class="mf">1091175326.</span><span class="n">py</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
 <span class="ne">----&gt; </span><span class="mi">1</span> <span class="nb">print</span><span class="p">(</span><span class="n">thisvariabledoesntexist</span><span class="p">)</span>
 
 <span class="ne">NameError</span>: name &#39;thisvariabledoesntexist&#39; is not defined
@@ -974,105 +978,105 @@ print(&quot;this is some stderr&quot;, file=sys.stderr)
 </thead>
 <tbody>
 <tr class="row-even"><td><p>basics/create</p></td>
-<td><p>2021-09-04 08:58</p></td>
+<td><p>2021-10-14 09:25</p></td>
 <td><p>cache</p></td>
-<td><p>1.72</p></td>
+<td><p>1.79</p></td>
 <td><p>✅</p></td>
 </tr>
 <tr class="row-odd"><td><p>content/code-outputs</p></td>
-<td><p>2021-09-04 08:58</p></td>
+<td><p>2021-10-14 09:25</p></td>
 <td><p>cache</p></td>
-<td><p>1.56</p></td>
+<td><p>1.66</p></td>
 <td><p>✅</p></td>
 </tr>
 <tr class="row-even"><td><p>content/executable/output-insert</p></td>
-<td><p>2021-09-04 08:58</p></td>
+<td><p>2021-10-14 09:25</p></td>
 <td><p>cache</p></td>
-<td><p>3.6</p></td>
+<td><p>4.02</p></td>
 <td><p>✅</p></td>
 </tr>
 <tr class="row-odd"><td><p>content/execute</p></td>
-<td><p>2021-09-04 08:58</p></td>
+<td><p>2021-10-14 09:25</p></td>
 <td><p>cache</p></td>
-<td><p>1.01</p></td>
+<td><p>0.99</p></td>
 <td><p>✅</p></td>
 </tr>
 <tr class="row-even"><td><p>content/layout</p></td>
-<td><p>2021-09-04 08:58</p></td>
+<td><p>2021-10-14 09:25</p></td>
 <td><p>cache</p></td>
-<td><p>1.86</p></td>
+<td><p>1.99</p></td>
 <td><p>✅</p></td>
 </tr>
 <tr class="row-odd"><td><p>content/math</p></td>
-<td><p>2021-09-04 08:58</p></td>
+<td><p>2021-10-14 09:25</p></td>
 <td><p>cache</p></td>
-<td><p>2.02</p></td>
+<td><p>1.02</p></td>
 <td><p>✅</p></td>
 </tr>
 <tr class="row-even"><td><p>content/references</p></td>
-<td><p>2021-09-04 08:58</p></td>
+<td><p>2021-10-14 09:25</p></td>
 <td><p>cache</p></td>
-<td><p>2.02</p></td>
+<td><p>1.02</p></td>
 <td><p>✅</p></td>
 </tr>
 <tr class="row-odd"><td><p>customize/toc</p></td>
-<td><p>2021-09-04 08:58</p></td>
+<td><p>2021-10-14 09:25</p></td>
 <td><p>cache</p></td>
-<td><p>1.25</p></td>
+<td><p>1.47</p></td>
 <td><p>✅</p></td>
 </tr>
 <tr class="row-even"><td><p>file-types/jupytext</p></td>
-<td><p>2021-09-04 08:58</p></td>
+<td><p>2021-10-14 09:25</p></td>
 <td><p>cache</p></td>
-<td><p>0.93</p></td>
+<td><p>1.28</p></td>
 <td><p>✅</p></td>
 </tr>
 <tr class="row-odd"><td><p>file-types/myst-notebooks</p></td>
-<td><p>2021-09-04 08:58</p></td>
+<td><p>2021-10-14 09:25</p></td>
 <td><p>cache</p></td>
-<td><p>2.02</p></td>
+<td><p>1.02</p></td>
 <td><p>✅</p></td>
 </tr>
 <tr class="row-even"><td><p>file-types/notebooks</p></td>
-<td><p>2021-09-04 08:58</p></td>
+<td><p>2021-10-14 09:25</p></td>
 <td><p>cache</p></td>
-<td><p>2.98</p></td>
+<td><p>3.01</p></td>
 <td><p>✅</p></td>
 </tr>
 <tr class="row-odd"><td><p>interactive/hiding</p></td>
-<td><p>2021-09-04 08:58</p></td>
+<td><p>2021-10-14 09:25</p></td>
 <td><p>cache</p></td>
-<td><p>1.95</p></td>
+<td><p>8.81</p></td>
 <td><p>✅</p></td>
 </tr>
 <tr class="row-even"><td><p>interactive/interactive</p></td>
-<td><p>2021-09-04 08:58</p></td>
+<td><p>2021-10-14 09:25</p></td>
 <td><p>cache</p></td>
-<td><p>3.02</p></td>
+<td><p>3.16</p></td>
 <td><p>✅</p></td>
 </tr>
 <tr class="row-odd"><td><p>interactive/launchbuttons</p></td>
-<td><p>2021-09-04 08:58</p></td>
+<td><p>2021-10-14 09:25</p></td>
 <td><p>cache</p></td>
-<td><p>0.91</p></td>
+<td><p>1.24</p></td>
 <td><p>✅</p></td>
 </tr>
 <tr class="row-even"><td><p>interactive/thebe</p></td>
-<td><p>2021-09-04 08:58</p></td>
+<td><p>2021-10-14 09:25</p></td>
 <td><p>cache</p></td>
-<td><p>1.4</p></td>
+<td><p>1.7</p></td>
 <td><p>✅</p></td>
 </tr>
 <tr class="row-odd"><td><p>reference/cheatsheet</p></td>
-<td><p>2021-09-04 08:58</p></td>
+<td><p>2021-10-14 09:25</p></td>
 <td><p>cache</p></td>
-<td><p>2.97</p></td>
+<td><p>3.21</p></td>
 <td><p>✅</p></td>
 </tr>
 <tr class="row-even"><td><p>start/overview</p></td>
-<td><p>2021-09-04 08:58</p></td>
+<td><p>2021-10-14 09:25</p></td>
 <td><p>cache</p></td>
-<td><p>1.42</p></td>
+<td><p>1.46</p></td>
 <td><p>✅</p></td>
 </tr>
 </tbody>
@@ -1084,7 +1088,7 @@ print(&quot;this is some stderr&quot;, file=sys.stderr)
     {
         requestKernel: true,
         binderOptions: {
-            repo: "xinetzone/jupyter-book",
+            repo: "daobook/jupyter-book",
             ref: "main",
         },
         codeMirrorConfig: {
@@ -1132,7 +1136,7 @@ print(&quot;this is some stderr&quot;, file=sys.stderr)
         
         </div>
     </div>
-    <footer class="footer mt-5 mt-md-0">
+    <footer class="footer">
     <div class="container">
       <p>
         

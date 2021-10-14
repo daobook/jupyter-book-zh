@@ -23,7 +23,7 @@
 
     
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/sphinx-book-theme.e8f53015daec13862f6db5e763c41738.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
@@ -31,10 +31,10 @@
     <link rel="stylesheet" type="text/css" href="../_static/tabs.css" />
     <link rel="stylesheet" type="text/css" href="../_static/page.css" />
     <link rel="stylesheet" type="text/css" href="../_static/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/xin-css/main.css" />
     <link rel="stylesheet" type="text/css" href="../_static/w3css/4/w3pro.css" />
     <link rel="stylesheet" type="text/css" href="../_static/w3css/4/w3mobile.css" />
     <link rel="stylesheet" type="text/css" href="../_static/w3css/4/w3.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/xin-css/main.css" />
     <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     
@@ -69,7 +69,7 @@ var addUtterances = () => {
     script.src = "https://utteranc.es/client.js";
     script.async = "async";
 
-    script.setAttribute("repo", "xinetzone/jupyter-book");
+    script.setAttribute("repo", "daobook/jupyter-book");
     script.setAttribute("issue-term", "pathname");
     script.setAttribute("theme", "github-light");
     script.setAttribute("label", "💬 comment");
@@ -94,7 +94,7 @@ commentsRunWhenDOMLoaded(addUtterances);
         const thebe_selector_output = ".output,.cell_output"
     </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
-    <link rel="canonical" href="https://xinetzone.github.io/jupyter-book/content/content-blocks.html" />
+    <link rel="canonical" href="https://daobook.github.io/jupyter-book/content/content-blocks.html" />
     <link rel="shortcut icon" href="../_static/page-logo.jfif"/>
     <link rel="index" title="索引" href="../genindex.html" />
     <link rel="search" title="搜索" href="../search.html" />
@@ -117,6 +117,10 @@ commentsRunWhenDOMLoaded(addUtterances);
     
         <div class="navbar-brand-box">
     <a class="navbar-brand text-wrap" href="../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
       
       <img src="../_static/logo.jpg" class="logo" alt="logo">
       
@@ -609,11 +613,11 @@ commentsRunWhenDOMLoaded(addUtterances);
         aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
     <div class="dropdown-buttons sourcebuttons">
         <a class="repository-button"
-            href="https://github.com/xinetzone/jupyter-book"><button type="button" class="btn btn-secondary topbarbtn"
+            href="https://github.com/daobook/jupyter-book"><button type="button" class="btn btn-secondary topbarbtn"
                 data-toggle="tooltip" data-placement="left" title="Source repository"><i
                     class="fab fa-github"></i>repository</button></a>
         <a class="issues-button"
-            href="https://github.com/xinetzone/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fcontent/content-blocks.html&body=Your%20issue%20content%20here."><button
+            href="https://github.com/daobook/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fcontent/content-blocks.html&body=Your%20issue%20content%20here."><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
         
@@ -962,8 +966,8 @@ Here&#39;s my figure:
 </div>
 <p>然后，您可以像这样在书中定义警告：</p>
 <div class="tabbed-set docutils">
-<input checked="checked" id="f5a4590f-28c4-45f7-859a-40765add7dcd" name="1cb5c93f-4f92-4ad8-ab91-9965511fea25" type="radio">
-</input><label class="tabbed-label" for="f5a4590f-28c4-45f7-859a-40765add7dcd">
+<input checked="checked" id="8f91106b-b95a-49b3-a6c9-a05ac59b7431" name="8d6eef6a-2ebb-4a89-8fdb-7983cf844301" type="radio">
+</input><label class="tabbed-label" for="8f91106b-b95a-49b3-a6c9-a05ac59b7431">
 Markdown 输入</label><div class="tabbed-content docutils">
 <div class="highlight-html notranslate"><div class="highlight"><pre><span></span><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;admonition note&quot;</span> <span class="na">name</span><span class="o">=</span><span class="s">&quot;html-admonition&quot;</span> <span class="na">style</span><span class="o">=</span><span class="s">&quot;background: lightgreen; padding: 10px&quot;</span><span class="p">&gt;</span>
 <span class="p">&lt;</span><span class="nt">p</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;title&quot;</span><span class="p">&gt;</span>This is the **title**<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
@@ -972,8 +976,8 @@ This is the *content*
 </pre></div>
 </div>
 </div>
-<input id="bf44c215-c1ec-4c99-a006-179bcb96008f" name="1cb5c93f-4f92-4ad8-ab91-9965511fea25" type="radio">
-</input><label class="tabbed-label" for="bf44c215-c1ec-4c99-a006-179bcb96008f">
+<input id="8ad976c0-3056-4770-8b89-79ead8c90638" name="8d6eef6a-2ebb-4a89-8fdb-7983cf844301" type="radio">
+</input><label class="tabbed-label" for="8ad976c0-3056-4770-8b89-79ead8c90638">
 渲染输出</label><div class="tabbed-content docutils">
 <div class="admonition note" id="html-admonition">
 <p class="admonition-title">This is the <strong>title</strong></p>
@@ -1469,8 +1473,8 @@ A second term
 <p>您还可以使用 <a class="reference external" href="https://sphinx-panels.readthedocs.io/en/sphinx-book-theme/index.html#panels-usage" title="(在 Sphinx-Panels v0.5.1)"><span class="xref myst"><code class="docutils literal notranslate"><span class="pre">sphinx-panels</span></code></span></a> 生成 <a class="reference external" href="https://sphinx-panels.readthedocs.io/en/sphinx-book-theme/index.html#components-tabbed" title="(在 Sphinx-Panels v0.5.1)"><span class="xref myst"><strong>选项卡式内容</strong></span></a>。这使您可以显示用户可以单击的各种选项卡式内容块。</p>
 <p>例如，以下是一组标签，以几种不同的语言展示代码：</p>
 <div class="tabbed-set docutils">
-<input checked="checked" id="0f496015-a331-40f0-b7c4-b7100e0cec5b" name="cf61bb34-2041-48c1-afae-efc220653b8e" type="radio">
-</input><label class="tabbed-label" for="0f496015-a331-40f0-b7c4-b7100e0cec5b">
+<input checked="checked" id="dd6d4af8-5e38-41da-9559-44930cdd34b8" name="104a4710-0a3a-4c00-a871-822b1f4601f9" type="radio">
+</input><label class="tabbed-label" for="dd6d4af8-5e38-41da-9559-44930cdd34b8">
 c++</label><div class="tabbed-content docutils">
 <div class="highlight-c++ notranslate"><div class="highlight"><pre><span></span><span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="k">const</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">argc</span><span class="p">,</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="w"> </span><span class="o">**</span><span class="n">argv</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
 <span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"></span>
@@ -1478,16 +1482,16 @@ c++</label><div class="tabbed-content docutils">
 </pre></div>
 </div>
 </div>
-<input id="ab35d668-a847-4ebc-9751-1f66d2fa30ff" name="cf61bb34-2041-48c1-afae-efc220653b8e" type="radio">
-</input><label class="tabbed-label" for="ab35d668-a847-4ebc-9751-1f66d2fa30ff">
+<input id="5cb93015-1969-4ed2-966e-22565e2fbbe4" name="104a4710-0a3a-4c00-a871-822b1f4601f9" type="radio">
+</input><label class="tabbed-label" for="5cb93015-1969-4ed2-966e-22565e2fbbe4">
 python</label><div class="tabbed-content docutils">
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
     <span class="k">return</span>
 </pre></div>
 </div>
 </div>
-<input id="1a8dfea6-4b61-4960-bd01-6b493f3b9922" name="cf61bb34-2041-48c1-afae-efc220653b8e" type="radio">
-</input><label class="tabbed-label" for="1a8dfea6-4b61-4960-bd01-6b493f3b9922">
+<input id="203f9e3a-e9c0-4491-80ec-139ecfa85b5b" name="104a4710-0a3a-4c00-a871-822b1f4601f9" type="radio">
+</input><label class="tabbed-label" for="203f9e3a-e9c0-4491-80ec-139ecfa85b5b">
 java</label><div class="tabbed-content docutils">
 <div class="highlight-java notranslate"><div class="highlight"><pre><span></span><span class="kd">class</span> <span class="nc">Main</span> <span class="p">{</span>
     <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">)</span> <span class="p">{</span>
@@ -1496,16 +1500,16 @@ java</label><div class="tabbed-content docutils">
 </pre></div>
 </div>
 </div>
-<input id="09f5fa2e-13aa-4880-b0a3-b20d72a4a47b" name="cf61bb34-2041-48c1-afae-efc220653b8e" type="radio">
-</input><label class="tabbed-label" for="09f5fa2e-13aa-4880-b0a3-b20d72a4a47b">
+<input id="8516d93f-4c21-4887-8c5c-e34d91ee8fb8" name="104a4710-0a3a-4c00-a871-822b1f4601f9" type="radio">
+</input><label class="tabbed-label" for="8516d93f-4c21-4887-8c5c-e34d91ee8fb8">
 julia</label><div class="tabbed-content docutils">
 <div class="highlight-julia notranslate"><div class="highlight"><pre><span></span><span class="k">function</span> <span class="n">main</span><span class="p">()</span>
 <span class="k">end</span>
 </pre></div>
 </div>
 </div>
-<input id="23b3814d-a191-43b9-8f64-a3391740087a" name="cf61bb34-2041-48c1-afae-efc220653b8e" type="radio">
-</input><label class="tabbed-label" for="23b3814d-a191-43b9-8f64-a3391740087a">
+<input id="25e69ecb-b328-4e43-b3d1-06a67b36bb9b" name="104a4710-0a3a-4c00-a871-822b1f4601f9" type="radio">
+</input><label class="tabbed-label" for="25e69ecb-b328-4e43-b3d1-06a67b36bb9b">
 fortran</label><div class="tabbed-content docutils">
 <div class="highlight-fortran notranslate"><div class="highlight"><pre><span></span><span class="k">PROGRAM </span><span class="n">main</span>
 <span class="k">END PROGRAM </span><span class="n">main</span>
@@ -1526,21 +1530,21 @@ My second tab with `some code`!
 </div>
 <p>输出</p>
 <div class="tabbed-set docutils">
-<input checked="checked" id="d8de66ab-a57e-403e-ab5b-856361a9ca32" name="0b2f4dd4-8c4b-470b-90af-044abadd04c7" type="radio">
-</input><label class="tabbed-label" for="d8de66ab-a57e-403e-ab5b-856361a9ca32">
+<input checked="checked" id="ebf117fc-32bd-4bf8-92bf-a1a36c2ebc2e" name="669644c5-8293-498a-84d3-a83cbd190186" type="radio">
+</input><label class="tabbed-label" for="ebf117fc-32bd-4bf8-92bf-a1a36c2ebc2e">
 Tab 1 title</label><div class="tabbed-content docutils">
 <p>My first tab</p>
 </div>
-<input id="9cb2732c-dcb7-4e36-bd51-782355949106" name="0b2f4dd4-8c4b-470b-90af-044abadd04c7" type="radio">
-</input><label class="tabbed-label" for="9cb2732c-dcb7-4e36-bd51-782355949106">
+<input id="21c690e8-12d8-4f85-b2c9-9e11ba80a336" name="669644c5-8293-498a-84d3-a83cbd190186" type="radio">
+</input><label class="tabbed-label" for="21c690e8-12d8-4f85-b2c9-9e11ba80a336">
 Tab 2 title</label><div class="tabbed-content docutils">
 <p>My second tab with <code class="docutils literal notranslate"><span class="pre">some</span> <span class="pre">code</span></code>!</p>
 </div>
 </div>
 <p>使用 <a class="reference internal" href="executable/output-insert.html#glue-gluing"><span class="std std-ref"><code class="docutils literal notranslate"><span class="pre">glue</span></code> 函数</span></a> 在选项卡中<strong>插入代码输出</strong>。例如，以下选项卡使用此函数来粘合这些文档中其他位置生成的图像和表格：</p>
 <div class="tabbed-set docutils">
-<input checked="checked" id="658fee10-4819-4aef-8bc1-23e961d02a9f" name="32011719-21aa-44ba-b65d-10d5e6bd6a67" type="radio">
-</input><label class="tabbed-label" for="658fee10-4819-4aef-8bc1-23e961d02a9f">
+<input checked="checked" id="f42bedeb-074f-4af8-a120-ae85f1adedec" name="69c1ed4a-e0a2-4f47-9889-381c0bbaf4ae" type="radio">
+</input><label class="tabbed-label" for="f42bedeb-074f-4af8-a120-ae85f1adedec">
 A histogram</label><div class="tabbed-content docutils">
 <div class="figure align-default" id="fig-boot-tab" style="width: 300px">
 <div class="cell_output docutils container">
@@ -1549,8 +1553,8 @@ A histogram</label><div class="tabbed-content docutils">
 <p class="caption"><span class="caption-number">图 1 </span><span class="caption-text">This is a <strong>caption</strong>, with an embedded <code class="docutils literal notranslate"><span class="pre">{glue:text}</span></code> element: <span class="pasted-text">3.00</span>!</span><a class="headerlink" href="#fig-boot-tab" title="永久链接至图片">¶</a></p>
 </div>
 </div>
-<input id="c370b952-80c3-4a37-8235-3417bbd16c62" name="32011719-21aa-44ba-b65d-10d5e6bd6a67" type="radio">
-</input><label class="tabbed-label" for="c370b952-80c3-4a37-8235-3417bbd16c62">
+<input id="65cd07b6-e581-430e-bfc2-639f93e9bdfa" name="69c1ed4a-e0a2-4f47-9889-381c0bbaf4ae" type="radio">
+</input><label class="tabbed-label" for="65cd07b6-e581-430e-bfc2-639f93e9bdfa">
 A table</label><div class="tabbed-content docutils">
 <div class="figure align-default" id="tbl-df-tab" style="width: 300px">
 <div class="cell_output docutils container">
@@ -1580,33 +1584,33 @@ A table</label><div class="tabbed-content docutils">
   <tbody>
     <tr>
       <th>0</th>
-      <td>3.236786</td>
-      <td>2.663274</td>
-      <td>3.313494</td>
+      <td>3.092179</td>
+      <td>2.946747</td>
+      <td>3.204763</td>
     </tr>
     <tr>
       <th>1</th>
-      <td>2.874729</td>
-      <td>2.888184</td>
-      <td>2.906788</td>
+      <td>3.146026</td>
+      <td>3.124673</td>
+      <td>3.480811</td>
     </tr>
     <tr>
       <th>2</th>
-      <td>2.886826</td>
-      <td>3.070225</td>
-      <td>2.985214</td>
+      <td>3.371067</td>
+      <td>3.135544</td>
+      <td>2.689223</td>
     </tr>
     <tr>
       <th>3</th>
-      <td>2.901106</td>
-      <td>3.195858</td>
-      <td>2.706086</td>
+      <td>2.900060</td>
+      <td>3.021646</td>
+      <td>2.989675</td>
     </tr>
     <tr>
       <th>4</th>
-      <td>3.223310</td>
-      <td>2.583306</td>
-      <td>3.036628</td>
+      <td>2.886987</td>
+      <td>2.915536</td>
+      <td>2.556874</td>
     </tr>
   </tbody>
 </table>
@@ -1614,8 +1618,8 @@ A table</label><div class="tabbed-content docutils">
 <p class="caption"><span class="caption-number">图 2 </span><span class="caption-text">A caption for a pandas table.</span><a class="headerlink" href="#tbl-df-tab" title="永久链接至图片">¶</a></p>
 </div>
 </div>
-<input id="24593e5e-f393-4b9c-b796-060ae064e4e8" name="32011719-21aa-44ba-b65d-10d5e6bd6a67" type="radio">
-</input><label class="tabbed-label" for="24593e5e-f393-4b9c-b796-060ae064e4e8">
+<input id="0f73cab0-1b7f-4861-acc4-c8d2c69fa629" name="69c1ed4a-e0a2-4f47-9889-381c0bbaf4ae" type="radio">
+</input><label class="tabbed-label" for="0f73cab0-1b7f-4861-acc4-c8d2c69fa629">
 Code to generate this</label><div class="tabbed-content docutils">
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>````{tabbed} A histogram
 ```{glue:figure} boot_fig
@@ -1665,8 +1669,8 @@ A caption for a pandas table.
 </div>
 <p>您可以内联或作为块使用这些置换，甚至可以将置换嵌套在其他置换中（但禁止循环引用）：</p>
 <div class="tabbed-set docutils">
-<input checked="checked" id="5d3c4105-bab2-4f0a-af9e-da6a62b5ef90" name="837ce64b-5204-47e6-aadb-8bf7c664f5bb" type="radio">
-</input><label class="tabbed-label" for="5d3c4105-bab2-4f0a-af9e-da6a62b5ef90">
+<input checked="checked" id="c4b21730-e581-402b-8f1d-ccb0034add25" name="c3c4fdcb-3107-4b3a-bd7d-1fe463f7b641" type="radio">
+</input><label class="tabbed-label" for="c4b21730-e581-402b-8f1d-ccb0034add25">
 Markdown 输入</label><div class="tabbed-content docutils">
 <div class="highlight-md notranslate"><div class="highlight"><pre><span></span>Inline: {{ key1 }}
 
@@ -1676,8 +1680,8 @@ Block level:
 </pre></div>
 </div>
 </div>
-<input id="79f0a0c2-ace1-4d6b-8cc6-17ba03356f0d" name="837ce64b-5204-47e6-aadb-8bf7c664f5bb" type="radio">
-</input><label class="tabbed-label" for="79f0a0c2-ace1-4d6b-8cc6-17ba03356f0d">
+<input id="7109c4e8-3895-4e22-8c19-5160128d1301" name="c3c4fdcb-3107-4b3a-bd7d-1fe463f7b641" type="radio">
+</input><label class="tabbed-label" for="7109c4e8-3895-4e22-8c19-5160128d1301">
 渲染输出</label><div class="tabbed-content docutils">
 <p>Inline: I’m a <strong>substitution</strong></p>
 <p>Block level:</p>
@@ -1689,8 +1693,8 @@ Block level:
 </div>
 <p>您还可以在其他 markdown 结构（例如表格）中插入置换项：</p>
 <div class="tabbed-set docutils">
-<input checked="checked" id="b83ed531-6f4c-4901-9cae-2fa2091d2827" name="4ccc38b2-a201-49ac-8b98-bb5e82821ae4" type="radio">
-</input><label class="tabbed-label" for="b83ed531-6f4c-4901-9cae-2fa2091d2827">
+<input checked="checked" id="f5d757f5-b032-47c6-a197-8add1ba6892d" name="ec76b052-6d88-41d6-bfda-9e32b19a426b" type="radio">
+</input><label class="tabbed-label" for="f5d757f5-b032-47c6-a197-8add1ba6892d">
 Markdown 输入</label><div class="tabbed-content docutils">
 <div class="highlight-md notranslate"><div class="highlight"><pre><span></span>| col1     | col2      |
 | -------- | --------- |
@@ -1698,8 +1702,8 @@ Markdown 输入</label><div class="tabbed-content docutils">
 </pre></div>
 </div>
 </div>
-<input id="f3c8f5ed-bbb0-4c65-8e10-99c66cda6828" name="4ccc38b2-a201-49ac-8b98-bb5e82821ae4" type="radio">
-</input><label class="tabbed-label" for="f3c8f5ed-bbb0-4c65-8e10-99c66cda6828">
+<input id="116cd0b2-f0ce-4155-9216-eadada602397" name="ec76b052-6d88-41d6-bfda-9e32b19a426b" type="radio">
+</input><label class="tabbed-label" for="116cd0b2-f0ce-4155-9216-eadada602397">
 渲染输出</label><div class="tabbed-content docutils">
 <table class="colwidths-auto table">
 <thead>
@@ -1737,8 +1741,8 @@ Markdown 输入</label><div class="tabbed-content docutils">
 <h3>格式化置换<a class="headerlink" href="#id16" title="永久链接至标题">¶</a></h3>
 <p>MyST 替换使用 <a class="reference external" href="https://jinja.palletsprojects.com/en/2.11.x/">Jinja templates</a> 来置换键/值。这意味着您可以将任何标准的 Jinja 格式应用于置换。例如，您可以像这样 <strong>replace 置换文本</strong>：</p>
 <div class="tabbed-set docutils">
-<input checked="checked" id="ca42588a-9e45-4ca5-9f0f-f84f8ca51225" name="d5a78256-da97-429a-8c40-49918eff8412" type="radio">
-</input><label class="tabbed-label" for="ca42588a-9e45-4ca5-9f0f-f84f8ca51225">
+<input checked="checked" id="768f4aa7-68e2-4f30-894d-9b62628c9086" name="457e8cf5-edd4-4694-9e5d-8bdb4af96f39" type="radio">
+</input><label class="tabbed-label" for="768f4aa7-68e2-4f30-894d-9b62628c9086">
 Markdown 输入</label><div class="tabbed-content docutils">
 <div class="highlight-md notranslate"><div class="highlight"><pre><span></span>The original key1: {{ key1 }}
 
@@ -1746,8 +1750,8 @@ Markdown 输入</label><div class="tabbed-content docutils">
 </pre></div>
 </div>
 </div>
-<input id="4cc3d40b-0dd8-437e-b9a7-abbc00b968b2" name="d5a78256-da97-429a-8c40-49918eff8412" type="radio">
-</input><label class="tabbed-label" for="4cc3d40b-0dd8-437e-b9a7-abbc00b968b2">
+<input id="7f8661c1-5c4c-4c5e-a96f-bcea65dfa638" name="457e8cf5-edd4-4694-9e5d-8bdb4af96f39" type="radio">
+</input><label class="tabbed-label" for="7f8661c1-5c4c-4c5e-a96f-bcea65dfa638">
 渲染输出</label><div class="tabbed-content docutils">
 <p>The original key1: I’m a <strong>substitution</strong></p>
 <p>I’m <strong>the best substitution</strong></p>
@@ -1760,8 +1764,8 @@ Markdown 输入</label><div class="tabbed-content docutils">
 <ol>
 <li><p><strong>将整个 markdown 链接定义为变量</strong>。例如：</p>
 <div class="tabbed-set docutils">
-<input checked="checked" id="3100ebff-193d-425b-9523-0561ed98e003" name="48a06bf0-4013-477a-b4d8-7ab135191501" type="radio">
-</input><label class="tabbed-label" for="3100ebff-193d-425b-9523-0561ed98e003">
+<input checked="checked" id="105182c0-f11b-4182-b7e4-a80971b35d9d" name="6835a435-6a3b-40ab-a8e5-9d15c68b3c55" type="radio">
+</input><label class="tabbed-label" for="105182c0-f11b-4182-b7e4-a80971b35d9d">
 Markdown 输入</label><div class="tabbed-content docutils">
 <div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">substitutions</span><span class="p">:</span>
   <span class="nt">repo_url</span><span class="p">:</span> <span class="p p-Indicator">[</span><span class="nv">my repo url</span><span class="p p-Indicator">]</span><span class="l l-Scalar l-Scalar-Plain">(https://github.com/executablebooks/jupyter-book)</span>
@@ -1771,8 +1775,8 @@ Markdown 输入</label><div class="tabbed-content docutils">
 </pre></div>
 </div>
 </div>
-<input id="bdcb0865-103c-4f5b-b9ba-eb1b4815f386" name="48a06bf0-4013-477a-b4d8-7ab135191501" type="radio">
-</input><label class="tabbed-label" for="bdcb0865-103c-4f5b-b9ba-eb1b4815f386">
+<input id="25ef21a5-2bf7-4a03-9669-40e55904caf6" name="6835a435-6a3b-40ab-a8e5-9d15c68b3c55" type="radio">
+</input><label class="tabbed-label" for="25ef21a5-2bf7-4a03-9669-40e55904caf6">
 渲染输出</label><div class="tabbed-content docutils">
 <p>Here’s my link: <a class="reference external" href="https://github.com/executablebooks/jupyter-book">my repo url</a></p>
 </div>
@@ -1780,8 +1784,8 @@ Markdown 输入</label><div class="tabbed-content docutils">
 </li>
 <li><p>使用 Jinja 功能插入变量。由于置换使用  <a class="reference external" href="https://jinja.palletsprojects.com/en/2.11.x/">Jinja templates</a>，因此您还可以访问置换中的 <strong>Python 格式</strong> 操作。例如：</p>
 <div class="tabbed-set docutils">
-<input checked="checked" id="80903300-8402-4a13-905f-ffcb7feecded" name="a6abbda7-c32c-4e83-b030-39ea0b06732a" type="radio">
-</input><label class="tabbed-label" for="80903300-8402-4a13-905f-ffcb7feecded">
+<input checked="checked" id="57dc2763-f1bf-4e81-b691-b7e8164e69ea" name="3ff181ed-5b44-4949-aef5-3df0c50b23ed" type="radio">
+</input><label class="tabbed-label" for="57dc2763-f1bf-4e81-b691-b7e8164e69ea">
 Markdown 输入</label><div class="tabbed-content docutils">
 <div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">substitutions</span><span class="p">:</span>
   <span class="nt">repo_name</span><span class="p">:</span> <span class="l l-Scalar l-Scalar-Plain">jupyter-book</span>
@@ -1791,8 +1795,8 @@ Markdown 输入</label><div class="tabbed-content docutils">
 </pre></div>
 </div>
 </div>
-<input id="5e761def-66aa-4d04-8238-0c7dd2e6ab8b" name="a6abbda7-c32c-4e83-b030-39ea0b06732a" type="radio">
-</input><label class="tabbed-label" for="5e761def-66aa-4d04-8238-0c7dd2e6ab8b">
+<input id="4f432f17-8afa-468f-9d00-b0b6c7298bb7" name="3ff181ed-5b44-4949-aef5-3df0c50b23ed" type="radio">
+</input><label class="tabbed-label" for="4f432f17-8afa-468f-9d00-b0b6c7298bb7">
 渲染输出</label><div class="tabbed-content docutils">
 <p>Here’s my link: <a class="reference external" href="https://github.com/executablebooks/jupyter-book">my repo: <code class="docutils literal notranslate"><span class="pre">jupyter-book</span></code></a></p>
 </div>
@@ -1855,7 +1859,7 @@ Note that
     {
         requestKernel: true,
         binderOptions: {
-            repo: "xinetzone/jupyter-book",
+            repo: "daobook/jupyter-book",
             ref: "main",
         },
         codeMirrorConfig: {
@@ -1903,7 +1907,7 @@ Note that
         
         </div>
     </div>
-    <footer class="footer mt-5 mt-md-0">
+    <footer class="footer">
     <div class="container">
       <p>
         

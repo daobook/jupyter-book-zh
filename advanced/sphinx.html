@@ -23,7 +23,7 @@
 
     
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/sphinx-book-theme.e8f53015daec13862f6db5e763c41738.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
@@ -31,10 +31,10 @@
     <link rel="stylesheet" type="text/css" href="../_static/tabs.css" />
     <link rel="stylesheet" type="text/css" href="../_static/page.css" />
     <link rel="stylesheet" type="text/css" href="../_static/custom.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/xin-css/main.css" />
     <link rel="stylesheet" type="text/css" href="../_static/w3css/4/w3pro.css" />
     <link rel="stylesheet" type="text/css" href="../_static/w3css/4/w3mobile.css" />
     <link rel="stylesheet" type="text/css" href="../_static/w3css/4/w3.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/xin-css/main.css" />
     <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     
@@ -69,7 +69,7 @@ var addUtterances = () => {
     script.src = "https://utteranc.es/client.js";
     script.async = "async";
 
-    script.setAttribute("repo", "xinetzone/jupyter-book");
+    script.setAttribute("repo", "daobook/jupyter-book");
     script.setAttribute("issue-term", "pathname");
     script.setAttribute("theme", "github-light");
     script.setAttribute("label", "💬 comment");
@@ -96,7 +96,7 @@ commentsRunWhenDOMLoaded(addUtterances);
         const thebe_selector_output = ".output,.cell_output"
     </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
-    <link rel="canonical" href="https://xinetzone.github.io/jupyter-book/advanced/sphinx.html" />
+    <link rel="canonical" href="https://daobook.github.io/jupyter-book/advanced/sphinx.html" />
     <link rel="shortcut icon" href="../_static/page-logo.jfif"/>
     <link rel="index" title="索引" href="../genindex.html" />
     <link rel="search" title="搜索" href="../search.html" />
@@ -119,6 +119,10 @@ commentsRunWhenDOMLoaded(addUtterances);
     
         <div class="navbar-brand-box">
     <a class="navbar-brand text-wrap" href="../index.html">
+      
+        <!-- `logo` is deprecated in Sphinx 4.0, so remove this when we stop supporting 3 -->
+        
+      
       
       <img src="../_static/logo.jpg" class="logo" alt="logo">
       
@@ -611,11 +615,11 @@ commentsRunWhenDOMLoaded(addUtterances);
         aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
     <div class="dropdown-buttons sourcebuttons">
         <a class="repository-button"
-            href="https://github.com/xinetzone/jupyter-book"><button type="button" class="btn btn-secondary topbarbtn"
+            href="https://github.com/daobook/jupyter-book"><button type="button" class="btn btn-secondary topbarbtn"
                 data-toggle="tooltip" data-placement="left" title="Source repository"><i
                     class="fab fa-github"></i>repository</button></a>
         <a class="issues-button"
-            href="https://github.com/xinetzone/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fadvanced/sphinx.html&body=Your%20issue%20content%20here."><button
+            href="https://github.com/daobook/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fadvanced/sphinx.html&body=Your%20issue%20content%20here."><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
         
@@ -866,7 +870,7 @@ MyST-Parser for Markdown parsing, and MyST-NB for notebook execution and output 
 Some of their configuration is already exposed in the <code class="docutils literal notranslate"><span class="pre">_config.yml</span></code>, but you can also directly set configuration, see:</p>
 <ul class="simple">
 <li><p>the <a class="reference external" href="https://myst-parser.readthedocs.io/en/latest/sphinx/reference.html#sphinx-config-options" title="(在 MyST Parser v0.15.2)"><span class="xref myst">MyST-Parser configuration options</span></a></p></li>
-<li><p>the <a class="reference external" href="https://myst-nb.readthedocs.io/en/latest/use/start.html#start-config-options" title="(在 MyST-NB)"><span class="xref myst">MyST-NB configuration options</span></a></p></li>
+<li><p>the <span class="xref myst">MyST-NB configuration options</span></p></li>
 </ul>
 </div>
 <div class="section" id="defining-tex-macros">
@@ -926,8 +930,8 @@ and the section on <a class="reference internal" href="../content/math.html#myst
 </pre></div>
 </div>
 <p>which renders as</p>
-<div class="amsmath math notranslate nohighlight" id="equation-5174814c-b2d5-4613-9d1b-00652d045a24">
-<span class="eqno">(5)<a class="headerlink" href="#equation-5174814c-b2d5-4613-9d1b-00652d045a24" title="公式的永久链接">¶</a></span>\[\begin{equation}
+<div class="amsmath math notranslate nohighlight" id="equation-649787b2-461a-42c2-8ad4-ef593db0de11">
+<span class="eqno">(5)<a class="headerlink" href="#equation-649787b2-461a-42c2-8ad4-ef593db0de11" title="公式的永久链接">¶</a></span>\[\begin{equation}
   \int_0^\infty \frac{x^3}{e^x-1}\,dx = \frac{\pi^4}{15}
 \end{equation}\]</div>
 </div>
@@ -970,7 +974,7 @@ further details</p>
     {
         requestKernel: true,
         binderOptions: {
-            repo: "xinetzone/jupyter-book",
+            repo: "daobook/jupyter-book",
             ref: "main",
         },
         codeMirrorConfig: {
@@ -1018,7 +1022,7 @@ further details</p>
         
         </div>
     </div>
-    <footer class="footer mt-5 mt-md-0">
+    <footer class="footer">
     <div class="container">
       <p>
         
