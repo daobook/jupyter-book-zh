@@ -22,8 +22,8 @@
       
 
     
-    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
@@ -40,7 +40,7 @@
     
   <link rel="preload" as="script" href="../_static/js/index.1c5a1a01449ed65a7b51.js">
 
-    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
@@ -69,7 +69,7 @@ var addUtterances = () => {
     script.src = "https://utteranc.es/client.js";
     script.async = "async";
 
-    script.setAttribute("repo", "daobook/jupyter-book");
+    script.setAttribute("repo", "daobook/jupyter-book-zh");
     script.setAttribute("issue-term", "pathname");
     script.setAttribute("theme", "github-light");
     script.setAttribute("label", "💬 comment");
@@ -83,18 +83,18 @@ var addUtterances = () => {
 }
 commentsRunWhenDOMLoaded(addUtterances);
 </script>
-    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.0/dist/embed-amd.js"></script>
     <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
-    <script >
+    <script>
         const thebe_selector = ".thebe,.cell"
         const thebe_selector_input = "pre,.cell_input div.highlight"
         const thebe_selector_output = ".output,.cell_output"
     </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
-    <link rel="canonical" href="https://daobook.github.io/jupyter-book/reference/cli.html" />
+    <link rel="canonical" href="https://daobook.github.io/jupyter-book-zh/reference/cli.html" />
     <link rel="shortcut icon" href="../_static/page-logo.jfif"/>
     <link rel="index" title="索引" href="../genindex.html" />
     <link rel="search" title="搜索" href="../search.html" />
@@ -131,7 +131,7 @@ commentsRunWhenDOMLoaded(addUtterances);
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
 </form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item active">
-        <p class="caption">
+        <p class="caption" role="heading">
  <span class="caption-text">
   教程
  </span>
@@ -180,7 +180,7 @@ commentsRunWhenDOMLoaded(addUtterances);
   </a>
  </li>
 </ul>
-<p class="caption">
+<p class="caption" role="heading">
  <span class="caption-text">
   主题指南
  </span>
@@ -485,7 +485,7 @@ commentsRunWhenDOMLoaded(addUtterances);
   </a>
  </li>
 </ul>
-<p class="caption">
+<p class="caption" role="heading">
  <span class="caption-text">
   参考
  </span>
@@ -512,7 +512,7 @@ commentsRunWhenDOMLoaded(addUtterances);
   </a>
  </li>
 </ul>
-<p class="caption">
+<p class="caption" role="heading">
  <span class="caption-text">
   关于 Jupyter Book
  </span>
@@ -613,11 +613,11 @@ commentsRunWhenDOMLoaded(addUtterances);
         aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
     <div class="dropdown-buttons sourcebuttons">
         <a class="repository-button"
-            href="https://github.com/daobook/jupyter-book"><button type="button" class="btn btn-secondary topbarbtn"
+            href="https://github.com/daobook/jupyter-book-zh"><button type="button" class="btn btn-secondary topbarbtn"
                 data-toggle="tooltip" data-placement="left" title="Source repository"><i
                     class="fab fa-github"></i>repository</button></a>
         <a class="issues-button"
-            href="https://github.com/daobook/jupyter-book/issues/new?title=Issue%20on%20page%20%2Freference/cli.html&body=Your%20issue%20content%20here."><button
+            href="https://github.com/daobook/jupyter-book-zh/issues/new?title=Issue%20on%20page%20%2Freference/cli.html&body=Your%20issue%20content%20here."><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
         
@@ -700,7 +700,7 @@ commentsRunWhenDOMLoaded(addUtterances);
         
               <div>
                 
-  <div class="section" id="id1">
+  <div class="tex2jax_ignore mathjax_ignore section" id="id1">
 <h1>命令行界面<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h1>
 <p>Jupyter Book 提供了一个命令行界面，可以方便地构建图书和运行一些常用函数。这个页面包含了关于 CLI（command-line interface）可以做什么的信息。</p>
 <p>本页面是 CLI 的完整参考。对于新手想开始与木星书 CLI，我们建议从 <a class="reference internal" href="../start/overview.html"><span class="doc std std-doc">概述</span></a> 开始。</p>
@@ -718,8 +718,8 @@ commentsRunWhenDOMLoaded(addUtterances);
 </div>
 <p class="rubric">Options</p>
 <dl class="std option">
-<dt id="cmdoption-jupyter-book-version">
-<code class="sig-name descname"><span class="pre">--version</span></code><code class="sig-prename descclassname"></code><a class="headerlink" href="#cmdoption-jupyter-book-version" title="永久链接至目标">¶</a></dt>
+<dt class="sig sig-object std" id="cmdoption-jupyter-book-version">
+<span class="sig-name descname"><span class="pre">--version</span></span><span class="sig-prename descclassname"></span><a class="headerlink" href="#cmdoption-jupyter-book-version" title="永久链接至目标">¶</a></dt>
 <dd><p>Show the version and exit.</p>
 </dd></dl>
 
@@ -731,50 +731,50 @@ commentsRunWhenDOMLoaded(addUtterances);
 </div>
 <p class="rubric">Options</p>
 <dl class="std option">
-<dt id="cmdoption-jupyter-book-build-path-output">
-<code class="sig-name descname"><span class="pre">--path-output</span></code><code class="sig-prename descclassname"> <span class="pre">&lt;path_output&gt;</span></code><a class="headerlink" href="#cmdoption-jupyter-book-build-path-output" title="永久链接至目标">¶</a></dt>
+<dt class="sig sig-object std" id="cmdoption-jupyter-book-build-path-output">
+<span class="sig-name descname"><span class="pre">--path-output</span></span><span class="sig-prename descclassname"> <span class="pre">&lt;path_output&gt;</span></span><a class="headerlink" href="#cmdoption-jupyter-book-build-path-output" title="永久链接至目标">¶</a></dt>
 <dd><p>Path to the output artifacts</p>
 </dd></dl>
 
 <dl class="std option">
-<dt id="cmdoption-jupyter-book-build-config">
-<code class="sig-name descname"><span class="pre">--config</span></code><code class="sig-prename descclassname"> <span class="pre">&lt;config&gt;</span></code><a class="headerlink" href="#cmdoption-jupyter-book-build-config" title="永久链接至目标">¶</a></dt>
+<dt class="sig sig-object std" id="cmdoption-jupyter-book-build-config">
+<span class="sig-name descname"><span class="pre">--config</span></span><span class="sig-prename descclassname"> <span class="pre">&lt;config&gt;</span></span><a class="headerlink" href="#cmdoption-jupyter-book-build-config" title="永久链接至目标">¶</a></dt>
 <dd><p>Path to the YAML configuration file (default: PATH_SOURCE/_config.yml)</p>
 </dd></dl>
 
 <dl class="std option">
-<dt id="cmdoption-jupyter-book-build-toc">
-<code class="sig-name descname"><span class="pre">--toc</span></code><code class="sig-prename descclassname"> <span class="pre">&lt;toc&gt;</span></code><a class="headerlink" href="#cmdoption-jupyter-book-build-toc" title="永久链接至目标">¶</a></dt>
+<dt class="sig sig-object std" id="cmdoption-jupyter-book-build-toc">
+<span class="sig-name descname"><span class="pre">--toc</span></span><span class="sig-prename descclassname"> <span class="pre">&lt;toc&gt;</span></span><a class="headerlink" href="#cmdoption-jupyter-book-build-toc" title="永久链接至目标">¶</a></dt>
 <dd><p>Path to the Table of Contents YAML file (default: PATH_SOURCE/_toc.yml)</p>
 </dd></dl>
 
 <dl class="std option">
-<dt id="cmdoption-jupyter-book-build-W">
-<span id="cmdoption-jupyter-book-build-w"></span><span id="cmdoption-jupyter-book-build-warningiserror"></span><code class="sig-name descname"><span class="pre">-W</span></code><code class="sig-prename descclassname"></code><code class="sig-prename descclassname"><span class="pre">,</span> </code><code class="sig-name descname"><span class="pre">--warningiserror</span></code><code class="sig-prename descclassname"></code><a class="headerlink" href="#cmdoption-jupyter-book-build-W" title="永久链接至目标">¶</a></dt>
+<dt class="sig sig-object std" id="cmdoption-jupyter-book-build-W">
+<span id="cmdoption-jupyter-book-build-w"></span><span id="cmdoption-jupyter-book-build-warningiserror"></span><span class="sig-name descname"><span class="pre">-W</span></span><span class="sig-prename descclassname"></span><span class="sig-prename descclassname"><span class="pre">,</span> </span><span class="sig-name descname"><span class="pre">--warningiserror</span></span><span class="sig-prename descclassname"></span><a class="headerlink" href="#cmdoption-jupyter-book-build-W" title="永久链接至目标">¶</a></dt>
 <dd><p>Error on warnings.</p>
 </dd></dl>
 
 <dl class="std option">
-<dt id="cmdoption-jupyter-book-build-n">
-<span id="cmdoption-jupyter-book-build-nitpick"></span><code class="sig-name descname"><span class="pre">-n</span></code><code class="sig-prename descclassname"></code><code class="sig-prename descclassname"><span class="pre">,</span> </code><code class="sig-name descname"><span class="pre">--nitpick</span></code><code class="sig-prename descclassname"></code><a class="headerlink" href="#cmdoption-jupyter-book-build-n" title="永久链接至目标">¶</a></dt>
+<dt class="sig sig-object std" id="cmdoption-jupyter-book-build-n">
+<span id="cmdoption-jupyter-book-build-nitpick"></span><span class="sig-name descname"><span class="pre">-n</span></span><span class="sig-prename descclassname"></span><span class="sig-prename descclassname"><span class="pre">,</span> </span><span class="sig-name descname"><span class="pre">--nitpick</span></span><span class="sig-prename descclassname"></span><a class="headerlink" href="#cmdoption-jupyter-book-build-n" title="永久链接至目标">¶</a></dt>
 <dd><p>Run in nit-picky mode, to generates warnings for all missing references.</p>
 </dd></dl>
 
 <dl class="std option">
-<dt id="cmdoption-jupyter-book-build-keep-going">
-<code class="sig-name descname"><span class="pre">--keep-going</span></code><code class="sig-prename descclassname"></code><a class="headerlink" href="#cmdoption-jupyter-book-build-keep-going" title="永久链接至目标">¶</a></dt>
+<dt class="sig sig-object std" id="cmdoption-jupyter-book-build-keep-going">
+<span class="sig-name descname"><span class="pre">--keep-going</span></span><span class="sig-prename descclassname"></span><a class="headerlink" href="#cmdoption-jupyter-book-build-keep-going" title="永久链接至目标">¶</a></dt>
 <dd><p>With -W, do not stop the build on the first warning, instead error on build completion</p>
 </dd></dl>
 
 <dl class="std option">
-<dt id="cmdoption-jupyter-book-build-all">
-<code class="sig-name descname"><span class="pre">--all</span></code><code class="sig-prename descclassname"></code><a class="headerlink" href="#cmdoption-jupyter-book-build-all" title="永久链接至目标">¶</a></dt>
+<dt class="sig sig-object std" id="cmdoption-jupyter-book-build-all">
+<span class="sig-name descname"><span class="pre">--all</span></span><span class="sig-prename descclassname"></span><a class="headerlink" href="#cmdoption-jupyter-book-build-all" title="永久链接至目标">¶</a></dt>
 <dd><p>Re-build all pages. The default is to only re-build pages that are new/changed since the last run.</p>
 </dd></dl>
 
 <dl class="std option">
-<dt id="cmdoption-jupyter-book-build-builder">
-<code class="sig-name descname"><span class="pre">--builder</span></code><code class="sig-prename descclassname"> <span class="pre">&lt;builder&gt;</span></code><a class="headerlink" href="#cmdoption-jupyter-book-build-builder" title="永久链接至目标">¶</a></dt>
+<dt class="sig sig-object std" id="cmdoption-jupyter-book-build-builder">
+<span class="sig-name descname"><span class="pre">--builder</span></span><span class="sig-prename descclassname"> <span class="pre">&lt;builder&gt;</span></span><a class="headerlink" href="#cmdoption-jupyter-book-build-builder" title="永久链接至目标">¶</a></dt>
 <dd><p>Which builder to use.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Options</dt>
@@ -784,33 +784,33 @@ commentsRunWhenDOMLoaded(addUtterances);
 </dd></dl>
 
 <dl class="std option">
-<dt id="cmdoption-jupyter-book-build-custom-builder">
-<code class="sig-name descname"><span class="pre">--custom-builder</span></code><code class="sig-prename descclassname"> <span class="pre">&lt;custom_builder&gt;</span></code><a class="headerlink" href="#cmdoption-jupyter-book-build-custom-builder" title="永久链接至目标">¶</a></dt>
-<dd><p>Specify alternative builder name which allows jupyter-book to use a builderprovided by an external extension. This can only be used when using--builder=custom</p>
+<dt class="sig sig-object std" id="cmdoption-jupyter-book-build-custom-builder">
+<span class="sig-name descname"><span class="pre">--custom-builder</span></span><span class="sig-prename descclassname"> <span class="pre">&lt;custom_builder&gt;</span></span><a class="headerlink" href="#cmdoption-jupyter-book-build-custom-builder" title="永久链接至目标">¶</a></dt>
+<dd><p>Specify alternative builder provided by Sphinx, including text and epub. This can only be used with --builder=custom. Valid options listed at <a class="reference external" href="https://www.sphinx-doc.org/en/master/man/sphinx-build.html">https://www.sphinx-doc.org/en/master/man/sphinx-build.html</a></p>
 </dd></dl>
 
 <dl class="std option">
-<dt id="cmdoption-jupyter-book-build-v">
-<span id="cmdoption-jupyter-book-build-verbose"></span><code class="sig-name descname"><span class="pre">-v</span></code><code class="sig-prename descclassname"></code><code class="sig-prename descclassname"><span class="pre">,</span> </code><code class="sig-name descname"><span class="pre">--verbose</span></code><code class="sig-prename descclassname"></code><a class="headerlink" href="#cmdoption-jupyter-book-build-v" title="永久链接至目标">¶</a></dt>
+<dt class="sig sig-object std" id="cmdoption-jupyter-book-build-v">
+<span id="cmdoption-jupyter-book-build-verbose"></span><span class="sig-name descname"><span class="pre">-v</span></span><span class="sig-prename descclassname"></span><span class="sig-prename descclassname"><span class="pre">,</span> </span><span class="sig-name descname"><span class="pre">--verbose</span></span><span class="sig-prename descclassname"></span><a class="headerlink" href="#cmdoption-jupyter-book-build-v" title="永久链接至目标">¶</a></dt>
 <dd><p>increase verbosity (can be repeated)</p>
 </dd></dl>
 
 <dl class="std option">
-<dt id="cmdoption-jupyter-book-build-q">
-<span id="cmdoption-jupyter-book-build-quiet"></span><code class="sig-name descname"><span class="pre">-q</span></code><code class="sig-prename descclassname"></code><code class="sig-prename descclassname"><span class="pre">,</span> </code><code class="sig-name descname"><span class="pre">--quiet</span></code><code class="sig-prename descclassname"></code><a class="headerlink" href="#cmdoption-jupyter-book-build-q" title="永久链接至目标">¶</a></dt>
+<dt class="sig sig-object std" id="cmdoption-jupyter-book-build-q">
+<span id="cmdoption-jupyter-book-build-quiet"></span><span class="sig-name descname"><span class="pre">-q</span></span><span class="sig-prename descclassname"></span><span class="sig-prename descclassname"><span class="pre">,</span> </span><span class="sig-name descname"><span class="pre">--quiet</span></span><span class="sig-prename descclassname"></span><a class="headerlink" href="#cmdoption-jupyter-book-build-q" title="永久链接至目标">¶</a></dt>
 <dd><p>-q means no sphinx status, -qq also turns off warnings</p>
 </dd></dl>
 
 <dl class="std option">
-<dt id="cmdoption-jupyter-book-build-individualpages">
-<code class="sig-name descname"><span class="pre">--individualpages</span></code><code class="sig-prename descclassname"></code><a class="headerlink" href="#cmdoption-jupyter-book-build-individualpages" title="永久链接至目标">¶</a></dt>
+<dt class="sig sig-object std" id="cmdoption-jupyter-book-build-individualpages">
+<span class="sig-name descname"><span class="pre">--individualpages</span></span><span class="sig-prename descclassname"></span><a class="headerlink" href="#cmdoption-jupyter-book-build-individualpages" title="永久链接至目标">¶</a></dt>
 <dd><p>[pdflatex] Enable build of PDF files for each individual page</p>
 </dd></dl>
 
 <p class="rubric">Arguments</p>
 <dl class="std option">
-<dt id="cmdoption-jupyter-book-build-arg-PATH_SOURCE">
-<span id="cmdoption-jupyter-book-build-arg-path-source"></span><code class="sig-name descname"><span class="pre">PATH_SOURCE</span></code><code class="sig-prename descclassname"></code><a class="headerlink" href="#cmdoption-jupyter-book-build-arg-PATH_SOURCE" title="永久链接至目标">¶</a></dt>
+<dt class="sig sig-object std" id="cmdoption-jupyter-book-build-arg-PATH_SOURCE">
+<span id="cmdoption-jupyter-book-build-arg-path-source"></span><span class="sig-name descname"><span class="pre">PATH_SOURCE</span></span><span class="sig-prename descclassname"></span><a class="headerlink" href="#cmdoption-jupyter-book-build-arg-PATH_SOURCE" title="永久链接至目标">¶</a></dt>
 <dd><p>Required argument</p>
 </dd></dl>
 
@@ -825,27 +825,27 @@ option is flagged, it will remove the html/latex subdirectories.</p>
 </div>
 <p class="rubric">Options</p>
 <dl class="std option">
-<dt id="cmdoption-jupyter-book-clean-a">
-<span id="cmdoption-jupyter-book-clean-all"></span><code class="sig-name descname"><span class="pre">-a</span></code><code class="sig-prename descclassname"></code><code class="sig-prename descclassname"><span class="pre">,</span> </code><code class="sig-name descname"><span class="pre">--all</span></code><code class="sig-prename descclassname"></code><a class="headerlink" href="#cmdoption-jupyter-book-clean-a" title="永久链接至目标">¶</a></dt>
+<dt class="sig sig-object std" id="cmdoption-jupyter-book-clean-a">
+<span id="cmdoption-jupyter-book-clean-all"></span><span class="sig-name descname"><span class="pre">-a</span></span><span class="sig-prename descclassname"></span><span class="sig-prename descclassname"><span class="pre">,</span> </span><span class="sig-name descname"><span class="pre">--all</span></span><span class="sig-prename descclassname"></span><a class="headerlink" href="#cmdoption-jupyter-book-clean-a" title="永久链接至目标">¶</a></dt>
 <dd><p>Remove build directory.</p>
 </dd></dl>
 
 <dl class="std option">
-<dt id="cmdoption-jupyter-book-clean-html">
-<code class="sig-name descname"><span class="pre">--html</span></code><code class="sig-prename descclassname"></code><a class="headerlink" href="#cmdoption-jupyter-book-clean-html" title="永久链接至目标">¶</a></dt>
+<dt class="sig sig-object std" id="cmdoption-jupyter-book-clean-html">
+<span class="sig-name descname"><span class="pre">--html</span></span><span class="sig-prename descclassname"></span><a class="headerlink" href="#cmdoption-jupyter-book-clean-html" title="永久链接至目标">¶</a></dt>
 <dd><p>Remove html directory.</p>
 </dd></dl>
 
 <dl class="std option">
-<dt id="cmdoption-jupyter-book-clean-latex">
-<code class="sig-name descname"><span class="pre">--latex</span></code><code class="sig-prename descclassname"></code><a class="headerlink" href="#cmdoption-jupyter-book-clean-latex" title="永久链接至目标">¶</a></dt>
+<dt class="sig sig-object std" id="cmdoption-jupyter-book-clean-latex">
+<span class="sig-name descname"><span class="pre">--latex</span></span><span class="sig-prename descclassname"></span><a class="headerlink" href="#cmdoption-jupyter-book-clean-latex" title="永久链接至目标">¶</a></dt>
 <dd><p>Remove latex directory.</p>
 </dd></dl>
 
 <p class="rubric">Arguments</p>
 <dl class="std option">
-<dt id="cmdoption-jupyter-book-clean-arg-PATH_BOOK">
-<span id="cmdoption-jupyter-book-clean-arg-path-book"></span><code class="sig-name descname"><span class="pre">PATH_BOOK</span></code><code class="sig-prename descclassname"></code><a class="headerlink" href="#cmdoption-jupyter-book-clean-arg-PATH_BOOK" title="永久链接至目标">¶</a></dt>
+<dt class="sig sig-object std" id="cmdoption-jupyter-book-clean-arg-PATH_BOOK">
+<span id="cmdoption-jupyter-book-clean-arg-path-book"></span><span class="sig-name descname"><span class="pre">PATH_BOOK</span></span><span class="sig-prename descclassname"></span><a class="headerlink" href="#cmdoption-jupyter-book-clean-arg-PATH_BOOK" title="永久链接至目标">¶</a></dt>
 <dd><p>Required argument</p>
 </dd></dl>
 
@@ -864,21 +864,21 @@ option is flagged, it will remove the html/latex subdirectories.</p>
 </div>
 <p class="rubric">Options</p>
 <dl class="std option">
-<dt id="cmdoption-jupyter-book-config-sphinx-config">
-<code class="sig-name descname"><span class="pre">--config</span></code><code class="sig-prename descclassname"> <span class="pre">&lt;config&gt;</span></code><a class="headerlink" href="#cmdoption-jupyter-book-config-sphinx-config" title="永久链接至目标">¶</a></dt>
+<dt class="sig sig-object std" id="cmdoption-jupyter-book-config-sphinx-config">
+<span class="sig-name descname"><span class="pre">--config</span></span><span class="sig-prename descclassname"> <span class="pre">&lt;config&gt;</span></span><a class="headerlink" href="#cmdoption-jupyter-book-config-sphinx-config" title="永久链接至目标">¶</a></dt>
 <dd><p>Path to the YAML configuration file (default: PATH_SOURCE/_config.yml)</p>
 </dd></dl>
 
 <dl class="std option">
-<dt id="cmdoption-jupyter-book-config-sphinx-toc">
-<code class="sig-name descname"><span class="pre">--toc</span></code><code class="sig-prename descclassname"> <span class="pre">&lt;toc&gt;</span></code><a class="headerlink" href="#cmdoption-jupyter-book-config-sphinx-toc" title="永久链接至目标">¶</a></dt>
+<dt class="sig sig-object std" id="cmdoption-jupyter-book-config-sphinx-toc">
+<span class="sig-name descname"><span class="pre">--toc</span></span><span class="sig-prename descclassname"> <span class="pre">&lt;toc&gt;</span></span><a class="headerlink" href="#cmdoption-jupyter-book-config-sphinx-toc" title="永久链接至目标">¶</a></dt>
 <dd><p>Path to the Table of Contents YAML file (default: PATH_SOURCE/_toc.yml)</p>
 </dd></dl>
 
 <p class="rubric">Arguments</p>
 <dl class="std option">
-<dt id="cmdoption-jupyter-book-config-sphinx-arg-PATH_SOURCE">
-<span id="cmdoption-jupyter-book-config-sphinx-arg-path-source"></span><code class="sig-name descname"><span class="pre">PATH_SOURCE</span></code><code class="sig-prename descclassname"></code><a class="headerlink" href="#cmdoption-jupyter-book-config-sphinx-arg-PATH_SOURCE" title="永久链接至目标">¶</a></dt>
+<dt class="sig sig-object std" id="cmdoption-jupyter-book-config-sphinx-arg-PATH_SOURCE">
+<span id="cmdoption-jupyter-book-config-sphinx-arg-path-source"></span><span class="sig-name descname"><span class="pre">PATH_SOURCE</span></span><span class="sig-prename descclassname"></span><a class="headerlink" href="#cmdoption-jupyter-book-config-sphinx-arg-PATH_SOURCE" title="永久链接至目标">¶</a></dt>
 <dd><p>Required argument</p>
 </dd></dl>
 
@@ -892,15 +892,15 @@ option is flagged, it will remove the html/latex subdirectories.</p>
 </div>
 <p class="rubric">Options</p>
 <dl class="std option">
-<dt id="cmdoption-jupyter-book-create-cookiecutter">
-<code class="sig-name descname"><span class="pre">--cookiecutter</span></code><code class="sig-prename descclassname"></code><a class="headerlink" href="#cmdoption-jupyter-book-create-cookiecutter" title="永久链接至目标">¶</a></dt>
+<dt class="sig sig-object std" id="cmdoption-jupyter-book-create-cookiecutter">
+<span class="sig-name descname"><span class="pre">--cookiecutter</span></span><span class="sig-prename descclassname"></span><a class="headerlink" href="#cmdoption-jupyter-book-create-cookiecutter" title="永久链接至目标">¶</a></dt>
 <dd><p>Use cookiecutter to interactively create a Jupyter Book template.</p>
 </dd></dl>
 
 <p class="rubric">Arguments</p>
 <dl class="std option">
-<dt id="cmdoption-jupyter-book-create-arg-PATH_BOOK">
-<span id="cmdoption-jupyter-book-create-arg-path-book"></span><code class="sig-name descname"><span class="pre">PATH_BOOK</span></code><code class="sig-prename descclassname"></code><a class="headerlink" href="#cmdoption-jupyter-book-create-arg-PATH_BOOK" title="永久链接至目标">¶</a></dt>
+<dt class="sig sig-object std" id="cmdoption-jupyter-book-create-arg-PATH_BOOK">
+<span id="cmdoption-jupyter-book-create-arg-path-book"></span><span class="sig-name descname"><span class="pre">PATH_BOOK</span></span><span class="sig-prename descclassname"></span><a class="headerlink" href="#cmdoption-jupyter-book-create-arg-PATH_BOOK" title="永久链接至目标">¶</a></dt>
 <dd><p>Required argument</p>
 </dd></dl>
 
@@ -919,15 +919,15 @@ option is flagged, it will remove the html/latex subdirectories.</p>
 </div>
 <p class="rubric">Options</p>
 <dl class="std option">
-<dt id="cmdoption-jupyter-book-myst-init-kernel">
-<code class="sig-name descname"><span class="pre">--kernel</span></code><code class="sig-prename descclassname"> <span class="pre">&lt;kernel&gt;</span></code><a class="headerlink" href="#cmdoption-jupyter-book-myst-init-kernel" title="永久链接至目标">¶</a></dt>
+<dt class="sig sig-object std" id="cmdoption-jupyter-book-myst-init-kernel">
+<span class="sig-name descname"><span class="pre">--kernel</span></span><span class="sig-prename descclassname"> <span class="pre">&lt;kernel&gt;</span></span><a class="headerlink" href="#cmdoption-jupyter-book-myst-init-kernel" title="永久链接至目标">¶</a></dt>
 <dd><p>The name of the Jupyter kernel to attach to this markdown file.</p>
 </dd></dl>
 
 <p class="rubric">Arguments</p>
 <dl class="std option">
-<dt id="cmdoption-jupyter-book-myst-init-arg-PATH">
-<span id="cmdoption-jupyter-book-myst-init-arg-path"></span><code class="sig-name descname"><span class="pre">PATH</span></code><code class="sig-prename descclassname"></code><a class="headerlink" href="#cmdoption-jupyter-book-myst-init-arg-PATH" title="永久链接至目标">¶</a></dt>
+<dt class="sig sig-object std" id="cmdoption-jupyter-book-myst-init-arg-PATH">
+<span id="cmdoption-jupyter-book-myst-init-arg-path"></span><span class="sig-name descname"><span class="pre">PATH</span></span><span class="sig-prename descclassname"></span><a class="headerlink" href="#cmdoption-jupyter-book-myst-init-arg-PATH" title="永久链接至目标">¶</a></dt>
 <dd><p>Optional argument(s)</p>
 </dd></dl>
 
@@ -940,7 +940,7 @@ option is flagged, it will remove the html/latex subdirectories.</p>
     {
         requestKernel: true,
         binderOptions: {
-            repo: "daobook/jupyter-book",
+            repo: "daobook/jupyter-book-zh",
             ref: "main",
         },
         codeMirrorConfig: {

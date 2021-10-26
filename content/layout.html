@@ -22,8 +22,8 @@
       
 
     
-    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-book-theme.css?digest=c3fdc42140077d1ad13ad2f1588a4309" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
@@ -40,7 +40,7 @@
     
   <link rel="preload" as="script" href="../_static/js/index.1c5a1a01449ed65a7b51.js">
 
-    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
@@ -69,7 +69,7 @@ var addUtterances = () => {
     script.src = "https://utteranc.es/client.js";
     script.async = "async";
 
-    script.setAttribute("repo", "daobook/jupyter-book");
+    script.setAttribute("repo", "daobook/jupyter-book-zh");
     script.setAttribute("issue-term", "pathname");
     script.setAttribute("theme", "github-light");
     script.setAttribute("label", "💬 comment");
@@ -83,18 +83,18 @@ var addUtterances = () => {
 }
 commentsRunWhenDOMLoaded(addUtterances);
 </script>
-    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
     <script src="../_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.0/dist/embed-amd.js"></script>
     <script async="async" src="https://unpkg.com/thebe@0.5.1/lib/index.js"></script>
-    <script >
+    <script>
         const thebe_selector = ".thebe,.cell"
         const thebe_selector_input = "pre,.cell_input div.highlight"
         const thebe_selector_output = ".output,.cell_output"
     </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
-    <link rel="canonical" href="https://daobook.github.io/jupyter-book/content/layout.html" />
+    <link rel="canonical" href="https://daobook.github.io/jupyter-book-zh/content/layout.html" />
     <link rel="shortcut icon" href="../_static/page-logo.jfif"/>
     <link rel="index" title="索引" href="../genindex.html" />
     <link rel="search" title="搜索" href="../search.html" />
@@ -131,7 +131,7 @@ commentsRunWhenDOMLoaded(addUtterances);
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
 </form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item active">
-        <p class="caption">
+        <p class="caption" role="heading">
  <span class="caption-text">
   教程
  </span>
@@ -180,7 +180,7 @@ commentsRunWhenDOMLoaded(addUtterances);
   </a>
  </li>
 </ul>
-<p class="caption">
+<p class="caption" role="heading">
  <span class="caption-text">
   主题指南
  </span>
@@ -485,7 +485,7 @@ commentsRunWhenDOMLoaded(addUtterances);
   </a>
  </li>
 </ul>
-<p class="caption">
+<p class="caption" role="heading">
  <span class="caption-text">
   参考
  </span>
@@ -512,7 +512,7 @@ commentsRunWhenDOMLoaded(addUtterances);
   </a>
  </li>
 </ul>
-<p class="caption">
+<p class="caption" role="heading">
  <span class="caption-text">
   关于 Jupyter Book
  </span>
@@ -616,11 +616,11 @@ commentsRunWhenDOMLoaded(addUtterances);
         aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
     <div class="dropdown-buttons sourcebuttons">
         <a class="repository-button"
-            href="https://github.com/daobook/jupyter-book"><button type="button" class="btn btn-secondary topbarbtn"
+            href="https://github.com/daobook/jupyter-book-zh"><button type="button" class="btn btn-secondary topbarbtn"
                 data-toggle="tooltip" data-placement="left" title="Source repository"><i
                     class="fab fa-github"></i>repository</button></a>
         <a class="issues-button"
-            href="https://github.com/daobook/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fcontent/layout.html&body=Your%20issue%20content%20here."><button
+            href="https://github.com/daobook/jupyter-book-zh/issues/new?title=Issue%20on%20page%20%2Fcontent/layout.html&body=Your%20issue%20content%20here."><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
         
@@ -641,7 +641,7 @@ commentsRunWhenDOMLoaded(addUtterances);
         aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
     <div class="dropdown-buttons">
         
-        <a class="binder-button" href="https://mybinder.org/v2/gh/daobook/jupyter-book/main?urlpath=tree/./content/layout.md"><button type="button"
+        <a class="binder-button" href="https://mybinder.org/v2/gh/daobook/jupyter-book-zh/main?urlpath=tree/./content/layout.md"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
                 data-placement="left"><img class="binder-button-logo"
                     src="../_static/images/logo_binder.svg"
@@ -716,7 +716,7 @@ commentsRunWhenDOMLoaded(addUtterances);
         
               <div>
                 
-  <div class="section" id="id1">
+  <div class="tex2jax_ignore mathjax_ignore section" id="id1">
 <h1>控制页面布局<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h1>
 <div class="admonition warning">
 <p class="admonition-title">警告</p>
@@ -807,8 +807,8 @@ My margin content
 <h3>带有代码单元格的页边距<a class="headerlink" href="#id5" title="永久链接至标题">¶</a></h3>
 <p>通过向单元格的标记添加 <code class="docutils literal notranslate"><span class="pre">margin</span></code>，可以将代码单元格移动到右边页边距。</p>
 <div class="tabbed-set docutils">
-<input checked="checked" id="ef2ff655-da68-4726-8c89-2cf2d1cdb326" name="8236d4e8-08ba-4353-a793-3d248738288e" type="radio">
-</input><label class="tabbed-label" for="ef2ff655-da68-4726-8c89-2cf2d1cdb326">
+<input checked="checked" id="e40234e1-8316-4f11-b43a-44c35322f870" name="85e464fe-4a3f-4b93-a1aa-db3c57a9ba9f" type="radio">
+</input><label class="tabbed-label" for="e40234e1-8316-4f11-b43a-44c35322f870">
 Jupyter Notebook</label><div class="tabbed-content docutils">
 <p>页边距单元格的元数据是这样的:</p>
 <div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
@@ -823,8 +823,8 @@ Jupyter Notebook</label><div class="tabbed-content docutils">
 <p><a class="reference internal" href="metadata.html#jupyter-cell-tags"><span class="std std-ref">将元数据添加到笔记本</span></a></p>
 </div>
 </div>
-<input id="13ebdd94-e403-4963-b5e5-34784142e667" name="8236d4e8-08ba-4353-a793-3d248738288e" type="radio">
-</input><label class="tabbed-label" for="13ebdd94-e403-4963-b5e5-34784142e667">
+<input id="fc192062-de54-4cf2-9653-4481f8539709" name="85e464fe-4a3f-4b93-a1aa-db3c57a9ba9f" type="radio">
+</input><label class="tabbed-label" for="fc192062-de54-4cf2-9653-4481f8539709">
 MyST 文本文件</label><div class="tabbed-content docutils">
 <p>对于 MyST 文本文件，可以将这些标记添加到 <code class="docutils literal notranslate"><span class="pre">code-cell</span></code> 中</p>
 <div class="highlight-md notranslate"><div class="highlight"><pre><span></span>```{code-cell} &lt;language&gt;
@@ -927,7 +927,7 @@ Here&#39;s a note that will take the full width
     {
         requestKernel: true,
         binderOptions: {
-            repo: "daobook/jupyter-book",
+            repo: "daobook/jupyter-book-zh",
             ref: "main",
         },
         codeMirrorConfig: {
