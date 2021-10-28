@@ -7,7 +7,8 @@ email: xinzone@outlook.com
 copyright: ""
 
 exclude_patterns:
-  [_build, Thumbs.db, .DS_Store, "**.ipynb_checkpoints", .github, file-types/include-rst.rst]
+  [_build, Thumbs.db, .DS_Store, "**.ipynb_checkpoints", .github, READEM.md,
+  file-types/include-rst.rst]
 
 # Bibliography settings
 bibtex_bibfiles:
