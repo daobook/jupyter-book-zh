@@ -1,5 +1,5 @@
 format: jb-book
-root: intro
+root: index
 parts:
 - caption: 教程
   chapters:
