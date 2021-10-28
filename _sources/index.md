@@ -1,22 +1,5 @@
-# Jupyter Book 中文
-
-[![GitHub issues](https://img.shields.io/github/issues/daobook/jupyter-book-zh)](https://github.com/daobook/jupyter-book-zh/issues) [![GitHub forks](https://img.shields.io/github/forks/daobook/jupyter-book-zh)](https://github.com/daobook/jupyter-book-zh/network) [![GitHub stars](https://img.shields.io/github/stars/daobook/jupyter-book-zh)](https://github.com/daobook/jupyter-book-zh/stargazers) [![GitHub license](https://img.shields.io/github/license/daobook/jupyter-book-zh)](https://github.com/daobook/jupyter-book-zh/blob/main/LICENSE)  ![repo size](https://img.shields.io/github/repo-size/daobook/jupyter-book-zh.svg) [![contributors](https://img.shields.io/github/contributors/daobook/jupyter-book-zh.svg)](https://github.com/daobook/jupyter-book-zh/graphs/contributors) [![watcher](https://img.shields.io/github/watchers/daobook/jupyter-book-zh.svg)](https://github.com/daobook/jupyter-book-zh/watchers) ![](https://github.com/daobook/jupyter-book-zh/actions/workflows/docs.yml/badge.svg)
-
-```{div} w3-pale-green w3-card w3-padding w3-round-xlarge w3-margin-top
-Jupyter Book 可以直接运行代码，且持续化集成和部署到 GitHub Pages。
-
-本项目是 [executablebooks/jupyter-book](https://github.com/executablebooks/jupyter-book) 的中文版本。欢迎提出翻译建议！
-```
-
-````{admonition} 导航
-:class: tip, dropdown; w3-pale-blue w3-card-4 w3-padding w3-round-xlarge w3-margin-top
-
-```{tableofcontents}
-```
-````
-
 (intro)=
-## Jupyter <img src="images/logo-square.svg" width=40 /> 速览
+# Jupyter <img src="images/logo-square.svg" width=40 /> 速览
 
 ```{only} html
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.2561065.svg)](https://doi.org/10.5281/zenodo.2561065)
